@@ -11,23 +11,23 @@
 
     <!-- base menu --> 
     <ul class="text-center md:text-left pt-5 mt-5 border-t md:border-0 md:inline-flex md:items-center md:pt-0 md:mt-0">
-      <li class="py-3 md:py-3 md:px-4 md:pl-12 text-lg"><%= link_to t('navigation.gift_cards'), gift_cards_path %></li>
-      <li class="py-3 md:py-3 md:px-4 text-lg"><%= link_to t('our_projects'), projects_path %></li>
-      <li class="py-3 md:py-3 md:px-4 text-lg"><%= link_to t('for_business'), business_path %>
-      <li class="py-3 md:py-3 md:px-4 text-lg"><%= link_to t('about_us'), about_path %></li>
+      <li class="py-3 md:px-4 md:pl-12 text-lg"><%= link_to t('navigation.gift_cards'), gift_cards_path %></li>
+      <li class="py-3 md:px-4 text-lg"><%= link_to t('our_projects'), projects_path %></li>
+      <li class="py-3 md:px-4 text-lg"><%= link_to t('for_business'), business_path %>
+      <li class="py-3 md:px-4 text-lg"><%= link_to t('about_us'), about_path %></li>
     </ul>
 
     <!-- Menu for small screens -->
     <ul class="text-center md:hidden">
       <% if user_signed_in? %> 
-        <li class="py-3 md:py-3 md:px-4 text-lg" role="separator" class="divider"></li>
-        <li class="py-3 md:py-3 md:px-4 text-lg"><a href="<%= dashboard_path %>">Dashboard</a></li>
-        <li class="py-3 md:py-3 md:px-4 text-lg"><a href="<%= edit_user_registration_path %>"><%= t('settings') %></a></li>
-        <li class="py-3 md:py-3 md:px-4 text-lg" role="separator" class="divider"></li> 
-        <li class="py-3 md:py-3 md:px-4 text-lg"><%= link_to(I18n.t('log_out'), destroy_user_session_path, :method => :delete) %></li>
+        <li class="py-3 md:px-4 text-lg" role="separator" class="divider"></li>
+        <li class="py-3 md:px-4 text-lg"><a href="<%= dashboard_path %>">Dashboard</a></li>
+        <li class="py-3 md:px-4 text-lg"><a href="<%= edit_user_registration_path %>"><%= t('settings') %></a></li>
+        <li class="py-3 md:px-4 text-lg" role="separator" class="divider"></li> 
+        <li class="py-3 md:px-4 text-lg"><%= link_to(I18n.t('log_out'), destroy_user_session_path, :method => :delete) %></li>
       <% else %>
-        <li class="py-3 md:py-3 md:px-4 text-lg"><%= link_to(I18n.t('log_in'), new_user_session_url)%></li>
-        <li class="py-3 md:py-3 md:px-4 text-lg"><div class="navbar-inner"><%= link_to(I18n.t('views.shared.header.sign_up'), root_url, class: 'btn btn-success')%></div></li>
+        <li class="pt-8 pb-3 md:px-4 text-lg"><%= link_to(I18n.t('log_in'), new_user_session_url)%></li>
+        <li class="py-3 md:px-4 text-lg"><div class="navbar-inner"><%= link_to(I18n.t('views.shared.header.sign_up'), root_url, class: 'button-brand')%></div></li>
       <% end %>
     </ul>
   </div>
@@ -50,7 +50,7 @@
         </li>
     <% else %>
       <li><%= link_to(I18n.t('log_in'), new_user_session_url)%></li>
-      <li><div class="navbar-inner"><%= link_to(I18n.t('views.shared.header.sign_up'), root_url, class: 'btn btn-success')%></div></li>
+      <li><div class="navbar-inner"><%= link_to(I18n.t('views.shared.header.sign_up'), root_url, class: 'button-brand ml-8')%></div></li>
     <% end %>
   </ul>
 </nav>
