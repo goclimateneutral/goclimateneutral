@@ -68,28 +68,28 @@ body {
     display: none
   }
 
-  .droppy-menu {
+  .dropdown-menu {
     // min-width: 160px;
     @apply hidden absolute top-100 left-0 bg-bg border border-gray-300 rounded py-1 my-1 shadow-md text-left;
   }
 
-  .droppy-menu-up {
+  .dropdown-menu-up {
     @apply top-auto bottom-100;
   }
 
-  .droppy-menu-right {
+  .dropdown-menu-right {
     @apply left-auto right-0;
   }
 
-  .droppy-menu > li > a {
+  .dropdown-menu > li > a {
     @apply whitespace-no-wrap block py-1 px-5
   }
 
-  .droppy-menu > li > a:hover {
+  .dropdown-menu > li > a:hover {
     @apply bg-gray-200
   }
 
-  input[type='checkbox']:checked ~ .droppy-menu {
+  input[type='checkbox']:checked ~ .dropdown-menu {
     @apply block;
   }
 }

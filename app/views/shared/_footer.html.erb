@@ -53,7 +53,7 @@
           <%= image_tag webpack_asset_path("images/regions/#{current_region.id}.png"), class: 'inline-block' %>
           <%= current_region.name %>
           <i class="fa fa-caret-up" aria-hidden="true"></i>
-          <ul class="droppy-menu droppy-menu-up">
+          <ul class="dropdown-menu dropdown-menu-up">
             <% Region.all.filter { |r| r != current_region }.each do |region| %>
               <li>
                 <a href="<%= url_for_region(region) %>">
