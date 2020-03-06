@@ -5,7 +5,7 @@ const environment = {
   plugins: [
     tailwindcss
   ]
-}
+};
 
 /**
  * Custom PurgeCSS Extractor
@@ -13,9 +13,8 @@ const environment = {
  * https://github.com/FullHuman/purgecss-webpack-plugin
  * https://gist.github.com/josephan/45569c48ee4867237e89417aed283103#gistcomment-3152652
  */
-const TailwindExtractor = (content) => {
-  return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
-};
+// eslint-disable-next-line no-useless-escape
+const TailwindExtractor = (content) => content.match(/[A-Za-z0-9-_:\/]+/g) || [];
 
 // Only run PurgeCSS in production (you can also add staging here)
 if (process.env.RAILS_ENV === 'production') {
@@ -30,7 +29,7 @@ if (process.env.RAILS_ENV === 'production') {
         }
       ]
     })
-  )
+  );
 }
 
 module.exports = environment;
