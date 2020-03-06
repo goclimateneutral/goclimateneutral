@@ -36,7 +36,7 @@
   <ul class="hidden md:flex md:items-center">
     <% if user_signed_in? %> 
         <li class="droppy py-6"> 
-          <label class="" aria-haspopup="true" aria-expanded="false">
+          <label class="cursor-pointer" aria-haspopup="true" aria-expanded="false">
             <%= current_user.user_name.nil? || current_user.user_name.empty? ? current_user.email : current_user.user_name %> <i class="fa fa-caret-down" aria-hidden="true"></i>
             <input type="checkbox">
             <ul class="droppy-menu droppy-menu-right" aria-labelledby="user-menu"> 
