@@ -35,7 +35,11 @@
     %>
     <meta property="fb:app_id" content="452582378427296">
     
-    <%= webpack_entrypoint_stylesheet_tags 'main' %>
+    <% if (stylesheets = yield :stylesheets).present? %>
+      <%= stylesheets %>
+    <% else %>
+      <%= webpack_entrypoint_stylesheet_tags 'main' %>
+    <% end %>
     <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
 
     <script src="https://browser.sentry-cdn.com/5.11.0/bundle.min.js" integrity="sha384-jbFinqIbKkHNg+QL+yxB4VrBC0EAPTuaLGeRT0T+NfEV89YC6u1bKxHLwoo+/xxY" crossorigin="anonymous"></script>
@@ -161,7 +165,11 @@
       window.stripe = Stripe("<%= ENV['PUBLISHABLE_KEY'] %>");
     </script>
     <%= include_gon %>
-    <%= webpack_entrypoint_javascript_tags 'main', onerror: 'throw "Loading Javascript " + this.src + " failed"' %>
+    <% if (javascripts = yield :javascripts).present? %>
+      <%= javascripts %>
+    <% else %>
+      <%= webpack_entrypoint_javascript_tags 'main', onerror: 'throw "Loading Javascript " + this.src + " failed"' %>
+    <% end %>
     <%= yield :javascript_tags %>
   </body>
 </html>

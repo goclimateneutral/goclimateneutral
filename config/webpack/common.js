@@ -24,7 +24,13 @@ const cssLoaders = [
     options: {
       sourceMap: true
     }
-  }
+  },
+  {
+    loader: 'postcss-loader',
+    options: {
+      ident: 'postcss'
+    },
+  },
 ];
 
 module.exports = {

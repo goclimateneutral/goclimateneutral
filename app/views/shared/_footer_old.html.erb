@@ -1,0 +1,60 @@
+<%= render "shared/prefooter_old" %>
+
+<div class="mastfoot">
+    <div class="inner no-max-width">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 col-sm-offset-0 col-md-4 col-md-offset-1 text-left">
+          <p><b>GoClimateNeutral</b></p>
+          <p class="line-height-small"><%= t('views.shared.footer.short_intro') %></p>
+          <ul class="list-unstyled social-media-icons">
+            <li><%= link_to raw('<i class="fa fa-2x fa-twitter" aria-hidden="true"></i>'), 'https://twitter.com/goclimateneutrl', target: "_blank" %></li>
+            <li><%= link_to raw('<i class="fa fa-2x fa-instagram" aria-hidden="true"></i>'), 'https://www.instagram.com/goclimateneutral/', target: "_blank" %></li>
+            <li><%= link_to raw('<i class="fa fa-2x fa-facebook" aria-hidden="true"></i>'), 'https://www.facebook.com/GoClimateNeutral', target: "_blank" %></li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-2 text-left">
+          <p><b><%= t('views.shared.footer.headers.make_a_difference') %></b></p>
+          <ul class="list-unstyled">
+            <li><%= link_to t('views.shared.header.sign_up'), root_url%></li>
+            <li><%= link_to t('navigation.gift_cards'), gift_cards_path %></li>
+            <li><%= link_to t('for_business'), business_path %></li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-2 text-left">
+          <p><b><%= t('views.shared.footer.headers.explore') %></b></p>
+          <ul class="list-unstyled">
+          <li><%= link_to t('our_projects'), projects_path %></li>
+          <li><%= link_to t('blog'), "https://www.goclimateneutral.org/blog/" %></li>
+            <li><%= link_to t('faq'), faq_path %></li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-2 text-left">
+          <p><b><%= t('views.shared.footer.headers.about') %></b></p>
+          <ul class="list-unstyled">
+            <li><%= link_to t('about_us'), about_path %> </li>
+            <li><%= link_to t('100_percent_transparency'), transparency_path %> </li>
+            <li><%= link_to t('press'), press_path %>  </li>
+            <li><%= link_to t('views.shared.footer.jobs'), 'https://jobs.goclimateneutral.org/' %></li>
+            <li><%= link_to t('contact_us'), contact_path %></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="dropup" style="display: inline-block;">
+            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <%= image_tag webpack_asset_path("images/regions/#{current_region.id}.png") %>
+              <%= current_region.name %>
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <% Region.all.filter { |r| r != current_region }.each do |region| %>
+                <li><a href="<%= url_for_region(region) %>"><%= image_tag webpack_asset_path("images/regions/#{region.id}.png") %> <%= region.name %></a></li>
+              <% end %>
+              <li><a href="<%= url_for_region(Region::Europe) %>"><%= image_tag webpack_asset_path("images/regions/world.png") %> Rest of the World</a></li>
+            </ul>
+          </div>
+        <p>© <%= Time.current.year %> GoClimateNeutral</p>
+        
+      </div>
+    </div>
+  </div>

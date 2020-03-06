@@ -1,0 +1,68 @@
+<nav class="navbar navbar-default navbar-goclimateneutral">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <a class="navbar-brand" href="<%= root_path %>">
+        <%= image_tag webpack_asset_path('images/goclimateneutral_logo.svg'), alt: 'GoClimateNeutral' %>
+      </a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><%= link_to t('navigation.gift_cards'), gift_cards_path %></li>
+        <li><%= link_to t('our_projects'), projects_path %></li>
+        <li><%= link_to t('for_business'), business_path %>
+        <li><%= link_to t('about_us'), about_path %></li>
+      </ul>
+
+      <!-- Menu for big screens -->
+      <ul class="nav navbar-nav navbar-right hidden-xs">
+        <% if user_signed_in? %> 
+            <li class="dropdown fat-menu"> 
+              <a href="#" class="dropdown-toggle" id="user-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.user_name.nil? || current_user.user_name.empty? ? current_user.email : current_user.user_name %><span class="caret"></span> </a> 
+              <ul class="dropdown-menu" aria-labelledby="user-menu"> 
+                <li><a href="<%= dashboard_path %>">Dashboard</a></li>
+                <li><%= link_to t('views.shared.header.navigation.offset_flight'), new_flight_footprint_path %></li>
+                <li><a href="<%= edit_user_registration_path %>"><%=t 'settings' %></a></li>
+                <li role="separator" class="divider"></li> 
+                <li><%= link_to(I18n.t('log_out'), destroy_user_session_path, :method => :delete) %></li> 
+              </ul> 
+            </li>
+        <% else %>
+          <li><%= link_to(I18n.t('log_in'), new_user_session_url)%></li>
+          <li><div class="navbar-inner"><%= link_to(I18n.t('views.shared.header.sign_up'), root_url, class: 'btn btn-success')%></div></li>
+        <% end %>
+      </ul>
+      <% content_for :javascript_tags do %>
+        <script>
+          $(document).ready(function() {
+            $('.dropdown-toggle').dropdown();
+          });
+        </script>
+      <% end %>
+
+      <!-- Menu for small screens -->
+      <ul class="nav navbar-nav navbar-right hidden-sm hidden-md hidden-lg">
+        <% if user_signed_in? %> 
+          <li role="separator" class="divider"></li>
+          <li><a href="<%= dashboard_path %>">Dashboard</a></li>
+          <li><a href="<%= edit_user_registration_path %>"><%= t('settings') %></a></li>
+          <li role="separator" class="divider"></li> 
+          <li><%= link_to(I18n.t('log_out'), destroy_user_session_path, :method => :delete) %></li>
+        <% else %>
+          <li><%= link_to(I18n.t('log_in'), new_user_session_url)%></li>
+          <li><div class="navbar-inner"><%= link_to(I18n.t('views.shared.header.sign_up'), root_url, class: 'btn btn-success')%></div></li>
+        <% end %>
+      </ul>
+
+    </div>
+
+  </div>
+</nav>

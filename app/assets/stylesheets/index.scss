@@ -1,0 +1,112 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+html,
+body {
+  height: 100%;
+  font-size: 14px;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.bg-brand {
+  background-color: #f3f9f9;
+  
+  &-image {
+    background-color: #f3f9f9;
+    background-image: url("../images/background-illustrated-2.png");
+  }
+}
+
+.bg-secondary {
+  background-color: #f7f5e8;
+}
+
+.bg-bg {
+  background-color: #fff;
+}
+
+.bg-dark {
+  background-color: #444;
+}
+
+.color-icon {
+  color: #bbd2bd;
+}
+
+.button {
+  @apply bg-bg text-black border border-gray-400 py-2 px-4 rounded inline-block cursor-pointer;
+}
+
+.button:hover {
+  @apply border-gray-500 bg-gray-200 text-black
+}
+
+.button-transparent {
+  @apply button;
+  background-color: transparent;
+}
+
+.button-brand {
+  @apply button text-white;
+  background-color: #5cb85c; // bootstrap green
+  border-color: #4cae4c;
+}
+
+.button-brand:hover {
+  @apply text-white;
+  background-color: #449d44; // bootstrap green
+  border-color: #398439;
+}
+
+.droppy {
+  @apply relative inline-block;
+
+  input[type='checkbox'] { 
+    display: none
+  }
+
+  .droppy-menu {
+    // min-width: 160px;
+    @apply hidden absolute top-100 left-0 bg-bg border border-gray-300 rounded py-1 my-1 shadow-md text-left;
+  }
+
+  .droppy-menu-up {
+    @apply top-auto bottom-100;
+  }
+
+  .droppy-menu-right {
+    @apply left-auto right-0;
+  }
+
+  .droppy-menu > li > a {
+    @apply whitespace-no-wrap block py-1 px-5
+  }
+
+  .droppy-menu > li > a:hover {
+    @apply bg-gray-200
+  }
+
+  input[type='checkbox']:checked ~ .droppy-menu {
+    @apply block;
+  }
+}
+
+/* 
+* Utilities
+*/
+
+.top-100 {
+  top: 100%;
+}
+.right-100 {
+  right: 100%;
+}
+.bottom-100 {
+  bottom: 100%;
+}
+.left-100 {
+  left: 100%;
+}

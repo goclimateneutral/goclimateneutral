@@ -1,7 +1,13 @@
 <% description(t('climate_change_is_the_greatest_challange')) %>
+<% content_for :stylesheets do %>
+  <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
+<% end %>
+<% content_for :javascripts do %>
+  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'throw "Loading Javascript " + this.src + " failed"' %>
+<% end %>
 
 <div class="site-wrapper-first">
-  <%= render "shared/header" %>
+  <%= render "shared/header_old" %>
   <div class="container">
 
     <div class="row">
@@ -221,7 +227,7 @@
   </div>
 </div>
 
-<%= render "shared/footer" %>
+<%= render "shared/footer_old" %>
 
 <% content_for :javascript_tags do %>
   <script>
