@@ -1,5 +1,12 @@
+<% content_for :stylesheets do %>
+  <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
+<% end %>
+<% content_for :javascripts do %>
+  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'throw "Loading Javascript " + this.src + " failed"' %>
+<% end %>
+
 <div class="site-wrapper-first site-wrapper-first--nav-only">
-  <%= render "shared/header" %>
+  <%= render "shared/header_old" %>
 </div>
 
 <div class="site-wrapper-second">
@@ -380,7 +387,7 @@
   <p><a href="https://www.goclimateneutral.org/blog/klimatberakningar-for-foretag/" target="_blank"><%=t 'business.climate_reports.read_more_about_calculations' %></a></p>
 </div>
 
-<%= render "shared/footer" %>
+<%= render "shared/footer_old" %>
 
 <% content_for :javascript_tags do %>
   <script>
