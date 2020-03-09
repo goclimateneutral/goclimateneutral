@@ -61,7 +61,7 @@ body {
   border-color: #398439;
 }
 
-.droppy {
+.dropdown {
   @apply relative inline-block;
 
   input[type='checkbox'] { 
@@ -92,21 +92,4 @@ body {
   input[type='checkbox']:checked ~ .dropdown-menu {
     @apply block;
   }
-}
-
-/* 
-* Utilities
-*/
-
-.top-100 {
-  top: 100%;
-}
-.right-100 {
-  right: 100%;
-}
-.bottom-100 {
-  bottom: 100%;
-}
-.left-100 {
-  left: 100%;
 }

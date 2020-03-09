@@ -1,14 +1,15 @@
-<nav class="px-8 py-4 flex-none md:flex md:justify-between md:content-center">
+<nav class="px-8 py-4 flex-none md:flex md:justify-between md:content-center" data-controller="header">
   <div class="flex-none md:flex">
     <div class="flex justify-between md:inline-block items-center">
       <a class="" href="<%= root_path %>">
         <%= image_tag webpack_asset_path('images/goclimateneutral_logo.svg'), alt: 'GoClimateNeutral' %>
       </a>
-      <button class="button-transparent md:hidden">
+      <button class="button-transparent md:hidden" data-action="header#toggle">
         <i class="fa fa-bars"></i>
       </button>
     </div>
 
+    <div class="flex flex-col md:flex-row overflow-hidden transition-all ease-out duration-200 max-h-0 h-auto" data-target="header.menu">
     <!-- base menu --> 
     <ul class="text-center md:text-left pt-5 mt-5 border-t md:border-0 md:inline-flex md:items-center md:pt-0 md:mt-0">
       <li class="py-3 md:px-4 md:pl-12 text-lg"><%= link_to t('navigation.gift_cards'), gift_cards_path %></li>
@@ -30,12 +31,13 @@
         <li class="py-3 md:px-4 text-lg"><div class="navbar-inner"><%= link_to(I18n.t('views.shared.header.sign_up'), root_url, class: 'button-brand')%></div></li>
       <% end %>
     </ul>
+    </div>
   </div>
 
   <!-- Menu for big screens -->
   <ul class="hidden md:flex md:items-center">
     <% if user_signed_in? %> 
-        <li class="droppy py-6"> 
+        <li class="dropdown py-6"> 
           <label class="cursor-pointer" aria-haspopup="true" aria-expanded="false">
             <%= current_user.user_name.nil? || current_user.user_name.empty? ? current_user.email : current_user.user_name %> <i class="fa fa-caret-down" aria-hidden="true"></i>
             <input type="checkbox">
