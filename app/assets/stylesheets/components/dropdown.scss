@@ -1,0 +1,32 @@
+.dropdown {
+  @apply relative inline-block;
+
+  input[type='checkbox'] { 
+    display: none
+  }
+
+  .dropdown-menu {
+    // min-width: 160px;
+    @apply hidden absolute top-100 left-0 bg-bg border border-gray-300 rounded py-1 my-1 shadow-md text-left;
+  }
+
+  .dropdown-menu-up {
+    @apply top-auto bottom-100;
+  }
+
+  .dropdown-menu-right {
+    @apply left-auto right-0;
+  }
+
+  .dropdown-menu > li > a {
+    @apply whitespace-no-wrap block py-1 px-5
+  }
+
+  .dropdown-menu > li > a:hover {
+    @apply bg-gray-200
+  }
+
+  input[type='checkbox']:checked ~ .dropdown-menu {
+    @apply block;
+  }
+}

@@ -1,0 +1,25 @@
+
+.button {
+  @apply bg-bg text-black border border-gray-400 py-2 px-4 rounded cursor-pointer whitespace-no-wrap;
+}
+
+.button:hover {
+  @apply border-gray-500 bg-gray-200 text-black
+}
+
+.button-transparent {
+  @apply button;
+  background-color: transparent;
+}
+
+.button-brand {
+  @apply button text-white;
+  background-color: #5cb85c; // bootstrap green
+  border-color: #4cae4c;
+}
+
+.button-brand:hover {
+  @apply text-white;
+  background-color: #449d44; // bootstrap green
+  border-color: #398439;
+}

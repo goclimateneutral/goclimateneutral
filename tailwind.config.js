@@ -16,7 +16,12 @@ module.exports = {
       colors: {
         'alert-300': '#fcf8e3', // temporary bootstrap colours
         'alert-600': '#faebcc',
-        'alert-700': '#8a6d3b'
+        'alert-700': '#8a6d3b',
+        brand: '#f3f9f9',
+        secondary: '#f7f5e8',
+        bg: '#fff',
+        dark: '#444',
+        icon: '#bbd2bd'
       }
     },
     screens: {

@@ -37,6 +37,8 @@ import 'font-awesome/scss/font-awesome.scss';
 
 /* Global styling */
 import '../stylesheets/index.scss';
+import '../stylesheets/components/button.scss';
+import '../stylesheets/components/dropdown.scss';
 
 /* Components */
 import '../javascripts/components/business_offset_calculator';

@@ -7,9 +7,11 @@ export default class HeaderController extends Controller {
 
   toggle() {
     if (this.isOpen) {
-      this.menuTarget.style.maxHeight = '0px';
+      this.menuTarget.classList.add('max-h-0');
+      this.menuTarget.classList.remove('max-h-screen');
     } else {
-      this.menuTarget.style.maxHeight = `${this.menuTarget.scrollHeight}px`;
+      this.menuTarget.classList.remove('max-h-0');
+      this.menuTarget.classList.add('max-h-screen');
     }
     this.isOpen = !this.isOpen;
   }
