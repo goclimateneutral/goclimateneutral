@@ -1,7 +1,4 @@
 module.exports = {
-  corePlugins: {
-    preflight: true
-  },
   theme: {
     extend: {
       fontSize: {

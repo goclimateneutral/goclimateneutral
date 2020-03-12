@@ -48,28 +48,28 @@
       </div>
       <div class="text-center">
         <div class="dropdown">
-        <label class="button">
-          <input type="checkbox">
-          <%= image_tag webpack_asset_path("images/regions/#{current_region.id}.png"), class: 'inline-block' %>
-          <%= current_region.name %>
-          <i class="fa fa-caret-up" aria-hidden="true"></i>
-          <ul class="dropdown-menu dropdown-menu-up">
-            <% Region.all.filter { |r| r != current_region }.each do |region| %>
+          <label class="button">
+            <input type="checkbox">
+            <%= image_tag webpack_asset_path("images/regions/#{current_region.id}.png"), class: 'inline-block' %>
+            <%= current_region.name %>
+            <i class="fa fa-caret-up" aria-hidden="true"></i>
+            <ul class="dropdown-menu dropdown-menu-up">
+              <% Region.all.filter { |r| r != current_region }.each do |region| %>
+                <li>
+                  <a href="<%= url_for_region(region) %>">
+                    <div class="w-6 inline-block"><%= image_tag webpack_asset_path("images/regions/#{region.id}.png"), class: 'inline-block' %></div> 
+                    <%= region.name %>
+                  </a>
+                </li>
+              <% end %>
               <li>
-                <a href="<%= url_for_region(region) %>">
-                  <div class="w-6 inline-block"><%= image_tag webpack_asset_path("images/regions/#{region.id}.png"), class: 'inline-block' %></div> 
-                  <%= region.name %>
+                <a href="<%= url_for_region(Region::Europe) %>">
+                <div class="w-6 inline-block"><%= image_tag webpack_asset_path("images/regions/world.png"), class: 'inline-block' %></div> 
+                  Rest of the World
                 </a>
               </li>
-            <% end %>
-            <li>
-              <a href="<%= url_for_region(Region::Europe) %>">
-              <div class="w-6 inline-block"><%= image_tag webpack_asset_path("images/regions/world.png"), class: 'inline-block' %></div> 
-                Rest of the World
-              </a>
-            </li>
-          </ul>
-        </label>
+            </ul>
+          </label>
         </div>
         <p class="py-2 text-sm">© <%= Time.current.year %> GoClimateNeutral</p>
       </div>
