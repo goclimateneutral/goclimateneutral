@@ -17,15 +17,6 @@ input {
 .offset-projects {
   padding-bottom: 40px;
 }
-.site-wrapper {
-  display: table;
-  width: 100%;
-  height: 100%; /* For at least Firefox */
-  min-height: 100%;
-  display: table-cell;
-  vertical-align: top;
-}
-
 .inner {
   padding: 40px 15px;
 
@@ -109,11 +100,6 @@ div.legal {
 }
 .btn-social {
   margin-bottom: 20px;
-}
-.site-wrapper {
-    min-height: 100vh;
-    display: table;
-    width: 100%;
 }
 .site-wrapper-first {
   background-color: #f3f9f9;

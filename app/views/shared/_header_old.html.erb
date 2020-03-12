@@ -1,3 +1,54 @@
+<% if (region = Region.recommended_for_ip_country(request.headers['CF-IPCountry'])) && region != current_region && !cookies[:region_recommendation_dismissed].present? %>
+  <% I18n.with_locale(region.locale) do %>
+    <div id="region-recommendation" class="region-recommendation">
+      <div class="region-recommendation__main">
+        <p class="region-recommendation__text"><%=t 'views.shared.header.region_recommendation.select_country' %></p>
+        <div>
+        <%= link_to url_for_region(region), class: 'btn btn-default region-recommendation__button' do %>
+          <%= image_tag webpack_asset_path("images/regions/#{region.id}.png") %>
+          <%=t 'views.shared.header.region_recommendation.continue_button', region: region.name %>
+        <% end %>
+        </div>
+      </div>
+      <div class="region-recommendation__dismiss">
+        <button id="region-recommendation-dismiss" class="region-recommendation__dismiss-button">
+          <span class="glyphicon glyphicon-remove"></span>
+        </button>
+      </div>
+    </div>
+    <script>
+      (function() {
+        var regionRecommendationElement = document.querySelector('#region-recommendation');
+        var dismissElement = document.querySelector('#region-recommendation-dismiss');
+
+        dismissElement.addEventListener('click', function(event) {
+          document.cookie = 'region_recommendation_dismissed=true';
+          regionRecommendationElement.parentNode.removeChild(regionRecommendationElement);
+        });
+      })();
+    </script>
+  <% end %>
+<% end %>
+
+<% if notice || alert %>
+  <div class="alert alert-warning" role="alert">
+    <% if notice %>
+      <p class="notice"><%= notice %></p>
+    <% elsif alert %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
+  </div>
+  <% content_for :javascript_tags do %>
+    <script>
+      $(document).ready(function() {
+        setTimeout(function() {
+          $(".alert").slideUp(1000);
+        }, 5000);
+      });
+    </script>
+  <% end %>
+<% end %>
+
 <nav class="navbar navbar-default navbar-goclimateneutral">
   <div class="container-fluid">
 

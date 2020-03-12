@@ -1,3 +1,51 @@
+<% if (region = Region.recommended_for_ip_country(request.headers['CF-IPCountry'])) && region != current_region && !cookies[:region_recommendation_dismissed].present? %>
+  <% I18n.with_locale(region.locale) do %>
+    <div id="region-recommendation" class="flex justify-between items-center py-4 px-8 bg-dark text-white">
+      <div class="flex flex-col md:flex-row items-start md:items-center">
+        <p class=""><%=t 'views.shared.header.region_recommendation.select_country' %></p>
+        <%= link_to url_for_region(region), class: 'button mt-4 ml-0 md:mt-0 md:ml-4' do %>
+          <%= image_tag webpack_asset_path("images/regions/#{region.id}.png"), class: 'inline-block max-w-none' %>
+          <%=t 'views.shared.header.region_recommendation.continue_button', region: region.name %>
+        <% end %>
+      </div>
+      <button id="region-recommendation-dismiss" class="region-recommendation__dismiss-button">
+        <i class="fa fa-times fa-lg" aria-hidden="true"></i>
+      </button>
+    </div>
+    <script>
+      (function() {
+        var regionRecommendationElement = document.querySelector('#region-recommendation');
+        var dismissElement = document.querySelector('#region-recommendation-dismiss');
+
+        dismissElement.addEventListener('click', function(event) {
+          document.cookie = 'region_recommendation_dismissed=true';
+          regionRecommendationElement.parentNode.removeChild(regionRecommendationElement);
+        });
+      })();
+    </script>
+  <% end %>
+<% end %>
+
+<% if notice || alert %>
+  <div class="p-4 text-center alert bg-alert-300 text-alert-700 border rounded-sm border-alert-600" role="alert">
+    <% if notice %>
+      <p class="notice"><%= notice %></p>
+    <% elsif alert %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
+  </div>
+  <% content_for :javascript_tags do %>
+    <script>
+      $(document).ready(function() {
+        setTimeout(function() {
+          $(".alert").slideUp(1000);
+        }, 5000);
+      });
+    </script>
+  <% end %>
+<% end %>
+
+
 <nav class="px-8 py-4 flex-none md:flex md:justify-between md:content-center" data-controller="header">
   <div class="flex-none md:flex">
     <div class="flex justify-between md:inline-block items-center">
@@ -9,7 +57,7 @@
       </button>
     </div>
 
-    <div class="flex flex-col md:flex-row overflow-hidden transition-all ease-out duration-200 max-h-0 h-auto" data-target="header.menu">
+    <div class="flex flex-col md:flex-row overflow-hidden transition-all ease-out duration-200 max-h-0 md:max-h-full h-auto" data-target="header.menu">
     <!-- base menu --> 
     <ul class="text-center md:text-left pt-5 mt-5 border-t md:border-0 md:inline-flex md:items-center md:pt-0 md:mt-0">
       <li class="py-3 md:px-4 md:pl-12 text-lg"><%= link_to t('navigation.gift_cards'), gift_cards_path %></li>
@@ -27,7 +75,7 @@
         <li class="py-3 md:px-4 text-lg" role="separator" class="divider"></li> 
         <li class="py-3 md:px-4 text-lg"><%= link_to(I18n.t('log_out'), destroy_user_session_path, :method => :delete) %></li>
       <% else %>
-        <li class="pt-8 pb-3 md:px-4 text-lg"><%= link_to(I18n.t('log_in'), new_user_session_url)%></li>
+        <li class="pt-8 pb-3 md:px-4 text-lg whitespace-no-wrap"><%= link_to(I18n.t('log_in'), new_user_session_url)%></li>
         <li class="py-3 md:px-4 text-lg"><div class="navbar-inner"><%= link_to(I18n.t('views.shared.header.sign_up'), root_url, class: 'button-brand')%></div></li>
       <% end %>
     </ul>
@@ -51,7 +99,7 @@
           </label> 
         </li>
     <% else %>
-      <li><%= link_to(I18n.t('log_in'), new_user_session_url)%></li>
+      <li><%= link_to(I18n.t('log_in'), new_user_session_url, class: 'whitespace-no-wrap') %></li>
       <li><div class="navbar-inner"><%= link_to(I18n.t('views.shared.header.sign_up'), root_url, class: 'button-brand ml-8')%></div></li>
     <% end %>
   </ul>
