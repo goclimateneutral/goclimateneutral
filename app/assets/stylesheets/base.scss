@@ -169,22 +169,43 @@ div.legal {
 }
 
 /* Glyphicon chevron overrides */
-.site-wrapper .glyphicon-chevron-down, .site-wrapper .glyphicon-chevron-right, .site-wrapper .glyphicon-chevron-left {
+.site-wrapper-first .glyphicon-chevron-down,
+.site-wrapper-first .glyphicon-chevron-right,
+.site-wrapper-first .glyphicon-chevron-left,
+.site-wrapper-second .glyphicon-chevron-down,
+.site-wrapper-second .glyphicon-chevron-right,
+.site-wrapper-second .glyphicon-chevron-left,
+.site-wrapper-third .glyphicon-chevron-down,
+.site-wrapper-third .glyphicon-chevron-right,
+.site-wrapper-third .glyphicon-chevron-left 
+{
   font-size: 40px;
 }
-.site-wrapper .glyphicon-chevron-down {
+.site-wrapper-first .glyphicon-chevron-down, 
+.site-wrapper-second .glyphicon-chevron-down, 
+.site-wrapper-third .glyphicon-chevron-down 
+{
   padding-top: 110px;
   text-align: left;  
 }
 @media (max-width: 767px) {
-  .site-wrapper .glyphicon-chevron-down {
+  .site-wrapper-first .glyphicon-chevron-down, 
+  .site-wrapper-second .glyphicon-chevron-down, 
+  .site-wrapper-third .glyphicon-chevron-down 
+  {
     padding-top: 0;
   }
 }
-.site-wrapper .glyphicon-chevron-down.after-video {
+.site-wrapper-first .glyphicon-chevron-down.after-video, 
+.site-wrapper-second .glyphicon-chevron-down.after-video, 
+.site-wrapper-third .glyphicon-chevron-down.after-video
+{
   padding-top: 20px;
 }
-.site-wrapper .glyphicon-chevron-down.glyphicon-plan-first {
+.site-wrapper-first .glyphicon-chevron-down.glyphicon-plan-first, 
+.site-wrapper-second .glyphicon-chevron-down.glyphicon-plan-first, 
+.site-wrapper-third .glyphicon-chevron-down.glyphicon-plan-first
+{
     padding-top: 0px;
 }
 
