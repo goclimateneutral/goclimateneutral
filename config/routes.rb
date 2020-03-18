@@ -55,6 +55,8 @@ Rails.application.routes.draw do
     get '100_percent_transparency', to: 'welcome#transparency', as: 'transparency'
     get 'privacy_policy', to: 'welcome#privacy_policy'
 
+    resources :lifestyle_footprints, path: 'calculator/:country', only: [:new, :create]
+
     resources :projects, path: 'our_projects', only: [:index]
 
     get 'business', to: 'welcome#business'

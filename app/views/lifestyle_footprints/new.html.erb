@@ -1,0 +1,93 @@
+<nav class="bg-brand">
+  <%= render "shared/header" %>
+</nav>
+
+<h1>Calculator</h1>
+
+<%= form_with url: url_for(action: :create), html: { 'data-controller': 'flight-footprint-form' } do |f| %>
+  <% f.fields_for :lifestyle_footprint do |f| %>
+    <% if @calculator.region_options.present? %>
+      <h2>In what region do you live?</h2>
+      <% @calculator.region_options.each do |option| %>
+        <label>
+          <%= f.radio_button :region, option['key'], required: '' %>
+          <%= option['key'] %>
+        </label>
+      <% end %>
+    <% end %>
+
+    <% if @calculator.home_options.present? %>
+      <h2>How do you live?</h2>
+      <% @calculator.home_options.each do |option| %>
+        <label>
+          <%= f.radio_button :home, option['key'], required: '' %>
+          <%= option['key'] %>
+        </label>
+      <% end %>
+    <% end %>
+
+    <% if @calculator.heating_options.present? %>
+      <h2>How do you heat your house?</h2>
+      <% @calculator.heating_options.each do |option| %>
+        <label>
+          <%= f.radio_button :heating, option['key'], required: '' %>
+          <%= option['key'] %>
+        </label>
+      <% end %>
+    <% end %>
+
+    <% if @calculator.house_age_options.present? %>
+      <h2>How old is your house?</h2>
+      <% @calculator.house_age_options.each do |option| %>
+        <label>
+          <%= f.radio_button :house_age, option['key'], required: '' %>
+          <%= option['key'] %>
+        </label>
+      <% end %>
+    <% end %>
+    
+    <% if @calculator.green_electricity_options.present? %>
+      <h2>Have you chosen green electricity?</h2>
+      <% @calculator.green_electricity_options.each do |option| %>
+        <label>
+          <%= f.radio_button :green_electricity, option['key'], required: '' %>
+          <%= option['key'] %>
+        </label>
+      <% end %>
+    <% end %>
+
+    <% if @calculator.food_options.present? %>
+      <h2>What's your diet like?</h2>
+      <% @calculator.food_options.each do |option| %>
+        <label>
+          <%= f.radio_button :food, option['key'], required: '' %>
+          <%= option['key'] %>
+        </label>
+      <% end %>
+    <% end %>
+
+    <% if @calculator.car_type_options.present? %>
+      <h2>What type of car do you use to get around?</h2>
+      <p>Includes taxi rides</p>
+      <% @calculator.car_type_options.each do |option| %>
+        <label>
+          <%= f.radio_button :car_type, option['key'], required: '' %>
+          <%= option['key'] %>
+        </label>
+      <% end %>
+    <% end %>
+
+    <% if @calculator.car_type_options.present? %>
+      <h2>How much, on average, do you drive each week?</h2>
+      <%= f.number_field :car_distance %>
+      <%= @calculator.car_distance_unit %>
+    <% end %>
+        
+    <h2>How many hours, on average, do you fly every year?</h2>
+    <%= f.number_field :flight_hours %>
+
+    <%= f.submit %>
+  <% end %>
+<% end %>
+
+<%= render "shared/footer" %>
