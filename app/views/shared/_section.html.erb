@@ -1,0 +1,17 @@
+<%= tag.section class: locals[:section_class] ? locals[:section_class] : 'bg-secondary' do %>
+  <div class="max-w-2xl mx-auto pt-16 pb-20 px-10 lg:px-0 text-center">
+    <% if locals[:icon_class] %>
+      <%= tag.i class: 'fa fa-2x text-big-icon text-icon ' + locals[:icon_class], 'aria-hidden': true %>
+    <% end %>
+    <h2 class="text-4xl my-5"><%= locals[:title] %> </h2>
+    <% if locals[:body] %>
+      <% if locals[:body].kind_of?(Array) %>
+        <% locals[:body].each do |p| %>
+          <p class="text-xl leading-normal mb-5"><%= p %></p>
+        <% end %>
+      <% else %>
+          <p class="text-xl leading-normal mb-5"><%= locals[:body] %></p>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>
