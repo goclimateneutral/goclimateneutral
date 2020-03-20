@@ -13,13 +13,9 @@
 }
 
 .button-brand {
-  @apply button text-white;
-  background-color: #5cb85c; // bootstrap green
-  border-color: #4cae4c;
+  @apply button text-white bg-bootstrap-green-500 border-bootstrap-green-600;
 }
 
 .button-brand:hover {
-  @apply text-white;
-  background-color: #449d44; // bootstrap green
-  border-color: #398439;
+  @apply text-white bg-bootstrap-green-600 border-bootstrap-green-700;
 }
