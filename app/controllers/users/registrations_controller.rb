@@ -11,6 +11,11 @@ module Users
     # GET /resource/sign_up
     def new
       @user = User.new(region: current_region.id)
+
+      respond_to do |format|
+        format.html
+        format.json { render_price_json }
+      end
     end
 
     # POST /resource
@@ -100,6 +105,12 @@ module Users
 
     def set_subscription_manager
       @manager = SubscriptionManager.new(@user.stripe_customer)
+    end
+
+    def render_price_json
+      render json: {
+        price: @plan_price.to_s(precision: :auto)
+      }
     end
 
     def render_user_invalid_json

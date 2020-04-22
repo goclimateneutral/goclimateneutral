@@ -1,4 +1,5 @@
 import { Controller } from 'stimulus';
+import submitForm from '../../util/submit_form';
 
 export default class RegistrationFormController extends Controller {
   initialize() {
@@ -18,7 +19,7 @@ export default class RegistrationFormController extends Controller {
     this.setErrorMessage('');
 
     this.stripeCardElementController.populatePaymentMethodField()
-      .then(() => this.postForm())
+      .then(() => submitForm(this.element))
       .then((response) => response.json())
       .then((data) => this.resolveFormResponse(data))
       .catch((error) => {
@@ -34,14 +35,6 @@ export default class RegistrationFormController extends Controller {
         this.stripeCardElementController.invalidatePaymentMethodField();
         this.disableLoadingState();
       });
-  }
-
-  postForm() {
-    return fetch(this.element.action, {
-      method: this.element.method,
-      body: new FormData(this.element),
-      credentials: 'include'
-    });
   }
 
   resolveFormResponse(data) {

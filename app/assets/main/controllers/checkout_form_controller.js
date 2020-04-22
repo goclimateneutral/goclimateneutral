@@ -1,4 +1,5 @@
 import { Controller } from 'stimulus';
+import submitForm from '../../util/submit_form';
 
 export default class CheckoutFormController extends Controller {
   initialize() {
@@ -16,7 +17,7 @@ export default class CheckoutFormController extends Controller {
     this.enableLoadingState();
     this.setErrorMessage('');
 
-    this.postForm()
+    submitForm(this.element)
       .then((response) => response.json())
       .then((data) => this.resolveFormResponse(data))
       .catch((error) => {
@@ -26,14 +27,6 @@ export default class CheckoutFormController extends Controller {
       .finally(() => {
         this.disableLoadingState();
       });
-  }
-
-  postForm() {
-    return fetch(this.element.action, {
-      method: this.element.method,
-      body: new FormData(this.element),
-      credentials: 'include'
-    });
   }
 
   resolveFormResponse(data) {

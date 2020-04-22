@@ -1,10 +1,11 @@
 import { Controller } from 'stimulus';
+import submitForm from '../../util/submit_form';
 
 export default class LifestyleCalculatorPreviewController extends Controller {
   calculate(event) {
     event.preventDefault();
 
-    this.postForm()
+    submitForm(this.element)
       .then((response) => response.json())
       .then((data) => {
         if (data.error !== undefined) {
@@ -17,14 +18,6 @@ export default class LifestyleCalculatorPreviewController extends Controller {
         this.errorTarget.innerText = '';
         this.setResults(data);
       });
-  }
-
-  postForm() {
-    return fetch(this.element.action, {
-      method: this.element.method,
-      body: new FormData(this.element),
-      credentials: 'include'
-    });
   }
 
   setResults(data) {

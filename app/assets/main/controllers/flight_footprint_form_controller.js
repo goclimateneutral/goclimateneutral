@@ -1,4 +1,5 @@
 import { Controller } from 'stimulus';
+import submitForm from '../../util/submit_form';
 
 export default class FlightFootprintForm extends Controller {
   update() {
@@ -15,7 +16,7 @@ export default class FlightFootprintForm extends Controller {
     this.personsFormGroupTarget.classList.remove('has-error');
     this.personsMessageTarget.classList.add('hidden');
 
-    this.postForm()
+    submitForm(this.element)
       .then((response) => response.json())
       .then((data) => {
         this.footprintTarget.innerText = data.footprint;
@@ -28,14 +29,6 @@ export default class FlightFootprintForm extends Controller {
     this.footprintTarget.innerText = '-';
     this.priceTarget.innerText = '-';
     this.offsetLinkTarget.removeAttribute('href');
-  }
-
-  postForm() {
-    return fetch(this.element.action, {
-      method: this.element.method,
-      body: new FormData(this.element),
-      credentials: 'include'
-    });
   }
 }
 

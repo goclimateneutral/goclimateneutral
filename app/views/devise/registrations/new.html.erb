@@ -7,12 +7,12 @@
 
 <div class="site-wrapper-first">
   <%= render "shared/header_old" %>
-  <div class="inner">
+  <div class="inner" data-controller='registration-price'>
 
     <h1 class="cover-heading"><%=t 'sign_up_for_a_climate_neutral_life' %></h1>
 
     <% if @footprint.present? %>
-      <%= form_with method: :get do |f| %>
+      <%= form_with method: :get, html: { 'data-target': 'registration-price.peopleForm' } do |f| %>
         <%= f.hidden_field(:lifestyle_footprint, :value => @footprint.key) %>
         <p class="lead">
           <%=t 'views.registrations.offset_for_x_people.before_input' %>
@@ -20,7 +20,7 @@
             <%= f.select :people,
               options_for_select(1..20, params[:people].presence || 1),
               {},
-              { class: 'form-control', onchange: 'this.form.submit()' }
+              { class: 'form-control', 'data-action': 'registration-price#update' }
             %>
           </span>
           <%=t 'views.registrations.offset_for_x_people.after_input' %>
@@ -28,13 +28,16 @@
       <% end %>
     <% end %>
 
-    <p class="lead"><%=t 'you_will_offset_for', cost: @plan_price.to_s(precision: :auto) %>. <%=t 'sign_up_here_to_start_livint_a_climate_neutral_life' %></p>
+    <p class="lead">
+    <%=t 'you_will_offset_for.prefix' %><span data-target="registration-price.price"><%= @plan_price.to_s(precision: :auto) %></span><%=t 'you_will_offset_for.suffix' %>
+    <%=t 'sign_up_here_to_start_livint_a_climate_neutral_life' %>
+    </p>
 
     <%= form_with url: registration_path(resource_name, format: :json), html: { id: "payment-form", class: "form-horizontal", data: { controller: 'registration-form', action: 'registration-form#submit' } } do |f| %>
       <%= f.hidden_field(:choices, :value => params[:choices]) %>
       <%= f.hidden_field(:lifestyle_footprint, :value => @footprint&.key) %>
 
-      <%= f.hidden_field :people, value: (params[:people].presence || 1) %>
+      <%= f.hidden_field :people, value: (params[:people].presence || 1), 'data-target': 'registration-price.peopleField' %>
 
       <%= fields_for @user do |user_form| %>
         <%= user_form.hidden_field :region %>

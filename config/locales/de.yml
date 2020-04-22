@@ -146,7 +146,9 @@ de:
     verfügen außerdem über das Label Gold Standard (u.a. von WWF). Diese 
     Projekte kosten %{price_per_tonne} pro Tonne - daher kostet
     Sie dies %{price_per_month} € pro Monat.
-  you_will_offset_for: 'Sie kompensieren mit %{cost}/monat'
+  you_will_offset_for:
+    prefix: 'Sie kompensieren mit '
+    suffix: /monat.
   mostly_vegetarian: Überwiegend vegetarische Ernährung
   one_fuel_efficient_car: Ein verbrauchsarmes Auto
   flies_sometimes: Fliege gelegentlich

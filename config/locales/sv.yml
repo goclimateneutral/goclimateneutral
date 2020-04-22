@@ -90,7 +90,9 @@ sv:
   hardly_ever_flies: Flyger nästan aldrig
   cost_calculation: Kostnadsberäkning
   price_info_popup_content: Detta val räknar vi ger ett årligt utsläpp på %{footprint} ton CO<sub>2</sub>. Eftersom kalkylen är ungefärlig klimatkompenserar vi för dubbelt så många ton, alltså %{footprint_x2} ton C0<sub>2</sub>, så att du kan vara säker på att du lever klimatneutralt varje månad. <br>Vi klimatkompenserar i projekt som är FN- och Gold Standard-certifierade (en certifiering skapad av bland annat WWF). Dessa projekt kostar %{price_per_tonne}/ton - och därför landar detta val på %{price_per_month}/mån.
-  you_will_offset_for: Att ta ansvar för dina klimatutsläpp kostar %{cost}/mån
+  you_will_offset_for:
+    prefix: 'Att ta ansvar för dina klimatutsläpp kostar '
+    suffix: /mån.
   mostly_vegetarian: Äter mest vegetariskt
   one_fuel_efficient_car: En bränslesnål bil
   flies_sometimes: Flyger ibland

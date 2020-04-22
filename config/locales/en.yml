@@ -90,7 +90,9 @@ en:
   hardly_ever_flies: Hardly ever flies
   cost_calculation: Cost calculation
   price_info_popup_content: With this choice we estimate a yearly climate footprint of %{footprint} tonne CO<sub>2</sub>. Since the number is approximate we offset for twice as many tonnes, so %{footprint_x2} tonne C0<sub>2</sub>. This way you can be sure you live climate neutral every month.<br>We invest in projects that are Gold Standard-certified (a certification created among others by WWF). These project cost %{price_per_tonne} per tonne - so this choice end up at %{price_per_month} per month.
-  you_will_offset_for: To take responsibility for your climate footprint costs %{cost}/month
+  you_will_offset_for:
+    prefix: 'To take responsibility for your climate footprint costs '
+    suffix: /month.
   mostly_vegetarian: Eat mostly vegetarian food
   one_fuel_efficient_car: One Fuel Efficient Car
   flies_sometimes: Flies Sometimes
