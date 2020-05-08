@@ -1,55 +1,125 @@
 module.exports = {
   theme: {
-    extend: {
-      fontSize: {
-        'big-icon': '12rem'
+    variants: {
+      borderWidth: ['responsive', 'hover']
+    },
+    screens: {
+      // Default: Mobile
+      'm-lg': '640px', // Mobile Large
+      t: '768px', // Tablet
+      'd-sm': '1024px', // Desktop Small
+      d: '1280px', // Desktop
+      'd-lg': '1680px', // Desktop Large
+      // below are temporary
+      sm: '640px',
+      md: '768px',
+      lg: '1024px'
+    },
+    colors: {
+      current: 'currentColor',
+      transparent: 'transparent',
+      black: '#000',
+      white: '#fff',
+      primary: '#1C4637',
+      green: {
+        dark: '#1C4637',
+        'shade-1': '#317050',
+        'shade-2': '#2E8731',
+        accent: '#48A12A',
+        'tint-2': '#90CF78',
+        'tint-1': '#EBF6E6',
+        pastel: '#F6FFF2'
       },
+      yellow: {
+        dark: '#453100',
+        'shade-1': '#705207',
+        'shade-2': '#D69C09',
+        accent: '#FFC714',
+        'tint-2': '#FFE286',
+        'tint-1': '#FFF9E4',
+        pastel: '#FFFCF3'
+      },
+      orange: {
+        dark: '#4A1F10',
+        'shade-1': '#994323',
+        'shade-2': '#D15D32',
+        accent: '#FF8153',
+        'tint-2': '#FFAF91',
+        'tint-1': '#FFF2ED',
+        pastel: '#FFF8F5'
+      },
+      blue: {
+        dark: '#142B4A',
+        'shade-1': '#2A4A75',
+        'shade-2': '#4673B3',
+        accent: '#6F9BD9',
+        'tint-2': '#A5C5F0',
+        'tint-1': '#ECF3FC',
+        pastel: '#F7FBFF'
+      },
+      // below are temporary
+      icon: '#bbd2bd',
+      dark: '#444',
+      bg: '#fff',
+      secondary: '#f7f5e8',
+      brand: '#f3f9f9',
+      'alert-300': '#fcf8e3',
+      'alert-600': '#faebcc',
+      'alert-700': '#8a6d3b'
+    },
+    lineHeight: {
+      none: '1',
+      6: '1.5rem',
+      8: '2rem',
+      10: '2.5rem',
+      12: '3rem',
+      20: '5rem'
+    },
+    fontWeight: {
+      thin: '200',
+      light: '300',
+      normal: '400',
+      medium: '500',
+      semibold: '600',
+      bold: '700',
+      extrabold: '800',
+      black: '900'
+    },
+    fontSize: (theme) => ({
+      sm: ['0.8125rem', theme('lineHeight.6')],
+      base: ['1rem', theme('lineHeight.6')],
+      lg: ['1.25rem', theme('lineHeight.8')],
+      xl: ['1.75rem', theme('lineHeight.8')],
+      '2xl': ['2.25rem', theme('lineHeight.10')],
+      '3xl': ['2.75rem', theme('lineHeight.12')],
+      '4xl': ['4.25rem', theme('lineHeight.20')],
+      'big-icon': '12rem' // temporary
+    }),
+    fontFamily: false,
+    extend: {
       inset: { // top/right/bottom/left
-        100: '100%'
+        100: '100%',
+        '-1/2': '-50%'
       },
       maxHeight: {
         0: 0
       },
-      colors: {
-        'alert-300': '#fcf8e3', // temporary bootstrap colours
-        'alert-600': '#faebcc',
-        'alert-700': '#8a6d3b',
-        brand: '#f3f9f9',
-        secondary: '#f7f5e8',
-        bg: '#fff',
-        dark: '#444',
-        icon: '#bbd2bd',
-        gray: {
-          100: '#F9F9F9',
-          200: '#EFEFEF',
-          300: '#E5E5E6',
-          400: '#D2D2D3',
-          500: '#BFBFC0',
-          600: '#ACACAD',
-          700: '#737373',
-          800: '#565656',
-          900: '#39393A'
-        },
-        'bootstrap-green': {
-          100: '#EFF8EF',
-          200: '#D6EDD6',
-          300: '#BEE3BE',
-          400: '#8DCD8D',
-          500: '#5CB85C',
-          600: '#53A653',
-          700: '#376E37',
-          800: '#295329',
-          900: '#1C371C'
-        }
+      maxWidth: {
+        xs: '15rem',
+        '1/4': '25%',
+        '1/2': '50%',
+        '3/4': '75%'
+      },
+      zIndex: {
+        '-10': '-10'
       },
       boxShadow: (theme) => ({
-        outline: `0 0 0 3px ${theme('colors.bootstrap-green.500')}`
-      })
-    },
-    screens: {
-      sm: '640px',
-      md: '768px',
-      lg: '1024px'
+        outline: `0 0 0 3px ${theme('colors.primary')}`
+      }),
+      transitionProperty: {
+        default: 'background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, border-width',
+        border: 'border-width'
+      }
     }
   },
   plugins: []
