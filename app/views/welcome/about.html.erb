@@ -1,100 +1,119 @@
-<nav class="bg-brand">
-  <%= render "shared/header" %>
-</nav>
+<% content_for :stylesheets do %>
+  <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
+<% end %>
+<% content_for :javascripts do %>
+  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'throw "Loading Javascript " + this.src + " failed"' %>
+<% end %>
 
-<section class="bg-brand bg-brand-image bg-bottom bg-no-repeat bg-cover">
-  <div class="text-center pt-16 pb-48 px-10 lg:px-0 max-w-2xl mx-auto">
-    <i class="fa fa-2x fa-globe text-big-icon text-icon" aria-hidden="true"></i>
-    <h1 class="text-3xl md:text-5xl my-5"><%= title(t('about_us')) %></h1>
-    <p class="text-normal md:text-2xl leading-normal mb-5"><%= description(t('about_us_intro')) %></p>
-    <p class="text-normal md:text-2xl leading-normal mb-5"><%= description(t('about_us_intro_2')) %></p>
+<div class="site-wrapper-first">
+  <%= render "shared/header_old" %>
+  <div class="inner cover">
+
+    <span class="glyphicon glyphicon-large glyphicon-globe" aria-hidden="true"></span>
+    <h1 class="cover-heading"><%= title(t('about_us')) %></h1>
+    <p class="lead"><%= description(t('about_us_intro')) %></p>
+    <p class="lead"><%= description(t('about_us_intro_2')) %></p>
+
   </div>
-</section>
- 
-<section>
-  <div class="max-w-6xl mx-auto py-20 px-10 lg:px-0">
-    <h2 class="text-4xl mb-4 text-center"><%=t 'about_us_who_are_we' %></h2>
-    <div class="flex flex-wrap justify-center">
-      <% [
-        {
-          key: 'kalle',
-          full_name: 'Kalle Nilvér',
-          twitter_handle: 'kallenilver',
-          phone_number: '+46706084374',
-        },
-        {
-          key: 'cissi',
-          full_name: 'Cissi Lindén',
-          twitter_handle: 'cissilinden',
-          phone_number: '+46705476300',
-        },
-        {
-          key: 'henrik',
-          full_name: 'Henrik Kniberg',
-          twitter_handle: 'henrikkniberg',
-        },
-        {
-          key: 'stefan',
-          full_name: 'Stefan Lindbohm',
-          twitter_handle: 'stefanlindbohm',
-        },
-        {
-          key: 'alexandra',
-          full_name: 'Alexandra Palmquist',
-        },
-        {
-          key: 'tove',
-          full_name: 'Tove Westling',
-        },
-        {
-          key: 'emma',
-          full_name: 'Emma Bäckström',
-        },
-        {
-          key: 'evelina',
-          full_name: 'Evelina Utterdahl',
-          twitter_handle: 'earthwanderess',
-          instagram_handle: 'earthwanderess',
-        },
-      ].each do |person| %>
-        <div class="w-full md:w-1/2 lg:w-1/3 p-6 flex flex-col items-center">
-          <%= image_tag webpack_asset_path('images/about/' + person[:key] + '.jpg'), class: 'rounded-full', alt: person[:key] %>
-          <h3 class="text-2xl mt-3"><%= person[:full_name] %></h3>
-          <p class="text-center my-2 leading-normal">
-            <%=t 'about_us_who_are_we_' + person[:key] + '_html' %>
-          </p>
-          <% if person[:phone_number] %>
-            <p><b>Phone:</b> <%= link_to person[:phone_number], 'tel:' + person[:phone_number], class: 'link' %></p>
-          <% end %>
-          <div class="flex flex-row m-1">
-            <% if person[:twitter_handle] %>
-              <div class="mx-2"><%= link_to raw('<i class="fa fa-2x fa-twitter" aria-hidden="true"></i>'), 'https://twitter.com/' + person[:twitter_handle], target: "_blank", rel: "noopener" %></div>
-            <% end %>
-            <% if person[:instagram_handle] %>
-              <div class="mx-2"><%= link_to raw('<i class="fa fa-2x fa-instagram" aria-hidden="true"></i>'), 'https://www.instagram.com/' + person[:instagram_handle], target: "_blank", rel: "noopener" %></div>
-            <% end %>
-          </div>
-        </div>
-      <% end %>
+  <span class="glyphicon glyphicon-large glyphicon-chevron-down first" aria-hidden="true"></span>
+</div>
+
+<a name="why_goclimateneutral"></a>
+<div class="site-wrapper-second">
+  <div class="inner">
+
+    <h1 class="cover-heading"><%=t 'about_us_who_are_we' %></h1>
+    <div class="row">
+
+      <div class="col-xs-12 col-md-6 profile">
+        <%= image_tag webpack_asset_path('images/about/kalle.jpg'), class: 'img-circle', alt: "" %>
+        <h2>Kalle Nilvér</h2>
+        <p><%=t 'about_us_who_are_we_kalle_html' %></p>
+        <p><b>Twitter:</b> <%= link_to 'kallenilver', 'https://twitter.com/kallenilver', target: "_blank" %></p>
+        <p><b>Telefon:</b> <%= link_to '+46706084374', 'tel:+46706084374' %></p>
+      </div>
+
+      <div class="col-xs-12 col-md-6 profile">
+        <%= image_tag webpack_asset_path('images/about/cissi.jpg'), class: 'img-circle', alt: "" %>
+        <h2>Cissi Lindén</h2>
+        <p><%=t 'about_us_who_are_we_cissi_html' %></p>
+        <p><b>Twitter:</b> <%= link_to 'cissilinden', 'https://twitter.com/cissilinden', target: "_blank" %></p>
+        <p><b>Telefon:</b> <%= link_to '+46705476300', 'tel:+46705476300' %></p>
+      </div>
     </div>
-  </div>
-</section>
 
-<section class="bg-secondary">
-  <div class="max-w-2xl mx-auto pt-16 pb-20 px-10 lg:px-0 text-center">
-    <i class="fa fa-2x fa-question-circle text-big-icon text-icon" aria-hidden="true"></i>
-    <h2 class="text-4xl my-5"><%=t 'about_us_why_do_we_exist' %></h2>
-    <p class="text-xl leading-normal mb-5"><%=t 'about_us_why_do_we_exist_text' %></p>
-  </div>
-</section>
+    <div class="row">
+      <div class="col-xs-12 col-md-6 profile">
+        <%= image_tag webpack_asset_path('images/about/henrik.jpg'), class: 'img-circle', alt: "" %>
+        <h2>Henrik Kniberg</h2>
+        <p><%=t 'about_us_who_are_we_henrik_html' %></p>
+        <p><b>Twitter:</b> <%= link_to 'henrikkniberg', 'https://twitter.com/henrikkniberg', target: "_blank" %></p>
+      </div>
 
-<section class="bg-bg">
-  <div class="max-w-2xl mx-auto pt-16 pb-20 px-10 lg:px-0 text-center">
-    <i class="fa fa-2x fa-leaf text-big-icon text-icon" aria-hidden="true"></i>
-    <h2 class="text-4xl my-5"><%=t 'about_us_how_do_we_stop_climate_change' %></h2>
-    <p class="text-xl leading-normal mb-5"><%=t 'about_us_how_do_we_stop_climate_change_text' %></p>
-    <p class="text-xl leading-normal mb-5"><%=t 'about_us_how_do_we_stop_climate_change_text_2' %></p>
-  </div>
-</section>
+      <div class="col-xs-12 col-md-6 profile">
+        <%= image_tag webpack_asset_path('images/about/stefan.jpg'), class: 'img-circle', alt: "" %>
+        <h2>Stefan Lindbohm</h2>
+        <p><%=t 'about_us_who_are_we_stefan_html' %></p>
+        <p><b>Twitter:</b> <%= link_to 'stefanlindbohm', 'https://twitter.com/stefanlindbohm', target: "_blank" %></p>
+      </div>
+    </div>
 
-<%= render "shared/footer" %>
+    <div class="row">
+      <div class="col-xs-12 col-md-6 profile">
+        <%= image_tag webpack_asset_path('images/about/alexandra.jpg'), class: 'img-circle', alt: "" %>
+        <h2>Alexandra Palmquist</h2>
+        <p><%=t 'about_us_who_are_we_alexandra_html' %></p>
+      </div>
+      <div class="col-xs-12 col-md-6 profile">
+        <%= image_tag webpack_asset_path('images/about/tove.jpg'), class: 'img-circle', alt: "" %>
+        <h2>Tove Westling</h2>
+        <p><%=t 'about_us_who_are_we_tove_html' %></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-6 profile">
+        <%= image_tag webpack_asset_path('images/about/emma.jpg'), class: 'img-circle', alt: "" %>
+        <h2>Emma Bäckström</h2>
+        <p><%=t 'about_us_who_are_we_emma_html' %></p>
+      </div>
+      <div class="col-xs-12 col-md-6 profile">
+        <%= image_tag webpack_asset_path('images/about/evelina.jpg'), class: 'img-circle', alt: "" %>
+        <h2>Evelina Utterdahl</h2>
+        <p><%=t 'about_us_who_are_we_evelina_html' %></p>
+        <p><b>Instagram:</b> <%= link_to 'earthwanderess', 'https://www.instagram.com/earthwanderess/', target: "_blank" %></p>
+        <p><b>Twitter:</b> <%= link_to 'earthwanderess', 'https://twitter.com/earthwanderess', target: "_blank" %></p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<a name="why_goclimateneutral"></a>
+<div class="site-wrapper-third">
+  <div class="inner">
+
+    <span class="glyphicon glyphicon-large glyphicon-question-sign" aria-hidden="true"></span>
+    <h1 class="cover-heading"><%=t 'about_us_why_do_we_exist' %></h1>
+    <p class="lead"><%=t 'about_us_why_do_we_exist_text' %></p>
+
+  </div>
+  <span class="glyphicon glyphicon-large glyphicon-chevron-down" aria-hidden="true"></span>
+</div>
+
+<a name="why_goclimateneutral"></a>
+<div class="site-wrapper-fourth">
+  <div class="inner">
+
+    <span class="glyphicon glyphicon-large glyphicon-leaf" aria-hidden="true"></span>
+    <h1 class="cover-heading"><%=t 'about_us_how_do_we_stop_climate_change' %></h1>
+    <p class="lead"><%=t 'about_us_how_do_we_stop_climate_change_text' %></p>
+    <p class="lead"><%=t 'about_us_how_do_we_stop_climate_change_text_2' %></p>
+
+  </div>
+  <span class="glyphicon glyphicon-large glyphicon-chevron-down" aria-hidden="true"></span>
+</div>
+
+
+
+<%= render "shared/footer_old" %>
