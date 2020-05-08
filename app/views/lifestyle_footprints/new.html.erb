@@ -5,31 +5,31 @@
 </nav>
 
 
-<section class="bg-brand bg-brand-image bg-bottom bg-no-repeat bg-cover min-h-screen">
+<section class="bg-brand bg-brand-image bg-bottom bg-no-repeat bg-cover min-h-screen text-primary">
   <div class="text-center pt-16 pb-48 px-4 md:px-10 lg:px-0 max-w-2xl mx-auto">
     <div class="bg-white rounded py-8 md:py-10 px-4 md:px-16" data-controller="lifestyle-calculator"> 
 
-      <div class="flex justify-center text-xs text-gray-500">
+      <div class="flex justify-center text-xs ">
         <% if @calculator.region_options.present? || @calculator.home_options.present? || @calculator.heating_options.present? || @calculator.house_age_options.present? || @calculator.green_electricity_options.present? %>
         <div class="px-6">
           <div class="mb-2">
-            <i class="fa fa-2x fa-home" data-active-class="fa fa-2x fa-home text-bootstrap-green-500" aria-hidden="true" data-target="lifestyle-calculator.categoryIndicator" data-category="home"></i>
+            <i class="fa fa-2x fa-home" data-active-class="fa fa-2x fa-home text-green-accent" aria-hidden="true" data-target="lifestyle-calculator.categoryIndicator" data-category="home"></i>
           </div>
           <div>
             <% if @calculator.region_options.present? %>
-                <i class="fa fa-circle-o" data-active-class="fa fa-circle text-bootstrap-green-500" data-target="lifestyle-calculator.questionIndicator" data-category="home"></i>
+                <i class="fa fa-circle-o" data-active-class="fa fa-circle text-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="home"></i>
               <% end %>
             <% if @calculator.home_options.present? %>
-              <i class="fa fa-circle-o" data-active-class="fa fa-circle text-bootstrap-green-500" data-target="lifestyle-calculator.questionIndicator" data-category="home"></i>
+              <i class="fa fa-circle-o" data-active-class="fa fa-circle text-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="home"></i>
             <% end %>
             <% if @calculator.heating_options.present? %>
-              <i class="fa fa-circle-o" data-active-class="fa fa-circle text-bootstrap-green-500" data-target="lifestyle-calculator.questionIndicator" data-category="home"></i>
+              <i class="fa fa-circle-o" data-active-class="fa fa-circle text-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="home"></i>
             <% end %>
             <% if @calculator.house_age_options.present? %>
-              <i class="fa fa-circle-o" data-active-class="fa fa-circle text-bootstrap-green-500" data-target="lifestyle-calculator.questionIndicator" data-category="home"></i>
+              <i class="fa fa-circle-o" data-active-class="fa fa-circle text-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="home"></i>
             <% end %>
             <% if @calculator.green_electricity_options.present? %>
-              <i class="fa fa-circle-o" data-active-class="fa fa-circle text-bootstrap-green-500" data-target="lifestyle-calculator.questionIndicator" data-category="home"></i>
+              <i class="fa fa-circle-o" data-active-class="fa fa-circle text-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="home"></i>
             <% end %>
           </div>
         </div>
@@ -37,11 +37,11 @@
         <% if @calculator.food_options.present? %>
           <div class="px-6">
           <div class="mb-2">
-            <i class="fa fa-2x fa-cutlery" data-active-class="fa fa-2x fa-cutlery text-bootstrap-green-500" aria-hidden="true" data-target="lifestyle-calculator.categoryIndicator" data-category="food"></i>
+            <i class="fa fa-2x fa-cutlery" data-active-class="fa fa-2x fa-cutlery text-green-accent" aria-hidden="true" data-target="lifestyle-calculator.categoryIndicator" data-category="food"></i>
           </div>
           <div>
             <% if @calculator.food_options.present? %>
-              <i class="fa fa-circle-o" data-active-class="fa fa-circle text-bootstrap-green-500" data-target="lifestyle-calculator.questionIndicator" data-category="food"></i>
+              <i class="fa fa-circle-o" data-active-class="fa fa-circle text-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="food"></i>
             <% end %>
           </div>
           </div>
@@ -49,22 +49,22 @@
         <% if @calculator.car_type_options.present? %>
           <div class="px-6">
             <div class="mb-2">
-              <i class="fa fa-2x fa-car" data-active-class="fa fa-2x fa-car text-bootstrap-green-500" aria-hidden="true" data-target="lifestyle-calculator.categoryIndicator" data-category="car"></i>
+              <i class="fa fa-2x fa-car" data-active-class="fa fa-2x fa-car text-green-accent" aria-hidden="true" data-target="lifestyle-calculator.categoryIndicator" data-category="car"></i>
             </div>
             <div>
               <% if @calculator.car_type_options.present? %>
-                <i class="fa fa-circle-o" data-active-class="fa fa-circle text-bootstrap-green-500" data-target="lifestyle-calculator.questionIndicator" data-category="car"></i>
-                <i class="fa fa-circle-o" data-active-class="fa fa-circle text-bootstrap-green-500" data-target="lifestyle-calculator.questionIndicator" data-category="car"></i>
+                <i class="fa fa-circle-o" data-active-class="fa fa-circle text-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="car"></i>
+                <i class="fa fa-circle-o" data-active-class="fa fa-circle text-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="car"></i>
               <% end %>
             </div>
           </div>
         <% end %>
         <div class="px-6">
           <div class="mb-2">
-            <i class="fa fa-2x fa-plane" data-active-class="fa fa-2x fa-plane text-bootstrap-green-500" aria-hidden="true" data-target="lifestyle-calculator.categoryIndicator" data-category="flights"></i>
+            <i class="fa fa-2x fa-plane" data-active-class="fa fa-2x fa-plane text-green-accent" aria-hidden="true" data-target="lifestyle-calculator.categoryIndicator" data-category="flights"></i>
           </div>
           <div>
-              <i class="fa fa-circle-o" data-active-class="fa fa-circle text-bootstrap-green-500" data-target="lifestyle-calculator.questionIndicator" data-category="flights"></i>
+              <i class="fa fa-circle-o" data-active-class="fa fa-circle text-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="flights"></i>
           </div>
         </div>
       </div>
