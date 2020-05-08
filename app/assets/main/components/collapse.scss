@@ -1,6 +1,6 @@
 .collapse {
   & > input[type='checkbox'] {
-    display: none;
+    @apply hidden;
   }
 
   &-content {

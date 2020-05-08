@@ -1,0 +1,15 @@
+.section-padding {
+  @apply p-4;
+
+  @screen t {
+    @apply p-16;
+  }
+
+  @screen d {
+    @apply p-32;
+  }
+
+  @screen d-lg {
+    @apply mx-auto max-w-screen-d-lg;
+  }
+}

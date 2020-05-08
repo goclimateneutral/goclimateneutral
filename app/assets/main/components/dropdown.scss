@@ -2,11 +2,11 @@
   @apply relative inline-block;
 
   input[type='checkbox'] { 
-    display: none
+    @apply hidden;
   }
 
   .dropdown-menu {
-    @apply hidden absolute top-100 left-0 bg-bg border border-gray-300 rounded py-1 my-1 shadow-md text-left;
+    @apply hidden absolute top-100 left-0 border border-primary rounded py-1 my-1 shadow-md text-left;
   }
 
   .dropdown-menu-up {
@@ -18,11 +18,11 @@
   }
 
   .dropdown-menu > li > a {
-    @apply whitespace-no-wrap block py-1 px-5
+    @apply whitespace-no-wrap block py-1 px-4
   }
 
   .dropdown-menu > li > a:hover {
-    @apply bg-gray-200
+    @apply bg-primary text-white;
   }
 
   input[type='checkbox']:checked ~ .dropdown-menu {

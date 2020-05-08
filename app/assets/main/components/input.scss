@@ -6,13 +6,12 @@
   @apply
     p-2
     leading-6
-    bg-white
-    text-black
-    text-xl
-    border border-gray-400 rounded
+    text-primary
+    text-base
+    border border-primary rounded bg-white
     cursor-text; /* For when we're styling a container as the input */
 
-  &:focus-within, &:focus, &.StripeElement--focus {
+  &:focus-within, &:focus {
     @apply
       border-transparent
       shadow-outline;

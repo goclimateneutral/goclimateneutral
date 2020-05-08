@@ -1,24 +1,20 @@
 @import 'tailwindcss/base';
 
 @import 'tailwindcss/components';
+
 @import 'components/button.scss';
-@import 'components/input.scss';
-@import 'components/select.scss';
-@import 'components/dropdown.scss';
 @import 'components/collapse.scss';
+@import 'components/dropdown.scss';
+@import 'components/input.scss';
+@import 'components/link.scss';
+@import 'components/select.scss';
+@import 'components/section_gutter.scss';
+@import 'components/section_padding.scss';
 
 @import 'tailwindcss/utilities';
 
-html,
-body {
-  min-height: 100%;
-  font-size: 14px;
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
 }
-body {
-  font-family: 'Raleway', sans-serif;
-}
-
-.bg-brand-image {
-  background-image: url("../images/background-illustrated-2.png");
-}
-

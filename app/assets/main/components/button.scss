@@ -1,25 +1,34 @@
-
 .button {
-  @apply bg-bg text-black border border-gray-400 py-2 px-4 rounded cursor-pointer whitespace-no-wrap;
-}
+  @apply
+    py-2 px-4
+    border rounded border-primary
+    cursor-pointer
+    whitespace-no-wrap
+    text-primary
+    inline-block
+    transition duration-200;
 
-.button:enabled:hover {
-  @apply border-gray-500 bg-gray-200 text-black
-}
+  &:hover {
+    @apply bg-primary text-white;
+  }
 
-.button-transparent {
-  @apply button;
-  background-color: transparent;
-}
+  &-inverted {
+    @apply border-white text-white;
 
-.button-brand {
-  @apply button text-white bg-bootstrap-green-500 border-bootstrap-green-600;
-}
+    &:hover {
+      @apply bg-white text-primary;
+    }
+  }
 
-.button-brand:enabled:hover {
-  @apply text-white bg-bootstrap-green-600 border-bootstrap-green-700;
-}
+  &-primary {
+    @apply bg-yellow-accent border-none;
 
-.button:disabled, .button-transparent:disabled, .button-brand:disabled {
-  @apply cursor-default;
+    &:hover {
+      @apply bg-primary text-white;
+    }
+  }
+
+  &:active {
+    @apply transform scale-105;
+  }
 }
