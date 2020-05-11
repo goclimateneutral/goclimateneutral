@@ -11,7 +11,7 @@
     border border-primary rounded bg-white
     cursor-text; /* For when we're styling a container as the input */
 
-  &:focus-within, &:focus {
+  &:focus-within, &:focus, &.StripeElement--focus {
     @apply
       border-transparent
       shadow-outline;

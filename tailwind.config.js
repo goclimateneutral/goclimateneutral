@@ -7,8 +7,8 @@ module.exports = {
       // Default: Mobile
       'm-lg': '640px', // Mobile Large
       t: '768px', // Tablet
-      'd-sm': '1024px', // Desktop Small
-      d: '1280px', // Desktop
+      d: '1024px', // Desktop
+      'd-md': '1280px', // Desktop Medium
       'd-lg': '1680px', // Desktop Large
       // below are temporary
       sm: '640px',
