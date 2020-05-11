@@ -52,7 +52,7 @@
       <a class="" href="<%= root_path %>">
         <%= image_tag webpack_asset_path('images/goclimateneutral_logo.svg'), alt: 'GoClimateNeutral' %>
       </a>
-      <button class="button-transparent md:hidden" data-action="header#toggle">
+      <button class="button md:hidden" data-action="header#toggle">
         <i class="fa fa-bars"></i>
       </button>
     </div>
@@ -76,7 +76,7 @@
         <li class="py-3 md:px-4 text-lg"><%= link_to(I18n.t('log_out'), destroy_user_session_path, :method => :delete) %></li>
       <% else %>
         <li class="pt-8 pb-3 md:px-4 text-lg whitespace-no-wrap"><%= link_to(I18n.t('log_in'), new_user_session_url)%></li>
-        <li class="py-3 md:px-4 text-lg"><div class="navbar-inner"><%= link_to(I18n.t('views.shared.header.sign_up'), root_url, class: 'button-brand')%></div></li>
+        <li class="py-3 md:px-4 text-lg"><div class="navbar-inner"><%= link_to(I18n.t('views.shared.header.sign_up'), root_url, class: 'button button-primary')%></div></li>
       <% end %>
     </ul>
     </div>
@@ -99,8 +99,8 @@
           </label> 
         </li>
     <% else %>
-      <li><%= link_to(I18n.t('log_in'), new_user_session_url, class: 'whitespace-no-wrap') %></li>
-      <li><div class="navbar-inner"><%= link_to(I18n.t('views.shared.header.sign_up'), root_url, class: 'button-brand ml-8')%></div></li>
+      <li><%= link_to(I18n.t('log_in'), new_user_session_url, class: 'button whitespace-no-wrap') %></li>
+      <li><div class="navbar-inner"><%= link_to(I18n.t('views.shared.header.sign_up'), root_url, class: 'button button-primary ml-8')%></div></li>
     <% end %>
   </ul>
 </nav>
