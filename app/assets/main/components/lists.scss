@@ -2,4 +2,8 @@
   content: '\2022';
   width: 1em;
   display: inline-block;
+  margin-left: -1em;
+}
+.list-bullet li {
+  padding-left: 1em;
 }

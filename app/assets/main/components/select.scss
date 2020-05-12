@@ -6,5 +6,12 @@
     text-primary
     border border-primary rounded
     appearance-none;
+
+    &:focus-within, &:focus, &.StripeElement--focus {
+      @apply shadow-outline;
+    }
+  
+    /* Disable default focus styling by browsers */
+    &:focus, input:focus { @apply outline-none; }
 }
 

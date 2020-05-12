@@ -1,0 +1,234 @@
+<% description(t('climate_change_is_the_greatest_challange')) %>
+
+<nav class="bg-blue-tint-1">
+  <%= render "shared/header" %>
+</nav>
+
+<section class="bg-blue-tint-1 relative">
+  <div class="max-w-screen-t mx-auto px-4 t:px-16 d:px-0 pt-32 relative z-10 text-center">
+    <h1 class="heading-xl mb-12">
+      <%=t 'views.welcome.index.hero.heading' %><br>
+    </h1>
+    <p class="my-4"><%=t 'views.welcome.index.hero.body_text' %></p>
+    <div>
+      <%= form_with url: new_lifestyle_footprint_path, method: :get, class: 'm-lg:flex m-lg:justify-center mt-3' do |f| %>
+      <div class="relative">
+        <%= f.country_select :country,
+              {
+                include_blank: t('views.welcome.index.i_live_in'),
+                priority_countries: [
+                  ISO3166::Country.new(request.headers['CF-IPCountry'])&.alpha2 || current_region.country_codes
+                ].flatten.compact
+              },
+              {
+                class: 'select w-full m-lg:w-auto',
+                required: ''
+              } %>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+          <i class="fa fa-angle-down" aria-hidden="true"></i>
+        </div>
+      </div>
+      <%= f.submit t('views.welcome.index.get_started'), name: nil, class: 'button button-primary mt-2 m-lg:mt-0 m-lg:ml-2' %>
+      <% end %>
+    </div>
+  </div>
+  <div class=" w-full relative d:-mt-40">
+    <%= image_tag webpack_asset_path('images/illustrations/landscape_full.png'), class: 'w-full' %>
+  </div>
+</section>
+
+<section>
+  <div class="bg-green-tint-1">
+    <div class="section-padding pt-6">
+      <h2 class="heading-lg text-center pt-10 pb-24 m-lg:my-6"><%=t 'this_is_how_it_works' %></h2>
+      <div class="flex flex-col items-center t:flex-row t:items-stretch space-y-24 t:space-y-0 t:space-x-8 d-md:space-x-16">
+        <% [
+          {
+            image_url: 'images/illustrations/describe_lifestyle.png',
+            title_key: 'views.welcome.index.how_it_works.bullets.bullet_1_heading',
+            body_key: 'views.welcome.index.how_it_works.bullets.bullet_1_text'
+          },
+          {
+            image_url: 'images/illustrations/sign_up.png',
+            title_key: 'views.welcome.index.how_it_works.bullets.bullet_2_heading',
+            body_key: 'views.welcome.index.how_it_works.bullets.bullet_2_text'
+          },
+          {
+            image_url: 'images/illustrations/save_the_planet.png',
+            title_key: 'views.welcome.index.how_it_works.bullets.bullet_3_heading',
+            body_key: 'views.welcome.index.how_it_works.bullets.bullet_3_text'
+          }
+        ].each do |item| %>
+          <div class="callout w-full m-lg:w-3/4 d:w-1/3 p-4 d:p-8 bg-white flex flex-col items-center">
+            <%= image_tag webpack_asset_path(item[:image_url]), class: '-mt-24' %>
+            <h3 class="text-lg font-semibold my-2"><%=t item[:title_key] %></h3>
+            <p><%=t item[:body_key] %></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="-mt-2">
+    <%= image_tag webpack_asset_path('images/illustrations/landscape_full_bottom.png')%>
+  </div>
+</section>
+
+
+<section class="section-padding">
+  <div class="section-gutter flex flex-col-reverse t:flex-row items-center">
+    <div class="t:w-1/2">
+      <h2 class="heading-lg"><%= t 'views.welcome.index.about_us.heading' %></h2>
+      <p class="my-6"><%=t 'views.welcome.index.about_us.body_text' %></p>
+      <div class="text-center t:text-left">
+        <%= link_to t('views.welcome.index.about_us.read_more'), about_path, class: 'button mx-auto t:mx-0' %>
+      </div>
+    </div>
+    <div class="t:w-1/2 m-lg:max-w-3/4">
+      <div class="relative w-full h-full pb-3/4">
+        <% if I18n.locale == :sv %>
+        <iframe src='https://player.vimeo.com/video/241825913' align='top' frameborder='0' webkitAllowFullScreen
+          mozallowfullscreen allowFullScreen class="absolute top-0 left-0 w-full h-full"></iframe>
+        <% else %>
+        <iframe src='https://player.vimeo.com/video/246406263' align='top' frameborder='0' webkitAllowFullScreen
+          mozallowfullscreen allowFullScreen class="absolute top-0 left-0 w-full h-full"></iframe>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding">
+  <div class="section-gutter flex flex-col t:flex-row items-center">
+    <div class="t:w-1/2 m-lg:max-w-3/4">
+        <%= image_tag @latest_project.image_url, class: 'w-full rounded' %>
+        <p class="italic"><%= @latest_project.name %>, <%= @latest_project.country %></p>
+    </div>
+    <div class="t:w-1/2 space-y-6">
+      <h2 class="heading-lg">
+        <%= t 'views.welcome.index.projects.heading' %>
+      </h2>
+      <ul class="list-bullet">
+        <li><%= t 'views.welcome.index.projects.body_text_1' %></li>
+        <li><%= t 'views.welcome.index.projects.body_text_2' %></li>
+        <li><%= t 'views.welcome.index.projects.body_text_3' %></li>
+        <li><%= t 'views.welcome.index.projects.body_text_4' %></li>
+      </ul>
+      <div class="text-center t:text-left">
+        <%= link_to t('views.welcome.index.projects.read_more'), projects_path, class: 'button mx-auto t:mx-0' %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding">
+  <div class="section-gutter flex flex-col-reverse t:flex-row t:items-center">
+    <div class="t:w-1/2 space-y-6">
+      <h2 class="heading-lg">
+        <%= t 'views.welcome.index.transparency.heading' %>
+      </h2>
+      <p><%= t 'views.welcome.index.transparency.body_text' %></p>
+      <div class="text-center t:text-left">
+        <%= link_to t('views.welcome.index.transparency.read_more'), transparency_path, class: 'button mx-auto t:mx-0' %>
+      </div>
+    </div>
+    <div class="t:w-1/2">
+      <%= image_tag webpack_asset_path('images/illustrations/grandma.png'), class: 'w-full max-w-md mx-auto' %>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding">
+  <h2 class="heading-lg text-center mb-12">
+    <%= t 'views.welcome.index.climate_tips.heading' %>
+  </h2>
+  <div class="section-gutter flex flex-col items-center t:flex-row t:items-stretch">
+      <% (I18n.locale == :sv ? [
+        {
+          key: 'climate_friendly_housing_cooperative',
+          image_url: 'https://www.goclimateneutral.org/blog/wp-content/uploads/2020/03/brf_1920x1200-1536x960.jpg',
+          url: 'https://www.goclimateneutral.org/blog/klimatsmart-bostadsrattsforening-sa-kan-du-paverka-din-forening/',
+        },
+        {
+          key: 'climate_friendly_pension_saving',
+          image_url: 'https://www.goclimateneutral.org/blog/wp-content/uploads/2019/12/pension_1920x1200-1536x960.jpg',
+          url: 'https://www.goclimateneutral.org/blog/klimatsmart-pensionssparande/',
+        },
+        {
+          key: 'civil_disobedience',
+          image_url: 'https://www.goclimateneutral.org/blog/wp-content/uploads/2020/05/Screen-Shot-2020-05-04-at-11.56.08.png',
+          url: 'https://www.goclimateneutral.org/blog/civil-olydnad-for-klimatet/',
+        }
+        ] : [
+        {
+          key: 'clothes_last_longer',
+          image_url: 'https://www.goclimateneutral.org/blog/wp-content/uploads/2019/07/117551440_Unknown-2000x1200.jpg',
+          url: 'https://www.goclimateneutral.org/blog/how-to-make-your-clothes-last-longer/',
+        },
+        {
+          key: 'reduce_carbon_footprint_food',
+          image_url: 'https://www.goclimateneutral.org/blog/wp-content/uploads/2019/12/2.jpg',
+          url: 'https://www.goclimateneutral.org/blog/how-to-reduce-your-carbon-footprint-food/',
+        },
+        {
+          key: 'civil_disobedience',
+          image_url: 'https://www.goclimateneutral.org/blog/wp-content/uploads/2020/05/Screen-Shot-2020-05-04-at-11.56.08.png',
+        }
+        ]).each do |item| %>
+        <div class="w-3/4 t:w-1/3 overflow-hidden bg-green-tint-1 rounded-lg shadow-lg">
+          <div class="pb-1/2 relative">
+            <img class="absolute top-0 w-full h-full object-cover" src="<%= item[:image_url] %>"/>
+          </div>
+          <div class="p-4 relative">
+            <%= image_tag webpack_asset_path("images/illustrations/wave_top-green-tint-1.png"), class: 'w-full absolute bottom-100 left-0 -mb-1' %>
+            <div class="flex flex-col h-full justify-center">
+              <p class="font-semibold pb-4">
+                <%= t("views.welcome.index.climate_tips.#{item[:key]}") %>
+              </p>
+              <div class="text-center">
+                <a href="<%= item[:url] %>" class="button mx-auto"><%= t 'views.welcome.index.climate_tips.read_more' %></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+</section>
+
+<section>
+  <div class="section-padding">
+    <h2 class="heading-lg text-center mb-12"><%= t 'views.welcome.index.community.heading' %></h2>
+    <div class="callout m-lg:max-w-3/4 mx-auto t:max-w-full d:max-w-3/4 flex flex-col t:flex-row items-center space-y-6 t:space-y-0 t:space-x-12">
+      <div class="w-3/4 m-lg:w-1/2 t:w-1/3">
+        <div class="pb-full relative overflow-hidden rounded-full">
+          <%= image_tag webpack_asset_path("images/community/#{@community_person[:key]}.png"), class: 'absolute top-0 w-full h-full object-cover' %>
+        </div>
+      </div>
+      <div class="t:w-2/3 space-y-3">
+        <div class="text-3xl">
+          <i class="fa fa-quote-right" aria-hidden="true"></i>
+        </div>
+        <p class="text-lg">”<%= t("views.welcome.index.community.people.#{@community_person[:key]}.quote") %>”</p>
+        <p class="font-semibold text-center t:text-left">&mdash; <%= @community_person[:name] %>, <%= t("views.welcome.index.community.people.#{@community_person[:key]}.title") %></p>
+      </div>
+    </div>
+
+    <div class="flex flex-col m-lg:flex-row justify-center text-center mt-16 space-y-12 m-lg:space-y-0 m-lg:space-x-16">
+      <div class="">
+        <p><%=t 'welcome.users_prefix' %></p>
+        <p class="font-bold text-5xl"><span id="total-users"
+            data-target-number="<%= @unique_climate_neutral_users %>"><%= number_with_delimiter(@unique_climate_neutral_users) %></span>
+        </p>
+        <p class="text-lg font-semibold"><%=t 'welcome.users_suffix' %></p>
+      </div>
+      <div class="">
+        <p><%=t 'welcome.tonnes_prefix' %></p>
+        <p class="font-bold text-5xl"><span id="total-carbon-offset"
+            data-target-number="<%= @total_carbon_offset %>"><%= number_with_delimiter(@total_carbon_offset) %></span>
+        </p>
+        <p class="text-lg font-semibold"><%=t 'welcome.tonnes_suffix' %></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render "shared/footer" %>

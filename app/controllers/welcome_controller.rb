@@ -7,6 +7,8 @@ class WelcomeController < ApplicationController
     @lifestyle_choice_co2 = LifestyleChoice.lifestyle_choice_co2
     @latest_project = Project.order(date_bought: :desc).first
 
+    setup_community_person
+
     gon.lifestyle_choice_co2 = @lifestyle_choice_co2
     gon.price_info_popup_content = I18n.t('price_info_popup_content')
     gon_currency_params
@@ -52,5 +54,25 @@ class WelcomeController < ApplicationController
   end
 
   def travel_calculator
+  end
+
+  private
+
+  def setup_community_person
+    community = [
+      {
+        name: 'Annelie Pompe',
+        key: 'annelie'
+      },
+      {
+        name: 'Mattias Falkehag',
+        key: 'mattias'
+      },
+      {
+        name: 'Shelbi Lee',
+        key: 'shelbi'
+      }
+    ]
+    @community_person = community[rand(community.length)]
   end
 end

@@ -2,14 +2,14 @@
   @apply -m-4;
 
   & > * {
-    @apply p-4;
+    @apply m-4;
   }
 
   @screen d-md {
     @apply -m-8;
 
     & > * {
-      @apply p-8;
+      @apply m-8;
     }
   }
 }
