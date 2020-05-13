@@ -399,39 +399,14 @@ function drawGraphs() {
   barCharts.forEach(function drawBarChart(chart_data) {
     var ctxBar = document.getElementById(chart_data.canvasId).getContext('2d');
     var chart = new Chart(ctxBar, {
-      plugins: [ChartDataLabels],
       type: 'bar',
       data: {
         labels: chart_data.labels,
         datasets: [{
           label: '',
           data: chart_data.data,
-          backgroundColor: chart_data.backgroundColors,
-          borderColor: chart_data.borderColors,
           borderWidth: 1
         }]
-      },
-      options: {
-        plugins: {
-          datalabels: {
-            rotation: function(context) {
-              if (context.dataset.data.length > 10) {
-                return 270;
-              }
-              return 0;
-            }
-          }
-        },
-        legend: {
-          display: false
-        },
-        scales: {
-          yAxes: [{
-            ticks: {
-              beginAtZero: true
-            }
-          }]
-        }
       }
     });
   });
