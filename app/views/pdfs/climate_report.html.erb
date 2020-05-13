@@ -386,15 +386,7 @@ function drawGraphs() {
     });
   });
 
-  var barCharts = [
-    {
-      canvasId: 'barGraphEmissionCategories',
-      labels: ['<%= raw(@bar_categories_data[:labels].join("', '")) %>'],
-      data: [<%= raw(@bar_categories_data[:data].join(", ")) %> ],
-      backgroundColors: backgroundColors,
-      borderColors: backgroundColors
-    }
-  ];
+  var barCharts = [];
 
   barCharts.forEach(function drawBarChart(chart_data) {
     var ctxBar = document.getElementById(chart_data.canvasId).getContext('2d');
