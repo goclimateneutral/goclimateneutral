@@ -393,59 +393,7 @@ function drawGraphs() {
       data: [<%= raw(@bar_categories_data[:data].join(", ")) %> ],
       backgroundColors: backgroundColors,
       borderColors: backgroundColors
-    },
-    {
-      canvasId: 'barGraphEmissionSources',
-      labels: ['<%= raw(@bar_emissions_data[:labels].join("', '")) %>'],
-      data: [ <%= raw(@bar_emissions_data[:data].join(", ")) %> ],
-      backgroundColors: backgroundColors,
-      borderColors: backgroundColors
-    },
-    {
-      canvasId: 'barGraphCompareCategories',
-      labels: ['<%= raw(@bar_compare_categories_data[:labels].join("', '")) %>'],
-      data: [ <%= raw(@bar_compare_categories_data[:data].join(", ")) %> ],
-      backgroundColors: compareBackgroundColors(2),
-      borderColors: compareBackgroundColors(2)
-    },
-    {
-      canvasId: 'barGraphCompareEmissionSources',
-      labels: ['<%= raw(@bar_compare_emissions_data[:labels].join("', '")) %>'],
-      data: [ <%= raw(@bar_compare_emissions_data[:data].join(", ")) %> ],
-      backgroundColors: compareBackgroundColors(2),
-      borderColors: compareBackgroundColors(2)
-    },
-    <% if @climate_periods_to_compare > 1 %>
-    {
-      canvasId: 'barGraphCompareYears',
-      labels: ['<%= raw(@bar_compare_years_categories_data[:labels].join("', '")) %>'],
-      data: [ <%= raw(@bar_compare_years_categories_data[:data].join(", ")) %> ],
-      backgroundColors: compareBackgroundColors(<%= @climate_periods_to_compare %>),
-      borderColors: compareBackgroundColors(<%= @climate_periods_to_compare %>)
-    },
-    {
-      canvasId: 'barGraphCompareYearsSources',
-      labels: ['<%= raw(@bar_compare_years_emissions_data[:labels].join("', '")) %>'],
-      data: [ <%= raw(@bar_compare_years_emissions_data[:data].join(", ")) %> ],
-      backgroundColors: compareBackgroundColors(<%= @climate_periods_to_compare %>),
-      borderColors: compareBackgroundColors(<%= @climate_periods_to_compare %>)
-    },
-    {
-      canvasId: 'barGraphCompareYearsCategoriesPerEmployee',
-      labels: ['<%= raw(@bar_compare_years_categories_per_employee_data[:labels].join("', '")) %>'],
-      data: [ <%= raw(@bar_compare_years_categories_per_employee_data[:data].join(", ")) %> ],
-      backgroundColors: compareBackgroundColors(<%= @climate_periods_to_compare %>),
-      borderColors: compareBackgroundColors(<%= @climate_periods_to_compare %>)
-    },
-    {
-      canvasId: 'barGraphCompareYearsSourcesPerEmployee',
-      labels: ['<%= raw(@bar_compare_years_emissions_per_employee_data[:labels].join("', '")) %>'],
-      data: [ <%= raw(@bar_compare_years_emissions_per_employee_data[:data].join(", ")) %> ],
-      backgroundColors: compareBackgroundColors(<%= @climate_periods_to_compare %>),
-      borderColors: compareBackgroundColors(<%= @climate_periods_to_compare %>)
     }
-
-    <% end %>
   ];
 
   barCharts.forEach(function drawBarChart(chart_data) {
