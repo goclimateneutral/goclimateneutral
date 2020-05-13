@@ -386,7 +386,15 @@ function drawGraphs() {
     });
   });
 
-  var barCharts = [];
+  var barCharts = [
+    {
+      canvasId: 'barGraphEmissionCategories',
+      labels: [ '1', '2' ],
+      data: [ 1, 2 ],
+      backgroundColors: backgroundColors,
+      borderColors: backgroundColors
+    }
+  ];
 
   barCharts.forEach(function drawBarChart(chart_data) {
     var ctxBar = document.getElementById(chart_data.canvasId).getContext('2d');
