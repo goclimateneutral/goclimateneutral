@@ -386,29 +386,17 @@ function drawGraphs() {
     });
   });
 
-  var barCharts = [
-    {
-      canvasId: 'barGraphEmissionCategories',
+  var ctxBar = document.getElementById('barGraphEmissionCategories').getContext('2d');
+  var chart = new Chart(ctxBar, {
+    type: 'bar',
+    data: {
       labels: [ '1', '2' ],
-      data: [ 1, 2 ],
-      backgroundColors: backgroundColors,
-      borderColors: backgroundColors
+      datasets: [{
+        label: '',
+        data: [ 1, 2 ],
+        borderWidth: 1
+      }]
     }
-  ];
-
-  barCharts.forEach(function drawBarChart(chart_data) {
-    var ctxBar = document.getElementById(chart_data.canvasId).getContext('2d');
-    var chart = new Chart(ctxBar, {
-      type: 'bar',
-      data: {
-        labels: chart_data.labels,
-        datasets: [{
-          label: '',
-          data: chart_data.data,
-          borderWidth: 1
-        }]
-      }
-    });
   });
 };
 window.onload = function() {
