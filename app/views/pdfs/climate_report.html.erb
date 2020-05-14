@@ -284,6 +284,123 @@ function drawGraphs() {
       }]
     }
   });
+
+  Chart.helpers.merge(Chart.defaults.global.plugins.datalabels, {
+    color: '#000000'
+  });
+  Chart.defaults.global.defaultFontColor = 'black';
+  Chart.defaults.global.defaultFontSize = 16;
+  Chart.defaults.global.animation.duration = 0;
+  var backgroundColors = [
+    'rgba(255, 99, 132, 0.8)',
+    'rgba(54, 162, 235, 0.8)',
+    'rgba(255, 206, 86, 0.8)',
+    'rgba(75, 192, 192, 0.8)',
+    'rgba(153, 102, 255, 0.8)',
+    'rgba(255, 159, 64, 0.8)',
+    'rgba(255, 99, 132, 0.8)',
+    'rgba(54, 162, 235, 0.8)',
+    'rgba(255, 206, 86, 0.8)',
+    'rgba(75, 192, 192, 0.8)',
+    'rgba(153, 102, 255, 0.8)',
+    'rgba(255, 159, 64, 0.8)',
+    'rgba(255, 99, 132, 0.8)',
+    'rgba(54, 162, 235, 0.8)'
+  ];
+  function compareBackgroundColors(times){
+    var colors = [];
+    backgroundColors.forEach(function addColor(color) {
+      var i;
+      for(i = 0; i < times; i++){
+        colors.push(color);
+      }
+    });
+    return colors;
+  }
+
+  var pieCharts = [
+    {
+      canvasId: 'pieChartCategories',
+      labels: [ <%= raw(@pie_categories_data[:labels]) %> ],
+      data: [ <%= @pie_categories_data[:data] %> ],
+      backgroundColors: backgroundColors
+    },
+    {
+      canvasId: 'pieChartSources',
+      labels: [ <%= raw(@pie_sources_data[:labels]) %> ],
+      data: [ <%= @pie_sources_data[:data] %> ],
+      backgroundColors: backgroundColors
+    },
+    {
+      canvasId: 'pieScopeCanvas',
+      labels: [ <%= raw(@pie_scope_data[:labels]) %> ],
+      data: [ <%= @pie_scope_data[:data] %> ],
+      backgroundColors: backgroundColors
+    }
+  ];
+
+  pieCharts.forEach(function drawPieChart(chart_data) {
+    var ctx = document.getElementById(chart_data.canvasId).getContext('2d');
+    var labels = chart_data.labels;
+    var chart = new Chart(ctx, {
+      plugins: [ChartDataLabels],
+      type: 'pie',
+      data: {
+        datasets: [{
+          data: chart_data.data,
+          backgroundColor: chart_data.backgroundColors,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        plugins: {
+          datalabels: {
+            formatter: function(value, context) {
+              return labels[context.dataIndex] + ': ' + Math.round(value) + '%';
+            },
+            anchor: 'end',
+            align: 'end',
+            display: 'auto',
+            padding: 0,
+            offset: function(context) {
+              // vary offset to avoid label overlap
+              var index = context.dataIndex;
+              var data = context.dataset.data;
+
+              if (data[index] > 15) {
+                return 20;
+              }
+
+              var j = index;
+              var count = 0;
+              while((data[j] < 15) && count < data.length){
+                count++;
+                j--;
+                if (j < 0) {
+                  j = j + data.length;
+                }
+              }
+              return ((count % 5) * 20);
+            }
+          }
+        },
+        legend: {
+          labels: {
+              fontColor: 'black'
+          }
+        },
+        layout: {
+            padding: {
+                left: 0,
+                right: 0,
+                top: 90,
+                bottom: 90
+            }
+        }
+      }
+    });
+  });
+
 };
 window.onload = function() {
     drawGraphs();
