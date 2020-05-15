@@ -1,0 +1,177 @@
+<nav class="bg-brand">
+  <%= render "shared/header" %>
+</nav>
+
+<section class="">
+  <div class="text-center pt-24 sm:pt-40 pb-48 sm:pb-64 px-10 lg:px-0 max-w-4xl mx-auto">
+      <h1 class="text-lg m-lg:text-xl d:text-2xl font-semibold my-5"><%= t 'views.registrations.well_done' %></h1>
+  </div>
+</section>
+
+<section class="callout p-10 m-4 t:mx-8 -mt-32 d:max-w-4xl d:mx-auto">
+  <div class="md:flex md:justify-between md:items-center">
+    <div class="md:w-1/2">
+      <h2><%= t 'views.registrations.your_yearly_climate_footprint' %></h2>
+      <p class="font-semibold">
+        <span class="text-3xl"><%= @footprint_tonnes.tonnes.round(1) %></span>
+        <span class="text-lg"><%= t 'views.shared.tonnes_co2e.other' %></span>
+      </p>
+      <p class="mb-4"><%= t 'views.registrations.corresponds_to', price: @footprint_price.to_s(precision: :auto) %></p>
+    </div>
+    <div class="md:w-1/2">
+      <canvas
+        style="width: 100%; max-width: 500px; height: 300px"
+        data-controller="lifestyle-footprint-chart"
+        data-lifestyle-footprint-chart-user-footprint="<%= @footprint.total.tonnes.round(1) %>"
+        data-lifestyle-footprint-chart-country-average="<%= @country_average.tonnes.round(1) %>"
+        data-lifestyle-footprint-chart-user-label="<%= t 'views.registrations.you' %>"
+        data-lifestyle-footprint-chart-offset-label="<%= t 'views.registrations.compensated' %>"
+        data-lifestyle-footprint-chart-country-label="<%= t 'views.registrations.average_in', region: @footprint.country.translation(I18n.locale) %>"
+        data-lifestyle-footprint-chart-target-label="<%= t 'views.registrations.goal_2030' %>">
+      </canvas>
+    </div>
+  </div>
+  <div>
+    <p class="text-sm my-4 text-gray-800">
+      <%= t(
+        'views.registrations.your_climate_footprint',
+        footprint: @footprint.total.to_s(precision: :auto),
+        relative:
+          if @footprint.total > @country_average
+            "#{((@footprint.total.co2e.to_f / @country_average.co2e - 1) * 100).ceil} % #{t 'views.registrations.higher'}"
+          else
+            "#{((1 - @footprint.total.co2e.to_f / @country_average.co2e) * 100).ceil} % #{t 'views.registrations.lower'}"
+          end,
+        country: @footprint.country.translation(I18n.locale)
+        ) %>
+    </p>
+  </div>
+</section>
+
+<section data-controller='registration-price'>
+  <div class="max-w-6xl mx-auto py-20 px-10">
+    <h2 class="text-lg m-lg:text-xl d:text-2xl font-semibold mb-4 text-center"><%= t 'views.registrations.subscribe_heading' %></h2>
+    <p class="m-lg:text-lg mb-4 mx-auto max-w-4xl text-center"><%= t 'views.registrations.subscribe_intro' %></p>
+
+
+    <div data-controller="registration-form">
+      <div class="sm:flex mt-6">
+        <div class="sm:w-1/2 sm:pr-16">
+          <%= form_with url: registration_path(resource_name, format: :json), html: { 'data-target': 'registration-form.form' } do |f| %>
+            <%= f.hidden_field(:lifestyle_footprint, :value => @footprint&.key) %>
+            <%= f.hidden_field :people, value: (params[:people].presence || 1), 'data-target': 'registration-price.peopleField' %>
+            <%= fields_for @user do |user_form| %>
+              <%= user_form.hidden_field :region %>
+
+                <label for="email" class="block font-bold"><%=t 'email' %></label>
+                <%= user_form.email_field :email, required: true, id: "email", class: "input w-full" %>
+
+                <label for="password" class="block font-bold mt-2"><%=t 'password' %></label>
+                <%= user_form.password_field :password, required: true, minlength: '6', maxlength: '128', size: 'auto', autocomplete: "off", id: "password", class: "input w-full" %>
+
+              <div class="mb-4 mt-2" data-controller="stripe-card-element" data-target="registration-form.stripeCardElement">
+                <label for="card" class=" font-bold"><%=t 'credit_or_debit_card' %></label>
+                <div class="">
+                  <div id="card" class="input mb-1" data-target="stripe-card-element.container"></div>
+                  <div class="text-red-700" data-target="stripe-card-element.errors"></div>
+                  <i class="fa fa-lock" aria-hidden="true"></i> <span class="ml-1">Secured by Stripe</span>
+                  <%= f.hidden_field :payment_method_id, 'data-target': 'stripe-card-element.paymentMethodField' %>
+                </div>
+              </div>
+
+              <label>
+                <%= f.check_box :privacy_policy, 'data-target': 'registration-form.privacyPolicyAgreement', 'data-action': 'change->registration-form#updateSubmitButton' %>
+                <span>
+                  <%=t 'i_accept' %>
+                  <%= link_to I18n.t('our_privacy_policy'), privacy_policy_path, target: '_blank', class: 'underline' %>
+                </span>
+              </label>
+
+            <% end %>
+          <% end %>
+        </div>
+        <div class="sm:w-1/2 bg-bg p-6 rounded mt-4 sm:mt-0">
+          <h3 class="font-bold mb-4"><%= t 'views.registrations.your_subscription' %></h3>
+          <div class="flex justify-between items-center mb-2">
+            <span><%= t 'views.registrations.number_of_people' %></span>
+            <div class="relative">
+              <%= form_with method: :get, html: { 'data-target': 'registration-price.peopleForm' } do |f| %>
+                <%= f.hidden_field(:lifestyle_footprint, :value => @footprint.key) %>
+                <%= f.select :people,
+                  options_for_select(1..20, params[:people].presence || 1),
+                  {},
+                  { class: 'select', 'data-action': 'registration-price#update' }
+                %>
+              <% end %>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+          <div class="h-px w-full bg-gray-500 my-4"></div>
+          <div class="flex justify-between mb-2">
+            <span><%= t 'views.registrations.your_subscription' %></span>
+            <span><span data-target="registration-price.subscription"><%= @subscription_tonnes.to_s(precision: :auto) %></span>/<%= t 'years.one' %></span>
+          </div>
+          <div class="flex justify-between mb-2 font-bold">
+            <span><%= t 'views.registrations.total' %></span>
+            <span data-target="registration-price.price"><%= @plan_price.to_s(precision: :auto) %>/<%= t 'months.one' %></span>
+          </div>
+          <p class="text-sm text-gray-700 mt-4"><%= t 'views.registrations.subscription_price_information', price: GreenhouseGases.new(1000).consumer_price(current_region.currency).to_s(precision: :auto) %></p>
+        </div>
+      </div>
+      <div class="flex items-center mt-4">
+        <button class="button button-primary" data-target="registration-form.submitButton" data-action="registration-form#submit">
+          <i class="fa fa-spinner fa-spin hidden" data-target="registration-form.loadingIndicator"></i>
+          <%=t 'go_climate_neutral' %>
+        </button>
+        <p class="text-red-700 ml-4" data-target="registration-form.errorMessage"></p>
+      </div>
+    </div>
+
+    <div class="sm:flex mt-6">
+      <div class="sm:w-1/2 sm:pr-16">
+        <h3 class="font-bold"><%= t 'views.registrations.where_does_the_money_go.heading' %></h3>
+        <ul class="list-disc p-4">
+          <li><%= t 'views.registrations.where_does_the_money_go.point_1' %></li>
+          <li><%= t 'views.registrations.where_does_the_money_go.point_2' %></li>
+          <li><%= t 'views.registrations.where_does_the_money_go.point_3' %></li>
+          <li><%= t 'views.registrations.where_does_the_money_go.point_4' %></li>
+        </ul>
+      </div>
+      <div class="sm:w-1/2">
+        <h3 class="font-bold mb-4"><%= t 'views.registrations.latest_projects' %></h3>
+        <ul>
+          <% @projects.each do |project| %>
+            <li class="flex items-center mb-4">
+              <div class="mr-4">
+                <div class="rounded-full bg-gray-500 overflow-hidden bg-cover bg-center w-12 h-12" style="background-image: url('<%= project.image_url %>')"></div>
+              </div>
+              <span>
+                <span class="font-bold"><%= project.name %></span>,
+                <%= project.country %>
+              </span>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="text-center pt-16 pb-48 px-10 lg:px-0 max-w-2xl mx-auto">
+    <i class="fa fa-question-circle text-big-icon text-icon" aria-hidden="true"></i>
+    <h2 class="text-lg m-lg:text-xl d:text-2xl font-semibold my-6"><%= t 'views.registrations.faq' %></h2>
+    <% [1, 4, 5, 9, 10, 19, 20].each do |q| %>
+      <div class="block border p-3 mt-4 rounded text-left collapse">
+        <input id="question-<%= q %>" type="checkbox">
+        <label for="question-<%= q %>" class="flex justify-between cursor-pointer">
+          <div class="font-bold"><%= t "faq_questions.questions.q#{q}.question" %></div>
+          <div class="pl-3"><i class="fa fa-chevron-circle-down collapse-chevron" aria-hidden="true"></i></div>
+        </label>
+        <div class="pt-4 collapse-content"><%= raw(t("faq_questions.questions.q#{q}.answer")) %></div>
+      </div>
+    <% end %>
+  </div>
+</section>
