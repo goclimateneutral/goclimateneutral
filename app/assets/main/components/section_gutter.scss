@@ -1,8 +1,8 @@
 .section-gutter {
-  @apply -m-4;
+  @apply -mx-4 -my-8;
 
   & > * {
-    @apply m-4;
+    @apply mx-4 my-8;
   }
 
   @screen d-md {
