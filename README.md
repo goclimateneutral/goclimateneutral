@@ -104,6 +104,14 @@ what](https://chris.beams.io/posts/git-commit/).
 Follow linter config (open a PR with rule changes if you disagree) and write
 tests according to [Better Specs](http://www.betterspecs.org).
 
+#### Views
+
+When writing HTML views, we write utility-first CSS, using [TailwindCSS](https://tailwindcss.com/), combined with some of our own custom utilities and components. In order to have coherency in the code, these are some conventions we follow:
+
+- Favor Tailwind's [space utilities](https://tailwindcss.com/docs/space/) on parent element before setting margin on children
+- Favor our responsive helper classes  before re-inveting the wheel (see `headings` or `section padding` for instance).
+- If you are using flexbox for layouting for a specific breakpoint, consider using flexbox across breakpoints instead of mixing with other techniques, such as `mx-auto`
+
 ## Getting started
 
 ### Requirements
