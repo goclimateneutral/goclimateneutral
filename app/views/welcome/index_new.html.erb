@@ -12,23 +12,23 @@
     <p class="my-4 max-w-lg mx-auto"><%=t 'views.welcome.index.hero.body_text' %></p>
     <div>
       <%= form_with url: new_lifestyle_footprint_path, method: :get, class: 'm-lg:flex m-lg:justify-center mt-3' do |f| %>
-      <div class="relative">
-        <%= f.country_select :country,
-              {
-                include_blank: t('views.welcome.index.i_live_in'),
-                priority_countries: [
-                  ISO3166::Country.new(request.headers['CF-IPCountry'])&.alpha2 || current_region.country_codes
-                ].flatten.compact
-              },
-              {
-                class: 'select w-full m-lg:w-auto m-lg:max-w-xs',
-                required: ''
-              } %>
-        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
-          <i class="fa fa-angle-down" aria-hidden="true"></i>
+        <div class="relative">
+          <%= f.country_select :country,
+                {
+                  include_blank: t('views.welcome.index.i_live_in'),
+                  priority_countries: [
+                    ISO3166::Country.new(request.headers['CF-IPCountry'])&.alpha2 || current_region.country_codes
+                  ].flatten.compact
+                },
+                {
+                  class: 'select w-full m-lg:w-auto m-lg:max-w-xs',
+                  required: ''
+                } %>
+          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </div>
         </div>
-      </div>
-      <%= f.submit t('views.welcome.index.get_started'), name: nil, class: 'button button-primary mt-2 m-lg:mt-0 m-lg:ml-2 w-full m-lg:w-auto' %>
+        <%= f.submit t('views.welcome.index.get_started'), name: nil, class: 'button button-primary mt-2 m-lg:mt-0 m-lg:ml-2 w-full m-lg:w-auto' %>
       <% end %>
     </div>
   </div>
@@ -98,11 +98,7 @@
 </section>
 
 <section class="section-padding">
-  <div class="section-gutter flex flex-col t:flex-row items-center">
-    <div class="t:w-1/2 m-lg:max-w-3/4">
-        <%= image_tag @latest_project.image_url, class: 'w-full rounded' %>
-        <p class="italic"><%= @latest_project.name %>, <%= @latest_project.country %></p>
-    </div>
+  <div class="section-gutter flex flex-col t:flex-row-reverse items-center">
     <div class="t:w-1/2 space-y-6">
       <h2 class="heading-lg">
         <%= t 'views.welcome.index.projects.heading' %>
@@ -117,11 +113,15 @@
         <%= link_to t('views.welcome.index.projects.read_more'), projects_path, class: 'button mx-auto t:mx-0' %>
       </div>
     </div>
+    <div class="t:w-1/2 m-lg:max-w-3/4">
+      <%= image_tag @latest_project.image_url, class: 'w-full rounded' %>
+      <p class="italic"><%= @latest_project.name %>, <%= @latest_project.country %></p>
+    </div>
   </div>
 </section>
 
 <section class="section-padding">
-  <div class="section-gutter flex flex-col-reverse t:flex-row t:items-center">
+  <div class="section-gutter t:flex t:flex-row t:items-center">
     <div class="t:w-1/2 space-y-6">
       <h2 class="heading-lg">
         <%= t 'views.welcome.index.transparency.heading' %>
@@ -172,9 +172,10 @@
         {
           key: 'civil_disobedience',
           image_url: 'https://www.goclimateneutral.org/blog/wp-content/uploads/2020/05/Screen-Shot-2020-05-04-at-11.56.08.png',
+          url: 'https://www.goclimateneutral.org/blog/civil-disobedience-for-the-climate/',
         }
         ]).each do |item| %>
-        <div class="w-3/4 t:w-1/3 overflow-hidden bg-green-tint-1 rounded-lg shadow-lg">
+        <div class="w-full m-lg:w-3/4 t:w-1/3 overflow-hidden bg-green-tint-1 rounded-lg shadow-lg">
           <div class="pb-1/2 relative">
             <img class="absolute top-0 w-full h-full object-cover" src="<%= item[:image_url] %>"/>
           </div>
@@ -198,18 +199,33 @@
   <div class="section-padding">
     <h2 class="heading-lg text-center mb-12"><%= t 'views.welcome.index.community.heading' %></h2>
     <div class="callout m-lg:max-w-3/4 mx-auto t:max-w-full d:max-w-3/4 flex flex-col t:flex-row items-center space-y-6 t:space-y-0 t:space-x-12">
-      <div class="w-3/4 m-lg:w-1/2 t:w-1/3">
-        <div class="pb-full relative overflow-hidden rounded-full">
-          <%= image_tag webpack_asset_path("images/community/#{@community_person[:key]}.png"), class: 'absolute top-0 w-full h-full object-cover' %>
-        </div>
-      </div>
-      <div class="t:w-2/3 space-y-3">
-        <div class="text-3xl">
-          <i class="fa fa-quote-right" aria-hidden="true"></i>
-        </div>
-        <p class="text-lg">”<%= t("views.welcome.index.community.people.#{@community_person[:key]}.quote") %>”</p>
-        <p class="font-semibold text-center t:text-left">&mdash; <%= @community_person[:name] %>, <%= t("views.welcome.index.community.people.#{@community_person[:key]}.title") %></p>
-      </div>
+      <% [
+            {
+              name: 'Annelie Pompe',
+              key: 'annelie'
+            },
+            {
+              name: 'Mattias Falkehag',
+              key: 'mattias'
+            },
+            {
+              name: 'Shelbi Lee',
+              key: 'shelbi'
+            }
+          ].sample.tap do |person| %>
+            <div class="w-3/4 m-lg:w-1/2 t:w-1/3">
+              <div class="pb-full relative overflow-hidden rounded-full">
+                <%= image_tag webpack_asset_path("images/community/#{person[:key]}.png"), class: 'absolute top-0 w-full h-full object-cover' %>
+              </div>
+            </div>
+            <div class="t:w-2/3 space-y-3">
+              <div class="text-3xl">
+                <i class="fa fa-quote-right" aria-hidden="true"></i>
+              </div>
+              <p class="text-lg">”<%= t("views.welcome.index.community.people.#{person[:key]}.quote") %>”</p>
+              <p class="font-semibold text-center t:text-left">&mdash; <%= person[:name] %>, <%= t("views.welcome.index.community.people.#{person[:key]}.title") %></p>
+            </div>
+      <% end %>
     </div>
 
     <div class="flex flex-col m-lg:flex-row justify-center text-center mt-16 space-y-12 m-lg:space-y-0 m-lg:space-x-16">
