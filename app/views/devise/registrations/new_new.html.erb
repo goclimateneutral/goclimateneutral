@@ -2,14 +2,13 @@
   <%= render "shared/header" %>
 </nav>
 
-<section class="">
-  <div class="text-center pt-24 sm:pt-40 pb-48 sm:pb-64 px-10 lg:px-0 max-w-4xl mx-auto">
-      <h1 class="text-lg m-lg:text-xl d:text-2xl font-semibold my-5"><%= t 'views.registrations.well_done' %></h1>
+<section class="section-padding">
+  <div class="text-center pb-16 d:pb-32 lg:px-0 max-w-4xl mx-auto">
+      <h1 class="heading-xl my-5"><%= t 'views.registrations.well_done' %></h1>
   </div>
-</section>
 
-<section class="callout p-10 m-4 t:mx-8 -mt-32 d:max-w-4xl d:mx-auto">
-  <div class="md:flex md:justify-between md:items-center">
+  <div class="callout t:mx-8 d:max-w-4xl d:mx-auto">
+    <div class="md:flex md:justify-between md:items-center">
     <div class="md:w-1/2">
       <h2><%= t 'views.registrations.your_yearly_climate_footprint' %></h2>
       <p class="font-semibold">
@@ -46,31 +45,32 @@
         ) %>
     </p>
   </div>
+  </div>
 </section>
 
-<section data-controller='registration-price'>
-  <div class="max-w-6xl mx-auto py-20 px-10">
-    <h2 class="text-lg m-lg:text-xl d:text-2xl font-semibold mb-4 text-center"><%= t 'views.registrations.subscribe_heading' %></h2>
-    <p class="m-lg:text-lg mb-4 mx-auto max-w-4xl text-center"><%= t 'views.registrations.subscribe_intro' %></p>
 
+<section data-controller='registration-price'>
+  <div class="section-padding">
+    <h2 class="heading-lg mb-4 text-center"><%= t 'views.registrations.subscribe_heading' %></h2>
+    <p class="m-lg:text-lg mb-6 mx-auto max-w-4xl text-center"><%= t 'views.registrations.subscribe_intro' %></p>
 
     <div data-controller="registration-form">
-      <div class="sm:flex mt-6">
-        <div class="sm:w-1/2 sm:pr-16">
+      <div class="m-lg:flex mt-6">
+        <div class="m-lg:w-1/2 m-lg:pr-16">
           <%= form_with url: registration_path(resource_name, format: :json), html: { 'data-target': 'registration-form.form' } do |f| %>
             <%= f.hidden_field(:lifestyle_footprint, :value => @footprint&.key) %>
             <%= f.hidden_field :people, value: (params[:people].presence || 1), 'data-target': 'registration-price.peopleField' %>
             <%= fields_for @user do |user_form| %>
               <%= user_form.hidden_field :region %>
 
-                <label for="email" class="block font-bold"><%=t 'email' %></label>
+                <label for="email" class="block font-semibold"><%=t 'email' %></label>
                 <%= user_form.email_field :email, required: true, id: "email", class: "input w-full" %>
 
-                <label for="password" class="block font-bold mt-2"><%=t 'password' %></label>
+                <label for="password" class="block font-semibold mt-2"><%=t 'password' %></label>
                 <%= user_form.password_field :password, required: true, minlength: '6', maxlength: '128', size: 'auto', autocomplete: "off", id: "password", class: "input w-full" %>
 
               <div class="mb-4 mt-2" data-controller="stripe-card-element" data-target="registration-form.stripeCardElement">
-                <label for="card" class=" font-bold"><%=t 'credit_or_debit_card' %></label>
+                <label for="card" class=" font-semibold"><%=t 'credit_or_debit_card' %></label>
                 <div class="">
                   <div id="card" class="input mb-1" data-target="stripe-card-element.container"></div>
                   <div class="text-red-700" data-target="stripe-card-element.errors"></div>
@@ -83,15 +83,15 @@
                 <%= f.check_box :privacy_policy, 'data-target': 'registration-form.privacyPolicyAgreement', 'data-action': 'change->registration-form#updateSubmitButton' %>
                 <span>
                   <%=t 'i_accept' %>
-                  <%= link_to I18n.t('our_privacy_policy'), privacy_policy_path, target: '_blank', class: 'underline' %>
+                  <%= link_to I18n.t('our_privacy_policy'), privacy_policy_path, target: '_blank', class: 'link' %>
                 </span>
               </label>
 
             <% end %>
           <% end %>
         </div>
-        <div class="sm:w-1/2 bg-bg p-6 rounded mt-4 sm:mt-0">
-          <h3 class="font-bold mb-4"><%= t 'views.registrations.your_subscription' %></h3>
+        <div class="callout m-lg:w-1/2 mt-4 m-lg:mt-0">
+          <h3 class="font-semibold mb-4"><%= t 'views.registrations.your_subscription' %></h3>
           <div class="flex justify-between items-center mb-2">
             <span><%= t 'views.registrations.number_of_people' %></span>
             <div class="relative">
@@ -113,15 +113,15 @@
             <span><%= t 'views.registrations.your_subscription' %></span>
             <span><span data-target="registration-price.subscription"><%= @subscription_tonnes.to_s(precision: :auto) %></span>/<%= t 'years.one' %></span>
           </div>
-          <div class="flex justify-between mb-2 font-bold">
+          <div class="flex justify-between mb-2 font-semibold">
             <span><%= t 'views.registrations.total' %></span>
             <span data-target="registration-price.price"><%= @plan_price.to_s(precision: :auto) %>/<%= t 'months.one' %></span>
           </div>
-          <p class="text-sm text-gray-700 mt-4"><%= t 'views.registrations.subscription_price_information', price: GreenhouseGases.new(1000).consumer_price(current_region.currency).to_s(precision: :auto) %></p>
+          <p class="text-sm mt-4"><%= t 'views.registrations.subscription_price_information', price: GreenhouseGases.new(1000).consumer_price(current_region.currency).to_s(precision: :auto) %></p>
         </div>
       </div>
       <div class="flex items-center mt-4">
-        <button class="button button-primary" data-target="registration-form.submitButton" data-action="registration-form#submit">
+        <button class="button button-cta" data-target="registration-form.submitButton" data-action="registration-form#submit">
           <i class="fa fa-spinner fa-spin hidden" data-target="registration-form.loadingIndicator"></i>
           <%=t 'go_climate_neutral' %>
         </button>
@@ -129,9 +129,9 @@
       </div>
     </div>
 
-    <div class="sm:flex mt-6">
-      <div class="sm:w-1/2 sm:pr-16">
-        <h3 class="font-bold"><%= t 'views.registrations.where_does_the_money_go.heading' %></h3>
+    <div class="m-lg:flex mt-8">
+      <div class="m-lg:w-1/2 m-lg:pr-16">
+        <h3 class="font-semibold"><%= t 'views.registrations.where_does_the_money_go.heading' %></h3>
         <ul class="list-disc p-4">
           <li><%= t 'views.registrations.where_does_the_money_go.point_1' %></li>
           <li><%= t 'views.registrations.where_does_the_money_go.point_2' %></li>
@@ -139,8 +139,8 @@
           <li><%= t 'views.registrations.where_does_the_money_go.point_4' %></li>
         </ul>
       </div>
-      <div class="sm:w-1/2">
-        <h3 class="font-bold mb-4"><%= t 'views.registrations.latest_projects' %></h3>
+      <div class="m-lg:w-1/2">
+        <h3 class="font-semibold mb-4"><%= t 'views.registrations.latest_projects' %></h3>
         <ul>
           <% @projects.each do |project| %>
             <li class="flex items-center mb-4">
@@ -148,7 +148,7 @@
                 <div class="rounded-full bg-gray-500 overflow-hidden bg-cover bg-center w-12 h-12" style="background-image: url('<%= project.image_url %>')"></div>
               </div>
               <span>
-                <span class="font-bold"><%= project.name %></span>,
+                <span class="font-semibold"><%= project.name %></span>,
                 <%= project.country %>
               </span>
             </li>
@@ -161,13 +161,13 @@
 
 <section>
   <div class="text-center pt-16 pb-48 px-10 lg:px-0 max-w-2xl mx-auto">
-    <i class="fa fa-question-circle text-big-icon text-icon" aria-hidden="true"></i>
+    <i class="fa fa-question-circle text-big-icon text-green-accent" aria-hidden="true"></i>
     <h2 class="text-lg m-lg:text-xl d:text-2xl font-semibold my-6"><%= t 'views.registrations.faq' %></h2>
     <% [1, 4, 5, 9, 10, 19, 20].each do |q| %>
       <div class="block border p-3 mt-4 rounded text-left collapse">
         <input id="question-<%= q %>" type="checkbox">
         <label for="question-<%= q %>" class="flex justify-between cursor-pointer">
-          <div class="font-bold"><%= t "faq_questions.questions.q#{q}.question" %></div>
+          <div class="font-semibold"><%= t "faq_questions.questions.q#{q}.question" %></div>
           <div class="pl-3"><i class="fa fa-chevron-circle-down collapse-chevron" aria-hidden="true"></i></div>
         </label>
         <div class="pt-4 collapse-content"><%= raw(t("faq_questions.questions.q#{q}.answer")) %></div>

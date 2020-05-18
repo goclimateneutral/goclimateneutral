@@ -4,7 +4,7 @@ import ChartAnnotation from 'chartjs-plugin-annotation';
 import ChartDatalabels from 'chartjs-plugin-datalabels';
 
 const PRIMARY_COLOR = '#1C4637';
-const ACCENT_COLOR = '#BBD3BD';
+const ACCENT_COLOR = '#48A12A';
 
 const SOLID_BARS_STYLING = {
   backgroundColor: [
