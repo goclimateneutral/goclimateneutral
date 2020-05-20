@@ -434,7 +434,7 @@ en:
     what_is_gcn_text: We support Gold Standard certified climate offset projects and highlight easy ways to reduce your climate footprint. In this way we help slow down climate change and contribute to saving our planet.
     statistics_header: Every person makes a difference!
     users_prefix: We're currently
-    users_suffix: climate neutral members
+    users_suffix: community members
     tonnes_prefix: Together we've reduced
     tonnes_suffix: tonnes CO2 from the atmosphere
     call_to_actions:
@@ -655,11 +655,15 @@ en:
           select_country: Select your country or region so that we can show the best information for you.
           continue_button: "Continue to %{region}"
         sign_up: Sign up
+      prefooter:
+        heading: Let us stop climate change together!
+        body_text: Subscribe to offset your carbon footprint.
+        button: Get started
       footer:
-        short_intro: GoClimateNeutral is a social company with the sole purpose of making it easier to start living a climate neutral life.
+        short_intro: GoClimateNeutral was founded in 2017 with only one purpose - making it easier to lead a climate friendly lifestyle.
         jobs: 'Jobs'
         headers:
-          make_a_difference: Make a difference
+          make_a_difference: Get involved
           explore: Explore
           about: About
       tonnes_co2e:
@@ -701,12 +705,12 @@ en:
           body_text: Calculate your carbon footprint to start your personalized subscription, all in less than 2 minutes
         how_it_works:
           bullets:
-            bullet_1_heading: Choose your lifestyle
-            bullet_1_text: Your lifestyle choices greatly affects how much CO2 you emit into the atmosphere
+            bullet_1_heading: Calculate your carbon footprint
+            bullet_1_text: Our easy test takes just a minute to complete.
             bullet_2_heading: Sign up
-            bullet_2_text: Register to compensate for your emissions
+            bullet_2_text: Start your monthly subscription personalized to your own footprint.
             bullet_3_heading: Save our planet
-            bullet_3_text: As part of our community we battle climate change together!
+            bullet_3_text: We finance projects that reduce the amount of CO2 in the atmosphere.
         about_us:
           heading: Together we can be the change we want to see for the planet
           body_text: We support climate projects certified by the UN and WWF, as well as assist you with tips on how to best decrease your carbon footprint. 
