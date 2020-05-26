@@ -46,7 +46,7 @@
       </div>
 
       <% unless user_signed_in? %>
-        <%= link_to(I18n.t('views.shared.header.sign_up'), root_url, class: 'button button-primary')%>
+        <%= link_to(I18n.t('views.shared.header.sign_up'), root_url, class: 'button button-cta')%>
       <% end %>
 
       <label for="nav-toggler" class="button d:hidden">
