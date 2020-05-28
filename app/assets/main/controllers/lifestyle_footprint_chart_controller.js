@@ -3,16 +3,19 @@ import { Chart } from 'chart.js';
 import ChartAnnotation from 'chartjs-plugin-annotation';
 import ChartDatalabels from 'chartjs-plugin-datalabels';
 
+const PRIMARY_COLOR = '#1C4637';
+const ACCENT_COLOR = '#BBD3BD';
+
 const SOLID_BARS_STYLING = {
   backgroundColor: [
-    '#BBD3BD',
+    ACCENT_COLOR,
     'transparent',
-    '#CEDFCF'
+    ACCENT_COLOR
   ],
   borderColor: [
-    '#BBD3BD',
-    '#BBD3BD',
-    '#CEDFCF'
+    ACCENT_COLOR,
+    ACCENT_COLOR,
+    ACCENT_COLOR
   ],
   borderWidth: 2
 };
@@ -25,7 +28,7 @@ const OFFSET_BAR_STYLING = {
   ],
   borderColor: [
     'transparent',
-    '#BBD3BD',
+    ACCENT_COLOR,
     'transparent'
   ],
   borderWidth: 1,
@@ -44,12 +47,12 @@ function targetAnnotation(target, label) {
           mode: 'horizontal',
           scaleID: 'y-axis-0',
           value: target,
-          borderColor: 'rgb(100, 100, 100)',
+          borderColor: PRIMARY_COLOR,
           borderWidth: 1,
           borderDash: [5, 5],
           label: {
             backgroundColor: 'transparent',
-            fontColor: '#000000',
+            fontColor: PRIMARY_COLOR,
             fontStyle: 'normal',
             content: label,
             enabled: true,
@@ -69,7 +72,7 @@ function targetAnnotation(target, label) {
           borderDash: [5, 5],
           label: {
             backgroundColor: 'transparent',
-            fontColor: '#000000',
+            fontColor: PRIMARY_COLOR,
             content: [target],
             enabled: true,
             position: 'right',
@@ -102,9 +105,10 @@ function scales(max) {
           display: true,
           drawTicks: false,
           drawOnChartArea: false,
-          color: '#222222'
+          color: PRIMARY_COLOR
         },
         ticks: {
+          fontColor: PRIMARY_COLOR,
           beginAtZero: true,
           padding: 5
         }
@@ -146,6 +150,8 @@ export default class LifestyleFootprintChartController extends Controller {
       },
       plugins: [ChartAnnotation, ChartDatalabels],
       options: {
+        responsive: true,
+        maintainAspectRatio: true,
         legend: {
           display: false
         },
@@ -156,17 +162,18 @@ export default class LifestyleFootprintChartController extends Controller {
           datalabels: {
             anchor: 'end',
             align: 'end',
-            offset: 2,
+            offset: 1,
             font: {
               weight: 'bold'
-            }
+            },
+            color: PRIMARY_COLOR
           }
         },
         ...scales(
           Math.max(
             this.data.get('userFootprint'),
             this.data.get('countryAverage')
-          ) + 1
+          ) + 3
         ),
         ...targetAnnotation('2.5', this.data.get('targetLabel'))
       }
