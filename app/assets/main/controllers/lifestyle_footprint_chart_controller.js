@@ -8,6 +8,19 @@ const ACCENT_COLOR = '#48A12A';
 
 const SOLID_BARS_STYLING = {
   backgroundColor: [
+    '#BBD3BD',
+    'transparent',
+    '#BBD3BD'
+  ],
+  borderColor: [
+    '#BBD3BD',
+    '#BBD3BD',
+    '#BBD3BD'
+  ],
+  borderWidth: 2
+};
+const SOLID_BARS_STYLING_NEW = {
+  backgroundColor: [
     ACCENT_COLOR,
     'transparent',
     ACCENT_COLOR
@@ -21,6 +34,22 @@ const SOLID_BARS_STYLING = {
 };
 
 const OFFSET_BAR_STYLING = {
+  backgroundColor: [
+    'transparent',
+    'transparent',
+    'transparent'
+  ],
+  borderColor: [
+    'transparent',
+    '#BBD3BD',
+    'transparent'
+  ],
+  borderWidth: 1,
+  datalabels: {
+    display: false
+  }
+};
+const OFFSET_BAR_STYLING_NEW = {
   backgroundColor: [
     'transparent',
     'transparent',
@@ -140,11 +169,11 @@ export default class LifestyleFootprintChartController extends Controller {
               this.data.get('countryAverage'),
               null
             ],
-            ...SOLID_BARS_STYLING
+            ...(this.data.get('newDesign') ? SOLID_BARS_STYLING_NEW : SOLID_BARS_STYLING)
           },
           {
             data: [null, this.data.get('userFootprint'), null],
-            ...OFFSET_BAR_STYLING
+            ...(this.data.get('newDesign') ? OFFSET_BAR_STYLING_NEW : OFFSET_BAR_STYLING)
           }
         ]
       },
