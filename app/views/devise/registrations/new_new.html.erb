@@ -4,57 +4,58 @@
 
 <section class="section-padding">
   <div class="text-center pb-16 d:pb-32 lg:px-0 max-w-4xl mx-auto">
-      <h1 class="heading-xl my-5"><%= t 'views.registrations.well_done' %></h1>
+    <h1 class="heading-xl my-5"><%= t 'views.registrations.well_done' %></h1>
   </div>
 
   <div class="callout t:mx-8 d:max-w-4xl d:mx-auto">
     <div class="md:flex md:justify-between md:items-center">
-    <div class="md:w-1/2">
-      <h2><%= t 'views.registrations.your_yearly_climate_footprint' %></h2>
-      <p class="font-semibold">
-        <span class="text-3xl"><%= @footprint_tonnes.tonnes.round(1) %></span>
-        <span class="text-lg"><%= t 'views.shared.tonnes_co2e.other' %></span>
+      <div class="md:w-1/2">
+        <h2><%= t 'views.registrations.your_yearly_climate_footprint' %></h2>
+        <p class="font-semibold">
+          <span class="text-3xl"><%= @footprint_tonnes.tonnes.round(1) %></span>
+          <span class="text-lg"><%= t 'views.shared.tonnes_co2e.other' %></span>
+        </p>
+        <p class="mb-4"><%= t 'views.registrations.corresponds_to', price: @footprint_price.to_s(precision: :auto) %></p>
+      </div>
+      <div class="md:w-1/2">
+        <canvas
+          style="width: 100%; max-width: 500px; height: 300px"
+          data-controller="lifestyle-footprint-chart"
+          data-lifestyle-footprint-chart-user-footprint="<%= @footprint.total.tonnes.round(1) %>"
+          data-lifestyle-footprint-chart-country-average="<%= @country_average.tonnes.round(1) %>"
+          data-lifestyle-footprint-chart-user-label="<%= t 'views.registrations.you' %>"
+          data-lifestyle-footprint-chart-offset-label="<%= t 'views.registrations.compensated' %>"
+          data-lifestyle-footprint-chart-country-label="<%= t 'views.registrations.average_in', region: @footprint.country.translation(I18n.locale) %>"
+          data-lifestyle-footprint-chart-target-label="<%= t 'views.registrations.goal_2030' %>"
+          data-lifestyle-footprint-chart-new-design="true"
+          >
+        </canvas>
+      </div>
+    </div>
+    <div>
+      <p class="text-sm my-4">
+        <%= t(
+          'views.registrations.your_climate_footprint',
+          footprint: @footprint.total.to_s(precision: :auto),
+          relative:
+            if @footprint.total > @country_average
+              "#{((@footprint.total.co2e.to_f / @country_average.co2e - 1) * 100).ceil} % #{t 'views.registrations.higher'}"
+            else
+              "#{((1 - @footprint.total.co2e.to_f / @country_average.co2e) * 100).ceil} % #{t 'views.registrations.lower'}"
+            end,
+          country: @footprint.country.translation(I18n.locale)
+          ) %>
       </p>
-      <p class="mb-4"><%= t 'views.registrations.corresponds_to', price: @footprint_price.to_s(precision: :auto) %></p>
     </div>
-    <div class="md:w-1/2">
-      <canvas
-        style="width: 100%; max-width: 500px; height: 300px"
-        data-controller="lifestyle-footprint-chart"
-        data-lifestyle-footprint-chart-user-footprint="<%= @footprint.total.tonnes.round(1) %>"
-        data-lifestyle-footprint-chart-country-average="<%= @country_average.tonnes.round(1) %>"
-        data-lifestyle-footprint-chart-user-label="<%= t 'views.registrations.you' %>"
-        data-lifestyle-footprint-chart-offset-label="<%= t 'views.registrations.compensated' %>"
-        data-lifestyle-footprint-chart-country-label="<%= t 'views.registrations.average_in', region: @footprint.country.translation(I18n.locale) %>"
-        data-lifestyle-footprint-chart-target-label="<%= t 'views.registrations.goal_2030' %>"
-        data-lifestyle-footprint-chart-new-design="true"
-        >
-      </canvas>
-    </div>
-  </div>
-  <div>
-    <p class="text-sm my-4 text-gray-800">
-      <%= t(
-        'views.registrations.your_climate_footprint',
-        footprint: @footprint.total.to_s(precision: :auto),
-        relative:
-          if @footprint.total > @country_average
-            "#{((@footprint.total.co2e.to_f / @country_average.co2e - 1) * 100).ceil} % #{t 'views.registrations.higher'}"
-          else
-            "#{((1 - @footprint.total.co2e.to_f / @country_average.co2e) * 100).ceil} % #{t 'views.registrations.lower'}"
-          end,
-        country: @footprint.country.translation(I18n.locale)
-        ) %>
-    </p>
-  </div>
   </div>
 </section>
-
 
 <section data-controller='registration-price'>
   <div class="section-padding">
     <h2 class="heading-lg mb-4 text-center"><%= t 'views.registrations.subscribe_heading' %></h2>
-    <p class="m-lg:text-lg mb-6 mx-auto max-w-4xl text-center"><%= t 'views.registrations.subscribe_intro' %></p>
+    <p class="m-lg:text-lg mb-6 mx-auto max-w-4xl text-center">
+      <%= t 'views.registrations.subscribe_intro' %>
+    </p>
 
     <div data-controller="registration-form">
       <div class="m-lg:flex mt-6">
@@ -75,7 +76,7 @@
                 <label for="card" class=" font-semibold"><%=t 'credit_or_debit_card' %></label>
                 <div class="">
                   <div id="card" class="input mb-1" data-target="stripe-card-element.container"></div>
-                  <div class="text-red-700" data-target="stripe-card-element.errors"></div>
+                  <div class="text-orange-shade-1" data-target="stripe-card-element.errors"></div>
                   <i class="fa fa-lock" aria-hidden="true"></i> <span class="ml-1">Secured by Stripe</span>
                   <%= f.hidden_field :payment_method_id, 'data-target': 'stripe-card-element.paymentMethodField' %>
                 </div>
@@ -105,7 +106,7 @@
                   { class: 'select', 'data-action': 'registration-price#update' }
                 %>
               <% end %>
-              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
                 <i class="fa fa-angle-down" aria-hidden="true"></i>
               </div>
             </div>
@@ -127,7 +128,7 @@
           <i class="fa fa-spinner fa-spin hidden" data-target="registration-form.loadingIndicator"></i>
           <%=t 'go_climate_neutral' %>
         </button>
-        <p class="text-red-700 ml-4" data-target="registration-form.errorMessage"></p>
+        <p class="text-orange-shade-1 ml-4" data-target="registration-form.errorMessage"></p>
       </div>
     </div>
 
