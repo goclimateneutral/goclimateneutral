@@ -19,11 +19,7 @@ module Users
       end
 
       respond_to do |format|
-        format.html do
-          if alternative_signup? && !(cookies[:new_design].present? || params.key?('new_design'))
-            render 'new_alternative'
-          end
-        end
+        format.html { render 'new_alternative' if alternative_signup? }
         format.json { render_price_json }
       end
     end

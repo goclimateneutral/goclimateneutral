@@ -111,7 +111,7 @@
               </div>
             </div>
           </div>
-          <div class="h-px w-full bg-gray-500 my-4"></div>
+          <div class="h-px w-full my-4"></div>
           <div class="flex justify-between mb-2">
             <span><%= t 'views.registrations.your_subscription' %></span>
             <span><span data-target="registration-price.subscription"><%= @subscription_tonnes.to_s(precision: :auto) %></span>/<%= t 'years.one' %></span>
@@ -148,7 +148,7 @@
           <% @projects.each do |project| %>
             <li class="flex items-center mb-4">
               <div class="mr-4">
-                <div class="rounded-full bg-gray-500 overflow-hidden bg-cover bg-center w-12 h-12" style="background-image: url('<%= project.image_url %>')"></div>
+                <div class="rounded-full overflow-hidden bg-cover bg-center w-12 h-12" style="background-image: url('<%= project.image_url %>')"></div>
               </div>
               <span>
                 <span class="font-semibold"><%= project.name %></span>,
