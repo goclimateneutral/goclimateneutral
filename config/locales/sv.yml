@@ -1,5 +1,5 @@
 sv:
-  goclimateneutral_url: https://www.goclimate.org/se
+  goclimateneutral_url: https://www.goclimate.com/se
   site_title: GoClimate
   welcome_to_a_climate_neutral_life: Lev ett klimatneutralt liv!
   climate_change_is_the_greatest_challange: "Klimatförändringar är det största hotet som vår generation någonsin ställts inför. Tillsammans kan vi bromsa klimatförändringarna och rädda världen, OM vi agerar nu."
@@ -255,168 +255,121 @@ sv:
   answer: Svar
   read_more_on_frequently_asked_questions: Läs mer på vår sida med frågor och svar
   faq_questions:
-    questions:
-      q1:
-        question: Kan man verkligen kalla sig klimatneutral?
-        answer: "Ja, vi tycker absolut att man kan kalla sig klimatneutral.
-        <br><br>
-        Om man vill göra det lite mer komplicerat så finns det standarder som reglerar vad som krävs för att man ska kunna kalla sig klimatneutral för företag (PAS 2060 och ISO 14021), men när det gäller privatpersoner så finns det inga sådana standarder. Det innebär att det kan finnas lite olika uppfattningar om vad som krävs för att en person ska kunna kalla sig klimatneutral.
-        <br><br>
-        <img alt='' class='alignnone wp-image-264 size-large' src='https://www.goclimate.com/blog/wp-content/uploads/2017/08/Skärmavbild-2017-10-31-kl.-21.00.57-1-1024x660.png' />
-        <br>
-        I teorin är klimatneutralitet när skillnaden är noll mellan de utsläpp du själv orsakar och de utsläpp som du tar bort från atomsfären alternativt de utsläpp du förhindrar att de släpps ut i atmosfären. Utmaningen med klimatneutralitet är dels att kunna beräkna det exakta klimatavtrycket för respektive individ, dels att hitta mätbara och bra sätt att ta bort utsläpp från atmosfären alternativt mätbara och bra sätt att förhindra att mer utsläpp släpps ut i atmosfären (se <a href='https://www.goclimate.com/se/faq#collapseq4id'>Fungerar verkligen klimatkompensation?</a>).
-        <br><br>
-        När det gäller att mäta ens eget klimatavtryck så finns det väldigt avancerade sätt att göra det på. Vi har valt en enkel uppskattning för att göra det så okomplicerat som möjligt att börja göra något åt klimatförändringarna utan att behöva lägga ner massa tid i koldioxidkalkylatorer där man måste ange exakta flygresor, antal körda mil, förbrukade kWh etc.
-        <br><br>
-        Det finns många avancerade kalkylatorer fritt tillgängliga på internet som ger mer precisa uppskattningar som <a href='https://www.klimatkalkylatorn.se' target='_blank'>https://www.klimatkalkylatorn.se</a> och <a href='http://www.klimatkontot.se' target='_blank'>http://www.klimatkontot.se</a>. Det alla kalkylatorer har gemensamt är att de bygger på uppskattningar och generaliseringar, vilket i sig gör att värdet du får för dina utsläpp alltid är ungefärliga. Det finns t ex ingen kalkylator som tar hänsyn till om du har byggt ett nytt hus förra året och på så sätt orsakat stora utsläpp i form av byggmaterial. Kalkylatorerna tar inte heller hänsyn till vad skillnaden är om du köpte din elbil begagnad eller ny samt om du exempelvis tankar den med grön el hemma, men med annan el på jobbet. Anledningen är att en sådan kalkylator skulle bli extremt komplex och tidskrävande att använda - och ändå inte perfekt.
-        <br><br>
-        Finns det då mätbara och bra sätt att ta bort utsläpp från atmosfären alternativt mätbara och bra sätt att förhindra att mer utsläpp släpps ut i atmosfären? Ja, det gör det! Vi har valt att investera i Gold Standard-certifierade klimatprojekt, du kan läsa mer om hur det fungerar här i svaret på frågan <a href='https://www.goclimate.com/se/faq#collapseq4id'>fungerar verkligen klimatkompensation?</a>.
-        <br><br>
-        Så är det ändå helt omöjligt att betrakta sig själv som klimatneutral när man inte kan beräkna sitt exakta koldioxidavtryck? Nej, vi tycker inte det. Ingen skulle tjäna på att det skulle vara omöjligt att få kalla sig klimatneutral. För att säkra att våra användare är klimatneutrala i så stor utsträckning vi bara kan är våra profiler utformade så att du kompenserar för mer än dubbelt så mycket av den totala påverkan av ditt levnadssätt. Då finns en buffert som kompenserar för de grova uppskattningarna i klimatkalkylen som vi tycker känns rimlig. Med en dubbelt så stor kompensation bör vi vara på den säkra sidan, och med allra största sannolikhet till och med vara klimatpositiva.
-        <br><br>
-        Så för att svara på frågan igen, ja, vi tycker absolut att man kan kalla sig klimatneutral!
-        <br><br>
-        Har du åsikter om den här frågan? Gå gärna in på vår blogg och kommentera eller ställ frågor: <a href='https://www.goclimate.com/blog/se/kan-man-verkligen-kalla-sig-klimatneutral/'>https://www.goclimate.com/se/blog/kan-man-verkligen-kalla-sig-klimatneutral/</a>"
-      q2:
-        question: Räcker det med att betala pengar för att bli klimatneutral?
-        answer: "<img alt='' class='alignnone wp-image-270 size-large' src='https://www.goclimate.com/blog/wp-content/uploads/2018/01/price-ton-co2.png' />
-        <br>Ja, det räcker med att betala pengar för att få kalla sig klimatneutral. Det kan låta provocerande och eventuellt orättvist enkelt att bara betala lite pengar och få kalla sig klimatneutral, men man kan faktiskt åstadkomma stor nytta för klimatet med relativt lite pengar. Så pass stor nytta så att de allra flesta enkelt kan minska utsläpp – genom klimatprojekt i andra länder – mer än de utsläpp man själv orsakar. Och då kan man kalla sig klimatneutral.
-        <br><br>
-        Men samtidigt räcker det inte att hjälpa andra att minska sina utsläpp för att vi ska kunna stoppa klimatförändringarna. Vi måste också samtidigt även minska våra egna utsläpp. Därför ser vi på GoClimate själva investeringen i klimatprojekt som ett första steg i rätt riktning. Efter att ha tagit det steget måste vi även dra ner på våra egna utsläpp.
-        <br><br>
-        Generellt har dock människor svårt att dra ner på sina utsläpp eftersom det ofta kräver en förändring i den livsstil man lever – som till exempel om man skulle sälja bilen eller sluta flyga. Därför har vi valt att först göra det enkelt för människor att börja bidra till att bromsa klimatförändringarna genom investeringar i klimatprojekt. När detta första steg är taget vill vi inspirera till att minska de egna utsläppen.
-        <br><br>
-        Tillvägagångssättet att få människor att först ta ett litet steg för att sedan göra större förändringar kallas Foot in the door technique. Man kan läsa mer om hur det fungerar här: https://en.wikipedia.org/wiki/Foot-in-the-door_technique
-        <br><br>
-        Foot in the door technique är en stor anledning till att vi tror på att få så många som möjligt att ta ett första steg i sitt klimatengagemang, och varför vi tror att det behöver vara både enkelt och positivt laddat. Det är helt enkelt väldigt mycket större sannolikhet att människor gör fler och större saker för klimatet när de väl börjat ta ett steg i rätt riktning.
-        <br><br>
-        Har du åsikter om den här frågan? Gå gärna in på vår blogg och kommentera eller ställ frågor: <a href='https://www.goclimate.com/se/blog/racker-det-med-att-betala-pengar-for-att-bli-klimatneutral/'>https://www.goclimate.com/se/blog/racker-det-med-att-betala-pengar-for-att-bli-klimatneutral/</a>"
-      q3:
-        question: Vad är klimatkompensation?
-        answer: "<img alt='' class='aligncenter wp-image-227 size-large' src='https://www.goclimate.com/blog/wp-content/uploads/2017/09/FB_Oops_white_1200x630-d58e3700b4fb069143586d246a82e162eb73203d243fb3b072a80289794101f8-1024x538.jpg' />
-        <br><br>
-        Klimatkompensation är ett sätt att ta ansvar för de koldioxidutsläpp som du själv orsakar. Att exempelvis köra bil, flyga och att äta kött medför höga koldioxidutsläpp, som i sin tur leder till klimatförändringar och en global uppvärmning.
-        <br><br>
-        När du klimatkompenserar så betalar du pengar för mängden koldioxid du har släppt ut. Pengarna investeras i klimatprojekt som reducerar lika stor mängd koldioxid du har orsakat – så att summan blir noll (eller - ännu bättre - negativ). Reducera utsläpp gör man antingen genom att hjälpa någon annan att minska sina utsläpp eller att ta bort utsläpp från atmosfären.
-        <br><br>
-        Klimatkompensation sker oftast genom olika klimatprojekt i utvecklingsländer såsom energieffektivisering eller satsning på förnybar energi som sol- och vind-anläggningar.
-        <br><br>
-        För att du ska kunna vara säker på att du faktiskt åstadkommer klimatnytta när du klimatkompenserar är det bra om klimatprojekten är certifierade. Tryggast kan du vara om projekten har en hög ribba för certifieringen, och det bästa alternativet där idag är Gold Standard-certifiering (som bland annat WWF ligger bakom).
-        <br><br>Vi på GoClimate hjälper dig klimatkompensera för de utsläpp din livsstil orsakar genom projekt som har FN- och Gold Standard-certifiering.
-        <br><br>
-        Har du åsikter om det här svaret? Gå gärna in på vår blogg och kommentera eller ställ frågor: <a href='https://www.goclimate.com/blog/vad-ar-klimatkompensation/'>https://www.goclimate.com/blog/vad-ar-klimatkompensation/</a>"
-      q4:
-        question: Fungerar verkligen klimatkompensation?
-        answer: "<img alt='' class='aligncenter wp-image-227 size-large' src='https://www.goclimate.com/blog/wp-content/uploads/2017/08/gold_standard_CDM-1024x626.png' /><br>
-        Ja, klimatkompensation fungerar. Men för att göra största möjliga klimatnytta krävs att man väljer ut klimatprojekt med noggrannhet.
-        <br><br>
-        Hur kan du veta att projekten vi investerar i - och pengarna du betalar - faktiskt bidrar till verklig klimatnytta? Jo, för att säkerställa det finns flera olika organ som granskar klimatprojekt. De största standarderna är CDM (som FN ligger bakom), Gold Standard (som bland annat WWF ligger bakom), Plan Vivo, VCS och Fair Trade. Även utsläppsrätter är en klimatkompensationsåtgärd, men de är förenade med rätt stor osäkerhet när det gäller klimatnytta (kan ändras framöver).
-        <br><br>
-        På GoClimate har vi gått från att kompensera i FN-certifierade projekt (CDM) till att <b>investera i projekt som både uppfyller FNs krav och dessutom har kvalitetsstämpeln Gold Standard</b>. Dessa projekt är dyrare, men håller en högre kvalitetsnivå och är hårdare granskade av oberoende parter än projekten som bara är FN-certifierade. Du kan läsa mer om Gold Standard här: <a href='https://www.goldstandard.org/' target='_blank'>https://www.goldstandard.org/</a>
-        <br><br>
-        Det är också viktigt att investera i projekt som redan är genomförda (med hjälp av lånat kapital) och verifierade. Detta för att man först då kan se att verklig klimatnytta faktiskt har åstadkommits, till skillnad från i projekt där klimatnyttan bara är något som man hoppas åstadkomma framöver.
-        <br><br>
-        Genom att investera i Gold Standard-certifierade projekt - och dessutom investera i projekt som redan är utförda och verifierade - kan man vara säker på att man bidragit till verklig klimatnytta med sina pengar - och att ens klimatkompensation därmed fungerar.
-        <br><br>
-        Vad är det då som menas med att ett projekt tillför verklig klimatnytta? Jo, i klimatbranschen definierar man verklig klimatnytta med att ett antal kriterier ska uppfyllas av klimatprojekten:
-        <br><br>
-        <b>1. Additionalitet</b> - projektet skulle inte blivit av utan pengarna från klimatkompensation – en förutsättning för att man åstadkommer en verklig förändring jämfört med hur det hade blivit utan investeringen. 
-        <br>
-        <b>2. Verifierbarhet</b> - klimatkompensationen har kvantifierats och verifierats av en oberoende tredje part.
-        <br>
-        <b>3. Spårbarhet</b> - klimatkompensationen ska kunna spåras så att den inte har sålts, eller i framtiden kan säljas, till andra kunder också.
-        <br>
-        <b>4. Beständighet</b> - klimatkompensationen ska vara beständig och inte kunna försvinna senare.
-        <br>
-        <b>5. Bidrag till hållbar utveckling</b> - Utöver själva klimatnyttan ska projekten även bidra till hållbar utveckling på andra sätt, exempelvis genom att bidra med arbetstillfällen eller bidra till renare luft i regionen.
-        <br><br>
-        Bra att tänka på är att klimatkompensation inte är tillräckligt för att klara FNs klimatmål att hålla medeltemperaturökningen till lägre än 2 grader jämfört med den förindustriella nivån, även om det är en väldigt bra start. Klimatkompensation ska istället ses som ett sätt att snabbt komma igång med att bromsa klimatförändringarna, för att sedan minska sin egen klimatpåverkan genom livsstilsförändringar. Det är därför alltid viktigt att både klimatkompensera och att samtidigt jobba på - och gärna ha en strategi för - att reducera sina egna klimatavtryck. Och det är därför vi ser själva klimatkompenseringen som ett första steg på GoClimate, ett enkelt - men inte obetydligt - steg för att visa att du menar allvar med klimatfrågan, medan nästa steg är att faktiskt minska avtrycken du gör så mycket som du bara kan. Bland annat med tips i nyhetsbrev från oss och med hjälp av olika funktioner i kommande produktuppdateringar. Nyfiken på att veta mer? <a href='https://www.goclimate.com/se'>Börja resan mot ett klimatneutralt liv tillsammans med oss här</a>!<br><br>Har du åsikter om den här frågan? Gå gärna in på vår blogg och kommentera eller ställ frågor: <a href='https://www.goclimate.com/blog/fungerar-verkligen-klimatkompensation/'>https://www.goclimate.com/blog/fungerar-verkligen-klimatkompensation/</a>"
-      q5:
-        question: Varför ska jag låta er sköta min klimatkompensation?
-        answer: "<img alt='' class='alignnone wp-image-270 size-large' src='https://www.goclimate.com/blog/wp-content/uploads/2017/10/bra-klimatprojekt-1024x723.png' /><br>
-        Det finns främst två anledningar till att använda vår tjänst. För det första kan vi hjälpa dig att göra så mycket klimatnytta som möjligt för dina pengar. Marknaden för klimatkompensation kan nämligen (tyvärr) vara rätt tidskrävande och knepig att hitta rätt i. Det finns dels olika standarder för klimatprojekt som man behöver ha koll på, dels helt olika typer av klimatprojekt och på toppen av det så kan priset för klimatkompensation – som kan vara väldigt svåra att få reda på – variera kraftigt mellan olika projekt.
-        <br><br>
-        Att hitta rätt bland de olika projekten och veta <strong>att ens pengar gör så mycket nytta för klimatet som möjligt</strong> är svårt, och där kan vi hjälpa till så att vi gör riktigt smarta investeringar tillsammans.
-        <br><br>
-        För det andra finns ingen annan tjänst, vad vi känner till, som dels beräknar vad du ska klimatkompensera för just din livsstil, dels gör det enkelt för dig genom att dra pengar från ditt konto varje månad istället för att du aktivt ska gå in och klimatkompensera manuellt, och samtidigt ger tips om hur du kan minska ditt klimatavtryck så mycket som möjligt.
-        <br><br>
-        Dessutom så är det rätt roligt att göra bra saker tillsammans och se hur stor nytta vi kan göra om vi agerar tillsammans. Och med lite tur kan din delaktighet även få med fler, så att vi blir fler och fler som försöker göra något för att bromsa klimatförändringarna.
-        <br><br>
-        Har du åsikter om den här frågan? Gå gärna in på vår blogg och kommentera eller ställ frågor: <a href='https://www.goclimate.com/blog/varfor-ska-jag-klimatkompensera-via-goclimateneutral-org/'>https://www.goclimate.com/blog/varfor-ska-jag-klimatkompensera-via-goclimateneutral-org/</a>"
-      q6:
-        question: Är det inte viktigare att minska sina utsläpp än att klimatkompensera?
-        answer: "<img alt='' class='alignnone wp-image-270 size-large' src='https://www.goclimate.com/blog/wp-content/uploads/2018/01/reduce_climate_emissions-1024x693.png' /><br>
-        Det korta svaret är ja. Det är mer tillförlitligt och därmed bättre att inte släppa ut något alls än att klimatkompensera för det du släpper ut. På GoClimate används investeringar i klimatprojekt – klimatkompensation – som ett första steg för att komma igång med att göra något bra för klimatet, men vi menar inte att det är tillräckligt på sikt eller att det är viktigare. Det är dock ett väldigt bra första steg i många människors klimatengagemang.
-        <br><br>
-        Samtidigt, för att nyansera bilden lite, så är det såklart bättre att släppa ut 1 ton CO2 och betala bort 2 ton CO2 – och därmed ha nettoeffekten att 1 ton CO2 försvinner från atmosfären – än att inte släppa ut eller ta bort något alls.
-        <br><br>
-        Det allra bästa är såklart att inte ställa det mot varandra, utan att både minska sina egna utsläpp och att hjälpa andra att minska utsläpp genom investeringar i klimatprojekt.
-        <br><br>
-        Har du åsikter om den här frågan? Gå gärna in på vår blogg och kommentera eller ställ frågor: <a href='https://www.goclimate.com/blog/ar-det-inte-viktigare-att-minska-sina-utslapp-an-att-klimatkompensera/'>https://www.goclimate.com/blog/ar-det-inte-viktigare-att-minska-sina-utslapp-an-att-klimatkompensera/</a>"
-      q7:
-        question: Det här känns som ett avlatsbrev, kan jag verkligen köpa mig fri från ansvar?
-        answer: Nej, det kan du inte. Att börja engagera sig i klimatfrågan och att göra det genom att betala för klimatkompensation ser vi som ett första steg. Det har även visat sig att när man tittar på företag som klimatkompenserar så reducerar de sina utsläpp mer än de som inte klimatkompenserar.<br><br>“The typical offset buyer directly slashed almost 17% of their scope 1 emissions while the typical non-offset buyer reduced scope 1 emissions by less than 5%.” - <a href='https://www.goclimate.com/blog/wp-content/uploads/2019/11/buyers-report-032015-pdf.pdf' target='_blank'>Ecosystems Marketplace - THE BOTTOM LINE</a><br><br>Vi tror att det här även gäller privatpersoner, att de som registrerar sig på GoClimate och betalar för att få bort utsläpp i atmosfären varje månad - även kommer att reducera sina utsläpp mer än om de inte registrerade sig alls.
-      q8:
-        question: Vad är ett klimatprojekt?
-        answer: Ett klimatprojekt är ett projekt som gör klimatnytta med hjälp av de pengar som investeras i det. Ett projekt kan exempelvis vara att bygga ett vindkraftverk som genererar energi så att mindre el används från kolkraftverk, att distribuera effektiva spisar så att mindre träd behöver huggas ner och eldas upp eller att byta ut en hel flotta med bussar från diesel till el.
-      q9:
-        question: Hur kan jag vara säker på att klimatkompensationen görs i tillförlitliga projekt?
-        answer: "<img alt='' class='aligncenter wp-image-227 size-large' src='https://www.goclimate.com/blog/wp-content/uploads/2017/08/gold_standard_CDM-1024x626.png' /><br>
-        För att vara säker på att pengarna gör nytta finns olika standarder för klimatkompensation som CDM, Gold Standard, Plan Vivo, VCS och Fair Trade som utvärderar olika parametrar i projekt beroende på vad de bidrar med.
-        <br><br>
-        Det hela är ganska snårigt då vissa projekt, framförallt trädplanterings-projekt och CDM-projekt, vid upprepade granskningar visat sig inte hålla vad de lovar, och i vissa fall till och med haft negativa konsekvenser för lokalbefolkningen och miljön där projektet har genomförts.
-        <br><br>
-        Det är tydligt att man inte kan välja vilket klimatprojekt som helst att kompensera på grund av detta. Vi investerar därför bara i de mest trovärdiga och hårt granskade projekten, projekt som både uppfyller FNs krav för klimatprojekt och dessutom har certifieringen Gold Standard (som bland annat WWF står bakom). Då har man FNs alla medlemsstater och ca 90 miljöorganisationer i ryggen. Därtill tredjepartsverifieras alla dessa projekt av bland annat TÜV och DNV och alla deras protokoll är offentliga och följer projekten under hela projekttiden.
-        <br><br>
-        Förutom att välja hårt tredje-partsgranskade projekt som är Gold Standard-certifierade så har vi även valt att kompensera för dubbla ens beräknade utsläpp för att vara på den säkra sidan om något mot förmodan skulle gå fel i klimatprojekten. Vi sprider även investeringarna i olika klimatprojekt för att ytterligare öka säkerheten med att vi åstadkommer riktig klimatnytta.
-        <br><br>
-        Har du åsikter om den här frågan? Gå gärna in på vår blogg och kommentera eller ställ frågor: <a href='https://www.goclimate.com/blog/hur-kan-jag-vara-saker-pa-att-er-klimatkompensationen-gors-i-tillforlitliga-projekt/'>https://www.goclimate.com/blog/hur-kan-jag-vara-saker-pa-att-er-klimatkompensationen-gors-i-tillforlitliga-projekt/</a>"
-      q10:
-        question: Hur kan det vara så billigt att klimatkompensera?
-        answer: "<img alt='' class='alignnone wp-image-270 size-large' src='https://www.goclimate.com/blog/wp-content/uploads/2018/01/price-ton-co2.png' /><br>
-        Det behövs inte så mycket pengar för att kunna åstadkomma stor klimatnytta i utvecklingsländer. Relativt lite pengar kan få kalkyler för stora klimatprojekt att gå ihop och genomföras.
-        <br><br>
-        Ett exempel, säg att en vietnamesisk by kan bygga ett vattenkraftverk som kostar 10,1 MSEK. Det är tyvärr något dyrare än att bara fortsätta köpa el från kolkraft vilket skulle kosta 10 MSEK. Och eftersom byn är väldigt fattig konstaterar man att vattenkraftverket inte kommer byggas. Men då kan man genom att putta in 0,1 MSEK från bland annat oss få kalkylen att gå ihop – och vattenkraften kan ersätta kolkraften! Så relativt lite pengar – 0.1 MSEK i det här exemplet – kan tippa över investeringen och göra så att ett 10-miljoners miljöprojektet blir av! Exemplet är något förenklat såklart, men illustrerar ändå principen.
-        <br><br>
-        Själva ekonomiska mekanismen kommer från FN och Kyoto-protokollet, då man instiftade CDM-projekt och CER-krediter som det kallas. För att ytterligare stärka kvalitén på de sociala aspekterna i CDM-projekt startades rätt snart även Gold Standard Foundation av bland annat WWF – som utnyttjar samma mekanism för additionalitet som CDM-projekten, men inte accepterar de projekttyper som inte går i linje med Parisavtalets 1,5-gradersmål.
-        <br><br>
-        På GoClimate försöker vi hitta de mest priseffektiva Gold Standard-certifierade projekten åt dig, så att dina pengar ska kunna göra så mycket nytta som möjligt för klimatet utan att kompromissa med kvalitén.
-        <br><br>
-        Och i de projekten så blir det helt enkelt väldigt billigt att göra stor verifierbar klimatnytta.
-        <br><br>
-        Har du åsikter om den här frågan? Gå gärna in på vår blogg och kommentera eller ställ frågor: <a href='https://www.goclimate.com/blog/hur-kan-det-vara-sa-billigt-att-klimatkompensera/'>https://www.goclimate.com/blog/hur-kan-det-vara-sa-billigt-att-klimatkompensera/</a>"
-      q11:
-        question: Är verkligen människan orsaken till klimatförändringarna?
-        answer: "Ja. Om du är osäker, läs mer här: <a href='https://www.bloomberg.com/graphics/2015-whats-warming-the-world/' target='_blank'>https://www.bloomberg.com/graphics/2015-whats-warming-the-world/</a>"
-      q12:
-        question: Hindrar inte klimatkompensation en omställning till ett hållbart samhälle?
-        answer: "Nej, precis tvärt om faktiskt! Vi tror att klimatkompensation är ett utmärkt första steg många kan ta för att sedan hjälpa till och öka hastigheten att ställa om till ett hållbart samhälle.
-        <br><br>
-        Beteendeforskning har visat att om man kan få människor att ta ett första – men inte obetydligt – steg i rätt riktning, exempelvis för klimatet via klimatkompensation, så är det väldigt mycket större sannolikhet att de personerna tar fler och större steg i samma riktning senare. Detta kallas foot-in-the-door-technique och är en stark bidragande orsak till att vi vill göra det så enkelt som möjligt för så många som möjligt att komma igång och göra något positivt för klimatet. Vi har sett många exempel på och är övertygade om att de allra flesta som registrerar sig på tjänsten, även vill ta nästa steg och hjälpa till att öka hastigheten på omställningen till ett hållbart samhälle."
-      q13:
-        question: Har klimatkompensation även andra positiva effekter?
-        answer: Ja, det har visat sig att företag som klimatkompenserar även minskar sina utsläpp mer än företag som inte klimatkompenserar. Vi tror att klimatkompensation kan ha samma effekt på privatpersoner – att privatpersoner som klimatkompenserar även minskar sin klimatbelastning på sikt tack vare ändrade vanor. När man registrerat sig på vår tjänst så försöker vi inspirera och uppmuntra till att minska ens klimatpåverkan.
-      q14:
-        question: Är CO2 farligt?
-        answer: Nej. Vi behöver CO2 för att leva på jorden. Men när vi pumpar upp miljontals ton CO2 från jordens inre varje dag och släpper ut i atmosfären så har det visat sig att det får konsekvenser i form av att vår planet blir varmare. Och det i sin tur kommer att leda till torka, vattenbrist, svält och eventuellt krig. Naturskyddsföreningen tror att vi kommer ha 200 miljoner klimatflyktingar 2050.
-      q15:
-        question: Kommer ni plocka ut vinst på det här projektet?
-        answer: "Vi vill göra allt vi kan för att uppnå maximal klimatnytta. Så om det skulle visa sig att vi kan uppnå ännu mer klimatnytta framöver genom att sätta upp vinst-mål, så kommer vi göra det. Klimatnyttan går före allt för oss. <br><br>Än så länge har vi lagt ner tusentals timmar utan betalning och vinst på projektet. <br><br>Om vi någon gång skulle plocka ut vinst så kommer vi vara 100% transparenta med det, du kan redan idag följa alla ekonomiska detaljer om vår verksamhet här: <a href='https://www.goclimate.com/se/100_percent_transparency'>https://www.goclimate.com/se/100_percent_transparency</a>"
-      q16:
-        question: När klimatkrisen är över, kommer GoClimate att lägga ner då?
-        answer: Ja! Tjohoo!
-      q17:
-        question: Hur beräknar vi klimatavtryck?
-        answer: Att räkna på klimatavtryck är väldigt komplicerat och kan aldrig bli exakt. Oavsett hur noggrant man räknar behöver alltid många antaganden göras. <br><br>Istället för att använda en komplicerad modell har vi valt att räkna grovt utifrån de tre val som påverkar ditt klimatavtryck mest; vad du äter, vilken bil du har och hur mycket du kör, samt hur mycket du flyger. Ovanpå det lägger vi till utsläppen från offentlig konsumtion, bostadens klimatavtryck samt en buffert för övriga utsläpp. Även om alla klimatkalkylatorer är ungefärliga, så blir vår enkla variant kanske mer grov än andra. Därför har vi valt att kompensera för dubbelt så mycket av det uträknade klimatavtrycket i vår tjänst, så att man trots att kalkylatorn är enkel ska kunna vara säker på att man lever ett klimatneutralt liv.<br><br>De olika alternativens koldioxidutsläppsnivåer baseras på de utmärkta kalkylatorna på myclimate.com och carbonstory.org. Vill du ta reda på ditt klimatavtryck lite mer exakt så finns det <b><a href='https://www.google.se/search?safe=active&q=carbon+footprint+calculator&cad=h' target='_blank'>väldigt många bra kalkylatorer där ute</a></b>.
-      q18:
-        question: Hur får jag reda på vilka klimatprojekt som vi investerar i?
-        answer: Vi tror på full transparens i allt vi gör. Alla klimatkompensationsprojekt som vi investerar i redovisas på förstasidan när du loggar in på ditt konto. Du kan dessutom läsa om dem på <b><a href='https://www.goclimate.com/blog/category/investment/'>bloggen under kategorin investeringar</a></b>.
-      q19:
-        question: Hur avslutar jag min prenumeration?
-        answer: "Det är superenkelt, man stänger av sin prenumeration genom att välja 'cancel climate plan' på sidan där man hanterar sina betalningsinställningar: <a href='https://www.goclimate.com/se/users/edit/payment'>https://www.goclimate.com/se/users/edit/payment</a>"
-      q20:
-        question: Hur hanteras mina kortuppgifter?
-        answer: Vi använder oss av Stripe (<a href="https://stripe.com/se">stripe.com</a>) som betalningsleverantör, som är en av de största betalningsleverantörerna på nätet. Kortuppgifterna och betalningarna hanteras helt och hållet av dem - helt krypterat förstås. Kortuppgifterna hamnar aldrig på våra eller någon annans servrar, utan hanteras endast utav Stripe.
+    climate_neutrality:
+      heading: Klimatneutralitet
+      questions:
+        q1:
+          question: Vad innebär det att vara klimatneutral?
+          answer: Något (eller någon) kan kallas klimatneutralt när skillnaden är noll mellan de utsläpp av växthusgaser som orsakas och de utsläpp som tas bort från atmosfären, alternativt de utsläpp som förhindras från att släppas ut i atmosfären. Det som är klimatneutralt har alltså ingen påverkan på klimatet. Detta skulle kunna vara tex. en produkt, en person, eller en stad. <a href="https://www.goclimate.com/blog/kan-man-verkligen-kalla-sig-klimatneutral/">Läs mer på vår blogg</a>.
+        q2:
+          question: Hur blir jag klimatneutral?
+          answer: Alla människor har en påverkan på klimatet genom vår livsstil; vad vi äter, hur vi bor, reser etc som orsakar utsläpp av växthusgaser. Du kan ta ansvar för dessa utsläpp genom att klimatkompensera så att motsvarande mängd växthusgaser inte släpps ut någon annanstans (eller tas bort från atmosfären), och på så vis når du en netto-noll effekt för klimatet. <a href="https://www.goclimate.com/blog/racker-det-med-att-betala-pengar-for-att-bli-klimatneutral/">Läs mer på vår blogg</a>.
+    climate_change:
+      heading: Om klimatförändringar
+      questions:
+        q1:
+          question: Vad är klimatförändringar?
+          answer: Med klimatförändringar menar vi de ändringar av det normala vädret som orsakas av den globala uppvärmningen. Jordens genomsnittliga temperatur ökar, huvudsakligen på grund av utsläpp av koldioxid och andra växthusgaser till atmosfären, vilket leder till mer extrema väderförhållanden. Det kan till exempel innebära mycket mer regn än vad som var normalt på en plats, och längre period av torka på en annan plats. Detta är en stor och komplex fråga, som vi har gjort <a href="https://www.youtube.com/watch?v=3CM_KkDuzGQ" target="_blank" rel="noopener">en video för att förklara mer i detalj</a>.
+        q2:
+          question: Är klimatförändringar orsakade av människan?
+          answer: Ja. Klimatet har varierat konstant under jordens historia, men aldrig så snabbt som nu. Världens ledande forskare är helt överens om att detta är orsakat av människan, se gärna <a href="https://www.ipcc.ch/report/ar5/syr/" rel="noopener" target="_blank">IPCCs rapporter</a> för faktaunderlag.
+        q3:
+          question: Är inte CO2 nödvändigt?
+          answer: Absolut! Problemet är att våra utsläpp av koldioxid och andra växthusgaser har höjt halten av det i atmosfären, och balansen som behövs för att stabilisera klimatet är rubbad. Koldioxidhalten i atmosfären låg på ca 280 ppm (miljondelar) innan industrialiseringen, men <a href="https://www.esrl.noaa.gov/gmd/ccgg/trends/" target="_blank" rel="noopener">är nu uppe på 416 ppm</a>, vilket leder till klimatförändringar. Det är uppskattat att under 350 ppm skulle vara ett tryggt värde för att inte orsaka alltför stora förändringar.
+        q4:
+          question: Spelar det roll vad jag gör?
+          answer: Ja! Till skillnad från andra miljöproblem som har lokal skala, så är klimatförändringarna ett globalt problem som alla bidrar till och alla måste hjälpa till att lösa. Att skylla på varandra hjälper inte. Genom att vara världsledande kan vi ta fram lösningar som blir billigare och lättare för andra att använda, och därför är det superviktigt att vi som kan visa vägen faktiskt gör det. Om du klimatkompenserar kan du dessutom bidra till omställningen mot ett hållbart samhälle bortanför din lokala kontext.
+        q5:
+          question: Är det inte de stora företagen och politikerna som borde lösa problemet?
+          answer: Klimatförändringarna är en så stor utmaning att vi alla måste hjälpas åt för att ställa om samhället. Vi som samhällsmedborgare kan ta ansvar för våra egna avtryck som ett steg på vägen. Företagen producerar för att vi efterfrågar deras varor och tjänster, och politiker kan bara genomföra förändringar om de tror att det finns tillräckligt med folkligt stöd. Tillsammans kan vi kommunicera till dem att vi är redo för en seriös klimatpolitik och vill ha hållbara varor och tjänster från företagen.
+    offsetting:
+      heading: Om klimatkompensation
+      questions:
+        q1:
+          question: Vad är klimatkompensation?
+          answer: Att klimatkompensera innebär att se till att utsläppen av växthusgaser från något (tex. en person eller en produkt) kompenseras genom undvikna utsläpp någon annanstans, eller genom att ta bort motsvarande mängd koldioxid från atmosfären. Rent konkret innebär det att utsläppen beräknas, och sedan köps den mängden koldioxidekvivalenter från ett klimatprojekt som ser till att koldioxid inte släpps ut. På så sätt finansieras klimatsmarta lösningar och resultatet blir minskad klimatpåverkan. <a href="https://www.goclimate.com/blog/vad-ar-klimatkompensation/">Läs mer på vår blogg</a>.
+        q2:
+          question: Fungerar klimatkompensation?
+          answer: Ja! Eftersom vi alla delar samma atmosfär, så har ett ton koldioxid samma effekt oavsett var det släpps ut. När du väljer att betala för att kompensera dina utsläpp gör dina pengar nytta genom att bidra till ett projekt som undviker utsläpp av växthusgaser i en annan del av världen. Det finns pålitliga sätt att räkna på utsläppen så du kan känna dig trygg med att mängden stämmer, och projekten kontrolleras av externa granskare så att de verkligen gör den nytta de lovat. Dessutom bidrar du till omställningen mot ett hållbart samhälle för de som inte har råd att göra investeringen själva. <a href="https://www.goclimate.com/blog/fungerar-verkligen-klimatkompensation/">Läs mer om detta på vår blogg</a>.
+        q3:
+          question: Kan jag köpa mig fri med klimatkompensation?
+          answer: Nej. Klimatkompensation är inget avlatsbrev. Men eftersom det inte går att leva ett klimatneutralt liv i dagens samhälle, så är klimatkompensation en metod för att ta ansvar för hela sin klimatpåverkan med en gång. Du hjälper den globala omställningen mot ett hållbart samhälle med dina resurser, och kan samtidigt jobba på att minska dina egna utsläpp. Eftersom klimatförändringarna är ett så akut problem måste vi göra allt vi kan för att bromsa dem, och då är klimatkompensation ett väldigt kostnadseffektivt sätt att göra det på. <a href="https://www.goclimate.com/blog/klimatkompensation-som-avlatsbrev-ar-en-myt/">Läs mer på vår blogg</a>.
+        q4:
+          question: Är det inte bättre att minska sitt eget avtryck?
+          answer: Vi måste definitivt minska vårt eget avtryck. Men det går faktiskt att göra både och! Studier visar på att de som klimatkompenserar faktiskt är de som minskar sina egna avtryck mest, och när vi undersökt bland våra användare ser vi att majoriteten använder klimatkompensation som en del i sitt klimatengagemang. Eftersom det inte går att leva helt klimatneutralt i dagens samhälle så kan klimatkompensation användas för att komma ner till netto-noll, och dessutom hjälpa andra i omställningen till ett hållbart samhälle. <a href="https://www.goclimate.com/blog/ar-det-inte-viktigare-att-minska-sina-utslapp-an-att-klimatkompensera/">Läs mer på vår blogg</a>.
+        q5: 
+          question: Vad är ett klimatprojekt?
+          answer: Ett klimatprojekts huvudsyfte är att se till att utsläppen av växthusgaser till atmosfären minskar. Det finns olika sätt att göra det på, huvudsakligen utveckling av förnybar energi, och infångande och förstörande av växthusgaser med stark värmepotential som tex metan. Även trädplantering och skogsvårdsprojekt kan vara klimatprojekt. Projektets positiva påverkan på klimatet, och antalet koldioxidekvivalenter som det genererar, beräknas gentemot ett scenario där projektet inte implementeras. Alltså, om vi inte bygger förnybar energi, hur mycket växthusgaser skulle släppas ut om befolkningen fortsätter bränna fossila bränslen? Detta är alltså de utsläpp som undviks genom byggandet av förnybar energi. Dessutom har projekten ofta andra positiva effekter, som förbättrad luftkvalitet och ökade arbetstillfällen. <a href="https://www.goclimate.com/blog/vad-ar-ett-klimatprojekt-egentligen/">Läs mer om detta på vår blogg</a>.
+        q6:
+          question: Vem ser till att projekten är seriösa och bra genomförda?
+          answer: Klimatprojekt certifieras av olika organisationer, som registrerar projekt som kan göra klimatnytta och mäter hur mycket nytta de faktiskt gör, så att de kan sälja exakt rätt mängd krediter. GoClimate köper klimatkrediter som är certifierade av <a href="https://www.goldstandard.org/" target="_blank" rel="noopener">Gold Standard</a>, en organisation grundad av WWF och andra miljöorganisationer för att säkerställa högsta möjliga kvalitet på klimatprojekten. Detta innebär också att projekten tredjepartsgranskas av andra aktörer, all dokumentation är offentlig och vi kan följa projektet under tiden som det genomförs. Grundläggande krav på projekten, som additionalitet, verifierbarhet, spårbarhet, permanens och bidrag till hållbar utveckling garanteras av Gold Standard. <a href="https://www.goclimate.com/blog/hur-kan-jag-vara-saker-pa-att-er-klimatkompensationen-gors-i-tillforlitliga-projekt/">Läs mer på vår blogg</a>.
+        q7:
+          question: Varför sker projekten i låginkomstländer?
+          answer: För att det är där vi kan göra störst skillnad. Det är där beroendet av fossila bränslen är som störst, och den lokala befolkningen skulle inte ha råd att investera i förnybar energi utan finansiellt stöd från klimatkompensation. Vi ser på så vis till att göra så mycket nytta som möjligt för pengarna. Vissa utsläpp är lättare att undvika än andra, så vi börjar med det som är lätt och ekonomiskt för att höja ribban för klimatarbetet. Vi arbetar för att alla ska få tillgång till hållbar energi, och på så sätt ge människor med mindre resurser mer möjligheter till ett hållbart liv.
+        q8:
+          question: Varför finansierar GoClimate inte trädprojekt?
+          answer: Alla bra projekt är inte nödvändigtvis bra för klimatkompensation. Träd är det enda sättet att binda koldioxid från luften, och är därför ett extremt viktigt sätt att jobba för klimatet. Men att kompensera för fossilt lagrad koldioxid som släpps ut efter att ha legat miljontals år i marken, genom att binda det i ett träds biomassa har en hel del osäkerheter. Risken finns att träden inte står kvar, och om de eldas upp eller förmultnar så släpps koldioxiden ut igen. Vi kan alltså inte garantera att utsläppet är permanent borttaget, på samma sätt som vi kan göra om vi har ersatt det med förnybar energi. 
+        q9:
+          question: Hur kan det vara så billigt att klimatkompensera?
+          answer: Om du tycker att klimatkompensation är billigt så beror det antagligen på att du tillhör den rikare delen av världens befolkning. Klimatprojekt är förhållandevis billiga för oss, för att vi hjälper de som inte har råd att investera i de bättre lösningarna som finns tillgängliga. På så sätt hjälper vi till att plocka de lågt hängande frukterna i låginkomstländer, så att de får tillgång till samma teknik och utveckling som vi redan har i de rikaste länderna. Dessutom finansieras oftast inte hela projektet med klimatkrediter, utan vi skjuter till en del i finanisieringen så att det blir ekonomiskt genomförbart. <a href="https://www.goclimate.com/blog/hur-kan-det-vara-sa-billigt-att-klimatkompensera/">Läs mer på vår blogg</a>.
+        q10:
+          question: Är projekten hållbara?
+          answer: Ja! Projekten utvecklas med försiktighet och med omtanke för lokal miljö och befolkning. I de fall där projekten har påverkan så kompenseras det för, tex om träd huggs ned för att bredda en väg så planteras nya träd. Dessutom kräver Gold Standard att projekten bidrar till fler av de globala hållbarhetsmålen än bara klimatmålet. Vissa projekt skapar bra arbetstillfällen, förbättrar hälsan, bidrar till hållbar industri och/eller förnybar energi. Vi väljer projekt med omsorg och kontrollerar vad som rapporterats under projektets genomförande, så att vi är säkra på att vi köper krediter från projekt som inte har haft några negativa konsekvenser. När klimatkompensation utvecklades var kraven inte lika höga och därför finns det historiskt sett projekt som haft negativa bieffekter, men med dagens högre krav och hårdare kontroller undviker vi detta.
+    about_us:
+      heading: Om GoClimate
+      questions:
+        q1:
+          question: Vad gör GoClimate med sina intäkter?
+          answer: Den största delen av våra intäkter går till klimatprojekten, men vi lägger även pengar på sånt som löner till våra anställda (som väljer ut projekten, ser till att tjänsten fungerar och får verksamheten att växa) och marknadsföring (för att bli fler som bidrar). <a href="https://www.goclimate.com/se/100_percent_transparency">Vi har full transparens så du kan själv se vart pengarna går</a>. Det hade varit fantastiskt att skicka alla pengarna direkt till projekten, men vi är övertygade om att vi gör mer klimatnytta om vi kan växa och få med oss fler, samt hjälpa människor att förstå mer om klimatet och hur vi kan minska våra utsläpp. Det är ingen som tar ut någon vinst från företaget.
+        q2:
+          question: Är GoClimate ett företag?
+          answer: Ja, vi är ett socialt företag som har som mål att skapa samhällsnytta, specifikt klimatnytta. Vi är alltså inte en välgörenhetsorganisation, och har inget 90-konto. Du kan ändå vara trygg med att vi gör största möjliga nytta för pengarna eftersom <a href="https://www.goclimate.com/se/100_percent_transparency">du själv kan se vår finansiella redovisning</a>, och vi har ingen vinstutdelning utan det överskott vi har stannar i verksamheten för att göra klimatnytta. Vi har valt den här företagsformen eftersom vi tror att det ger oss maximal möjlighet att vara effektiva och snabbt göra skillnad för klimatet.
+        q3:
+          question: Är ni vinstdrivande?
+          answer: Nej, vi är inte vinstdrivande i nuläget, och vinst är inte vår drivkraft. Vår högsta ambition är att stoppa klimatförändringarna. Om vinst krävs för att uppnå detta effektivt, t.ex. för att kunna ta in investerare, så kan vi komma att bli vinstdrivande i framtiden. Men ekonomisk vinst kommer aldrig att vara ett självändamål för oss.
+        q4:
+          question: Får jag använda GoClimates flyg-API?
+          answer: Vi har utvecklat ett API för att beräkna klimatpåverkan från flygresor. <a href="https://api.goclimate.com/docs">Här finns all info om det</a>, och du kan höra av dig om du vill använda det.
+        q5:
+          question: Kan jag söka jobb/praktik hos er?
+          answer: Vi får in många spontanansökningar och förfrågningar, men vi tror att vi har större chans att satsa på rätt person om vi anställer när vi upplever ett behov. Håll utkik på vår <a href="https://jobs.goclimate.com/">jobbsida</a> eller connecta med oss där för att få ett mail när en ledig tjänst dyker upp!
+    our_service:
+      heading: Om privatpersonstjänsten
+      questions:
+        q1:
+          question: Hur beräknar ni mitt avtryck?
+          answer: Vi har en utförlig <a href="https://www.goclimate.com/blog/methodology-behind-the-carbon-footprint-calculator/">metodbeskrivning</a> där du kan se alla värden som vi använder, och var de kommer ifrån. Vi använder offentlig data i den mån det finns tillgängligt, kompletterat med vetenskaplig forskning och studier från relevanta branschorganisationer.
+        q2:
+          question: Kan jag klimatkompensera för en enskild flygresa?
+          answer: Ja! Som medlem kan du logga in och sedan välja “Kompensera flygresa” i menyn längst till höger på sidan.
+        q3:
+          question: Hur avslutar jag min prenumeration?
+          answer: Du kan avsluta eller pausa din prenumeration genom att logga in på sidan, välja inställningar, betalningsinställningar och sedan ändra beloppet till "cancel climate plan". Här är en <a href="https://www.goclimate.com/se/users/subscription">direktlänk</a>.
+        q4:
+          question: Hur hanteras mina kortuppgifter?
+          answer: Vi använder oss av <a href="https://stripe.com/en-se" target="_blank" rel="noopener">Stripe</a> som betalningsleverantör, som är en av de största betalningsleverantörerna på nätet. Kortuppgifterna och betalningarna hanteras helt och hållet av dem - helt krypterat förstås. Kortuppgifterna hamnar aldrig på våra eller någon annans servrar, utan hanteras endast utav Stripe.
+        q5:
+          question: Kan jag betala med autogiro?
+          answer: Tyvärr har vi i dagsläget enbart möjlighet att ta emot betalningar via kort. 
+        q6:
+          question: Var hittar jag mina kvitton?
+          answer: Du kan hitta dina kvitton genom att logga in på sidan och <a href="https://www.goclimate.com/users/receipts">gå till den här länken</a>.
+    for_businesses:
+      heading: För företag
+      questions:
+        q1:
+          question: Är klimatkompensation avdragsgillt?
+          answer: Det verkar så. I ett uppmärksammat fall från 2018 fick Arla rätt mot Skatteverket och kunde göra avdrag för sin klimatkompensation, eftersom det gjorts i marknadsföringssyfte. På så vis anses klimatkompensationen inte vara en gåva, utan relaterade till bolagets intjäning eftersom de ökade produktens värde. Därför kunde klimatkompensationen falla under den allmänna avdragsrätten för kostnader för intäkters förvärvande eller bibehållande. 
+        q2:
+          question: Hur kan jag kommunicera att företaget klimatkompenserar?
+          answer: "Självklart ska detta kommuniceras! För att kommunicera externt om att ni klimatkompenserar är det bra att ha en plan på hur ni även vill minska era utsläpp framöver, eller i alla fall berätta hur ni tänker - t ex genom någon form av miljöpolicy. Detta för att klimatkompensationen inte ska uppfattas som greenwashing. Tumregeln för företag är: beräkna utsläppen, minska dem och slutligen kompensera för de utsläpp ni inte kan minska just nu."
+        q3:
+          question: Kan jag göra mitt företag klimatneutralt? 
+          answer: Ja, men inte genom att enbart kompensera för företagets utsläpp. Att göra hela sitt företag (eller en produkt) klimatneutralt är lite mer komplext, då det följer en ISO standard och kräver noggranna beräkningar. Men det är absolut möjligt och något vi på GoClimate kan hjälpa till med.
+        q4:
+          question: Hur använder ni den data som samlas in i kalkylatorn?
+          answer: "Uppgifterna används för att beräkna företagets klimatavtryck. Vi använder även siffrorna helt anonymt för att ta fram snittvärden som alla företag kan jämföra sig mot. Inga uppgifter kommer att visas offentligt utan ert godkännande.
+          <br><br>Om ni klickar i godkännandet att använda er logga och ert namn så kan vi komma att använda det publikt tillsammans med siffran för totala utsläpp eller utsläpp per anställd. Det är till för att vi i framtiden ska kunna skapa topplistor och möjligheten jämföra sig med andra bolag. Förutom detta så är samtliga uppgifter skyddade även om ni väljer att ge det godkännandet."
   activerecord:
     attributes:
       user:

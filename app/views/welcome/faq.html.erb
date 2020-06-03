@@ -16,38 +16,42 @@
 
     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
       <div class="panel panel-default questions-list">
-        <ol>
-          <% t('questions', scope: 'faq_questions').each do |question| %>
-            <li>
-              <a href="#collapse<%= question[0] %>id">
-                <%= question[1][:question] %>
-              </a>
-            </li>
+          <% t('faq_questions').each do |category_key, category| %>
+              <p><b><%= category[:heading] %></b></p>
+              <ul>
+              <% category[:questions].each do |question_key, question| %>
+                <li>
+                  <a href="#collapse-<%= "#{category_key}-#{question_key}" %>-id">
+                    <%= question[:question] %>
+                  </a>
+                </li>
+              <% end %>
+              </ul>
           <% end %>
-        </ol>
       </div>
 
-      <% t('questions', scope: 'faq_questions').each.with_index(1) do |question, count| %>
-        <div id="collapse<%= question[0] %>id" ></div>
+      <% t('faq_questions').each do |category_key, category| %>
+        <h3 style="margin: 24px 0 16px"><%= category[:heading] %></h3>
+        <% category[:questions].each do |question_key, question| %>
+          <div id="collapse-<%= "#{category_key}-#{question_key}" %>-id" ></div>
 
-         <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="<%= question[0] %>">
-            <h4 class="panel-title">
-              <a role="button" data-toggle="collapse" href="#collapse<%= question[0] %>" aria-expanded="true" aria-controls="collapse<%= question[0] %>">
-                <%= count %>. <%= question[1][:question] %>
-              </a>
-             </h4>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="<%= "#{category_key}-#{question_key}" %>">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" href="#collapse-<%= "#{category_key}-#{question_key}" %>" aria-expanded="true" aria-controls="collapse-<%= "#{category_key}-#{question_key}" %>">
+                  <%= question[:question] %>
+                </a>
+              </h4>
+            </div>
+
+            <div id="collapse-<%= "#{category_key}-#{question_key}" %>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="<%= "#{category_key}-#{question_key}" %>">
+              <div class="panel-body"><%= raw question[:answer] %></div>
+            </div>
           </div>
-
-          <div id="collapse<%= question[0] %>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="<%= question[0] %>">
-            <div class="panel-body"><%= raw question[1][:answer] %></div>
-          </div>
-        </div>
-
-        <br>
+          <br>
+        <% end %>
       <% end %>
     </div>
-
   </div>
 </div>
 

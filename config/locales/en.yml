@@ -257,148 +257,122 @@ en:
   answer: Answer
   read_more_on_frequently_asked_questions: Read more on our FAQ
   faq_questions:
-    questions:
-      q1:
-        question: Can I really become completely climate neutral?
-        answer: "Yes, we definitely think that you can call yourself climate neutral!
-        <br><br>
-        If you want to make it a little more complicated, for companies there are standards that regulate the requirements for what is considered being climate-neutral (PAS 2060 and ISO 14021), but in the case of individuals, there are no similar standards that we know of. This means that there may be different opinions of what it takes for a person to be considered climate neutral.
-        <br><br>
-        <img alt='' class='alignnone wp-image-264 size-large' src='https://www.goclimate.com/blog/wp-content/uploads/2018/02/climate-neutral-1024x526.png' />
-        <br>
-        In theory climate neutrality is when the difference between the emissions you cause and the emissions that you prevent from reaching the atmosphere is zero. The challenge with this is partly to calculate the exact carbon footprint for an individual, and also to find ways to reliably prevent emissions from reaching the atmosphere or remove emissions from the atmosphere.
-        <br><br>
-        When it comes to measuring your own climate footprint, there are very advanced methods to do this. We have chosen a simple estimate to make it as easy as possible for you to start doing something about climate change without having to spend a lot of time in carbon dioxide calculators where you need to enter exact air mileage, kWh consumption etc.
-        <br><br>
-        There are many advanced calculators freely available on the internet that provide more accurate estimates such as <a href='http://footprint.wwf.org.uk' target='_blank'>http://footprint.wwf.org.uk</a> and <a href='http://www.carbonfootprint.com/calculator.aspx' target='_blank'>http://www.carbonfootprint.com/calculator.aspx</a>. What all calculators have in common is that they are based on estimates and generalizations, which in turn means that the value you get is approximate. For example, the calculators does not take into account if you have built a new house last year and thus caused large emissions in the form of building materials, or if you only use very fuel efficient airplanes when you fly. The calculators also do not take into account the exact emissions caused by the manufacture of the batteries for your electric car nor if your car has been bought new or second hand, if you charge it with renewable energy at home and with fossil based energy at work. The reason is that such a calculator would be extremely complex and time consuming to use - and yet not perfect.
-        <br><br>
-        So are there measurable and good ways to remove emissions from the atmosphere or measurable and good ways to prevent emissions to be released in the atmosphere? Yes there are! We have chosen to invest in Gold Standard-certified climate projects, and you can read more om how that works in the answer to the question <a href='https://www.goclimate.com/faq#collapseq4id'>Does climate offsetting really make a difference?</a>.
-        <br><br>
-        Is it then impossible to consider one self as climate neutral since you cannot calculate your exact carbon footprint? Well, we believe it’s still possible. To ensure that our users are climate neutral, as far as we can, our profiles are designed to compensate for more than twice as much as the overall impact of your lifestyle while doing everything we can to ensure the reliability of the projects. This way there is a buffer that compensates for miscalculations of your emissions and for risks in the projects we invest in. With a two-fold compensation, we should be on the safe side, and most likely even be climate-positive.
-        <br><br>
-        So to answer the question again, yes, we definitely think that you can call yourself climate neutral!"
-      q2:
-        question: Can you really just pay money to become climate neutral?
-        answer: "<img alt='' class='alignnone wp-image-270 size-large' src='https://www.goclimate.com/blog/wp-content/uploads/2018/01/price-ton-co2.png' />
-        <br>
-        Yes. If you, with money contributions, remove as much emissions from the atmosphere as you cause - you can call yourself climate neutral. It might sound provoking and unfair that you can just pay money to get to call yourself climate neutral, but the good news is that it's possible to achieve great climate benefits with relatively small amounts of money. Enough benefits that most people easily can reduce emissions -  through climate projects in developing countries - more than the emissions they cause by their own lifestyle.
-        <br><br>
-        But at the same time, it's not enough to help others reduce their emissions if we are to succeed in stopping climate change. We must simultaneously also reduce our own emissions. Therefore we at GoClimate see the investment in climate projects only as a first step in the right direction. But after that step has been taken we must also reduce our own emissions.
-        <br><br>
-        Unfortunately it's often rather hard for most people to reduce their climate footprint since a change in lifestyle often is needed - for instance if you are to sell your car or stop flying. And big changes in habits and lifestyle has proven very hard for us humans to do. Therefore we have chosen to make it simple for people to contribute to slow down climate change by investing in climate projects. When this first step is taken we want to inspire all our users to gradually slow down their own climate footprint.
-        <br><br>
-        The approach of getting people to take a small step first and then making bigger changes is called Foot-in-the-door-technique. You can read more about how it works here: https://en.wikipedia.org/wiki/Foot-in-the-door_technique
-        <br><br>
-        Foot-in-the-door-technique is the reason why we believe in getting as many as possible to take a first step in their climate commitment now, and why we think it needs to be both really simple and a positive experience. It is simply much more likely that people make more and bigger changes in their lifestyle once they have begun to take a step in the right direction."
-      q3:
-        question: What is Carbon Offsetting?
-        answer: "<img alt='' class='aligncenter wp-image-227 size-large' src='https://www.goclimate.com/blog/wp-content/uploads/2017/09/FB_Oops_white_1200x630-d58e3700b4fb069143586d246a82e162eb73203d243fb3b072a80289794101f8-1024x538.jpg' />
-        <br><br>
-        Carbon Offsetting is a way to take responsibility for the carbon emissions your lifestyle causes. To drive a car, fly and eat meat causes rather high carbon dioxide emissions, that causes climate change - that causes global warming.
-        <br><br>
-        When you carbon offset you pay money for the amount of carbon dioxide your lifestyle causes. The money are invested in climate projects that reduce the same amount of carbon dioxide as you have caused - so that the sum of the emissions is zero or less. You can reduce emissions either by helping somebody else lower their emissions or by removing emissions from the atmosphere.
-        <br><br>
-        Carbon offsetting is often made possible by climate projects in developing countries - for instance energy efficiency projects or wind or solar plants.
-        <br><br>
-        To be on the safe side that you actually achieve climate benefit when you carbon offset - the climate projects should be reliably certified. The most reliable projects are Gold Standard-certified (and therefore supported by WWF).
-        <br><br>
-        At GoClimate we help offset your lifestyle emissions, through projects that are Gold Standard-certified."
-      q4:
-        question: Does carbon offsetting really make a difference?
-        answer: "<img alt='' class='aligncenter wp-image-227 size-large' src='https://www.goclimate.com/blog/wp-content/uploads/2017/08/gold_standard_CDM-1024x626.png' /><br>
-        Yes, carbon offsetting works. But in order to make a real, verified and lasting difference it's important to choose the climate projects you offset through with care.
-        <br><br>
-        So, how can you be sure that the money we invest actually contributes to real climate benefit? Well, there are several different organisation that approves and certifies climate projects to ensure this. The largest standards are CDM (which the UN is behind), Gold Standard (which WWF among others are behind), Plan Vivio, VCS and Fair Trade. Emissions trading also used to be a way to carbon offset, but is no longer an effective way to achieve real and lasting climate benefit.
-        <br><br>
-        We at GoClimate have gone from doing carbon offseting in UN-certified projects (CDM) to investing in projects that are certified by Gold Standard Foundation. These projects are more expensive, but have higher quality than the projects that are only UN-certified. You can read more about Gold Standard here: <a href='https://www.goldstandard.org/' target='_blank'>https://www.goldstandard.org/</a>
-        <br><br>
-        It is also important to invest in projects that are already completed. If the projects are completed, third parties can verify the actual climate benefit achieved - unlike in projects where climate benefits are just something that someone hopes to achieve in the future.
-        <br><br>
-        By investing in Gold Standard-certified projects - and also only invest in projects that are already completed and verified - you can be sure that your money has contributed to real climate benefit - and that your carbon offsetting works."
-      q5:
-        question: Why should I put my money in GoClimate? Isn’t better to invest in offsetting projects myself without intermediaries?
-        answer: "<img alt='' class='alignnone wp-image-270 size-large' src='https://www.goclimate.com/blog/wp-content/uploads/2017/10/bra-klimatprojekt-1024x723.png' /><br>
-        There are two main reasons why we think you should use GoClimate. Firstly, we can help you do as much good for the climate as possible with your money. The carbon offset market is unfortunately rather complex and not very easy to get an overview of. There are different standards for climate projects, completely different types of projects and the price per ton - which is not always easy to find - can vary a lot between different projects.
-        <br><br>
-        Finding your way around the projects and understanding where your money does as much good for the climate as possible is hard, and this is where we can help. Doing this together we can also get better prices - since the price also varies a lot depending on the volume you want to offset.
-        <br><br>
-        Secondly, there is no other service that we know, which calculates what to offset for your lifestyle, and makes it easy for you to offset it by deducting money from your account every month instead of making you enter and offset everything manually.
-        <br><br>
-        In addition, it's fun to do good things together and see how much we can achieve if we act on climate together. And with a little luck, your participation can also bring more people joining the fight against climate change, and the more we are, the bigger the chance that we can do a big difference together."
-      q6:
-        question: Is it not more important to reduce emissions than to offset?
-        answer: "<img alt='' class='alignnone wp-image-270 size-large' src='https://www.goclimate.com/blog/wp-content/uploads/2018/01/reduce_climate_emissions-1024x693.png' /><br>
-        The short answer is yes. It is more reliable and therefore better to not release anything at all than to emit and then offset for what you emitted. At GoClimate, carbon offseting is used as a way to get as many people as possible to take a first step in the fight against climate change, but we do not suggest it's enough in the long term or more important. However, it is an important first step that is easy for many people to take.
-        <br><br>
-        At the same time it is obviously better to release 1 ton of CO2 and offset 2 tonnes of CO2 - and thus have the net effect of preventing 1 ton of CO2 to be released in the atmosphere - than not emit nor offset anything.
-        <br><br>
-        The very best is of course to not put reducing emssions and helping others reducing their emissions by carbon offsetting - against eachother, but to reduce your own emissions as much as you can and help others reducing theirs by investing in climate projects at the same time."
-      q7:
-        question: This feels like a letter of indulgence, can I really buy myself free from liability?
-        answer: "No, you can’t. We consider carbon offsetting a first step - a way to start doing something against climate change. It has been proven that when looking at companies that offset their carbon footprint, they reduce their emissions more than those that do not offset.
-        <br><br>
-        'The typical offset buyer directly slashed almost 17% of their scope 1 emissions while the typical non-offset buyer reduced scope 1 emissions by less than 5%.' - <a href='https://www.goclimate.com/blog/wp-content/uploads/2019/11/buyers-report-032015-pdf.pdf' target='_blank'>Ecosystems Marketplace - THE BOTTOM LINE</a>
-        <br><br>
-        We believe that this also applies to individuals. We believe that those who sign up for GoClimate and pay to remove emissions from the atmosphere every month will also reduce their emissions caused by their way of living more than if they did not register at all."
-      q8:
-        question: What is a climate offsetting project?
-        answer: An offsetting project reduces emissions from reaching the atmosphere with the money invested in it. For example, it can be a wind turbine park that generates renewable energy to avoid using fossil based electricity, distributing effective stoves so that less trees needs to be chopped down and burned, or it can be a project that replaces a whole fleet of buses on diesel to electricity.
-      q9:
-        question: How can I be sure that the offsetting projects are reliable?
-        answer: "<img alt='' class='aligncenter wp-image-227 size-large' src='https://www.goclimate.com/blog/wp-content/uploads/2017/08/gold_standard_CDM-1024x626.png' /><br>
-        To ensure that the invested money really offsets emissions, there are different standards - such as CDM, Gold Standard, Plan Vivo, VCS and Fair Trade - that certifies projects based on a number of different parameters.
-        <br><br>
-        Even though most of the projects out there are really excellent, some projects and standards have repeatedly failed to keep what they promise, and in some cases even had negative effects for local people and for the environment where the project was carried out.
-        <br><br>
-        Therefore, it is clear to us at GoClimate that we cannot choose any project to invest in in order to become climate neutral. We therefore only invest in the most credible and thoroughly reviewed projects, projects that have the Gold Standard certification (which WWF stands behind, among others). When you invest in these projects, you have 80 environmental organizations behind you. In addition, third parties verifies all of these projects, including TÜV and DNV, and all their protocols are public and follow the projects throughout the project lifespan.
-        <br><br>
-        In addition to choosing thoroughly third-party reviewed projects, which is Gold Standard certified, we also offset for double the calculated emissions - to be on the safe side if something would go wrong with the climate projects we invest in. We also spread investments in various climate projects to further increase the sureness that the money achieve as much good as possible."
-      q10:
-        question: How can it be so cheap to offset my climate footprint?
-        answer: '<img alt="" class="alignnone wp-image-270 size-large" src="https://www.goclimate.com/blog/wp-content/uploads/2018/01/price-ton-co2.png" alt="" /><br>
-        Not that much money is needed in order to achieve a big climate benefit in developing countries. Big climate projects can get started and implemented by just adding a small amount of money to them.
-        <br><br>
-        An example, a village in vietnam can build a hydro power plant that costs 10,1 million USD. This is unfortunately more expensive than just buying electricity from coal power plants which would cost 10 milliun USD. Unfortunately the village is very poor and the hydro power plant wont be built. But by adding 0.1 million USD, you can get the calculation to add up and the project can be build - clean hydro power will replace power from the coal power plant! So relatively small amounts of money - 0.1 million USD in this case - can make a huge environment impact! The example is somewhat simplified of course, but hopefully illustrates the principle.
-        <br><br>
-        The economical mechanism is originated from the UN and the Kyoto-protocol, where CDM-projects and CER-credits as they are called were initatied. To futher strengthen the quality on the social aspects of the CDM-projects pretty soon Gold Standard Foundation was founded by WWF among others.
-        <br><br>
-        At GoClimate we try to find the most price effective and reliable Gold Standard certified projects for you, so that your money can do as much impact for the climate as possible.'
-      q11:
-        question: Are humans really the cause of climate change?
-        answer: "Yes. If you're unsure, read more here: <a href='https://www.bloomberg.com/graphics/2015-whats-warming-the-world/' target='_blank'>https://www.bloomberg.com/graphics/2015-whats-warming-the-world/</a>"
-      q12:
-        question: Does offsetting prevent a shift to a sustainable society?
-        answer: "No, quite the opposite actually! We believe that offsetting is an excellent first step that many can take to help increase the speed of transitioning to a more sustainable society.
-        <br><br>
-        Behavioral research has shown that if people can take a first step in the right direction, for example for the climate through climate offsetting, it is much more likely that those people will take more and bigger steps in the same direction later. This is called foot-in-the-door technique and is a strong contributory reason for why we have made it as simple as possible to get started to do something positive for the climate. We have seen many examples of this and are convinced that the vast majority of those who sign up for the service also want to take more steps to help speed up the transition to a sustainable society even more."
-      q13:
-        question: Are there other positive effects of offsetting?
-        answer: "Yes, it has been found that companies that offset for their carbon footprint also reduce their emissions. We believe that offsetting can have the same effect on individuals - that individuals who offset also reduce their carbon footprint in the long term due to changed habits. Read more in this report on offsetting companies:<br><br>Read more in this report on offsetting companies: <br>“ The typical offset buyer directly slashed almost 17% of their scope 1 emissions while the typical non-offset buyer reduced scope 1 emissions by less than 5%.” - <a href='https://www.goclimate.com/blog/wp-content/uploads/2019/11/buyers-report-032015-pdf.pdf' target='_blank'>https://www.goclimate.com/blog/wp-content/uploads/2019/11/buyers-report-032015-pdf.pdf</a>"
-      q14:
-        question: Is CO2 dangerous?
-        answer: No. CO2 is critical for any form of life on Earth. But when we emit millions of tonnes of CO2 from the ground on a daily basis and release it into the atmosphere it raises the temperature on Earth as a consequence. It will in turn lead to drought, water shortage, starvation and possibly war. The Nature Conservation Association in Sweden believes there will be 200 million climate refugees in 2050.
-      q15:
-        question: Will you make profit from this project?
-        answer: "We want to do everything we can to slow down climate change as much as possible. However, if in the future we can increase the chance of slowing down climate change even more by setting up profit goals that in the future will go to our shareholders, then we will do that. Stopping climate change is more important than anything else for us.
-        <br><br>
-        So far, we have spent thousands of hours without payment or profit on this project.
-        <br><br>
-        If, at any time, we would like to give a share of the profit to our shareholders, we will be 100% transparent with it. You can already follow all the financial details of our business here: <a href='https://www.goclimate.com/100_percent_transparency'>https://www.goclimate.com/100_percent_transparency</a>"
-      q16:
-        question: When the climate crisis is over, will GoClimate shut down?
-        answer: Yes. And we will then invite you all for a glas of champagne!
-      q17:
-        question: How do we calculate the carbon footprints?
-        answer: The calculation of a carbon footprint is very complicated and can never be perfect. It doesn't matter how detailed you do your calculation, you will always need to make a lot of assumptions. Instead of using a complicated calculation we base our model on the three lifestyle choices that effect your footprint the most; what you eat, what you drive and how much you fly. On top of this we add emissions from public consumption, emissions from real estate and add an extra buffer. To be on the safe side we offset for twice as much as we estimate that your lifestyle cause. The amount of corbon in the different lifestyle choices we base on the excellent calculators from myclimate.com and carbonstory.org. If you want a more exact amount of your carbon footprint there are <b><a href='https://www.google.se/search?safe=active&q=carbon+footprint+calculator&cad=h' target='_blank'>lots of very good calculators out there</a></b>.
-      q18:
-        question: How do I know what climate offset projects we are investing in?
-        answer: We believe in full transparency in everything we do. All project that we invest in are shown on the first page when you log in to your account. You can also read about them <b><a href='https://www.goclimate.org/blog/category/investment/'>on our blog under the category investment</a></b>.
-      q19:
-        question: How do I cancel my subscription?
-        answer: "You can easily cancel your subscription by choosing 'cancel climate plan' on the payment settings page here: <a href='https://www.goclimate.com/users/edit/payment'>https://www.goclimate.com/users/edit/payment</a>"
-      q20:
-        question: How is my card details stored and handled?
-        answer: We are using Stripe (<a href="https://stripe.com/">https://stripe.com/</a>) as our payments provider. Stripe is one of the biggest payment providers online. All card details are completely handled by them - completely encrypted of course. Card details never go by our own servers, they are handled directly by Stripe.
+    climate_neutrality:
+      heading: Climate neutrality
+      questions:
+        q1:
+          question: What does it mean to be climate neutral or carbon neutral?
+          answer: Something (or someone) can be called climate neutral when the difference is zero between the greenhouse gas emissions caused and the emissions that are removed from the atmosphere, or the emissions that are prevented from being released into the atmosphere. So, something that is climate neutral has no effect on the climate. This could for example be a product, a person, or a city.
+        q2:
+          question: How do I become climate neutral?
+          answer: We all have an impact on the climate through our lifestyle; what we eat, how we travel, our housing etc, which cause greenhouse gas emissions. You can take responsibility for these emissions by offsetting so that the corresponding amount of greenhouse gases is not emitted elsewhere (or even get removed from the atmosphere), thus achieving a net zero effect for the climate.
+    climate_change:
+      heading: About Climate Change
+      questions:
+        q1:
+          question: What is climate change?
+          answer: By climate change we mean the changes in the normal weather caused by global warming. The average surface temperature of the earth increases, mainly due to emissions of carbon dioxide and other greenhouse gases to the atmosphere, which leads to more extreme weather conditions. For example, it can imply much more rain than what used to be normal in one place, and longer periods of drought in another place. This is a big and complex issue, and we've made <a href="https://www.youtube.com/watch?v=3CM_KkDuzGQ" target="_blank" rel="noopener">a video to explain it in more detail</a>.
+        q2:
+          question: Is climate change caused by humans?
+          answer: Yes. The climate has varied constantly throughout the history of the earth, but never as fast as now. The world's leading scientists fully agree that this is caused by humans, please see the <a href="https://www.ipcc.ch/report/ar5/syr/" rel="noopener" target="_blank"> IPCC’s reports</a> for all the facts.
+        q3:
+          question: Isn’t CO2 necessary?
+          answer: Absolutely! The problem is that our emissions of carbon dioxide and other greenhouse gases have raised the share of CO2 in the atmosphere, and the balance needed to keep the climate stable is disturbed. The carbon dioxide content in the atmosphere was about 280 ppm (million parts) before the industrialization, but has now increased to <a href="https://www.esrl.noaa.gov/gmd/ccgg/trends/" target="_blank" rel="noopener">416 ppm</a>, which causes climate change. It is estimated that below 350 ppm would be a safe limit so as not to cause excessive changes.
+        q4:
+          question: Does it matter what I do?
+          answer: Yes! Unlike other environmental problems that occur at local scale, climate change is a global problem that everyone contributes to and everyone must help to solve. Blaming one another does not help. By taking the lead, we can develop solutions which become cheaper and easier for others to use, and therefore it is super important that we who have the opportunity to show the way actually do so. Furthermore, if you offset your emissions, you can contribute to the transition towards a sustainable society beyond your local context.
+        q5:
+          question: Isn’t it the big companies and politicians that should solve the problem?
+          answer: Climate change is such a big challenge that we all need to act to change the society. As citizens, we can take responsibility for our own emissions as a part of the solution. Companies are producing because we demand their goods and services, and politicians can only make changes if they think there is enough popular support for it. Together we can communicate to them that we are ready for a serious climate policy and that we want sustainable products and services from the companies.
+    offsetting:
+      heading: About Carbon Offsetting
+      questions:
+        q1:
+          question: What is carbon offsetting?
+          answer: Carbon offsetting means ensuring that greenhouse gas emissions from something (eg, a person or a product) are compensated by avoiding emissions elsewhere, or by removing the corresponding amount of carbon dioxide from the atmosphere. In concrete terms, this means that the emissions are calculated, and then the amount of carbon dioxide equivalent is purchased from a climate project that ensures that carbon dioxide is not emitted. In this way, climate-smart solutions are financed and the outcome is reduced climate impact.
+        q2:
+          question: Does carbon offsetting work?
+          answer: Yes! Since we all share the same atmosphere, a ton of carbon dioxide has the same impact no matter where it is emitted. When you choose to pay to offset your emissions, your money benefits the climate by contributing to a project that avoids greenhouse gas emissions in another part of the world. There are reliable ways to calculate the emissions so you can feel confident that the amount is correct, and the projects are controlled by external reviewers so that they really deliver the benefit they promised. In addition, you are contributing to the transition towards a sustainable society for those who cannot afford to make that kind of investment for themselves.
+        q3:
+          question: Can I buy a clean conscience with carbon offsetting?
+          answer: No. Carbon offsetting is not a letter of indulgence. But since it is not possible to live a climate-neutral life in today's society, carbon offsetting is a way to immediately take responsibility for all of your climate impact. You help the global transition towards a sustainable society with your economic resources, and at the same time you can work on reducing your own emissions. Because climate change is such an acute problem, we must do everything we can to slow it down, and carbon offsetting is a very cost-effective way to do so.
+        q4:
+          question: Isn't it better to reduce your own emissions?
+          answer: We must definitely reduce our own emissions. But hey, you can actually do both! Studies show that those who do carbon offsetting are actually the ones who reduce their own emissions the most, and when we surveyed among our users we saw that the majority use carbon offsetting only as part of their climate commitment. Since it is not possible to live completely climate neutral in today's society, carbon offsetting can be used to reach net zero, and in addition help others in the transition to a sustainable society.
+        q5: 
+          question: What is a climate project?
+          answer: The main purpose of a climate project is to reduce the release of greenhouse gas emissions to the atmosphere. There are different ways of doing this, such as the development of renewable energy, and the capture and destruction of greenhouse gases with strong global warming potential (such as methane). Tree planting and forest management projects can also be climate projects. The project's positive impact on the climate, and the number of carbon dioxide equivalents it generates, are calculated against a scenario where the project is not implemented. Thus, if we do not build renewable energy, how much greenhouse gases would be emitted if the burning of fossil fuels continue? These are the emissions that are avoided through the construction of renewable energy. In addition, the projects often have other positive effects, such as improved air quality and increased employment.
+        q6:
+          question: Who makes sure that the projects are serious and well executed?
+          answer: Climate projects are certified by various organizations. They register projects that make climate benefit and measure how much benefit they actually do, so that they can sell exactly the right amount of credits. GoClimate purchases climate credits that are certified by <a href="https://www.goldstandard.org/" target="_blank" rel="noopener">Gold Standard</a>, an organization founded by WWF and other environmental organizations, to ensure the highest possible quality of the climate projects. This also means that the projects are verified by a third-party, all documentation is public and we can track the project while it is being implemented. Fundamental requirements for the projects, such as additionality, verifiability, traceability, permanence and contribution to sustainable development are guaranteed by the Gold Standard.
+        q7:
+          question: Why are projects located in low-income countries?
+          answer: Because that's where we can make the biggest difference. This is where the dependence on fossil fuels is greatest, and the local population would not be able to afford investing in renewable energy without the financial support from carbon offsetting. In this way, we ensure that we create as much value as possible for the money. Some emissions are easier to avoid than others, so we start with what is easy and economical, to raise the bar for climate work. We work for everyone to have access to sustainable energy, and thus give people with less resources more opportunities for a sustainable life.
+        q8:
+          question: Why doesn't GoClimate fund tree projects?
+          answer: All good projects are not necessarily suitable for carbon offsetting. Trees are the only natural way to absorb carbon dioxide from the air, and are therefore an extremely important way to stabilize the climate and save biodiversity. But to compensate for fossil-derived carbon dioxide which is released after spending millions of years in the soil, by tying it into a tree's biomass, has a lot of uncertainty. There is a risk that the trees will not remain standing, and if they are burned or decomposed, the carbon dioxide will be released again. We can therefore not guarantee that the emission is permanently removed, in the same way we can do if we have replaced it with renewable energy.
+        q9:
+          question: How can carbon offsetting be so cheap?
+          answer: If you think that carbon offsetting is cheap, it is probably because you belong to the richer part of the world's population. Climate projects are relatively inexpensive for us, since we help those who cannot afford to invest in the better solutions available. In this way, we help to pick the low-hanging fruits in low-income countries, so that they have access to the same technology and development that we already have in the richest countries. Moreover, the entire project is usually not financed with carbon credits, but we are providing a part of the financing to make it financially feasible.
+        q10:
+          question: Are the projects sustainable?
+          answer: Yes! The projects are developed with caution and care for the local environment and population. In cases where the projects have a negative impact, it is compensated for - for example, if trees are cut down to widen a road, new trees are planted. In addition, Gold Standard requires that the projects contribute to other global sustainability goals than just the climate goal. Some projects create employment, improve health, contribute to sustainable industry and/or renewable energy. We choose projects with care and check what has been reported during the project's implementation, so that we are sure that we are buying credits from projects that have had no negative consequences. When carbon offsetting was first developed, the requirements were not as stringent and therefore historically there have been projects that have had some negative side effects, but with today's higher demands and tougher controls, we avoid this.
+    about_us:
+      heading: About GoClimate
+      questions:
+        q1:
+          question: What does GoClimate do with its revenue?
+          answer: Most of our revenue goes to the climate projects, but we also spend money on things like salaries to our employees (who select the projects, make sure the service works and grow the business) and marketing (to get more contributing members). <a href="https://www.goclimate.com/se/100_percent_transparency">We have full transparency so you can see for yourself where the money goes</a>. It would have been fantastic to send all the money directly to the projects, but we are convinced that we will have a better impact on the climate if we can grow and bring more people on board, and help people understand more about the climate and how we can reduce our emissions. No one is making any profit from the company.
+        q2:
+          question: Is GoClimate a company?
+          answer: Yes, we are a social enterprise whose goal is to create social benefits, specifically climate benefits. Hence, we are not a charity. You can still be confident that we are making the greatest possible use for the money because <a href="https://www.goclimate.com/se/100_percent_transparency">you can see our financial accounts for yourself</a>, and we have no profit distribution - the excess we generate stays in the business to create more climate impact. We have chosen this format because we believe that it gives us maximum opportunity to be efficient and quickly make a difference for the climate.
+        q3:
+          question: Are you making a profit?
+          answer: No, we are currently not making any profit, and money is not what drives us. Our primary ambition is to stop climate change. If profit is required to achieve this effectively, e.g. to be able to take in investors, we may become profitable in the future. But financial gain will never be an end in itself.
+        q4:
+          question: Can I use the GoClimate flight emission API?
+          answer: We have developed an API to calculate the climate impact of air travel. <a href="https://api.goclimate.com/docs">Here is all the info about it</a>, and you can contact us if you want to use it.
+        q5:
+          question: Can I apply for a job or internship with you?
+          answer: We receive many unsolicited applications and inquiries, but we believe that we have a better chance of investing in the right person if we hire when we experience a need. Keep an eye on our <a href="https://jobs.goclimate.com/">job site</a> or connect with us there to receive an email when a vacancy shows up!
+    our_service:
+      heading: About the subscription service
+      questions:
+        q1:
+          question: How do you calculate my carbon footprint?
+          answer: We have a detailed <a href="https://www.goclimate.com/blog/methodology-behind-the-carbon-footprint-calculator/">description of our methodology</a> where you can see all the values we use, and where they come from. We use public data to the extent it’s available, supplemented by scientific research and studies from relevant industry organizations.
+        q2:
+          question: Can I offset an individual flight?
+          answer: Yes! As a member you can log in and then select “Compensate air travel” in the menu on the top right corner of the page.
+        q3:
+          question: How do I cancel my subscription?
+          answer: You can cancel or pause your subscription by logging in to the page, in the top right corner select settings, payment settings and then change the amount to "cancel climate plan". <a href="https://www.goclimate.com/se/users/subscription">Here is a direct link</a>.
+        q4:
+          question: How are my card details handled?
+          answer: We use <a href="https://stripe.com/en-se" target="_blank" rel="noopener">Stripe</a> as a payment provider, which is one of the largest payment providers on the web. The card details and payments are handled entirely by them - fully encrypted of course. The card details never end up on our or anyone else's servers, but are only handled by Stripe.
+        q5:
+          question: Do you accept other payment methods?
+          answer: Unfortunately, we currently only have the option of receiving card payments.
+        q6:
+          question: Where can I find my receipts?
+          answer: You can find your receipts by logging into the page and <a href="https://www.goclimate.com/users/receipts">going to this link</a>.
+    for_businesses:
+      heading: For Businesses
+      questions:
+        q1:
+          question: Is carbon offsetting tax deductible?
+          answer: "This depends on which country you operate in. In Sweden, it seems to be: In a notable case from 2018, Arla won against the Swedish Tax Agency and was able to deduct their carbon offsetting, since it was done for marketing purposes. In this way, carbon offsetting is not considered a gift, but related to the company's earnings as they increased the value of the product. Therefore, in Sweden carbon offsetting could fall under the general right of deduction for costs of acquiring or retaining income."
+        q2:
+          question: How can I communicate that our company does carbon offsetting?
+          answer: "Of course this should be communicated! In order to communicate externally that you do carbon offsetting, it is beneficial to have a plan on how you also want to reduce your emissions in the future, or at least communicate your reasoning - for example through some form of environmental policy. This is so that carbon offsetting is not perceived as greenwashing. The rule of thumb for companies is: calculate emissions, reduce them and finally offset the emissions you cannot reduce right now."
+        q3:
+          question: Can I make my business climate neutral?
+          answer: Yes, but not  by only offsetting the company's emissions. Making the entire business (or a product) climate neutral is a bit more complex, as it follows an ISO standard and requires careful calculations. But it is absolutely possible and something we at GoClimate can help you with.
+        q4:
+          question: How do you use the data collected in the business calculator?
+          answer: "The data is used to calculate the company's climate footprint. We also use the figures completely anonymously to generate average values that all companies can compare themselves to. No information will be publicly displayed without your approval.
+          <br><br>
+          If you give us approval to use your logo and your name, we may use it publicly together with the figure for total emissions or emissions per employee. This is so that in the future we will be able to create top lists and the opportunity to compare between companies. In addition to this, all information is protected even if you choose to give this approval."
   activerecord:
     errors:
       models:
