@@ -36,11 +36,11 @@ sv:
           geothermal: Bergvärmepump
           dont_know: Vet inte/annat
         green_electricity:
-          'yes': Ja
+          'yes': 'Ja'
           seventyfive_percent: 75% grön el
           fifty_percent: 50% grön el
           twentyfive_percent: 25% grön el
-          'no': Nej
+          'no': 'Nej'
           dont_know: Vet inte
         food:
           vegan: Växtbaserat
