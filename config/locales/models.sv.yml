@@ -2,8 +2,8 @@ sv:
   models:
     money:
       currency_formats:
-        sek: '%{number} kr'
         eur: '%{number} €'
+        sek: '%{number} kr'
     currency:
       suffix:
         sek: ' kr'
