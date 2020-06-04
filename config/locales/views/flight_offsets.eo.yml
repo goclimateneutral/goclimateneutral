@@ -1,0 +1,22 @@
+eo:
+  views:
+    flight_offsets:
+      new:
+        header: crwdns2362:0crwdne2362:0
+        header_description: crwdns2364:0crwdne2364:0
+        your_order: crwdns2366:0crwdne2366:0
+        flight_in_cabin_class: crwdns2368:0crwdne2368:0
+        carbon_footprint: crwdns2370:0crwdne2370:0
+        person: crwdns2372:0crwdne2372:0
+        people: crwdns2374:0crwdne2374:0
+        total: crwdns2376:0crwdne2376:0
+        sum: crwdns2378:0crwdne2378:0
+        submit: crwdns2380:0crwdne2380:0
+      thank_you:
+        header: crwdns2382:0crwdne2382:0
+        lead: crwdns2384:0crwdne2384:0
+        download_certificate: crwdns2386:0crwdne2386:0
+        download_receipt: crwdns2388:0crwdne2388:0
+        we_have_sent_an_email: crwdns2390:0crwdne2390:0
+        did_you_know_lifestyle: crwdns2392:0crwdne2392:0
+        read_more_and_subscribe: crwdns2394:0crwdne2394:0
