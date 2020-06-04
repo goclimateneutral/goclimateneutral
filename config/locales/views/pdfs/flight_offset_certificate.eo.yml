@@ -1,0 +1,19 @@
+eo:
+  views:
+    pdfs:
+      flight_offset_certificate:
+        header: crwdns2634:0crwdne2634:0
+        lead: crwdns2636:0crwdne2636:0
+        order_id: crwdns2638:0crwdne2638:0
+        date: crwdns2640:0crwdne2640:0
+        project_type: crwdns2642:0crwdne2642:0
+      invoice_certificate:
+        header: crwdns2644:0crwdne2644:0
+        we_certify_that: crwdns2646:0crwdne2646:0
+        has_carbon_offset: crwdns2648:0crwdne2648:0
+        project_information: crwdns2650:0crwdne2650:0
+        name: crwdns2652:0crwdne2652:0
+        country: crwdns2654:0crwdne2654:0
+        project_id: crwdns2656:0crwdne2656:0
+        project_type: crwdns2658:0crwdne2658:0
+        date: crwdns2660:0crwdne2660:0
