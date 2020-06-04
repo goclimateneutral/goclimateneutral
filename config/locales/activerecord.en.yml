@@ -1,5 +1,8 @@
 en:
   activerecord:
+    attributes:
+       user:
+         email: Email
     errors:
       models:
         user:
@@ -9,6 +12,7 @@ en:
                 blank: Wops, the password looks like it´s empty!
               email:
                 taken: The email address already exists, try another one!
+                blank: can't be blank
                 invalid: The email looks incorrect, try again!
               privacy_policy:
                 accepted: You need to accept the pricacy policy

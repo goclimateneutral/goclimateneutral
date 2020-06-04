@@ -3,10 +3,7 @@ de:
     flight_offsets:
       new:
         header: Kompensieren Sie Ihren Flug
-        header_description: >
-          CO2-Kompensation bedeutet, die Verantwortung für Ihren ökologischen
-          Fußabdruck zu übernehmen. Wir bieten Ihnen die Möglichkeit, Ihren Flug
-          mit zertifizierten Klimaprojekten zu kompensieren.
+        header_description: CO2-Kompensation bedeutet, die Verantwortung für Ihren ökologischen Fußabdruck zu übernehmen. Wir bieten Ihnen die Möglichkeit, Ihren Flug mit zertifizierten Klimaprojekten zu kompensieren.
         your_order: Ihre Bestellung
         flight_in_cabin_class: Flug in Kabinenklasse
         person: Person
@@ -16,15 +13,9 @@ de:
         submit: Kompensieren Sie Ihre Flüge!
       thank_you:
         header: Vielen Dank!
-        lead: >-
-          Durch die Kompensation haben Sie die Verantwortung für die CO2-Bilanz
-          Ihres Fluges übernommen.
+        lead: Durch die Kompensation haben Sie die Verantwortung für die CO2-Bilanz Ihres Fluges übernommen.
         download_certificate: Laden Sie Ihr Zertifikat herunter
         download_receipt: Laden Sie Ihre Quittung herunter
-        we_have_sent_an_email: >-
-          Wir haben Ihnen Ihr Zertifikat an die von Ihnen angegebene
-          E-Mail-Adresse geschickt.
-        did_you_know_lifestyle: >-
-          Wussten Sie, dass wir Ihnen dabei helfen können, Ihren gesamten
-          CO2-Fußabdruck zu kompensieren?
+        we_have_sent_an_email: Wir haben Ihnen Ihr Zertifikat an die von Ihnen angegebene E-Mail-Adresse geschickt.
+        did_you_know_lifestyle: Wussten Sie, dass wir Ihnen dabei helfen können, Ihren gesamten CO2-Fußabdruck zu kompensieren?
         read_more_and_subscribe: Hier können Sie mehr erfahren und sich registrieren
