@@ -1,0 +1,69 @@
+eo:
+  views:
+    lifestyle_footprints:
+      title: crwdns2472:0crwdne2472:0
+      questions:
+        region: crwdns2474:0crwdne2474:0
+        home: crwdns2476:0crwdne2476:0
+        heating: crwdns2478:0crwdne2478:0
+        green_electricity: crwdns2480:0crwdne2480:0
+        food: crwdns2482:0crwdne2482:0
+        car_type: crwdns2484:0crwdne2484:0
+        car_distance: crwdns2486:0crwdne2486:0
+        flight_hours: crwdns2488:0crwdne2488:0
+      options:
+        region:
+          west: crwdns2490:0crwdne2490:0
+          midwest: crwdns2492:0crwdne2492:0
+          northeast: crwdns2494:0crwdne2494:0
+          south: crwdns2496:0crwdne2496:0
+          other: crwdns2498:0crwdne2498:0
+        home:
+          house: crwdns2500:0crwdne2500:0
+          apartment: crwdns2502:0crwdne2502:0
+          one_or_two_bedrooms: crwdns2504:0crwdne2504:0
+          three_or_four_bedrooms: crwdns2506:0crwdne2506:0
+          five_or_more_bedrooms: crwdns2508:0crwdne2508:0
+          fifteen_sqm: crwdns2510:0crwdne2510:0
+          twentyfive_sqm: crwdns2512:0crwdne2512:0
+          fortytwo_sqm: crwdns2514:0crwdne2514:0
+          sixty_sqm: crwdns2516:0crwdne2516:0
+          eighty_sqm: crwdns2518:0crwdne2518:0
+        heating:
+          electricity: crwdns2520:0crwdne2520:0
+          natural_gas: crwdns2522:0crwdne2522:0
+          district: crwdns2524:0crwdne2524:0
+          coal: crwdns2526:0crwdne2526:0
+          biomass: crwdns2528:0crwdne2528:0
+          environmental_or_solar: crwdns2530:0crwdne2530:0
+          airpump: crwdns2532:0crwdne2532:0
+          geothermal: crwdns2534:0crwdne2534:0
+          heating_oil: crwdns2536:0crwdne2536:0
+          propane: crwdns2538:0crwdne2538:0
+          dont_know: crwdns2540:0crwdne2540:0
+        green_electricity:
+          'yes': 'crwdns2542:0crwdne2542:0'
+          seventyfive_percent: crwdns2544:0crwdne2544:0
+          fifty_percent: crwdns2546:0crwdne2546:0
+          twentyfive_percent: crwdns2548:0crwdne2548:0
+          'no': 'crwdns2550:0crwdne2550:0'
+          dont_know: crwdns2552:0crwdne2552:0
+        food:
+          vegan: crwdns2554:0crwdne2554:0
+          vegetarian: crwdns2556:0crwdne2556:0
+          pescetarian: crwdns2558:0crwdne2558:0
+          meat_low: crwdns2560:0crwdne2560:0
+          meat_medium: crwdns2562:0crwdne2562:0
+          meat_high: crwdns2564:0crwdne2564:0
+        car_type:
+          gas: crwdns2566:0crwdne2566:0
+          petrol: crwdns2568:0crwdne2568:0
+          diesel: crwdns2570:0crwdne2570:0
+          hybrid_plugin: crwdns2572:0crwdne2572:0
+          etanol: crwdns2574:0crwdne2574:0
+          electric: crwdns2576:0crwdne2576:0
+          hvo_electric: crwdns2578:0crwdne2578:0
+          vehicle_gas: crwdns2580:0crwdne2580:0
+          no_car: crwdns2582:0crwdne2582:0
+      next: crwdns2584:0crwdne2584:0
+      back: crwdns2586:0crwdne2586:0
