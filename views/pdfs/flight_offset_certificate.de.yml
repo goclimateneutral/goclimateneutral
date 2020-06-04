@@ -1,0 +1,19 @@
+de:
+  views:
+    pdfs:
+      flight_offset_certificate:
+        header: Carbon Offset Certificate
+        lead: By offsetting, you've taken responsibility for your flight's carbon footprint. Thank you!
+        order_id: Order ID
+        date: Date
+        project_type: Project type
+      invoice_certificate:
+        header: Carbon Offset Certificate
+        we_certify_that: We hereby certify that
+        has_carbon_offset: has carbon offset
+        project_information: Project information
+        name: Name
+        country: Country
+        project_id: Project ID
+        project_type: Project type
+        date: Date
