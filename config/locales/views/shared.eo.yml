@@ -1,0 +1,25 @@
+eo:
+  views:
+    shared:
+      header:
+        navigation:
+          flights: crwdns592:0crwdne592:0
+          offset_flight: crwdns594:0crwdne594:0
+        region_recommendation:
+          select_country: crwdns596:0crwdne596:0
+          continue_button: "crwdns598:0%{region}crwdne598:0"
+        sign_up: crwdns600:0crwdne600:0
+      prefooter:
+        heading: crwdns602:0crwdne602:0
+        body_text: crwdns604:0crwdne604:0
+        button: crwdns606:0crwdne606:0
+      footer:
+        short_intro: crwdns608:0crwdne608:0
+        jobs: 'crwdns610:0crwdne610:0'
+        headers:
+          make_a_difference: crwdns612:0crwdne612:0
+          explore: crwdns614:0crwdne614:0
+          about: crwdns616:0crwdne616:0
+      tonnes_co2e:
+        one: crwdns618:1crwdne618:1
+        other: crwdns618:5crwdne618:5
