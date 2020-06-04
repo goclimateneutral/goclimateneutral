@@ -1,0 +1,22 @@
+eo:
+  models:
+    money:
+      currency_formats:
+        usd: 'crwdns2324:0%{number}crwdne2324:0'
+        eur: 'crwdns2326:0%{number}crwdne2326:0'
+    currency:
+      prefix:
+        usd: crwdns2328:0crwdne2328:0
+        eur: crwdns2330:0crwdne2330:0
+    greenhouse_gases:
+      tonnes:
+        one: "crwdns2332:1%{count}crwdne2332:1"
+        other: "crwdns2332:5%{count}crwdne2332:5"
+      kg:
+        one: "crwdns2334:1%{count}crwdne2334:1"
+        other: "crwdns2334:5%{count}crwdne2334:5"
+    project:
+      offset_type:
+        'GS': crwdns2336:0crwdne2336:0
+        'CDM+GS': crwdns2338:0crwdne2338:0
+        'CDM': crwdns2340:0crwdne2340:0
