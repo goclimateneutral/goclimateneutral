@@ -1,0 +1,46 @@
+eo:
+  views:
+    gift_cards:
+      index:
+        header: crwdns2404:0crwdne2404:0
+        intro: crwdns2406:0crwdne2406:0
+        choose_header: crwdns2408:0crwdne2408:0
+        1_months_header: crwdns2410:0crwdne2410:0
+        1_months_description: crwdns2412:0crwdne2412:0
+        1_months_cta: crwdns2414:0crwdne2414:0
+        3_months_header: crwdns2416:0crwdne2416:0
+        3_months_description: crwdns2418:0crwdne2418:0
+        3_months_cta: crwdns2420:0crwdne2420:0
+        6_months_header: crwdns2422:0crwdne2422:0
+        6_months_description: crwdns2424:0crwdne2424:0
+        6_months_cta: crwdns2426:0crwdne2426:0
+        12_months_header: crwdns2428:0crwdne2428:0
+        12_months_description: crwdns2430:0crwdne2430:0
+        12_months_cta: crwdns2432:0crwdne2432:0
+        details_html: "crwdns2434:0crwdne2434:0"
+      new:
+        intro: crwdns2436:0crwdne2436:0
+        your_gift_card_order: crwdns2438:0crwdne2438:0
+        write_a_message: crwdns2440:0crwdne2440:0
+        sample_message_html: "crwdns2442:0crwdne2442:0"
+        we_will_send_you_pdf: crwdns2444:0crwdne2444:0
+        click_here_for_an_example: "crwdns2446:0crwdne2446:0"
+        pay: crwdns2448:0crwdne2448:0
+      download:
+        gift_card: "crwdns2450:0crwdne2450:0"
+        gift_card_x_climate_neutral_months:
+          one: crwdns2452:1crwdne2452:1
+          other: "crwdns2452:5%{count}crwdne2452:5"
+        about_go_climate_neutral: crwdns2454:0crwdne2454:0
+        calculation_based_on_html: "crwdns2456:0crwdne2456:0"
+        do_you_want_to_continue: crwdns2458:0crwdne2458:0
+        register: crwdns2460:0crwdne2460:0
+      example:
+        message_html: "crwdns2462:0crwdne2462:0"
+        example: "crwdns2464:0crwdne2464:0"
+      thank_you:
+        download_the_gift_card_here: crwdns2466:0crwdne2466:0
+        download_receipt_here: crwdns2468:0crwdne2468:0
+        you_have_purchased_a_gift_card_with_x_climate_neutral_months:
+          one: crwdns2470:1crwdne2470:1
+          other: "crwdns2470:5%{count}crwdne2470:5"
