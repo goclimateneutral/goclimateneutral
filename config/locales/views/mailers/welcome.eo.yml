@@ -1,0 +1,14 @@
+eo:
+  mailers:
+    welcome:
+      from: crwdns472:0crwdne472:0
+      subject: crwdns474:0crwdne474:0
+      welcome_to_gcn: crwdns476:0crwdne476:0
+      big_thanks: crwdns478:0crwdne478:0
+      you_now_support: crwdns480:0crwdne480:0
+      regardless_of_how_much: crwdns482:0%{facebook}crwdnd482:0%{instagram}crwdnd482:0%{twitter}crwdnd482:0%{blog}crwdne482:0
+      we_are_many: crwdns484:0crwdne484:0
+      if_you_have_any_questions: crwdns486:0crwdne486:0
+      thank_you: crwdns488:0crwdne488:0
+      best_regards: crwdns490:0crwdne490:0
+      the_gcn_team: crwdns492:0crwdne492:0
