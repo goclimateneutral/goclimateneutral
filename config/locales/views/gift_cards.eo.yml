@@ -1,0 +1,46 @@
+eo:
+  views:
+    gift_cards:
+      index:
+        header: crwdns270:0crwdne270:0
+        intro: crwdns272:0crwdne272:0
+        choose_header: crwdns274:0crwdne274:0
+        1_months_header: crwdns276:0crwdne276:0
+        1_months_description: crwdns278:0crwdne278:0
+        1_months_cta: crwdns280:0crwdne280:0
+        3_months_header: crwdns282:0crwdne282:0
+        3_months_description: crwdns284:0crwdne284:0
+        3_months_cta: crwdns286:0crwdne286:0
+        6_months_header: crwdns288:0crwdne288:0
+        6_months_description: crwdns290:0crwdne290:0
+        6_months_cta: crwdns292:0crwdne292:0
+        12_months_header: crwdns294:0crwdne294:0
+        12_months_description: crwdns296:0crwdne296:0
+        12_months_cta: crwdns298:0crwdne298:0
+        details_html: "crwdns300:0crwdne300:0"
+      new:
+        intro: crwdns302:0crwdne302:0
+        your_gift_card_order: crwdns304:0crwdne304:0
+        write_a_message: crwdns306:0crwdne306:0
+        sample_message_html: "crwdns308:0crwdne308:0"
+        we_will_send_you_pdf: crwdns310:0crwdne310:0
+        click_here_for_an_example: "crwdns312:0crwdne312:0"
+        pay: crwdns314:0crwdne314:0
+      download:
+        gift_card: "crwdns316:0crwdne316:0"
+        gift_card_x_climate_neutral_months:
+          one: crwdns318:1crwdne318:1
+          other: "crwdns318:5%{count}crwdne318:5"
+        about_go_climate_neutral: crwdns320:0crwdne320:0
+        calculation_based_on_html: "crwdns322:0crwdne322:0"
+        do_you_want_to_continue: crwdns324:0crwdne324:0
+        register: crwdns326:0crwdne326:0
+      example:
+        message_html: "crwdns328:0crwdne328:0"
+        example: "crwdns330:0crwdne330:0"
+      thank_you:
+        download_the_gift_card_here: crwdns332:0crwdne332:0
+        download_receipt_here: crwdns334:0crwdne334:0
+        you_have_purchased_a_gift_card_with_x_climate_neutral_months:
+          one: crwdns336:1crwdne336:1
+          other: "crwdns336:5%{count}crwdne336:5"
