@@ -1,0 +1,8 @@
+sv:
+  mailers:
+    business:
+      climate_report_email:
+        subject: Share your climate footprint with your team
+        thank_you: Thank you for calculating your climate footprint!
+        link_description: "To make it easier to share your results with your team and get back to them later, here's a link to the results:"
+        reply_to_this_email: If you have any questions, just reply to this email. We're happy to help!
