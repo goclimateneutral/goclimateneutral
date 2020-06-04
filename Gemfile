@@ -83,6 +83,7 @@ group :development do
   gem 'guard'
   gem 'guard-rspec', require: false
   gem 'guard-rubocop', require: false
+  gem 'i18n-tasks', require: false
   gem 'pry-byebug' # Drop `binding.pry` anywhere you want to start debugging
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'

@@ -34,17 +34,21 @@
     </div>
     <div>
       <p class="text-sm my-4">
-        <%= t(
-          "views.registrations.your_climate_footprint#{'_compared_world' if @country_average.countries.nil?}",
-          footprint: @footprint.total.to_s(precision: :auto),
-          relative:
-            if @footprint.total > @country_average.co2e
-              "#{((@footprint.total.co2e.to_f / @country_average.co2e.co2e - 1) * 100).ceil} % #{t 'views.registrations.higher'}"
-            else
-              "#{((1 - @footprint.total.co2e.to_f / @country_average.co2e.co2e) * 100).ceil} % #{t 'views.registrations.lower'}"
-            end,
-          country: @footprint.country.translation(I18n.locale)
-          ) %>
+        <% footprint_text_options = {
+            footprint: @footprint.total.to_s(precision: :auto),
+            relative:
+              if @footprint.total > @country_average.co2e
+                "#{((@footprint.total.co2e.to_f / @country_average.co2e.co2e - 1) * 100).ceil} % #{t 'views.registrations.higher'}"
+              else
+                "#{((1 - @footprint.total.co2e.to_f / @country_average.co2e.co2e) * 100).ceil} % #{t 'views.registrations.lower'}"
+              end,
+            country: @footprint.country.translation(I18n.locale)
+        } %>
+        <% if @country_average.countries.nil? %>
+         <%= t("views.registrations.your_climate_footprint_compared_world", *footprint_text_options) %>
+       <% else %>
+         <%= t("views.registrations.your_climate_footprint", *footprint_text_options) %>
+       <% end %>
       </p>
     </div>
   </div>

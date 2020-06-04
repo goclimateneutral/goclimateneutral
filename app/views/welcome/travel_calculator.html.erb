@@ -37,7 +37,7 @@
                 'boat'].each do |type| %>
             <tr>
               <td style="min-width: 50px; padding: 5px;">
-                <%= t('views.welcome.travel_calculator.' + type) %>:
+                <%= t("views.welcome.travel_calculator.#{type}") %>:
               </td>
               <td>
                 <div id="<%= type %>-background" style="background-color: #BCD2BE; width: 50px;">

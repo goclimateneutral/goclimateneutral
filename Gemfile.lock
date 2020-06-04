@@ -133,9 +133,20 @@ GEM
       guard (~> 2.0)
       rubocop (~> 0.20)
     haversine (0.3.2)
+    highline (2.0.3)
     http_accept_language (2.1.1)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
+    i18n-tasks (0.9.31)
+      activesupport (>= 4.0.2)
+      ast (>= 2.1.0)
+      erubi
+      highline (>= 2.0.0)
+      i18n
+      parser (>= 2.2.3.0)
+      rails-i18n
+      rainbow (>= 2.2.2, < 4.0)
+      terminal-table (>= 1.5.1)
     i18n_data (0.10.0)
     intercom-rails (0.4.1)
       activesupport (> 3.0)
@@ -309,6 +320,8 @@ GEM
       sprockets (>= 3.0.0)
     statsd-ruby (1.4.0)
     stripe (5.22.0)
+    terminal-table (1.8.0)
+      unicode-display_width (~> 1.1, >= 1.1.1)
     thor (1.0.1)
     thread_safe (0.3.6)
     tzinfo (1.2.7)
@@ -353,6 +366,7 @@ DEPENDENCIES
   guard-rubocop
   haversine
   http_accept_language (~> 2.1.1)
+  i18n-tasks
   intercom-rails (~> 0.4.0)
   jbuilder (~> 2.9)
   listen
