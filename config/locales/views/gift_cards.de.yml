@@ -27,7 +27,7 @@ de:
         click_here_for_an_example: "Klicken Sie hier für ein Beispiel"
         pay: Gutschein kaufen
       download:
-        gift_card: Gutschein
+        gift_card: "Gutschein"
         gift_card_x_climate_neutral_months:
           one: 1 klimaneutral Monat
           other: "%{count} klimaneutrale Monate"
