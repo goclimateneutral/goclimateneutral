@@ -1,0 +1,74 @@
+sv:
+  views:
+    welcome:
+      index:
+        hero:
+          heading: The subscription for offsetting your carbon footprint
+          body_text: Calculate your carbon footprint to start your personalized subscription, all in less than 2 minutes
+        how_it_works:
+          bullets:
+            bullet_1_heading: Calculate your carbon footprint
+            bullet_1_text: Our easy test takes just a minute to complete.
+            bullet_2_heading: Sign up
+            bullet_2_text: Start your monthly subscription personalized to your own footprint.
+            bullet_3_heading: Save our planet
+            bullet_3_text: We finance projects that reduce the amount of CO2 in the atmosphere.
+        about_us:
+          heading: Together we can be the change we want to see for the planet
+          body_text: We support climate projects certified by the UN and WWF, as well as assist you with tips on how to best decrease your carbon footprint.
+          read_more: Read more about us
+        projects:
+          heading: Where does the money go?
+          body_text_1: Your financial contribution equals your individual carbon footprint
+          body_text_2: Our projects support the global transition from fossil fuels to renewable energy resources
+          body_text_3: We specifically pick projects that gives the biggest bang for the buck in terms of doing good for the climate, while also contributing towards as many of the UN sustainability goals as possible
+          body_text_4: We are a 100% transparent business, with all of our outgoings continuously updated and displayed, in detail, here on the website.
+          read_more: Read about our projects
+        transparency:
+          heading: 100% transparency
+          body_text: We want you to feel safe with how your money is spent, why we go by a financial total transparency policy. We continuously update the site with our outgoings and overheads, making sure every cent is making the most possible good for the climate.
+          read_more: Read more about our transparency
+        climate_tips:
+          heading: Climate tips
+          clothes_last_longer: Make your clothes last longer
+          reduce_carbon_footprint_food: How to reduce your carbon footprint with food
+          civil_disobedience: Civil disobedience for the climate?
+          climate_friendly_housing_cooperative: Climate friendly housing cooperative - this is how you make an impact
+          climate_friendly_pension_saving: Fossil free pension savings
+          read_more: Read more
+        community:
+          heading: Meet our community
+          people:
+            annelie:
+              title: adventurer, speaker and guide
+              quote: I do lots of beach clean ups, and dive to pick up ghost nets in our oceans. I live on a tiny houseboat and I don’t have kids. I also try to inspire others to take better care of our nature.
+            mattias:
+              title: partner @ Netlight Consulting
+              quote: As a role model in the IT industry, we want to lower our environmental impact to help save the climate.
+            shelbi:
+              title: sustainability influencer
+              quote: It is difficult to know which choice is the most sustainable when it comes to our personal choices, so I figured offsetting my footprint would be a way to assure I was doing something meaningful & helpful regardless of if I’m making the most perfect lifestyle choices day to day.
+        calculate_to_sign_up: Calculate your footprint to start living a climate neutral life today!
+        i_live_in: I live in...
+        get_started: Get started
+        our_projects_header: Our Climate Projects
+        our_projects_lead: It's crucial for us that your money only ever ends up in the right hands. To guarantee that, we support Gold Standard certified projects that have been verified by third parties. The projects contribute to the global transition to renewable energy and the UN Sustainable Development Goals.
+        our_projects_link: Read more about our climate projects
+      travel_calculator:
+        travel_emissions_calculator: Travel Emissions Calculator
+        travel_emissions_calculator_description: Do you want to calculate the emissions from travelling? Enter the distance below and see the carbon emissions each way of travelling causes!
+        distance_in_kilometers: Distance of trip in km
+        calculate: Calculate
+        emissions_if_traveling_by: Emissions if you travel by
+        flight: Flight
+        car_petrol: Car (petrol)
+        car_diesel: Car (diesel)
+        car_etanol: Car (etanol)
+        car_gas: Car (gas)
+        car_electric: Electric Car
+        bus: Bus
+        train: Train
+        subway: Subway
+        boat: Boat
+        offset_the_emissions_here: >
+
