@@ -1,0 +1,14 @@
+sv:
+  mailers:
+    welcome:
+      from: Tove from GoClimate
+      subject: Welcome to GoClimate
+      welcome_to_gcn: Hello!
+      big_thanks: A big thank you for joining us and contributing to a more sustainable world!
+      you_now_support: You now support certified climate projects that also contribute to other types of sustainable development around the world. Well done!
+      regardless_of_how_much: Regardless of where you are on your journey towards a fully sustainable life, we hope that by joining our community you will become even more inspired and learn more about how we can reduce our emissions together. For inspiration and more information, please follow us on %{facebook}, %{instagram}, %{twitter} and check out our %{blog}.
+      we_are_many: There are many of us who want to do good for the climate, and we believe that coming together as a community is important in order to succeed. To keep the community active, we regularly invite you to meetups and climate strikes, to talk about how we can take climate action together. Invitations to events and information on our progress will be shared with you in our newsletter, 4-6 times per year.
+      if_you_have_any_questions: If you have any questions or just want to say hello, feel free to drop me a line at tove@goclimate.com!
+      thank_you: Thank you for contributing to a more sustainable future!
+      best_regards: Warm regards,
+      the_gcn_team: Tove from GoClimate
