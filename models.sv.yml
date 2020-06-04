@@ -1,0 +1,22 @@
+sv:
+  models:
+    money:
+      currency_formats:
+        usd: '$%{number}'
+        eur: '€%{number}'
+    currency:
+      prefix:
+        usd: '$'
+        eur: '€'
+    greenhouse_gases:
+      tonnes:
+        one: "%{count} tonne CO2e"
+        other: "%{count} tonnes CO2e"
+      kg:
+        one: "%{count} kg CO2e"
+        other: "%{count} kg CO2e"
+    project:
+      offset_type:
+        'GS': Gold Standard certified
+        'CDM+GS': CDM & Gold Standard certified
+        'CDM': CDM certified
