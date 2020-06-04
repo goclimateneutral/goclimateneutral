@@ -1,10 +1,6 @@
 sv:
   views:
     offset_certificates:
-      about_go_climate_neutral:
-            <a href='http://www.goclimate.com'>GoClimate</a> stöttar klimatprojekt och tipsar
-            och inspirerar om enkla sätt att minska klimatpåverkan.
-            Projekten är FN- och Gold Standard-certifierade och har
-            FNs alla medlemsstater och 80 miljöorganisationer i ryggen - bland annat Världsnaturfonden.
+      about_go_climate_neutral: <a href='http://www.goclimate.com'>GoClimate</a> stöttar klimatprojekt och tipsar och inspirerar om enkla sätt att minska klimatpåverkan. Projekten är FN- och Gold Standard-certifierade och har FNs alla medlemsstater och 80 miljöorganisationer i ryggen - bland annat Världsnaturfonden.
       do_you_want_to_continue: Vill du även kompensera för dina övriga klimatutsläpp?
       register: Gå in på <a href="http://www.goclimate.com">GoClimate</a> och registrera dig!
