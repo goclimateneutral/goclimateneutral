@@ -1,0 +1,14 @@
+eo:
+  views:
+    flight_footprints:
+      new:
+        flight_details: crwdns2342:0crwdne2342:0
+        from: crwdns2344:0crwdne2344:0
+        to: crwdns2346:0crwdne2346:0
+        roundtrip: crwdns2348:0crwdne2348:0
+        connections: crwdns2350:0crwdne2350:0
+        connections_return: crwdns2352:0crwdne2352:0
+        add_connection: crwdns2354:0crwdne2354:0
+        cabin_class: crwdns2356:0crwdne2356:0
+        number_of_tickets: crwdns2358:0crwdne2358:0
+        not_a_valid_input: crwdns2360:0crwdne2360:0
