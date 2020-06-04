@@ -1,0 +1,407 @@
+#This file is considered DEPRECATED. Please move changes and add new keys
+#to a file mirroring where keys are used. For example, keys used in
+#app/views/registrations/new.html.erb should go to
+#views.registrations.en.yml
+eo:
+  goclimateneutral_url: crwdns734:0crwdne734:0
+  site_title: crwdns736:0crwdne736:0
+  climate_change_is_the_greatest_challange: crwdns738:0crwdne738:0
+  log_in: crwdns740:0crwdne740:0
+  log_out: crwdns742:0crwdne742:0
+  settings: crwdns744:0crwdne744:0
+  i_want_to_know_more: crwdns746:0crwdne746:0
+  contact_us: crwdns748:0crwdne748:0
+  100_percent_transparency: crwdns750:0crwdne750:0
+  100_percent_transparency_intro: crwdns752:0crwdne752:0
+  what_we_do_with_your_money: crwdns754:0crwdne754:0
+  system_change: crwdns756:0crwdne756:0
+  system_change_description: crwdns758:0crwdne758:0
+  climate_projects: crwdns760:0crwdne760:0
+  climate_projects_description: crwdns762:0crwdne762:0
+  behavioral_change: crwdns764:0crwdne764:0
+  behavioral_change_description: crwdns766:0crwdne766:0
+  basic_facts: crwdns768:0crwdne768:0
+  employees: crwdns770:0crwdne770:0
+  full_time: crwdns772:0crwdne772:0
+  Main_KPI: crwdns774:0crwdne774:0
+  climate_footprint_2019: crwdns776:0crwdne776:0
+  number_of_climate_neutral_users: crwdns778:0crwdne778:0
+  users_from: crwdns780:0crwdne780:0
+  different_countries: crwdns782:0crwdne782:0
+  number_of_companies_we_have_helped: crwdns784:0crwdne784:0
+  tonnes_avoided_CO2e-emissions: crwdns786:0crwdne786:0
+  latest_fiscal_year_turnover: crwdns788:0crwdne788:0
+  total_accumulated_dividend_to_shareholders: crwdns790:0crwdne790:0
+  everything_is_invested_for_maximum_climate_impact: crwdns792:0crwdne792:0
+  amount_of_avoided_emissions: crwdns794:0crwdne794:0
+  project_distribution_by_continent: crwdns796:0crwdne796:0
+  project_distribution_by_technology: crwdns798:0crwdne798:0
+  CO2e_avoided_per_coworker: crwdns800:0crwdne800:0
+  100_percent_transparency_climate_projects: crwdns802:0crwdne802:0
+  for_more_information_about_climate_projects: crwdns804:0crwdne804:0
+  100_percent_transparency_financial_info: crwdns806:0crwdne806:0
+  100_percent_transparency_financial_info_intro: crwdns808:0crwdne808:0
+  fiscal_years: crwdns810:0crwdne810:0
+  fiscal_year_2020_ongoing: crwdns812:0crwdne812:0
+  financials: crwdns814:0crwdne814:0
+  year: crwdns816:0crwdne816:0
+  revenue: crwdns818:0crwdne818:0
+  cost: crwdns820:0crwdne820:0
+  result: crwdns822:0crwdne822:0
+  all_of_the_result_were_carried_forward: crwdns824:0crwdne824:0
+  carried_forward_to_next_year: crwdns826:0crwdne826:0
+  dividends: crwdns828:0crwdne828:0
+  auditor: 'crwdns830:0crwdne830:0'
+  climate_offset_from_users: crwdns832:0crwdne832:0
+  revenue_from_companies: crwdns834:0crwdne834:0
+  investments_in_climate_projects: crwdns836:0crwdne836:0
+  salary_costs: crwdns838:0crwdne838:0
+  other_operating_expenses: crwdns840:0crwdne840:0
+  total: crwdns842:0crwdne842:0
+  you_can_read_more_details_about_our_costs_here: crwdns844:0crwdne844:0
+  questions_or_comments_contact_us: crwdns846:0crwdne846:0
+  general_questions_html: 'crwdns848:0crwdne848:0'
+  general_questions_press_html: crwdns850:0crwdne850:0
+  general_questions_facebook_html: 'crwdns852:0crwdne852:0'
+  general_questions_twitter_html: 'crwdns854:0crwdne854:0'
+  about_us: crwdns856:0crwdne856:0
+  about_us_intro: crwdns858:0crwdne858:0
+  about_us_intro_2: crwdns860:0crwdne860:0
+  about_us_why_do_we_exist: crwdns862:0crwdne862:0
+  about_us_why_do_we_exist_text: crwdns864:0crwdne864:0
+  about_us_how_do_we_stop_climate_change: crwdns866:0crwdne866:0
+  about_us_how_do_we_stop_climate_change_text: crwdns868:0crwdne868:0
+  about_us_how_do_we_stop_climate_change_text_2: crwdns870:0crwdne870:0
+  about_us_who_are_we: crwdns872:0crwdne872:0
+  about_us_who_are_we_kalle_html: "crwdns874:0crwdne874:0"
+  about_us_who_are_we_cissi_html: "crwdns876:0crwdne876:0"
+  about_us_who_are_we_henrik_html: 'crwdns878:0crwdne878:0'
+  about_us_who_are_we_stefan_html: crwdns880:0crwdne880:0
+  about_us_who_are_we_alexandra_html: crwdns882:0crwdne882:0
+  about_us_who_are_we_evelina_html: crwdns884:0crwdne884:0
+  about_us_who_are_we_tove_html: crwdns886:0crwdne886:0
+  about_us_who_are_we_emma_html: crwdns888:0crwdne888:0
+  blog: crwdns890:0crwdne890:0
+  we_are_100_transparent: crwdns892:0crwdne892:0
+  section_3_text: crwdns894:0crwdne894:0
+  email: crwdns896:0crwdne896:0
+  password: crwdns898:0crwdne898:0
+  i_accept: crwdns900:0crwdne900:0
+  our_privacy_policy: crwdns902:0crwdne902:0
+  credit_or_debit_card: crwdns904:0crwdne904:0
+  add_new_card: crwdns906:0crwdne906:0
+  edit_card: crwdns908:0crwdne908:0
+  your_payment_details_have_been_updated: crwdns910:0crwdne910:0
+  no_card_registered: crwdns912:0crwdne912:0
+  climate_plan: crwdns914:0crwdne914:0
+  go_climate_neutral: crwdns916:0crwdne916:0
+  log_in_to_see_how_we_are_doing: crwdns918:0crwdne918:0
+  you_have_lived_climate_neutral_for:
+    one: crwdns920:1crwdne920:1
+    other: crwdns920:5%{count}crwdne920:5
+  i_have_lived_climate_neutral_for_join_me:
+    one: crwdns922:1crwdne922:1
+    other: crwdns922:5%{count}crwdne922:5
+  name_have_lived_climate_neutral_for_join_me:
+    one: 'crwdns924:1%{name}crwdne924:1'
+    other: 'crwdns924:5%{name}crwdnd924:5%{count}crwdne924:5'
+  climate_change_is_best_faced_together: crwdns926:0crwdne926:0
+  share_on_facebook: crwdns928:0crwdne928:0
+  share_on_twitter: crwdns930:0crwdne930:0
+  we_have_accomplished_alot_together: crwdns932:0crwdne932:0
+  amount_of_carbon_we_have_offset: crwdns934:0crwdne934:0
+  amount_of_carbon_i_have_offset: crwdns936:0crwdne936:0
+  good_job: crwdns938:0crwdne938:0
+  number_of_months_you_have_been_climate_neutral: crwdns940:0crwdne940:0
+  number_of_climate_neutral_users_right_now: crwdns942:0crwdne942:0
+  our_projects: crwdns944:0crwdne944:0
+  our_investments_in_climate_projects: crwdns946:0crwdne946:0
+  i_want_to_contribute: crwdns948:0crwdne948:0
+  project_name: crwdns950:0crwdne950:0
+  map: crwdns952:0crwdne952:0
+  more_info_on_blog: crwdns954:0crwdne954:0
+  our_investment_certificate: crwdns956:0crwdne956:0
+  certificate: crwdns958:0crwdne958:0
+  date_of_our_investment: crwdns960:0crwdne960:0
+  read_more: crwdns962:0crwdne962:0
+  cimate_hero_toplist: crwdns964:0crwdne964:0
+  show_full_toplist: crwdns966:0crwdne966:0
+  hide_full_toplist: crwdns968:0crwdne968:0
+  climate_neutral_months:
+    one: crwdns970:1crwdne970:1
+    other: crwdns970:5crwdne970:5
+  climate_country_toplist: crwdns972:0crwdne972:0
+  total_carbon_offset_by_us: crwdns974:0crwdne974:0
+  read_more_about_investments_on_our_blog: >
+    crwdns976:0crwdne976:0
+  tonnes_CO2: crwdns978:0crwdne978:0
+  tonnes: crwdns980:0crwdne980:0
+  type: crwdns982:0crwdne982:0
+  price: crwdns984:0crwdne984:0
+  thank_you_so_much_everyone_for_helping_to_save_the_world: crwdns986:0crwdne986:0
+  latest_carbon_offset_projects: crwdns988:0crwdne988:0
+  country: crwdns990:0crwdne990:0
+  location: crwdns992:0crwdne992:0
+  more_info_on_our_blog: crwdns994:0crwdne994:0
+  edit_settings: crwdns996:0crwdne996:0
+  payment_settings: crwdns998:0crwdne998:0
+  user_name: crwdns1000:0crwdne1000:0
+  confirm_password: crwdns1002:0crwdne1002:0
+  update: crwdns1004:0crwdne1004:0
+  what_is_goclimateneutral: crwdns1006:0crwdne1006:0
+  this_is_how_it_works: crwdns1008:0crwdne1008:0
+  1_describe_your_lifestyle: crwdns1010:0crwdne1010:0
+  2_sign_up: crwdns1012:0crwdne1012:0
+  forgot_your_password: crwdns1014:0crwdne1014:0
+  enter_your_email_below_and_we_will_send_you: crwdns1016:0crwdne1016:0
+  send_me_an_email_with_instructions: crwdns1018:0crwdne1018:0
+  change_your_password: crwdns1020:0crwdne1020:0
+  change_your_password_by_entering_your_new_password_below: crwdns1022:0crwdne1022:0
+  change_password: crwdns1024:0crwdne1024:0
+  the_payment_unfortunately_failed: crwdns1026:0crwdne1026:0
+  no_worries_we_will_try_again_within_a_few_days: crwdns1028:0crwdne1028:0
+  you_might_need_to_update_your_payment_info: crwdns1030:0crwdne1030:0
+  link_to_update_your_payment_info: >
+    crwdns1032:0crwdne1032:0
+  this_mail_was_sent_by: crwdns1034:0crwdne1034:0
+  to_stop_recieving_these_emails: crwdns1036:0crwdne1036:0
+  click_here: crwdns1038:0crwdne1038:0
+  thank_you_for_saving_our_planet: crwdns1040:0crwdne1040:0
+  you_have_lived_a_climate_neutral_life_for: crwdns1042:0crwdne1042:0
+  months:
+    one: crwdns1044:1crwdne1044:1
+    other: crwdns1044:5crwdne1044:5
+  x_months:
+    one: crwdns1046:1crwdne1046:1
+    other: "crwdns1046:5%{count}crwdne1046:5"
+  years:
+    one: crwdns1048:1crwdne1048:1
+    other: crwdns1048:5crwdne1048:5
+  together_we_have_offset: crwdns1050:0crwdne1050:0
+  goclimateneutral_and_this_planet_loves_you: crwdns1052:0crwdne1052:0
+  learn_more_about_what_we_have_achieved_here: >
+    crwdns1054:0crwdne1054:0
+  thank_you: crwdns1056:0crwdne1056:0
+  the_best_way_to_help_is_to_get_as_many_people_climate_neutral_as_possible: 'crwdns1058:0crwdne1058:0'
+  press_images: crwdns1060:0crwdne1060:0
+  press_social_images: crwdns1062:0crwdne1062:0
+  press_credits: crwdns1064:0crwdne1064:0
+  im_in: crwdns1066:0crwdne1066:0
+  press: crwdns1068:0crwdne1068:0
+  faq: crwdns1070:0crwdne1070:0
+  faq_questions:
+    questions:
+      q1:
+        question: crwdns1072:0crwdne1072:0
+        answer: "crwdns1074:0crwdne1074:0"
+      q2:
+        question: crwdns1076:0crwdne1076:0
+        answer: "crwdns1078:0crwdne1078:0"
+      q3:
+        question: crwdns1080:0crwdne1080:0
+        answer: "crwdns1082:0crwdne1082:0"
+      q4:
+        question: crwdns1084:0crwdne1084:0
+        answer: "crwdns1086:0crwdne1086:0"
+      q5:
+        question: crwdns1088:0crwdne1088:0
+        answer: "crwdns1090:0crwdne1090:0"
+      q6:
+        question: crwdns1092:0crwdne1092:0
+        answer: "crwdns1094:0crwdne1094:0"
+      q7:
+        question: crwdns1096:0crwdne1096:0
+        answer: "crwdns1098:0crwdne1098:0"
+      q8:
+        question: crwdns1100:0crwdne1100:0
+        answer: crwdns1102:0crwdne1102:0
+      q9:
+        question: crwdns1104:0crwdne1104:0
+        answer: "crwdns1106:0crwdne1106:0"
+      q10:
+        question: crwdns1108:0crwdne1108:0
+        answer: 'crwdns1110:0crwdne1110:0'
+      q11:
+        question: crwdns1112:0crwdne1112:0
+        answer: "crwdns1114:0crwdne1114:0"
+      q12:
+        question: crwdns1116:0crwdne1116:0
+        answer: "crwdns1118:0crwdne1118:0"
+      q13:
+        question: crwdns1120:0crwdne1120:0
+        answer: "crwdns1122:0crwdne1122:0"
+      q14:
+        question: crwdns1124:0crwdne1124:0
+        answer: crwdns1126:0crwdne1126:0
+      q15:
+        question: crwdns1128:0crwdne1128:0
+        answer: "crwdns1130:0crwdne1130:0"
+      q16:
+        question: crwdns1132:0crwdne1132:0
+        answer: crwdns1134:0crwdne1134:0
+      q17:
+        question: crwdns1136:0crwdne1136:0
+        answer: crwdns1138:0crwdne1138:0
+      q18:
+        question: crwdns1140:0crwdne1140:0
+        answer: crwdns1142:0crwdne1142:0
+      q19:
+        question: crwdns1144:0crwdne1144:0
+        answer: "crwdns1146:0crwdne1146:0"
+      q20:
+        question: crwdns1148:0crwdne1148:0
+        answer: crwdns1150:0crwdne1150:0
+  for_business: crwdns1152:0crwdne1152:0
+  thats_amazing_from_the_bottom_of_our_hearts: crwdns1154:0crwdne1154:0
+  navigation:
+    gift_cards: crwdns1156:0crwdne1156:0
+  welcome:
+    caption_line_1: crwdns1158:0crwdne1158:0
+    caption_line_2: crwdns1160:0crwdne1160:0
+    what_is_gcn_text: crwdns1162:0crwdne1162:0
+    statistics_header: crwdns1164:0crwdne1164:0
+    users_prefix: crwdns1166:0crwdne1166:0
+    users_suffix: crwdns1168:0crwdne1168:0
+    tonnes_prefix: crwdns1170:0crwdne1170:0
+    tonnes_suffix: crwdns1172:0crwdne1172:0
+    call_to_actions:
+      im_ready_to_sign_up: crwdns1174:0crwdne1174:0
+      lets_save_our_planet_together: crwdns1176:0crwdne1176:0
+      go_climate_neutral: crwdns1178:0crwdne1178:0
+    how_it_works:
+      describe_your_lifestyle_text: crwdns1180:0crwdne1180:0
+      sign_up_text: crwdns1182:0crwdne1182:0
+      save_our_planet_header: crwdns1184:0crwdne1184:0
+      save_our_planet_text: crwdns1186:0crwdne1186:0
+    business:
+      for_companies: crwdns1188:0crwdne1188:0
+      for_companies_text_html: crwdns1190:0crwdne1190:0
+      calculate_footprint: crwdns1192:0crwdne1192:0
+      calculate_footprint_html: crwdns1194:0crwdne1194:0
+      calculate_footprint_button: crwdns1196:0crwdne1196:0
+      customers_we_work_with: crwdns1198:0crwdne1198:0
+      offset_employees: crwdns1200:0crwdne1200:0
+      offset_employees_html: crwdns1202:0crwdne1202:0
+      equivalent_co2_offset: crwdns1204:0crwdne1204:0
+      im_interested: crwdns1206:0crwdne1206:0
+      we_will_contact_you_shortly_html: crwdns1208:0%{email}crwdne1208:0
+      other_offsetting: crwdns1210:0crwdne1210:0
+      other_offsetting_html: crwdns1212:0crwdne1212:0
+      number_of_employees: "crwdns1214:0crwdne1214:0"
+      your_email: "crwdns1216:0crwdne1216:0"
+  number:
+    format:
+      delimiter: 'crwdns1218:0crwdne1218:0'
+      separator: 'crwdns1220:0crwdne1220:0'
+  we_have_sent_you_an_email_with_the_gift_card: crwdns1222:0crwdne1222:0
+  thank_you_for_helping_us_trying_to_stop_climate_change: crwdns1224:0crwdne1224:0
+  best_regards: crwdns1226:0crwdne1226:0
+  gift_card_email_subject: crwdns1228:0crwdne1228:0
+  business:
+    climate_reports:
+      business_footprint_header: crwdns1230:0crwdne1230:0
+      business_footprint_intro: crwdns1232:0crwdne1232:0
+      general_information: crwdns1234:0crwdne1234:0
+      company_name: crwdns1236:0crwdne1236:0
+      country: crwdns1238:0crwdne1238:0
+      country_tooltip: crwdns1240:0crwdne1240:0
+      sweden: crwdns1242:0crwdne1242:0
+      number_of_employees: crwdns1244:0crwdne1244:0
+      number_of_employees_tooltip: "crwdns1246:0crwdne1246:0"
+      office_area: crwdns1248:0crwdne1248:0
+      office_area_tooltip: crwdns1250:0crwdne1250:0
+      calculation_period: crwdns1252:0crwdne1252:0
+      calculation_period_tooltip: crwdns1254:0crwdne1254:0
+      calculation_period_length: crwdns1256:0crwdne1256:0
+      calculation_period_length_options:
+        year: crwdns1258:0crwdne1258:0
+        half-year: crwdns1260:0crwdne1260:0
+        quarter: crwdns1262:0crwdne1262:0
+      name_and_logo: crwdns1264:0crwdne1264:0
+      name_and_logo_tooltip: crwdns1266:0crwdne1266:0
+      ok_with_showing_logo: crwdns1268:0crwdne1268:0
+      energy: crwdns1270:0crwdne1270:0
+      energy_intro: crwdns1272:0crwdne1272:0
+      electricity: crwdns1274:0crwdne1274:0
+      electricity_consumption: crwdns1276:0crwdne1276:0
+      electricity_consumption_tooltip: crwdns1278:0crwdne1278:0
+      use_average_values: crwdns1280:0crwdne1280:0
+      green_electricity: crwdns1282:0crwdne1282:0
+      green_electricity_tooltip: crwdns1284:0crwdne1284:0
+      green_electricity_text: crwdns1286:0crwdne1286:0
+      heating: crwdns1288:0crwdne1288:0
+      heating_tooltip: crwdns1290:0crwdne1290:0
+      servers: crwdns1292:0crwdne1292:0
+      average_number_of_servers: crwdns1294:0crwdne1294:0
+      average_number_of_servers_tooltip: crwdns1296:0crwdne1296:0
+      servers_green_electricity: crwdns1298:0crwdne1298:0
+      how_do_i_know: crwdns1300:0crwdne1300:0
+      cloud_servers: crwdns1302:0crwdne1302:0
+      number_of_cloud_servers: crwdns1304:0crwdne1304:0
+      number_of_cloud_servers_tooltip: "crwdns1306:0crwdne1306:0"
+      cloud_servers_green_electricity: crwdns1308:0crwdne1308:0
+      business_trips: crwdns1310:0crwdne1310:0
+      business_trips_intro: crwdns1312:0crwdne1312:0
+      flights: crwdns1314:0crwdne1314:0
+      flight_hours: crwdns1316:0crwdne1316:0
+      flight_hours_tooltip: crwdns1318:0crwdne1318:0
+      hours: crwdns1320:0crwdne1320:0
+      car_taxi: crwdns1322:0crwdne1322:0
+      distance_car: crwdns1324:0crwdne1324:0
+      distance_car_tooltip: crwdns1326:0crwdne1326:0
+      kilometers: crwdns1328:0crwdne1328:0
+      food: crwdns1330:0crwdne1330:0
+      food_intro: crwdns1332:0crwdne1332:0
+      meals: crwdns1334:0crwdne1334:0
+      meals_tooltip: crwdns1336:0crwdne1336:0
+      meals_vegetarian_share: crwdns1338:0crwdne1338:0
+      meals_vegetarian_share_tooltip: crwdns1340:0crwdne1340:0
+      material: crwdns1342:0crwdne1342:0
+      material_intro: crwdns1344:0crwdne1344:0
+      purchased_computers: crwdns1346:0crwdne1346:0
+      purchased_phones: crwdns1348:0crwdne1348:0
+      purchased_monitors: crwdns1350:0crwdne1350:0
+      units: crwdns1352:0crwdne1352:0
+      other: crwdns1354:0crwdne1354:0
+      other_intro: crwdns1356:0crwdne1356:0
+      other_emissions: crwdns1358:0crwdne1358:0
+      specify_other_emissions: crwdns1360:0crwdne1360:0
+      contact: crwdns1362:0crwdne1362:0
+      contact_intro: crwdns1364:0crwdne1364:0
+      contact_email: crwdns1366:0crwdne1366:0
+      calculate_button: crwdns1368:0crwdne1368:0
+      read_more_about_calculations: crwdns1370:0crwdne1370:0
+      total: crwdns1372:0crwdne1372:0
+      car: crwdns1374:0crwdne1374:0
+      flight: crwdns1376:0crwdne1376:0
+      average: crwdns1378:0crwdne1378:0
+      show:
+        header: crwdns1380:0crwdne1380:0
+        result: crwdns1382:0%{calculation_period}crwdnd1382:0%{total_emissions}crwdne1382:0
+        result_per_employee: crwdns1384:0%{emissions_per_employee}crwdne1384:0
+        offset_and_get_report: crwdns1386:0crwdne1386:0
+        offset_and_get_report_text: crwdns1388:0crwdne1388:0
+        your_order: crwdns1390:0crwdne1390:0
+        carbon_offseting: crwdns1392:0crwdne1392:0
+        climate_report: crwdns1394:0crwdne1394:0
+        sum: crwdns1396:0crwdne1396:0
+        invoice_address: crwdns1398:0crwdne1398:0
+        vat_number: crwdns1400:0crwdne1400:0
+        invoice_email: crwdns1402:0crwdne1402:0
+        invoice_email_text: crwdns1404:0crwdne1404:0
+        order: crwdns1406:0crwdne1406:0
+        well_get_in_touch_html: crwdns1408:0crwdne1408:0
+        reduce_header: crwdns1410:0crwdne1410:0
+        reduce_body: crwdns1412:0crwdne1412:0
+        safety_factor: crwdns1414:0crwdne1414:0
+        safety_factor_explanation: crwdns1416:0crwdne1416:0
+        new_based_on_this: crwdns1418:0crwdne1418:0
+    climate_report_invoices:
+      thank_you:
+        thank_you_text: crwdns1420:0crwdne1420:0
+        well_be_in_touch: crwdns1422:0crwdne1422:0
+        thanks_again: crwdns1424:0crwdne1424:0
+  this_is_how_the_money_is_used_header: crwdns1426:0crwdne1426:0
+  this_is_how_the_money_is_used_text: crwdns1428:0crwdne1428:0
+  tonnes_carbon_dioxide: crwdns1430:0crwdne1430:0
+  see_all_our_projects: crwdns1432:0crwdne1432:0
