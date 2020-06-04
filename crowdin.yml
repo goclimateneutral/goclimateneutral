@@ -1,0 +1,8 @@
+project_id: 406018
+api_token_env: "CROWDIN_PERSONAL_TOKEN"
+files:
+  -
+    source: '/config/locales/**/*.en.yml'
+    translation: '/**/%file_name%.%two_letters_code%.yml'
+    translation_replace:
+      '.en': ''
