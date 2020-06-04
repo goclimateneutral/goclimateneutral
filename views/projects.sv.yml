@@ -1,0 +1,14 @@
+sv:
+  views:
+    projects:
+      index:
+        latest_project: Our latest project
+        read_more_link: Read more
+        map_link: Show on map
+        invoice: Invoice
+        certificate_link: Show certificate
+        map_header: Here's where we make an impact!
+        about_our_projects: |
+          GoClimate selects projects that have been certified by Gold Standard. This means that the projects have undergone careful scrutiny, backed by WWF and other international organisations, so that they have a real impact and contribute to the UN's sustainability goals.
+
+          We choose projects of different kinds, to broaden our impact. We look at where the projects are implemented, by whom, when and how. Some projects are cheap and that means we can get many tonnes of CO2 for the money, others are a bit more expensive but then we can help stimulate sustainable development in a specific area. We explain the reasoning behind our choices, and you can look at all the details about the projects on this page and on the <a href="https://www.goldstandard.org/">Gold Standard website</a>.
