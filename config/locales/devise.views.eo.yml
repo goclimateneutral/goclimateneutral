@@ -1,0 +1,120 @@
+eo:
+  activerecord:
+    attributes:
+      user:
+        current_password: crwdns12:0crwdne12:0
+        email: crwdns14:0crwdne14:0
+        password: crwdns16:0crwdne16:0
+        password_confirmation: crwdns18:0crwdne18:0
+        remember_me: crwdns20:0crwdne20:0
+        reset_password_token: crwdns22:0crwdne22:0
+        unlock_token: crwdns24:0crwdne24:0
+    models:
+      user: crwdns26:0crwdne26:0
+  devise:
+    confirmations:
+      confirmed: crwdns28:0crwdne28:0
+      new:
+        resend_confirmation_instructions: crwdns30:0crwdne30:0
+      send_instructions: crwdns32:0crwdne32:0
+      send_paranoid_instructions: crwdns34:0crwdne34:0
+    failure:
+      already_authenticated: crwdns36:0crwdne36:0
+      inactive: crwdns38:0crwdne38:0
+      invalid: crwdns40:0crwdne40:0
+      last_attempt: crwdns42:0crwdne42:0
+      locked: crwdns44:0crwdne44:0
+      not_found_in_database: crwdns46:0crwdne46:0
+      timeout: crwdns48:0crwdne48:0
+      unauthenticated: crwdns50:0crwdne50:0
+      unconfirmed: crwdns52:0crwdne52:0
+    mailer:
+      confirmation_instructions:
+        action: crwdns54:0crwdne54:0
+        greeting: crwdns56:0%{recipient}crwdne56:0
+        instruction: 'crwdns58:0crwdne58:0'
+        subject: crwdns60:0crwdne60:0
+      password_change:
+        greeting: crwdns62:0%{recipient}crwdne62:0
+        message: crwdns64:0crwdne64:0
+        subject: crwdns66:0crwdne66:0
+      reset_password_instructions:
+        action: crwdns68:0crwdne68:0
+        greeting: crwdns70:0%{recipient}crwdne70:0
+        instruction: crwdns72:0crwdne72:0
+        instruction_2: crwdns74:0crwdne74:0
+        instruction_3: crwdns76:0crwdne76:0
+        subject: crwdns78:0crwdne78:0
+      unlock_instructions:
+        action: crwdns80:0crwdne80:0
+        greeting: crwdns82:0%{recipient}crwdne82:0
+        instruction: 'crwdns84:0crwdne84:0'
+        message: crwdns86:0crwdne86:0
+        subject: crwdns88:0crwdne88:0
+    omniauth_callbacks:
+      failure: crwdns90:0%{kind}crwdnd90:0%{reason}crwdne90:0
+      success: crwdns92:0%{kind}crwdne92:0
+    passwords:
+      edit:
+        change_my_password: crwdns94:0crwdne94:0
+        change_your_password: crwdns96:0crwdne96:0
+        confirm_new_password: crwdns98:0crwdne98:0
+        new_password: crwdns100:0crwdne100:0
+      new:
+        forgot_your_password: crwdns102:0crwdne102:0
+        send_me_reset_password_instructions: crwdns104:0crwdne104:0
+      no_token: crwdns106:0crwdne106:0
+      send_instructions: crwdns108:0crwdne108:0
+      send_paranoid_instructions: crwdns110:0crwdne110:0
+      updated: crwdns112:0crwdne112:0
+      updated_not_active: crwdns114:0crwdne114:0
+    registrations:
+      destroyed: crwdns116:0crwdne116:0
+      edit:
+        are_you_sure: crwdns118:0crwdne118:0
+        cancel_my_account: crwdns120:0crwdne120:0
+        currently_waiting_confirmation_for_email: 'crwdns122:0%{email}crwdne122:0'
+        leave_blank_if_you_don_t_want_to_change_it: crwdns124:0crwdne124:0
+        title: crwdns126:0%{resource}crwdne126:0
+        unhappy: crwdns128:0crwdne128:0
+        update: crwdns130:0crwdne130:0
+        we_need_your_current_password_to_confirm_your_changes: crwdns132:0crwdne132:0
+      new:
+        sign_up: crwdns134:0crwdne134:0
+      signed_up: crwdns136:0crwdne136:0
+      signed_up_but_inactive: crwdns138:0crwdne138:0
+      signed_up_but_locked: crwdns140:0crwdne140:0
+      signed_up_but_unconfirmed: crwdns142:0crwdne142:0
+      update_needs_confirmation: crwdns144:0crwdne144:0
+      updated: crwdns146:0crwdne146:0
+    sessions:
+      already_signed_out: crwdns148:0crwdne148:0
+      new:
+        sign_in: crwdns150:0crwdne150:0
+      signed_in: crwdns152:0crwdne152:0
+      signed_out: crwdns154:0crwdne154:0
+    shared:
+      links:
+        back: crwdns156:0crwdne156:0
+        didn_t_receive_confirmation_instructions: crwdns158:0crwdne158:0
+        didn_t_receive_unlock_instructions: crwdns160:0crwdne160:0
+        forgot_your_password: crwdns162:0crwdne162:0
+        sign_in: crwdns164:0crwdne164:0
+        sign_in_with_provider: crwdns166:0%{provider}crwdne166:0
+        sign_up: crwdns168:0crwdne168:0
+    unlocks:
+      new:
+        resend_unlock_instructions: crwdns170:0crwdne170:0
+      send_instructions: crwdns172:0crwdne172:0
+      send_paranoid_instructions: crwdns174:0crwdne174:0
+      unlocked: crwdns176:0crwdne176:0
+  errors:
+    messages:
+      already_confirmed: crwdns178:0crwdne178:0
+      confirmation_period_expired: crwdns180:0%{period}crwdne180:0
+      expired: crwdns182:0crwdne182:0
+      not_found: crwdns184:0crwdne184:0
+      not_locked: crwdns186:0crwdne186:0
+      not_saved:
+        one: 'crwdns188:1%{resource}crwdne188:1'
+        other: "crwdns188:5%{count}crwdnd188:5%{resource}crwdne188:5"
