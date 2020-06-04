@@ -3,6 +3,7 @@ sv:
     attributes:
       user:
         current_password: Nuvarande lösenord
+        email: Email
         password: Lösenord
         password_confirmation: Bekräfta lösenord
         remember_me: Kom ihåg mig
