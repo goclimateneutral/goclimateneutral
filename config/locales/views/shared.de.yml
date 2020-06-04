@@ -2,10 +2,24 @@ de:
   views:
     shared:
       header:
+        navigation:
+          flights: Flights
+          offset_flight: Offset flight emissions
         region_recommendation:
-          select_country: >-
-            Wählen Sie Ihr Land oder Ihre Region aus, damit wir Ihnen die besten
-            Informationen anzeigen können.
-          continue_button: 'Weiter nach %{region}'
+          select_country: Wählen Sie Ihr Land oder Ihre Region aus, damit wir Ihnen die besten Informationen anzeigen können.
+          continue_button: "Weiter nach %{region}"
+        sign_up: Sign up
+      prefooter:
+        heading: Let us stop climate change together!
+        body_text: Subscribe to offset your carbon footprint.
+        button: Get started
       footer:
-        jobs: Jobs
+        short_intro: GoClimate is a social company with the sole purpose of making it easier to start living a climate neutral life.
+        jobs: 'Jobs'
+        headers:
+          make_a_difference: Get involved
+          explore: Explore
+          about: About
+      tonnes_co2e:
+        one: tonne CO2e
+        other: tonnes CO2e
