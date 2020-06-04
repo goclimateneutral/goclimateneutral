@@ -4,10 +4,16 @@ en:
       currency_formats:
         usd: '$%{number}'
         eur: '€%{number}'
+        sek: ''
     currency:
       prefix:
-        usd: $
-        eur: €
+        usd: '$'
+        eur: '€'
+        sek: ''
+      suffix:
+        usd: ''
+        eur: ''
+        sek: ''
     greenhouse_gases:
       tonnes:
         one: "%{count} tonne CO2e"
