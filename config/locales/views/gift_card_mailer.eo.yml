@@ -1,0 +1,9 @@
+eo:
+  views:
+    gift_card_mailer:
+      thank_you_for_buying_gift_card: crwdns2396:0crwdne2396:0
+      you_have_purchased_a_gift_card_with: crwdns2398:0crwdne2398:0
+      climate_neutral_months:
+        one: crwdns2400:1crwdne2400:1
+        other: crwdns2400:5crwdne2400:5
+      you_can_find_the_gift_card_as_an_attachmtent_to_this_mail: crwdns2402:0crwdne2402:0
