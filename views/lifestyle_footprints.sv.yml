@@ -1,0 +1,69 @@
+sv:
+  views:
+    lifestyle_footprints:
+      title: Calculate your carbon footprint
+      questions:
+        region: In which region do you live?
+        home: How do you live?
+        heating: How do you heat your home?
+        green_electricity: Do you use green electricity?
+        food: What is your diet mostly like?
+        car_type: What type of car do you use to get around?
+        car_distance: How much do you travel by car each week?
+        flight_hours: How many hours did you travel by plane in the last year?
+      options:
+        region:
+          west: West
+          midwest: Midwest
+          northeast: Northeast
+          south: South
+          other: Other
+        home:
+          house: House
+          apartment: Apartment
+          one_or_two_bedrooms: 1-2 bedrooms
+          three_or_four_bedrooms: 3-4 bedrooms
+          five_or_more_bedrooms: 5+ bedrooms
+          fifteen_sqm: 15 m² per person
+          twentyfive_sqm: 25 m² per person
+          fortytwo_sqm: 42 m² per person
+          sixty_sqm: 60 m² per person
+          eighty_sqm: 80 m² per person
+        heating:
+          electricity: Electricity
+          natural_gas: Natural gas
+          district: District heating
+          coal: Coal
+          biomass: Biomass
+          environmental_or_solar: Renewable or solar energy
+          airpump: Air heating pump
+          geothermal: Geothermal pump
+          heating_oil: Heating oil
+          propane: Propane
+          dont_know: I don't know/Other
+        green_electricity:
+          'yes': 'Yes'
+          seventyfive_percent: 75% green
+          fifty_percent: 50% green
+          twentyfive_percent: 25% green
+          'no': 'No'
+          dont_know: I don't know
+        food:
+          vegan: Plant-based
+          vegetarian: Vegetarian
+          pescetarian: Pescetarian (fish but no meat)
+          meat_low: Some meat (less than 50 g per day)
+          meat_medium: Meat-eater
+          meat_high: Lots of meat (more than 100 g per day)
+        car_type:
+          gas: Gasoline
+          petrol: Petrol
+          diesel: Diesel
+          hybrid_plugin: Hybrid Plug-in
+          etanol: Ethanol (E85)
+          electric: Electric
+          hvo_electric: Electric or HVO
+          vehicle_gas: Vehicle gas (CNG)
+          no_car: I don't have a car
+      next: Next
+      back: Go back
