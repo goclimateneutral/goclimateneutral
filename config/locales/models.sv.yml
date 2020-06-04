@@ -2,11 +2,12 @@ sv:
   models:
     money:
       currency_formats:
-        sek: '%{number} kr'
+        usd: '$%{number}'
         eur: '%{number} €'
     currency:
-      suffix:
-        sek: ' kr'
+      prefix:
+        usd: '$'
+        eur: '€'
     greenhouse_gases:
       tonnes:
         one: "%{count} ton koldioxid"
@@ -14,3 +15,8 @@ sv:
       kg:
         one: "%{count} kg koldioxid"
         other: "%{count} kg koldioxid"
+    project:
+      offset_type:
+        'GS': Gold Standard certified
+        'CDM+GS': CDM & Gold Standard certified
+        'CDM': CDM certified
