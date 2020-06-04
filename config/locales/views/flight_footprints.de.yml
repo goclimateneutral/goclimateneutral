@@ -1,0 +1,14 @@
+de:
+  views:
+    flight_footprints:
+      new:
+        flight_details: Your flight details
+        from: From
+        to: To
+        roundtrip: Roundtrip
+        connections: Connections
+        connections_return: Connections on return trip
+        add_connection: Add connection
+        cabin_class: Cabin class
+        number_of_tickets: Number of tickets
+        not_a_valid_input: This is not a valid input
