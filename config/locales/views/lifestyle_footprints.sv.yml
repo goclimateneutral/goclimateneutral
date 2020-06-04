@@ -20,6 +20,11 @@ sv:
           one_or_two_bedrooms: 1-2 sovrum
           three_or_four_bedrooms: 3-4 sovrum
           five_or_more_bedrooms: 5+ sovrum
+          fifteen_sqm: 15 m² per person
+          twentyfive_sqm: 25 m² per person
+          fortytwo_sqm: 42 m² per person
+          sixty_sqm: 60 m² per person
+          eighty_sqm: 80 m² per person
         heating:
           electricity: Eluppvärmning
           natural_gas: Naturgas
@@ -39,6 +44,7 @@ sv:
           dont_know: Vet inte
         food:
           vegan: Växtbaserat
+          vegetarian: Vegetarian
           pescetarian: Äter fisk men inte kött
           meat_low: Lite kött (mindre än 50 g/dag)
           meat_medium: Köttätare
@@ -46,6 +52,7 @@ sv:
         car_type:
           gas: Bensin
           petrol: Bensin
+          diesel: Diesel
           hybrid_plugin: Plug in-hybrid
           etanol: Etanol (E85)
           electric: Elbil
