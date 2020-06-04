@@ -13,6 +13,10 @@ sv:
         flight_hours: Hur många timmar har du rest med flyg under det senaste året?
       options:
         region:
+          west: West
+          midwest: Midwest
+          northeast: Northeast
+          south: South
           other: Annan
         home:
           house: Hus
@@ -34,13 +38,15 @@ sv:
           environmental_or_solar: Förnybart eller solenergi
           airpump: Luftvärmepump
           geothermal: Bergvärmepump
+          heating_oil: Heating oil
+          propane: Propane
           dont_know: Vet inte/annat
         green_electricity:
-          'yes': Ja
+          'yes': 'Ja'
           seventyfive_percent: 75% grön el
           fifty_percent: 50% grön el
           twentyfive_percent: 25% grön el
-          'no': Nej
+          'no': 'Nej'
           dont_know: Vet inte
         food:
           vegan: Växtbaserat
