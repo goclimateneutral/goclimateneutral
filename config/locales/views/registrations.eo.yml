@@ -1,0 +1,29 @@
+eo:
+  views:
+    registrations:
+      well_done: crwdns2676:0crwdne2676:0
+      your_yearly_climate_footprint: crwdns2678:0crwdne2678:0
+      corresponds_to: crwdns2680:0%{price}crwdne2680:0
+      you: crwdns2682:0crwdne2682:0
+      compensated: crwdns2684:0crwdne2684:0
+      average_in: crwdns2686:0%{region}crwdne2686:0
+      world_average: crwdns2688:0crwdne2688:0
+      goal_2030: crwdns2690:0crwdne2690:0
+      higher: crwdns2692:0crwdne2692:0
+      lower: crwdns2694:0crwdne2694:0
+      your_climate_footprint: crwdns2696:0%{footprint}crwdnd2696:0%{relative}crwdnd2696:0%{country}crwdne2696:0
+      your_climate_footprint_compared_world: crwdns2698:0%{footprint}crwdnd2698:0%{relative}crwdne2698:0
+      subscribe_heading: crwdns2700:0crwdne2700:0
+      subscribe_intro: crwdns2702:0crwdne2702:0
+      your_subscription: crwdns2704:0crwdne2704:0
+      number_of_people: crwdns2706:0crwdne2706:0
+      total: crwdns2708:0crwdne2708:0
+      subscription_price_information: crwdns2710:0%{price}crwdne2710:0
+      where_does_the_money_go:
+        heading: crwdns2712:0crwdne2712:0
+        point_1: crwdns2714:0crwdne2714:0
+        point_2: crwdns2716:0crwdne2716:0
+        point_3: crwdns2718:0crwdne2718:0
+        point_4: crwdns2720:0crwdne2720:0
+      latest_projects: crwdns2722:0crwdne2722:0
+      faq: crwdns2724:0crwdne2724:0
