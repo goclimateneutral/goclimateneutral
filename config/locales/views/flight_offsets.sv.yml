@@ -7,7 +7,9 @@ sv:
         your_order: Din order
         flight_in_cabin_class: Flyg i biljettklass
         carbon_footprint: Klimatavtryck
+        person: person
         people: personer
+        total: Total
         sum: Summa
         submit: Klimatkompensera
       thank_you:
