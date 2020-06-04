@@ -1,0 +1,46 @@
+de:
+  views:
+    gift_cards:
+      index:
+        header: Let your next gift be a climate neutral life
+        intro: Looking for a gift for someone who already has everything?  Want to help spread the word of something we can all do to fight climate change? Try out our climate gift cards!
+        choose_header: Choose your climate gift card
+        1_months_header: 1 month
+        1_months_description: 1 month of climate neutrality.
+        1_months_cta: Get a 1 month gift card
+        3_months_header: 3 months
+        3_months_description: 3 months of climate neutrality.
+        3_months_cta: Get a 3 months gift card
+        6_months_header: 6 months
+        6_months_description: Half a year of climate neutrality.
+        6_months_cta: Get a 6 months gift card
+        12_months_header: 12 months
+        12_months_description: One full year of climate neutrality.
+        12_months_cta: Get a 12 months gift card
+        details_html: "Gift cards are based on the average climate impact for Swedish residents (11 tonnes CO<sub>2</sub>eq)."
+      new:
+        intro: Personalize and purchase your gift card
+        your_gift_card_order: Your gift card order
+        write_a_message: Personal message
+        sample_message_html: "Example:\nHi Mom, here is a gift for you! /Jenny"
+        we_will_send_you_pdf: After purchase, we will email the gift card to you as a PDF file. Then you can give the gift card to the recipient in whatever way you like.
+        click_here_for_an_example: "Click here for an example"
+        pay: Purchase gift card
+      download:
+        gift_card: "Gift card"
+        gift_card_x_climate_neutral_months:
+          one: 1 climate neutral month
+          other: "%{count} climate neutral months"
+        about_go_climate_neutral: <a href='http://www.goclimate.com'>GoClimate</a> supports climate projects and gives inspiration and advice on how to reduce your climate footprint. All supported projects are certified by Gold Standard, established by WWF and about 80 other international NGOs. Together we contribute to stop climate change and save the world!
+        calculation_based_on_html: "Calculation based on the average climate footprint of 11 tonnes CO<sub>2</sub>eq per person and year x 2."
+        do_you_want_to_continue: If you want to continue living a climate neutral life after this gift card has expired,
+        register: visit <a href="http://www.goclimate.com">goclimate.com</a> and register!
+      example:
+        message_html: "Hi Mom,\nDoesn't it feel great to help the climate?\nEnjoy this gift! /Lisa"
+        example: "Example"
+      thank_you:
+        download_the_gift_card_here: Download the gift card here
+        download_receipt_here: Download the receipt here
+        you_have_purchased_a_gift_card_with_x_climate_neutral_months:
+          one: You have purchased a gift card for 1 climate neutral month
+          other: "You have purchased a gift card for %{count} climate neutral months"
