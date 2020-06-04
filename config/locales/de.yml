@@ -4,6 +4,7 @@
 #views.registrations.en.yml
 de:
   goclimateneutral_url: https://www.goclimate.com/de
+  site_title: GoClimate
   climate_change_is_the_greatest_challange: Der Klimawandel ist eine der größten Herausforderungen unserer Zeit. Gemeinsam haben wir eine Chance, unseren Kindern die Zukunft auf diesem Planeten zu geben, die sie verdienen. Aber dafür müssen wir jetzt handeln.
   log_in: EINLOGGEN
   log_out: Ausloggen
@@ -49,6 +50,7 @@ de:
   about_us_who_are_we_stefan_html: Agiler Team- und Organisationscoach. Etwas zu idealistischer Pragmatiker.
   about_us_who_are_we_alexandra_html: Umweltwissenschaftler mit langjähriger internationaler Erfahrung. Angetrieben von Neugierde und dem Willen, die Welt zu retten - einen Schritt nach dem anderen. Sie tanzen und laufen durch den Wald, um neue Energie zu tanken.
   about_us_who_are_we_evelina_html: Ist öffentliche Rednerin und freie Autorin im Bereich Nachhaltigkeit und nachhaltiges Reisen. Klimaaktivistin und Veganerin, die gerne wandert.
+  blog: Blog
   we_are_100_transparent: Wir sind zu 100% transparent
   section_3_text: Wir bieten eine 100 %ige Transparenz, in welche UN- und Gold Standard-zertifizierte Projekte wir investieren und warum. Außerdem bieten wir 100 %ige Transparenz was die Menge an Emissionen angeht, die wir in Ihrem Namen und insgesamt ausgleichen.
   email: E-Mail
@@ -149,6 +151,7 @@ de:
   press_credits: Diese Illustrationen stammen von Henrik Kniberg und sind Creative Commons-lizensiert.
   im_in: Ich bin dabei!
   press: Presse
+  faq: FAQ
   faq_questions:
     questions:
       q1:
@@ -313,6 +316,7 @@ de:
       meals_tooltip: Die geschätzte Anzahl der während des Zeitraums servierten Mahlzeiten. Dazu gehören alle Mahlzeiten, die das Unternehmen bezahlt.
       meals_vegetarian_share: Anteil vegetarischer Mahlzeiten
       meals_vegetarian_share_tooltip: Der geschätzte Anteil an vegetarischen Mahlzeiten. In den meisten Fällen sind das wahrscheinlich etwa 10% (die Anzahl der Vegetarier/Veganer in Schweden nach Djurens Rätt).
+      material: Material
       material_intro: Elektronik hat oft eine 10x größeren Klimabilanz als die meisten anderen gekauften Materialien, wie T-Shirts oder Möbel. Wenn große Mengen an anderem Material als Elektronik gekauft wurden, wie z.B. viele Möbel, weil das Unternehmen während der Periode umgezogen ist, kann dies separat berechnet und am Ende dieses Formulars in das Feld "Sonstiges" eingetragen werden.
       purchased_computers: Gekaufte Computer
       purchased_phones: Gekaufte Telefone/Tablets
