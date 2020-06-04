@@ -1,18 +1,14 @@
 sv:
   activerecord:
-    attributes:
-      user:
-        email: E-post
     errors:
       models:
         user:
           attributes:
-              password:
-                too_short: Lösenordet är för kort, minst 6 tecken!
-                blank: Oj, lösenordet ser tomt ut!
-              email:
-                taken: Användaren finns redan registrerad hos oss, prova med en annan e-postadress!
-                blank: måste anges
-                invalid: E-postadressen ser konstig ut, prova igen!
-              privacy_policy:
-                accepted: Du behöver acceptera integritetspolocyn för att gå vidare
+            password:
+              too_short: Lösenordet är för kort, minst 6 tecken!
+              blank: Oj, lösenordet ser tomt ut!
+            email:
+              taken: Användaren finns redan registrerad hos oss, prova med en annan e-postadress!
+              invalid: E-postadressen ser konstig ut, prova igen!
+            privacy_policy:
+              accepted: Du behöver acceptera integritetspolocyn för att gå vidare
