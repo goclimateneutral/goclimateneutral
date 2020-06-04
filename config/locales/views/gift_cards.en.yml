@@ -29,7 +29,6 @@ en:
         we_will_send_you_pdf:
           After purchase, we will email the gift card to you as a PDF file.
           Then you can give the gift card to the recipient in whatever way you like.
-        gift_card_for_x_months: Gift card for %{months} months.
         click_here_for_an_example: "Click here for an example"
         pay: Purchase gift card
       download:

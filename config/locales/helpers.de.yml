@@ -1,5 +1,0 @@
-de:
-  helpers:
-    application:
-      precise_co2e_string_tonnes: '%{tonnes} Tonnen CO2-Äquivalent'
-      precise_co2e_string_kg: '%{co2e} Kilogramm CO2-Äquivalent'

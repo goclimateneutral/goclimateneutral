@@ -35,7 +35,6 @@ de:
         we_will_send_you_pdf: >-
           Wir senden Ihnen den Gutschein als PDF an die von Ihnen angegebene
           E-Mail-Adresse.
-        gift_card_for_x_months: 'Geschenkkarte für %{months} Monate'
         click_here_for_an_example: Klicken Sie hier für ein Beispiel
         pay: Gutschein kaufen
       download:

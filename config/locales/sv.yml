@@ -5,12 +5,10 @@
 sv:
   goclimateneutral_url: https://www.goclimate.org/se
   site_title: GoClimate
-  welcome_to_a_climate_neutral_life: Lev ett klimatneutralt liv!
   climate_change_is_the_greatest_challange: "Klimatförändringar är det största hotet som vår generation någonsin ställts inför. Tillsammans kan vi bromsa klimatförändringarna och rädda världen, OM vi agerar nu."
   log_in: Logga in
   log_out: Logga ut
   settings: Inställningar
-  ok_i_want_to_know_more: Ok, jag är intresserad!
   i_want_to_know_more: Jag vill veta mer!
   contact_us: Kontakta oss
   100_percent_transparency: 100% transparens
@@ -58,9 +56,6 @@ sv:
   salary_costs: Lönekostnader
   other_operating_expenses: Övriga verksamhetskostnader
   total: Totalt
-  other_kpis: Övriga nyckeltal
-  number_of_users: Antal användare
-  number_of_ton_that_has_been_offset: Antal ton CO2 som kompenserats för
   you_can_read_more_details_about_our_costs_here: Du kan även se detaljer kring våra kostnader här
   questions_or_comments_contact_us: Frågor eller synpunkter? Hör gärna av dig till
   general_questions_html: 'Om du har frågor om GoClimate eller har idéer om hur vi kan förbättra tjänsten, hör gärna av dig till oss på: <a href="mailto:hello@goclimate.com">hello@goclimate.com</a> eller ring oss på <a href="tel:+46706084374">+46706084374</a>.'
@@ -86,47 +81,7 @@ sv:
   about_us_who_are_we_emma_html: Civilingenjör inom medieteknik med erfarenhet från ett snabbväxande tech-startup. Vill bygga grymma produkter, rädda världen och äta choklad.
   blog: Blogg
   we_are_100_transparent: Vi är 100% transparenta.
-  this_is_a_first_step: Det här är ett första steg.
-  this_is_a_first_step_description: Kom igång med ett klimatneutralt liv nu. Vi kommer alla även behöva minska våra klimatutsläpp, något som vi hjälper till med genom tips och inspiration längs vägen.
   section_3_text: Vi är 100% transparenta med vilka både FN-certifierade och Gold Standard-märkta klimatprojekt dina pengar investeras i och varför.
-  vegan: Äter helt växtbaserat
-  no_car: Ingen bil
-  hardly_ever_flies: Flyger nästan aldrig
-  cost_calculation: Kostnadsberäkning
-  price_info_popup_content: Detta val räknar vi ger ett årligt utsläpp på %{footprint} ton CO<sub>2</sub>. Eftersom kalkylen är ungefärlig klimatkompenserar vi för dubbelt så många ton, alltså %{footprint_x2} ton C0<sub>2</sub>, så att du kan vara säker på att du lever klimatneutralt varje månad. <br>Vi klimatkompenserar i projekt som är FN- och Gold Standard-certifierade (en certifiering skapad av bland annat WWF). Dessa projekt kostar %{price_per_tonne}/ton - och därför landar detta val på %{price_per_month}/mån.
-  you_will_offset_for:
-    prefix: 'Att ta ansvar för dina klimatutsläpp kostar '
-    suffix: /mån.
-  mostly_vegetarian: Äter mest vegetariskt
-  one_fuel_efficient_car: En bränslesnål bil
-  flies_sometimes: Flyger ibland
-  vegetarian: Äter helt vegetariskt
-  sometimes_vegetarian: Äter ofta vegetariskt
-  meat_eater: Köttätare, men inte så mycket rött kött
-  meat_eater_lots_of_beef: Köttätare, mycket rött kött
-  electric_car: Elbil
-  fuel_efficient_seldom_drives: Bränslesnål bil, kör lite
-  fuel_efficient_car_drives_often: Bränslesnål bil, kör mycket
-  normal_car_seldom_drives: Normal bil, kör lite
-  normal_car_drives_often: Normal bil, kör mycket
-  suv_seldom_drives: Törstigare bil, kör lite
-  suv_drives_often: Törstigare bil, kör mycket
-  never_flies: Flyger aldrig
-  flies_short_distance_1_time_year: Flyger kortare distanser 1 ggr/år
-  flies_short_distance_2_time_year: Flyger kortare distanser 2 ggr/år
-  flies_short_distance_3_time_year: Flyger kortare distanser 3 ggr/år
-  flies_short_distance_6_time_year: Flyger kortare distanser 6 ggr/år
-  flies_short_distance_12_time_year: Flyger kortare distanser 12 ggr/år
-  flies_long_distance_1_time_year: Flyger längre distanser 1 ggr/år
-  flies_long_distance_2_time_year: Flyger längre distanser 2 ggr/år
-  flies_long_distance_3_time_year: Flyger längre distanser 3 ggr/år
-  flies_long_distance_6_time_year: Flyger längre distanser 6 ggr/år
-  flies_long_distance_12_time_year: Flyger längre distanser 12 ggr/år
-  read_more_how_we_calculate_offset_plans_html: Läs mer om hur vi räknar ut våra %{href}.
-  offset_plans: kompensationsplaner
-  tonnes_co2_per_year: ton CO2/år
-  sign_up_for_a_climate_neutral_life: Här börjar ditt klimatneutrala liv!
-  sign_up_here_to_start_livint_a_climate_neutral_life: Skriv in dina uppgifter nedan för att börja resan mot ett klimatneutralt liv.
   email: E-post
   password: Lösenord
   i_accept: Jag godkänner
@@ -135,7 +90,6 @@ sv:
   add_new_card: Nytt kort
   edit_card: ändra kort
   your_payment_details_have_been_updated: Dina inställningar har uppdaterats
-  something_went_wrong_with_the_credit_card_please_submit_it_again: Någon gick fel med ditt kort, testa gärna att lägga till det igen.
   no_card_registered: Inget kort registrerat
   climate_plan: Kompensation
   go_climate_neutral: Skapa prenumeration
@@ -149,9 +103,7 @@ sv:
   name_have_lived_climate_neutral_for_join_me:
     one: '%{name} har levt klimatneutralt i 1 månad!'
     other: '%{name} har levt klimatneutralt i %{count} månader!'
-  tell_your_friends: Berätta för dina vänner!
   climate_change_is_best_faced_together: Du är en hjälte! Bäst bromsar vi klimatförändringarna tillsammans, så dela gärna det här så att vi blir fler som lever klimatneutralt!
-  one_extra_month_for_every_friend_html: Vi bjuder dig på <b>1 extra klimatneutral månad</b> (värde ca 85 kr) för varje ny kompis du får att bli klimatneutral genom oss!
   share_on_facebook: Dela på Facebook
   share_on_twitter: Dela på Twitter
   we_have_accomplished_alot_together: Vi har åstadkommit mycket tillsammans!
@@ -159,20 +111,15 @@ sv:
   amount_of_carbon_i_have_offset: Antal ton CO2 som du har minskat utsläpp av
   good_job: Bra jobbat!
   number_of_months_you_have_been_climate_neutral: Antal månader som du har levt ett klimatneutralt liv
-  you_climate_offset_investments: Du har klimatkompenserat för
-  number_of_climate_neutral_months_for_all_users: Antal klimatneutrala månader för alla användare
   number_of_climate_neutral_users_right_now: Antal klimatneutrala användare just nu
-  total_climate_offset_project_investments: Total summa som vi klimatkompenserat för
   our_projects: Våra klimatprojekt
   our_investments_in_climate_projects: Våra klimatprojekt
-  climate_project_we_have_invested_in: Klimatprojekt vi stöttat tillsammans
   i_want_to_contribute: Okej, jag vill bidra!
   project_name: Namn på projekt
   map: Karta
   more_info_on_blog: Mer information
   our_investment_certificate: Investeringscertifikat
   certificate: Certifikat
-  invoice: Faktura/Kvitto
   date_of_our_investment: Datum för investering
   read_more: Läs mer
   cimate_hero_toplist: Topplista klimathjältar
@@ -188,10 +135,8 @@ sv:
   tonnes: ton
   type: Typ
   price: Pris
-  proceed_to_checkout: Till betalningssidan
   thank_you_so_much_everyone_for_helping_to_save_the_world: Otroligt stort tack för att du är med och räddar världen! Du är bäst!
   latest_carbon_offset_projects: Senaste projekten vi stöttat
-  offset: Kompensation
   country: Land
   location: Plats
   more_info_on_our_blog: Mer information om projektet
@@ -200,24 +145,16 @@ sv:
   user_name: Namn
   confirm_password: Bekräfta lösenord
   update: Uppdatera
-  other_language_site: https://www.goclimate.com
-  other_language: In English
   what_is_goclimateneutral: Vad är GoClimate?
   this_is_how_it_works: Så här funkar det
   1_describe_your_lifestyle: 1. Välj din livsstil
   2_sign_up: 2. Registrera dig
-  sign_up_text: Registrera dig i vårt enkla formulär.
-  3_save_the_world: 3. Rädda världen
-  save_the_world_text: Vi köper klimatkompensation åt dig varje månad och tipsar om hur du kan minska ditt klimatavtryck.
-  its_that_simple_text: Så här enkelt är det att komma igång. Klimatförändringarna är den största utmaningen som vår generation stått inför och vi kan göra någonting åt det tillsammans. Vi säger inte att det här räcker, men det är ett stort steg i rätt riktning. Hoppa på nu och sprid ordet så bidrar det till att ännu fler hänger med!
-  why_goclimateneutral_head: VARFÖR GOCLIMATE?
   forgot_your_password: Glömt ditt lösenord?
   enter_your_email_below_and_we_will_send_you: Skriv in din e-post nedan så mailar vi dig instruktioner.
   send_me_an_email_with_instructions: Återställ lösenord
   change_your_password: Ändra ditt lösenord
   change_your_password_by_entering_your_new_password_below: Ändra ditt lösenord genom att skriva in ditt nya lösenord här.
   change_password: Ändra lösenord
-  something_went_wrong_go_back_one_step_and_try_again: Något gick snett, backa ett steg och prova igen!
   the_payment_unfortunately_failed: Betalningen misslyckades tyvärr
   no_worries_we_will_try_again_within_a_few_days: Det är ingen fara. Vi försöker genomföra betalningen igen under de närmaste dagarna.
   you_might_need_to_update_your_payment_info: Om du vill fortsätta att leva ett klimatneutralt liv med oss kan du behöva uppdatera din betalningsinformation.
@@ -242,22 +179,8 @@ sv:
   press_social_images: Sociala medier
   press_credits: Illustrationerna är skapade av Henrik Kniberg och har Creative Commons-licens.
   im_in: Ja, tack!
-  1_people: 1 person
-  x_people: '%{number} personer'
   press: Press
-  where_will_my_money_be_used: Var kommer mina pengar användas?
-  good_to_know: Du kan känna dig trygg.
-  why_trust_1: Alla klimatprojekt vi investerar i granskas noggrant av tredje part
-  why_trust_2: Vi är helt transparenta med var dina pengar tar vägen
-  why_trust_4: Ingen bindningstid och dessutom superenkelt att avsluta
-  why_trust_5: Om du ångrar dig inom 60 dagar får du pengarna tillbaka
-  we_invest_in_un_climate_projects_that_are_gold_standard_certified: Vi investerar i klimatprojekt som är certifierade av både FN och Gold Standard. Se några exempel på projekt vi investerat i här nedan.
-  thai_solar_carousel_description: Över 90% av elförsörjningen i Thailand kommer från fossila bränslen. Vi har investerat i det här solkraftverket som förser det Thailandska elnätet med förnyelsebar solel.
-  nanyang_danjiang_carousel_description: Genom att ersätta kol- och vedeldade kokkärl med rena solupphettade kärl - så minskas CO2-utsläpp och livskvaliten för 50 000 hushåll förbättras.
-  dak_pone_carousel_description: Dak Pone Hydro project ersätter diselgeneratorer och ved-eldad värme med förnyelsebar energi i form av vattenkraft.
   faq: Frågor & Svar
-  answer: Svar
-  read_more_on_frequently_asked_questions: Läs mer på vår sida med frågor och svar
   faq_questions:
     questions:
       q1:
@@ -421,8 +344,6 @@ sv:
       q20:
         question: Hur hanteras mina kortuppgifter?
         answer: Vi använder oss av Stripe (<a href="https://stripe.com/se">stripe.com</a>) som betalningsleverantör, som är en av de största betalningsleverantörerna på nätet. Kortuppgifterna och betalningarna hanteras helt och hållet av dem - helt krypterat förstås. Kortuppgifterna hamnar aldrig på våra eller någon annans servrar, utan hanteras endast utav Stripe.
-  climate_neutral_users_right_now: klimatneutrala användare just nu
-  ton_co2_less_in_atmosphere: ton CO2 mindre i atmosfären
   for_business: För företag
   thats_amazing_from_the_bottom_of_our_hearts: Vilket är fantastiskt! Från djupet av våra hjärtan
   years:
@@ -435,11 +356,6 @@ sv:
   welcome:
     caption_line_1: Tillsammans räddar vi klimatet.
     caption_line_2: Ta ansvar för dina utsläpp idag!
-    intro: Klimatförändringar är det största hotet som vår generation någonsin ställts inför. Tillsammans kan vi bromsa klimatförändringarna och rädda världen, OM vi agerar nu. Genom att kompensera för ditt klimatavtryck kan du bli en del av lösningen.
-    calculator:
-      title: Räkna ut din klimatpåverkan för att komma igång
-      submit: Kompensera min påverkan
-      per_month: /mån
     what_is_gcn_text: Vi stöttar klimatprojekt med certifieringar som FN och Världsnaturfonden står bakom - och tipsar dig om enkla sätt att minska ditt klimatavtryck. På så sätt kan vi bidra till att bromsa klimatförändringarna och rädda världen.
     statistics_header: Varje person gör skillnad!
     users_prefix: Just nu är vi
@@ -447,9 +363,7 @@ sv:
     tonnes_prefix: Tillsammans har vi minskat
     tonnes_suffix: ton koldioxid i atmosfären
     call_to_actions:
-      tell_me_more: Berätta mer!
       im_ready_to_sign_up: Jag är redo!
-      i_want_to_contribute: Jag vill vara med och bidra!
       lets_save_our_planet_together: Rädda klimatet tillsammans med oss!
       go_climate_neutral: Bli klimatneutral
     how_it_works:
@@ -457,12 +371,6 @@ sv:
       sign_up_text: Registrera dig för att kompensera för ditt klimatavtryck.
       save_our_planet_header: 3. Rädda vår planet
       save_our_planet_text: Bli en av alla oss som vill vara med och stoppa klimatförändringarna.
-    form:
-      label:
-        people: Antal personer
-        food: Matvanor
-        car: Bilvanor
-        flying: Flygvanor
     business:
       for_companies: Klimatkompensera ditt företag
       for_companies_text_html: Vill du klimatkompensera ditt företags klimatavtryck eller klimatkompensera för alla era anställda? Vi hjälper dig gärna!

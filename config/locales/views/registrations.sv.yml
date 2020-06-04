@@ -1,9 +1,6 @@
 sv:
   views:
     registrations:
-      offset_for_x_people:
-        before_input: Jag vill kompensera för
-        after_input: personer som mig.
       well_done: Toppen! Nu har du tagit första steget!
       your_yearly_climate_footprint: Ditt årliga klimatavtryck
       corresponds_to: Det motsvarar %{price}/månad.

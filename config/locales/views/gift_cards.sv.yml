@@ -27,7 +27,6 @@ sv:
         we_will_send_you_pdf:
           Efter betalning kommer vi att mejla gåvokortet till dig som en PDF fil.
           Sen kan du ge gåvokortet till mottagaren på det sätt som passar dig.
-        gift_card_for_x_months: Gåvokort på %{months} månader
         click_here_for_an_example: Klicka här för ett exempel
         pay: Betala gåvokortet
       download:

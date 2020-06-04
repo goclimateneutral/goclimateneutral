@@ -5,7 +5,6 @@
 de:
   goclimateneutral_url: 'https://www.goclimate.com/de'
   site_title: GoClimate
-  welcome_to_a_climate_neutral_life: Willkommen in einem klimaneutralen Leben!
   climate_change_is_the_greatest_challange: >-
     Der Klimawandel ist eine der größten Herausforderungen unserer Zeit.
     Gemeinsam haben wir eine Chance, unseren Kindern die Zukunft auf diesem
@@ -13,7 +12,6 @@ de:
   log_in: EINLOGGEN
   log_out: Ausloggen
   settings: Einstellungen
-  ok_i_want_to_know_more: Anmelden!
   i_want_to_know_more: Mehr erfahren!
   contact_us: Kontakt
   100_percent_transparency: 100% Transparenz
@@ -48,9 +46,6 @@ de:
   salary_costs: Lohnkosten
   other_operating_expenses: Sonstige Betriebsausgaben
   total: Gesamt
-  other_kpis: Weitere Kennzahlen
-  number_of_users: Anzahl der Nutzer
-  number_of_ton_that_has_been_offset: Kompensierte Tonnen an CO2
   you_can_read_more_details_about_our_costs_here: Weitere Details zu unseren Kosten finden Sie hier
   questions_or_comments_contact_us: Fragen oder Anmerkungen? Schreiben Sie einfach an
   general_questions_html: >-
@@ -120,64 +115,11 @@ de:
     nachhaltiges Reisen. Klimaaktivistin und Veganerin, die gerne wandert.
   blog: Blog
   we_are_100_transparent: Wir sind zu 100% transparent
-  this_is_a_first_step: Dies ist ein erster Schritt.
-  this_is_a_first_step_description: >-
-    Starten Sie jetzt Ihr klimaneutrales Leben. Wir alle müssen unseren
-    Klima-Fußabdruck reduzieren, aber keine Sorge, wir helfen Ihnen, indem wir
-    Ihnen Inspirationen geben und nützliche Informationen mitteilen!
   section_3_text: >-
     Wir bieten eine 100 %ige Transparenz, in welche UN- und Gold
     Standard-zertifizierte Projekte wir investieren und warum. Außerdem bieten
     wir 100 %ige Transparenz was die Menge an Emissionen angeht, die wir in
     Ihrem Namen und insgesamt ausgleichen.
-  vegan: Pflanzliche Ernährung
-  no_car: Kein Auto
-  hardly_ever_flies: Fliege selten
-  cost_calculation: Kostenkalkulation
-  price_info_popup_content: >-
-    In diesem Fall schätzen wir Ihre jährliche Klimabilanz auf %{footprint}
-    Tonnen CO<sub>2</sub>. Da dies nur eine Schätzung ist, setzen wir eine
-    doppelt so große Menge an Ausgleich an, also %{footprint_x2} Tonnen
-    CO<sub>2</sub>. Auf diese Weise können Sie sich sicher sein, jeden Monat
-    klimaneutral zu sein.
-
-    Wir investieren in Projekte, die von der UN zertifiziert sind (CDM) und
-    verfügen außerdem über das Label Gold Standard (u.a. von WWF). Diese
-    Projekte kosten %{price_per_tonne} pro Tonne - daher kostet
-    Sie dies %{price_per_month} € pro Monat.
-  you_will_offset_for:
-    prefix: 'Sie kompensieren mit '
-    suffix: /monat.
-  mostly_vegetarian: Überwiegend vegetarische Ernährung
-  one_fuel_efficient_car: Ein verbrauchsarmes Auto
-  flies_sometimes: Fliege gelegentlich
-  vegetarian: Vegetarische Ernährung
-  sometimes_vegetarian: Häufig vegetarische Ernährung
-  meat_eater: 'Fleischesser, kaum Rindfleisch'
-  meat_eater_lots_of_beef: 'Fleischesser, viel Rindfleisch'
-  electric_car: Elektroauto
-  fuel_efficient_seldom_drives: 'Verbrauchsarmes Auto, fahre selten'
-  fuel_efficient_car_drives_often: 'Verbrauchsarmes Auto, fahre oft'
-  normal_car_seldom_drives: 'Normales Auto, fahre selten'
-  normal_car_drives_often: 'Normales Auto, fahre oft'
-  suv_seldom_drives: 'Auto mit hohem Verbrauch, fahre selten'
-  suv_drives_often: 'Auto mit hohem Verbrauch, fahre oft'
-  never_flies: Fliege nie
-  flies_short_distance_1_time_year: Fliege 1 Mal/Jahr kurze Distanzen
-  flies_short_distance_2_time_year: Fliege 2 Mal/Jahr kurze Distanzen
-  flies_short_distance_3_time_year: Fliege 3 Mal/Jahr kurze Distanzen
-  flies_short_distance_6_time_year: Fliege 3 Mal/Jahr kurze Distanzen
-  flies_short_distance_12_time_year: Fliege 12 Mal/Jahr kurze Distanzen
-  flies_long_distance_1_time_year: Fliege 1 Mal/Jahr lange Distanzen
-  flies_long_distance_2_time_year: Fliege 2 Mal/Jahr lange Distanzen
-  flies_long_distance_3_time_year: Fliege 3 Mal/Jahr lange Distanzen
-  flies_long_distance_6_time_year: Fliege 6 Mal/Jahr lange Distanzen
-  flies_long_distance_12_time_year: Fliege 12 Mal/Jahr lange Distanzen
-  read_more_how_we_calculate_offset_plans_html: 'Erfahren Sie mehr über unsere Berechnung für %{href}.'
-  offset_plans: Kompensationspläne
-  tonnes_co2_per_year: Tonnen CO2/Jahr
-  sign_up_for_a_climate_neutral_life: Anmelden für ein klimaneutrales Leben
-  sign_up_here_to_start_livint_a_climate_neutral_life: Geben Sie Ihre Daten ein und starten Sie Ihr klimaneutrales Leben
   email: E-Mail
   password: Passwort
   i_accept: Ich akzeptiere
@@ -186,7 +128,6 @@ de:
   add_new_card: Neue Karte hinzufügen
   edit_card: Kartendetails bearbeiten
   your_payment_details_have_been_updated: Ihre Einstellungen wurden aktualisiert
-  something_went_wrong_with_the_credit_card_please_submit_it_again: Bei der Kreditkarte ist ein Fehler aufgetreten. Versuchen Sie es erneut.
   no_card_registered: Keine Karte registriert
   climate_plan: Klimaplan
   go_climate_neutral: Anmelden!
@@ -203,14 +144,10 @@ de:
   name_have_lived_climate_neutral_for_join_me:
     one: '%{name} lebt seit 1 Monat klimaneutral!'
     other: '%{name} lebt seit %{count} Monaten klimaneutral!'
-  tell_your_friends: Weitersagen!
   climate_change_is_best_faced_together: >-
     Sie sind großartig! Da man den Klimawandel am besten gemeinsam bekämpfen
     kann, würden wir uns freuen, wenn Sie Anderen von GoClimate erzählen,
     damit auch sie ein klimaneutrales Leben führen können!
-  one_extra_month_for_every_friend_html: >-
-    Wir schenken Ihnen <b>1 klimaneutralen Monat</b> (im Wert von 1 €) für jeden
-    neuen Freund, den Sie werben!
   share_on_facebook: Auf Facebook teilen
   share_on_twitter: Auf Twitter teilen
   we_have_accomplished_alot_together: Gemeinsam haben wir viel geschafft!
@@ -218,20 +155,15 @@ de:
   amount_of_carbon_i_have_offset: 'Tonnen an CO2, die Sie bisher ausgeglichen haben'
   good_job: Gut gemacht!
   number_of_months_you_have_been_climate_neutral: Anzahl Ihrer klimaneutralen Monate
-  you_climate_offset_investments: Ihre Investitionen in die Klimarettung
-  number_of_climate_neutral_months_for_all_users: Anzahl klimaneutraler Monate aller Nutzer
   number_of_climate_neutral_users_right_now: Aktuelle Anzahl klimaneutraler Nutzer
-  total_climate_offset_project_investments: Gesamtinvestitionen in Klimaprojekte
   our_projects: Unsere Klimainvestitionen
   our_investments_in_climate_projects: Unsere Investitionen in Klimaprojekte
-  climate_project_we_have_invested_in: 'Klimaprojekte, in die wir gemeinsam investiert haben'
   i_want_to_contribute: 'Ok, ich bin dabei!'
   project_name: Projekt
   map: Karte
   more_info_on_blog: Weitere Informationen
   our_investment_certificate: Investment-Zertifikat
   certificate: Zertifikat
-  invoice: Rechnung
   date_of_our_investment: Datum der Investition
   read_more: Weitere Informationen
   cimate_hero_toplist: Topliste Klimahelden
@@ -249,10 +181,8 @@ de:
   tonnes: Tonnen
   type: Dauer
   price: Preis
-  proceed_to_checkout: Zur Kasse
   thank_you_so_much_everyone_for_helping_to_save_the_world: 'Vielen Dank an alle, die helfen, die Welt zu retten! Sie sind großartig!'
   latest_carbon_offset_projects: Die jüngsten Klimaprojekte
-  offset: Kompensation
   country: Land
   location: Ort
   more_info_on_our_blog: Weitere Infos in unserem Blog
@@ -261,33 +191,16 @@ de:
   user_name: Nutzername
   confirm_password: Passwort bestätigen
   update: Aktualisieren
-  other_language_site: 'https://www.goclimate.com/se'
-  other_language: Schwedisch
   what_is_goclimateneutral: Was ist GoClimate?
   this_is_how_it_works: So funktioniert's
   1_describe_your_lifestyle: 1. Lifestyle beschreiben
   2_sign_up: 2. Anmelden
-  sign_up_text: 'Nehmen Sie sich 1 Minute, um sich anzumelden'
-  3_save_the_world: 3. Rette die Welt
-  save_the_world_text: >-
-    Wir zahlen in Ihrem Namen für Klimaausgleich und zeigen Ihnen, wie Sie Ihren
-    Fußabdruck verringern können.
-  its_that_simple_text: >-
-    So einfach ist das. Der Klimawandel ist die größte Herausforderung unserer
-    Zeit, aber gemeinsam können wir etwas dagegen tun. Wir behaupten nicht, dass
-    das ausreicht, aber es ist ein großer Schritt in die richtige Richtung.
-    Schließen Sie sich uns an und ermutigen Sie Andere, sich auch dieser
-    Bewegung anzuschließen!
-  why_goclimateneutral_head: WARUM GOCLIMATE?
   forgot_your_password: Passwort vergessen?
   enter_your_email_below_and_we_will_send_you: Geben Sie Ihre E-Mail Adresse ein und wir senden Ihnen eine Info-Mail.
   send_me_an_email_with_instructions: Anleitung zum Zurücksetzen des Passworts zusenden!
   change_your_password: Passwort ändern
   change_your_password_by_entering_your_new_password_below: 'Ändern Sie Ihr Passwort, indem Sie unten Ihr neues Passwort eingeben.'
   change_password: Passwort ändern
-  something_went_wrong_go_back_one_step_and_try_again: >-
-    Etwas ist schief gelaufen. Gehen Sie einen Schritt zurück und versuchen Sie
-    es erneut!
   the_payment_unfortunately_failed: Leider ist Ihre Zahlung fehlgeschlagen
   no_worries_we_will_try_again_within_a_few_days: 'Keine Sorge, wir versuchen es in ein paar Tagen erneut.'
   you_might_need_to_update_your_payment_info: >-
@@ -319,40 +232,8 @@ de:
     Diese Illustrationen stammen von Henrik Kniberg und sind Creative
     Commons-lizensiert.
   im_in: Ich bin dabei!
-  1_people: 1 Person
-  x_people: '%{number} Personen'
   press: Presse
-  where_will_my_money_be_used: Wo wird mein Geld eingesetzt?
-  good_to_know: Sie können beruhigt sein.
-  why_trust_1: >-
-    Alle Klimaprojekte, in die wir investieren, werden sorgfältig von Dritten
-    geprüft.
-  why_trust_2: 'Wir bieten völlige Transparenz, um Ihnen zu zeigen, wo Ihr Geld landet.'
-  why_trust_4: >-
-    Es ist ganz leicht, Ihre Anmeldung für den Klimaausgleich wieder aufzuheben,
-    wenn Sie das möchten.
-  why_trust_5: >-
-    Wenn Sie Ihre Anmeldung für den Klimaausgleich innerhalb von 60 Tagen
-    rückgängig machen möchten, erstatten wir Ihnen Ihr Geld zurück.
-  we_invest_in_un_climate_projects_that_are_gold_standard_certified: >-
-    Wir investieren in Projekte, die sowohl eine UN Zertifizierung als auch eine
-    Gold Standard Zertifizierung aufweisen. Beispiele solcher Projekte finden
-    Sie weiter unten.
-  thai_solar_carousel_description: >-
-    Mehr als 90% der Elektrizität, die in Thailand in das Stromnetz eingespeist
-    wird, wurde mit fossilen Brennstoffen erzeugt. Wir haben in diesen Solarpark
-    investiert, der saubere und erneuerbare Energie für Thailands Stromnetz
-    liefert.
-  nanyang_danjiang_carousel_description: >-
-    Indem traditionelle Kohleöfen durch saubere solarbetriebene Küchenherde
-    ersetzt werden, können die CO2-Emissionen reduziert und somit die
-    Lebensqualität für 50.000 ländliche Haushalte verbessert werden.
-  dak_pone_carousel_description: >-
-    Mit dem Dak Pone Hydro Projekt werden Dieselgeneratoren und Holzöfen durch
-    saubere, nachhaltige Hydroenergie ersetzt.
   faq: FAQ
-  answer: Antwort
-  read_more_on_frequently_asked_questions: Lesen Sie mehr in unseren FAQs
   faq_questions:
     questions:
       q1:
@@ -737,8 +618,6 @@ de:
           werden vollständig von Stripe verarbeitet - voll verschlüsselt
           natürlich. Ihre Kartendaten landen zu keinem Zeitpunkt auf unseren
           Servern, sondern werden direkt von Stripe verarbeitet.
-  climate_neutral_users_right_now: Klimaneutrale Nutzer zum jetzigen Zeitpunkt
-  ton_co2_less_in_atmosphere: Tonnen CO2 weniger in der Atmosphäre
   for_business: Für Unternehmen
   thats_amazing_from_the_bottom_of_our_hearts: Das ist großartig! Von ganzem Herzen
   years:
@@ -749,16 +628,6 @@ de:
   welcome:
     caption_line_1: Gemeinsam können wir unser Klima retten.
     caption_line_2: Kompensieren Sie Ihre Emissionen noch heute!
-    intro: >-
-      Der Klimawandel ist eine der größten Herausforderungen unserer Zeit.
-      Gemeinsam können wir es schaffen, die Bremse zu ziehen und unseren
-      Planeten zu retten, aber wir müssen sofort handeln. Sie jetzt können Teil
-      der Lösung werden, indem Sie Ihre Emissionen ausgleichen. Und das geht mit
-      GoClimate am einfachsten.
-    calculator:
-      title: Legen Sie los und berechnen Sie Ihre Auswirkungen auf das Klima.
-      submit: Meine Emissionen ausgleichen
-      per_month: /mo
     what_is_gcn_text: >-
       Wir investieren in UN-zertifizierte Klimaprojekte und zeigen Ihnen, wie
       Sie ganz einfach Ihre Klimabilanz verbessern können. Auf diese Weise
@@ -770,9 +639,7 @@ de:
     tonnes_prefix: Gemeinsam haben wir
     tonnes_suffix: Tonnen CO2 in der Atmosphäre reduziert
     call_to_actions:
-      tell_me_more: Ich will mehr erfahren!
       im_ready_to_sign_up: Ich möchte mich anmelden!
-      i_want_to_contribute: Ich will meinen Beitrag leisten!
     how_it_works:
       describe_your_lifestyle_text: >-
         Nutzen Sie unseren Klimarechner, um Ihre ungefähre Klimabilanz zu
@@ -782,12 +649,6 @@ de:
       save_our_planet_text: >-
         Seien Sie Teil unserer Community, in der wir nicht länger den
         Klimawandel fördern.
-    form:
-      label:
-        people: Leute zählen
-        food: Essgewohnheiten
-        car: Gewohnheiten des Autos
-        flying: Fluggewohnheiten
     business:
       for_companies: Klimakompensation für Ihr Unternehmen
       for_companies_text_html: >

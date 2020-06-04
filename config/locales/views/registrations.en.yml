@@ -1,9 +1,6 @@
 en:
   views:
     registrations:
-      offset_for_x_people:
-        before_input: I want to offset for
-        after_input: people like me.
       well_done: Great! First step done!
       your_yearly_climate_footprint: Your yearly carbon footprint
       corresponds_to: This corresponds to %{price}/month.

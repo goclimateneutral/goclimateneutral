@@ -3,7 +3,6 @@ en:
     gift_card_mailer:
       thank_you_for_buying_gift_card: Thank you for buying a gift card!
       you_have_purchased_a_gift_card_with: You have purchased a gift card for
-      download_the_gift_card_here: Download the gift card here
       climate_neutral_months:
         one: climate neutral month
         other: climate neutral months
