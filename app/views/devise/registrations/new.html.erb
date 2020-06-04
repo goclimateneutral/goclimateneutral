@@ -164,14 +164,23 @@
     <div class="text-center pt-16 pb-48 px-10 lg:px-0 max-w-2xl mx-auto">
       <i class="fa fa-question-circle text-big-icon text-icon" aria-hidden="true"></i>
       <h2 class="text-lg m-lg:text-xl d:text-2xl font-semibold my-6"><%= t 'views.registrations.faq' %></h2>
-      <% [1, 4, 5, 9, 10, 19, 20].each do |q| %>
+      <% [
+        "climate_neutrality.questions.q2",
+        "offsetting.questions.q2",
+        "offsetting.questions.q3",
+        "offsetting.questions.q6",
+        "offsetting.questions.q9",
+        "our_service.questions.q1",
+        "our_service.questions.q3",
+        "our_service.questions.q4",
+      ].each do |q| %>
         <div class="block border p-3 mt-4 rounded text-left collapse">
           <input id="question-<%= q %>" type="checkbox">
           <label for="question-<%= q %>" class="flex justify-between cursor-pointer">
-            <div class="font-bold"><%= t "faq_questions.questions.q#{q}.question" %></div>
+            <div class="font-bold"><%= t "faq_questions.#{q}.question" %></div>
             <div class="pl-3"><i class="fa fa-chevron-circle-down collapse-chevron" aria-hidden="true"></i></div>
           </label>
-          <div class="pt-4 collapse-content"><%= raw(t("faq_questions.questions.q#{q}.answer")) %></div>
+          <div class="pt-4 collapse-content"><%= raw(t("faq_questions.#{q}.answer")) %></div>
         </div>
       <% end %>
     </div>
