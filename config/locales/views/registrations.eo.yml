@@ -1,0 +1,29 @@
+eo:
+  views:
+    registrations:
+      well_done: crwdns542:0crwdne542:0
+      your_yearly_climate_footprint: crwdns544:0crwdne544:0
+      corresponds_to: crwdns546:0%{price}crwdne546:0
+      you: crwdns548:0crwdne548:0
+      compensated: crwdns550:0crwdne550:0
+      average_in: crwdns552:0%{region}crwdne552:0
+      world_average: crwdns554:0crwdne554:0
+      goal_2030: crwdns556:0crwdne556:0
+      higher: crwdns558:0crwdne558:0
+      lower: crwdns560:0crwdne560:0
+      your_climate_footprint: crwdns562:0%{footprint}crwdnd562:0%{relative}crwdnd562:0%{country}crwdne562:0
+      your_climate_footprint_compared_world: crwdns564:0%{footprint}crwdnd564:0%{relative}crwdne564:0
+      subscribe_heading: crwdns566:0crwdne566:0
+      subscribe_intro: crwdns568:0crwdne568:0
+      your_subscription: crwdns570:0crwdne570:0
+      number_of_people: crwdns572:0crwdne572:0
+      total: crwdns574:0crwdne574:0
+      subscription_price_information: crwdns576:0%{price}crwdne576:0
+      where_does_the_money_go:
+        heading: crwdns578:0crwdne578:0
+        point_1: crwdns580:0crwdne580:0
+        point_2: crwdns582:0crwdne582:0
+        point_3: crwdns584:0crwdne584:0
+        point_4: crwdns586:0crwdne586:0
+      latest_projects: crwdns588:0crwdne588:0
+      faq: crwdns590:0crwdne590:0
