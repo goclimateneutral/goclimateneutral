@@ -1,0 +1,14 @@
+sv:
+  views:
+    flight_footprints:
+      new:
+        flight_details: Din flygresa
+        from: Från
+        to: Till
+        roundtrip: Tur och retur
+        connections: Mellanlandningar
+        connections_return: Mellanlandningar på hemresan
+        add_connection: Lägg till mellanlandning
+        cabin_class: Biljettklass
+        number_of_tickets: Antal biljetter
+        not_a_valid_input: Ogiltigt värde

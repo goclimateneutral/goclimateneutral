@@ -1,0 +1,5 @@
+en:
+  helpers:
+    application:
+      precise_co2e_string_tonnes: "%{tonnes} tonnes CO2e"
+      precise_co2e_string_kg: "%{co2e} kg CO2e"

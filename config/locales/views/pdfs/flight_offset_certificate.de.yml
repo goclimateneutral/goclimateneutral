@@ -1,0 +1,22 @@
+de:
+  views:
+    pdfs:
+      flight_offset_certificate:
+        header: Klimaschutzzertifikat
+        lead: >-
+          Durch die Kompensation haben Sie die Verantwortung für die CO2-Bilanz
+          Ihres Fluges übernommen. Vielen Dank!
+        order_id: Auftragsnummer
+        date: Datum
+        project_type: Projektart
+      invoice_certificate:
+        header: |
+          Klimaschutzzertifikat
+        we_certify_that: 'Wir zertifizieren hiermit, dass'
+        has_carbon_offset: kompensierte
+        project_information: Projektinformation
+        name: Name
+        country: Land
+        project_id: Projekt ID
+        project_type: Projektart
+        date: Datum

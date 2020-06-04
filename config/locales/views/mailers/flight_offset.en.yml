@@ -1,0 +1,11 @@
+en:
+  mailers:
+    flight_offset:
+      subject: Your certificate
+      thank_you: Thank you for offsetting your flight!
+      you_have_offset: You have offset
+      tonnes_co2e: tonnes CO2e
+      certificate_is_attached:
+        Your certificate is attached to this email. If you have any questions,
+        just hit reply on this email–we're happy to help! Thank you again,
+        you're the best!

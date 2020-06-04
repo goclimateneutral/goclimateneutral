@@ -1,0 +1,8 @@
+sv:
+  mailers:
+    business:
+      climate_report_email:
+        subject: Dela ditt klimatavtryck med dina kollegor
+        thank_you: Tack för att du gjort en klimatuträkning hos oss!
+        link_description: "För att du enkelt ska kunna dela dina resultat med dina kollegor och hitta tillbaka till dem senare kommer här en länk till resultaten:"
+        reply_to_this_email: Svara gärna på det här mailet om du har några frågor så hjälper vi mer än gärna till!

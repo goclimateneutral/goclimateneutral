@@ -1,0 +1,14 @@
+de:
+  mailers:
+    business:
+      climate_report_email:
+        subject: Teilen Sie Ihre Klimabilanz mit Ihrem Team.
+        thank_you: |
+          Vielen Dank für die Berechnung Ihrer Klimabilanz!
+        link_description: >-
+          Um es einfacher zu machen, die Ergebnisse mit Ihrem Team zu teilen und
+          später darauf zurückzukommen, gibt es hier einen Link zu den
+          Ergebnissen:
+        reply_to_this_email: >-
+          Wenn Sie Fragen haben, antworten Sie einfach auf diese E-Mail. Wir
+          helfen Ihnen gerne weiter!

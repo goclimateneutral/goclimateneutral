@@ -1,0 +1,73 @@
+sv:
+  views:
+    welcome:
+      index:
+        hero:
+          heading: Prenumerationen som nollar ditt klimatavtryck
+          body_text: Räkna ut ditt avtryck och starta din personliga prenumeration, på under 2 minuter.
+        how_it_works:
+          bullets:
+            bullet_1_heading: Beräkna ditt klimatavtryck
+            bullet_1_text: Vårt enkla test tar bara en minut att göra.
+            bullet_2_heading: Prenumerera
+            bullet_2_text: Starta en månadsprenumeration som motsvarar just ditt klimatavtryck.
+            bullet_3_heading: Rädda vår planet
+            bullet_3_text: Vi finansierar projekt som minskar mängden koldioxid i atmosfären.
+        about_us:
+          heading: Tillsammans kan vi göra skillnad för planeten redan idag
+          body_text: Vi stöttar klimatprojekt med certifieringar som FN och Världsnaturfonden står bakom - och tipsar om enkla sätt att minska ditt klimatavtryck. 
+          read_more: Läs mer om oss
+        projects:
+          heading: Vart går pengarna? 
+          body_text_1: Du är med och finansierar klimatprojekt motsvarande ditt personliga klimatavtryck.
+          body_text_2: Projekten bidrar till den globala omställningen till förnyelsebara energikällor.
+          body_text_3: Vi handplockar de projekt som ger mest nytta för pengarna och bidrar till så många av FN:s hållbarhetsmål som möjligt.
+          body_text_4: Vi är 100% transparenta med alla våra utgifter.
+          read_more: Läs mer om projekten 
+        transparency:
+          heading: 100% transparens
+          body_text: Vi vill att du ska känna dig helt trygg med hur dina pengar används, därför har vi total finansiell transparens. Vi redovisar löpande alla våra omkostnader och utgifter här på siten, för att du ska kunna ta del av hur pengarna gör största möjliga klimatnytta. 
+          read_more: Läs mer om vår transparens
+        climate_tips:
+          heading: Klimattips
+          clothes_last_longer: Få dina kläder att räcka längre
+          reduce_carbon_footprint_food: Minska ditt klimatavtryck via din mat
+          civil_disobedience: Civil olydnad för klimatet?
+          climate_friendly_housing_cooperative: Klimatsmart bostadsrättsförening - så gör du skillnad
+          climate_friendly_pension_saving: Fossilfritt pensionssparande
+          read_more: Läs mer 
+        community:
+          heading: Lär känna våra medlemmar
+          people:
+            annelie:
+              title: äventyrare, talare och guide
+              quote: Jag gör ofta strandrensingar och dyker för att plocka upp övergivna fisknät i våra hav. Jag bor på en liten husbåt och jag har inga barn. Jag försöker också inspirera andra att ta bättre hand om vår natur.
+            mattias:
+              title: partner @ Netlight Consulting
+              quote: Som en förebild inom IT-branschen vill vi minska vårt avtryck för att bidra till att rädda klimatet.
+            shelbi:
+              title: hållbarhetsinfluencer
+              quote: Det är svårt att veta vilka personliga val som är mest hållbara, så jag tänkte att klimatkompensation är ett säkert sätt att göra något meningsfullt som faktiskt gör skillnad - oavsett om alla val jag gör dagligen är perfekta eller ej.
+        calculate_to_sign_up: Räkna ut ditt klimatavtryck och börja ditt klimatneutrala liv redan idag!
+        i_live_in: Jag bor i...
+        get_started: Gör testet
+        our_projects_header: Våra klimatprojekt
+        our_projects_lead: För oss är det avgörande att dina pengar hamnar i rätta händer. Därför väljer vi att bara stötta tredjepartsgranskade klimatprojekt som har certifieringen Gold Standard. Projekten bidrar till den globala omställningen till förnybar energi och FN:s hållbarhetsmål.
+        our_projects_link: Läs mer om våra klimatprojekt
+      travel_calculator:
+        travel_emissions_calculator: Resekalkylator
+        travel_emissions_calculator_description: Vill du räkna ut hur mycket utsläpp din resa orsakar? Skriv in hur långt du ska åka här nedan så fixar vi resten!
+        distance_in_kilometers: Längd på resa i kilometer
+        calculate: Beräkna
+        emissions_if_traveling_by: Utsläpp om du reser med
+        flight: Flyg
+        car_petrol: Bil (bensin)
+        car_diesel: Bil (diesel)
+        car_etanol: Bil (etanol)
+        car_gas: Bil (gas)
+        car_electric: Elbil
+        bus: Buss
+        train: Tåg
+        subway: Tunnelbana
+        boat: Båt
+        offset_the_emissions_here: Kompensera för utsläppen här ->

@@ -1,0 +1,14 @@
+sv:
+  mailers:
+    welcome:
+      from: Tove på GoClimate
+      subject: Välkommen till GoClimate!
+      welcome_to_gcn: Hej!
+      big_thanks: Stort tack för att du är med och bidrar till en hållbar värld!
+      you_now_support: Du är nu med och stöttar certifierade klimatprojekt som utöver klimatnyttan även bidrar till annan hållbar utveckling runt om i världen. Heja dig!
+      regardless_of_how_much: Oavsett hur mycket du redan kan och gör för klimatet så hoppas vi att du blir inspirerad och hittar nya vägar till hur vi tillsammans kan minska våra klimatutsläpp. För inspiration och tips, följ oss gärna på %{facebook}, %{instagram}, %{twitter} och kolla in vår %{blog}.
+      we_are_many: Vi är många som vill göra något bra för klimatet, och gemenskapen kring det är viktig för oss. Därför bjuder vi då och då in till meetups och demonstrationer, så att vi kan ses och prata om klimatet och vad vi borde göra för att stoppa klimatförändringarna. Inbjudningar till events och information om hur det går för oss kommer via vårt nyhetsbrev, ca 4-6 gånger om året.
+      if_you_have_any_questions: Om du undrar över något, vill ge återkoppling eller bara säga hej, hör gärna av dig till mig på tove@goclimate.com!
+      thank_you: Tack för att du är med och gör skillnad!
+      best_regards: Vänliga hälsningar,
+      the_gcn_team: Tove på GoClimate

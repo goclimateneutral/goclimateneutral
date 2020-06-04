@@ -1,0 +1,25 @@
+sv:
+  views:
+    shared:
+      header:
+        navigation:
+          flights: Flygresor
+          offset_flight: Kompensera flygresa
+        region_recommendation:
+          select_country: Välj ditt land eller område så att vi kan visa information som passar bäst för dig.
+          continue_button: "Fortsätt till %{region}"
+        sign_up: Registrera
+      prefooter:
+        heading: Rädda klimatet tillsammans med oss!
+        body_text: Prenumerera för att kompensera för ditt klimatavtryck.
+        button: Kom igång
+      footer:
+        short_intro: GoClimate grundades 2017 med enda syfte att göra det enklare att leva ett klimatneutralt liv.
+        jobs: 'Jobb'
+        headers:
+          make_a_difference: Gör skillnad
+          explore: Utforska
+          about: Om
+      tonnes_co2e:
+        one: ton koldioxid
+        other: ton koldioxid

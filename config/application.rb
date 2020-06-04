@@ -42,6 +42,7 @@ module GoClimateNeutral
     config.i18n.available_locales = [:en, :sv, :de]
     config.i18n.default_locale = :en
     config.i18n.fallbacks = [:en]
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**/*.{rb,yml}')]
 
     config.generators do |g|
       g.test_framework :rspec

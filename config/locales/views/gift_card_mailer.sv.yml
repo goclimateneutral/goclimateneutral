@@ -1,0 +1,9 @@
+sv:
+  views:
+    gift_card_mailer:
+      thank_you_for_buying_gift_card: Tack för att du köpt ett gåvokort!
+      you_have_purchased_a_gift_card_with: Du har köpt ett gåvokort på
+      climate_neutral_months:
+        one: månads klimatneutralt liv
+        other: månaders klimatneutralt liv
+      you_can_find_the_gift_card_as_an_attachmtent_to_this_mail: Vi skickar med gåvokortet som en bilaga till det här mailet. Hör gärna av dig om du har några frågor genom att svara på det här mailet. Tack igen, du är bäst!

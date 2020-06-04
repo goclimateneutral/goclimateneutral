@@ -1,3 +1,7 @@
+# This file is considered DEPRECATED. Please move changes and add new keys
+# to a file mirroring where keys are used. For example, keys used in
+# app/views/registrations/new.html.erb should go to
+# views.registrations.de.yml
 de:
   goclimateneutral_url: 'https://www.goclimate.com/de'
   site_title: GoClimate
@@ -733,24 +737,6 @@ de:
           werden vollständig von Stripe verarbeitet - voll verschlüsselt
           natürlich. Ihre Kartendaten landen zu keinem Zeitpunkt auf unseren
           Servern, sondern werden direkt von Stripe verarbeitet.
-  activerecord:
-    errors:
-      models:
-        user:
-          attributes:
-            password:
-              too_short: Das Passwort ist zu kurz. Es sollte mind. 6 Zeichen enthalten!
-              blank: 'Ups, offenbar fehlt das Passwort!'
-            email:
-              taken: >-
-                Diese E-Mail Adresse existiert bereits, versuchen Sie es mit
-                einer anderen!
-              blank: Dieses Feld scheint leer zu sein!
-              invalid: >-
-                Scheinbar ist ein Fehler aufgetreten, versuchen Sie es noch
-                einmal!
-            privacy_policy:
-              accepted: Sie müssen die Datenschutzerklärung akzeptieren
   climate_neutral_users_right_now: Klimaneutrale Nutzer zum jetzigen Zeitpunkt
   ton_co2_less_in_atmosphere: Tonnen CO2 weniger in der Atmosphäre
   for_business: Für Unternehmen
@@ -849,159 +835,6 @@ de:
     ziehen.
   best_regards: Freundliche Grüße
   gift_card_email_subject: Ihr Gutschein
-  views:
-    gift_card_mailer:
-      thank_you_for_buying_gift_card: 'Vielen Dank, dass Sie einen Gutschein gekauft haben!'
-      you_have_purchased_a_gift_card_with: Sie haben einen Gutschein gekauft für
-      download_the_gift_card_here: Laden Sie den Gutschein hier herunter
-      climate_neutral_months:
-        one: klimaneutral Monat
-        other: klimaneutrale Monate
-      you_can_find_the_gift_card_as_an_attachmtent_to_this_mail: >-
-        Sie finden den Gutschein als Anhang zu dieser E-Mail. Bitte antworten
-        Sie auf diese Mail, wenn Sie noch weitere Fragen haben. Danke nochmal!
-    gift_cards:
-      index:
-        header: Ihr nächstes Geschenk könnte ein klimaneutrales Leben sein
-        intro: >-
-          Suchen Sie nach einem Geschenk für jemanden, der bereits alles hat?
-          Möchten Sie uns helfen, etwas gegen den Klimawandel zu tun? Versuchen
-          Sie es mit unseren Geschenkgutscheinen!
-        choose_header: Wählen Sie Ihren Gutschein
-        1_months_header: 1 Monat
-        1_months_description: 1 Monat Klimaneutralität.
-        1_months_cta: Kaufen Sie einen 1-Monats-Gutschein
-        3_months_header: 3 Monate
-        3_months_description: 3 Monate Klimaneutralität.
-        3_months_cta: Kaufen Sie einen 3-Monats-Gutschein
-        6_months_header: 6 Monate
-        6_months_description: Ein halbes Jahr Klimaneutralität.
-        6_months_cta: Kaufen Sie einen 6-Monats-Gutschein
-        12_months_header: 12 Monate
-        12_months_description: Ein ganzes Jahr Klimaneutralität.
-        12_months_cta: Kaufen Sie einen 12-Monats-Gutschein
-        details_html: >-
-          Die Gutscheine basieren auf den durchschnittlichen Emissionen der
-          schwedischen Bevölkerung (11 Tonnen CO <sub>2</sub> -Äq).
-      new:
-        intro: Kaufen und personalisieren Sie Ihren Gutschein
-        your_gift_card_order: Ihre Gutscheinbestellung
-        write_a_message: >-
-          Bitte schreiben Sie eine persönliche Nachricht, die auf dem Gutschein
-          stehen soll.
-        sample_message_html: |-
-          Beispiel:
-          Hallo Mama, hier ist ein Geschenk für dich! / Jenny
-        we_will_send_you_pdf: >-
-          Wir senden Ihnen den Gutschein als PDF an die von Ihnen angegebene
-          E-Mail-Adresse.
-        gift_card_for_x_months: 'Geschenkkarte für %{months} Monate'
-        click_here_for_an_example: Klicken Sie hier für ein Beispiel
-        pay: Gutschein kaufen
-      download:
-        gift_card: Gutschein
-        gift_card_x_climate_neutral_months:
-          one: 1 klimaneutral Monat
-          other: '%{count} klimaneutrale Monate'
-        about_go_climate_neutral: >-
-          <a href='http://www.goclimate.com'>GoClimate</a>
-          unterstützt Klimaprojekte und gibt Anregungen und Tipps, wie Sie Ihren
-          Klima-Fußabdruck reduzieren können. Die von Ihnen unterstützten
-          Projekte sind UN-zertifizierte Klimaprojekte (CDM), die ebenfalls nach
-          Gold Standard zertifiziert sind. Sie werden von allen Mitgliedern der
-          UN und 80 verschiedenen Umwelt-NGOs unterstützt - darunter auch der
-          WWF. Zusammen tragen wir dazu bei, den Klimawandel zu stoppen und die
-          Welt zu retten.
-        calculation_based_on_html: >-
-          Die Berechnung basiert auf einem durchschnittlichen CO2-Ausstoß von 11
-          Tonnen CO<sub>2</sub>eq pro Person und Jahr
-        do_you_want_to_continue: >-
-          Möchten Sie auch nach Ablauf des Gutscheins ein klimaneutrales Leben
-          führen?
-        register: >-
-          Gehen Sie auf <a
-          href="http://www.goclimate.com">goclimate.com</a> und
-          registrieren Sie sich!
-      example:
-        message_html: |-
-          Hallo Mama,
-          fühlt es sich nicht gut an, dem Klima zu helfen?
-          Genieße dieses Geschenk! / Lisa
-        example: Beispiel
-      thank_you:
-        download_the_gift_card_here: Laden Sie den Gutschein hier herunter
-        download_receipt_here: Hier können Sie die Quittung herunterladen
-        you_have_purchased_a_gift_card_with_x_climate_neutral_months:
-          one: Sie haben einen Gutschein gekauft für 1 klimaneutral Monat
-          other: 'Sie haben einen Gutschein gekauft für %{count} klimaneutrale Monate'
-    offset_certificates:
-      about_go_climate_neutral: >-
-        <a href='http://www.goclimate.com'>GoClimate</a>
-        unterstützt Klimaprojekte und gibt Tipps und Anregungen, wie Sie Ihren
-        CO2-Fußabdruck reduzieren können. Unsere Projekte sind Gold Standard
-        zertifiziert und werden von 80 Umweltorganisationen unterstützt -
-        darunter der WWF.
-      do_you_want_to_continue: Möchten Sie Ihre gesamte CO2-Bilanz kompensieren?
-      register: >-
-        Gehen Sie auf <a href="http://www.goclimate.com">GoClimate</a>
-        , um sich zu registrieren!
-    flight_offsets:
-      new:
-        header: Kompensieren Sie Ihren Flug
-        header_description: >
-          CO2-Kompensation bedeutet, die Verantwortung für Ihren ökologischen
-          Fußabdruck zu übernehmen. Wir bieten Ihnen die Möglichkeit, Ihren Flug
-          mit zertifizierten Klimaprojekten zu kompensieren.
-        your_order: Ihre Bestellung
-        flight_in_cabin_class: Flug in Kabinenklasse
-        person: Person
-        people: Personen
-        total: Insgesamt
-        sum: Summe
-        submit: Kompensieren Sie Ihre Flüge!
-      thank_you:
-        header: Vielen Dank!
-        lead: >-
-          Durch die Kompensation haben Sie die Verantwortung für die CO2-Bilanz
-          Ihres Fluges übernommen.
-        download_certificate: Laden Sie Ihr Zertifikat herunter
-        download_receipt: Laden Sie Ihre Quittung herunter
-        we_have_sent_an_email: >-
-          Wir haben Ihnen Ihr Zertifikat an die von Ihnen angegebene
-          E-Mail-Adresse geschickt.
-        did_you_know_lifestyle: >-
-          Wussten Sie, dass wir Ihnen dabei helfen können, Ihren gesamten
-          CO2-Fußabdruck zu kompensieren?
-        read_more_and_subscribe: Hier können Sie mehr erfahren und sich registrieren
-    shared:
-      header:
-        region_recommendation:
-          select_country: >-
-            Wählen Sie Ihr Land oder Ihre Region aus, damit wir Ihnen die besten
-            Informationen anzeigen können.
-          continue_button: 'Weiter nach %{region}'
-      footer:
-        jobs: Jobs
-    pdfs:
-      flight_offset_certificate:
-        header: Klimaschutzzertifikat
-        lead: >-
-          Durch die Kompensation haben Sie die Verantwortung für die CO2-Bilanz
-          Ihres Fluges übernommen. Vielen Dank!
-        order_id: Auftragsnummer
-        date: Datum
-        project_type: Projektart
-      invoice_certificate:
-        header: |
-          Klimaschutzzertifikat
-        we_certify_that: 'Wir zertifizieren hiermit, dass'
-        has_carbon_offset: kompensierte
-        project_information: Projektinformation
-        name: Name
-        country: Land
-        project_id: Projekt ID
-        project_type: Projektart
-        date: Datum
   business:
     climate_reports:
       business_footprint_header: Schätzen Sie Ihre Unternehmensemissionen
@@ -1240,46 +1073,3 @@ de:
     erneuerbare Energien bei. Hier sind unsere beiden neuesten Projekte.
   tonnes_carbon_dioxide: Tonnen Kohlendioxid
   see_all_our_projects: Alle unsere Projekte ansehen
-  mailers:
-    flight_offset:
-      subject: Ihr Zertifikat
-      thank_you: 'Danke, dass Sie Ihren Flug kompensiert haben!'
-      you_have_offset: Sie haben
-      tonnes_co2e: Tonnen CO2 kompensiert
-      certificate_is_attached: >
-        Ihr Zertifikat ist an diese E-Mail angehängt. Wenn Sie Fragen haben,
-        antworten Sie einfach auf diese E-Mail - wir helfen Ihnen gerne weiter!
-        Nochmals vielen Dank, Sie sind großartig!
-    business:
-      climate_report_email:
-        subject: Teilen Sie Ihre Klimabilanz mit Ihrem Team.
-        thank_you: |
-          Vielen Dank für die Berechnung Ihrer Klimabilanz!
-        link_description: >-
-          Um es einfacher zu machen, die Ergebnisse mit Ihrem Team zu teilen und
-          später darauf zurückzukommen, gibt es hier einen Link zu den
-          Ergebnissen:
-        reply_to_this_email: >-
-          Wenn Sie Fragen haben, antworten Sie einfach auf diese E-Mail. Wir
-          helfen Ihnen gerne weiter!
-  helpers:
-    application:
-      precise_co2e_string_tonnes: '%{tonnes} Tonnen CO2-Äquivalent'
-      precise_co2e_string_kg: '%{co2e} Kilogramm CO2-Äquivalent'
-  models:
-    money:
-      currency_formats:
-        usd: |
-          $%{number}
-        eur: '%{number} €'
-    currency:
-      prefix:
-        usd: $
-        eur: €
-    greenhouse_gases:
-      tonnes:
-        one: '%{count} Tonnen CO2e'
-        other: '%{count} Tonnen CO2e'
-      kg:
-        one: '%{count} kg CO2e'
-        other: '%{count} kg CO2e'

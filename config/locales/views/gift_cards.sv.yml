@@ -1,0 +1,55 @@
+sv:
+  views:
+    gift_cards:
+      index:
+        header: Låt din nästa present bli ett klimatneutralt liv
+        intro:
+          Letar du efter en present till någon som redan har allt? Vill du hjälpa till att sprida kunskapen om att det finns något som vi alla kan göra för att bromsa klimatförändringarna? Ge bort vårt klimat-gåvokort!
+        choose_header: Välj ditt klimat-gåvokort
+        1_months_header: 1 månad
+        1_months_description: 1 månads klimatneutralt liv
+        1_months_cta: Välj 1 månads gåvokort
+        3_months_header: 3 månader
+        3_months_description: 3 månader klimatneutralt liv
+        3_months_cta: Välj 3 månaders gåvokort
+        6_months_header: 6 månader
+        6_months_description: Ett halvår klimatneutralt liv
+        6_months_cta: Välj 6 månaders gåvokort
+        12_months_header: 12 månader
+        12_months_description: Ett helt år klimatneutralt liv
+        12_months_cta: Välj 12 månaders gåvokort
+        details_html: "Gåvokorten är baserade på en medelsvensks klimatavtryck - 11 ton CO<sub>2</sub>eq. För att vara på säkra sidan - och för att våran planet behöver det - så dubblar vi även alla våra uträkningar och bygger därför kalkylerna ovan på utsläpp på 22 ton CO<sub>2</sub>eq."
+      new:
+        intro: Anpassa och betala för ditt gåvokort
+        your_gift_card_order: Ditt gåvokort
+        write_a_message: Personligt meddelande
+        sample_message_html: "Exempel:\nHej Mamma! Här är ett gåvokort till dig! /Jenny"
+        we_will_send_you_pdf:
+          Efter betalning kommer vi att mejla gåvokortet till dig som en PDF fil.
+          Sen kan du ge gåvokortet till mottagaren på det sätt som passar dig.
+        gift_card_for_x_months: Gåvokort på %{months} månader
+        click_here_for_an_example: Klicka här för ett exempel
+        pay: Betala gåvokortet
+      download:
+        gift_card: "Gåvokort"
+        gift_card_x_climate_neutral_months:
+          one: 1 klimatneutral månad
+          other: "%{count} klimatneutrala månader"
+        about_go_climate_neutral:
+          <a href='http://www.goclimate.com'>GoClimate</a> stöttar klimatprojekt och tipsar
+          och inspirerar om enkla sätt att minska sin klimatpåverkan.
+          Projekten är FN- och Gold Standard-certifierade och har
+          FNs alla medlemsstater och 80 miljöorganisationer i ryggen - bland annat Världsnaturfonden.
+          Genom denna gåva bidrar du till att bromsa klimatförändringarna.
+        calculation_based_on_html: "Beräkningen bygger på genomsnittligt klimatavtryck på 11 ton CO<sub>2</sub>eq per person och år"
+        do_you_want_to_continue: Vill du fortsätta att leva klimatneutralt efter att gåvokortet gått ut?
+        register: Gå in på <a href="http://www.goclimate.com">goclimate.com</a> och registrera dig!
+      example:
+        message_html: "Hej Mamma!\nVisst känns det bra att hjälpa klimatet?\n/Lisa"
+        example: "Exempel"
+      thank_you:
+        download_the_gift_card_here: Ladda ner gåvokortet här
+        download_receipt_here: Ladda ner kvitto här
+        you_have_purchased_a_gift_card_with_x_climate_neutral_months:
+          one: Du har köpt ett gåvokort på 1 månads klimatneutralt liv
+          other: "Du har köpt ett gåvokort på %{count} månaders klimatneutralt liv"

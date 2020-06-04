@@ -1,0 +1,11 @@
+de:
+  views:
+    shared:
+      header:
+        region_recommendation:
+          select_country: >-
+            Wählen Sie Ihr Land oder Ihre Region aus, damit wir Ihnen die besten
+            Informationen anzeigen können.
+          continue_button: 'Weiter nach %{region}'
+      footer:
+        jobs: Jobs

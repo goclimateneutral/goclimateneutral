@@ -1,0 +1,14 @@
+en:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+              password:
+                too_short: The password is too short, please try at least 6 characters!
+                blank: Wops, the password looks like it´s empty!
+              email:
+                taken: The email address already exists, try another one!
+                invalid: The email looks incorrect, try again!
+              privacy_policy:
+                accepted: You need to accept the pricacy policy

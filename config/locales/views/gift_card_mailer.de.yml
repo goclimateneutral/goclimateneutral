@@ -1,0 +1,12 @@
+de:
+  views:
+    gift_card_mailer:
+      thank_you_for_buying_gift_card: 'Vielen Dank, dass Sie einen Gutschein gekauft haben!'
+      you_have_purchased_a_gift_card_with: Sie haben einen Gutschein gekauft für
+      download_the_gift_card_here: Laden Sie den Gutschein hier herunter
+      climate_neutral_months:
+        one: klimaneutral Monat
+        other: klimaneutrale Monate
+      you_can_find_the_gift_card_as_an_attachmtent_to_this_mail: >-
+        Sie finden den Gutschein als Anhang zu dieser E-Mail. Bitte antworten
+        Sie auf diese Mail, wenn Sie noch weitere Fragen haben. Danke nochmal!

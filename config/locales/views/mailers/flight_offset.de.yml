@@ -1,0 +1,11 @@
+de:
+  mailers:
+    flight_offset:
+      subject: Ihr Zertifikat
+      thank_you: 'Danke, dass Sie Ihren Flug kompensiert haben!'
+      you_have_offset: Sie haben
+      tonnes_co2e: Tonnen CO2 kompensiert
+      certificate_is_attached: >
+        Ihr Zertifikat ist an diese E-Mail angehängt. Wenn Sie Fragen haben,
+        antworten Sie einfach auf diese E-Mail - wir helfen Ihnen gerne weiter!
+        Nochmals vielen Dank, Sie sind großartig!

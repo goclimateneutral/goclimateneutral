@@ -1,0 +1,19 @@
+sv:
+  views:
+    pdfs:
+      flight_offset_certificate:
+        header: Klimatkompensation
+        lead: Genom att klimatkompensera har du tagit ansvar för din flygresas klimatavtryck. Stort tack!
+        order_id: Order ID
+        date: Datum
+        project_type: Projekttyp
+      invoice_certificate:
+        header: Certifikat klimatkompensation
+        we_certify_that: Härmed intygas att
+        has_carbon_offset: har klimatkompenserat
+        project_information: Projektinformation
+        name: Namn
+        country: Land
+        project_id: Projekt ID
+        project_type: Projekttyp
+        date: Datum

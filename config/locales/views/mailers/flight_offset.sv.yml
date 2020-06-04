@@ -1,0 +1,8 @@
+sv:
+  mailers:
+    flight_offset:
+      subject: Ditt certifikat
+      thank_you: Tack för att du klimatkompenserat din flygresa!
+      you_have_offset: Du har kompenserat för
+      tonnes_co2e: ton koldioxid
+      certificate_is_attached: Ditt certifikat hittar du som en bilaga i det här mailet. Hör gärna av dig om du har några frågor genom att svara på det här mailet. Tack igen, du är bäst!

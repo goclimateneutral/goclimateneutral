@@ -1,0 +1,63 @@
+sv:
+  views:
+    lifestyle_footprints:
+      title: Beräkna ditt klimatavtryck
+      questions:
+        region: Vilken region bor du i?
+        home: Hur bor du?
+        heating: Hur värmer du ditt hem?
+        green_electricity: Har du valt grön el?
+        food: Hur äter du vanligtvis?
+        car_type: Vilken typ av bil åker du?
+        car_distance: Hur långt åker du i bil en genomsnittlig vecka?
+        flight_hours: Hur många timmar har du rest med flyg under det senaste året?
+      options:
+        region:
+          other: Annan
+        home:
+          house: Hus
+          apartment: Lägenhet
+          one_or_two_bedrooms: 1-2 sovrum
+          three_or_four_bedrooms: 3-4 sovrum
+          five_or_more_bedrooms: 5+ sovrum
+          fifteen_sqm: 15 m² per person
+          twentyfive_sqm: 25 m² per person
+          fortytwo_sqm: 42 m² per person
+          sixty_sqm: 60 m² per person
+          eighty_sqm: 80 m² per person
+        heating:
+          electricity: Eluppvärmning
+          natural_gas: Naturgas
+          district: Fjärrvärme
+          coal: Kol
+          biomass: Biobränsle
+          environmental_or_solar: Förnybart eller solenergi
+          airpump: Luftvärmepump
+          geothermal: Bergvärmepump
+          dont_know: Vet inte/annat
+        green_electricity:
+          'yes': Ja
+          seventyfive_percent: 75% grön el
+          fifty_percent: 50% grön el
+          twentyfive_percent: 25% grön el
+          'no': Nej
+          dont_know: Vet inte
+        food:
+          vegan: Växtbaserat
+          vegetarian: Vegetarian
+          pescetarian: Äter fisk men inte kött
+          meat_low: Lite kött (mindre än 50 g/dag)
+          meat_medium: Köttätare
+          meat_high: Mycket kött (mer än 100 g/dag)
+        car_type:
+          gas: Bensin
+          petrol: Bensin
+          diesel: Diesel
+          hybrid_plugin: Plug in-hybrid
+          etanol: Etanol (E85)
+          electric: Elbil
+          hvo_electric: Elbil or HVO
+          vehicle_gas: Fordonsgas
+          no_car: Jag åker inte bil
+      next: Nästa
+      back: Tillbaka
