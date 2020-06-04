@@ -2,6 +2,7 @@
 
 class LifestyleCalculator < ApplicationRecord # rubocop:disable Metrics/ClassLength
   CATEGORIES = [:housing, :food, :car, :flights, :consumption, :public].freeze
+  # TODO: house_age is unused and should be removed
   OPTION_QUESTIONS = [:region, :home, :heating, :house_age, :green_electricity, :food, :car_type].freeze
   INTEGER_QUESTIONS = [:car_distance, :flight_hours].freeze
 

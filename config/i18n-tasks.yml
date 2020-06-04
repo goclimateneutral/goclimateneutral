@@ -94,6 +94,7 @@ ignore_missing:
 - 'activerecord.errors.*{accepted,blank,invalid,too_short,too_long}'
 - 'models.currency.{suffix,prefix}.*'
 - 'models.money.currency_formats.*'
+- 'moment' # Inlined & minified JS code happen to require moment with a function call that got the minified name 't'
 # - '{devise,simple_form}.*'
 
 # Consider these keys used:

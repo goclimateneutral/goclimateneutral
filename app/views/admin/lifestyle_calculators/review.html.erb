@@ -53,21 +53,6 @@
     </div>
   <% end %>
 
-  <% if @calculator.house_age_options.present? %>
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <h3 style="margin-top: 10px;"><%=t 'views.lifestyle_footprints.questions.house_age' %></h3>
-        <% @calculator.house_age_options.each do |option| %>
-          <p>
-            <span class="btn btn-default">
-              <%=t "views.lifestyle_footprints.options.house_age.#{option['key']}" %>
-            </span>
-          </p>
-        <% end %>
-      </div>
-    </div>
-  <% end %>
-
   <% if @calculator.green_electricity_options.present? %>
     <div class="panel panel-default">
       <div class="panel-body">

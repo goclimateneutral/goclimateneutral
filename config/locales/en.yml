@@ -41,6 +41,8 @@ en:
   100_percent_transparency_financial_info_intro: GoClimateNeutral Sweden AB (registration number 559130-6583) was started 2017 with a focus on social entrepreneurship and the sole ambition and goal to try to slow down climate change as fast as possible.
   fiscal_years: Fiscal Years
   fiscal_year_2020_ongoing: Fiscal Year 2020 (ongoing)
+  financials: Financials
+  year: Year
   revenue: Revenue
   cost: Cost
   result: Result
@@ -876,6 +878,8 @@ en:
       calculate_button: See my business footprint
       read_more_about_calculations: Read more about the calculations here
       total: Total
+      car: Car
+      flight: Flights
       average: average
       show:
         header: Your business footprint
