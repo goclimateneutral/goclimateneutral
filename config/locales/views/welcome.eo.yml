@@ -1,0 +1,74 @@
+eo:
+  views:
+    welcome:
+      index:
+        hero:
+          heading: crwdns2754:0crwdne2754:0
+          body_text: crwdns2756:0crwdne2756:0
+        how_it_works:
+          bullets:
+            bullet_1_heading: crwdns2758:0crwdne2758:0
+            bullet_1_text: crwdns2760:0crwdne2760:0
+            bullet_2_heading: crwdns2762:0crwdne2762:0
+            bullet_2_text: crwdns2764:0crwdne2764:0
+            bullet_3_heading: crwdns2766:0crwdne2766:0
+            bullet_3_text: crwdns2768:0crwdne2768:0
+        about_us:
+          heading: crwdns2770:0crwdne2770:0
+          body_text: crwdns2772:0crwdne2772:0
+          read_more: crwdns2774:0crwdne2774:0
+        projects:
+          heading: crwdns2776:0crwdne2776:0
+          body_text_1: crwdns2778:0crwdne2778:0
+          body_text_2: crwdns2780:0crwdne2780:0
+          body_text_3: crwdns2782:0crwdne2782:0
+          body_text_4: crwdns2784:0crwdne2784:0
+          read_more: crwdns2786:0crwdne2786:0
+        transparency:
+          heading: crwdns2788:0crwdne2788:0
+          body_text: crwdns2790:0crwdne2790:0
+          read_more: crwdns2792:0crwdne2792:0
+        climate_tips:
+          heading: crwdns2794:0crwdne2794:0
+          clothes_last_longer: crwdns2796:0crwdne2796:0
+          reduce_carbon_footprint_food: crwdns2798:0crwdne2798:0
+          civil_disobedience: crwdns2800:0crwdne2800:0
+          climate_friendly_housing_cooperative: crwdns2802:0crwdne2802:0
+          climate_friendly_pension_saving: crwdns2804:0crwdne2804:0
+          read_more: crwdns2806:0crwdne2806:0
+        community:
+          heading: crwdns2808:0crwdne2808:0
+          people:
+            annelie:
+              title: crwdns2810:0crwdne2810:0
+              quote: crwdns2812:0crwdne2812:0
+            mattias:
+              title: crwdns2814:0crwdne2814:0
+              quote: crwdns2816:0crwdne2816:0
+            shelbi:
+              title: crwdns2818:0crwdne2818:0
+              quote: crwdns2820:0crwdne2820:0
+        calculate_to_sign_up: crwdns2822:0crwdne2822:0
+        i_live_in: crwdns2824:0crwdne2824:0
+        get_started: crwdns2826:0crwdne2826:0
+        our_projects_header: crwdns2828:0crwdne2828:0
+        our_projects_lead: crwdns2830:0crwdne2830:0
+        our_projects_link: crwdns2832:0crwdne2832:0
+      travel_calculator:
+        travel_emissions_calculator: crwdns2834:0crwdne2834:0
+        travel_emissions_calculator_description: crwdns2836:0crwdne2836:0
+        distance_in_kilometers: crwdns2838:0crwdne2838:0
+        calculate: crwdns2840:0crwdne2840:0
+        emissions_if_traveling_by: crwdns2842:0crwdne2842:0
+        flight: crwdns2844:0crwdne2844:0
+        car_petrol: crwdns2846:0crwdne2846:0
+        car_diesel: crwdns2848:0crwdne2848:0
+        car_etanol: crwdns2850:0crwdne2850:0
+        car_gas: crwdns2852:0crwdne2852:0
+        car_electric: crwdns2854:0crwdne2854:0
+        bus: crwdns2856:0crwdne2856:0
+        train: crwdns2858:0crwdne2858:0
+        subway: crwdns2860:0crwdne2860:0
+        boat: crwdns2862:0crwdne2862:0
+        offset_the_emissions_here: >
+          crwdns2864:0crwdne2864:0
