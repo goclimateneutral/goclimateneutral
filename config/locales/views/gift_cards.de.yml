@@ -3,10 +3,7 @@ de:
     gift_cards:
       index:
         header: Ihr nächstes Geschenk könnte ein klimaneutrales Leben sein
-        intro: >-
-          Suchen Sie nach einem Geschenk für jemanden, der bereits alles hat?
-          Möchten Sie uns helfen, etwas gegen den Klimawandel zu tun? Versuchen
-          Sie es mit unseren Geschenkgutscheinen!
+        intro: Suchen Sie nach einem Geschenk für jemanden, der bereits alles hat? Möchten Sie uns helfen, etwas gegen den Klimawandel zu tun? Versuchen Sie es mit unseren Geschenkgutscheinen!
         choose_header: Wählen Sie Ihren Gutschein
         1_months_header: 1 Monat
         1_months_description: 1 Monat Klimaneutralität.
@@ -20,56 +17,30 @@ de:
         12_months_header: 12 Monate
         12_months_description: Ein ganzes Jahr Klimaneutralität.
         12_months_cta: Kaufen Sie einen 12-Monats-Gutschein
-        details_html: >-
-          Die Gutscheine basieren auf den durchschnittlichen Emissionen der
-          schwedischen Bevölkerung (11 Tonnen CO <sub>2</sub> -Äq).
+        details_html: "Die Gutscheine basieren auf den durchschnittlichen Emissionen der schwedischen Bevölkerung (11 Tonnen CO <sub>2</sub> -Äq)."
       new:
         intro: Kaufen und personalisieren Sie Ihren Gutschein
         your_gift_card_order: Ihre Gutscheinbestellung
-        write_a_message: >-
-          Bitte schreiben Sie eine persönliche Nachricht, die auf dem Gutschein
-          stehen soll.
-        sample_message_html: |-
-          Beispiel:
-          Hallo Mama, hier ist ein Geschenk für dich! / Jenny
-        we_will_send_you_pdf: >-
-          Wir senden Ihnen den Gutschein als PDF an die von Ihnen angegebene
-          E-Mail-Adresse.
-        click_here_for_an_example: Klicken Sie hier für ein Beispiel
+        write_a_message: Bitte schreiben Sie eine persönliche Nachricht, die auf dem Gutschein stehen soll.
+        sample_message_html: "Beispiel:\nHallo Mama, hier ist ein Geschenk für dich! / Jenny"
+        we_will_send_you_pdf: Wir senden Ihnen den Gutschein als PDF an die von Ihnen angegebene E-Mail-Adresse.
+        click_here_for_an_example: "Klicken Sie hier für ein Beispiel"
         pay: Gutschein kaufen
       download:
-        gift_card: Gutschein
+        gift_card: "Gutschein"
         gift_card_x_climate_neutral_months:
           one: 1 klimaneutral Monat
-          other: '%{count} klimaneutrale Monate'
-        about_go_climate_neutral: >-
-          <a href='http://www.goclimate.com'>GoClimate</a>
-          unterstützt Klimaprojekte und gibt Anregungen und Tipps, wie Sie Ihren
-          Klima-Fußabdruck reduzieren können. Die von Ihnen unterstützten
-          Projekte sind UN-zertifizierte Klimaprojekte (CDM), die ebenfalls nach
-          Gold Standard zertifiziert sind. Sie werden von allen Mitgliedern der
-          UN und 80 verschiedenen Umwelt-NGOs unterstützt - darunter auch der
-          WWF. Zusammen tragen wir dazu bei, den Klimawandel zu stoppen und die
-          Welt zu retten.
-        calculation_based_on_html: >-
-          Die Berechnung basiert auf einem durchschnittlichen CO2-Ausstoß von 11
-          Tonnen CO<sub>2</sub>eq pro Person und Jahr
-        do_you_want_to_continue: >-
-          Möchten Sie auch nach Ablauf des Gutscheins ein klimaneutrales Leben
-          führen?
-        register: >-
-          Gehen Sie auf <a
-          href="http://www.goclimate.com">goclimate.com</a> und
-          registrieren Sie sich!
+          other: "%{count} klimaneutrale Monate"
+        about_go_climate_neutral: <a href='http://www.goclimate.com'>GoClimate</a> unterstützt Klimaprojekte und gibt Anregungen und Tipps, wie Sie Ihren Klima-Fußabdruck reduzieren können. Die von Ihnen unterstützten Projekte sind UN-zertifizierte Klimaprojekte (CDM), die ebenfalls nach Gold Standard zertifiziert sind. Sie werden von allen Mitgliedern der UN und 80 verschiedenen Umwelt-NGOs unterstützt - darunter auch der WWF. Zusammen tragen wir dazu bei, den Klimawandel zu stoppen und die Welt zu retten.
+        calculation_based_on_html: "Die Berechnung basiert auf einem durchschnittlichen CO2-Ausstoß von 11 Tonnen CO<sub>2</sub>eq pro Person und Jahr"
+        do_you_want_to_continue: Möchten Sie auch nach Ablauf des Gutscheins ein klimaneutrales Leben führen?
+        register: Gehen Sie auf <a href="http://www.goclimate.com">goclimate.com</a> und registrieren Sie sich!
       example:
-        message_html: |-
-          Hallo Mama,
-          fühlt es sich nicht gut an, dem Klima zu helfen?
-          Genieße dieses Geschenk! / Lisa
-        example: Beispiel
+        message_html: "Hallo Mama,\nfühlt es sich nicht gut an, dem Klima zu helfen?\nGenieße dieses Geschenk! / Lisa"
+        example: "Beispiel"
       thank_you:
         download_the_gift_card_here: Laden Sie den Gutschein hier herunter
         download_receipt_here: Hier können Sie die Quittung herunterladen
         you_have_purchased_a_gift_card_with_x_climate_neutral_months:
           one: Sie haben einen Gutschein gekauft für 1 klimaneutral Monat
-          other: 'Sie haben einen Gutschein gekauft für %{count} klimaneutrale Monate'
+          other: "Sie haben einen Gutschein gekauft für %{count} klimaneutrale Monate"

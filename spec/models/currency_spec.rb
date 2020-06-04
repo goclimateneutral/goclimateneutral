@@ -20,4 +20,88 @@ RSpec.describe Currency do
       expect(described_class.from_iso_code('')).to be_nil
     end
   end
+
+  describe '.prefix' do
+    let(:translations) do
+      {
+        models: { currency: { prefix: { usd: nil } } }
+      }
+    end
+
+    around do |example|
+      with_translations(I18n.locale, translations) do
+        example.run
+      end
+    end
+
+    it 'returns nothing by default' do
+      expect(described_class.from_iso_code(:usd).prefix).to be_nil
+    end
+
+    context 'when localized as DEFAULT' do
+      let(:translations) do
+        {
+          models: { currency: { prefix: { usd: 'DEFAULT' } } }
+        }
+      end
+
+      it 'returns nothing' do
+        expect(described_class.from_iso_code(:usd).prefix).to be_nil
+      end
+    end
+
+    context 'when localized' do
+      let(:translations) do
+        {
+          models: { currency: { prefix: { usd: '$' } } }
+        }
+      end
+
+      it 'returns localized prefix' do
+        expect(described_class.from_iso_code(:usd).prefix).to eq('$')
+      end
+    end
+  end
+
+  describe '.suffix' do
+    let(:translations) do
+      {
+        models: { currency: { suffix: { sek: nil } } }
+      }
+    end
+
+    around do |example|
+      with_translations(I18n.locale, translations) do
+        example.run
+      end
+    end
+
+    it 'returns nothing by default' do
+      expect(described_class.from_iso_code(:sek).suffix).to be_nil
+    end
+
+    context 'when localized as DEFAULT' do
+      let(:translations) do
+        {
+          models: { currency: { suffix: { sek: 'DEFAULT' } } }
+        }
+      end
+
+      it 'returns nothing' do
+        expect(described_class.from_iso_code(:sek).suffix).to be_nil
+      end
+    end
+
+    context 'when localized' do
+      let(:translations) do
+        {
+          models: { currency: { suffix: { sek: 'kr' } } }
+        }
+      end
+
+      it 'returns localized suffix' do
+        expect(described_class.from_iso_code(:sek).suffix).to eq('kr')
+      end
+    end
+  end
 end

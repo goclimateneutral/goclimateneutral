@@ -15,18 +15,18 @@ sv:
             bullet_3_text: Vi finansierar projekt som minskar mängden koldioxid i atmosfären.
         about_us:
           heading: Tillsammans kan vi göra skillnad för planeten redan idag
-          body_text: Vi stöttar klimatprojekt med certifieringar som FN och Världsnaturfonden står bakom - och tipsar om enkla sätt att minska ditt klimatavtryck. 
+          body_text: Vi stöttar klimatprojekt med certifieringar som FN och Världsnaturfonden står bakom - och tipsar om enkla sätt att minska ditt klimatavtryck.
           read_more: Läs mer om oss
         projects:
-          heading: Vart går pengarna? 
+          heading: Vart går pengarna?
           body_text_1: Du är med och finansierar klimatprojekt motsvarande ditt personliga klimatavtryck.
           body_text_2: Projekten bidrar till den globala omställningen till förnyelsebara energikällor.
           body_text_3: Vi handplockar de projekt som ger mest nytta för pengarna och bidrar till så många av FN:s hållbarhetsmål som möjligt.
           body_text_4: Vi är 100% transparenta med alla våra utgifter.
-          read_more: Läs mer om projekten 
+          read_more: Läs mer om projekten
         transparency:
           heading: 100% transparens
-          body_text: Vi vill att du ska känna dig helt trygg med hur dina pengar används, därför har vi total finansiell transparens. Vi redovisar löpande alla våra omkostnader och utgifter här på siten, för att du ska kunna ta del av hur pengarna gör största möjliga klimatnytta. 
+          body_text: Vi vill att du ska känna dig helt trygg med hur dina pengar används, därför har vi total finansiell transparens. Vi redovisar löpande alla våra omkostnader och utgifter här på siten, för att du ska kunna ta del av hur pengarna gör största möjliga klimatnytta.
           read_more: Läs mer om vår transparens
         climate_tips:
           heading: Klimattips
@@ -35,7 +35,7 @@ sv:
           civil_disobedience: Civil olydnad för klimatet?
           climate_friendly_housing_cooperative: Klimatsmart bostadsrättsförening - så gör du skillnad
           climate_friendly_pension_saving: Fossilfritt pensionssparande
-          read_more: Läs mer 
+          read_more: Läs mer
         community:
           heading: Lär känna våra medlemmar
           people:
@@ -70,4 +70,4 @@ sv:
         train: Tåg
         subway: Tunnelbana
         boat: Båt
-        offset_the_emissions_here: Kompensera för utsläppen här ->
+        offset_the_emissions_here: 'Kompensera för utsläppen här ->'

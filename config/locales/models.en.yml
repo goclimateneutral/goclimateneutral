@@ -4,17 +4,23 @@ en:
       currency_formats:
         usd: '$%{number}'
         eur: '€%{number}'
+        sek: 'DEFAULT'
     currency:
       prefix:
-        usd: $
-        eur: €
+        usd: '$'
+        eur: '€'
+        sek: 'DEFAULT'
+      suffix:
+        usd: 'DEFAULT'
+        eur: 'DEFAULT'
+        sek: 'DEFAULT'
     greenhouse_gases:
       tonnes:
-        one: "%{count} tonne CO2e"
-        other: "%{count} tonnes CO2e"
+        one: '%{count} tonne CO2e'
+        other: '%{count} tonnes CO2e'
       kg:
-        one: "%{count} kg CO2e"
-        other: "%{count} kg CO2e"
+        one: '%{count} kg CO2e'
+        other: '%{count} kg CO2e'
     project:
       offset_type:
         'GS': Gold Standard certified

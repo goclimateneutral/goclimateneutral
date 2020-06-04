@@ -48,10 +48,15 @@ class Money
     formatted_number = ActiveSupport::NumberHelper.number_to_currency(amount, formatting_options)
 
     localized_string = I18n.t(
-      "models.money.currency_formats.#{currency.iso_code}", number: formatted_number, default: '', fallback: false
-    ).presence
+      "models.money.currency_formats.#{currency.iso_code}",
+      number: formatted_number, default: 'DEFAULT', fallback: false
+    )
 
-    localized_string || "#{currency} #{formatted_number}"
+    if localized_string == 'DEFAULT'
+      "#{currency} #{formatted_number}"
+    else
+      localized_string
+    end
   end
 
   def inspect

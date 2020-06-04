@@ -14,11 +14,13 @@ Currency = Struct.new(:iso_code) do
   end
 
   def prefix
-    I18n.translate("models.currency.prefix.#{iso_code}", default: '', fallback: false)
+    prefix = I18n.translate("models.currency.prefix.#{iso_code}", default: 'DEFAULT', fallback: false)
+    prefix unless prefix == 'DEFAULT'
   end
 
   def suffix
-    I18n.translate("models.currency.suffix.#{iso_code}", default: '', fallback: false)
+    suffix = I18n.translate("models.currency.suffix.#{iso_code}", default: 'DEFAULT', fallback: false)
+    suffix unless suffix == 'DEFAULT'
   end
 end
 
