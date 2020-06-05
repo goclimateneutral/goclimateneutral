@@ -4,7 +4,6 @@
 #views.registrations.en.yml
 sv:
   goclimateneutral_url: https://www.goclimate.org/se
-  site_title: GoClimate
   climate_change_is_the_greatest_challange: Klimatförändringar är det största hotet som vår generation någonsin ställts inför. Tillsammans kan vi bromsa klimatförändringarna och rädda världen, OM vi agerar nu.
   log_in: Logga in
   log_out: Logga ut
@@ -129,7 +128,6 @@ sv:
     one: klimatneutral månad
     other: klimatneutrala månader
   climate_country_toplist: Topplista klimatneutrala länder
-  read_more_about_investments_on_our_blog: Läs mer om projekten vi investerar i på vår blogg >>
   total_carbon_offset_by_us: Totalt har vi minskat utsläpp på
   tonnes_CO2: ton CO2
   tonnes: ton
@@ -158,7 +156,6 @@ sv:
   the_payment_unfortunately_failed: Betalningen misslyckades tyvärr
   no_worries_we_will_try_again_within_a_few_days: Det är ingen fara. Vi försöker genomföra betalningen igen under de närmaste dagarna.
   you_might_need_to_update_your_payment_info: Om du vill fortsätta att leva ett klimatneutralt liv med oss kan du behöva uppdatera din betalningsinformation.
-  link_to_update_your_payment_info: Uppdatera betalningsinformationen här >>
   this_mail_was_sent_by: Det här mailet skickades av
   to_stop_recieving_these_emails: För att sluta få de här mailen
   click_here: klicka här
@@ -170,16 +167,17 @@ sv:
   x_months:
     one: 1 månad
     other: "%{count} månader"
+  years:
+    one: år
+    other: år
   together_we_have_offset: Vi har nu minskat världens klimatutsläpp med
   goclimateneutral_and_this_planet_loves_you: GoClimate och den här planeten älskar dig! Tack! Du är bäst!
-  learn_more_about_what_we_have_achieved_here: Läs mer om hur det går för oss här >>
   thank_you: Stort Tack!
   the_best_way_to_help_is_to_get_as_many_people_climate_neutral_as_possible: 'Dela gärna det här med dina vänner, ju fler vi blir, desto större är chansen att vi lyckas bromsa klimatförändringarna!'
   press_images: Pressbilder
   press_social_images: Sociala medier
   press_credits: Illustrationerna är skapade av Henrik Kniberg och har Creative Commons-licens.
   im_in: Ja, tack!
-  press: Press
   faq: Frågor & Svar
   faq_questions:
     questions:
@@ -245,13 +243,8 @@ sv:
         answer: Vi använder oss av Stripe (<a href="https://stripe.com/se">stripe.com</a>) som betalningsleverantör, som är en av de största betalningsleverantörerna på nätet. Kortuppgifterna och betalningarna hanteras helt och hållet av dem - helt krypterat förstås. Kortuppgifterna hamnar aldrig på våra eller någon annans servrar, utan hanteras endast utav Stripe.
   for_business: För företag
   thats_amazing_from_the_bottom_of_our_hearts: Vilket är fantastiskt! Från djupet av våra hjärtan
-  years:
-    one: år
-    other: år
-
   navigation:
     gift_cards: Gåvokort
-
   welcome:
     caption_line_1: Tillsammans räddar vi klimatet.
     caption_line_2: Ta ansvar för dina utsläpp idag!
