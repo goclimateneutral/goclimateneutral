@@ -4,7 +4,6 @@
 #views.registrations.en.yml
 de:
   goclimateneutral_url: https://www.goclimate.com/de
-  site_title: GoClimate
   climate_change_is_the_greatest_challange: Der Klimawandel ist eine der größten Herausforderungen unserer Zeit. Gemeinsam haben wir eine Chance, unseren Kindern die Zukunft auf diesem Planeten zu geben, die sie verdienen. Aber dafür müssen wir jetzt handeln.
   log_in: EINLOGGEN
   log_out: Ausloggen
@@ -50,7 +49,6 @@ de:
   about_us_who_are_we_stefan_html: Agiler Team- und Organisationscoach. Etwas zu idealistischer Pragmatiker.
   about_us_who_are_we_alexandra_html: Umweltwissenschaftler mit langjähriger internationaler Erfahrung. Angetrieben von Neugierde und dem Willen, die Welt zu retten - einen Schritt nach dem anderen. Sie tanzen und laufen durch den Wald, um neue Energie zu tanken.
   about_us_who_are_we_evelina_html: Ist öffentliche Rednerin und freie Autorin im Bereich Nachhaltigkeit und nachhaltiges Reisen. Klimaaktivistin und Veganerin, die gerne wandert.
-  blog: Blog
   we_are_100_transparent: Wir sind zu 100% transparent
   section_3_text: Wir bieten eine 100 %ige Transparenz, in welche UN- und Gold Standard-zertifizierte Projekte wir investieren und warum. Außerdem bieten wir 100 %ige Transparenz was die Menge an Emissionen angeht, die wir in Ihrem Namen und insgesamt ausgleichen.
   email: E-Mail
@@ -141,6 +139,9 @@ de:
   x_months:
     one: 1 Monat
     other: "%{count} Monaten"
+  years:
+    one: Jahr
+    other: Jahr
   together_we_have_offset: Unsere gemeinsamen Klimakompensationen
   goclimateneutral_and_this_planet_loves_you: GoClimate und unser Planet lieben Sie! Sie sind großartig!
   learn_more_about_what_we_have_achieved_here: 'Erfahren Sie hier mehr darüber, was wir bereits geschafft haben >>'
@@ -151,7 +152,6 @@ de:
   press_credits: Diese Illustrationen stammen von Henrik Kniberg und sind Creative Commons-lizensiert.
   im_in: Ich bin dabei!
   press: Presse
-  faq: FAQ
   faq_questions:
     questions:
       q1:
@@ -164,7 +164,7 @@ de:
         question: Was bedeutet CO2-Kompensation?
         answer: "<img alt='' class='aligncenter wp-image-227 size-large' src='https://www.goclimate.com/blog/wp-content/uploads/2017/09/FB_Oops_white_1200x630-d58e3700b4fb069143586d246a82e162eb73203d243fb3b072a80289794101f8-1024x538.jpg' /> <br><br> CO2-Kompensation ist eine Möglichkeit, für die Emissionen, die man verursacht, Verantwortung zu übernehmen. Fahren eines Autos, Nutzung von Flugzeugen und Verzehr von Fleisch verursachen relativ hohe CO2-Emissionen, die den Klimawandel voran treiben - was wiederum zu Erderwärmung führt. <br><br> Bei der CO2-Kompensation zahlt man für die Menge an CO2, die man verursacht. Dieses Geld wird in Klimaprojekte investiert, die die gleiche Menge an CO2 reduzieren, die man selbst verursacht hat, sodass die Summe der Emissionen gleich Null oder weniger ist. Verringern kann man die Emissionen entweder, indem man Menschen dabei hilft, ihre Emissionen zu reduzieren, oder indem man Emissionen in der Atmosphäre beseitigt. <br><br> CO2-Kompensation wird häufig durch Klimaprojekte in Entwicklungsländern umgesetzt - z.B. in Form von Energieeffizienzprojekten oder Wind- bzw. Solaranlagen. <br><br> Um sicher sein zu können, tatsächlich einen positiven Klimaeffekt zu erzielen, sollten diese Projekte verlässliche Zertifizierungen aufweisen können. Die verlässlichsten sind UN- und Gold Standard-zertifizierte Projekte (dahinter stehen u.a. WWF). <br><br> Wir bei GoClimate helfen Ihnen mit UN- und Gold Standard-zertifizierten Projekten, Ihre Emissionen zu verringern."
       q4:
-        question: Bringt CO2-Kompensation überhaupt etwas? 
+        question: Bringt CO2-Kompensation überhaupt etwas?
         answer: "<img alt='' class='aligncenter wp-image-227 size-large' src='https://www.goclimate.com/blog/wp-content/uploads/2017/08/gold_standard_CDM-1024x626.png' /><br> Jawohl, CO2-Kompensation wirkt! Um jedoch einen echten, verifizierten und dauerhaften Unterschied bewirken zu können, muss man die Klimaprojekte mit Bedacht wählen. <br><br> Wie können wir also sicher sein, dass wir mit unserem Geld auch wirklich etwas Gutes für das Klima tun? Es gibt verschiedene Organisationen, die Projekte aus genau diesem Grund prüfen und zertifizieren. Die höchsten Standards gibt es bei CDM (hinter dem die UN steckt), Gold Standard, Plan Vivio,  VCS und Fair Trade. Auch der Emissionshandel war eine Zeit lang eine Möglichkeit zur CO2-Kompensation, ist jedoch mittlerweile keine effektive Maßnahme mehr für echten und nachhaltigen Klimaschutz. <br><br> Wir bei GoClimate konzentrieren uns mittlerweile nicht mehr nur auf UN-zertifizierte Projekte (CDM) sondern auf solche, die außerdem die Zertifizierung der Gold Standard Foundation haben. Diese Projekte sind zwar teurer, bieten allerdings eine bessere Qualität und werden besser durch unabhängige Dritte überwacht als Projekte, die nur UN-zertifiziert sind. Weitere Infos zum Gold Standard finden Sie hier: <a href='https://www.goldstandard.org/'>https://www.goldstandard.org/</a> <br><br> Zudem ist es wichtig, in Projekte zu investieren, die bereits vollständig umgesetzt wurden. Nur dann können Dritte den erreichten Klimaschutzeffekt auch verifizieren - in anderen Projekten, die noch nicht abgeschlossen sind, hofft man indes nur auf ein positives Resultat in der Zukunft. <br><br> Weil wir in CDM- und Gold Standard-Projekte investieren - und zwar nur in solche, die bereits abgeschlossen und verifiziert sind - können Sie sicher sein, dass Ihr Geld einen positiven Effekt auf das Klima hat und dass Ihr CO2-Ausgleich funktioniert."
       q5:
         question: Warum sollte ich Geld in GoClimate investieren? Ist es nicht besser, wenn ich selbst in Klimaprojekte ohne Vermittler investiere?
@@ -182,13 +182,13 @@ de:
         question: Kann ich sicher sein, dass diese Projekte zuverlässig sind?
         answer: "<img alt='' class='aligncenter wp-image-227 size-large' src='https://www.goclimate.com/blog/wp-content/uploads/2017/08/gold_standard_CDM-1024x626.png' /><br> Um sicherzustellen, dass die investierten Gelder wirklich dazu beitragen, Emissionen zu reduzieren, gibt es verschiedene Standards wie CDM, Gold Standard, Plan Vivo, VCS und Fair Trade, die Projekte anhand verschiedener Parameter zertifizieren. <br><br> Auch wenn die meisten Projekte wirklich großartig sind, gibt es immer wieder welche, die nicht halten, was sie versprechen, oder in manchen Fällen sogar negative Auswirkungen auf die lokale Bevölkerung und das Umfeld haben, in dem das Projekt umgesetzt wird. <br><br> Aus diesem Grund suchen wir uns bei GoClimate die Projekte gut aus und investieren nur in die zuverlässigsten und am besten geprüften Projekte - solche, die sowohl die CDM-Zertifizierung (UN) als auch die Gold Standard-Zertifizierung (u.a. WWF) erhalten haben. Wenn Sie in diese Projekte investieren, haben Sie alle UN-Mitgliedsstaaten und ca. 90 weitere Umweltorganisationen im Rücken. Diese Projekte werden zudem von Dritten wie TÜV und DNV verifiziert. Alle Protokolle sind öffentlich und werden das gesamte Projekt über auf dem neuesten Stand gehalten. <br><br> Wir wählen nicht nur Projekte aus, die geprüft und zertifiziert sind, sondern kompensieren auch die doppelte Menge an Emissionen - um auf der sicheren Seite zu sein, falls doch einmal etwas mit den Klimaprojekten, in die wir investieren, schief gehen sollte. Außerdem verteilen wir die Investitionen in mehrere Klimaprojekte, um so viel Gutes wie möglich mit Ihrem Geld erreichen zu können."
       q10:
-        question: Wie kann es so günstig sein, meine Emissionen auszugleichen? 
+        question: Wie kann es so günstig sein, meine Emissionen auszugleichen?
         answer: '<img alt='''' class="alignnone wp-image-270 size-large" src="https://www.goclimate.com/blog/wp-content/uploads/2018/01/price-ton-co2.png" alt='''' /><br> Man braucht nicht viel Geld, um in Entwicklungsländern große Effekte erzielen zu können. Mit kleinen Beträgen kann man große Klimaprojekte starten und umsetzen. <br><br> Bspl.: Ein Dorf in Vietnam kann für 10,1 Millionen USD ein Wasserkraftwerk bauen. Das ist leider mehr, als Energie aus Kohlekraftwerken zu kaufen, welche 10 Millionen USD kosten würden. Das Dorf ist sehr arm und so wird die Wasserkraftanlage nicht gebaut. Wenn man nun aber lediglich 0,1 Millionen USD hinzusteuert, geht die Rechnung wieder auf und das Projekt kann umgesetzt werden - eine saubere Wasserkraftanlage ersetzt nun die Energiegewinnung aus Kohle! Geringe Summen - in diesem Fall 0,1 Millionen USD - machen also einen großen Unterschied für die Umwelt! Das Beispiel ist natürlich stark vereinfacht, demonstriert aber hoffentlich das Prinzip. <br><br> Der wirtschaftliche Mechanismus stammt von der UN und dem Kyoto-Protokoll, wo die sogenannten CDM-Projekte und CER-Credits entstanden. Um die Qualität der sozialen Aspekte der CDM-Projekte noch zu stärken, wurde bald die Gold Standard Foundation von WWF u.a. gegründet. <br><br> Bei GoClimate versuchen wir die kosteneffektivsten CDM- und Gold Standard-Projekte zu finden, damit Ihr Geld so viel positiven Einfluss wie möglich auf das Klima nehmen kann.'
       q11:
         question: Sind Menschen wirklich schuld am Klimawandel?
         answer: "Ja. Wenn Sie sich unsicher sind, erfahren Sie hier mehr darüber: <a href='https://www.bloomberg.com/graphics/2015-whats-warming-the-world/'>https://www.bloomberg.com/graphics/2015-whats-warming-the-world/</a>"
       q12:
-        question: Verhindert CO2-Kompensation eine nachhaltigere Gesellschaft? 
+        question: Verhindert CO2-Kompensation eine nachhaltigere Gesellschaft?
         answer: "Nein, eher im Gegenteil! Wir glauben, dass CO2-Kompensation für viele ein exzellenter erster Schritt sein kann, den Wandel hin zu einer nachhaltigeren Gesellschaft zu beschleunigen. <br><br> Forschungen haben gezeigt, dass Menschen die beispielsweise durch CO2-Kompensation einen ersten Schritt in die richtige Richtung machen, auch eher danach noch weitere und größere Schritte in diese Richtung unternehmen. Das nennt man \"Foot-in-the-door\"-Technik und einer der Gründe, warum wir den Einstieg in den Klimaschutz so einfach wie möglich machen wollen. Wir haben viele Beispiele dafür, dass dies gelingt, und sind überzeugt, dass die Mehrheit der Leute, die sich registrieren, auch weitere Schritte in Richtung einer nachhaltigeren Gesellschaft unternehmen werden."
       q13:
         question: Hat der Klimaausgleich noch andere positive Effekte?
@@ -209,16 +209,13 @@ de:
         question: Woher weiß ich, in welche Klimaprojekte investiert wird?
         answer: Wir stehen für absolute Transparenz bei allem, was wir tun. Alle Projekte, in die wir investieren, werden Ihnen auf der ersten Seite angezeigt, wenn Sie sich einloggen. Hier können Sie alles noch einmal <b><a href='https://www.goclimate.com/de/our_projects'>in unserem Blog zum Thema Investitionen nachlesen</a></b>.
       q19:
-        question: Wie kann ich meine Anmeldung annullieren? 
+        question: Wie kann ich meine Anmeldung annullieren?
         answer: "Sie können ganz einfach Ihre Anmeldung rückgängig machen, indem Sie auf \"Cancel Climate Plan\" auf der Seite mit den Zahlungsdaten klicken: <a href='https://www.goclimate.com/de/users/edit/payment'>https://www.goclimate.com/de/users/edit/payment</a>"
       q20:
         question: Wie werden meine Kartendaten gespeichert und behandelt?
         answer: Wir nutzen Stripe (<a href="https://stripe.com/">https://stripe.com/</a>) als Zahlsystem. Stripe ist einer der größten Online-Zahlungsanbieter. Alle Kartendaten werden vollständig von Stripe verarbeitet - voll verschlüsselt natürlich. Ihre Kartendaten landen zu keinem Zeitpunkt auf unseren Servern, sondern werden direkt von Stripe verarbeitet.
   for_business: Für Unternehmen
   thats_amazing_from_the_bottom_of_our_hearts: Das ist großartig! Von ganzem Herzen
-  years:
-    one: Jahr
-    other: Jahr
   navigation:
     gift_cards: Gutscheine
   welcome:
@@ -319,7 +316,6 @@ de:
       meals_tooltip: Die geschätzte Anzahl der während des Zeitraums servierten Mahlzeiten. Dazu gehören alle Mahlzeiten, die das Unternehmen bezahlt.
       meals_vegetarian_share: Anteil vegetarischer Mahlzeiten
       meals_vegetarian_share_tooltip: Der geschätzte Anteil an vegetarischen Mahlzeiten. In den meisten Fällen sind das wahrscheinlich etwa 10% (die Anzahl der Vegetarier/Veganer in Schweden nach Djurens Rätt).
-      material: Material
       material_intro: Elektronik hat oft eine 10x größeren Klimabilanz als die meisten anderen gekauften Materialien, wie T-Shirts oder Möbel. Wenn große Mengen an anderem Material als Elektronik gekauft wurden, wie z.B. viele Möbel, weil das Unternehmen während der Periode umgezogen ist, kann dies separat berechnet und am Ende dieses Formulars in das Feld "Sonstiges" eingetragen werden.
       purchased_computers: Gekaufte Computer
       purchased_phones: Gekaufte Telefone/Tablets
