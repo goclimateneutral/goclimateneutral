@@ -2,9 +2,11 @@ de:
   models:
     money:
       currency_formats:
+        usd: '$%{number}'
         eur: '%{number} €'
     currency:
       prefix:
+        usd: '$'
         eur: '€'
     greenhouse_gases:
       tonnes:
