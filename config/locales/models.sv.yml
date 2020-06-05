@@ -3,10 +3,6 @@ sv:
     money:
       currency_formats:
         eur: '%{number} €'
-        sek: '%{number} kr'
-    currency:
-      suffix:
-        sek: ' kr'
     greenhouse_gases:
       tonnes:
         one: "%{count} ton koldioxid"
