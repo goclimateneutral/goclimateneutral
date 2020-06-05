@@ -4,7 +4,6 @@
 #views.registrations.en.yml
 sv:
   goclimateneutral_url: https://www.goclimate.org/se
-  site_title: GoClimate
   climate_change_is_the_greatest_challange: Klimatförändringar är det största hotet som vår generation någonsin ställts inför. Tillsammans kan vi bromsa klimatförändringarna och rädda världen, OM vi agerar nu.
   log_in: Logga in
   log_out: Logga ut
@@ -182,7 +181,6 @@ sv:
   press_social_images: Sociala medier
   press_credits: Illustrationerna är skapade av Henrik Kniberg och har Creative Commons-licens.
   im_in: Ja, tack!
-  press: Press
   faq: Frågor & Svar
   faq_questions:
     questions:
