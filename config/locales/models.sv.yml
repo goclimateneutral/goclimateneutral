@@ -15,3 +15,8 @@ sv:
       kg:
         one: '%{count} kg koldioxid'
         other: '%{count} kg koldioxid'
+    project:
+      offset_type:
+        'GS': Gold Standard-certifierat
+        'CDM+GS': CDM & Gold Standard-certifierat
+        'CDM': CDM-certifierat
