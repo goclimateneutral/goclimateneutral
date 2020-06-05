@@ -3,13 +3,7 @@ de:
     money:
       currency_formats:
         eur: '%{number} €'
-    currency:
-      prefix:
-        eur: '€'
     greenhouse_gases:
       tonnes:
         one: "%{count} Tonnen CO2e"
         other: "%{count} Tonnen CO2e"
-      kg:
-        one: "%{count} kg CO2e"
-        other: "%{count} kg CO2e"
