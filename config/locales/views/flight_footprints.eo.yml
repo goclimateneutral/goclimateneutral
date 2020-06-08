@@ -2,13 +2,13 @@ eo:
   views:
     flight_footprints:
       new:
-        flight_details: crwdns8508:0crwdne8508:0
-        from: crwdns8510:0crwdne8510:0
-        to: crwdns8512:0crwdne8512:0
-        roundtrip: crwdns8514:0crwdne8514:0
-        connections: crwdns8516:0crwdne8516:0
-        connections_return: crwdns8518:0crwdne8518:0
-        add_connection: crwdns8520:0crwdne8520:0
-        cabin_class: crwdns8522:0crwdne8522:0
-        number_of_tickets: crwdns8524:0crwdne8524:0
-        not_a_valid_input: crwdns8526:0crwdne8526:0
+        flight_details: crwdns12696:0crwdne12696:0
+        from: crwdns12698:0crwdne12698:0
+        to: crwdns12700:0crwdne12700:0
+        roundtrip: crwdns12702:0crwdne12702:0
+        connections: crwdns12704:0crwdne12704:0
+        connections_return: crwdns12706:0crwdne12706:0
+        add_connection: crwdns12708:0crwdne12708:0
+        cabin_class: crwdns12710:0crwdne12710:0
+        number_of_tickets: crwdns12712:0crwdne12712:0
+        not_a_valid_input: crwdns12714:0crwdne12714:0
