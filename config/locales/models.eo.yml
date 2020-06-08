@@ -2,27 +2,27 @@ eo:
   models:
     money:
       currency_formats:
-        usd: 'crwdns7978:0%{number}crwdne7978:0'
-        eur: 'crwdns7980:0%{number}crwdne7980:0'
-        sek: 'crwdns7982:0crwdne7982:0'
+        usd: 'crwdns12668:0%{number}crwdne12668:0'
+        eur: 'crwdns12670:0%{number}crwdne12670:0'
+        sek: 'crwdns12672:0crwdne12672:0'
     currency:
       prefix:
-        usd: 'crwdns7984:0crwdne7984:0'
-        eur: 'crwdns7986:0crwdne7986:0'
-        sek: 'crwdns7988:0crwdne7988:0'
+        usd: 'crwdns12674:0crwdne12674:0'
+        eur: 'crwdns12676:0crwdne12676:0'
+        sek: 'crwdns12678:0crwdne12678:0'
       suffix:
-        usd: 'crwdns7990:0crwdne7990:0'
-        eur: 'crwdns7992:0crwdne7992:0'
-        sek: 'crwdns7994:0crwdne7994:0'
+        usd: 'crwdns12680:0crwdne12680:0'
+        eur: 'crwdns12682:0crwdne12682:0'
+        sek: 'crwdns12684:0crwdne12684:0'
     greenhouse_gases:
       tonnes:
-        one: 'crwdns7996:1%{count}crwdne7996:1'
-        other: 'crwdns7996:5%{count}crwdne7996:5'
+        one: 'crwdns12686:1%{count}crwdne12686:1'
+        other: 'crwdns12686:5%{count}crwdne12686:5'
       kg:
-        one: 'crwdns7998:1%{count}crwdne7998:1'
-        other: 'crwdns7998:5%{count}crwdne7998:5'
+        one: 'crwdns12688:1%{count}crwdne12688:1'
+        other: 'crwdns12688:5%{count}crwdne12688:5'
     project:
       offset_type:
-        'GS': crwdns8000:0crwdne8000:0
-        'CDM+GS': crwdns8002:0crwdne8002:0
-        'CDM': crwdns8004:0crwdne8004:0
+        'GS': crwdns12690:0crwdne12690:0
+        'CDM+GS': crwdns12692:0crwdne12692:0
+        'CDM': crwdns12694:0crwdne12694:0
