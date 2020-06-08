@@ -2,17 +2,17 @@ eo:
   activerecord:
     attributes:
       user:
-        email: crwdns7964:0crwdne7964:0
+        email: crwdns12476:0crwdne12476:0
     errors:
       models:
         user:
           attributes:
             password:
-              too_short: crwdns7966:0crwdne7966:0
-              blank: crwdns7968:0crwdne7968:0
+              too_short: crwdns12478:0crwdne12478:0
+              blank: crwdns12480:0crwdne12480:0
             email:
-              taken: crwdns7970:0crwdne7970:0
-              blank: crwdns7972:0crwdne7972:0
-              invalid: crwdns7974:0crwdne7974:0
+              taken: crwdns12482:0crwdne12482:0
+              blank: crwdns12484:0crwdne12484:0
+              invalid: crwdns12486:0crwdne12486:0
             privacy_policy:
-              accepted: crwdns7976:0crwdne7976:0
+              accepted: crwdns12488:0crwdne12488:0
