@@ -1,29 +1,29 @@
 eo:
   views:
     registrations:
-      well_done: crwdns8212:0crwdne8212:0
-      your_yearly_climate_footprint: crwdns8214:0crwdne8214:0
-      corresponds_to: crwdns8216:0%{price}crwdne8216:0
-      you: crwdns8218:0crwdne8218:0
-      compensated: crwdns8220:0crwdne8220:0
-      average_in: crwdns8222:0%{region}crwdne8222:0
-      world_average: crwdns8224:0crwdne8224:0
-      goal_2030: crwdns8226:0crwdne8226:0
-      higher: crwdns8228:0crwdne8228:0
-      lower: crwdns8230:0crwdne8230:0
-      your_climate_footprint: crwdns8232:0%{footprint}crwdnd8232:0%{relative}crwdnd8232:0%{country}crwdne8232:0
-      your_climate_footprint_compared_world: crwdns8234:0%{footprint}crwdnd8234:0%{relative}crwdne8234:0
-      subscribe_heading: crwdns8236:0crwdne8236:0
-      subscribe_intro: crwdns8238:0crwdne8238:0
-      your_subscription: crwdns8240:0crwdne8240:0
-      number_of_people: crwdns8242:0crwdne8242:0
-      total: crwdns8244:0crwdne8244:0
-      subscription_price_information: crwdns8246:0%{price}crwdne8246:0
+      well_done: crwdns13030:0crwdne13030:0
+      your_yearly_climate_footprint: crwdns13032:0crwdne13032:0
+      corresponds_to: crwdns13034:0%{price}crwdne13034:0
+      you: crwdns13036:0crwdne13036:0
+      compensated: crwdns13038:0crwdne13038:0
+      average_in: crwdns13040:0%{region}crwdne13040:0
+      world_average: crwdns13042:0crwdne13042:0
+      goal_2030: crwdns13044:0crwdne13044:0
+      higher: crwdns13046:0crwdne13046:0
+      lower: crwdns13048:0crwdne13048:0
+      your_climate_footprint: crwdns13050:0%{footprint}crwdnd13050:0%{relative}crwdnd13050:0%{country}crwdne13050:0
+      your_climate_footprint_compared_world: crwdns13052:0%{footprint}crwdnd13052:0%{relative}crwdne13052:0
+      subscribe_heading: crwdns13054:0crwdne13054:0
+      subscribe_intro: crwdns13056:0crwdne13056:0
+      your_subscription: crwdns13058:0crwdne13058:0
+      number_of_people: crwdns13060:0crwdne13060:0
+      total: crwdns13062:0crwdne13062:0
+      subscription_price_information: crwdns13064:0%{price}crwdne13064:0
       where_does_the_money_go:
-        heading: crwdns8248:0crwdne8248:0
-        point_1: crwdns8250:0crwdne8250:0
-        point_2: crwdns8252:0crwdne8252:0
-        point_3: crwdns8254:0crwdne8254:0
-        point_4: crwdns8256:0crwdne8256:0
-      latest_projects: crwdns8258:0crwdne8258:0
-      faq: crwdns8260:0crwdne8260:0
+        heading: crwdns13066:0crwdne13066:0
+        point_1: crwdns13068:0crwdne13068:0
+        point_2: crwdns13070:0crwdne13070:0
+        point_3: crwdns13072:0crwdne13072:0
+        point_4: crwdns13074:0crwdne13074:0
+      latest_projects: crwdns13076:0crwdne13076:0
+      faq: crwdns13078:0crwdne13078:0
