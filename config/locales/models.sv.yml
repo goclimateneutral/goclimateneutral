@@ -2,13 +2,8 @@ sv:
   models:
     money:
       currency_formats:
-        usd: '$%{number}'
-        eur: '%{number} €'
         sek: '%{number} kr'
     currency:
-      prefix:
-        usd: '$'
-        eur: '€'
       suffix:
         eur: ' €'
         sek: ' kr'
