@@ -3,23 +3,23 @@ eo:
     shared:
       header:
         navigation:
-          flights: crwdns8480:0crwdne8480:0
-          offset_flight: crwdns8482:0crwdne8482:0
+          flights: crwdns13080:0crwdne13080:0
+          offset_flight: crwdns13082:0crwdne13082:0
         region_recommendation:
-          select_country: crwdns8484:0crwdne8484:0
-          continue_button: "crwdns8486:0%{region}crwdne8486:0"
-        sign_up: crwdns8488:0crwdne8488:0
+          select_country: crwdns13084:0crwdne13084:0
+          continue_button: "crwdns13086:0%{region}crwdne13086:0"
+        sign_up: crwdns13088:0crwdne13088:0
       prefooter:
-        heading: crwdns8490:0crwdne8490:0
-        body_text: crwdns8492:0crwdne8492:0
-        button: crwdns8494:0crwdne8494:0
+        heading: crwdns13090:0crwdne13090:0
+        body_text: crwdns13092:0crwdne13092:0
+        button: crwdns13094:0crwdne13094:0
       footer:
-        short_intro: crwdns8496:0crwdne8496:0
-        jobs: 'crwdns8498:0crwdne8498:0'
+        short_intro: crwdns13096:0crwdne13096:0
+        jobs: 'crwdns13098:0crwdne13098:0'
         headers:
-          make_a_difference: crwdns8500:0crwdne8500:0
-          explore: crwdns8502:0crwdne8502:0
-          about: crwdns8504:0crwdne8504:0
+          make_a_difference: crwdns13100:0crwdne13100:0
+          explore: crwdns13102:0crwdne13102:0
+          about: crwdns13104:0crwdne13104:0
       tonnes_co2e:
-        one: crwdns8506:1crwdne8506:1
-        other: crwdns8506:5crwdne8506:5
+        one: crwdns13106:1crwdne13106:1
+        other: crwdns13106:5crwdne13106:5
