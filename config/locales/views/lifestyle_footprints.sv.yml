@@ -34,6 +34,7 @@ sv:
           environmental_or_solar: Förnybart eller solenergi
           airpump: Luftvärmepump
           geothermal: Bergvärmepump
+          propane: Propan
           dont_know: Vet inte/annat
         green_electricity:
           'yes': 'Ja'
