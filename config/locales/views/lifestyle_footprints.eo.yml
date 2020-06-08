@@ -1,69 +1,69 @@
 eo:
   views:
     lifestyle_footprints:
-      title: crwdns8262:0crwdne8262:0
+      title: crwdns12826:0crwdne12826:0
       questions:
-        region: crwdns8264:0crwdne8264:0
-        home: crwdns8266:0crwdne8266:0
-        heating: crwdns8268:0crwdne8268:0
-        green_electricity: crwdns8270:0crwdne8270:0
-        food: crwdns8272:0crwdne8272:0
-        car_type: crwdns8274:0crwdne8274:0
-        car_distance: crwdns8276:0crwdne8276:0
-        flight_hours: crwdns8278:0crwdne8278:0
+        region: crwdns12828:0crwdne12828:0
+        home: crwdns12830:0crwdne12830:0
+        heating: crwdns12832:0crwdne12832:0
+        green_electricity: crwdns12834:0crwdne12834:0
+        food: crwdns12836:0crwdne12836:0
+        car_type: crwdns12838:0crwdne12838:0
+        car_distance: crwdns12840:0crwdne12840:0
+        flight_hours: crwdns12842:0crwdne12842:0
       options:
         region:
-          west: crwdns8280:0crwdne8280:0
-          midwest: crwdns8282:0crwdne8282:0
-          northeast: crwdns8284:0crwdne8284:0
-          south: crwdns8286:0crwdne8286:0
-          other: crwdns8288:0crwdne8288:0
+          west: crwdns12844:0crwdne12844:0
+          midwest: crwdns12846:0crwdne12846:0
+          northeast: crwdns12848:0crwdne12848:0
+          south: crwdns12850:0crwdne12850:0
+          other: crwdns12852:0crwdne12852:0
         home:
-          house: crwdns8290:0crwdne8290:0
-          apartment: crwdns8292:0crwdne8292:0
-          one_or_two_bedrooms: crwdns8294:0crwdne8294:0
-          three_or_four_bedrooms: crwdns8296:0crwdne8296:0
-          five_or_more_bedrooms: crwdns8298:0crwdne8298:0
-          fifteen_sqm: crwdns8300:0crwdne8300:0
-          twentyfive_sqm: crwdns8302:0crwdne8302:0
-          fortytwo_sqm: crwdns8304:0crwdne8304:0
-          sixty_sqm: crwdns8306:0crwdne8306:0
-          eighty_sqm: crwdns8308:0crwdne8308:0
+          house: crwdns12854:0crwdne12854:0
+          apartment: crwdns12856:0crwdne12856:0
+          one_or_two_bedrooms: crwdns12858:0crwdne12858:0
+          three_or_four_bedrooms: crwdns12860:0crwdne12860:0
+          five_or_more_bedrooms: crwdns12862:0crwdne12862:0
+          fifteen_sqm: crwdns12864:0crwdne12864:0
+          twentyfive_sqm: crwdns12866:0crwdne12866:0
+          fortytwo_sqm: crwdns12868:0crwdne12868:0
+          sixty_sqm: crwdns12870:0crwdne12870:0
+          eighty_sqm: crwdns12872:0crwdne12872:0
         heating:
-          electricity: crwdns8310:0crwdne8310:0
-          natural_gas: crwdns8312:0crwdne8312:0
-          district: crwdns8314:0crwdne8314:0
-          coal: crwdns8316:0crwdne8316:0
-          biomass: crwdns8318:0crwdne8318:0
-          environmental_or_solar: crwdns8320:0crwdne8320:0
-          airpump: crwdns8322:0crwdne8322:0
-          geothermal: crwdns8324:0crwdne8324:0
-          heating_oil: crwdns8326:0crwdne8326:0
-          propane: crwdns8328:0crwdne8328:0
-          dont_know: crwdns8330:0crwdne8330:0
+          electricity: crwdns12874:0crwdne12874:0
+          natural_gas: crwdns12876:0crwdne12876:0
+          district: crwdns12878:0crwdne12878:0
+          coal: crwdns12880:0crwdne12880:0
+          biomass: crwdns12882:0crwdne12882:0
+          environmental_or_solar: crwdns12884:0crwdne12884:0
+          airpump: crwdns12886:0crwdne12886:0
+          geothermal: crwdns12888:0crwdne12888:0
+          heating_oil: crwdns12890:0crwdne12890:0
+          propane: crwdns12892:0crwdne12892:0
+          dont_know: crwdns12894:0crwdne12894:0
         green_electricity:
-          'yes': 'crwdns8332:0crwdne8332:0'
-          seventyfive_percent: crwdns8334:0crwdne8334:0
-          fifty_percent: crwdns8336:0crwdne8336:0
-          twentyfive_percent: crwdns8338:0crwdne8338:0
-          'no': 'crwdns8340:0crwdne8340:0'
-          dont_know: crwdns8342:0crwdne8342:0
+          'yes': 'crwdns12896:0crwdne12896:0'
+          seventyfive_percent: crwdns12898:0crwdne12898:0
+          fifty_percent: crwdns12900:0crwdne12900:0
+          twentyfive_percent: crwdns12902:0crwdne12902:0
+          'no': 'crwdns12904:0crwdne12904:0'
+          dont_know: crwdns12906:0crwdne12906:0
         food:
-          vegan: crwdns8344:0crwdne8344:0
-          vegetarian: crwdns8346:0crwdne8346:0
-          pescetarian: crwdns8348:0crwdne8348:0
-          meat_low: crwdns8350:0crwdne8350:0
-          meat_medium: crwdns8352:0crwdne8352:0
-          meat_high: crwdns8354:0crwdne8354:0
+          vegan: crwdns12908:0crwdne12908:0
+          vegetarian: crwdns12910:0crwdne12910:0
+          pescetarian: crwdns12912:0crwdne12912:0
+          meat_low: crwdns12914:0crwdne12914:0
+          meat_medium: crwdns12916:0crwdne12916:0
+          meat_high: crwdns12918:0crwdne12918:0
         car_type:
-          gas: crwdns8356:0crwdne8356:0
-          petrol: crwdns8358:0crwdne8358:0
-          diesel: crwdns8360:0crwdne8360:0
-          hybrid_plugin: crwdns8362:0crwdne8362:0
-          etanol: crwdns8364:0crwdne8364:0
-          electric: crwdns8366:0crwdne8366:0
-          hvo_electric: crwdns8368:0crwdne8368:0
-          vehicle_gas: crwdns8370:0crwdne8370:0
-          no_car: crwdns8372:0crwdne8372:0
-      next: crwdns8374:0crwdne8374:0
-      back: crwdns8376:0crwdne8376:0
+          gas: crwdns12920:0crwdne12920:0
+          petrol: crwdns12922:0crwdne12922:0
+          diesel: crwdns12924:0crwdne12924:0
+          hybrid_plugin: crwdns12926:0crwdne12926:0
+          etanol: crwdns12928:0crwdne12928:0
+          electric: crwdns12930:0crwdne12930:0
+          hvo_electric: crwdns12932:0crwdne12932:0
+          vehicle_gas: crwdns12934:0crwdne12934:0
+          no_car: crwdns12936:0crwdne12936:0
+      next: crwdns12938:0crwdne12938:0
+      back: crwdns12940:0crwdne12940:0
