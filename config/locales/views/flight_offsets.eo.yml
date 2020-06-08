@@ -2,21 +2,21 @@ eo:
   views:
     flight_offsets:
       new:
-        header: crwdns8446:0crwdne8446:0
-        header_description: crwdns8448:0crwdne8448:0
-        your_order: crwdns8450:0crwdne8450:0
-        flight_in_cabin_class: crwdns8452:0crwdne8452:0
-        carbon_footprint: crwdns8454:0crwdne8454:0
-        person: crwdns8456:0crwdne8456:0
-        people: crwdns8458:0crwdne8458:0
-        total: crwdns8460:0crwdne8460:0
-        sum: crwdns8462:0crwdne8462:0
-        submit: crwdns8464:0crwdne8464:0
+        header: crwdns12716:0crwdne12716:0
+        header_description: crwdns12718:0crwdne12718:0
+        your_order: crwdns12720:0crwdne12720:0
+        flight_in_cabin_class: crwdns12722:0crwdne12722:0
+        carbon_footprint: crwdns12724:0crwdne12724:0
+        person: crwdns12726:0crwdne12726:0
+        people: crwdns12728:0crwdne12728:0
+        total: crwdns12730:0crwdne12730:0
+        sum: crwdns12732:0crwdne12732:0
+        submit: crwdns12734:0crwdne12734:0
       thank_you:
-        header: crwdns8466:0crwdne8466:0
-        lead: crwdns8468:0crwdne8468:0
-        download_certificate: crwdns8470:0crwdne8470:0
-        download_receipt: crwdns8472:0crwdne8472:0
-        we_have_sent_an_email: crwdns8474:0crwdne8474:0
-        did_you_know_lifestyle: crwdns8476:0crwdne8476:0
-        read_more_and_subscribe: crwdns8478:0crwdne8478:0
+        header: crwdns12736:0crwdne12736:0
+        lead: crwdns12738:0crwdne12738:0
+        download_certificate: crwdns12740:0crwdne12740:0
+        download_receipt: crwdns12742:0crwdne12742:0
+        we_have_sent_an_email: crwdns12744:0crwdne12744:0
+        did_you_know_lifestyle: crwdns12746:0crwdne12746:0
+        read_more_and_subscribe: crwdns12748:0crwdne12748:0
