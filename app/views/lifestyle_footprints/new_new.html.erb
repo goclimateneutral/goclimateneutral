@@ -1,0 +1,192 @@
+<% title(t('views.lifestyle_footprints.title')) %>
+
+<nav class="bg-brand">
+  <%= render "shared/header_old_tailwind" %>
+</nav>
+
+
+<section class="bg-brand bg-brand-image bg-bottom bg-no-repeat bg-cover min-h-screen text-primary text-base">
+  <div class="text-center pt-16 pb-48 px-4 md:px-10 lg:px-0 max-w-2xl mx-auto">
+    <div class="bg-white rounded py-8 md:py-10 px-4 md:px-16" data-controller="lifestyle-calculator"> 
+
+      <div class="flex justify-center text-sm">
+        <% if @calculator.region_options.present? || @calculator.home_options.present? || @calculator.heating_options.present? || @calculator.house_age_options.present? || @calculator.green_electricity_options.present? %>
+        <div class="px-6">
+          <div class="mb-2">
+            <i class="fa fa-2x fa-home" data-active-class="fa fa-2x fa-home text-green-accent" aria-hidden="true" data-target="lifestyle-calculator.categoryIndicator" data-category="home"></i>
+          </div>
+          <div>
+            <% if @calculator.region_options.present? %>
+                <i class="fa fa-circle-o" data-active-class="fa fa-circle text-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="home"></i>
+              <% end %>
+            <% if @calculator.home_options.present? %>
+              <i class="fa fa-circle-o" data-active-class="fa fa-circle text-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="home"></i>
+            <% end %>
+            <% if @calculator.heating_options.present? %>
+              <i class="fa fa-circle-o" data-active-class="fa fa-circle text-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="home"></i>
+            <% end %>
+            <% if @calculator.house_age_options.present? %>
+              <i class="fa fa-circle-o" data-active-class="fa fa-circle text-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="home"></i>
+            <% end %>
+            <% if @calculator.green_electricity_options.present? %>
+              <i class="fa fa-circle-o" data-active-class="fa fa-circle text-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="home"></i>
+            <% end %>
+          </div>
+        </div>
+        <% end %>
+        <% if @calculator.food_options.present? %>
+          <div class="px-6">
+          <div class="mb-2">
+            <i class="fa fa-2x fa-cutlery" data-active-class="fa fa-2x fa-cutlery text-green-accent" aria-hidden="true" data-target="lifestyle-calculator.categoryIndicator" data-category="food"></i>
+          </div>
+          <div>
+            <% if @calculator.food_options.present? %>
+              <i class="fa fa-circle-o" data-active-class="fa fa-circle text-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="food"></i>
+            <% end %>
+          </div>
+          </div>
+        <% end %>
+        <% if @calculator.car_type_options.present? %>
+          <div class="px-6">
+            <div class="mb-2">
+              <i class="fa fa-2x fa-car" data-active-class="fa fa-2x fa-car text-green-accent" aria-hidden="true" data-target="lifestyle-calculator.categoryIndicator" data-category="car"></i>
+            </div>
+            <div>
+              <% if @calculator.car_type_options.present? %>
+                <i class="fa fa-circle-o" data-active-class="fa fa-circle text-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="car"></i>
+                <i class="fa fa-circle-o" data-active-class="fa fa-circle text-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="car"></i>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+        <div class="px-6">
+          <div class="mb-2">
+            <i class="fa fa-2x fa-plane" data-active-class="fa fa-2x fa-plane text-green-accent" aria-hidden="true" data-target="lifestyle-calculator.categoryIndicator" data-category="flights"></i>
+          </div>
+          <div>
+              <i class="fa fa-circle-o" data-active-class="fa fa-circle text-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="flights"></i>
+          </div>
+        </div>
+      </div>
+
+      <%= form_with model: @footprint do |f| %>
+        <%= f.hidden_field :lifestyle_calculator_id %>
+        <%= f.hidden_field :country, value: params[:country] %>
+
+        <% if @calculator.region_options.present? %>
+          <div class="question py-8 hidden" data-target="lifestyle-calculator.question" data-category="home">
+            <h2 class="font-semibold text-lg my-4"><%=t 'views.lifestyle_footprints.questions.region' %></h2>
+            <% @calculator.region_options.each do |option| %>
+              <label class="block button text-center my-3">
+                <%= f.radio_button :region_answer, option['key'], required: '', class: 'hidden', 'data-action': "click->lifestyle-calculator#nextQuestion" %>
+                <%=t "views.lifestyle_footprints.options.region.#{option['key']}" %>
+              </label>
+            <% end %>
+          </div>
+        <% end %>
+
+        <% if @calculator.home_options.present? %>
+          <div class="question py-8 hidden" data-target="lifestyle-calculator.question lifestyle-calculator.home" data-category="home">
+            <h2 class="font-semibold text-lg my-4"><%=t 'views.lifestyle_footprints.questions.home' %></h2>
+            <% @calculator.home_options.each do |option| %>
+              <label class="block button text-center my-3">
+                <%= f.radio_button :home_answer, option['key'], required: '', class: 'hidden', 'data-action': "click->lifestyle-calculator#nextQuestion" %>
+                <%=t "views.lifestyle_footprints.options.home.#{option['key']}" %>
+              </label>
+            <% end %>
+          </div>
+        <% end %>
+
+        <% if @calculator.heating_options.present? %>
+          <div class="question py-8 hidden" data-target="lifestyle-calculator.question" data-category="home">
+            <h2 class="font-semibold text-lg my-4"><%=t 'views.lifestyle_footprints.questions.heating' %></h2>
+            <% @calculator.heating_options.each do |option| %>
+              <label class="block button text-center my-3">
+                <%= f.radio_button :heating_answer, option['key'], required: '', class: 'hidden', 'data-action': "click->lifestyle-calculator#nextQuestion" %>
+                <%=t "views.lifestyle_footprints.options.heating.#{option['key']}" %>
+              </label>
+            <% end %>
+          </div>
+        <% end %>
+
+        <%# TODO: This is currently not being used. Add localization if it should be used or remove it %>
+        <% if @calculator.house_age_options.present? %>
+          <div class="question py-8 hidden" data-target="lifestyle-calculator.question" data-category="home">
+            <h2 class="font-semibold text-lg my-4">How old is your house?</h2>
+            <% @calculator.house_age_options.each do |option| %>
+              <label class="block button text-center my-3">
+                <%= f.radio_button :house_age_answer, option['key'], required: '', class: 'hidden', 'data-action': "click->lifestyle-calculator#nextQuestion" %>
+                <%= option['key'] %>
+              </label>
+            <% end %>
+          </div>
+        <% end %>
+        
+        <% if @calculator.green_electricity_options.present? %>
+          <div class="question py-8 hidden" data-target="lifestyle-calculator.question" data-category="home">
+            <h2 class="font-semibold text-lg my-4"><%=t 'views.lifestyle_footprints.questions.green_electricity' %></h2>
+            <% @calculator.green_electricity_options.each do |option| %>
+              <label class="block button text-center my-3">
+                <%= f.radio_button :green_electricity_answer, option['key'], required: '', class: 'hidden', 'data-action': "click->lifestyle-calculator#nextQuestion" %>
+                <%=t "views.lifestyle_footprints.options.green_electricity.#{option['key']}" %>
+              </label>
+            <% end %>
+          </div>
+        <% end %>
+
+        <% if @calculator.food_options.present? %>
+          <div class="question py-8 hidden" data-target="lifestyle-calculator.question" data-category="food">
+            <h2 class="font-semibold text-lg my-4"><%=t 'views.lifestyle_footprints.questions.food' %></h2>
+            <% @calculator.food_options.each do |option| %>
+              <label class="block button text-center my-3">
+                <%= f.radio_button :food_answer, option['key'], required: '', class: 'hidden', 'data-action': "click->lifestyle-calculator#nextQuestion" %>
+                <%=t "views.lifestyle_footprints.options.food.#{option['key']}" %>
+              </label>
+            <% end %>
+          </div>
+        <% end %>
+
+        <% if @calculator.car_type_options.present? %>
+          <div class="question py-8 hidden" data-target="lifestyle-calculator.question" data-category="car">
+            <h2 class="font-semibold text-lg my-4"><%=t 'views.lifestyle_footprints.questions.car_type' %></h2>
+            <% @calculator.car_type_options.each do |option| %>
+              <label class="block button text-center my-3">
+                <%= f.radio_button :car_type_answer, option['key'], required: '', class: 'hidden', 'data-action': option['key'] == 'no_car' ? 'click->lifestyle-calculator#nextCategory' : 'click->lifestyle-calculator#nextQuestion' %>
+                <%=t "views.lifestyle_footprints.options.car_type.#{option['key']}" %>
+              </label>
+            <% end %>
+          </div>
+        <% end %>
+
+        <% if @calculator.car_type_options.present? %>
+          <div class="question py-8 hidden" data-target="lifestyle-calculator.question" data-category="car">
+            <h2 class="font-semibold text-lg my-4"><%=t 'views.lifestyle_footprints.questions.car_distance' %></h2>
+            <div class="flex flex-col sm:flex-row">
+              <label class="input inline-block mb-3 sm:mb-0 sm:mr-3 flex">
+                <%= number_field_tag :car_distance_week_answer, '', min: 0, size: 7, class: 'flex-1' %>
+                <span class="text-gray-700 ml-3"><%= @calculator.car_distance_unit %></span>
+              </label>
+              <%= f.button t('views.lifestyle_footprints.next'), type: 'button', class: 'button flex-1', 'data-action': 'click->lifestyle-calculator#nextQuestion' %>
+            </div>
+          </div>
+        <% end %>
+            
+        <div class="question py-8 hidden" data-target="lifestyle-calculator.question" data-category="flights">
+          <h2 class="font-semibold text-lg my-4"><%=t 'views.lifestyle_footprints.questions.flight_hours' %></h2>
+          <div class="flex flex-col sm:flex-row">
+            <%= f.number_field :flight_hours_answer, min: 0, size: 7, class: 'input mb-3 sm:mb-0 sm:mr-3' %>
+            <%= f.submit t('views.lifestyle_footprints.next'), class: 'button flex-1' %>
+          </div>
+        </div>
+
+      <% end %>
+
+      <div class="flex justify-space-between">
+        <div class="hidden cursor-pointer" data-target="lifestyle-calculator.back" data-action="click->lifestyle-calculator#previousCategory">
+          <i class="fa fa-chevron-left" aria-hidden="true"></i>
+          <span><%=t 'views.lifestyle_footprints.back' %></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
