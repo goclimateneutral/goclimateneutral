@@ -57,6 +57,15 @@ module.exports = {
         'tint-1': '#ECF3FC',
         pastel: '#F7FBFF'
       },
+      gray: {
+        dark: '#383535',
+        'shade-1': '#858282',
+        'shade-2': '#858282',
+        accent: '#D2CECC',
+        'tint-2': '#ECE8E5',
+        'tint-1': '#F2F1F0',
+        pastel: '#F6FFF2'
+      },
       // below are temporary
       icon: '#bbd2bd',
       dark: '#444',
