@@ -22,7 +22,7 @@
 .link-ui {
   @apply
     transition duration-100 ease-linear
-    border-b-0 border-current;
+    border-b-0 border-current cursor-pointer;
 
   &:hover {
     @apply border-b-4;

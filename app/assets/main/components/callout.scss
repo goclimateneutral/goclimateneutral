@@ -1,5 +1,6 @@
 .callout {
-  @apply bg-white rounded-lg shadow-lg p-4;
+  @apply bg-white rounded-lg shadow-lg p-4
+  border border-gray-tint-2;
 
   @screen t {
     @apply p-8;

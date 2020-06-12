@@ -15,4 +15,15 @@
   &:checked ~ * .toggler-checked\:opacity-100 {
     @apply opacity-100;
   }
+  
+  &:checked ~ .toggler-checked\:hidden,
+  &:checked ~ * .toggler-checked\:hidden {
+    @apply hidden;
+  }
+  
+  &:not(:checked) ~ .toggler-not-checked\:hidden,
+  &:not(:checked) ~ * .toggler-not-checked\:hidden {
+    @apply hidden;
+  }
+
 }

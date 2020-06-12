@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="22px" viewBox="0 0 1440 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Horizon curve</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Sign-up-1" transform="translate(0.000000, -1324.000000)" fill="#EBF6E6">
+            <path d="M726.498049,1324 C964.336506,1324 1202.17049,1330.66667 1440,1344 L1440,1346 L-1.13686838e-13,1346 L-1.13686838e-13,1344 C246.493576,1330.66667 488.659592,1324 726.498049,1324 Z" id="Horizon-curve"></path>
+        </g>
+    </g>
+</svg>

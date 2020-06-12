@@ -58,13 +58,22 @@ module.exports = {
         pastel: '#F7FBFF'
       },
       gray: {
-        dark: '#383535',
-        'shade-1': '#858282',
-        'shade-2': '#858282',
-        accent: '#D2CECC',
-        'tint-2': '#ECE8E5',
-        'tint-1': '#F2F1F0',
-        pastel: '#F6FFF2'
+        dark: '#2A2928',
+        'shade-1': '#4C4A48',
+        'shade-2': '#878580',
+        accent: '#C5C3BF',
+        'tint-2': '#E0DFDC',
+        'tint-1': '#F1F0EE',
+        pastel: '#FAFAF9'
+      },
+      pink: {
+        dark: '#481633',
+        'shade-1': '#5B2946',
+        'shade-2': '#9F527F',
+        accent: '#D67EB2',
+        'tint-2': '#E4A0C7',
+        'tint-1': '#FCECF5',
+        pastel: '#FFF7FC'
       },
       // below are temporary
       icon: '#bbd2bd',

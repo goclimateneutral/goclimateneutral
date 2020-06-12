@@ -34,7 +34,7 @@
                     <li><%= link_to t('views.shared.header.navigation.offset_flight'), new_flight_footprint_path , class: 'link-ui'%></li>
                     <li><%= link_to t('settings'), edit_user_registration_path , class: 'link-ui'%></li>
                     <hr class="hidden d:block d:dropdown-separator">
-                    <li class="pt-4 d:pt-0"><%= link_to I18n.t('log_out'), destroy_user_session_path, method: :delete, class: 'button' %></li> 
+                    <li class="pt-4 d:pt-0"><%= link_to I18n.t('log_out'), destroy_user_session_path, method: :delete, class: 'button text-left' %></li> 
                   </ul> 
                 </div>
               <% else %>

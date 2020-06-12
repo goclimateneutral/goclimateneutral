@@ -7,3 +7,16 @@
 .list-bullet li {
   padding-left: 1em;
 }
+
+.list-check li::before {
+  font-family: FontAwesome;
+  content: "\f00c";
+  font-size: 1.5em;
+  margin-left: -2rem;
+  @apply text-green-accent
+  absolute;
+}
+.list-check li {
+  padding-left: 2em;
+  @apply relative;
+}
