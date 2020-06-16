@@ -9,7 +9,7 @@
     <div class="section-gutter flex flex-col t:flex-row t:justify-between">
       <div class="space-y-12 t:w-1/2">
         <div>
-          <h2 class="text-sm">Resultat</h2>
+          <h2 class="text-sm"><%= t 'views.registrations.result' %></h2>
           <p class="font-bold mb-12">
             <%= t 'views.registrations.your_yearly_climate_footprint' %>
             <span class="text-green-accent"><%= @footprint_tonnes.to_s(precision: :auto) %></span>.
@@ -71,7 +71,7 @@
           <input type="checkbox" id="step-one-done" class="toggler">
 
           <div class="toggler-checked:hidden">
-            <p class="text-sm text-center mb-6">Steg 1/2 &mdash; Anpassa din prenumeration</p>
+            <p class="text-sm text-center mb-6"><%= t 'views.registrations.step' %> 1/2 &mdash; <%= t 'views.registrations.adjust_subscription' %></p>
           
             <div class="space-y-3">
               <div class="h-px w-full bg-gray-tint-2"></div>
@@ -106,12 +106,12 @@
                 <span data-target="registration-price.price"><%= @plan_price.to_s(precision: :auto) %></span>/<%= t 'months.one' %>
               </p>
 
-              <label for="step-one-done" class="button button-cta w-full">Fortsätt till betalning</label>
+              <label for="step-one-done" class="button button-cta w-full"><%= t 'views.registrations.continue_to_payment' %></label>
             </div>
           </div>
 
           <div class="toggler-not-checked:hidden">
-            <p class="text-sm text-center mb-6">Steg 2/2 &mdash; Skapa konto</p>
+            <p class="text-sm text-center mb-6"><%= t 'views.registrations.step' %> 2/2 &mdash; <%= t 'views.registrations.create_account' %></p>
 
             <%= form_with url: registration_path(resource_name, format: :json), html: { 'data-target': 'registration-form.form' } do |f| %>
               <%= f.hidden_field(:lifestyle_footprint, :value => @footprint&.key) %>
@@ -153,11 +153,11 @@
 
             <button class="button button-cta w-full" data-target="registration-form.submitButton" data-action="registration-form#submit">
               <i class="fa fa-spinner fa-spin hidden" data-target="registration-form.loadingIndicator"></i>
-              Starta prenumeration
+              <%= t 'views.registrations.start_subscription' %>
             </button>
             <p class="text-orange-shade-1 ml-4" data-target="registration-form.errorMessage"></p>
             <div class="mt-3">
-              <label for="step-one-done" class="link-ui text-sm"><- Tillbaka</label>
+              <label for="step-one-done" class="link-ui text-sm"><- <%= t 'views.registrations.back' %></label>
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@ en:
   views:
     registrations:
       well_done: Great! First step done!
+      result: Result
       your_yearly_climate_footprint: Your yearly carbon footprint
       corresponds_to: This corresponds to %{price}/month.
       you: You
@@ -17,9 +18,15 @@ en:
 
       subscribe_heading: Subscribe to a climate neutral life
       subscribe_intro: Start your subscription today to offset your carbon footprint. Every person counts on our journey to reaching the climate goals!
+      step: Step
+      adjust_subscription: Adjust your subscription
+      create_account: Create account
       your_subscription: Your subscription
       number_of_people: Number of people
       total: Total
+      continue_to_payment: Continue to payment
+      start_subscription: Start subscription
+      back: Back
       subscription_price_information: The price of our Gold Standard certificated climate projects is %{price}/tonne. To be absolutely sure your subscriptoin is actually offsetting your lifestyle, we always double your amount of tonnes for your subscription.
       where_does_the_money_go:
         heading: Where does the money go?
