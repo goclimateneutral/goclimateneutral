@@ -17,6 +17,14 @@
     @apply transform translate-y-px;
   }
 
+  &:disabled {
+    @apply
+      bg-transparent
+      opacity-50
+      cursor-not-allowed
+      transform translate-y-0;
+  }
+
   &-inverted {
     @apply text-white;
 
@@ -30,6 +38,10 @@
 
     &:hover {
       @apply bg-primary text-white;
+    }
+
+    &:disabled {
+      @apply bg-yellow-accent text-primary;
     }
   }
 }
