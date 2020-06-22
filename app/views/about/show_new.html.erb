@@ -16,7 +16,7 @@
     </div>
   </div>
 </section>
- 
+
 <section class="section-padding">
   <h2 class="heading-lg text-center mb-12">
     <%=t 'about_us_who_are_we' %>
@@ -117,5 +117,43 @@
     </div>
   </div>
 </section>
+
+<% if I18n.locale == :sv %>
+  <section class="section-padding">
+    <h2 class="heading-lg text-center">Vi har medverkat i</h2>
+    <div class="flex flex-wrap justify-center mt-6">
+        <% [
+          {
+            image_url: "images/press_logos/dn.png",
+            url: "https://www.dn.se/ekonomi/kalle-nilver-lamnade-vd-jobb-for-att-fa-fler-att-klimatkompensera/"
+          },
+          {
+            image_url: "images/press_logos/breakit-logo-_low_300.png",
+            url: "https://www.breakit.se/artikel/19823/kalle-nilver-lamnar-toppjobbet-for-att-radda-oss-fran-klimatkatastrof"
+          },
+          {
+            image_url: "images/press_logos/Dagens-industri_logo_low_300.png",
+            url: "https://www.di.se/nyheter/stjarnkrogen-levde-upp-till-forvantningarna-fantastisk-16-ratters/"
+          },
+          {
+            image_url: "images/press_logos/aktuell_hallbarhet.png",
+            url: "https://www.aktuellhallbarhet.se/lamnar-vd-jobbet-for-att-stoppa-klimatforandringarna/"
+          },
+          {
+            image_url: "images/press_logos/veckansaffarer-logga_low_300.png",
+            url: "https://www.va.se/nyheter/2019/07/16/vi-maste-konsumera-mycket-mindre/"
+          },
+          {
+            image_url: "images/press_logos/syre.png",
+            url: "https://tidningensyre.se/stockholm/leva-ett-klimatneutralt-liv/"
+          }
+        ].each do |logo| %>
+          <a href="<%= logo[:url] %>" target="_blank" rel="noopener" class="w-1/2 md:w-1/3 flex items-center justify-center p-5 m-lg:p-8 t:p-10" style="max-height: 120px">
+            <%= image_tag webpack_asset_path(logo[:image_url]), class: 'max-h-full' %>
+          </a>
+        <% end %>
+      </div>
+  </section>
+<% end %>
 
 <%= render "shared/footer" %>

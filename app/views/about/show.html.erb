@@ -77,7 +77,6 @@
         <p><%=t 'about_us_who_are_we_emma_html' %></p>
       </div>
     </div>
-
   </div>
 </div>
 
@@ -107,6 +106,54 @@
   <span class="glyphicon glyphicon-large glyphicon-chevron-down" aria-hidden="true"></span>
 </div>
 
-
+<% if I18n.locale == :sv %>
+  <div class="site-wrapper-third">
+    <div class="inner">
+      <h2 class="cover-heading">Vi har medverkat i</h2>
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
+          <% [
+            {
+              image_url: "images/press_logos/dn.png",
+              url: "https://www.dn.se/ekonomi/kalle-nilver-lamnade-vd-jobb-for-att-fa-fler-att-klimatkompensera/"
+            },
+            {
+              image_url: "images/press_logos/breakit-logo-_low_300.png",
+              url: "https://www.breakit.se/artikel/19823/kalle-nilver-lamnar-toppjobbet-for-att-radda-oss-fran-klimatkatastrof"
+            },
+            {
+              image_url: "images/press_logos/Dagens-industri_logo_low_300.png",
+              url: "https://www.di.se/nyheter/stjarnkrogen-levde-upp-till-forvantningarna-fantastisk-16-ratters/"
+            },
+            {
+              image_url: "images/press_logos/aktuell_hallbarhet.png",
+              url: "https://www.aktuellhallbarhet.se/lamnar-vd-jobbet-for-att-stoppa-klimatforandringarna/"
+            },
+            {
+              image_url: "images/press_logos/veckansaffarer-logga_low_300.png",
+              url: "https://www.va.se/nyheter/2019/07/16/vi-maste-konsumera-mycket-mindre/"
+            },
+            {
+              image_url: "images/press_logos/syre.png",
+              url: "https://tidningensyre.se/stockholm/leva-ett-klimatneutralt-liv/"
+            }
+          ].each_with_index do |logo, index| %>
+            <% if index == 2 || index == 4 %>
+              </div>
+            <% end %>
+            <% if index == 0 || index == 2 || index == 4 %>
+              <div class="row">
+            <% end %>
+            <div class="col-xs-6 col-sm-6 text-center" style="height: 120px; margin: 10px auto;">
+              <a href="<%= logo[:url] %>" target="_blank" rel="noopener" style="display: inline-block; position: relative; top: 50%; transform: translateY(-50%);">
+                <%= image_tag webpack_asset_path(logo[:image_url]), class: 'max-h-full img-responsive', style: 'max-height: 80px' %>
+              </a>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
 
 <%= render "shared/footer_old" %>
