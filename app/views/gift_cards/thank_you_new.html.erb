@@ -1,0 +1,22 @@
+<%= render "shared/header" %>
+
+<div class="section-padding pb-0">
+  <h1 class="heading border-b-4 inline-block"><%=t 'views.gift_cards.heading' %></h1>
+</div>
+
+<section class="section-padding">
+  <h2 class="heading-xl mb-6"><%=t 'views.gift_card_mailer.thank_you_for_buying_gift_card' %></h2>
+  <div class="d:w-1/2 space-y-3">
+  <p class="heading">
+    <%=t 'we_have_sent_you_an_email_with_the_gift_card' %>: <%= @gift_card.customer_email %>
+  </p>
+  <p><%=t 'thank_you_for_helping_us_trying_to_stop_climate_change' %>: <%= link_to('GoClimate', '/', class: 'link') %></p>
+  <div class="space-x-3">
+    <%= link_to t('views.gift_cards.thank_you.download_the_gift_card_here'), gift_card_certificates_path(@gift_card, format: :pdf), class: 'link' %></a>
+    <%= link_to t('views.gift_cards.thank_you.download_receipt_here'), gift_card_receipts_path(@gift_card, format: :pdf), class: 'link' %></a>
+  </div>
+  </div>
+
+</section>
+
+<%= render "shared/footer" %>

@@ -1,6 +1,7 @@
 sv:
   views:
     gift_cards:
+      heading: Gåvokort
       index:
         header: Låt din nästa present bli ett klimatneutralt liv
         intro: Letar du efter en present till någon som redan har allt? Vill du hjälpa till att sprida kunskapen om att det finns något som vi alla kan göra för att bromsa klimatförändringarna? Ge bort vårt klimat-gåvokort!
@@ -17,6 +18,7 @@ sv:
         12_months_header: 12 månader
         12_months_description: Ett helt år klimatneutralt liv
         12_months_cta: Välj 12 månaders gåvokort
+        cta: Välj
         details_html: "Gåvokorten är baserade på en medelsvensks klimatavtryck - 11 ton CO<sub>2</sub>eq. För att vara på säkra sidan - och för att våran planet behöver det - så dubblar vi även alla våra uträkningar och bygger därför kalkylerna ovan på utsläpp på 22 ton CO<sub>2</sub>eq."
       new:
         intro: Anpassa och betala för ditt gåvokort

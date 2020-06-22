@@ -6,6 +6,13 @@ class GiftCardsController < ApplicationController
   after_action :set_gift_card_in_checkout, only: [:create]
 
   def index
+    @gift_cards = {
+      1 => GiftCard.new(number_of_months: 1, currency: current_region.currency),
+      3 => GiftCard.new(number_of_months: 3, currency: current_region.currency),
+      6 => GiftCard.new(number_of_months: 6, currency: current_region.currency),
+      12 => GiftCard.new(number_of_months: 12, currency: current_region.currency)
+    }
+    # TODO: Below is legacy. Remove when old template is removed.
     @gift_card_1_months = GiftCard.new(number_of_months: 1, currency: current_region.currency)
     @gift_card_3_months = GiftCard.new(number_of_months: 3, currency: current_region.currency)
     @gift_card_6_months = GiftCard.new(number_of_months: 6, currency: current_region.currency)

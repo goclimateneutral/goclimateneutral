@@ -1,6 +1,7 @@
 en:
   views:
     gift_cards:
+      heading: Gift cards
       index:
         header: Let your next gift be a climate neutral life
         intro:
@@ -20,6 +21,7 @@ en:
         12_months_header: 12 months
         12_months_description: One full year of climate neutrality.
         12_months_cta: Get a 12 months gift card
+        cta: Choose
         details_html: "Gift cards are based on the average climate impact for Swedish residents (11 tonnes CO<sub>2</sub>eq)."
       new:
         intro: Personalize and purchase your gift card
@@ -45,8 +47,8 @@ en:
         message_html: "Hi Mom,\nDoesn't it feel great to help the climate?\nEnjoy this gift! /Lisa"
         example: "Example"
       thank_you:
-        download_the_gift_card_here: Download the gift card here
-        download_receipt_here: Download the receipt here
+        download_the_gift_card_here: Download the gift card
+        download_receipt_here: Download the receipt
         you_have_purchased_a_gift_card_with_x_climate_neutral_months:
           one: You have purchased a gift card for 1 climate neutral month
           other: "You have purchased a gift card for %{count} climate neutral months"

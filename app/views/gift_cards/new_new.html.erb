@@ -1,0 +1,68 @@
+<%= render "shared/header" %>
+
+<div class="section-padding pb-0">
+  <h1 class="heading border-b-4 inline-block"><%=t 'views.gift_cards.heading' %></h1>
+</div>
+
+<section class="section-padding">
+  <div class="section-gutter flex flex-col d:flex-row">
+    <div class="d:w-1/2">
+      <h2 class="heading-xl mb-6"><%= t('views.gift_cards.new.your_gift_card_order') %></h2>
+      <p>
+        <%= t 'views.gift_cards.new.we_will_send_you_pdf' %>
+        <%= link_to t('views.gift_cards.new.click_here_for_an_example'), 
+          example_certificate_gift_cards_path(format: :pdf), 
+          class: 'link' %>.
+      </p>
+    </div>
+
+    <div class="d:w-1/2">
+      <div class="callout d-md:mx-8 d-lg:mx-24">
+        <h2 class="heading-lg text-center mb-12"><%= t 'views.gift_cards.new.intro' %></h2>
+
+        <%= form_with model: @gift_card, format: :json, html: { 'data-controller': 'checkout-form', 'data-action': 'checkout-form#submit' } do |f| %>
+          <div class="space-y-3">
+            <div class="flex justify-between">
+              <span class="font-bold"><%=t 'type' %></span>
+              <span><%=t 'x_months', count: @gift_card.number_of_months %></span>
+            </div>
+            <div class="flex justify-between">
+              <span class="font-bold"><%=t 'price' %></span>
+              <span><%= @gift_card.price.to_s(precision: 0) %></span>
+            </div>
+
+            <div class="border-t border-gray-accent"></div>
+
+            <div>
+              <%= f.label :message, t('views.gift_cards.new.write_a_message'), class: 'font-bold' %>
+              <%= f.text_area :message, rows: 4, cols: 40, class: 'input w-full', placeholder: t('views.gift_cards.new.sample_message_html') %>
+            </div>
+            <div>
+              <%= label_tag :email, t('email'), class: 'font-bold' %>
+              <%= f.email_field :customer_email, required: '', class: "input block w-full" %>
+            </div>
+
+            <div class="" data-controller="stripe-card-element" data-target="checkout-form.stripeCardElement">
+              <label for="card" class="font-bold">
+                <%=t 'credit_or_debit_card' %>
+              </label>
+              <div class="input" data-target="stripe-card-element.container"></div>
+              <i class="fa fa-lock" aria-hidden="true"></i> <span class="ml-1">Secured by Stripe</span>
+              <div class="help-block text-warning hidden-when-empty" data-target="stripe-card-element.errors"></div>
+            </div>
+
+            <p class="text-warning hidden-when-empty" data-target="checkout-form.errorMessage"></p>
+            <%= f.hidden_field :number_of_months %>
+
+            <%= button_tag type: 'submit', 'data-target': 'checkout-form.submitButton', class: 'button button-cta w-full' do %>
+              <i class="fa fa-spinner fa-spin hidden" data-target="checkout-form.loadingIndicator"></i>
+              <%= t('views.gift_cards.new.pay') %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render "shared/footer" %>
