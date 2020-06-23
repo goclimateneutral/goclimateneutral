@@ -10,7 +10,8 @@
         py-1
         border border-0 rounded
         text-primary text-left bg-white
-        shadow;
+        shadow
+        z-10;
 
       .dropdown-toggler:checked ~ & {
         @apply block;
