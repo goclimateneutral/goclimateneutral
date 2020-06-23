@@ -1,18 +1,7 @@
 /* eslint no-param-reassign: 'off' */
 
 import { Controller } from 'stimulus';
-
-function swapToActiveClassList(element) {
-  if (element.dataset.inactiveClass === undefined) {
-    element.dataset.inactiveClass = element.className;
-  }
-
-  element.className = element.dataset.activeClass;
-}
-
-function swapToInactiveClassList(element) {
-  element.className = element.dataset.inactiveClass;
-}
+import { swapToActiveClassList, swapToInactiveClassList } from '../../util/swap_classes';
 
 export default class LifestyleCalculatorController extends Controller {
   initialize() {

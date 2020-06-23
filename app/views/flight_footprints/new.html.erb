@@ -30,7 +30,7 @@
                 <%=t 'views.flight_footprints.new.from' %>
               </label>
               <div data-controller="airport-field" data-search-endpoint="<%= airport_suggestions_path(format: :json) %>">
-                <div class="dropdown" data-target="airport-field.dropdownContainer">
+                <div class="dropdown" data-target="airport-field.dropdownContainer airport-field.dropdownTrigger" data-active-class="dropdown open">
                   <input type="text" required class="form-control" data-target="airport-field.searchField" data-action="input->airport-field#search blur->airport-field#select keydown->airport-field#keyboardNavigate blur->flight-footprint-form#update">
                   <ul class="dropdown-menu cursor-pointer" data-target="airport-field.suggestionsList">
                   </ul>
@@ -45,7 +45,7 @@
               </label>
               <div>
                 <div data-controller="airport-field" data-search-endpoint="<%= airport_suggestions_path(format: :json) %>">
-                  <div class="dropdown" data-target="airport-field.dropdownContainer">
+                  <div class="dropdown" data-target="airport-field.dropdownContainer airport-field.dropdownTrigger" data-active-class="dropdown open">
                     <input type="text" required class="form-control" data-target="airport-field.searchField" data-action="input->airport-field#search blur->airport-field#select keydown->airport-field#keyboardNavigate blur->flight-footprint-form#update">
                     <ul class="dropdown-menu cursor-pointer" data-target="airport-field.suggestionsList">
                     </ul>
@@ -61,7 +61,7 @@
               </label>
               <div data-controller="template-element">
                 <div class="hidden margin-bottom-adjacent" data-controller="airport-field" data-target="template-element.template airport-field.container" data-search-endpoint="<%= airport_suggestions_path(format: :json) %>">
-                  <div class="dropdown input-group" data-target="airport-field.dropdownContainer">
+                  <div class="dropdown input-group" data-target="airport-field.dropdownContainer airport-field.dropdownTrigger" data-active-class="dropdown open">
                     <input type="text" class="form-control" data-target="airport-field.searchField" data-action="input->airport-field#search blur->airport-field#select keydown->airport-field#keyboardNavigate blur->flight-footprint-form#update">
                     <span class="input-group-btn">
                       <button type="button" class="btn btn-default" data-action="airport-field#remove flight-footprint-form#update">
@@ -92,7 +92,7 @@
                 </label>
                 <div data-controller="template-element">
                   <div class="hidden margin-bottom-adjacent" data-controller="airport-field" data-target="template-element.template airport-field.container" data-search-endpoint="<%= airport_suggestions_path(format: :json) %>">
-                    <div class="dropdown input-group" data-target="airport-field.dropdownContainer">
+                    <div class="dropdown input-group" data-target="airport-field.dropdownContainer airport-field.dropdownTrigger" data-active-class="dropdown open">
                       <input type="text" class="form-control" data-target="airport-field.searchField" data-action="input->airport-field#search blur->airport-field#select keydown->airport-field#keyboardNavigate blur->flight-footprint-form#update">
                       <span class="input-group-btn">
                         <button type="input-group-btn button" class="btn btn-default" data-action="airport-field#remove flight-footprint-form#update">

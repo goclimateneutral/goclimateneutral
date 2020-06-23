@@ -1,4 +1,5 @@
 import { Controller } from 'stimulus';
+import { swapToActiveClassList, swapToInactiveClassList } from '../../util/swap_classes';
 
 export default class AirportFieldController extends Controller {
   initialize() {
@@ -111,12 +112,12 @@ export default class AirportFieldController extends Controller {
   }
 
   openSuggestionsDropdown() {
-    this.dropdownContainerTarget.classList.add('open');
+    swapToActiveClassList(this.dropdownTriggerTarget);
   }
 
   closeSuggestionsDropdown() {
     this.suggestionsListTarget.textContent = '';
-    this.dropdownContainerTarget.classList.remove('open');
+    swapToInactiveClassList(this.dropdownTriggerTarget);
   }
 
   focusAirportAtIndex(index) {
@@ -170,4 +171,4 @@ export default class AirportFieldController extends Controller {
   }
 }
 
-AirportFieldController.targets = ['container', 'dropdownContainer', 'suggestionsList', 'searchField', 'airportCodeField'];
+AirportFieldController.targets = ['container', 'dropdownContainer', 'suggestionsList', 'searchField', 'airportCodeField', 'dropdownTrigger'];
