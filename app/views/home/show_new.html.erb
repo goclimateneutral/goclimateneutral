@@ -17,7 +17,7 @@
     <p class="my-4 max-w-lg mx-auto"><%=t 'views.welcome.index.hero.body_text' %></p>
     <div>
       <%= form_with url: new_lifestyle_footprint_path, method: :get, class: 'm-lg:flex m-lg:justify-center mt-3' do |f| %>
-        <div class="relative">
+        <div class="select-wrapper w-full m-lg:w-auto m-lg:max-w-xs">
           <%= f.country_select :country,
                 {
                   include_blank: t('views.welcome.index.i_live_in'),
@@ -26,12 +26,9 @@
                   ].flatten.compact
                 },
                 {
-                  class: 'select w-full m-lg:w-auto m-lg:max-w-xs',
+                  class: 'select',
                   required: ''
                 } %>
-          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
-            <i class="fa fa-angle-down" aria-hidden="true"></i>
-          </div>
         </div>
         <%= f.submit t('views.welcome.index.get_started'), name: nil, class: 'button button-cta mt-2 m-lg:mt-0 m-lg:ml-2 w-full m-lg:w-auto' %>
       <% end %>

@@ -1,11 +1,10 @@
 .select {
   @apply
-    p-2 pr-8
+    p-2
     leading-6
     bg-white
     text-primary
-    border border-primary rounded
-    appearance-none;
+    border border-primary rounded;
 
     &:focus-within, &:focus, &.StripeElement--focus {
       @apply shadow-outline;
@@ -15,3 +14,24 @@
     &:focus, input:focus { @apply outline-none; }
 }
 
+.select-wrapper {
+  @apply relative inline-block;
+
+  &::after {
+    font-family: FontAwesome;
+    content: "\f107";
+
+    @apply 
+      absolute right-0 top-1/2
+      mr-3
+      transform -translate-y-1/2
+      pointer-events-none;
+  }
+
+  & .select {
+    @apply 
+      pr-8
+      w-full
+      appearance-none;
+  }
+}

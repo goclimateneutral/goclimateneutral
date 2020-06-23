@@ -78,7 +78,7 @@
 
               <div class="flex justify-between items-center">
                 <span class="font-semibold"><%= t 'views.registrations.number_of_people' %></span>
-                <div class="relative">
+                <div class="select-wrapper">
                   <%= form_with method: :get, html: { 'data-target': 'registration-price.peopleForm' } do |f| %>
                     <%= f.hidden_field(:lifestyle_footprint, :value => @footprint.key) %>
                     <%= f.select :people,
@@ -87,9 +87,6 @@
                       { class: 'select', 'data-action': 'registration-price#update' }
                     %>
                   <% end %>
-                  <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
-                    <i class="fa fa-angle-down" aria-hidden="true"></i>
-                  </div>
                 </div>
               </div>
 

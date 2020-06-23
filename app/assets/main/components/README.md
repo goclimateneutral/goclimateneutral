@@ -259,9 +259,35 @@ When creating a regular page that has sections, this class comes in handy to kee
 
 ## Select
 
-Styling of the native HTML element.
+Styling of the native HTML element. As it's not possible to use psuedo selectors on the `select` element, the markup requires a wrapper, which takes care of styling the chevron. It is possible to use without the wrapper, but the styling of the chevron then falls back to browser default as a way of alerting you of incorrect markup.
 
-To be improved.
+### Examples
+
+Basic usage
+
+```
+<div class="select-wrapper">
+  <select class="select">
+    <option value="economy">Economy</option>
+    <option value="premium_economy">Premium Economy</option>
+    <option value="business">Business</option>
+    <option value="first">First</option>
+  </select>
+</div>
+```
+
+Controlling the width is done on the wrapper element.
+
+```
+<div class="select-wrapper w-full">
+  <select class="select">
+    <option value="economy">Economy</option>
+    <option value="premium_economy">Premium Economy</option>
+    <option value="business">Business</option>
+    <option value="first">First</option>
+  </select>
+</div>
+```
 
 ## Toggler
 
