@@ -39,8 +39,6 @@ de:
         message_html: "Hallo Mama,\nfühlt es sich nicht gut an, dem Klima zu helfen?\nGenieße dieses Geschenk! / Lisa"
         example: "Beispiel"
       thank_you:
-        download_the_gift_card_here: Laden Sie den Gutschein hier herunter
-        download_receipt_here: Hier können Sie die Quittung herunterladen
         you_have_purchased_a_gift_card_with_x_climate_neutral_months:
           one: Sie haben einen Gutschein gekauft für 1 klimaneutral Monat
           other: "Sie haben einen Gutschein gekauft für %{count} klimaneutrale Monate"
