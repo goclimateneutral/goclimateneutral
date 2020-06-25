@@ -39,8 +39,6 @@ sv:
         message_html: "Hej Mamma!\nVisst känns det bra att hjälpa klimatet?\n/Lisa"
         example: "Exempel"
       thank_you:
-        download_the_gift_card_here: Ladda ner gåvokortet här
-        download_receipt_here: Ladda ner kvitto här
         you_have_purchased_a_gift_card_with_x_climate_neutral_months:
           one: Du har köpt ett gåvokort på 1 månads klimatneutralt liv
           other: "Du har köpt ett gåvokort på %{count} månaders klimatneutralt liv"
