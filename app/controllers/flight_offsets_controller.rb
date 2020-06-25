@@ -12,7 +12,8 @@ class FlightOffsetsController < ApplicationController
       currency: current_region.currency
     )
 
-    @projects = Project.order(id: :desc).limit(2)
+    @latest_projects = Project.order(date_bought: :desc).limit(3)
+    @projects = Project.order(id: :desc).limit(2) # legacy
   end
 
   def create

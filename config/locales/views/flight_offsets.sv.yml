@@ -1,6 +1,7 @@
 sv:
   views:
     flight_offsets:
+      heading: Flygresor
       new:
         header: Klimatkompensera din flygresa
         header_description: Att klimatkompensera är att ta ansvar för ditt klimatavtryck. Vi erbjuder möjligheten att klimatkompensera din flygresa i certifierade klimatprojekt.

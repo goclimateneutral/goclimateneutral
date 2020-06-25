@@ -1,0 +1,150 @@
+<%= render "shared/header" %>
+
+<div class="section-padding pb-0">
+  <h1 class="heading border-b-4 inline-block"><%= title(t('views.flight_offsets.heading')) %></h1>
+</div>
+
+<section class="section-padding">
+  <div class="section-gutter flex flex-col d:flex-row">
+    <div class="d:w-1/2">
+      <h1 class="heading-xl mb-6">
+        <%= t('views.flight_offsets.new.header') %>
+      </h1>
+      <%= t('views.flight_offsets.new.header_description') %>
+    </div>
+    <div class="d:w-1/2">
+      <div class="callout d-md:mx-8 d-lg:mx-24">
+        <h2 class="heading-lg text-center mb-12"><%=t 'views.flight_footprints.new.flight_details' %></h2>
+
+        <%= form_with url: url_for(action: :create, format: :json), html: { 'data-controller': 'flight-footprint-form' }, class: 'space-y-3' do |f| %>
+          <div>
+            <label class="font-bold">
+              <%=t 'views.flight_footprints.new.from' %>
+            </label>
+            <div data-controller="airport-field" data-search-endpoint="<%= airport_suggestions_path(format: :json) %>" >
+              <div class="dropdown w-full" data-target="airport-field.dropdownContainer">
+                <input type="text" required class="input w-full" data-target="airport-field.searchField" data-action="input->airport-field#search blur->airport-field#select keydown->airport-field#keyboardNavigate blur->flight-footprint-form#update">
+                <ul class="dropdown-menu cursor-pointer" data-target="airport-field.suggestionsList airport-field.dropdownTrigger" data-active-class="dropdown-menu cursor-pointer block">
+                </ul>
+              </div>
+              <input type="hidden" name="origin_airport" data-target="airport-field.airportCodeField">
+            </div>
+          </div>
+
+          <div>
+            <label class="font-bold"><%=t 'views.flight_footprints.new.to' %></label>
+            <div data-controller="airport-field" data-search-endpoint="<%= airport_suggestions_path(format: :json) %>">
+              <div class="dropdown w-full" data-target="airport-field.dropdownContainer">
+                <input type="text" required class="input w-full" data-target="airport-field.searchField" data-action="input->airport-field#search blur->airport-field#select keydown->airport-field#keyboardNavigate blur->flight-footprint-form#update">
+                <ul class="dropdown-menu cursor-pointer" data-target="airport-field.suggestionsList airport-field.dropdownTrigger" data-active-class="dropdown-menu cursor-pointer block">
+                </ul>
+              </div>
+              <input type="hidden" name="destination_airport" data-target="airport-field.airportCodeField">
+            </div>
+          </div>
+
+          <div class="w-full border-t border-gray-accent"></div>
+
+          <div>
+            <label class="font-bold"><%=t 'views.flight_footprints.new.connections' %></label>
+            <div data-controller="template-element">
+              <div class="hidden" data-controller="airport-field" data-target="template-element.template airport-field.container" data-search-endpoint="<%= airport_suggestions_path(format: :json) %>">
+                <div class="dropdown w-full flex" data-target="airport-field.dropdownContainer">
+                  <input type="text" class="input flex-1 mr-1" data-target="airport-field.searchField" data-action="input->airport-field#search blur->airport-field#select keydown->airport-field#keyboardNavigate blur->flight-footprint-form#update">
+                  <button type="button" class="button" data-action="airport-field#remove flight-footprint-form#update">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                  </button>
+                  <ul class="dropdown-menu cursor-pointer" data-target="airport-field.suggestionsList airport-field.dropdownTrigger" data-active-class="dropdown-menu cursor-pointer block">
+                  </ul>
+                </div>
+                <input type="hidden" name="outbound_connection_airports[]" data-target="airport-field.airportCodeField">
+              </div>
+              <div class="space-y-1" data-target="template-element.destination"></div>
+              <button type="button" class="button mt-3" data-action="template-element#cloneToDestination">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                <%=t 'views.flight_footprints.new.add_connection' %>
+              </button>
+            </div>
+          </div>
+
+          <div data-controller="checkbox-toggle">
+            <label class="font-bold">
+              <%= f.check_box 'return_trip', 'data-target': 'checkbox-toggle.trigger', 'data-action': 'checkbox-toggle#toggle flight-footprint-form#update' %>
+              <%=t 'views.flight_footprints.new.roundtrip' %>
+            </label>
+
+            <div class="hidden mt-3" data-target="checkbox-toggle.content">
+              <label class="font-bold">
+                <%=t 'views.flight_footprints.new.connections_return' %>
+              </label>
+              <div data-controller="template-element">
+                <div class="hidden" data-controller="airport-field" data-target="template-element.template airport-field.container" data-search-endpoint="<%= airport_suggestions_path(format: :json) %>">
+                  <div class="dropdown w-full flex" data-target="airport-field.dropdownContainer">
+                    <input type="text" class="input flex-1 mr-1" data-target="airport-field.searchField" data-action="input->airport-field#search blur->airport-field#select keydown->airport-field#keyboardNavigate blur->flight-footprint-form#update">
+                    <button type="button" class="button" data-action="airport-field#remove flight-footprint-form#update">
+                      <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                    <ul class="dropdown-menu cursor-pointer" data-target="airport-field.suggestionsList airport-field.dropdownTrigger" data-active-class="dropdown-menu cursor-pointer block">
+                    </ul>
+                  </div>
+                  <input type="hidden" name="return_connection_airports[]" data-target="airport-field.airportCodeField">
+                </div>
+                <div class="space-y-1" data-target="template-element.destination"></div>
+                <button type="button" class="button mt-3" data-action="template-element#cloneToDestination">
+                  <i class="fa fa-plus" aria-hidden="true"></i>
+                  <%=t 'views.flight_footprints.new.add_connection' %>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full border-t border-gray-accent"></div>
+
+          <div>
+            <label class="font-bold">
+              <%=t 'views.flight_footprints.new.cabin_class' %>
+            </label>
+            <div>
+              <div class="select-wrapper w-full">
+                <select name="cabin_class" class="select" data-action="flight-footprint-form#update">
+                  <option value="economy">Economy</option>
+                  <option value="premium_economy">Premium Economy</option>
+                  <option value="business">Business</option>
+                  <option value="first">First</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div data-target="flight-footprint-form.personsFormGroup">
+            <label class="font-bold">
+              <%=t 'views.flight_footprints.new.number_of_tickets' %>
+            </label>
+            <div>
+              <input type="number" name="num_persons" min="1" value="1" class="input" size="3" data-action="input->flight-footprint-form#update blur->flight-footprint-form#update">
+              <span class="help-block hidden" data-target="flight-footprint-form.personsMessage">
+                <%=t 'views.flight_footprints.new.not_a_valid_input' %>
+              </span>
+            </div>
+          </div>
+
+          <div class="w-full border-t border-gray-accent"></div>
+
+          <dl>
+            <dt class="font-bold"><%=t 'views.flight_offsets.new.carbon_footprint' %></dt>
+            <dd>
+              <span class="text-lg" data-target="flight-footprint-form.footprint">-</span>
+            </dd>
+            <dt class="font-bold"><%=t 'views.flight_offsets.new.sum' %></dt>
+            <dd class="text-lg" data-target="flight-footprint-form.price">-</dd>
+          </dl>
+
+          <a data-target="flight-footprint-form.offsetLink" class="button button-cta w-full"><%=t 'views.flight_offsets.new.submit' %></a>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render "shared/footer" %>

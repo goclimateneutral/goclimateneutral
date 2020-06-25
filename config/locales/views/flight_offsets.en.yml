@@ -1,6 +1,7 @@
 en:
   views:
     flight_offsets:
+      heading: Flights
       new:
         header: Offset your flight
         header_description: To carbon offset is to take responsiblity for your climate footprint. We offer the possibility to offset your flight in certified climate projects.
