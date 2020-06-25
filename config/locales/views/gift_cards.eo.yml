@@ -1,6 +1,7 @@
 eo:
   views:
     gift_cards:
+      heading: crwdns13312:0crwdne13312:0
       index:
         header: crwdns12758:0crwdne12758:0
         intro: crwdns12760:0crwdne12760:0
@@ -17,6 +18,7 @@ eo:
         12_months_header: crwdns12782:0crwdne12782:0
         12_months_description: crwdns12784:0crwdne12784:0
         12_months_cta: crwdns12786:0crwdne12786:0
+        cta: crwdns13314:0crwdne13314:0
         details_html: "crwdns12788:0crwdne12788:0"
       new:
         intro: crwdns12790:0crwdne12790:0
@@ -39,8 +41,8 @@ eo:
         message_html: "crwdns12816:0crwdne12816:0"
         example: "crwdns12818:0crwdne12818:0"
       thank_you:
-        download_the_gift_card_here: crwdns12820:0crwdne12820:0
-        download_receipt_here: crwdns12822:0crwdne12822:0
+        download_the_gift_card_here: crwdns13316:0crwdne13316:0
+        download_receipt_here: crwdns13318:0crwdne13318:0
         you_have_purchased_a_gift_card_with_x_climate_neutral_months:
           one: crwdns12824:1crwdne12824:1
           other: "crwdns12824:5%{count}crwdne12824:5"
