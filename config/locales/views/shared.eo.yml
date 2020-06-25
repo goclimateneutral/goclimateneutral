@@ -23,3 +23,16 @@ eo:
       tonnes_co2e:
         one: crwdns13106:1crwdne13106:1
         other: crwdns13106:5crwdne13106:5
+      more_info:
+        about:
+          title: crwdns13294:0crwdne13294:0
+          description: crwdns13296:0crwdne13296:0
+          cta: crwdns13298:0crwdne13298:0
+        projects:
+          title: crwdns13300:0crwdne13300:0
+          description: crwdns13302:0crwdne13302:0
+          cta: crwdns13304:0crwdne13304:0
+        transparency:
+          title: crwdns13306:0crwdne13306:0
+          description: crwdns13308:0crwdne13308:0
+          cta: crwdns13310:0crwdne13310:0
