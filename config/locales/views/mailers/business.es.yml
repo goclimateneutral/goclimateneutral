@@ -1,1 +1,6 @@
 es:
+  mailers:
+    business:
+      climate_report_email:
+        subject: Comparte tu huella climática con tu equipo
+        link_description: "Para que sea más fácil compartir tus resultados con tu equipo y volver a ellos más tarde, aquí hay un enlace a los resultados:"
