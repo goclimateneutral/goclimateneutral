@@ -1,1 +1,5 @@
 es:
+  mailers:
+    welcome:
+      subject: Bienvenido a GoClimate
+      welcome_to_gcn: '¡Hola!'
