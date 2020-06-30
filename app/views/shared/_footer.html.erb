@@ -10,16 +10,19 @@
           <li>
             <%= link_to 'https://www.instagram.com/goclimateneutral/', target: "_blank", rel: "noopener" do %>
               <i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
+              <span class="sr-only">GoClimate on Instagram</span>
             <% end %>
           </li>
           <li>
             <%= link_to 'https://www.facebook.com/GoClimate', target: "_blank", rel: "noopener" do %>
               <i class="fa fa-2x fa-facebook" aria-hidden="true"></i>
+              <span class="sr-only">GoClimate on Facebook</span>
             <% end %>
           </li>
           <li>
             <%= link_to 'https://twitter.com/GoClimateHQ', target: "_blank", rel: "noopener" do %>
               <i class="fa fa-2x fa-twitter" aria-hidden="true"></i>
+              <span class="sr-only">GoClimate on Twitter</span>
             <% end %>
           </li>
         </ul>
@@ -57,7 +60,7 @@
       <div class="dropdown">
         <input type="checkbox" id="region-picker" class="dropdown-toggler">
         <label for="region-picker" class="button button-inverted flex items-center">
-          <%= image_tag webpack_asset_path("images/regions/#{current_region.id}.png") %>
+          <%= image_tag webpack_asset_path("images/regions/#{current_region.id}.png"), alt: '' %>
           <span class="ml-2"><%= current_region.name %></span>
           <i class="fa fa-caret-up ml-2" aria-hidden="true"></i>
         </label>
@@ -66,7 +69,7 @@
             <li>
               <a href="<%= url_for_region(region) %>">
                 <span class="flex items-center">
-                  <%= image_tag webpack_asset_path("images/regions/#{region.id}.png") %>
+                  <%= image_tag webpack_asset_path("images/regions/#{region.id}.png"), alt: '' %>
                   <span class="pl-2"><%= region.name %></span>
                 </span>
               </a>
@@ -75,7 +78,7 @@
           <li>
             <a href="<%= url_for_region(Region::Europe) %>">
               <span class="flex items-center">
-                <%= image_tag webpack_asset_path("images/regions/world.png") %> 
+                <%= image_tag webpack_asset_path("images/regions/world.png"), alt: '' %>
                 <span class="pl-2">Rest of the World</span>
               </span>
             </a>

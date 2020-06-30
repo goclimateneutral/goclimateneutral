@@ -18,6 +18,7 @@
     <div>
       <%= form_with url: new_lifestyle_footprint_path, method: :get, class: 'm-lg:flex m-lg:justify-center mt-3' do |f| %>
         <div class="select-wrapper w-full m-lg:w-auto m-lg:max-w-xs">
+          <label for="country" class="sr-only">Select your country</label>
           <%= f.country_select :country,
                 {
                   include_blank: t('views.welcome.index.i_live_in'),
@@ -37,23 +38,23 @@
   <div class="relative z-10 overflow-x-hidden w-full h-96 t:h-128 relative t:-mt-16">
     <div class="absolute h-full w-full">
       <div class="relative h-full mx-auto" style="max-width: 1440px">
-        <%= image_tag webpack_asset_path('images/illustrations/hero/left_behind_horizon.png'), class: 'absolute right-1/2 d:right-auto d:left-0 h-full max-w-none', style: 'margin-left: -120px' %>
-        <%= image_tag webpack_asset_path('images/illustrations/hero/right_behind_horizon.png'), class: 'absolute left-1/3 m-lg:left-1/2 d:left-auto d:right-0 h-full max-w-none', style: 'margin-right: -120px' %>
+        <%= image_tag webpack_asset_path('images/illustrations/hero/left_behind_horizon.png'), class: 'absolute right-1/2 d:right-auto d:left-0 h-full max-w-none', style: 'margin-left: -120px', alt: '' %>
+        <%= image_tag webpack_asset_path('images/illustrations/hero/right_behind_horizon.png'), class: 'absolute left-1/3 m-lg:left-1/2 d:left-auto d:right-0 h-full max-w-none', style: 'margin-right: -120px', alt: '' %>
       </div>
     </div>
     <div class="absolute -mx-32 t:mx-0 h-full t:w-full">
-      <%= image_tag webpack_asset_path('images/illustrations/hero/horizon.svg'), class: 'w-full h-full' %>
+      <%= image_tag webpack_asset_path('images/illustrations/hero/horizon.svg'), class: 'w-full h-full', alt: '' %>
     </div>
     <div class="absolute h-full w-full">
       <div class="h-full mx-auto text-center d-md:space-x-4">
-        <%= image_tag webpack_asset_path('images/illustrations/hero/middle_left.png'), class: 'hidden d-md:inline h-full max-w-none' %>
-        <%= image_tag webpack_asset_path('images/illustrations/hero/middle_right.png'), class: 'hidden d:inline h-full max-w-none' %>
+        <%= image_tag webpack_asset_path('images/illustrations/hero/middle_left.png'), class: 'hidden d-md:inline h-full max-w-none', alt: '' %>
+        <%= image_tag webpack_asset_path('images/illustrations/hero/middle_right.png'), class: 'hidden d:inline h-full max-w-none', alt: '' %>
       </div>
     </div>
     <div class="absolute h-full w-full">
       <div class="relative h-full mx-auto" style="max-width: 1440px">
-        <%= image_tag webpack_asset_path('images/illustrations/hero/left.png'), class: 'absolute right-1/3 m-lg:right-1/2 d:right-auto d:left-0 h-full max-w-none', style: 'margin-left: -120px' %>
-        <%= image_tag webpack_asset_path('images/illustrations/hero/right.png'), class: 'absolute left-2/3 m-lg:left-1/2 d:left-auto d:right-0 h-full max-w-none', style: 'margin-right: -120px' %>
+        <%= image_tag webpack_asset_path('images/illustrations/hero/left.png'), class: 'absolute right-1/3 m-lg:right-1/2 d:right-auto d:left-0 h-full max-w-none', style: 'margin-left: -120px', alt: '' %>
+        <%= image_tag webpack_asset_path('images/illustrations/hero/right.png'), class: 'absolute left-2/3 m-lg:left-1/2 d:left-auto d:right-0 h-full max-w-none', style: 'margin-right: -120px', alt: '' %>
       </div>
     </div>
   </div>
@@ -89,7 +90,7 @@
     </div>
   </div>
   <div class="-mt-2">
-    <%= image_tag webpack_asset_path('images/illustrations/landscape_full_bottom.png')%>
+    <%= image_tag webpack_asset_path('images/illustrations/landscape_full_bottom.png'), alt: '' %>
   </div>
 </section>
 
@@ -115,7 +116,7 @@
     ].each_with_index do |item, i| %>
       <div class="w-full m-lg:w-3/4 d:w-1/3 pt-16">
         <div class="h-full callout p-4 d:p-8">
-          <%= image_tag webpack_asset_path(item[:image_url]), class: '-mt-24 mx-auto' %>
+          <%= image_tag webpack_asset_path(item[:image_url]), class: '-mt-24 mx-auto', alt: '' %>
           <h3 class="text-lg font-semibold my-2 text-center"><%= "#{i + 1}. #{item[:title]}" %></h3>
           <p><%= item[:body] %></p>
         </div>
@@ -136,10 +137,10 @@
     <div class="t:w-1/2 m-lg:max-w-3/4 mx-auto">
       <div class="relative w-full h-full pb-3/4">
         <% if I18n.locale == :sv %>
-        <iframe src='https://player.vimeo.com/video/241825913' align='top' frameborder='0' webkitAllowFullScreen
+        <iframe title="What is GoClimate?" src='https://player.vimeo.com/video/241825913' align='top' frameborder='0' webkitAllowFullScreen
           mozallowfullscreen allowFullScreen class="absolute top-0 left-0 w-full h-full"></iframe>
         <% else %>
-        <iframe src='https://player.vimeo.com/video/246406263' align='top' frameborder='0' webkitAllowFullScreen
+        <iframe title="What is GoClimate?" src='https://player.vimeo.com/video/246406263' align='top' frameborder='0' webkitAllowFullScreen
           mozallowfullscreen allowFullScreen class="absolute top-0 left-0 w-full h-full"></iframe>
         <% end %>
       </div>
@@ -163,7 +164,7 @@
       <div class="callout flex flex-col d:flex-row items-center space-y-8 d:space-y-0 d:space-x-8">
         <div class="w-2/3 m-lg:w-1/3 flex-shrink-0">
           <div class="relative pb-full">
-            <%= image_tag @latest_project.image_url, class: 'absolute w-full h-full object-cover rounded-full' %>
+            <%= image_tag @latest_project.image_url, class: 'absolute w-full h-full object-cover rounded-full', alt: '' %>
           </div>
         </div>
         <div class="flex-grow">
@@ -190,7 +191,7 @@
       </div>
     </div>
     <div class="t:w-1/2">
-      <%= image_tag webpack_asset_path('images/illustrations/transparency.png'), class: 'w-full max-w-md mx-auto' %>
+      <%= image_tag webpack_asset_path('images/illustrations/transparency.png'), class: 'w-full max-w-md mx-auto', alt: '' %>
     </div>
   </div>
 </section>
@@ -239,7 +240,7 @@
               <img class="absolute top-0 w-full h-full object-cover" src="<%= item[:image_url] %>"/>
             </div>
             <div class="p-4 relative">
-              <%= image_tag webpack_asset_path("images/illustrations/wave_top-green-tint-1.png"), class: 'w-full absolute bottom-100 left-0 -mb-1' %>
+              <%= image_tag webpack_asset_path("images/illustrations/wave_top-green-tint-1.png"), class: 'w-full absolute bottom-100 left-0 -mb-1', alt: '' %>
               <div class="flex flex-col h-full justify-center">
                 <p class="font-semibold pb-4 text-center">
                   <%= t("views.welcome.index.climate_tips.#{item[:key]}") %>
