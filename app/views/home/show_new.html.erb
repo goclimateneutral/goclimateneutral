@@ -38,8 +38,18 @@
   <div class="relative z-10 overflow-x-hidden w-full h-96 t:h-128 relative t:-mt-16">
     <div class="absolute h-full w-full">
       <div class="relative h-full mx-auto" style="max-width: 1440px">
-        <%= image_tag webpack_asset_path('images/illustrations/hero/left_behind_horizon.png'), class: 'absolute right-1/2 d:right-auto d:left-0 h-full max-w-none', style: 'margin-left: -120px', alt: '' %>
-        <%= image_tag webpack_asset_path('images/illustrations/hero/right_behind_horizon.png'), class: 'absolute left-1/3 m-lg:left-1/2 d:left-auto d:right-0 h-full max-w-none', style: 'margin-right: -120px', alt: '' %>
+        <%= image_tag webpack_asset_path('images/illustrations/hero/left_behind_horizon-1x.png'), 
+          srcset: { 
+              webpack_asset_path('images/illustrations/hero/left_behind_horizon-2x.png') => "2x"
+          }, 
+          class: 'absolute right-1/2 d:right-auto d:left-0 h-full max-w-none', 
+          style: 'margin-left: -120px', alt: '' %>
+        <%= image_tag webpack_asset_path('images/illustrations/hero/right_behind_horizon-1x.png'),
+          srcset: { 
+              webpack_asset_path('images/illustrations/hero/right_behind_horizon-2x.png') => "2x"
+          },
+          class: 'absolute left-1/3 m-lg:left-1/2 d:left-auto d:right-0 h-full max-w-none',
+          style: 'margin-right: -120px', alt: '' %>
       </div>
     </div>
     <div class="absolute -mx-32 t:mx-0 h-full t:w-full">
@@ -47,14 +57,32 @@
     </div>
     <div class="absolute h-full w-full">
       <div class="h-full mx-auto text-center d-md:space-x-4">
-        <%= image_tag webpack_asset_path('images/illustrations/hero/middle_left.png'), class: 'hidden d-md:inline h-full max-w-none', alt: '' %>
-        <%= image_tag webpack_asset_path('images/illustrations/hero/middle_right.png'), class: 'hidden d:inline h-full max-w-none', alt: '' %>
+        <%= image_tag webpack_asset_path('images/illustrations/hero/middle_left-1x.png'),
+          srcset: { 
+            webpack_asset_path('images/illustrations/hero/middle_left-2x.png') => "2x"
+          },
+          class: 'hidden d-md:inline h-full max-w-none', alt: '' %>
+        <%= image_tag webpack_asset_path('images/illustrations/hero/middle_right-1x.png'),
+          srcset: { 
+            webpack_asset_path('images/illustrations/hero/middle_right-2x.png') => "2x"
+          },
+          class: 'hidden d:inline h-full max-w-none', alt: '' %>
       </div>
     </div>
     <div class="absolute h-full w-full">
       <div class="relative h-full mx-auto" style="max-width: 1440px">
-        <%= image_tag webpack_asset_path('images/illustrations/hero/left.png'), class: 'absolute right-1/3 m-lg:right-1/2 d:right-auto d:left-0 h-full max-w-none', style: 'margin-left: -120px', alt: '' %>
-        <%= image_tag webpack_asset_path('images/illustrations/hero/right.png'), class: 'absolute left-2/3 m-lg:left-1/2 d:left-auto d:right-0 h-full max-w-none', style: 'margin-right: -120px', alt: '' %>
+        <%= image_tag webpack_asset_path('images/illustrations/hero/left-1x.png'),
+          srcset: { 
+            webpack_asset_path('images/illustrations/hero/left-2x.png') => "2x"
+          },
+          class: 'absolute right-1/3 m-lg:right-1/2 d:right-auto d:left-0 h-full max-w-none',
+          style: 'margin-left: -120px', alt: '' %>
+        <%= image_tag webpack_asset_path('images/illustrations/hero/right-1x.png'),
+          srcset: { 
+            webpack_asset_path('images/illustrations/hero/right-2x.png') => "2x"
+          },
+          class: 'absolute left-2/3 m-lg:left-1/2 d:left-auto d:right-0 h-full max-w-none',
+          style: 'margin-right: -120px', alt: '' %>
       </div>
     </div>
   </div>
@@ -191,7 +219,12 @@
       </div>
     </div>
     <div class="t:w-1/2">
-      <%= image_tag webpack_asset_path('images/illustrations/transparency.png'), class: 'w-full max-w-md mx-auto', alt: '' %>
+      <%= image_tag webpack_asset_path('images/illustrations/transparency.png'), 
+        srcset: { 
+            webpack_asset_path("images/illustrations/transparency-2x.png") => "2x", 
+            webpack_asset_path("images/illustrations/transparency-3x.png") => "3x" 
+        }, 
+        class: 'w-full max-w-md mx-auto', alt: '' %>
     </div>
   </div>
 </section>
@@ -204,40 +237,50 @@
       <% (I18n.locale == :sv ? [
         {
           key: 'climate_friendly_housing_cooperative',
-          image_url: 'https://www.goclimate.com/blog/wp-content/uploads/2020/03/brf_1920x1200-1536x960.jpg',
+          image_url: 'images/blog/brf-1x.jpg',
+          image_url_2x: 'images/blog/brf-2x.jpg',
           url: 'https://www.goclimate.com/blog/klimatsmart-bostadsrattsforening-sa-kan-du-paverka-din-forening/',
         },
         {
           key: 'climate_friendly_pension_saving',
-          image_url: 'https://www.goclimate.com/blog/wp-content/uploads/2019/12/pension_1920x1200-1536x960.jpg',
+          image_url: 'images/blog/pension-1x.jpg',
+          image_url_2x: 'images/blog/pension-2x.jpg',
           url: 'https://www.goclimate.com/blog/klimatsmart-pensionssparande/',
         },
         {
           key: 'civil_disobedience',
-          image_url: 'https://www.goclimate.com/blog/wp-content/uploads/2020/05/Screen-Shot-2020-05-04-at-11.56.08.png',
+          image_url: 'images/blog/protest-1x.jpg',
+          image_url_2x: 'images/blog/protest-2x.jpg',
           url: 'https://www.goclimate.com/blog/civil-olydnad-for-klimatet/',
         }
         ] : [
         {
           key: 'clothes_last_longer',
-          image_url: 'https://www.goclimate.com/blog/wp-content/uploads/2019/07/117551440_Unknown-2000x1200.jpg',
+          image_url: 'images/blog/clothes-1x.jpg',
+          image_url_2x: 'images/blog/clothes-2x.jpg',
           url: 'https://www.goclimate.com/blog/how-to-make-your-clothes-last-longer/',
         },
         {
           key: 'reduce_carbon_footprint_food',
-          image_url: 'https://www.goclimate.com/blog/wp-content/uploads/2019/12/2.jpg',
+          image_url: 'images/blog/food-1x.jpg',
+          image_url_2x: 'images/blog/food-2x.jpg',
           url: 'https://www.goclimate.com/blog/how-to-reduce-your-carbon-footprint-food/',
         },
         {
           key: 'civil_disobedience',
-          image_url: 'https://www.goclimate.com/blog/wp-content/uploads/2020/05/Screen-Shot-2020-05-04-at-11.56.08.png',
+          image_url: 'images/blog/protest-1x.jpg',
+          image_url_2x: 'images/blog/protest-2x.jpg',
           url: 'https://www.goclimate.com/blog/civil-disobedience-for-the-climate/',
         }
         ]).each do |item| %>
         <div class="w-full m-lg:w-3/4 t:w-1/3">
           <div class="h-full overflow-hidden bg-green-tint-1 rounded-lg shadow-lg">
             <div class="pb-1/2 relative">
-              <img class="absolute top-0 w-full h-full object-cover" src="<%= item[:image_url] %>"/>
+              <%= image_tag webpack_asset_path(item[:image_url]), 
+                srcset: { 
+                    webpack_asset_path(item[:image_url_2x]) => "2x"
+                }, 
+                class: 'absolute top-0 w-full h-full object-cover', alt: '' %>
             </div>
             <div class="p-4 relative">
               <%= image_tag webpack_asset_path("images/illustrations/wave_top-green-tint-1.png"), class: 'w-full absolute bottom-100 left-0 -mb-1', alt: '' %>
