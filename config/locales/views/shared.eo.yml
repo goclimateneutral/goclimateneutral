@@ -8,6 +8,7 @@ eo:
         region_recommendation:
           select_country: crwdns13084:0crwdne13084:0
           continue_button: "crwdns13086:0%{region}crwdne13086:0"
+          dismiss: crwdns13328:0crwdne13328:0
         sign_up: crwdns13088:0crwdne13088:0
       prefooter:
         heading: crwdns13090:0crwdne13090:0
