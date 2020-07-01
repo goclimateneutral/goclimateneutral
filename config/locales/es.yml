@@ -1,1 +1,10 @@
+#This file is considered DEPRECATED. Please move changes and add new keys
+#to a file mirroring where keys are used. For example, keys used in
+#app/views/registrations/new.html.erb should go to
+#views.registrations.en.yml
 es:
+  site_title: GoClimate
+  log_in: Inicia Sesión
+  log_out: Cerrar sesión
+  contact_us: Contacte con nosotros
+  climate_projects: Proyectos del clima
