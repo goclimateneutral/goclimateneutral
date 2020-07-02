@@ -31,3 +31,9 @@ sv:
           cta: Läs mer om oss
         projects:
           title: Våra klimatprojekt
+          description: Våra projekt följer en rigorös utvärderingsprocess, handplockas för att göra maximal klimatpåverkan och bidra till andra av FN:s hållbarhetsmål.
+          cta: Mer om våra projekt
+        transparency:
+          title: 100% Transparens
+          description: Vi vill att du ska känna dig trygg med hur dina pengar gör skillnad. Se våra utgifter, och se till att du vet hur varje krona används.
+          cta: Se våra siffror
