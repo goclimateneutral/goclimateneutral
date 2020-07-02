@@ -8,6 +8,7 @@ sv:
         region_recommendation:
           select_country: Välj ditt land eller område så att vi kan visa information som passar bäst för dig.
           continue_button: "Fortsätt till %{region}"
+          dismiss: Avfärda ändring av region
         sign_up: Registrera
       prefooter:
         heading: Rädda klimatet tillsammans med oss!
@@ -23,3 +24,10 @@ sv:
       tonnes_co2e:
         one: ton koldioxid
         other: ton koldioxid
+      more_info:
+        about:
+          title: Om oss
+          description: GoClimate är ett socialt företag vars enda syfte är att göra det lättare att börja leva ett klimatneutralt liv.
+          cta: Läs mer om oss
+        projects:
+          title: Våra klimatprojekt
