@@ -13,8 +13,8 @@
 
 .list-check {
   li::before {
-    font-family: FontAwesome;
-    content: "\f00c";
+    font-family: "Material Icons Round";
+    content: "check";
     font-size: 1.5rem;
 
     @apply

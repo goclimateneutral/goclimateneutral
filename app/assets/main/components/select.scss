@@ -18,8 +18,8 @@
   @apply relative inline-block;
 
   &::after {
-    font-family: FontAwesome;
-    content: "\f107";
+    font-family: "Material Icons Round";
+    content: "expand_more";
 
     @apply 
       absolute right-0 top-1/2

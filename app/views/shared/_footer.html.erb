@@ -64,7 +64,7 @@
         <label for="region-picker" class="button button-inverted flex items-center">
           <%= image_tag webpack_asset_path("images/regions/#{current_region.id}.png"), alt: '' %>
           <span class="ml-2"><%= current_region.name %></span>
-          <i class="fa fa-caret-up ml-2" aria-hidden="true"></i>
+          <i class="material-icons-round ml-2" aria-hidden="true">expand_less</i>
         </label>
         <ul class="dropdown-menu dropdown-menu-up">
           <% Region.all.filter { |r| r != current_region }.each do |region| %>

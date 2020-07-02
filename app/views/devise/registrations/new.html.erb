@@ -127,7 +127,10 @@
                   <div class="">
                     <div id="card" class="input mb-1" data-target="stripe-card-element.container"></div>
                     <div class="text-orange-shade-1" data-target="stripe-card-element.errors"></div>
-                    <i class="fa fa-lock" aria-hidden="true"></i> <span class="ml-1">Secured by Stripe</span>
+                    <div class="flex items-center">
+                      <span class="material-icons-round" aria-hidden="true">lock</span>
+                      <span class="ml-1">Secured by Stripe</span>
+                    </div>
                     <%= f.hidden_field :payment_method_id, 'data-target': 'stripe-card-element.paymentMethodField' %>
                   </div>
                 </div>
@@ -148,8 +151,8 @@
               <span data-target="registration-price.price"><%= @plan_price.to_s(precision: :auto) %></span>/<%= t 'months.one' %>
             </p>
 
-            <button class="button button-cta w-full" data-target="registration-form.submitButton" data-action="registration-form#submit">
-              <i class="fa fa-spinner fa-spin hidden" data-target="registration-form.loadingIndicator"></i>
+            <button class="button button-cta w-full flex items-center justify-center" data-target="registration-form.submitButton" data-action="registration-form#submit">
+              <span class="material-icons-round mr-1 hidden" data-target="registration-form.loadingIndicator">hourglass_bottom</span>
               <%= t 'views.registrations.start_subscription' %>
             </button>
             <p class="text-orange-shade-1 ml-4" data-target="registration-form.errorMessage"></p>
@@ -219,7 +222,7 @@
           <input id="question-<%= q %>" type="checkbox">
           <label for="question-<%= q %>" class="flex justify-between cursor-pointer">
             <div class="font-semibold"><%= t "faq_questions.#{q}.question" %></div>
-            <div class="pl-3"><i class="fa fa-chevron-circle-down collapse-chevron" aria-hidden="true"></i></div>
+            <div class="pl-3"><span class="material-icons-round collapse-chevron" aria-hidden="true">expand_more</span></div>
           </label>
           <div class="pt-4 collapse-content"><%= raw(t("faq_questions.#{q}.answer")) %></div>
         </div>

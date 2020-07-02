@@ -79,7 +79,7 @@
         <label for="project-<%= project.id %>" class="p-4 flex items-center cursor-pointer space-x-4">
           <img class="h-16 w-16 rounded-full object-cover" src="<%= project.image_url %>">
           <h2 class="flex-grow font-bold"><%= project.name %>, <%= project.country %></h2>
-          <span class="fa fa-chevron-down transform toggler-checked:rotate-180 transition-transform duration-200"></span>
+          <span class="material-icons-round transform toggler-checked:rotate-180 transition-transform duration-200">expand_more</span>
         </label>
         <div class="hidden toggler-checked:block px-4 pb-4">
           <div class="max-w-2xl">

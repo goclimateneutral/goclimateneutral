@@ -1,8 +1,10 @@
 <% if resource.errors.any? %>
   <div class="flex items-center space-x-4">
-    <span class="fa fa-exclamation-triangle text-orange-accent fa-lg"></span>
+    <span class="text-lg">
+      <i class="material-icons-round mr-1 text-orange-accent" aria-hidden="true">warning</i>
+    </span>
     <div class="flex-grow text-orange-dark">
-      <p class="text-large font-bold">
+      <p class="text-lg font-bold">
         <%= I18n.t("errors.messages.not_saved",
                    count: resource.errors.count,
                    resource: resource.class.model_name.human.downcase)

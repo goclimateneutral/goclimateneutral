@@ -15,23 +15,23 @@
               data-target="lifestyle-calculator.categoryIndicator"
               data-category="home"
             >
-              <i class="fa fa-lg fa-home" aria-hidden="true"></i>
+              <i class="material-icons-round" aria-hidden="true">home</i>
             </div>
             <div class="text-sm text-gray-accent">
               <% if @calculator.region_options.present? %>
-                <i class="fa fa-circle-o" data-active-class="fa fa-circle text-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="home"></i>
+                <span class="w-3 h-3 inline-block rounded-full border-2 border-gray-accent bg-none" data-active-class="w-3 h-3 inline-block rounded-full border-2 bg-green-accent border-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="home"></span>
               <% end %>
               <% if @calculator.home_options.present? %>
-                <i class="fa fa-circle-o" data-active-class="fa fa-circle text-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="home"></i>
+                <span class="w-3 h-3 inline-block rounded-full border-2 border-gray-accent bg-none" data-active-class="w-3 h-3 inline-block rounded-full border-2 bg-green-accent border-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="home"></span>
               <% end %>
               <% if @calculator.heating_options.present? %>
-                <i class="fa fa-circle-o" data-active-class="fa fa-circle text-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="home"></i>
+                <span class="w-3 h-3 inline-block rounded-full border-2 border-gray-accent bg-none" data-active-class="w-3 h-3 inline-block rounded-full border-2 bg-green-accent border-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="home"></span>
               <% end %>
               <% if @calculator.house_age_options.present? %>
-                <i class="fa fa-circle-o" data-active-class="fa fa-circle text-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="home"></i>
+                <span class="w-3 h-3 inline-block rounded-full border-2 border-gray-accent bg-none" data-active-class="w-3 h-3 inline-block rounded-full border-2 bg-green-accent border-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="home"></span>
               <% end %>
               <% if @calculator.green_electricity_options.present? %>
-                <i class="fa fa-circle-o" data-active-class="fa fa-circle text-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="home"></i>
+                <span class="w-3 h-3 inline-block rounded-full border-2 border-gray-accent bg-none" data-active-class="w-3 h-3 inline-block rounded-full border-2 bg-green-accent border-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="home"></span>
               <% end %>
             </div>
           </div>
@@ -43,11 +43,11 @@
                 data-target="lifestyle-calculator.categoryIndicator"
                 data-category="food"
               >
-                <i class="fa fa-lg fa-cutlery" aria-hidden="true"></i>
+                <i class="material-icons-round" aria-hidden="true">restaurant</i>
               </div>
             <div class="text-sm text-gray-accent">
               <% if @calculator.food_options.present? %>
-                <i class="fa fa-circle-o" data-active-class="fa fa-circle text-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="food"></i>
+                <span class="w-3 h-3 inline-block rounded-full border-2 border-gray-accent bg-none" data-active-class="w-3 h-3 inline-block rounded-full border-2 bg-green-accent border-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="food"></span>
               <% end %>
             </div>
             </div>
@@ -59,12 +59,12 @@
                 data-target="lifestyle-calculator.categoryIndicator"
                 data-category="car"
               >
-                <i class="fa fa-lg fa-car" aria-hidden="true"></i>
+                <i class="material-icons-round" aria-hidden="true">directions_car</i>
               </div>
               <div class="text-sm text-gray-accent">
                 <% if @calculator.car_type_options.present? %>
-                  <i class="fa fa-circle-o" data-active-class="fa fa-circle text-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="car"></i>
-                  <i class="fa fa-circle-o" data-active-class="fa fa-circle text-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="car"></i>
+                  <span class="w-3 h-3 inline-block rounded-full border-2 border-gray-accent bg-none" data-active-class="w-3 h-3 inline-block rounded-full border-2 bg-green-accent border-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="car"></span>
+                  <span class="w-3 h-3 inline-block rounded-full border-2 border-gray-accent bg-none" data-active-class="w-3 h-3 inline-block rounded-full border-2 bg-green-accent border-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="car"></span>
                 <% end %>
               </div>
             </div>
@@ -75,10 +75,10 @@
               data-target="lifestyle-calculator.categoryIndicator"
               data-category="flights"
             >
-              <i class="fa fa-lg fa-plane" aria-hidden="true"></i>
+              <i class="material-icons-round" aria-hidden="true">flight</i>
             </div>
             <div class="text-sm text-gray-accent">
-                <i class="fa fa-circle-o" data-active-class="fa fa-circle text-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="flights"></i>
+                <span class="w-3 h-3 inline-block rounded-full border-2 border-gray-accent bg-none" data-active-class="w-3 h-3 inline-block rounded-full border-2 bg-green-accent border-green-accent" data-target="lifestyle-calculator.questionIndicator" data-category="flights"></span>
             </div>
           </div>
         </div>
@@ -195,10 +195,10 @@
 
         <% end %>
 
-        <div class="flex justify-space-between">
-          <div class="hidden cursor-pointer" data-target="lifestyle-calculator.back" data-action="click->lifestyle-calculator#previousCategory">
-            <i class="fa fa-chevron-left" aria-hidden="true"></i>
-            <span><%=t 'views.lifestyle_footprints.back' %></span>
+        <div class="text-left">
+          <div class="inline-flex items-center hidden cursor-pointer" data-target="lifestyle-calculator.back" data-action="click->lifestyle-calculator#previousCategory">
+            <span class="material-icons-round" aria-hidden="true">arrow_back</span>
+            <span class="ml-1"><%=t 'views.lifestyle_footprints.back' %></span>
           </div>
         </div>
       </div>

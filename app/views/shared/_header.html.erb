@@ -25,9 +25,9 @@
               <% if user_signed_in? %> 
                 <div class="d:dropdown"> 
                   <input type="checkbox" id="user-menu" class="dropdown-toggler">
-                  <label for="user-menu" class="button hidden d:block" aria-haspopup="true" aria-expanded="false">
+                  <label for="user-menu" class="button hidden d:flex d:items-center" aria-haspopup="true" aria-expanded="false">
                     <%= current_user.user_name.nil? || current_user.user_name.empty? ? current_user.email : current_user.user_name %>
-                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                    <i class="material-icons-round ml-2" aria-hidden="true">expand_more</i>
                   </label> 
                   <ul class="d:dropdown-menu d:dropdown-menu-right space-y-4 d:space-y-0" aria-labelledby="user-menu"> 
                     <li><%= link_to 'Dashboard', dashboard_path, class: 'link-ui' %></li>
@@ -49,8 +49,8 @@
         <%= link_to(I18n.t('views.shared.header.sign_up'), root_url, class: 'button button-cta')%>
       <% end %>
 
-      <label for="nav-toggler" class="button d:hidden">
-        <i class="fa fa-bars"></i>
+      <label for="nav-toggler" class="button flex d:hidden">
+        <i class="material-icons-round" aria-hidden="true">menu</i>
       </label>
     </nav>
   </div>
@@ -67,8 +67,8 @@
           <%=t 'views.shared.header.region_recommendation.continue_button', region: region.name %>
         <% end %>
       </div>
-      <button id="region-recommendation-dismiss" class="pl-4" aria-label="<%= t 'views.shared.header.region_recommendation.dismiss' %>">
-        <i class="fa fa-times fa-lg" aria-hidden="true"></i>
+      <button id="region-recommendation-dismiss" class="pl-4 font-lg" aria-label="<%= t 'views.shared.header.region_recommendation.dismiss' %>">
+        <i class="material-icons-round" aria-hidden="true">close</i>
       </button>
     </div>
     <script>
@@ -86,11 +86,17 @@
 <% end %>
 
 <% if notice || alert %>
-  <div id="alert" class="p-4 t:px-8 text-center bg-primary text-white" role="alert">
+  <div id="alert" class="p-4 t:px-8 bg-primary text-white" role="alert">
     <% if notice %>
-      <p><span class="fa fa-exclamation-circle"></span> <%= notice %></p>
+      <p class="flex items-center justify-center">
+        <i class="material-icons-round mr-1" aria-hidden="true">error</i>
+        <%= notice %>
+      </p>
     <% elsif alert %>
-      <p><span class="fa fa-exclamation-triangle"></span> <%= alert %></p>
+      <p class="flex items-center justify-center">
+        <i class="material-icons-round mr-1" aria-hidden="true">warning</i>
+        <%= alert %>
+      </p>
     <% end %>
   </div>
   <% content_for :javascript_tags do %>

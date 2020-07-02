@@ -51,8 +51,8 @@
               <div class="hidden" data-controller="airport-field" data-target="template-element.template airport-field.container" data-search-endpoint="<%= airport_suggestions_path(format: :json) %>">
                 <div class="dropdown w-full flex" data-target="airport-field.dropdownContainer">
                   <input type="text" class="input flex-1 mr-1" data-target="airport-field.searchField" data-action="input->airport-field#search blur->airport-field#select keydown->airport-field#keyboardNavigate blur->flight-footprint-form#update">
-                  <button type="button" class="button" data-action="airport-field#remove flight-footprint-form#update">
-                    <i class="fa fa-times" aria-hidden="true"></i>
+                  <button type="button" class="button flex items-center" data-action="airport-field#remove flight-footprint-form#update">
+                      <i class="material-icons-round" aria-hidden="true">close</i>
                   </button>
                   <ul class="dropdown-menu cursor-pointer" data-target="airport-field.suggestionsList airport-field.dropdownTrigger" data-active-class="dropdown-menu cursor-pointer block">
                   </ul>
@@ -60,8 +60,8 @@
                 <input type="hidden" name="outbound_connection_airports[]" data-target="airport-field.airportCodeField">
               </div>
               <div class="space-y-1" data-target="template-element.destination"></div>
-              <button type="button" class="button mt-3" data-action="template-element#cloneToDestination">
-                <i class="fa fa-plus" aria-hidden="true"></i>
+              <button type="button" class="button mt-3 flex items-center" data-action="template-element#cloneToDestination">
+                <i class="material-icons-round mr-1" aria-hidden="true">add</i>
                 <%=t 'views.flight_footprints.new.add_connection' %>
               </button>
             </div>
@@ -81,8 +81,8 @@
                 <div class="hidden" data-controller="airport-field" data-target="template-element.template airport-field.container" data-search-endpoint="<%= airport_suggestions_path(format: :json) %>">
                   <div class="dropdown w-full flex" data-target="airport-field.dropdownContainer">
                     <input type="text" class="input flex-1 mr-1" data-target="airport-field.searchField" data-action="input->airport-field#search blur->airport-field#select keydown->airport-field#keyboardNavigate blur->flight-footprint-form#update">
-                    <button type="button" class="button" data-action="airport-field#remove flight-footprint-form#update">
-                      <i class="fa fa-times" aria-hidden="true"></i>
+                    <button type="button" class="button flex items-center" data-action="airport-field#remove flight-footprint-form#update">
+                      <i class="material-icons-round" aria-hidden="true">close</i>
                     </button>
                     <ul class="dropdown-menu cursor-pointer" data-target="airport-field.suggestionsList airport-field.dropdownTrigger" data-active-class="dropdown-menu cursor-pointer block">
                     </ul>
@@ -90,8 +90,8 @@
                   <input type="hidden" name="return_connection_airports[]" data-target="airport-field.airportCodeField">
                 </div>
                 <div class="space-y-1" data-target="template-element.destination"></div>
-                <button type="button" class="button mt-3" data-action="template-element#cloneToDestination">
-                  <i class="fa fa-plus" aria-hidden="true"></i>
+                <button type="button" class="button mt-3 flex items-center" data-action="template-element#cloneToDestination">
+                <i class="material-icons-round mr-1" aria-hidden="true">add</i>
                   <%=t 'views.flight_footprints.new.add_connection' %>
                 </button>
               </div>

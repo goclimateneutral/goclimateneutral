@@ -84,15 +84,17 @@
               <div class="col-sm-7">
                 <div class="input" data-target="stripe-card-element.container"></div>
                 <div class="help-block text-warning hidden-when-empty" data-target="stripe-card-element.errors"></div>
-                <i class="fa fa-lock" aria-hidden="true"></i>
-                <span class="ml-1">Secured by Stripe</span>
+                <div class="flex items-center">
+                  <span class="material-icons-round" aria-hidden="true">lock</span>
+                  <span class="ml-1">Secured by Stripe</span>
+                </div>
               </div>
             </div>
 
             <p class="text-warning hidden-when-empty" data-target="checkout-form.errorMessage"></p>
 
-            <button type="submit" data-target="checkout-form.submitButton" class="button button-cta w-full">
-              <i class="fa fa-spinner fa-spin hidden" data-target="checkout-form.loadingIndicator"></i>
+            <button type="submit" data-target="checkout-form.submitButton" class="button button-cta w-full flex items-center justify-center">
+              <span class="material-icons-round mr-1 hidden" data-target="checkout-form.loadingIndicator">hourglass_bottom</span>
               <%=t 'views.flight_offsets.new.submit' %>
             </button>
 

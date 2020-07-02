@@ -47,15 +47,18 @@
                 <%=t 'credit_or_debit_card' %>
               </label>
               <div class="input" data-target="stripe-card-element.container"></div>
-              <i class="fa fa-lock" aria-hidden="true"></i> <span class="ml-1">Secured by Stripe</span>
+              <div class="flex items-center">
+                <span class="material-icons-round" aria-hidden="true">lock</span>
+                <span class="ml-1">Secured by Stripe</span>
+              </div>
               <div class="help-block text-warning hidden-when-empty" data-target="stripe-card-element.errors"></div>
             </div>
 
             <p class="text-warning hidden-when-empty" data-target="checkout-form.errorMessage"></p>
             <%= f.hidden_field :number_of_months %>
 
-            <%= button_tag type: 'submit', 'data-target': 'checkout-form.submitButton', class: 'button button-cta w-full' do %>
-              <i class="fa fa-spinner fa-spin hidden" data-target="checkout-form.loadingIndicator"></i>
+            <%= button_tag type: 'submit', 'data-target': 'checkout-form.submitButton', class: 'button button-cta w-full flex items-center justify-center' do %>
+              <span class="material-icons-round mr-1 hidden" data-target="checkout-form.loadingIndicator">hourglass_bottom</span>
               <%= t('views.gift_cards.new.pay') %>
             <% end %>
           </div>

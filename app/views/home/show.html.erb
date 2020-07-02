@@ -190,12 +190,12 @@
                 <%= image_tag webpack_asset_path(person[:image_url]), class: 'absolute top-0 w-full h-full object-cover', alt: "" %>
               </div>
             </div>
-            <div class="t:w-2/3 space-y-3">
-              <div class="text-3xl">
-                <i class="fa fa-quote-right" aria-hidden="true"></i>
+            <div class="t:w-2/3">
+              <div class="-ml-2 -mb-2">
+                <span class="material-icons-round text-5xl" aria-hidden="true">format_quote</span>
               </div>
               <p class="text-lg">”<%= t("views.welcome.index.community.people.#{person[:key]}.quote") %>”</p>
-              <p class="font-semibold text-center t:text-left">&mdash; <%= person[:name] %>, <%= t("views.welcome.index.community.people.#{person[:key]}.title") %></p>
+              <p class="font-semibold text-center t:text-left mt-3">&mdash; <%= person[:name] %>, <%= t("views.welcome.index.community.people.#{person[:key]}.title") %></p>
             </div>
           </div>
     <% end %>
