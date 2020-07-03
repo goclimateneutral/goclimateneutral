@@ -129,6 +129,12 @@ module.exports = {
       none: 'none'
     }),
     extend: {
+      height: {
+        96: '24rem',
+        112: '28rem',
+        160: '40rem',
+        176: '44rem'
+      },
       inset: { // top/right/bottom/left
         100: '100%',
         '1/2': '50%',

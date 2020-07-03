@@ -35,6 +35,21 @@ en:
           climate_friendly_housing_cooperative: Climate friendly housing cooperative - this is how you make an impact
           climate_friendly_pension_saving: Fossil free pension savings
           read_more: Read more
+        community:
+          heading: Meet our community
+          people:
+            annelie:
+              title: adventurer, speaker and guide
+              quote: I do lots of beach clean ups, and dive to pick up ghost nets in our oceans. I live on a tiny houseboat and I don’t have kids. I also try to inspire others to take better care of our nature.
+            lydia:
+              title: Project Associate, UNDP
+              quote: My first advice would be to read more about climate change and what is happening to our world. By getting informed, you will be able to see what changes you can do yourself to live a climate-friendlier life and which changes we need to collectively work on.
+            mattias:
+              title: partner @ Netlight Consulting
+              quote: As a role model in the IT industry, we want to lower our environmental impact to help save the climate.
+            shelbi:
+              title: sustainability influencer
+              quote: It is difficult to know which choice is the most sustainable when it comes to our personal choices, so I figured offsetting my footprint would be a way to assure I was doing something meaningful & helpful regardless of if I’m making the most perfect lifestyle choices day to day.
         calculate_to_sign_up: Calculate your footprint to start living a climate neutral life today!
         i_live_in: I live in...
         get_started: Get started

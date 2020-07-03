@@ -35,6 +35,18 @@ eo:
           climate_friendly_housing_cooperative: crwdns13156:0crwdne13156:0
           climate_friendly_pension_saving: crwdns13158:0crwdne13158:0
           read_more: crwdns13160:0crwdne13160:0
+        community:
+          heading: crwdns13162:0crwdne13162:0
+          people:
+            annelie:
+              title: crwdns13164:0crwdne13164:0
+              quote: crwdns13166:0crwdne13166:0
+            mattias:
+              title: crwdns13168:0crwdne13168:0
+              quote: crwdns13170:0crwdne13170:0
+            shelbi:
+              title: crwdns13172:0crwdne13172:0
+              quote: crwdns13174:0crwdne13174:0
         calculate_to_sign_up: crwdns13176:0crwdne13176:0
         i_live_in: crwdns13178:0crwdne13178:0
         get_started: crwdns13180:0crwdne13180:0

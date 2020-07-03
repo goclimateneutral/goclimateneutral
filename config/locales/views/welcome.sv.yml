@@ -36,6 +36,21 @@ sv:
           climate_friendly_housing_cooperative: Klimatsmart bostadsrättsförening - så gör du skillnad
           climate_friendly_pension_saving: Fossilfritt pensionssparande
           read_more: Läs mer
+        community:
+          heading: Lär känna våra medlemmar
+          people:
+            annelie:
+              title: äventyrare, talare och guide
+              quote: Jag gör ofta strandrensingar och dyker för att plocka upp övergivna fisknät i våra hav. Jag bor på en liten husbåt och jag har inga barn. Jag försöker också inspirera andra att ta bättre hand om vår natur.
+            lydia:
+              title: Project Associate, UNDP
+              quote: Mitt första råd är att läsa på mer om klimatförändringarna och vad som händer med vår planet. Genom att utbilda dig kommer du att inse vilka förändringar du själv kan göra, och vilka förändringar vi behöver jobba med tillsammans, för att leva klimatvänligare liv.
+            mattias:
+              title: partner @ Netlight Consulting
+              quote: Som en förebild inom IT-branschen vill vi minska vårt avtryck för att bidra till att rädda klimatet.
+            shelbi:
+              title: hållbarhetsinfluencer
+              quote: Det är svårt att veta vilka personliga val som är mest hållbara, så jag tänkte att klimatkompensation är ett säkert sätt att göra något meningsfullt som faktiskt gör skillnad - oavsett om alla val jag gör dagligen är perfekta eller ej.
         calculate_to_sign_up: Räkna ut ditt klimatavtryck och börja ditt klimatneutrala liv redan idag!
         i_live_in: Jag bor i...
         get_started: Gör testet
