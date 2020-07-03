@@ -4,8 +4,12 @@
 #views.registrations.en.yml
 es:
   site_title: GoClimate
+  climate_change_is_the_greatest_challange: El cambio climático es el mayor desafío de nuestra época. Juntos tenemos la oportunidad de dar a nuestros hijos el futuro de este planeta que se merecen, pero tenemos que actuar ahora.
   log_in: Inicia Sesión
   log_out: Cerrar sesión
+  settings: Configuración
+  i_want_to_know_more: '¡Quiero conocer más!'
   contact_us: Contacte con nosotros
+  100_percent_transparency: 100% transparencia
   climate_projects: Proyectos del clima
   employees: Empleados
