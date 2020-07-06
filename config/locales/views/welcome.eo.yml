@@ -7,25 +7,25 @@ eo:
           body_text: crwdns13110:0crwdne13110:0
         how_it_works:
           bullets:
-            bullet_1_heading: crwdns13112:0crwdne13112:0
+            bullet_1_heading: crwdns13258:0crwdne13258:0
             bullet_1_text: crwdns13114:0crwdne13114:0
             bullet_2_heading: crwdns13116:0crwdne13116:0
             bullet_2_text: crwdns13118:0crwdne13118:0
             bullet_3_heading: crwdns13120:0crwdne13120:0
-            bullet_3_text: crwdns13122:0crwdne13122:0
+            bullet_3_text: crwdns13292:0crwdne13292:0
         about_us:
-          heading: crwdns13124:0crwdne13124:0
-          body_text: crwdns13126:0crwdne13126:0
+          heading: crwdns13260:0crwdne13260:0
+          body_text: crwdns13262:0crwdne13262:0
           read_more: crwdns13128:0crwdne13128:0
         projects:
           heading: crwdns13130:0crwdne13130:0
-          body_text_1: crwdns13132:0crwdne13132:0
-          body_text_2: crwdns13134:0crwdne13134:0
-          body_text_3: crwdns13136:0crwdne13136:0
+          body_text_1: crwdns13264:0crwdne13264:0
+          body_text_2: crwdns13266:0crwdne13266:0
+          body_text_3: crwdns13268:0crwdne13268:0
           read_more: crwdns13140:0crwdne13140:0
         transparency:
           heading: crwdns13142:0crwdne13142:0
-          body_text: crwdns13144:0crwdne13144:0
+          body_text: crwdns13270:0crwdne13270:0
           read_more: crwdns13146:0crwdne13146:0
         climate_tips:
           heading: crwdns13148:0crwdne13148:0
@@ -35,6 +35,21 @@ eo:
           climate_friendly_housing_cooperative: crwdns13156:0crwdne13156:0
           climate_friendly_pension_saving: crwdns13158:0crwdne13158:0
           read_more: crwdns13160:0crwdne13160:0
+        community:
+          heading: crwdns13330:0crwdne13330:0
+          people:
+            annelie:
+              title: crwdns13332:0crwdne13332:0
+              quote: crwdns13334:0crwdne13334:0
+            lydia:
+              title: crwdns13336:0crwdne13336:0
+              quote: crwdns13338:0crwdne13338:0
+            mattias:
+              title: crwdns13340:0crwdne13340:0
+              quote: crwdns13342:0crwdne13342:0
+            shelbi:
+              title: crwdns13344:0crwdne13344:0
+              quote: crwdns13346:0crwdne13346:0
         calculate_to_sign_up: crwdns13176:0crwdne13176:0
         i_live_in: crwdns13178:0crwdne13178:0
         get_started: crwdns13180:0crwdne13180:0
