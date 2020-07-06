@@ -7,26 +7,17 @@ sv:
           body_text: Räkna ut ditt avtryck och starta din personliga prenumeration, på under 2 minuter.
         how_it_works:
           bullets:
-            bullet_1_heading: Beräkna ditt klimatavtryck
             bullet_1_text: Vårt enkla test tar bara en minut att göra.
             bullet_2_heading: Prenumerera
             bullet_2_text: Starta en månadsprenumeration som motsvarar just ditt klimatavtryck.
             bullet_3_heading: Rädda vår planet
-            bullet_3_text: Tillsammans finansierar vi projekt som minskar mängden koldioxid i atmosfären.
         about_us:
-          heading: Vad är GoClimate?
-          body_text: Vi stöttar klimatprojekt med certifieringar från FN och Gold Standard - och tipsar om enkla sätt att minska ditt klimatavtryck.
           read_more: Läs mer om oss
         projects:
           heading: Vart går pengarna?
-          body_text_1: Vi stöttar certifierade klimatprojekt utifrån de kriterier för högkvalitativa klimatprojekt som definerats av Världsnaturfonden.
-          body_text_2: Vi handplockar de projekt som ger mest klimatnytta och samtidigt bidrar till FN:s hållbarhetsmål.
-          body_text_3: Du är med och finansierar klimatprojekt motsvarande ditt personliga klimatavtryck.
           read_more: Läs mer om projekten
         transparency:
           heading: 100% transparens
-          body_text: We want you to feel safe with how your money makes an impact. We continuously update the site with our outgoings, making sure that you know where every cent is used.
-          body_text: Vi vill att du ska känna dig helt trygg med hur dina pengar gör klimatnytta. Vi redovisar löpande alla våra utgifter här på siten, för att du ska veta exakt hur pengarna används.
           read_more: Läs mer om vår transparens
         climate_tips:
           heading: Klimattips
