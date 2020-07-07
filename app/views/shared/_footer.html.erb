@@ -1,5 +1,7 @@
 <footer>
-  <%= render "shared/prefooter" %>
+  <% if !local_assigns[:skip_prefooter] %>
+    <%= render "shared/prefooter" %>
+  <% end %>
 
   <section class="bg-primary text-white text-sm p-4 py-6 t:px-8 t:py-12 space-y-4">
     <div class="flex flex-row flex-wrap -m-4">
