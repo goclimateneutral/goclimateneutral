@@ -29,3 +29,19 @@
       pl-8;
   }
 }
+
+.list-number {
+  counter-reset: my-list;
+
+  li {
+    counter-increment: my-list;
+  }
+
+  li::before {
+    content: counter(my-list) ". ";
+
+    @apply
+      font-semibold
+      mr-1;
+  }
+}

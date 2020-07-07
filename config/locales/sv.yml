@@ -104,6 +104,11 @@ sv:
   climate_change_is_best_faced_together: Du är en hjälte! Bäst bromsar vi klimatförändringarna tillsammans, så dela gärna det här så att vi blir fler som lever klimatneutralt!
   share_on_facebook: Dela på Facebook
   share_on_twitter: Dela på Twitter
+  dashboard:
+    heading: Hej, klimatvän!
+    your_months: Du har varit klimatneutral i
+    your_offsets: Antal undvikna ton koldioxidutsläpp
+    together: Tillsammans med alla <span>%{number_of_members} medlemmar</span> har vi förhindrat <span>%{number_of_tonnes} ton</span> koldioxid från att nå atmosfären!
   we_have_accomplished_alot_together: Vi har åstadkommit mycket tillsammans!
   amount_of_carbon_we_have_offset: Antal ton CO2 vi har bidragit till att minska tillsammans
   amount_of_carbon_i_have_offset: Antal ton CO2 som du har minskat utsläpp av
@@ -126,7 +131,7 @@ sv:
   climate_neutral_months:
     one: klimatneutral månad
     other: klimatneutrala månader
-  climate_country_toplist: Topplista klimatneutrala länder
+  climate_country_toplist: Topplista klimatländer
   total_carbon_offset_by_us: Totalt har vi minskat utsläpp på
   read_more_about_investments_on_our_blog: 'Läs mer om projekten vi investerar i på vår blogg >>'
   tonnes_CO2: ton CO2

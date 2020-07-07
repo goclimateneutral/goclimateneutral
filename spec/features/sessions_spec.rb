@@ -11,7 +11,7 @@ RSpec.feature 'Sessions', type: :feature, js: true do
       click_link('Log out')
     end
     # Homepage
-    visit '/'
+    visit '/?disable_experiments=new_design'
     click_link 'Log In'
 
     # sign in page

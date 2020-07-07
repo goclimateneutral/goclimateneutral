@@ -106,6 +106,11 @@ en:
   climate_change_is_best_faced_together: You are awesome! Since climate change is best faced together, it would be great if you want to share the message so that more people can start living climate neutral lives!
   share_on_facebook: Share on Facebook
   share_on_twitter: Share on Twitter
+  dashboard:
+    heading: Hello, climate friend!
+    your_months: You have been climate neutral for
+    your_offsets: Your CO2 offsets add up to
+    together: Together with all <span>%{number_of_members} members</span>, we have prevented <span>%{number_of_tonnes} tonnes</span> of CO2 from reaching the atmosphere!
   we_have_accomplished_alot_together: We have accomplished a lot together!
   amount_of_carbon_we_have_offset: Number of tonnes CO2 that we have offset together
   amount_of_carbon_i_have_offset: Number of tonnes CO2 that you have offset so far
@@ -123,8 +128,8 @@ en:
   date_of_our_investment: Date of Investment
   read_more: More info
   cimate_hero_toplist: Climate Hero Toplist
-  show_full_toplist: Show Full Toplist
-  hide_full_toplist: Hide Full Toplist
+  show_full_toplist: Show full toplist
+  hide_full_toplist: Hide full toplist
   climate_neutral_months:
     one: climate neutral month
     other: climate neutral months
