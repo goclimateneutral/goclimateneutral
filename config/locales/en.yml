@@ -129,7 +129,8 @@ en:
   price: Price
   country: Country
   edit_settings: Edit Settings
-  payment_settings: Payment Settings
+  account_settings: Account settings
+  payment_settings: Payment settings
   user_name: User Name
   confirm_password: Confirm password
   update: Update

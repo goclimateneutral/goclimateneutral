@@ -1,79 +1,99 @@
-<% content_for :stylesheets do %>
-  <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
-<% end %>
-<% content_for :javascripts do %>
-  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'reportLoadError(event)' %>
-<% end %>
+<%= render "shared/header" %>
 
-<div class="site-wrapper-first">
-  <%= render "shared/header_old" %>
-  <div class="inner">
+<div class="bg-blue-pastel">
 
-    <span class="glyphicon glyphicon-large glyphicon-globe" aria-hidden="true"></span>
+  <section class="section-padding">
+    <h1 class="heading-xl mb-6"><%= t 'settings' %></h1>
 
-    <%= render "shared/user_menu" %>
+    <div class="text-center mb-6">
+      <ul class="inline-flex overflow-hidden rounded shadow">
+        <li class="px-2 py-1 bg-white hover:bg-green-shade-1 hover:text-white transition ease-in-out duration-200"><%= link_to t('account_settings'), edit_user_registration_path %></li>
+        <li class="px-2 py-1 bg-primary text-white hover:bg-green-shade-1 transition ease-in-out duration-200"><%= link_to t('payment_settings'), user_subscription_path %></li>
+      </ul>
+    </div>
+    <div class="callout max-w-xl mx-auto" data-controller="edit-card">
+      <%= form_tag({ action: :update }, id: "payment-form", method: :put, class: "space-y-3") do %>
 
-    <%= form_tag({ action: :update }, id: "payment-form", method: :put, class: "form-horizontal") do %>
+        <% if flash[:error].present? %>
+          <div id="error_explanation" data-controller="scroll-here">
+            <p><%= flash[:error] %></p>
+          </div>
+        <% end %>
 
-      <% if flash[:error].present? %>
-        <div id="error_explanation" data-controller="scroll-here">
-          <p><%= flash[:error] %></p>
-        </div>
-      <% end %>
+        <p id="error-content"></p>
 
-      <p id="error-content"></p>
+        <%= hidden_field(:setup_intent, :client_secret) %>
 
-      <%= hidden_field(:setup_intent, :client_secret) %>
+        <div>
+          <label for="plan" class="block font-bold"><%= t 'climate_plan' %></label>
+          <div class="select-wrapper w-full">
+            <select id="plan" name="user[plan]" class="select">
+              <% if current_page?(controller: 'subscriptions', action: 'show') %>
+                <% if @current_plan_price %>
+                  <option value="cancel">cancel climate plan</option>
+                <% else %>
+                  <option value="" selected=1>-</option>
+                <% end %>
+              <% end %>
 
-      <%=
-        render partial: "shared/plan",
-        locals: { available_plans: @available_plans, current_plan_price: @current_plan_price } 
-      %>
-
-      <div id="current-card-group" class="form-group">
-        <label for="current-card" class="col-sm-offset-1 col-sm-4 control-label">
-          <%=t 'credit_or_debit_card' %>
-        </label>
-        <div id="current-card" class="col-sm-4 control-label">
-          <% if @customer_payment_method.nil? %>
-            t('no_card_registered')
-          <% else %>
-            <%= render "shared/existing-card" %>
-          <% end %>
-          (<a id="add-new-card" href="#">
-            <%= @customer_payment_method.nil? ? t('add_new_card') : t('edit_card') %>
-          </a>)
-        </div>
-      </div>
-
-      <div id="new-card-div" class="form-group hidden">
-        <label for="card-element" class="col-sm-offset-1 col-sm-4 control-label"><%=t 'add_new_card' %></label>
-        <div class="col-sm-4">
-          <div id="card-element" class="form-control">
-            <!-- a Stripe Element will be inserted here. -->
+              <% @available_plans.each do |i| %>
+                <option value="<%= i.amount %>" <%= i == @current_plan_price ? "selected" : "" %> >
+                  <%= i.to_s(precision: :auto) %>
+                </option>
+              <% end %>
+            </select>
           </div>
         </div>
-      </div>
 
-      <div id="card-errors"></div>
+        <div>
+          <label for="current-card" class="font-bold">
+            <%=t 'credit_or_debit_card' %>
+          </label>
 
-      <div class="actions">
-        <button id="register-button" type="submit" class="btn btn-success">
-          <i class="fa fa-spinner fa-spin hidden" id="button-spinner"></i>
-          <%=t 'update' %>
-        </button>
-      </div>
-    <% end %>
+          <div>
+            <% if @customer_payment_method.nil? %>
+              t('no_card_registered')
+            <% else %>
+              <div class="input flex justify-between">
+                <span>
+                  <span class="card-<%= card_brand(@customer_payment_method) %>"></span>
+                  <%= masked_card_number(@customer_payment_method) %>
+                </span>
+                <span class="card-expiration"><%= card_expiration(@customer_payment_method) %></span>
+              </div>
+            <% end %>
+            <div class="mt-1">
+              <button type="button" class="button" data-action="click->edit-card#addNewCard"><%= @customer_payment_method.nil? ? t('add_new_card') : t('edit_card') %></button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hidden" data-target="edit-card.newCard" data-active-class="block">
+          <div id="new-card-div" data-controller="stripe-card-element">
+            <label for="card-element" class="font-bold"><%=t 'add_new_card' %></label>
+            <div id="card-element" class="input" data-target="stripe-card-element.container"></div>
+            <div class="text-orange-shade-1" data-target="stripe-card-element.errors"></div>
+          </div>
 
-  </div>
+          <div id="card-errors"></div>
+        </div>
+
+        <div>
+          <i class="fa fa-lock" aria-hidden="true"></i> <span class="ml-1">Secured by Stripe</span>
+        </div>
+
+        <div class="actions">
+          <button id="register-button" type="submit" class="button button-cta w-full">
+            <i class="fa fa-spinner fa-spin hidden" id="button-spinner"></i>
+            <%= t 'update' %>
+          </button>
+        </div>
+
+      <% end %>
+    </div>
+  </section>
+
+  <%= render "shared/bottom_landscape" %>
 </div>
 
-<%= render "shared/footer_old" %>
-
-<% content_for :javascript_tags do %>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      initializeEditCard();
-    });
-  </script>
-<% end %>
+<%= render "shared/footer", skip_prefooter: true %>

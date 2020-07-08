@@ -1,71 +1,49 @@
-<% content_for :stylesheets do %>
-  <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
-<% end %>
-<% content_for :javascripts do %>
-  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'reportLoadError(event)' %>
-<% end %>
+<%= render "shared/header" %>
 
-<div class="site-wrapper-first">
-  <%= render "shared/header_old" %>
-  <div class="inner">
+<div class="bg-blue-pastel">
 
-    <span class="glyphicon glyphicon-large glyphicon-globe" aria-hidden="true"></span>
+  <section class="section-padding">
+    <h1 class="heading-xl mb-6"><%= t 'settings' %></h1>
 
-    <%= render "shared/user_menu" %>
-
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, :class => "form-horizontal" }) do |f| %>
+    <div class="text-center mb-6">
+      <ul class="inline-flex overflow-hidden rounded shadow">
+        <li class="px-2 py-1 bg-primary text-white hover:bg-green-shade-1 transition ease-in-out duration-200"><%= link_to t('account_settings'), edit_user_registration_path %></li>
+        <li class="px-2 py-1 bg-white hover:bg-green-shade-1 hover:text-white transition ease-in-out duration-200"><%= link_to t('payment_settings'), user_subscription_path %></li>
+      </ul>
+    </div>
+    <div class="callout max-w-xl mx-auto">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, :class => "space-y-3" }) do |f| %>
       <%= render "devise/shared/error_messages_old", resource: resource %>
-
-      <div class="form-group">
-        <div class="col-sm-1"></div>
-        <label for="userName" class="col-sm-4 control-label"><%=t 'user_name' %></label>
-        <div class="col-sm-4">
-          <%= f.text_field :user_name, autofocus: true, id: "userName", class: "form-control" %>
+        <div>
+          <label for="userName" class="block font-bold"><%=t 'user_name' %></label>
+        <%= f.text_field :user_name, autofocus: true, id: "userName", class: "input w-full" %>
         </div>
-      </div>
-
-      <div class="form-group">
-        <div class="col-sm-1"></div>
-        <label for="country" class="col-sm-4 control-label"><%=t 'country' %></label>
-        <div class="col-sm-4">
-          <%= f.country_select :country, {include_blank: true}, {selected: current_user.country_name, autofocus: true, id: "country", class: 'form-control'} %>
+        <div>
+          <label for="country" class="block font-bold"><%=t 'country' %></label>
+          <div class="select-wrapper w-full">
+            <%= f.country_select :country, {include_blank: true}, {selected: current_user.country_name, autofocus: true, id: "country", class: 'select'} %>
+          </div>
         </div>
-      </div>
-
-      <div class="form-group">
-        <div class="col-sm-1"></div>
-        <label for="email" class="col-sm-4 control-label"><%=t 'email' %></label>
-        <div class="col-sm-4">
-          <%= f.email_field :email, autofocus: true, id: "email", class: "form-control" %>
+        <div>
+          <label for="email" class="block font-bold"><%=t 'email' %></label>
+          <%= f.email_field :email, autofocus: true, id: "email", class: "input w-full" %>
         </div>
-      </div>
-
-      <div class="form-group">
-        <div class="col-sm-1"></div>
-        <label for="password" class="col-sm-4 control-label"><%=t 'password' %></label>
-        <div class="col-sm-4">
-        <%= f.password_field :password, autocomplete: "off", id: "password", class: "form-control" %>
+        <div>
+          <label for="password" class="block font-bold"><%=t 'password' %></label>
+          <%= f.password_field :password, autocomplete: "off", id: "password", class: "input w-full" %>
         </div>
-      </div>
-      <div class="form-group">
-        <div class="col-sm-1"></div>
-        <label for="confirmationPassword" class="col-sm-4 control-label"><%=t 'confirm_password' %></label>
-        <div class="col-sm-4">
-        <%= f.password_field :password_confirmation, autocomplete: "off", id: "confirmationPassword", class: "form-control" %>
+        <div>
+          <label for="confirmationPassword" class="block font-bold"><%=t 'confirm_password' %></label>
+          <%= f.password_field :password_confirmation, autocomplete: "off", id: "confirmationPassword", class: "input w-full" %>
         </div>
-      </div>
+        <div>
+          <%= f.submit t("update"), class: "button button-cta w-full"  %>
+        </div>
+      <% end %>
+    </div>
+  </section>
 
-      <div class="actions">
-        <%= f.submit t("update"), class: "btn btn-success"  %>
-      </div>
-    <% end %>
-
-  </div>
+  <%= render "shared/bottom_landscape" %>
 </div>
 
-<%= render "shared/footer_old" %>
-<% content_for :javascript_tags do %>
-  <script type="text/javascript">
-    $(document).ready(initializeEditUserName);
-  </script>
-<% end %>
+<%= render "shared/footer", skip_prefooter: true %>

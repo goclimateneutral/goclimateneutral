@@ -1,0 +1,71 @@
+<% content_for :stylesheets do %>
+  <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
+<% end %>
+<% content_for :javascripts do %>
+  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'reportLoadError(event)' %>
+<% end %>
+
+<div class="site-wrapper-first">
+  <%= render "shared/header_old" %>
+  <div class="inner">
+
+    <span class="glyphicon glyphicon-large glyphicon-globe" aria-hidden="true"></span>
+
+    <%= render "shared/user_menu" %>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, :class => "form-horizontal" }) do |f| %>
+      <%= render "devise/shared/error_messages_old", resource: resource %>
+
+      <div class="form-group">
+        <div class="col-sm-1"></div>
+        <label for="userName" class="col-sm-4 control-label"><%=t 'user_name' %></label>
+        <div class="col-sm-4">
+          <%= f.text_field :user_name, autofocus: true, id: "userName", class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-1"></div>
+        <label for="country" class="col-sm-4 control-label"><%=t 'country' %></label>
+        <div class="col-sm-4">
+          <%= f.country_select :country, {include_blank: true}, {selected: current_user.country_name, autofocus: true, id: "country", class: 'form-control'} %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-1"></div>
+        <label for="email" class="col-sm-4 control-label"><%=t 'email' %></label>
+        <div class="col-sm-4">
+          <%= f.email_field :email, autofocus: true, id: "email", class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-1"></div>
+        <label for="password" class="col-sm-4 control-label"><%=t 'password' %></label>
+        <div class="col-sm-4">
+        <%= f.password_field :password, autocomplete: "off", id: "password", class: "form-control" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-1"></div>
+        <label for="confirmationPassword" class="col-sm-4 control-label"><%=t 'confirm_password' %></label>
+        <div class="col-sm-4">
+        <%= f.password_field :password_confirmation, autocomplete: "off", id: "confirmationPassword", class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="actions">
+        <%= f.submit t("update"), class: "btn btn-success"  %>
+      </div>
+    <% end %>
+
+  </div>
+</div>
+
+<%= render "shared/footer_old" %>
+<% content_for :javascript_tags do %>
+  <script type="text/javascript">
+    $(document).ready(initializeEditUserName);
+  </script>
+<% end %>

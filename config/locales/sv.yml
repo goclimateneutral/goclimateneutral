@@ -129,6 +129,7 @@ sv:
   price: Pris
   country: Land
   edit_settings: Ändra inställningar
+  account_settings: Kontoinställningar
   payment_settings: Betalningsinställningar
   user_name: Namn
   confirm_password: Bekräfta lösenord
