@@ -1,159 +1,172 @@
-<% content_for :stylesheets do %>
-  <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
-<% end %>
-<% content_for :javascripts do %>
-  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'throw "Loading Javascript " + this.src + " failed"' %>
-<% end %>
+<%= render "shared/header" %>
 
-<div class="site-wrapper-first">
-  <%= render "shared/header_old" %>
-  <div class="inner cover">
-
-    <span class="glyphicon glyphicon-large glyphicon-globe" aria-hidden="true"></span>
-    <h1 class="cover-heading"><%= title(t('about_us')) %></h1>
-    <p class="lead"><%= description(t('about_us_intro')) %></p>
-    <p class="lead"><%= description(t('about_us_intro_2')) %></p>
-
-  </div>
-  <span class="glyphicon glyphicon-large glyphicon-chevron-down first" aria-hidden="true"></span>
-</div>
-
-<a name="why_goclimateneutral"></a>
-<div class="site-wrapper-second">
-  <div class="inner">
-
-    <h1 class="cover-heading"><%=t 'about_us_who_are_we' %></h1>
-    <div class="row">
-
-      <div class="col-xs-12 col-md-6 profile">
-        <%= image_tag webpack_asset_path('images/about/kalle.jpg'), class: 'img-circle', alt: "" %>
-        <h2>Kalle Nilvér</h2>
-        <p><%=t 'about_us_who_are_we_kalle_html' %></p>
-        <p><b>Twitter:</b> <%= link_to 'kallenilver', 'https://twitter.com/kallenilver', target: "_blank" %></p>
-        <p><b>Telefon:</b> <%= link_to '+46706084374', 'tel:+46706084374' %></p>
-      </div>
-
-      <div class="col-xs-12 col-md-6 profile">
-        <%= image_tag webpack_asset_path('images/about/cissi.jpg'), class: 'img-circle', alt: "" %>
-        <h2>Cissi Lindén</h2>
-        <p><%=t 'about_us_who_are_we_cissi_html' %></p>
-        <p><b>Twitter:</b> <%= link_to 'cissilinden', 'https://twitter.com/cissilinden', target: "_blank" %></p>
-        <p><b>Telefon:</b> <%= link_to '+46705476300', 'tel:+46705476300' %></p>
+<section class="section-padding">
+  <div class="section-gutter t:flex t:items-center t:justify-between">
+    <div class="t:w-1/2">
+      <div class="mx-auto max-w-xl space-y-6">
+        <h1 class="heading-xl">
+          <%= title(t('about_us')) %>
+        </h1>
+        <p><%= description(t('about_us_intro')) %></p>
+        <p><%= t('about_us_intro_2') %></p>
       </div>
     </div>
-
-    <div class="row">
-      <div class="col-xs-12 col-md-6 profile">
-        <%= image_tag webpack_asset_path('images/about/henrik.jpg'), class: 'img-circle', alt: "" %>
-        <h2>Henrik Kniberg</h2>
-        <p><%=t 'about_us_who_are_we_henrik_html' %></p>
-        <p><b>Twitter:</b> <%= link_to 'henrikkniberg', 'https://twitter.com/henrikkniberg', target: "_blank" %></p>
-      </div>
-
-      <div class="col-xs-12 col-md-6 profile">
-        <%= image_tag webpack_asset_path('images/about/stefan.jpg'), class: 'img-circle', alt: "" %>
-        <h2>Stefan Lindbohm</h2>
-        <p><%=t 'about_us_who_are_we_stefan_html' %></p>
-        <p><b>Twitter:</b> <%= link_to 'stefanlindbohm', 'https://twitter.com/stefanlindbohm', target: "_blank" %></p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-xs-12 col-md-6 profile">
-        <%= image_tag webpack_asset_path('images/about/alexandra.jpg'), class: 'img-circle', alt: "" %>
-        <h2>Alexandra Palmquist</h2>
-        <p><%=t 'about_us_who_are_we_alexandra_html' %></p>
-      </div>
-      <div class="col-xs-12 col-md-6 profile">
-        <%= image_tag webpack_asset_path('images/about/tove.jpg'), class: 'img-circle', alt: "" %>
-        <h2>Tove Westling</h2>
-        <p><%=t 'about_us_who_are_we_tove_html' %></p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="profile">
-        <%= image_tag webpack_asset_path('images/about/emma.jpg'), class: 'img-circle', alt: "" %>
-        <h2>Emma Bäckström</h2>
-        <p><%=t 'about_us_who_are_we_emma_html' %></p>
-      </div>
+    <div class="t:w-1/2">
+      <%= image_tag webpack_asset_path('images/about/team.jpg'), class: 'w-full rounded' %>
     </div>
   </div>
-</div>
-
-
-<a name="why_goclimateneutral"></a>
-<div class="site-wrapper-third">
-  <div class="inner">
-
-    <span class="glyphicon glyphicon-large glyphicon-question-sign" aria-hidden="true"></span>
-    <h1 class="cover-heading"><%=t 'about_us_why_do_we_exist' %></h1>
-    <p class="lead"><%=t 'about_us_why_do_we_exist_text' %></p>
-
-  </div>
-  <span class="glyphicon glyphicon-large glyphicon-chevron-down" aria-hidden="true"></span>
-</div>
-
-<a name="why_goclimateneutral"></a>
-<div class="site-wrapper-fourth">
-  <div class="inner">
-
-    <span class="glyphicon glyphicon-large glyphicon-leaf" aria-hidden="true"></span>
-    <h1 class="cover-heading"><%=t 'about_us_how_do_we_stop_climate_change' %></h1>
-    <p class="lead"><%=t 'about_us_how_do_we_stop_climate_change_text' %></p>
-    <p class="lead"><%=t 'about_us_how_do_we_stop_climate_change_text_2' %></p>
-
-  </div>
-  <span class="glyphicon glyphicon-large glyphicon-chevron-down" aria-hidden="true"></span>
-</div>
+</section>
 
 <% if I18n.locale == :sv %>
-  <div class="site-wrapper-third">
-    <div class="inner">
-      <h2 class="cover-heading">Vi har medverkat i</h2>
-      <div class="row">
-        <div class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
-          <% [
-            {
-              image_url: "images/press_logos/dn.png",
-              url: "https://www.dn.se/ekonomi/kalle-nilver-lamnade-vd-jobb-for-att-fa-fler-att-klimatkompensera/"
-            },
-            {
-              image_url: "images/press_logos/breakit-logo-_low_300.png",
-              url: "https://www.breakit.se/artikel/19823/kalle-nilver-lamnar-toppjobbet-for-att-radda-oss-fran-klimatkatastrof"
-            },
-            {
-              image_url: "images/press_logos/Dagens-industri_logo_low_300.png",
-              url: "https://www.di.se/nyheter/stjarnkrogen-levde-upp-till-forvantningarna-fantastisk-16-ratters/"
-            },
-            {
-              image_url: "images/press_logos/aktuell_hallbarhet.png",
-              url: "https://www.aktuellhallbarhet.se/lamnar-vd-jobbet-for-att-stoppa-klimatforandringarna/"
-            },
-            {
-              image_url: "images/press_logos/veckansaffarer-logga_low_300.png",
-              url: "https://www.va.se/nyheter/2019/07/16/vi-maste-konsumera-mycket-mindre/"
-            },
-            {
-              image_url: "images/press_logos/syre.png",
-              url: "https://tidningensyre.se/stockholm/leva-ett-klimatneutralt-liv/"
-            }
-          ].each_with_index do |logo, index| %>
-            <% if index == 2 || index == 4 %>
-              </div>
-            <% end %>
-            <% if index == 0 || index == 2 || index == 4 %>
-              <div class="row">
-            <% end %>
-            <div class="col-xs-6 col-sm-6 text-center" style="height: 120px; margin: 10px auto;">
-              <a href="<%= logo[:url] %>" target="_blank" rel="noopener" style="display: inline-block; position: relative; top: 50%; transform: translateY(-50%);">
-                <%= image_tag webpack_asset_path(logo[:image_url]), class: 'max-h-full img-responsive', style: 'max-height: 80px' %>
-              </a>
+  <section class="section-padding">
+    <h2 class="heading-lg text-center">Vi har medverkat i</h2>
+    <div class="flex flex-wrap justify-center mt-6">
+        <% [
+          {
+            image_url: "images/press_logos/dn.png",
+            url: "https://www.dn.se/ekonomi/kalle-nilver-lamnade-vd-jobb-for-att-fa-fler-att-klimatkompensera/"
+          },
+          {
+            image_url: "images/press_logos/breakit-logo-_low_300.png",
+            url: "https://www.breakit.se/artikel/19823/kalle-nilver-lamnar-toppjobbet-for-att-radda-oss-fran-klimatkatastrof"
+          },
+          {
+            image_url: "images/press_logos/Dagens-industri_logo_low_300.png",
+            url: "https://www.di.se/nyheter/stjarnkrogen-levde-upp-till-forvantningarna-fantastisk-16-ratters/"
+          },
+          {
+            image_url: "images/press_logos/aktuell_hallbarhet.png",
+            url: "https://www.aktuellhallbarhet.se/lamnar-vd-jobbet-for-att-stoppa-klimatforandringarna/"
+          },
+          {
+            image_url: "images/press_logos/Di-Weekend_low_300.png",
+            url: "https://weekend.di.se/reportage/sa-minskar-du-din-klimatangest"
+          },
+          {
+            image_url: "images/press_logos/syre.png",
+            url: "https://tidningensyre.se/stockholm/leva-ett-klimatneutralt-liv/"
+          }
+        ].each do |logo| %>
+          <a href="<%= logo[:url] %>" target="_blank" rel="noopener" class="w-1/2 md:w-1/3 flex items-center justify-center p-5 m-lg:p-8 t:p-10" style="max-height: 120px">
+            <%= image_tag webpack_asset_path(logo[:image_url]), class: 'max-h-full' %>
+          </a>
+        <% end %>
+      </div>
+  </section>
+<% end %>
+
+<!-- 
+Lyssna på Cissi i <a href="https://klimatpodden.se/66-cecilia-linden-klimatkompensera-din-livsstil" target="_blank" rel="noreferrer noopener">Klimatpodden</a> och <a href="https://healthforwealth.se/podcast/144-klimatneutral-pa-jobbet-jo-det-gar/" target="_blank" rel="noreferrer noopener">Health for Wealth</a>.
+-->
+
+<section class="section-padding">
+  <h2 class="heading-lg text-center mb-12">
+    <%=t 'about_us_who_are_we' %>
+  </h2>
+  <div class="flex flex-wrap justify-center section-gutter">
+    <% [
+      {
+        key: 'kalle',
+        translation_key: 'kalle_html',
+        full_name: 'Kalle Nilvér',
+        twitter_handle: 'kallenilver',
+        phone_number: '+46706084374',
+      },
+      {
+        key: 'cissi',
+        translation_key: 'cissi_html',
+        full_name: 'Cissi Lindén',
+        twitter_handle: 'cissilinden',
+        phone_number: '+46705476300',
+      },
+      {
+        key: 'henrik',
+        translation_key: 'henrik_html',
+        full_name: 'Henrik Kniberg',
+        twitter_handle: 'henrikkniberg',
+      },
+      {
+        key: 'stefan',
+        translation_key: 'stefan_html',
+        full_name: 'Stefan Lindbohm',
+        twitter_handle: 'stefanlindbohm',
+      },
+      {
+        key: 'alexandra',
+        translation_key: 'alexandra_html',
+        full_name: 'Alexandra Palmquist',
+      },
+      {
+        key: 'tove',
+        translation_key: 'tove_html',
+        full_name: 'Tove Westling',
+      },
+      {
+        key: 'emma',
+        translation_key: 'emma_html',
+        full_name: 'Emma Bäckström',
+      },
+    ].each do |person| %>
+      <div class="w-full t:w-1/2 d:w-1/3 space-y-3 text-center">
+        <%= image_tag webpack_asset_path("images/about/#{person[:key]}.jpg"), class: 'rounded-full mx-auto w-48', alt: person[:key] %>
+        <h3 class="heading">
+          <%= person[:full_name] %>
+        </h3>
+        <p><%= t("about_us_team.#{person[:translation_key]}").gsub('<a', '<a class="link"').html_safe %></p>
+        <% if person[:phone_number] %>
+          <p><b>Phone:</b> <%= link_to person[:phone_number], 'tel:' + person[:phone_number], class: 'link' %></p>
+        <% end %>
+        <div class="mx-auto">
+          <% if person[:twitter_handle] %>
+            <div class="inline-block mx-2">
+              <%= link_to "https://twitter.com/#{person[:twitter_handle]}", target: "_blank", rel: "noopener", class: 'link-icon' do %>
+                <i class="fa fa-2x fa-twitter" aria-hidden="true"></i>
+              <% end %>
+            </div>
+          <% end %>
+          <% if person[:instagram_handle] %>
+            <div class="inline-block mx-2">
+              <%= link_to "https://www.instagram.com/#{person[:instagram_handle]}", target: "_blank", rel: "noopener", class: 'link-icon' do %>
+                <i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
+              <% end %>
             </div>
           <% end %>
         </div>
       </div>
+    <% end %>
+  </div>
+</section>
+
+<section class="section-padding">
+  <div class="d:flex items-center section-gutter">
+    <div class="d:w-1/2">
+      <div class="max-w-xl space-y-6 mx-auto">
+        <h2 class="heading-lg">
+          <%=t 'about_us_why_do_we_exist' %>
+        </h2>
+        <p><%=t 'about_us_why_do_we_exist_text' %></p>
+      </div>
+    </div>
+    <div class="d:w-1/2">
+      <%= image_tag webpack_asset_path('images/illustrations/grandma.png'), class: 'w-full max-w-md mx-auto' %>
     </div>
   </div>
-<% end %>
+</section>
 
-<%= render "shared/footer_old" %>
+<section class="section-padding">
+  <div class="d:flex section-gutter">
+    <div class="d:w-1/2 d:mx-auto">
+      <div class="max-w-xl space-y-6 mx-auto">
+        <h2 class="heading-lg">
+          <%=t 'about_us_how_do_we_stop_climate_change' %>
+        </h2>
+        <p><%=t 'about_us_how_do_we_stop_climate_change_text' %></p>
+        <p><%=t 'about_us_how_do_we_stop_climate_change_text_2' %></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render 'shared/more_info', pages: [:projects, :transparency] %>
+
+<%= render 'shared/footer' %>

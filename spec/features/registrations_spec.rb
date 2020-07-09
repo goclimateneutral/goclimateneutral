@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.feature 'Registrations', type: :feature, js: true do
   scenario 'Register and update card' do
     # Homepage
-    visit '/?disable_experiments=new_design'
+    visit '/'
 
     select('Sweden', from: 'country')
     click_button 'Get started'
@@ -19,6 +19,7 @@ RSpec.feature 'Registrations', type: :feature, js: true do
     click_button 'Next'
 
     # Sign up page
+    find('#continue-to-payment').click
     fill_in 'Email', with: 'test@example.com'
     fill_in 'Password', with: 'password'
     within_frame(0) do
@@ -27,13 +28,13 @@ RSpec.feature 'Registrations', type: :feature, js: true do
       find('input[name=cvc]').send_keys '123'
     end
     check 'I accept our Privacy policy'
-    click_button 'Go Climate Neutral!'
+    click_button 'Start subscription'
 
     # Wait for success page to render
     find('.dashboard-show', wait: 30)
 
     expect(page).to have_text 'Welcome to a climate neutral life'
-    expect(page).to have_text 'We have accomplished a lot together!'
+    expect(page).to have_text 'Hello, climate friend!'
 
     # Go to payment settings page
     visit '/users/edit'
@@ -59,7 +60,7 @@ RSpec.feature 'Registrations', type: :feature, js: true do
   context 'when using 3D Secure card' do
     scenario 'Register and update card' do
       # Homepage
-      visit '/?disable_experiments=new_design'
+      visit '/'
 
       select('Sweden', from: 'country')
       click_button 'Get started'
@@ -73,6 +74,7 @@ RSpec.feature 'Registrations', type: :feature, js: true do
       click_button 'Next'
 
       # Sign up page
+      find('#continue-to-payment').click
       fill_in 'Email', with: 'test@example.com'
       fill_in 'Password', with: 'password'
       within_frame(0) do
@@ -81,7 +83,7 @@ RSpec.feature 'Registrations', type: :feature, js: true do
         find('input[name=cvc]').send_keys '123'
       end
       check 'I accept our Privacy policy'
-      click_button 'Go Climate Neutral!'
+      click_button 'Start subscription'
 
       # 3D Secure authorization pop up
       within_frame(find('iframe[name=__privateStripeFrame8]', wait: 20)) do
@@ -98,7 +100,7 @@ RSpec.feature 'Registrations', type: :feature, js: true do
       find('.dashboard-show', wait: 20)
 
       expect(page).to have_text 'Welcome to a climate neutral life'
-      expect(page).to have_text 'We have accomplished a lot together!'
+      expect(page).to have_text 'Hello, climate friend!'
 
       # Go to payment settings page
       visit '/users/edit'

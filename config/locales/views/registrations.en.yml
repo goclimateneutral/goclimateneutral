@@ -6,7 +6,6 @@ en:
       your_yearly_climate_footprint: Your yearly carbon footprint
       corresponds_to: This corresponds to %{price}/month.
       you: You
-      compensated: With offsetting
       average_in: Average in %{region}
       world_average: World average
       goal_2030: Goal 2030
@@ -17,17 +16,14 @@ en:
       your_climate_footprint_compared_world: Your carbon footprint of %{footprint} is %{relative} than the world average. To be in line with the 1.5 degree target set by the Paris agreement, we need to reach an average of 2.5 tonnes per person globally by the year 2030. By offsetting your emissions you can reach zero today.
 
       subscribe_heading: Subscribe to a climate neutral life
-      subscribe_intro: Start your subscription today to offset your carbon footprint. Every person counts on our journey to reaching the climate goals!
       step: Step
       adjust_subscription: Adjust your subscription
       create_account: Create account
       your_subscription: Your subscription
       number_of_people: Number of people
-      total: Total
       continue_to_payment: Continue to payment
       start_subscription: Start subscription
       back: Back
-      subscription_price_information: The price of our Gold Standard certificated climate projects is %{price}/tonne. To be absolutely sure your subscriptoin is actually offsetting your lifestyle, we always double your amount of tonnes for your subscription.
       where_does_the_money_go:
         heading: Where does the money go?
         point_1: Our climate projects are accelerating the global transition to renewable energy sources.

@@ -1,22 +1,13 @@
-<% content_for :stylesheets do %>
-  <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
-<% end %>
-<% content_for :javascripts do %>
-  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'throw "Loading Javascript " + this.src + " failed"' %>
-<% end %>
+<%= render "shared/header" %>
 
-<div class="site-wrapper-first">
-  <%= render "shared/header_old" %>
-  <div class="inner">
-
-    <span class="glyphicon glyphicon-large glyphicon-globe" aria-hidden="true"></span>
-    <h1 class="cover-heading"><%= title(t('contact_us')) %></h1>
-    <p class="lead text-left"><%= description(t('general_questions_html')) %></p>
-    <p class="lead text-left"><%=t 'general_questions_press_html' %></p>
-    <p class="lead text-left"><%=t 'general_questions_facebook_html' %></p>
-    <p class="lead text-left last"><%=t 'general_questions_twitter_html' %></p>
-
+<section class="section-padding">
+  <h1 class="heading-xl mb-6"><%= title(t('contact_us')) %></h1>
+  <div class="max-w-2xl space-y-6">
+    <p><%= description(t('general_questions_html')).gsub('<a', '<a class="link" rel="noopener noreferrer"').html_safe %></p>
+    <p><%= t('general_questions_press_html').gsub('<a', '<a class="link" rel="noopener noreferrer"').html_safe %></p>
+    <p><%= t('general_questions_facebook_html').gsub('<a', '<a class="link" rel="noopener noreferrer"').html_safe %></p>
+    <p><%= t('general_questions_twitter_html').gsub('<a', '<a class="link" rel="noopener noreferrer"').html_safe %></p>
   </div>
-</div>
+</section>
 
-<%= render "shared/footer_old" %>
+<%= render "shared/footer" %>

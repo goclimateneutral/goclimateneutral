@@ -5,20 +5,16 @@ sv:
       index:
         header: Låt din nästa present bli ett klimatneutralt liv
         intro: Letar du efter en present till någon som redan har allt? Vill du hjälpa till att sprida kunskapen om att det finns något som vi alla kan göra för att bromsa klimatförändringarna? Ge bort vårt klimat-gåvokort!
-        choose_header: Välj ditt klimat-gåvokort
-        1_months_header: 1 månad
-        1_months_description: 1 månads klimatneutralt liv
-        1_months_cta: Välj 1 månads gåvokort
-        3_months_header: 3 månader
-        3_months_description: 3 månader klimatneutralt liv
-        3_months_cta: Välj 3 månaders gåvokort
-        6_months_header: 6 månader
-        6_months_description: Ett halvår klimatneutralt liv
-        6_months_cta: Välj 6 månaders gåvokort
-        12_months_header: 12 månader
-        12_months_description: Ett helt år klimatneutralt liv
-        12_months_cta: Välj 12 månaders gåvokort
-        cta: Välj
+        description:
+          1: 1 månads klimatneutralt liv
+          3: 3 månader klimatneutralt liv
+          6: Ett halvår klimatneutralt liv
+          12: Ett helt år klimatneutralt liv
+        cta:
+          1: Välj 1 månad
+          3: Välj 3 månader
+          6: Välj 6 månader
+          12: Välj ett år
         details_html: "Gåvokorten är baserade på en medelsvensks klimatavtryck - 11 ton CO<sub>2</sub>eq. För att vara på säkra sidan - och för att våran planet behöver det - så dubblar vi även alla våra uträkningar och bygger därför kalkylerna ovan på utsläpp på 22 ton CO<sub>2</sub>eq."
       new:
         intro: Anpassa och betala för ditt gåvokort
@@ -43,6 +39,3 @@ sv:
       thank_you:
         download_the_gift_card_here: Ladda ner gåvokortet här
         download_receipt_here: Ladda ner kvitto här
-        you_have_purchased_a_gift_card_with_x_climate_neutral_months:
-          one: Du har köpt ett gåvokort på 1 månads klimatneutralt liv
-          other: "Du har köpt ett gåvokort på %{count} månaders klimatneutralt liv"

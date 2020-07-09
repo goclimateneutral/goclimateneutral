@@ -1,47 +1,26 @@
-<% content_for :stylesheets do %>
-  <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
-<% end %>
-<% content_for :javascripts do %>
-  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'throw "Loading Javascript " + this.src + " failed"' %>
-<% end %>
+<%= render "shared/header" %>
 
-<div class="site-wrapper-first">
-  <%= render "shared/header_old" %>
-  <div class="inner inner--bottom-padding">
-
-    <span class="glyphicon glyphicon-large glyphicon-plane" aria-hidden="true"></span>
-
-    <div class="content-section">
-      <h1 class="cover-heading"><%=t 'views.flight_offsets.thank_you.header' %></h1>
-      <p class="lead">
-        <%=t 'views.flight_offsets.thank_you.lead' %>
-      </p>
-      <p class="lead">
-        <%= link_to t('views.flight_offsets.thank_you.download_certificate'), flight_offset_certificates_path(@offset, format: :pdf), class: 'btn btn-success' %>
-        <%= link_to t('views.flight_offsets.thank_you.download_receipt'), flight_offset_receipts_path(@offset, format: :pdf), class: 'btn btn-link' %>
-      </p>
-      <p>
-        <%=t 'views.flight_offsets.thank_you.we_have_sent_an_email' %>
-      </p>
-    </div>
-    <div class="content-section">
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <p>
-            <%=t 'views.flight_offsets.thank_you.did_you_know_lifestyle' %>
-          </p>
-          <p>
-            <strong><%= link_to t('views.flight_offsets.thank_you.read_more_and_subscribe'), '/' %></strong>
-          </p>
-        </div>
-      </div>
-    </div>
-
-  </div>
+<div class="section-padding pb-0">
+  <h1 class="heading border-b-4 inline-block"><%= title(t('views.flight_offsets.heading')) %></h1>
 </div>
 
-<%= render "shared/footer_old" %>
+<section class="section-padding">
+  <div class="section-gutter flex flex-col d:flex-row">
+    <div class="d:w-1/2">
+      <h1 class="heading-xl mb-6">
+        <%= t('views.flight_offsets.thank_you.header') %>
+      </h1>
+      <p>
+        <%= t('views.flight_offsets.thank_you.lead') %>
+        <%=t 'views.flight_offsets.thank_you.we_have_sent_an_email' %>
+      </p>
+      <p class="space-x-3 mt-3">
+        <%= link_to t('views.flight_offsets.thank_you.download_certificate'), flight_offset_certificates_path(@offset, format: :pdf), class: 'link' %>
+        <%= link_to t('views.flight_offsets.thank_you.download_receipt'), flight_offset_receipts_path(@offset, format: :pdf), class: 'link' %>
+      </p>
 
-<script type="text/javascript">
-ga('send', 'event', 'Flight Offsets', 'Purchased');
-</script>
+
+      
+</section>
+
+<%= render "shared/footer" %>

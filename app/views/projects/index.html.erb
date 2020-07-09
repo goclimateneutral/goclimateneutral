@@ -1,152 +1,113 @@
-<% content_for :stylesheets do %>
-  <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
-<% end %>
-<% content_for :javascripts do %>
-  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'throw "Loading Javascript " + this.src + " failed"' %>
-<% end %>
+<%= render "shared/header" %>
 
-<div class="site-wrapper-first site-wrapper-first--no-trees">
-  <%= render "shared/header_old" %>
-  <div class="inner">
-    <span class="section-label"><%=t 'views.projects.index.latest_project' %></span>
-    <h1 class="cover-heading">
-      <%= @latest_project.name %>
-      <span class="tonnes-label">
-        <span class="tonnes-label--number"><%= number_with_delimiter(@latest_project.co2e.tonnes.to_i) %></span>
-        <span class="tonnes-label--unit"><%=t 'views.shared.tonnes_co2e', count: @latest_project.co2e.tonnes.to_i %></span>
-      </span>
-    </h1>
-    <div class="container text-left no-max-width">
-      <div class="row">
-        <div class="col-xs-8 col-xs-offset-2 col-md-3 col-md-offset-1 col-md-push-7">
-          <div class="img-circle-cropped" style="background-image: url('<%= @latest_project.image_url %>'); max-width: 300px; margin: 0 auto 15px;">
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-7 col-md-pull-3">
-          <%=
-            simple_format(@latest_project.short_description, class: 'lead')
-              .sub(/<\/p>\z/, " &nbsp; #{link_to t('views.projects.index.read_more_link'), @latest_project.blog_url, class: 'text-size-normal'}</p>").html_safe
-            %>
-          <div class="margin-1-line">
-            <%=l @latest_project.date_bought.to_date %> &bull;
-            <%= @latest_project.country %> &bull;
-            <%=t "models.project.offset_type.#{@latest_project.offset_type}" %> &bull;
-            <%= link_to t('views.projects.index.map_link'), @latest_project.map_url, target: '_blank' %>
-            <% if @latest_project.certificate_url.present? %>
-              &bull; <%= link_to t('views.projects.index.certificate_link'), @latest_project.certificate_url, target: '_blank' %>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="section-padding pb-0">
+  <h1 class="heading border-b-4 inline-block"><%= title(t('views.projects.heading')) %></h1>
 </div>
 
-<div class="site-wrapper-second">
-  <div class="inner">
+<section class="section-padding">
+  <h2 class="heading-xl"><%=t 'views.projects.latest_projects' %></h2>
 
-    <h1 class="cover-heading"><%= title(t('views.projects.index.map_header')) %></h1>
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-lg-10 col-lg-offset-1">
-          <div class="projects-map">
-            <%= image_tag webpack_asset_path('images/world_epsg_32663.png'), class: 'map' %>
-            <% @projects.drop(1).each do |project| %>
-              <div class="projects-map__marker" data-latitude="<%= project.latitude %>" data-longitude="<%= project.longitude %>" title="<%= "#{project.name}, #{project.country}" %>"></div>
-            <% end %>
-            <div class="projects-map__marker projects-map__marker--callout" data-latitude="<%= @projects.first.latitude %>" data-longitude="<%= @projects.first.longitude %>" style="background-image: url('<%= @projects.first.image_url %>')" title="<%= "#{@projects.first.name}, #{@projects.first.country}" %>"></div>
+  <div class="mt-12 flex flex-col d:flex-row section-gutter">
+    <% @projects.take(3).each do |project| %>
+      <div class="d:w-1/3 pt-20 m-lg:pt-24">
+        <div class="callout h-full space-y-3 pt-0">
+          <div class="inline-block w-full">
+            <img class="mx-auto h-40 w-40 -mt-20 m-lg:h-48 m-lg:w-48 m-lg:-mt-24 rounded-full object-cover" src="<%= project.image_url %>">
           </div>
+          <h3 class="heading"><%= project.name %></h3>
+          <%= simple_format(project.short_description) %>
         </div>
       </div>
-    </div>
-    <% content_for :javascript_tags do %>
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          var markers = document.querySelectorAll('.projects-map__marker');
-          for (var i = 0; i < markers.length; i++) {
-            new ProjectsMapMarker(markers[i]);
-          }
-        });
-      </script>
     <% end %>
+  </div>
 
-    <div class="container margin-1-line">
-      <div class="row stats offset-projects">
-        <div class="col-xs-12 col-md-10 col-md-offset-1">
-          <% @projects.each do |project| %>
-            <div class="panel panel-default panel-full-width panel-left-align">
-              <div id="project-<%= project.id %>" class="list-group projects-list-item">
-                <div class="list-group-item projects-list-item--heading" onclick="document.querySelector('#project-<%= project.id %>').classList.toggle('projects-list-item__expanded');">
-                  <div class="img-circle-cropped projects-list-item--image" style="background-image: url('<%= project.image_url %>');"></div>
-                  <h2>
-                    <%= project.name %>
-                    <span class="tonnes-label">
-                      <span class="tonnes-label--number"><%= number_with_delimiter(project.co2e.tonnes.to_i) %></span>
-                      <span class="tonnes-label--unit"><%=t 'views.shared.tonnes_co2e', count: project.co2e.tonnes.to_i %></span>
-                    </span>
-                  </h2>
-                  <div class="projects-list-item--chevron">
-                    <span class="glyphicon glyphicon-chevron-down"></span>
-                  </div>
-                </div>
-                <div class="list-group-item projects-list-item--details">
-                  <%=
-                    simple_format(project.short_description, class: 'lead')
-                      .sub(/<\/p>\z/, " &nbsp; #{link_to t('views.projects.index.read_more_link'), project.blog_url, class: 'text-size-normal'}</p>").html_safe
-                    %>
+  <div class="mt-12 text-center">
+    <a href="#all-projects" class="button" data-controller="scroll-to" data-action="scroll-to#scroll"><%=t 'views.projects.see_all' %></a>
+  </div>
+</section>
 
-                  <div class="margin-1-line">
-                    <%=l project.date_bought.to_date %> &bull;
-                    <%= project.country %> &bull;
-                    <%=t "models.project.offset_type.#{project.offset_type}" %> &bull;
-                    <% if project.certificate_url.present? %>
-                      <%= link_to t('views.projects.index.invoice'), project.invoice_url, target: '_blank' %> &bull;
-                    <% end %>
-                    <%= link_to t('views.projects.index.map_link'), project.map_url, target: '_blank' %>
-                    <% if project.certificate_url.present? %>
-                      &bull; <%= link_to t('views.projects.index.certificate_link'), project.certificate_url, target: '_blank' %>
-                    <% end %>
-                  </div>
-                </div>
-              </div>
-            </div>
-          <% end %>
+<section class="section-padding">
+  <div class="t:w-1/2">
+    <h2 class="heading-xl mb-6"><%=t 'views.projects.how.heading' %></h2>
+
+    <ul class="list-check space-y-3">
+      <li><%=t 'views.projects.how.1' %></li>
+      <li><%=t 'views.projects.how.2' %></li>
+      <li><%=t 'views.projects.how.3' %></li>
+      <li><%=t 'views.projects.how.4' %></li>
+      <li><%=t 'views.projects.how.5' %></li>
+    </ul>
+  </div>
+
+  <div class="mt-12 text-center">
+    <% if I18n.locale == :sv %>
+      <%= link_to t('views.projects.how.read_more'), 'https://www.goclimate.com/se/blog/vad-ar-ett-klimatprojekt-egentligen/', class: 'button' %>
+    <% else %>
+      <%= link_to t('views.projects.how.read_more'), 'https://www.goclimate.com/blog/what-is-a-climate-project/', class: 'button' %>
+    <% end %>
+  </div>
+</section>
+
+<a id="all-projects" class="absolute -mt-20"></a>
+<section class="section-padding">
+
+  <h3 class="heading-xl mb-12"><%=t 'views.projects.index.map_header' %></h3>
+  <div class="relative max-w-5xl mx-auto">
+    <%= image_tag webpack_asset_path('images/world_epsg_32663_gray.png'), class: 'w-full' %>
+    <% @projects.drop(1).each do |project| %>
+      <div class="map-marker absolute w-4 h-4 -ml-2 -mb-4 bg-primary border-2 border-white rounded-full" data-latitude="<%= project.latitude %>" data-longitude="<%= project.longitude %>" title="<%= "#{project.name}, #{project.country}" %>"></div>
+    <% end %>
+    <div class="map-marker absolute w-12 h-12 -ml-6 -mb-6 border-2 border-white rounded-full overflow-hidden" data-latitude="<%= @projects.first.latitude %>" data-longitude="<%= @projects.first.longitude %>">
+      <img src="<%= @projects.first.image_url %>" title="<%= "#{@projects.first.name}, #{@projects.first.country}" %>" class="w-full h-full object-cover">
+    </div>
+  </div>
+  <% content_for :javascript_tags do %>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var markers = document.querySelectorAll('.map-marker');
+        for (var i = 0; i < markers.length; i++) {
+          new ProjectsMapMarker(markers[i]);
+        }
+      });
+    </script>
+  <% end %>
+
+  <div class="space-y-6 mt-12">
+    <% @projects.each do |project| %>
+      <div class="mx-auto callout p-0">
+        <input type="checkbox" id="project-<%= project.id %>" class="toggler">
+        <label for="project-<%= project.id %>" class="p-4 flex items-center cursor-pointer space-x-4">
+          <img class="h-16 w-16 rounded-full object-cover" src="<%= project.image_url %>">
+          <h2 class="flex-grow font-bold"><%= project.name %>, <%= project.country %></h2>
+          <span class="fa fa-chevron-down transform toggler-checked:rotate-180 transition-transform duration-200"></span>
+        </label>
+        <div class="hidden toggler-checked:block px-4 pb-4">
+          <div class="max-w-2xl">
+            <%=
+              simple_format(project.short_description)
+                .sub(/<\/p>\z/, " &nbsp; #{link_to t('views.projects.index.read_more_link'), project.blog_url, class: 'link'}</p>").html_safe
+              %>
+          </div>
+
+          <div class="text-sm mt-3">
+            <%=l project.date_bought.to_date %> &bull;
+            <%= project.co2e.to_s(precision: 0) %> &bull;
+            <%=t "models.project.offset_type.#{project.offset_type}" %> &bull;
+            <% if project.certificate_url.present? %>
+              <%= link_to t('views.projects.index.invoice'), project.invoice_url, target: '_blank' %> &bull;
+            <% end %>
+            <%= link_to t('views.projects.index.map_link'), project.map_url, target: '_blank' %>
+            <% if project.certificate_url.present? %>
+              &bull; <%= link_to t('views.projects.index.certificate_link'), project.certificate_url, target: '_blank' %>
+            <% end %>
+          </div>
         </div>
       </div>
-    </div>
-
+    <% end %>
   </div>
-</div>
 
-<div class="site-wrapper-third">
-  <div class="inner">
+</section>
 
-    <span class="glyphicon glyphicon-large glyphicon-globe" aria-hidden="true"></span>
-    <h1 class="cover-heading"><%= title(t('our_investments_in_climate_projects')) %></h1>
-    <%= simple_format(description(t('views.projects.index.about_our_projects')), class: 'lead') %>
+<%= render 'shared/more_info', pages: [:about, :transparency] %>
 
-  </div>
-</div>
-
-<div id="second-section" class="site-wrapper-second">
-  <div class="inner">
-
-    <span class="glyphicon glyphicon-large glyphicon-search" aria-hidden="true"></span>
-    <h1 class="cover-heading"><%=t 'we_are_100_transparent' %></h1>
-    <p class="lead"><%=t 'section_3_text' %></p>
-    <p class="lead lead-btn">
-      <a href="/#choose-plan" class="btn btn-lg btn-success"><%=t 'i_want_to_contribute' %></a>
-    </p>
-
-  </div>
-</div>
-
-<%= render "shared/footer_old" %>
-
-<% content_for :javascript_tags do %>
-  <script>
-    $(document).ready(function() {
-      $('[data-toggle="popover"]').popover();
-    });
-  </script>
-<% end %>
+<%= render "shared/footer" %>

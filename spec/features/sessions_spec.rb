@@ -11,7 +11,7 @@ RSpec.feature 'Sessions', type: :feature, js: true do
       click_link('Log out')
     end
     # Homepage
-    visit '/?disable_experiments=new_design'
+    visit '/'
     click_link 'Log In'
 
     # sign in page
@@ -21,6 +21,6 @@ RSpec.feature 'Sessions', type: :feature, js: true do
 
     # Wait for dashboard to render
     find('.dashboard-show', wait: 20)
-    expect(page).to have_text 'We have accomplished a lot together!'
+    expect(page).to have_text 'Hello, climate friend!'
   end
 end

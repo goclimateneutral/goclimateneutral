@@ -1,33 +1,22 @@
-<% content_for :stylesheets do %>
-  <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
-<% end %>
-<% content_for :javascripts do %>
-  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'throw "Loading Javascript " + this.src + " failed"' %>
-<% end %>
+<%= render "shared/header" %>
 
-<div class="site-wrapper-first">
-  <%= render "shared/header_old" %>
-  <div class="inner">
-
-    <span class="glyphicon glyphicon-large glyphicon-heart" aria-hidden="true"></span>
-
-    <h1 class="cover-heading"><%=t 'views.gift_card_mailer.thank_you_for_buying_gift_card' %></h1>
-
-    <p class="lead"><%=t 'views.gift_cards.thank_you.you_have_purchased_a_gift_card_with_x_climate_neutral_months', count: @gift_card.number_of_months %></p>
-
-    <p class="lead"><%= link_to t('views.gift_cards.thank_you.download_the_gift_card_here'), gift_card_certificates_path(@gift_card, format: :pdf) %></a></p>
-
-    <p class="lead"><%=t 'we_have_sent_you_an_email_with_the_gift_card' %>: <%= @gift_card.customer_email %></p>
-
-    <p class="lead"><%=t 'thank_you_for_helping_us_trying_to_stop_climate_change' %>: <%= link_to('GoClimate', '/') %></p>
-
-    <p class="lead last"><%= link_to t('views.gift_cards.thank_you.download_receipt_here'), gift_card_receipts_path(@gift_card, format: :pdf) %></a></p>
-
-  </div>
+<div class="section-padding pb-0">
+  <h1 class="heading border-b-4 inline-block"><%=t 'views.gift_cards.heading' %></h1>
 </div>
 
-<%= render "shared/footer_old" %>
+<section class="section-padding">
+  <h2 class="heading-xl mb-6"><%=t 'views.gift_card_mailer.thank_you_for_buying_gift_card' %></h2>
+  <div class="d:w-1/2 space-y-3">
+  <p class="heading">
+    <%=t 'we_have_sent_you_an_email_with_the_gift_card' %>: <%= @gift_card.customer_email %>
+  </p>
+  <p><%=t 'thank_you_for_helping_us_trying_to_stop_climate_change' %>: <%= link_to('GoClimate', '/', class: 'link') %></p>
+  <div class="space-x-3">
+    <%= link_to t('views.gift_cards.thank_you.download_the_gift_card_here'), gift_card_certificates_path(@gift_card, format: :pdf), class: 'link' %></a>
+    <%= link_to t('views.gift_cards.thank_you.download_receipt_here'), gift_card_receipts_path(@gift_card, format: :pdf), class: 'link' %></a>
+  </div>
+  </div>
 
-<script type="text/javascript">
-  ga('send', 'event', 'Gift Cards', 'Purchased', 'Gift Card <%= @number_of_months %> months');
-</script>
+</section>
+
+<%= render "shared/footer" %>

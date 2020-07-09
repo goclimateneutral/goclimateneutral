@@ -1,38 +1,23 @@
-<% content_for :stylesheets do %>
-  <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
-<% end %>
-<% content_for :javascripts do %>
-  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'throw "Loading Javascript " + this.src + " failed"' %>
-<% end %>
+<%= render "shared/header" %>
 
-<div class="site-wrapper-first">
-  <%= render "shared/header_old" %>
-  <div class="inner">
+<div class="section-padding">
 
-    <span class="glyphicon glyphicon-large glyphicon-globe" aria-hidden="true"></span>
-    <h1 class="cover-heading"><%= title(t('forgot_your_password')) %></h1>
-    <p class="lead"><%= description(t('enter_your_email_below_and_we_will_send_you')) %></p>
+  <div class="callout max-w-lg mx-auto space-y-4">
+    <h1 class="heading-lg"><%= title(t('forgot_your_password')) %></h1>
+    <p><%= description(t('enter_your_email_below_and_we_will_send_you')) %></p>
 
-    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: "form-horizontal" }) do |f| %>
-      <%= render "devise/shared/error_messages_old", resource: resource %>
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: "space-y-4" }) do |f| %>
+      <label class="block">
+        <strong class="block"><%=t 'email' %></strong>
+        <%= f.email_field :email, autofocus: true, required: true, class: "input w-full" %>
+      </label>
 
-      <div class="form-group">
-        <div class="col-sm-1"></div>
-        <label for="email" class="col-sm-4 control-label"><%=t 'email' %></label>
-        <div class="col-sm-4">
-          <%= f.email_field :email, autofocus: true, id: "email", class: "form-control" %>
-        </div>
-      </div>
+      <%= render "devise/shared/error_messages", resource: resource %>
 
-
-      <div class="form-group">
-        <div class="col-sm-offset-5 col-sm-4">
-          <button type="submit" class="btn btn-success sign-in"><%=t 'send_me_an_email_with_instructions' %></button>
-        </div>
-      </div>
+      <button type="submit" class="button button-cta"><%=t 'send_me_an_email_with_instructions' %></button>
     <% end %>
 
   </div>
 </div>
 
-<%= render "shared/footer_old" %>
+<%= render "shared/footer" %>

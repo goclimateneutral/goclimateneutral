@@ -5,8 +5,8 @@ require 'rails_helper'
 RSpec.feature 'Gift cards', type: :feature, js: true do
   scenario 'Purchase gift card' do
     # Gift cards landing page
-    visit '/gift_cards?disable_experiments=new_design'
-    click_link '3 months'
+    visit '/gift_cards'
+    click_link 'Choose 3 months'
 
     count = ActionMailer::Base.deliveries.count
 

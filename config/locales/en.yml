@@ -11,7 +11,6 @@ en:
   i_want_to_know_more: I want to know more!
   contact_us: Contact us
   100_percent_transparency: 100% transparency
-  100_percent_transparency_intro: We want you to feel 100% confident in knowing exactly how your money is beeing used.
   what_we_do_with_your_money: This is what your money is contributing to
   system_change: System change
   system_change_description: To stop climate change we need to mobilize poeple to show politicians and companies that we need a systems change now.
@@ -36,14 +35,10 @@ en:
   project_distribution_by_continent: Here's where the climate projects we support are
   project_distribution_by_technology: These types of projects are we supporting
   CO2e_avoided_per_coworker: Tonnes CO2e avoided per coworker
-  100_percent_transparency_climate_projects: Climate Investments
-  for_more_information_about_climate_projects: For more information about our climate investments, read more on the page about
   100_percent_transparency_financial_info: Financial Information
   100_percent_transparency_financial_info_intro: GoClimateNeutral Sweden AB (registration number 559130-6583) was started 2017 with a focus on social entrepreneurship and the sole ambition and goal to try to slow down climate change as fast as possible.
   fiscal_years: Fiscal Years
   fiscal_year_2020_ongoing: Fiscal Year 2020 (ongoing)
-  financials: Financials
-  year: Year
   revenue: Revenue
   cost: Cost
   result: Result
@@ -72,13 +67,15 @@ en:
   about_us_how_do_we_stop_climate_change_text: In order to stop climate change we all need to live climate neutral lives now. The best way to do that is to reduce our footprint as much as possible and at the same time start to offset for the things we can't reduce. The GoClimate site was founded in 2017 with the aim to make it easy to do just that - reduce our climate impact and offset for the things we can't reduce.
   about_us_how_do_we_stop_climate_change_text_2: We believe that the best way to help offset climate impact is to make it as easy as possible to offset the climate impact of a specific lifestyle. We believe that we can stop climate change - if we do it together and if we start now.
   about_us_who_are_we: Who are we?
-  about_us_who_are_we_kalle_html: "Likes vegan choclate cake and cute animals on the internet. MSc in Information Technology and Business Economics."
-  about_us_who_are_we_cissi_html: Cissi has a degree in Business Economics and is well versed with climate calculations and sustainability questions. Ecology nerd and horticulture genius.
-  about_us_who_are_we_henrik_html: 'Agile & Lean coach. The creator of <a href="https://youtu.be/3CM_KkDuzGQ" target="_blank" rel="noreferrer noopener">A friendly guide to Climate Change</a>, <a href="http://climate.crisp.se/" target="_blank" rel="noreferrer noopener">Climate Crisplet</a> and <a href="http://carbonmanifesto.org/" target="_blank" rel="noreferrer noopener">Carbon Manifesto</a>. Listen to Henrik in <a href="https://www.bosslevelpodcast.com/henrik-kniberg-on-going-climate-neutral/" target="_blank" rel="noreferrer noopener">Boss Level Podcast</a>.'
-  about_us_who_are_we_stefan_html: Agile team & organizational coach. Slightly too idealistic pragmatist.
-  about_us_who_are_we_alexandra_html: MSc in environmental science with extensive international experience. Driven by curiosity and will to save the world, one step at a time. Dancing and taking runs in the woods to recharge on energy.
-  about_us_who_are_we_tove_html: Global Strategist with vast international PR & Communication experience, not least from running PR agency VARG PR in London since 2008. Now based in Stockholm, steadily working towards personal goal of sharing her home with more rescue dogs than is socially accepted.
-  about_us_who_are_we_emma_html: MSc Media technology with experience from a fast growing tech-startup. Wants to create great products, save the world and eat chocolate.
+  about_us_team:
+    heading: Who are we?
+    kalle_html: "Likes vegan choclate cake and cute animals on the internet. MSc in Information Technology and Business Economics."
+    cissi_html: Cissi has a degree in Business Economics and is well versed with climate calculations and sustainability questions. Ecology nerd and horticulture genius.
+    henrik_html: 'Agile & Lean coach. The creator of <a href="https://youtu.be/3CM_KkDuzGQ" target="_blank" rel="noreferrer noopener">A friendly guide to Climate Change</a>, <a href="http://climate.crisp.se/" target="_blank" rel="noreferrer noopener">Climate Crisplet</a> and <a href="http://carbonmanifesto.org/" target="_blank" rel="noreferrer noopener">Carbon Manifesto</a>. Listen to Henrik in <a href="https://www.bosslevelpodcast.com/henrik-kniberg-on-going-climate-neutral/" target="_blank" rel="noreferrer noopener">Boss Level Podcast</a>.'
+    stefan_html: Agile team & organizational coach. Slightly too idealistic pragmatist.
+    alexandra_html: MSc in environmental science with extensive international experience. Driven by curiosity and will to save the world, one step at a time. Dancing and taking runs in the woods to recharge on energy.
+    tove_html: Global Strategist with vast international PR & Communication experience, not least from running PR agency VARG PR in London since 2008. Now based in Stockholm, steadily working towards personal goal of sharing her home with more rescue dogs than is socially accepted.
+    emma_html: MSc Media technology with experience from a fast growing tech-startup. Wants to create great products, save the world and eat chocolate.
   blog: Blog
   we_are_100_transparent: We are 100% transparent.
   section_3_text: We are 100% transparent about which Gold Standard-certified climate offset projects we invest in, and why.
@@ -92,7 +89,6 @@ en:
   your_payment_details_have_been_updated: Your settings has been updated
   no_card_registered: No Card Registered
   climate_plan: Climate Plan
-  go_climate_neutral: Go Climate Neutral!
   log_in_to_see_how_we_are_doing: Climate change is the biggest challenge of our time. Log in to see how we are doing in our fight to stop it.
   you_have_lived_climate_neutral_for:
     one: You have been climate neutral for 1 month.
@@ -111,15 +107,8 @@ en:
     your_months: You have been climate neutral for
     your_offsets: Your CO2 offsets add up to
     together: Together with all <span>%{number_of_members} members</span>, we have prevented <span>%{number_of_tonnes} tonnes</span> of CO2 from reaching the atmosphere!
-  we_have_accomplished_alot_together: We have accomplished a lot together!
-  amount_of_carbon_we_have_offset: Number of tonnes CO2 that we have offset together
-  amount_of_carbon_i_have_offset: Number of tonnes CO2 that you have offset so far
   good_job: Good job!
-  number_of_months_you_have_been_climate_neutral: Number of months you have been climate neutral
-  number_of_climate_neutral_users_right_now: Number of climate neutral users right now
   our_projects: Our Climate Projects
-  our_investments_in_climate_projects: Our Climate Projects
-  i_want_to_contribute: Ok, I want to contribute!
   project_name: Project name
   map: Map
   more_info_on_blog: More Information
@@ -134,26 +123,17 @@ en:
     one: climate neutral month
     other: climate neutral months
   climate_country_toplist: Climate Country Toplist
-  total_carbon_offset_by_us: Total carbon offsets by us together
-  read_more_about_investments_on_our_blog: 'Read more about the projects we investments in on our blog >>'
   tonnes_CO2: tonnes CO2
   tonnes: tonnes
   type: Type
   price: Price
-  thank_you_so_much_everyone_for_helping_to_save_the_world: Thank you so much everyone for helping to save the world! You Rock!
-  latest_carbon_offset_projects: Latest Carbon Offset Projects
   country: Country
-  location: Location
-  more_info_on_our_blog: More information about the project
   edit_settings: Edit Settings
   payment_settings: Payment Settings
   user_name: User Name
   confirm_password: Confirm password
   update: Update
-  what_is_goclimateneutral: What is GoClimate?
   this_is_how_it_works: This is how it works
-  1_describe_your_lifestyle: 1. Describe Your Lifestyle
-  2_sign_up: 2. Sign Up
   forgot_your_password: Forgot your password?
   enter_your_email_below_and_we_will_send_you: Enter your email below and we will send you an email with instructions.
   send_me_an_email_with_instructions: Reset password
@@ -182,7 +162,6 @@ en:
   learn_more_about_what_we_have_achieved_here: 'Learn more about what we have achieved here >>'
   thank_you: Thank you!
   the_best_way_to_help_is_to_get_as_many_people_climate_neutral_as_possible: 'Please consider sharing this with your friends, the more people that become climate neutral, the bigger the chance that we succeed in slowing down climate change!'
-  im_in: I'm in!
   faq: FAQ
   faq_questions:
     climate_neutrality:
@@ -311,23 +290,15 @@ en:
     gift_cards: Gift Cards
 
   welcome:
-    caption_line_1: Together we can save our climate.
-    caption_line_2: Take responsibility for your emissions today!
-    what_is_gcn_text: We support Gold Standard certified climate offset projects and highlight easy ways to reduce your climate footprint. In this way we help slow down climate change and contribute to saving our planet.
-    statistics_header: Every person makes a difference!
     users_prefix: We're currently
     users_suffix: community members
     tonnes_prefix: Together we've reduced
     tonnes_suffix: tonnes CO2 from the atmosphere
     call_to_actions:
-      im_ready_to_sign_up: I'm ready to sign up!
       lets_save_our_planet_together: Let's save our planet together!
       go_climate_neutral: Go Climate Neutral
     how_it_works:
-      describe_your_lifestyle_text: Use our climate calculator to get your estimated carbon footprint.
       sign_up_text: Sign up to offset your carbon footprint on a monthly basis.
-      save_our_planet_header: 3. Save Our Planet
-      save_our_planet_text: Be part of our community of people who no longer contribute to climate change.
     business:
       for_companies: Carbon Offsetting For Your Business
       for_companies_text_html: Do you want to offset the emissions from a flight or for all your employees? We would love to help!

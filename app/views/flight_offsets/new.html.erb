@@ -1,125 +1,107 @@
-<% content_for :stylesheets do %>
-  <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
-<% end %>
-<% content_for :javascripts do %>
-  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'throw "Loading Javascript " + this.src + " failed"' %>
-<% end %>
+<%= render "shared/header" %>
 
-<div class="site-wrapper-first">
-  <%= render "shared/header_old" %>
-  <div class="inner">
-
-    <span class="green-leaf"><%= image_tag webpack_asset_path('images/green.svg'), style: 'width: 100px' %></span>
-    <h1 class="cover-heading"><%= title(t('views.flight_offsets.new.header')) %></h1>
-    <p class="lead"><%= description(t('views.flight_offsets.new.header_description')) %></p>
-  </div>
-  <span class="glyphicon glyphicon-large glyphicon-chevron-down first" aria-hidden="true"></span>
+<div class="section-padding pb-0">
+  <h1 class="heading border-b-4 inline-block"><%= title(t('views.flight_offsets.heading')) %></h1>
 </div>
 
-<div class="site-wrapper-second">
-  <div class="inner inner--with-grid">
-    <div class="container">
+<section class="section-padding">
+  <div class="section-gutter flex flex-col d:flex-row">
+    <div class="d:w-1/2">
+      <h1 class="heading-xl mb-6">
+        <%= t('views.flight_offsets.new.header') %>
+      </h1>
+      <%= t('views.flight_offsets.new.header_description') %>
 
-      <div class="row">
-        <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
-
-          <h1 class="cover-heading content-section"><%=t 'views.flight_offsets.new.your_order' %></h1>
-
-          <table class="content-section flight-offset-details">
-            <tbody>
-              <tr class="flight-offset-details__key-row">
-                <td colspan="2"><%=t 'views.flight_offsets.new.flight_in_cabin_class' %> <%= @flight_footprint.cabin_class %></th>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <ul class="flight-offset-details__segments">
-                    <% @flight_footprint.segments.each do |segment| %>
-                      <li>
-                        <%= FootprintCalculation::Airport.find(segment.origin).name %> -
-                        <%= FootprintCalculation::Airport.find(segment.destination).name %>
-                      </li>
-                    <% end %>
-                  </ul>
-                </td>
-              </tr>
-              <tr class="flight-offset-details__key-row">
-                <td><%=t 'views.flight_offsets.new.carbon_footprint' %>:</td>
-                <td>
-                  <%= @footprint_per_person.to_s(precision: :auto) %>/<%=t 'views.flight_offsets.new.person' %>
-                </td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td>
-                  <%=t 'views.flight_offsets.new.total' %> <% if @num_persons > 1 %>(<%= @num_persons %> <%=t 'views.flight_offsets.new.people' %>)<% end %>:
-                </td>
-                <td>
-                  <%= @offset.co2e.to_s(precision: :auto) %>
-                </td>
-              </tr>
-              <tr class="flight-offset-details__key-row">
-                <td><%=t 'views.flight_offsets.new.sum' %>:</td>
-                <td><%= @offset.price.to_s(precision: :auto) %></td>
-              </tr>
-            </tfoot>
-          </table>
-
-          <%= render 'shared/projects' %>
-
-        </div>
+      <div class="mt-6 hidden d:block">
+        <h2 class="heading mb-6"><%=t 'this_is_how_the_money_is_used_header' %></h2>
+        <ul class="space-y-3">
+          <% @latest_projects.each do |project| %>
+            <li class="flex items-center p-3 bg-white rounded border border-gray-tint-2">
+              <div class="mr-4">
+                <div class="rounded-full overflow-hidden bg-cover bg-center w-12 h-12" style="background-image: url('<%= project.image_url %>')"></div>
+              </div>
+              <span>
+                <p class="font-semibold"><%= project.name %></p>
+                <p><%= project.country %></p>
+              </span>
+            </li>
+          <% end %>
+        </ul>
       </div>
+    </div>
+    <div class="d:w-1/2">
+      <div class="callout d-md:mx-8 d-lg:mx-24">
+        <h2 class="heading-lg text-center mb-12"><%=t 'views.flight_offsets.new.your_order' %></h2>
 
-      <%= form_with model: @offset, format: :json, class: 'form-horizontal', html: { 'data-controller': 'checkout-form', 'data-action': 'checkout-form#submit' } do |f| %>
-        <%= f.hidden_field :co2e, value: @offset.co2e.co2e %>
-        <%= f.hidden_field :currency %>
-
-        <div class="form-group">
-          <label for="footprint" class="col-sm-5 control-label"><%=t 'views.flight_offsets.new.your_order' %></label>
-          <div class="col-sm-7 form-control-static">
-            <%= @offset.co2e.to_s(precision: :auto) %>
+        <div class="space-y-6">
+          <div>
+            <p class="font-bold mb-3">
+              <%=t 'views.flight_offsets.new.flight_in_cabin_class' %> <%= @flight_footprint.cabin_class %>
+            </p>
+            <ul class="list-bullet space-y-3">
+              <% @flight_footprint.segments.each do |segment| %>
+                <li><%= FootprintCalculation::Airport.find(segment.origin).name %> ->
+                  <%= FootprintCalculation::Airport.find(segment.destination).name %>
+                </li>
+              <% end %>
+            </ul>
           </div>
-        </div>
 
-        <div class="form-group">
-          <label for="price" class="col-sm-5 control-label padding-top"><%=t 'views.flight_offsets.new.sum' %></label>
-          <div class="col-sm-7 form-control-static">
-             <%= @offset.price.to_s(precision: :auto) %>
+          <div class="w-full border-t border-gray-accent"></div>
+
+          <div class="flex justify-between">
+            <span class="font-bold"><%=t 'views.flight_offsets.new.carbon_footprint' %></span>
+            <span class="text-right"><%= @footprint_per_person.to_s(precision: :auto) %>/<%=t 'views.flight_offsets.new.person' %></span>
           </div>
-        </div>
 
-        <div class="form-group">
-          <label for="email" class="col-sm-5 control-label padding-top"><%=t 'email' %></label>
-          <div class="col-sm-7">
-            <%= f.email_field :email, class: 'form-control', required: '' %>
+          <div class="flex justify-between">
+            <span class="font-bold"><%=t 'views.flight_offsets.new.total' %> <% if @num_persons > 1 %>(<%= @num_persons %> <%=t 'views.flight_offsets.new.people' %>)<% end %></span>
+            <span class="text-right"><%= @offset.co2e.to_s(precision: :auto) %></span>
           </div>
-        </div>
 
-        <div class="form-group" data-controller="stripe-card-element" data-target="checkout-form.stripeCardElement">
-          <label class="col-sm-5 control-label">
-            <%=t 'credit_or_debit_card' %>
-          </label>
-          <div class="col-sm-7">
-            <div class="form-control" data-target="stripe-card-element.container"></div>
-            <div class="help-block text-warning hidden-when-empty" data-target="stripe-card-element.errors"></div>
-            <span class="glyphicon glyphicon-large glyphicon-lock secured-by-stripe" aria-hidden="true"></span>Secured by Stripe
+          <div class="w-full border-t border-gray-accent"></div>
+
+          <div class="flex justify-between font-bold">
+            <span><%=t 'views.flight_offsets.new.sum' %></span>
+            <span><%= @offset.price.to_s(precision: :auto) %></span>
           </div>
-        </div>
 
-        <p class="text-warning hidden-when-empty" data-target="checkout-form.errorMessage"></p>
+          <div class="w-full border-t border-gray-accent"></div>
 
-        <div class="form-group form-group-sm-centered">
-          <div class="col-sm-offset-5 col-sm-7">
-            <button type="submit" data-target="checkout-form.submitButton" class="btn btn-success">
+          <%= form_with model: @offset, format: :json, class: 'space-y-6', html: { 'data-controller': 'checkout-form', 'data-action': 'checkout-form#submit' } do |f| %>
+            <%= f.hidden_field :co2e, value: @offset.co2e.co2e %>
+            <%= f.hidden_field :currency %>
+
+            <div class="form-group">
+              <label for="email" class="font-bold padding-top"><%=t 'email' %></label>
+              <%= f.email_field :email, class: 'input w-full', required: '' %>
+            </div>
+
+            <div class="form-group" data-controller="stripe-card-element" data-target="checkout-form.stripeCardElement">
+              <label class="font-bold">
+                <%=t 'credit_or_debit_card' %>
+              </label>
+              <div class="col-sm-7">
+                <div class="input" data-target="stripe-card-element.container"></div>
+                <div class="help-block text-warning hidden-when-empty" data-target="stripe-card-element.errors"></div>
+                <i class="fa fa-lock" aria-hidden="true"></i>
+                <span class="ml-1">Secured by Stripe</span>
+              </div>
+            </div>
+
+            <p class="text-warning hidden-when-empty" data-target="checkout-form.errorMessage"></p>
+
+            <button type="submit" data-target="checkout-form.submitButton" class="button button-cta w-full">
               <i class="fa fa-spinner fa-spin hidden" data-target="checkout-form.loadingIndicator"></i>
               <%=t 'views.flight_offsets.new.submit' %>
-            </input>
-          </div>
-        </div>
-      <% end %>
+            </button>
 
+          <% end %>
+        </div>
+
+      </div>
     </div>
   </div>
-</div>
+</section>
 
-<%= render "shared/footer_old" %>
+<%= render "shared/footer" %>

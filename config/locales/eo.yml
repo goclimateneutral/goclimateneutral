@@ -11,7 +11,6 @@ eo:
   i_want_to_know_more: crwdns11728:0crwdne11728:0
   contact_us: crwdns11730:0crwdne11730:0
   100_percent_transparency: crwdns11732:0crwdne11732:0
-  100_percent_transparency_intro: crwdns11734:0crwdne11734:0
   what_we_do_with_your_money: crwdns11736:0crwdne11736:0
   system_change: crwdns11738:0crwdne11738:0
   system_change_description: crwdns11740:0crwdne11740:0
@@ -36,14 +35,10 @@ eo:
   project_distribution_by_continent: crwdns11778:0crwdne11778:0
   project_distribution_by_technology: crwdns11780:0crwdne11780:0
   CO2e_avoided_per_coworker: crwdns11782:0crwdne11782:0
-  100_percent_transparency_climate_projects: crwdns11784:0crwdne11784:0
-  for_more_information_about_climate_projects: crwdns11786:0crwdne11786:0
   100_percent_transparency_financial_info: crwdns11788:0crwdne11788:0
   100_percent_transparency_financial_info_intro: crwdns11790:0crwdne11790:0
   fiscal_years: crwdns11792:0crwdne11792:0
   fiscal_year_2020_ongoing: crwdns11794:0crwdne11794:0
-  financials: crwdns11796:0crwdne11796:0
-  year: crwdns11798:0crwdne11798:0
   revenue: crwdns11800:0crwdne11800:0
   cost: crwdns11802:0crwdne11802:0
   result: crwdns11804:0crwdne11804:0
@@ -72,13 +67,15 @@ eo:
   about_us_how_do_we_stop_climate_change_text: crwdns11850:0crwdne11850:0
   about_us_how_do_we_stop_climate_change_text_2: crwdns11852:0crwdne11852:0
   about_us_who_are_we: crwdns11854:0crwdne11854:0
-  about_us_who_are_we_kalle_html: "crwdns11856:0crwdne11856:0"
-  about_us_who_are_we_cissi_html: "crwdns11858:0crwdne11858:0"
-  about_us_who_are_we_henrik_html: 'crwdns11860:0crwdne11860:0'
-  about_us_who_are_we_stefan_html: crwdns11862:0crwdne11862:0
-  about_us_who_are_we_alexandra_html: crwdns11864:0crwdne11864:0
-  about_us_who_are_we_tove_html: crwdns11868:0crwdne11868:0
-  about_us_who_are_we_emma_html: crwdns11870:0crwdne11870:0
+  about_us_team:
+    heading: crwdns11854:0crwdne11854:0
+    kalle_html: "crwdns11856:0crwdne11856:0"
+    cissi_html: "crwdns11858:0crwdne11858:0"
+    henrik_html: 'crwdns11860:0crwdne11860:0'
+    stefan_html: crwdns11862:0crwdne11862:0
+    alexandra_html: crwdns11864:0crwdne11864:0
+    tove_html: crwdns11868:0crwdne11868:0
+    emma_html: crwdns11870:0crwdne11870:0
   blog: crwdns11872:0crwdne11872:0
   we_are_100_transparent: crwdns11874:0crwdne11874:0
   section_3_text: crwdns11876:0crwdne11876:0
@@ -92,7 +89,6 @@ eo:
   your_payment_details_have_been_updated: crwdns11892:0crwdne11892:0
   no_card_registered: crwdns11894:0crwdne11894:0
   climate_plan: crwdns11896:0crwdne11896:0
-  go_climate_neutral: crwdns11898:0crwdne11898:0
   log_in_to_see_how_we_are_doing: crwdns11900:0crwdne11900:0
   you_have_lived_climate_neutral_for:
     one: crwdns11902:1crwdne11902:1
@@ -106,15 +102,8 @@ eo:
   climate_change_is_best_faced_together: crwdns11908:0crwdne11908:0
   share_on_facebook: crwdns11910:0crwdne11910:0
   share_on_twitter: crwdns11912:0crwdne11912:0
-  we_have_accomplished_alot_together: crwdns11914:0crwdne11914:0
-  amount_of_carbon_we_have_offset: crwdns11916:0crwdne11916:0
-  amount_of_carbon_i_have_offset: crwdns11918:0crwdne11918:0
   good_job: crwdns11920:0crwdne11920:0
-  number_of_months_you_have_been_climate_neutral: crwdns11922:0crwdne11922:0
-  number_of_climate_neutral_users_right_now: crwdns11924:0crwdne11924:0
   our_projects: crwdns11926:0crwdne11926:0
-  our_investments_in_climate_projects: crwdns11928:0crwdne11928:0
-  i_want_to_contribute: crwdns11930:0crwdne11930:0
   project_name: crwdns11932:0crwdne11932:0
   map: crwdns11934:0crwdne11934:0
   more_info_on_blog: crwdns11936:0crwdne11936:0
@@ -129,26 +118,17 @@ eo:
     one: crwdns11952:1crwdne11952:1
     other: crwdns11952:5crwdne11952:5
   climate_country_toplist: crwdns11954:0crwdne11954:0
-  total_carbon_offset_by_us: crwdns11956:0crwdne11956:0
-  read_more_about_investments_on_our_blog: 'crwdns11958:0crwdne11958:0'
   tonnes_CO2: crwdns11960:0crwdne11960:0
   tonnes: crwdns11962:0crwdne11962:0
   type: crwdns11964:0crwdne11964:0
   price: crwdns11966:0crwdne11966:0
-  thank_you_so_much_everyone_for_helping_to_save_the_world: crwdns11968:0crwdne11968:0
-  latest_carbon_offset_projects: crwdns11970:0crwdne11970:0
   country: crwdns11972:0crwdne11972:0
-  location: crwdns11974:0crwdne11974:0
-  more_info_on_our_blog: crwdns11976:0crwdne11976:0
   edit_settings: crwdns11978:0crwdne11978:0
   payment_settings: crwdns11980:0crwdne11980:0
   user_name: crwdns11982:0crwdne11982:0
   confirm_password: crwdns11984:0crwdne11984:0
   update: crwdns11986:0crwdne11986:0
-  what_is_goclimateneutral: crwdns11988:0crwdne11988:0
   this_is_how_it_works: crwdns11990:0crwdne11990:0
-  1_describe_your_lifestyle: crwdns11992:0crwdne11992:0
-  2_sign_up: crwdns11994:0crwdne11994:0
   forgot_your_password: crwdns11996:0crwdne11996:0
   enter_your_email_below_and_we_will_send_you: crwdns11998:0crwdne11998:0
   send_me_an_email_with_instructions: crwdns12000:0crwdne12000:0
@@ -178,7 +158,6 @@ eo:
   learn_more_about_what_we_have_achieved_here: 'crwdns12036:0crwdne12036:0'
   thank_you: crwdns12038:0crwdne12038:0
   the_best_way_to_help_is_to_get_as_many_people_climate_neutral_as_possible: 'crwdns12040:0crwdne12040:0'
-  im_in: crwdns12048:0crwdne12048:0
   faq: crwdns12052:0crwdne12052:0
   faq_questions:
     climate_neutrality:
@@ -300,23 +279,15 @@ eo:
   navigation:
     gift_cards: crwdns12198:0crwdne12198:0
   welcome:
-    caption_line_1: crwdns12200:0crwdne12200:0
-    caption_line_2: crwdns12202:0crwdne12202:0
-    what_is_gcn_text: crwdns12204:0crwdne12204:0
-    statistics_header: crwdns12206:0crwdne12206:0
     users_prefix: crwdns12208:0crwdne12208:0
     users_suffix: crwdns12210:0crwdne12210:0
     tonnes_prefix: crwdns12212:0crwdne12212:0
     tonnes_suffix: crwdns12214:0crwdne12214:0
     call_to_actions:
-      im_ready_to_sign_up: crwdns12216:0crwdne12216:0
       lets_save_our_planet_together: crwdns12218:0crwdne12218:0
       go_climate_neutral: crwdns12220:0crwdne12220:0
     how_it_works:
-      describe_your_lifestyle_text: crwdns12222:0crwdne12222:0
       sign_up_text: crwdns12224:0crwdne12224:0
-      save_our_planet_header: crwdns12226:0crwdne12226:0
-      save_our_planet_text: crwdns12228:0crwdne12228:0
     business:
       for_companies: crwdns12230:0crwdne12230:0
       for_companies_text_html: crwdns12232:0crwdne12232:0

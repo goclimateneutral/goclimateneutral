@@ -1,178 +1,135 @@
 <%= render "shared/facebook_script" %>
 <%= render "shared/twitter_script" %>
-<%= javascript_tag do %>
-  window.facebookQuote = '<%= I18n.t('i_have_lived_climate_neutral_for_join_me', count: @my_neutral_months) %>';
-  window.urlToShare = '<%= root_url %>'
-<% end %>
 
-<% content_for :stylesheets do %>
-  <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
-<% end %>
-<% content_for :javascripts do %>
-  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'throw "Loading Javascript " + this.src + " failed"' %>
-<% end %>
+<%= render "shared/header" %>
 
-<div class="site-wrapper-first">
-  <%= render "shared/header_old" %>
-  <div class="inner">
+<div class="bg-blue-pastel">
+  <section class="section-padding">
+    <h2 class="heading-xl mb-12"><%= t 'dashboard.heading' %></h2>
 
-    <span class="glyphicon glyphicon-large glyphicon-globe" aria-hidden="true"></span>
-    <h3 class="cover-heading">
-      <%=t 'we_have_accomplished_alot_together' %>
-    </h3>
-
-    <div class="row stats">
-      <div class="col-md-2"></div>
-      <div class="col-md-4">
-        <p><%=t 'number_of_months_you_have_been_climate_neutral' %>:</p>
-        <h1><%= @my_neutral_months %></h1>
+    <div class="callout max-w-4xl mx-auto">
+      <div class="section-gutter flex flex-col t:flex-row">
+        <div class="t:w-1/2 text-center space-y-2">
+          <p class="font-bold"><%= t 'dashboard.your_months' %></p>
+          <p class="text-3xl font-bold text-green-accent">
+            <%= @my_neutral_months %>
+            <% if @my_neutral_months == 1 %>
+              <%=t 'months.one' %>
+            <% else %>
+              <%=t 'months.other' %>
+            <% end %>
+          </p>
+        </div>
+        <div class="t:w-1/2 text-center space-y-2">
+          <p class="font-bold"><%= t 'dashboard.your_offsets' %></p>
+          <p class="text-3xl font-bold text-green-accent">
+            <%= number_with_delimiter(@my_carbon_offset) %>
+            <%=t 'tonnes' %>
+          </p>
+        </div>
       </div>
-      <div class="col-md-4">
-        <p><%=t 'amount_of_carbon_i_have_offset' %>:</p>
-        <h1><%= number_with_delimiter(@my_carbon_offset) %> <%=t 'tonnes' %></h1>
+
+      <div class="text-center mt-12">
+        <%= raw(t('dashboard.together', number_of_members: @unique_climate_neutral_users, number_of_tonnes: number_with_delimiter(@total_carbon_offset)).gsub('<span>', '<span class="font-bold">')) %>
       </div>
-      <div class="col-md-2"></div>
     </div>
+  </section>
 
-    <div class="row stats last">
-      <div class="col-md-2"></div>
-      <div class="col-md-4">
-        <p><%=t 'number_of_climate_neutral_users_right_now' %>:</p>
-        <h1><%= @unique_climate_neutral_users %></h1>
-      </div>
-      <div class="col-md-4">
-        <p><%=t 'amount_of_carbon_we_have_offset' %>:</p>
-        <h1><%= number_with_delimiter(@total_carbon_offset) %> <%=t 'tonnes' %></h1>
-      </div>
-      <div class="col-md-2"></div>
-    </div>
-
-  </div>
-</div>
-
-<div class="site-wrapper-second">
-  <div class="inner">
-
-    <span class="glyphicon glyphicon-large glyphicon-heart-empty" aria-hidden="true"></span>
-
-    <div class="row stats last">
-      <div class="col-md-2"></div>
-      <div class="col-md-4">
-        <h3><%=t 'cimate_hero_toplist' %></h3>
-        <ol>
-          <% count = 0 %>
-          <% @user_top_list.each do |user| %>
-            <% count += 1 %>
+  <section class="section-padding">
+    <div class="section-gutter t:flex t:flex-row">
+      <div class="t:w-1/2">
+        <h3 class="heading-lg mb-3"><%=t 'cimate_hero_toplist' %></h3>
+        <ol class="list-number space-y-1">
+          <% @user_top_list.each_with_index do |user, index| %>
             <% user_neutral_months = user.count %>
             <% user_name = user.user_name || "Unknown User" %>
 
-            <%= count == 11 ? "<div id='user_toplist_collapsed' class='collapse'>".html_safe : "" %>
+            <% if index == 10 %>
+              <input type="checkbox" id="user-toplist-toggler" class="toggler">
+              <div class="hidden toggler-checked:block space-y-1">
+            <% end %>
 
-            <li class="text-left<%= user.id == current_user.id ? " my-stat" : "" %>">
+            <li class="text-left<%= user.id == current_user.id ? " font-bold inline-block bg-green-accent text-white py-1 px-2 -ml-2 rounded" : "" %>">
               <%= user_name %> (<%= user_neutral_months %> <%=t 'climate_neutral_months', count: user_neutral_months %>)
             </li>
+
+            <% if @user_top_list.length > 10 && index == (@user_top_list.length - 1) %>
+              </div>
+              <div class="toggler-checked:hidden pt-3">
+                <label for="user-toplist-toggler" class="link cursor-pointer"><%= t 'show_full_toplist' %></label>
+              </div>
+              <div class="toggler-not-checked:hidden toggler-checked:block pt-3">
+                <label for="user-toplist-toggler" class="link cursor-pointer"><%= t 'hide_full_toplist' %></label>
+              </div>
+            <% end %>
           <% end %>
-          </div>
         </ol>
-
-        <p>
-          <a id="user_toplist_open_link" data-toggle="collapse" href="#user_toplist_collapsed" aria-expanded="false" aria-controls="user_toplist_collapsed"><%=t 'show_full_toplist' %></a>
-
-          <a id="user_toplist_collapse_link" data-toggle="collapse" href="#user_toplist_collapsed" aria-expanded="false" aria-controls="user_toplist_collapsed"><%=t 'hide_full_toplist' %></a>
-        </p>
-
       </div>
-      <div class="col-md-4">
-        <h3><%=t 'climate_country_toplist' %></h3>
-        <ol>
-          <% @country_top_list.each do |country| %>
-            <% count = country.count %>
+      <div class="t:w-1/2">
+        <h3 class="heading-lg mb-3"><%=t 'climate_country_toplist' %></h3>
+        <ol class="list-number space-y-1">
+          <% @country_top_list.each_with_index do |country, index| %>
             <% country_name = country.country_name || "Unknown" %>
-            <li class="text-left<%= country_name == current_user.country_name ? " my-stat" : "" %>">
-              <%= country_name %> (<%= count %> <%=t 'climate_neutral_months', count: count %>)
+
+            <% if index == 10 %>
+              <input type="checkbox" id="country-toplist-toggler" class="toggler">
+              <div class="hidden toggler-checked:block space-y-1">
+            <% end %>
+
+            <li class="text-left<%= country_name == current_user.country_name ? " font-bold inline-block bg-green-accent text-white py-1 px-2 -ml-2 rounded" : "" %>">
+              <%= country_name %> (<%= country.count %> <%=t 'climate_neutral_months', count: country.count %>)
             </li>
+
+            <% if @user_top_list.length > 10 && index == (@user_top_list.length - 1) %>
+              </div>
+              <div class="toggler-checked:hidden pt-3">
+                <label for="country-toplist-toggler" class="link cursor-pointer"><%= t 'show_full_toplist' %></label>
+              </div>
+              <div class="toggler-not-checked:hidden toggler-checked:block pt-3">
+                <label for="country-toplist-toggler" class="link cursor-pointer"><%= t 'hide_full_toplist' %></label>
+              </div>
+            <% end %>
           <% end %>
         </ol>
       </div>
-      <div class="col-md-2"></div>
     </div>
+  </section>
 
-  </div>
-</div>
+  <section class="section-padding">
+    <h2 class="heading-lg"><%=t 'views.projects.latest_projects' %></h2>
 
-<div class="site-wrapper-third">
-  <div class="inner">
-
-    <span class="glyphicon glyphicon-large glyphicon-tree-deciduous" aria-hidden="true"></span>
-
-    <div class="row stats total-offset">
-        <div class="col-md-12">
-          <p><%=t 'total_carbon_offset_by_us' %>:</p>
-          <h1><%= number_with_delimiter(@total_carbon_offset) %> <%=t 'tonnes_CO2' %></h1>
-          <p><%=t 'thank_you_so_much_everyone_for_helping_to_save_the_world' %></p>
+    <div class="mt-12 flex flex-col d:flex-row section-gutter">
+      <% @projects.take(3).each do |project| %>
+        <div class="d:w-1/3 pt-20 m-lg:pt-24">
+          <div class="callout h-full space-y-3 pt-0">
+            <div class="inline-block w-full">
+              <img class="mx-auto h-40 w-40 -mt-20 m-lg:h-48 m-lg:w-48 m-lg:-mt-24 rounded-full object-cover" src="<%= project.image_url %>">
+            </div>
+            <h3 class="heading"><%= project.name %></h3>
+            <%= simple_format(project.short_description) %>
+          </div>
         </div>
+      <% end %>
     </div>
 
-  </div>
-</div>
-
-<div class="site-wrapper-second">
-  <div class="inner">
-
-    <span class="glyphicon glyphicon-large glyphicon-ok" aria-hidden="true"></span>
-
-    <div class="row stats offset-projects">
-      <div class="col-md-12">
-        <h3 class="cover-heading"><%=t 'latest_carbon_offset_projects' %></h3>
-        <% @projects.each do |project| %>
-          <h4><a href ="<%= project.blog_url %>"><%= project.name %></a></h4>
-          <div><%= image_tag project.image_url, height: "150" %></div>
-          <p>
-            <br><%=t 'country' %></>: <%= project.country %>
-            <br><%=t 'location' %>: <a href="https://www.google.com/maps?z=15&t=k&q=loc:<%= project.latitude %>+<%= project.longitude %>" target="_blank"><%= project.latitude %>,<%= project.longitude %></a><br>
-            <a href ="<%= project.blog_url %>"><%=t 'more_info_on_our_blog' %></a>
-          </p>
-          <p>--------</p>
-        <% end %>
-      </div>
-      <h4 class="blog_investment_link"><a href="https://www.goclimate.com/blog/category/investment/"><%=t 'read_more_about_investments_on_our_blog' %></a></h4>
+    <div class="mt-12 text-center">
+      <%= link_to t('views.projects.see_all'), projects_path, class: 'button' %>
     </div>
+  </section>
 
-  </div>
-</div>
-
-<div class="site-wrapper-third">
-  <div class="inner">
-
-    <span class="glyphicon glyphicon-large glyphicon-fire" aria-hidden="true"></span>
-    <h3 class="cover-heading">
+  <section class="section-padding space-y-3 d:w-2/3">
+    <h3 class="heading-lg mb-6">
       <%=t 'you_have_lived_climate_neutral_for', count: @my_neutral_months %>
       <%=t 'good_job' %>
     </h3>
     <p><%=t 'climate_change_is_best_faced_together' %></p>
-    <p></p>
-    <div>
-      <div class="row share-buttons last">
-        <div class="col-sm-1"></div>
-        <div class="col-sm-5">
-          <a class="btn btn-social btn-lg btn-facebook" id="share-facebook-bottom"><span class="fa fa-facebook"></span> <%=t 'share_on_facebook' %></a>
-        </div>
-        <div class="col-sm-5">
-          <a class="btn btn-social btn-lg btn-twitter" href="https://twitter.com/intent/tweet?text=<%= encoded_social_quote(@my_neutral_months) %>" data-size="large"><span class="fa fa-twitter"></span> <%=t 'share_on_twitter' %></a>
-        </div>
-        <div class="col-sm-1"></div>
-      </div>
+    <div class="flex flex-col m-lg:flex-row m-lg:space-x-3 space-y-3 m-lg:space-y-0">
+      <a class="button" id="share-facebook-bottom"><span class="fa fa-facebook"></span> <%=t 'share_on_facebook' %></a>
+      <a class="button" href="https://twitter.com/intent/tweet?text=<%= encoded_social_quote(@my_neutral_months) %>" data-size="large"><span class="fa fa-twitter"></span> <%=t 'share_on_twitter' %></a>
     </div>
+  </section>
 
-  </div>
+  <%= render "shared/bottom_landscape" %>
 </div>
 
-<%= render "shared/footer_old" %>
-
-<% content_for :javascript_tags do %>
-  <script>
-    $(document).ready(function() {
-      initializeDashboard();
-    });
-  </script>
-<% end %>
+<%= render "shared/footer", skip_prefooter: true %>

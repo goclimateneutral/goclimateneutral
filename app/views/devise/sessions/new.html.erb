@@ -1,64 +1,41 @@
-<% content_for :stylesheets do %>
-  <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
-<% end %>
-<% content_for :javascripts do %>
-  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'throw "Loading Javascript " + this.src + " failed"' %>
-<% end %>
+<%= render "shared/header" %>
 
-<div class="site-wrapper-first">
-  <%= render "shared/header_old" %>
-  <div class="inner">
+<div class="section-padding">
 
-    <span class="glyphicon glyphicon-large glyphicon-globe" aria-hidden="true"></span>
-    <h1 class="cover-heading"><%= title(t('log_in')) %></h1>
-    <p class="lead"><%= description(t('log_in_to_see_how_we_are_doing')) %></p>
+  <div class="callout max-w-lg mx-auto space-y-4">
+    <h1 class="heading-lg"><%= title(t('log_in')) %></h1>
+    <p><%= description(t('log_in_to_see_how_we_are_doing')) %></p>
 
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "form-horizontal"}) do |f| %>
+    <%= form_for resource, as: resource_name, url: session_path(resource_name), html: { class: 'space-y-4' } do |f| %>
 
-      <div class="form-group">
-        <div class="col-sm-1"></div>
-        <label for="email" class="col-sm-4 control-label"><%=t 'email' %></label>
-        <div class="col-sm-4">
-          <%= f.email_field :email, autofocus: true, id: "email", class: "form-control" %>
-        </div>
-      </div>
+      <label class="block">
+        <strong class="block"><%=t 'email' %></strong>
+        <%= f.email_field :email, autofocus: true, required: true, class: "input w-full" %>
+      </label>
 
-
-      <div class="form-group">
-        <div class="col-sm-1"></div>
-        <label for="password" class="col-sm-4 control-label"><%=t 'password' %></label>
-        <div class="col-sm-4">
-          <%= f.password_field :password, autofocus: true, id: "password", class: "form-control" %>
-        </div>
-      </div>
-
+      <label class="block">
+        <strong class="block"><%=t 'password' %></strong>
+        <%= f.password_field :password, required: true, class: "input w-full" %>
+      </label>
 
       <% if devise_mapping.rememberable? -%>
-        <div class="form-group">
-          <div class="col-sm-offset-5 col-sm-4">
-            <div class="checkbox">
-              <label>
-                <%= f.check_box :remember_me, checked: true %><%= t 'activerecord.attributes.user.remember_me' %>
-              </label>
-            </div>
-          </div>
-        </div>
+        <label class="block">
+          <%= f.check_box :remember_me, checked: true %>
+          <%= t 'activerecord.attributes.user.remember_me' %>
+        </label>
       <% end -%>
 
-      <div class="form-group form-group-sm-centered">
-        <div class="col-sm-offset-5 col-sm-4">
-          <button type="submit" class="btn btn-success sign-in"><%=t 'log_in' %></button>
-        </div>
-      </div>
+      <div class="flex items-center space-x-4">
+        <button type="submit" class="button button-cta">
+          <%=t 'log_in' %>
+        </button>
 
-      <div class="form-group form-group-sm-centered">
-        <div class="col-sm-offset-5 col-sm-4">
-          <%= link_to t('forgot_your_password'), new_user_password_path %>
-        </div>
+        <span>
+          <%= link_to t('forgot_your_password'), new_user_password_path, class: 'link' %>
+        </span>
       </div>
     <% end %>
-
   </div>
 </div>
 
-<%= render "shared/footer_old" %>
+<%= render "shared/footer" %>

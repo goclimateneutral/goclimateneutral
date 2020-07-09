@@ -1,253 +1,248 @@
-<% content_for :stylesheets do %>
-  <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
-<% end %>
-<% content_for :javascripts do %>
-  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'throw "Loading Javascript " + this.src + " failed"' %>
-<% end %>
+<%= render "shared/header" %>
 
-<div class="site-wrapper-first">
-  <%= render "shared/header_old" %>
-  <div class="inner cover">
-
-    <h1 class="cover-heading"><%= title(t('100_percent_transparency')) %></h1>
-    <p class="lead"><%= description(t('100_percent_transparency_intro')) %></p>
-
-  </div>
+<div class="section-padding pb-0">
+  <h1 class="heading border-b-4 inline-block"><%= title(t('100_percent_transparency')) %></h1>
 </div>
 
-<div class="site-wrapper-second">
-  <div class="inner">
+<section class="section-padding">
+  <h2 class="heading-xl mb-12"><%=t 'what_we_do_with_your_money' %></h2>
 
-    <h1 class="cover-heading"><%=t 'what_we_do_with_your_money' %></h1>
+  <div class="flex flex-col t:flex-row section-gutter">
+    <div class="w-full t:w-3/4">
+      <h2 class="heading text-center mb-3">1. <%=t 'climate_projects' %></h2>
+      <p><%=t 'climate_projects_description' %></p>
+    </div>
 
-    <div class="row">
+    <div class="w-full t:w-3/4">
+      <h2 class="heading text-center mb-3">2. <%=t 'behavioral_change' %></h2>
+      <p><%=t 'behavioral_change_description' %></p>
+    </div>
 
-      <div class="col-xs-12 col-md-4">
-        <span class="glyphicon glyphicon-large glyphicon-globe steps" aria-hidden="true"></span>
-        <h2>1. <%=t 'climate_projects' %></h2>
-        <p><%=t 'climate_projects_description' %></p>
-      </div>
-
-      <div class="col-xs-12 col-md-4">
-        <span class="glyphicon glyphicon-large glyphicon-user steps" aria-hidden="true"></span>
-          <h2>2. <%=t 'behavioral_change' %></h2>
-          <p><%=t 'behavioral_change_description' %></p>
-      </div>
-
-      <div class="col-xs-12 col-md-4">
-        <span class="glyphicon glyphicon-large glyphicon-bullhorn steps" aria-hidden="true"></span>
-        <h2>3. <%=t 'system_change' %></h2>
-        <p><%=t 'system_change_description' %></p>
-      </div>
-
+    <div class="col-xs-12 col-md-4">
+      <h2 class="heading text-center mb-3">3. <%=t 'system_change' %></h2>
+      <p><%=t 'system_change_description' %></p>
     </div>
 
   </div>
-</div>
+</section>
 
-<div class="site-wrapper-third">
-  <div class="inner cover">
+<section class="section-padding">
+  <h2 class="heading-xl mb-12"><%=t 'basic_facts' %></h2>
+  <dl>
+    <dt class="t:float-left t:clear-left t:w-1/2 text-center font-bold"><%=t 'Main_KPI' %></dt>
+    <dd class="t:float-left t:clear-left t:w-1/2 mt-1 text-center text-lg"><strong><%= number_with_delimiter(@total_carbon_offset) %></strong> <%=t 'tonnes_avoided_CO2e-emissions' %></dd>
 
-    <span class="glyphicon glyphicon-large glyphicon-home" aria-hidden="true"></span>
-    <h1 class="cover-heading"><%=t 'basic_facts' %></h1>
-    <p class="lead text-left"><%=t 'Main_KPI' %>: <b><%= number_with_delimiter(@total_carbon_offset) %></b> <%=t 'tonnes_avoided_CO2e-emissions' %></p>
-    <p class="lead text-left"><%=t 'climate_footprint_2019' %>: <b>473</b> kg CO2e</p>
-    <p class="lead text-left"><%=t 'number_of_climate_neutral_users' %>: <b><%= number_with_delimiter(@unique_climate_neutral_users) %></b></p>
-    <p class="lead text-left"><%=t 'users_from' %>: <b><%= @number_of_countries %></b> <%=t 'different_countries' %></p>
-    <p class="lead text-left"><%=t 'number_of_companies_we_have_helped' %>: <b><%= @number_of_businesses_helped %></b></p>
-    <p class="lead text-left"><%=t 'employees' %>: <b>6</b> <%=t 'full_time' %></p>
-    <p class="lead text-left"><%=t 'latest_fiscal_year_turnover' %>: <b><%= number_with_delimiter(5_550_300) %></b> SEK</p>
-    <p class="lead text-left"><%=t 'total_accumulated_dividend_to_shareholders' %>: <b>0</b> SEK (<%=t 'everything_is_invested_for_maximum_climate_impact' %>)</p>
+    <dt class="t:ml-1/2 t:w-1/2 mt-12 t:mt-0 text-center font-bold"><%=t 'climate_footprint_2019' %></dt>
+    <dd class="t:ml-1/2 t:w-1/2 mt-1 text-center text-lg"><strong>473</strong> kg CO2e</dd>
 
-  </div>
-</div>
+    <dt class="t:float-left t:clear-left t:w-1/2 mt-12 text-center font-bold"><%=t 'number_of_climate_neutral_users' %></dt>
+    <dd class="t:float-left t:clear-left t:w-1/2 mt-1 text-center text-lg"><strong><%= number_with_delimiter(@unique_climate_neutral_users) %></strong></dd>
 
-<div class="site-wrapper-second">
-  <div class="inner cover">
-    <h1 class="cover-heading"><%=t 'amount_of_avoided_emissions' %></h1>
-    <%= image_tag webpack_asset_path('images/transparency/co2-avoided.png'), class: 'img-responsive center-block' %>
-  </div>
-</div>
+    <dt class="t:ml-1/2 t:w-1/2 mt-12 text-center font-bold"><%=t 'users_from' %></dt>
+    <dd class="t:ml-1/2 t:w-1/2 mt-1 text-center text-lg"><strong><%= @number_of_countries %></strong> <%=t 'different_countries' %></dd>
 
-<div class="site-wrapper-second">
-  <div class="inner cover">
-    <h1 class="cover-heading"><%=t 'project_distribution_by_continent' %></h1>
-    <%= image_tag webpack_asset_path('images/transparency/project-continent.png'), class: 'img-responsive center-block'  %>
-  </div>
-</div>
+    <dt class="t:float-left t:clear-left t:w-1/2 mt-12 text-center font-bold"><%=t 'number_of_companies_we_have_helped' %></dt>
+    <dd class="t:float-left t:clear-left t:w-1/2 mt-1 text-center text-lg"><strong><%= @number_of_businesses_helped %></strong></dd>
 
-<div class="site-wrapper-second">
-  <div class="inner cover">
-    <h1 class="cover-heading"><%=t 'project_distribution_by_technology' %></h1>
-    <%= image_tag webpack_asset_path('images/transparency/project-technology.png'), class: 'img-responsive center-block'  %>
-  </div>
-</div>
+    <dt class="t:ml-1/2 t:w-1/2 mt-12 text-center font-bold"><%=t 'employees' %></dt>
+    <dd class="t:ml-1/2 t:w-1/2 mt-1 text-center text-lg"><strong>6</strong> <%=t 'full_time' %></dd>
 
-<div class="site-wrapper-second">
-  <div class="inner cover">
-    <h1 class="cover-heading"><%=t 'CO2e_avoided_per_coworker' %></h1>
-    <%= image_tag webpack_asset_path('images/transparency/co2-per-coworker.png'), class: 'img-responsive center-block'  %>
-  </div>
-</div>
+    <dt class="t:float-left t:clear-left t:w-1/2 mt-12 text-center font-bold"><%=t 'latest_fiscal_year_turnover' %></dt>
+    <dd class="t:float-left t:clear-left t:w-1/2 mt-1 text-center text-lg"><strong><%= number_with_delimiter(5_550_300) %></strong> SEK</dd>
 
-<a name="this_is_how_it_works"></a>
-<div class="site-wrapper-third">
-  <div class="inner">
+    <dt class="t:ml-1/2 t:w-1/2 mt-12 text-center font-bold"><%=t 'total_accumulated_dividend_to_shareholders' %></dt>
+    <dd class="t:ml-1/2 t:w-1/2 mt-1 text-center text-lg"><strong>0</strong> SEK (<%=t 'everything_is_invested_for_maximum_climate_impact' %>)</dd>
+  </dl>
 
-    <span class="glyphicon glyphicon-large glyphicon-search" aria-hidden="true"></span>
-    <h1 class="cover-heading"><%=t '100_percent_transparency_financial_info' %></h1>
-    <p class="lead"><%=t '100_percent_transparency_financial_info_intro' %></p>
-    <div class="financial-info">
-      <h2><%=t 'fiscal_year_2020_ongoing' %></h2>
-      <h3><%=t 'revenue' %></h3>
-      <table class="table table-condensed">
-        <tr>
-          <td><%=t 'climate_offset_from_users' %></td>
-          <td class="text-right"><%= number_with_delimiter(747_390) %> SEK</td>
-        </tr>
-        <tr>
-          <td><%=t 'revenue_from_companies' %></td>
-          <td class="text-right"><%= number_with_delimiter(585_243) %> SEK</td>
-        </tr>
-        <tr>
-          <td><%=t 'total' %></td>
-          <td class="text-right"><%= number_with_delimiter(1_332_633) %> SEK</td>
-        </tr>
-      </table>
-
-      <h3><%=t 'cost' %></h3>
-      <table class="table table-condensed">
-        <tr>
-          <td><%=t 'investments_in_climate_projects' %></td>
-          <td class="text-right">ongoing</td>
-        </tr>
-        <tr>
-          <td><%=t 'salary_costs' %></td>
-          <td class="text-right"><%= number_with_delimiter(-400_284) %> SEK</td>
-        </tr>
-        <tr>
-          <td><%=t 'other_operating_expenses' %></td>
-          <td class="text-right"><%= number_with_delimiter(-238_002) %> SEK</td>
-        </tr>
-        <tr>
-          <td><%=t 'total' %></td>
-          <td class="text-right">ongoing</td>
-        </tr>
-      </table>
-
-      <h3><%=t 'result' %></h3>
-      <table class="table table-condensed">
-        <tr>
-          <td><%=t 'result' %></td>
-          <td class="text-right">ongoing</td>
-        </tr>
-      </table>
-
-      <%= link_to I18n.t('you_can_read_more_details_about_our_costs_here'), 'https://docs.google.com/spreadsheets/d/1RzUCaVqTTxJYjfUMeh3KlTxBpiATy2ViPO3m0LHGpG8/', target: "_blank" %>.
+  <div class="t:flex flex-wrap section-gutter mt-16">
+    <div class="t:w-1/2">
+      <h3 class="heading mb-6"><%=t 'amount_of_avoided_emissions' %></h3>
+      <%= image_tag webpack_asset_path('images/transparency/co2-avoided.png'), class: 'w-full' %>
     </div>
-
-    <div class="financial-info">
-      <h2><%=t 'fiscal_years' %> 2017-2019</h2>
-
-
-      <h3><%= t('auditor') %></h3>
-      <p>Alexander Lyckow, PwC</p>
-
-      <h3><%= t('financials') %> (in SEK)</h3>
-
-      <h4><%=t 'revenue' %></h4>
-      <table class="table table-condensed text-nowrap">
-        <tr>
-          <th><%=t 'year' %></th>
-          <th class="text-right text-nowrap">2017-2018</th>
-          <th class="text-right">2019(prel)</th>
-        </tr>
-        <tr>
-          <td><%=t 'climate_offset_from_users' %></td>
-          <td class="text-right text-nowrap"><%= number_with_delimiter(974_155) %></td>
-          <td class="text-right text-nowrap"><%= number_with_delimiter(3_640_310) %></td>
-        </tr>
-        <tr>
-          <td><%=t 'revenue_from_companies' %></td>
-          <td class="text-right"><%= number_with_delimiter(1_198_984) %></td>
-          <td class="text-right"><%= number_with_delimiter(1_911_300) %></td>
-        </tr>
-        <tr>
-          <td><%=t 'total' %></td>
-          <td class="text-right"><%= number_with_delimiter(2_173_138) %></td>
-          <td class="text-right"><%= number_with_delimiter(5_548_990) %></td>
-        </tr>
-      </table>
-
-      <h4><%=t 'cost' %></h4>
-      <table class="table table-condensed text-nowrap">
-        <tr>
-          <td><%=t 'investments_in_climate_projects' %></td>
-          <td class="text-right"><%= number_with_delimiter(-1_830_670) %></td>
-          <td class="text-right"><%= number_with_delimiter(-2_251_747) %></td>
-        </tr>
-        <tr>
-          <td><%=t 'salary_costs' %></td>
-          <td class="text-right">0</td>
-          <td class="text-right"><%= number_with_delimiter(-1_290_572) %></td>
-        </tr>
-        <tr>
-          <td><%=t 'other_operating_expenses' %></td>
-          <td class="text-right"><%= number_with_delimiter(-256_844) %></td>
-          <td class="text-right"><%= number_with_delimiter(-997_787) %></td>
-        </tr>
-        <tr>
-          <td><%=t 'total' %></td>
-          <td class="text-right"><%= number_with_delimiter(-2_087_514) %></td>
-          <td class="text-right"><%= number_with_delimiter(-4_540_106) %></td>
-        </tr>
-        <tr>
-          <td colspan="3">
-            <%= link_to I18n.t('you_can_read_more_details_about_our_costs_here'), 'https://docs.google.com/spreadsheets/d/1RzUCaVqTTxJYjfUMeh3KlTxBpiATy2ViPO3m0LHGpG8/edit#gid=0', target: "_blank" %>
-          </td>
-        </tr>
-      </table>
-
-
-      <h4><%=t 'result' %></h4>
-      <table class="table table-condensed text-nowrap">
-        <tr>
-          <td style="width:345px"><%=t 'result' %></td>
-          <td class="text-right"><%= number_with_delimiter(48_018) %></td>
-          <td class="text-right"><%= number_with_delimiter(595_549) %></td>
-        </tr>
-        <tr>
-          <td style="width:345px"><%=t 'carried_forward_to_next_year' %></td>
-          <td class="text-right"><%= number_with_delimiter(48_018) %></td>
-          <td class="text-right"><%= number_with_delimiter(595_549) %></td>
-        </tr>
-        <tr>
-          <td style="width:345px"><%=t 'dividends' %></td>
-          <td class="text-right">0</td>
-          <td class="text-right">0</td>
-        </tr>
-      </table>
-
-      <p><%= t('all_of_the_result_were_carried_forward') %></p>
-
+    <div class="t:w-1/2">
+      <h3 class="heading mb-6"><%=t 'project_distribution_by_continent' %></h3>
+      <%= image_tag webpack_asset_path('images/transparency/project-continent.png'), class: 'w-full'  %>
     </div>
-    <p class="lead"><%=t 'questions_or_comments_contact_us' %>: <a href="mailto:hello@goclimate.com">hello@goclimate.com</a></p>
-
-  </div>
-</div>
-
-<div class="site-wrapper-second">
-  <div class="inner">
-    <div class="row stats offset-projects">
-        <div class="col-md-12">
-          <span class="glyphicon glyphicon-large glyphicon-globe" aria-hidden="true"></span>
-          <h1 class="cover-heading"><%=t '100_percent_transparency_climate_projects' %></h1>
-          <div class="table-responsive">
-          <p class="lead"><%=t 'for_more_information_about_climate_projects' %> <%= link_to t('our_projects').downcase, projects_path %>.</p>
-          </div>
-        </div>
+    <div class="t:w-1/2">
+      <h3 class="heading mb-6"><%=t 'project_distribution_by_technology' %></h3>
+      <%= image_tag webpack_asset_path('images/transparency/project-technology.png'), class: 'w-full'  %>
+    </div>
+    <div class="t:w-1/2">
+      <h3 class="heading mb-6"><%=t 'CO2e_avoided_per_coworker' %></h3>
+      <%= image_tag webpack_asset_path('images/transparency/co2-per-coworker.png'), class: 'w-full'  %>
     </div>
   </div>
-</div>
+</section>
 
-<%= render "shared/footer_old" %>
+<section class="section-padding">
+  <h2 class="heading-xl mb-6"><%=t '100_percent_transparency_financial_info' %></h2>
+  <p class="max-w-2xl"><%=t '100_percent_transparency_financial_info_intro' %></p>
+
+  <h3 class="heading mt-12 mb-6"><%=t 'fiscal_year_2020_ongoing' %></h3>
+  <table class="w-full max-w-3xl">
+    <tbody>
+      <tr>
+        <td colspan="3">
+          <strong><%=t 'revenue' %></strong>
+        </td>
+      </tr>
+    </tbody>
+    <tbody class="divider-y">
+      <tr>
+        <td><%=t 'climate_offset_from_users' %></td>
+        <td class="text-right"><%= number_with_delimiter(747_390) %> SEK</td>
+      </tr>
+      <tr>
+        <td><%=t 'revenue_from_companies' %></td>
+        <td class="text-right"><%= number_with_delimiter(585_243) %> SEK</td>
+      </tr>
+      <tr>
+        <td><%=t 'total' %></td>
+        <td class="text-right"><%= number_with_delimiter(1_332_633) %> SEK</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td colspan="3" class="pt-6">
+          <strong><%=t 'cost' %></strong>
+        </td>
+      </tr>
+    </tbody>
+    <tbody class="divider-y">
+      <tr>
+        <td><%=t 'investments_in_climate_projects' %></td>
+        <td class="text-right">ongoing</td>
+      </tr>
+      <tr>
+        <td><%=t 'salary_costs' %></td>
+        <td class="text-right"><%= number_with_delimiter(-400_284) %> SEK</td>
+      </tr>
+      <tr>
+        <td><%=t 'other_operating_expenses' %></td>
+        <td class="text-right"><%= number_with_delimiter(-238_002) %> SEK</td>
+      </tr>
+      <tr>
+        <td><%=t 'total' %></td>
+        <td class="text-right">ongoing</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td colspan="3" class="pt-6">
+          <strong><%=t 'result' %></strong>
+        </td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td><%=t 'result' %></td>
+        <td class="text-right">ongoing</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="mt-6">
+    <%= link_to I18n.t('you_can_read_more_details_about_our_costs_here'), 'https://docs.google.com/spreadsheets/d/1RzUCaVqTTxJYjfUMeh3KlTxBpiATy2ViPO3m0LHGpG8/', target: '_blank', class: 'link' %>.
+  </p>
+
+  <h3 class="heading mt-12 mb-6"><%=t 'fiscal_years' %> 2017-2019</h3>
+
+  <h4 class="font-bold"><%= t('auditor') %></h4>
+  <p>Alexander Lyckow, PwC</p>
+
+  <table class="w-full max-w-3xl mt-6">
+    <thead>
+      <tr>
+        <th></th>
+        <th class="w-24 m-lg:w-auto text-right text-nowrap">2017-2018</th>
+        <th class="w-24 m-lg:w-auto text-right text-nowrap">2019 (prel)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="3">
+          <strong><%=t 'revenue' %></strong>
+        </td>
+      </tr>
+    </tbody>
+    <tbody class="divider-y">
+      <tr>
+        <td><%=t 'climate_offset_from_users' %></td>
+        <td class="text-right text-nowrap"><%= number_with_delimiter(974_155) %></td>
+        <td class="text-right text-nowrap"><%= number_with_delimiter(3_640_310) %></td>
+      </tr>
+      <tr>
+        <td><%=t 'revenue_from_companies' %></td>
+        <td class="text-right"><%= number_with_delimiter(1_198_984) %></td>
+        <td class="text-right"><%= number_with_delimiter(1_911_300) %></td>
+      </tr>
+      <tr>
+        <td><%=t 'total' %></td>
+        <td class="text-right"><%= number_with_delimiter(2_173_138) %></td>
+        <td class="text-right"><%= number_with_delimiter(5_548_990) %></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td colspan="3" class="pt-6">
+          <strong><%=t 'cost' %></strong>
+        </td>
+      </tr>
+    </tbody>
+    <tbody class="divider-y">
+      <tr>
+        <td><%=t 'investments_in_climate_projects' %></td>
+        <td class="text-right"><%= number_with_delimiter(-1_830_670) %></td>
+        <td class="text-right"><%= number_with_delimiter(-2_251_747) %></td>
+      </tr>
+      <tr>
+        <td><%=t 'salary_costs' %></td>
+        <td class="text-right">0</td>
+        <td class="text-right"><%= number_with_delimiter(-1_290_572) %></td>
+      </tr>
+      <tr>
+        <td><%=t 'other_operating_expenses' %></td>
+        <td class="text-right"><%= number_with_delimiter(-256_844) %></td>
+        <td class="text-right"><%= number_with_delimiter(-997_787) %></td>
+      </tr>
+      <tr>
+        <td><%=t 'total' %></td>
+        <td class="text-right"><%= number_with_delimiter(-2_087_514) %></td>
+        <td class="text-right"><%= number_with_delimiter(-4_540_106) %></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td colspan="3" class="pt-6">
+          <strong><%=t 'result' %></strong>
+        </td>
+      </tr>
+    </tbody>
+    <tbody class="divider-y">
+      <tr>
+        <td><%=t 'result' %></td>
+        <td class="text-right"><%= number_with_delimiter(48_018) %></td>
+        <td class="text-right"><%= number_with_delimiter(595_549) %></td>
+      </tr>
+      <tr>
+        <td><%=t 'carried_forward_to_next_year' %></td>
+        <td class="text-right"><%= number_with_delimiter(48_018) %></td>
+        <td class="text-right"><%= number_with_delimiter(595_549) %></td>
+      </tr>
+      <tr>
+        <td><%=t 'dividends' %></td>
+        <td class="text-right">0</td>
+        <td class="text-right">0</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="mt-6"><%= t('all_of_the_result_were_carried_forward') %></p>
+
+  <p class="mt-6"><%=t 'questions_or_comments_contact_us' %>: <a href="mailto:hello@goclimate.com" class="link">hello@goclimate.com</a></p>
+
+</section>
+
+<%= render 'shared/more_info', pages: [:about, :projects] %>
+
+<%= render "shared/footer" %>

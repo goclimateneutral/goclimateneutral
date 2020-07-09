@@ -5,7 +5,6 @@ eo:
       your_yearly_climate_footprint: crwdns13032:0crwdne13032:0
       corresponds_to: crwdns13034:0%{price}crwdne13034:0
       you: crwdns13036:0crwdne13036:0
-      compensated: crwdns13038:0crwdne13038:0
       average_in: crwdns13040:0%{region}crwdne13040:0
       world_average: crwdns13042:0crwdne13042:0
       goal_2030: crwdns13044:0crwdne13044:0
@@ -14,11 +13,8 @@ eo:
       your_climate_footprint: crwdns13050:0%{footprint}crwdnd13050:0%{relative}crwdnd13050:0%{country}crwdne13050:0
       your_climate_footprint_compared_world: crwdns13052:0%{footprint}crwdnd13052:0%{relative}crwdne13052:0
       subscribe_heading: crwdns13054:0crwdne13054:0
-      subscribe_intro: crwdns13056:0crwdne13056:0
       your_subscription: crwdns13058:0crwdne13058:0
       number_of_people: crwdns13060:0crwdne13060:0
-      total: crwdns13062:0crwdne13062:0
-      subscription_price_information: crwdns13064:0%{price}crwdne13064:0
       where_does_the_money_go:
         heading: crwdns13066:0crwdne13066:0
         point_1: crwdns13068:0crwdne13068:0

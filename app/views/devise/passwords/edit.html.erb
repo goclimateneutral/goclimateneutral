@@ -14,7 +14,7 @@
     <p class="lead"><%=t 'change_your_password_by_entering_your_new_password_below' %></p>
 
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put, class: "form-horizontal" }) do |f| %>
-      <%= render "devise/shared/error_messages_old", resource: resource %>
+      <%= render "devise/shared/error_messages", resource: resource %>
 
       <%= f.hidden_field :reset_password_token %>
 

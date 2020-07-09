@@ -11,7 +11,6 @@ sv:
   i_want_to_know_more: Jag vill veta mer!
   contact_us: Kontakta oss
   100_percent_transparency: 100% transparens
-  100_percent_transparency_intro: Vi vill att du ska känna dig 100% trygg med att veta hur dina pengar används.
   what_we_do_with_your_money: Vad bidrar dina pengar till?
   system_change: Systemförändring
   system_change_description: Vi behöver mobilisera människor för att visa politiker och företag att vi är många som vill snabba på omställningen till ett hållbart samhälle.
@@ -36,8 +35,6 @@ sv:
   project_distribution_by_continent: Här i världen finns projekten vi stöttar
   project_distribution_by_technology: Den här typen av projekt bidrar vi till
   CO2e_avoided_per_coworker: Ton CO2e undvikna per medarbetare
-  100_percent_transparency_climate_projects: Klimatinvesteringar
-  for_more_information_about_climate_projects: Läs mer om våra klimatprojekt på sidan om
   100_percent_transparency_financial_info: Finansiell information
   100_percent_transparency_financial_info_intro: GoClimate Sweden AB (organisationsnummer 559130-6583) startades 2017 och är ett socialt företag som bidrar med samhällsnytta genom att skapa lösningar för att maximera våra chanser att lämna över en levande och välmående planet till nästkommande generationer. Vi på GoClimate vill göra allt vi kan för att bidra till att vi håller oss under 1,5 graders uppvärmning och bromsar klimatförändringarna så snabbt som möjligt.
   fiscal_years: Räkenskapsåren
@@ -70,13 +67,15 @@ sv:
   about_us_how_do_we_stop_climate_change_text: För att hejda klimatförändringarna behöver så många som möjligt bli klimatneutrala (eller ännu bättre – klimatpositiva) nu. Det bästa tillvägagångssättet är att minska våra egna fotavtryck så mycket det bara går samtidigt som vi klimatkompenserar för resterande.
   about_us_how_do_we_stop_climate_change_text_2: GoClimate skapades i syfte att göra ovanstående så enkelt som möjligt – ge tips om hur vi alla kan minska vår egen klimatpåverkan och erbjuda möjligheten att klimatkompensera för de fotavtryck vi personligen orsakar. Vi tror att det bästa sättet att få människor att klimatkompensera för sin livsstil är att göra det så enkelt som möjligt. Vi är övertygade om att klimatförändringarna kan stoppas – om vi är tillräckligt många som agerar och om vi gör det nu.
   about_us_who_are_we: Vilka är vi?
-  about_us_who_are_we_kalle_html: Tycker om vegansk kladdkaka och söta djur på internet. Utbildad civilingenjör samt ekonom. Lyssna på Kalle i poddarna <a href="https://soundcloud.com/bortomekorrhjulet/37-go-climate-neutral-vdn-som-blev-klimatkampe" target="_blank" rel="noreferrer noopener">Bortom Ekorrhjulet</a> samt <a href="https://podcasts.nu/avsnitt/vart-ar-vi-pa-vag/9-kalle-nilver-go-climate-neutral" target="_blank" rel="noreferrer noopener">Vart är vi på väg?</a>.
-  about_us_who_are_we_cissi_html: Civilekonom med koll på klimatberäkningar och hållbarhetsfrågor. Miljönörd och trädgårdsodlingsgeni. Lyssna på Cissi i <a href="https://klimatpodden.se/66-cecilia-linden-klimatkompensera-din-livsstil" target="_blank" rel="noreferrer noopener">Klimatpodden</a> och <a href="https://healthforwealth.se/podcast/144-klimatneutral-pa-jobbet-jo-det-gar/" target="_blank" rel="noreferrer noopener">Health for Wealth</a>.
-  about_us_who_are_we_henrik_html: 'Agil & Lean coach. Bakom bland annat <a href="https://youtu.be/3CM_KkDuzGQ" target="_blank" rel="noreferrer noopener">A friendly guide to Climate Change</a>, <a href="http://climate.crisp.se/" target="_blank" rel="noreferrer noopener">Climate Crisplet</a> och <a href="http://carbonmanifesto.org/" target="_blank" rel="noreferrer noopener">Carbon Manifesto</a>. Lyssna på Henrik i <a href="https://www.bosslevelpodcast.com/henrik-kniberg-on-going-climate-neutral/" target="_blank" rel="noreferrer noopener">Boss Level Podcast</a> eller se honom medverka i Yles klimatsatsning <a href="https://arenan.yle.fi/1-50118864" target="_blank" rel="noreferrer noopener">Klimatparadoxen</a>.'
-  about_us_who_are_we_stefan_html: Agil team- & organisationscoach. Lite för idealistisk pragmatiker.
-  about_us_who_are_we_alexandra_html: Miljövetare med mycket internationell erfarenhet. Drivs av nyfikenhet och viljan att rädda världen, lite hela tiden. Dansar och springer i skogen för att ladda energi.
-  about_us_who_are_we_tove_html: Global Strateg med gedigen erfarenhet inom PR & Kommunikation, inte minst från att ha startat och drivit Londonbaserade PR-byrån VARG sedan 2008. Tove jobbar aktivt mot det personliga målet att dela sitt hem med fler omplaceringshundar än vad som är socialt accepterat.
-  about_us_who_are_we_emma_html: Civilingenjör inom medieteknik med erfarenhet från ett snabbväxande tech-startup. Vill bygga grymma produkter, rädda världen och äta choklad.
+  about_us_team:
+    heading: Vilka är vi?
+    kalle_html: Tycker om vegansk kladdkaka och söta djur på internet. Utbildad civilingenjör samt ekonom. Lyssna på Kalle i poddarna <a href="https://soundcloud.com/bortomekorrhjulet/37-go-climate-neutral-vdn-som-blev-klimatkampe" target="_blank" rel="noreferrer noopener">Bortom Ekorrhjulet</a> samt <a href="https://podcasts.nu/avsnitt/vart-ar-vi-pa-vag/9-kalle-nilver-go-climate-neutral" target="_blank" rel="noreferrer noopener">Vart är vi på väg?</a>.
+    cissi_html: Civilekonom med koll på klimatberäkningar och hållbarhetsfrågor. Miljönörd och trädgårdsodlingsgeni. Lyssna på Cissi i <a href="https://klimatpodden.se/66-cecilia-linden-klimatkompensera-din-livsstil" target="_blank" rel="noreferrer noopener">Klimatpodden</a> och <a href="https://healthforwealth.se/podcast/144-klimatneutral-pa-jobbet-jo-det-gar/" target="_blank" rel="noreferrer noopener">Health for Wealth</a>.
+    henrik_html: 'Agil & Lean coach. Bakom bland annat <a href="https://youtu.be/3CM_KkDuzGQ" target="_blank" rel="noreferrer noopener">A friendly guide to Climate Change</a>, <a href="http://climate.crisp.se/" target="_blank" rel="noreferrer noopener">Climate Crisplet</a> och <a href="http://carbonmanifesto.org/" target="_blank" rel="noreferrer noopener">Carbon Manifesto</a>. Lyssna på Henrik i <a href="https://www.bosslevelpodcast.com/henrik-kniberg-on-going-climate-neutral/" target="_blank" rel="noreferrer noopener">Boss Level Podcast</a> eller se honom medverka i Yles klimatsatsning <a href="https://arenan.yle.fi/1-50118864" target="_blank" rel="noreferrer noopener">Klimatparadoxen</a>.'
+    stefan_html: Agil team- & organisationscoach. Lite för idealistisk pragmatiker.
+    alexandra_html: Miljövetare med mycket internationell erfarenhet. Drivs av nyfikenhet och viljan att rädda världen, lite hela tiden. Dansar och springer i skogen för att ladda energi.
+    tove_html: Global Strateg med gedigen erfarenhet inom PR & Kommunikation, inte minst från att ha startat och drivit Londonbaserade PR-byrån VARG sedan 2008. Tove jobbar aktivt mot det personliga målet att dela sitt hem med fler omplaceringshundar än vad som är socialt accepterat.
+    emma_html: Civilingenjör inom medieteknik med erfarenhet från ett snabbväxande tech-startup. Vill bygga grymma produkter, rädda världen och äta choklad.
   blog: Blogg
   we_are_100_transparent: Vi är 100% transparenta.
   section_3_text: Vi är 100% transparenta med vilka både FN-certifierade och Gold Standard-märkta klimatprojekt dina pengar investeras i och varför.
@@ -90,7 +89,6 @@ sv:
   your_payment_details_have_been_updated: Dina inställningar har uppdaterats
   no_card_registered: Inget kort registrerat
   climate_plan: Kompensation
-  go_climate_neutral: Skapa prenumeration
   log_in_to_see_how_we_are_doing: Logga in för att se hur det går i vår kamp med att försöka ställa klimatet till rätta igen.
   you_have_lived_climate_neutral_for:
     one: Du har levt klimatneutralt i 1 månad.
@@ -109,15 +107,8 @@ sv:
     your_months: Du har varit klimatneutral i
     your_offsets: Antal undvikna ton koldioxidutsläpp
     together: Tillsammans med alla <span>%{number_of_members} medlemmar</span> har vi förhindrat <span>%{number_of_tonnes} ton</span> koldioxid från att nå atmosfären!
-  we_have_accomplished_alot_together: Vi har åstadkommit mycket tillsammans!
-  amount_of_carbon_we_have_offset: Antal ton CO2 vi har bidragit till att minska tillsammans
-  amount_of_carbon_i_have_offset: Antal ton CO2 som du har minskat utsläpp av
   good_job: Bra jobbat!
-  number_of_months_you_have_been_climate_neutral: Antal månader som du har levt ett klimatneutralt liv
-  number_of_climate_neutral_users_right_now: Antal klimatneutrala användare just nu
   our_projects: Våra klimatprojekt
-  our_investments_in_climate_projects: Våra klimatprojekt
-  i_want_to_contribute: Okej, jag vill bidra!
   project_name: Namn på projekt
   map: Karta
   more_info_on_blog: Mer information
@@ -132,26 +123,17 @@ sv:
     one: klimatneutral månad
     other: klimatneutrala månader
   climate_country_toplist: Topplista klimatländer
-  total_carbon_offset_by_us: Totalt har vi minskat utsläpp på
-  read_more_about_investments_on_our_blog: 'Läs mer om projekten vi investerar i på vår blogg >>'
   tonnes_CO2: ton CO2
   tonnes: ton
   type: Typ
   price: Pris
-  thank_you_so_much_everyone_for_helping_to_save_the_world: Otroligt stort tack för att du är med och räddar världen! Du är bäst!
-  latest_carbon_offset_projects: Senaste projekten vi stöttat
   country: Land
-  location: Plats
-  more_info_on_our_blog: Mer information om projektet
   edit_settings: Ändra inställningar
   payment_settings: Betalningsinställningar
   user_name: Namn
   confirm_password: Bekräfta lösenord
   update: Uppdatera
-  what_is_goclimateneutral: Vad är GoClimate?
   this_is_how_it_works: Så här funkar det
-  1_describe_your_lifestyle: 1. Välj din livsstil
-  2_sign_up: 2. Registrera dig
   forgot_your_password: Glömt ditt lösenord?
   enter_your_email_below_and_we_will_send_you: Skriv in din e-post nedan så mailar vi dig instruktioner.
   send_me_an_email_with_instructions: Återställ lösenord
@@ -181,7 +163,6 @@ sv:
   learn_more_about_what_we_have_achieved_here: 'Läs mer om hur det går för oss här >>'
   thank_you: Stort Tack!
   the_best_way_to_help_is_to_get_as_many_people_climate_neutral_as_possible: 'Dela gärna det här med dina vänner, ju fler vi blir, desto större är chansen att vi lyckas bromsa klimatförändringarna!'
-  im_in: Ja, tack!
   faq: Frågor & Svar
   faq_questions:
     climate_neutrality:
@@ -303,23 +284,15 @@ sv:
   navigation:
     gift_cards: Gåvokort
   welcome:
-    caption_line_1: Tillsammans räddar vi klimatet.
-    caption_line_2: Ta ansvar för dina utsläpp idag!
-    what_is_gcn_text: Vi stöttar klimatprojekt med certifieringar som FN och Världsnaturfonden står bakom - och tipsar dig om enkla sätt att minska ditt klimatavtryck. På så sätt kan vi bidra till att bromsa klimatförändringarna och rädda världen.
-    statistics_header: Varje person gör skillnad!
     users_prefix: Just nu är vi
     users_suffix: medlemmar
     tonnes_prefix: Tillsammans har vi minskat
     tonnes_suffix: ton koldioxid i atmosfären
     call_to_actions:
-      im_ready_to_sign_up: Jag är redo!
       lets_save_our_planet_together: Rädda klimatet tillsammans med oss!
       go_climate_neutral: Bli klimatneutral
     how_it_works:
-      describe_your_lifestyle_text: Använd vår kalkylator för att beräkna ditt ungefärliga klimatavtryck.
       sign_up_text: Registrera dig för att kompensera för ditt klimatavtryck.
-      save_our_planet_header: 3. Rädda vår planet
-      save_our_planet_text: Bli en av alla oss som vill vara med och stoppa klimatförändringarna.
     business:
       for_companies: Klimatkompensera ditt företag
       for_companies_text_html: Vill du klimatkompensera ditt företags klimatavtryck eller klimatkompensera för alla era anställda? Vi hjälper dig gärna!

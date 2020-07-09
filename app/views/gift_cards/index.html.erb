@@ -1,154 +1,35 @@
-<!-- TODO: Don't forget to remove variables used by this template from the controller -->
+<%= render "shared/header" %>
 
-<% set_meta_tags og: { image: webpack_asset_path('images/giftcards_en.jpg') } if I18n.locale == :en %>
-<% set_meta_tags og: { image: webpack_asset_path('images/giftcards_sv.jpg') } if I18n.locale == :sv %>
-
-<% content_for :stylesheets do %>
-  <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
-<% end %>
-<% content_for :javascripts do %>
-  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'throw "Loading Javascript " + this.src + " failed"' %>
-<% end %>
-
-<div class="site-wrapper-first">
-  <%= render "shared/header_old" %>
-  <div class="inner">
-
-    <div class="container gift-cards-intro">
-      <div class="row gift-cards-intro__header-row">
-        <div class="col-xs-10 col-xs-offset-1">
-          <h1><%= title(t('views.gift_cards.index.header')) %></h1>
-        </div>
-      </div>
-      <div class="row gift-cards-intro__intro-row">
-        <div class="col-xs-12">
-          <p class="lead"><%= description(t('views.gift_cards.index.intro')) %></p>
-        </div>
-      </div>
-    </div>
-
-  </div>
+<div class="section-padding pb-0">
+  <h1 class="heading border-b-4 inline-block"><%=t 'views.gift_cards.heading' %></h1>
 </div>
 
-<div class="site-wrapper-second">
-  <div class="inner">
+<section class="section-padding">
+  <h2 class="heading-xl"><%= t('views.gift_cards.index.header') %></h2>
+  <p class="mt-6 t:w-2/3 d:w-1/2">
+    <%= t('views.gift_cards.index.intro') %>
+    <%= link_to t('views.gift_cards.new.click_here_for_an_example'), 
+      example_certificate_gift_cards_path(format: :pdf), 
+      class: 'link' %>.
+  </p>
 
-    <div class="container gift-cards-intro">
-      <div class="row gift-cards-intro__choose-row">
-        <div class="col-xs-12">
-          <h2><%= t 'views.gift_cards.index.choose_header' %></h2>
-          <p><%= link_to t('views.gift_cards.new.click_here_for_an_example'), example_certificate_gift_cards_path(format: :pdf) %></p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-md-3">
-          <div class="panel panel-success">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                <%= t 'views.gift_cards.index.1_months_header' %>
-              </h3>
-            </div>
-            <div class="panel-body">
-              <p><%= t 'views.gift_cards.index.1_months_description' %></p>
-              <p class="gift-cards-intro__price"><%= @gift_card_1_months.price.to_s(precision: 0) %></p>
-            </div>
-            <div class="panel-footer">
-              <p>
-                <%= link_to I18n.t('views.gift_cards.index.1_months_cta'),
-                  new_gift_card_path(subscription_months_to_gift: 1),
-                  class: 'btn btn-success btn-choose-gift-card',
-                  id: 'choose-1-months' %>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-3">
-          <div class="panel panel-success">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                <%= t 'views.gift_cards.index.3_months_header' %>
-              </h3>
-            </div>
-            <div class="panel-body">
-              <p><%= t 'views.gift_cards.index.3_months_description' %></p>
-              <p class="gift-cards-intro__price"><%= @gift_card_3_months.price.to_s(precision: 0) %></p>
-            </div>
-            <div class="panel-footer">
-              <p>
-                <%= link_to I18n.t('views.gift_cards.index.3_months_cta'),
-                  new_gift_card_path(subscription_months_to_gift: 3),
-                  class: 'btn btn-success btn-choose-gift-card',
-                  id: 'choose-3-months' %>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-3">
-          <div class="panel panel-success">
-            <div class="panel-heading">
-              <h6 class="panel-title">
-                <%= t 'views.gift_cards.index.6_months_header' %>
-              </h6>
-            </div>
-            <div class="panel-body">
-              <p><%= t 'views.gift_cards.index.6_months_description' %></p>
-              <p class="gift-cards-intro__price"><%= @gift_card_6_months.price.to_s(precision: 0) %></p>
-            </div>
-            <div class="panel-footer">
-              <p>
-                <%= link_to I18n.t('views.gift_cards.index.6_months_cta'),
-                  new_gift_card_path(subscription_months_to_gift: 6),
-                  class: 'btn btn-success btn-choose-gift-card',
-                  id: 'choose-6-months' %>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-3">
-          <div class="panel panel-success">
-            <div class="panel-heading">
-              <h12 class="panel-title">
-                <%= t 'views.gift_cards.index.12_months_header' %>
-              </h12>
-            </div>
-            <div class="panel-body">
-              <p><%= t 'views.gift_cards.index.12_months_description' %></p>
-              <p class="gift-cards-intro__price"><%= @gift_card_12_months.price.to_s(precision: 0) %></p>
-            </div>
-            <div class="panel-footer">
-              <p>
-                <%= link_to I18n.t('views.gift_cards.index.12_months_cta'),
-                  new_gift_card_path(subscription_months_to_gift: 12),
-                  class: 'btn btn-success btn-choose-gift-card',
-                  id: 'choose-12-months' %>
-              </p>
-            </div>
+  <div class="section-gutter mt-12 flex flex-col t:flex-row flex-wrap">
+    <% [1, 3, 6, 12].each do |month| %>
+      <div class="t:w-1/2 d:w-1/4">
+        <div class="callout w-full text-center">
+          <p class="heading"><%= t("views.gift_cards.index.description.#{month}") %></p>
+          <p class="heading-lg my-6"><%= @gift_cards[month].price.to_s(precision: 0) %></p>
+          <div>
+            <%= link_to t("views.gift_cards.index.cta.#{month}"),
+                  new_gift_card_path(subscription_months_to_gift: month),
+                  class: 'button button-cta w-full whitespace-normal',
+                  id: "choose-#{month}-months" %>
           </div>
         </div>
       </div>
-      <div class="row gift-cards-intro__details-row">
-        <div class="col-xs-12">
-          <p><%= t 'views.gift_cards.index.details_html' %></p>
-        </div>
-      </div>
-    </div>
-
+    <% end %>
   </div>
-</div>
+  <p class="mt-6 text-center text-sm"><%= t('views.gift_cards.index.details_html') %></p>
+</section>
 
-<%= render "shared/footer_old" %>
-
-<script type="text/javascript">
-document.getElementById('choose-1-months').addEventListener('click', function() {
-  ga('send', 'event', 'Gift Cards', 'Choose', 'Gift Card 1 months');
-});
-document.getElementById('choose-3-months').addEventListener('click', function() {
-  ga('send', 'event', 'Gift Cards', 'Choose', 'Gift Card 3 months');
-});
-document.getElementById('choose-6-months').addEventListener('click', function() {
-  ga('send', 'event', 'Gift Cards', 'Choose', 'Gift Card 6 months');
-});
-document.getElementById('choose-12-months').addEventListener('click', function() {
-  ga('send', 'event', 'Gift Cards', 'Choose', 'Gift Card 12 months');
-});
-</script>
+<%= render "shared/footer" %>

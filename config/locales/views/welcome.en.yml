@@ -50,12 +50,8 @@ en:
             shelbi:
               title: sustainability influencer
               quote: It is difficult to know which choice is the most sustainable when it comes to our personal choices, so I figured offsetting my footprint would be a way to assure I was doing something meaningful & helpful regardless of if I’m making the most perfect lifestyle choices day to day.
-        calculate_to_sign_up: Calculate your footprint to start living a climate neutral life today!
         i_live_in: I live in...
         get_started: Get started
-        our_projects_header: Our Climate Projects
-        our_projects_lead: It's crucial for us that your money only ever ends up in the right hands. To guarantee that, we support Gold Standard certified projects that have been verified by third parties. The projects contribute to the global transition to renewable energy and the UN Sustainable Development Goals.
-        our_projects_link: Read more about our climate projects
       travel_calculator:
         travel_emissions_calculator: Travel Emissions Calculator
         travel_emissions_calculator_description: Do you want to calculate the emissions from travelling? Enter the distance below and see the carbon emissions each way of travelling causes!

@@ -8,20 +8,16 @@ en:
           Looking for a gift for someone who already has everything?  Want
           to help spread the word of something we can all do to fight
           climate change? Try out our climate gift cards!
-        choose_header: Choose your climate gift card
-        1_months_header: 1 month
-        1_months_description: 1 month of climate neutrality.
-        1_months_cta: Get a 1 month gift card
-        3_months_header: 3 months
-        3_months_description: 3 months of climate neutrality.
-        3_months_cta: Get a 3 months gift card
-        6_months_header: 6 months
-        6_months_description: Half a year of climate neutrality.
-        6_months_cta: Get a 6 months gift card
-        12_months_header: 12 months
-        12_months_description: One full year of climate neutrality.
-        12_months_cta: Get a 12 months gift card
-        cta: Choose
+        description:
+          1: 1 month of climate neutrality.
+          3: 3 months of climate neutrality.
+          6: Half a year of climate neutrality.
+          12: One full year of climate neutrality.
+        cta:
+          1: Choose 1 month
+          3: Choose 3 months
+          6: Choose 6 months
+          12: Choose 12 months
         details_html: "Gift cards are based on the average climate impact for Swedish residents (11 tonnes CO<sub>2</sub>eq)."
       new:
         intro: Personalize and purchase your gift card
@@ -49,6 +45,3 @@ en:
       thank_you:
         download_the_gift_card_here: Download the gift card
         download_receipt_here: Download the receipt
-        you_have_purchased_a_gift_card_with_x_climate_neutral_months:
-          one: You have purchased a gift card for 1 climate neutral month
-          other: "You have purchased a gift card for %{count} climate neutral months"
