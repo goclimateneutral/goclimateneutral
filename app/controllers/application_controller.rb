@@ -14,25 +14,6 @@ class ApplicationController < ActionController::Base
 
   protected
 
-  # While we're migrating to our new design, we want to be able to switch
-  # back and forth. This override makes us try to use a template with
-  # the same name plus suffix _new when new design is active.
-  #
-  # TODO: Remove when we're done testing & migrating to new design
-  def render_to_body(options)
-    if @active_experiments&.include?(:new_design)
-      return(
-        begin
-          super(options.merge(template: "#{options[:template]}_new"))
-        rescue ActionView::MissingTemplate
-          super
-        end
-      )
-    end
-
-    super
-  end
-
   def default_url_options
     # Make region fallback explicit to not confuse path helpers with additional
     # path parameters.
