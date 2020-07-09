@@ -106,6 +106,11 @@ eo:
   climate_change_is_best_faced_together: crwdns11908:0crwdne11908:0
   share_on_facebook: crwdns11910:0crwdne11910:0
   share_on_twitter: crwdns11912:0crwdne11912:0
+  dashboard:
+    heading: crwdns13348:0crwdne13348:0
+    your_months: crwdns13350:0crwdne13350:0
+    your_offsets: crwdns13352:0crwdne13352:0
+    together: crwdns13354:0%{number_of_members}crwdnd13354:0%{number_of_tonnes}crwdne13354:0
   we_have_accomplished_alot_together: crwdns11914:0crwdne11914:0
   amount_of_carbon_we_have_offset: crwdns11916:0crwdne11916:0
   amount_of_carbon_i_have_offset: crwdns11918:0crwdne11918:0
@@ -123,8 +128,8 @@ eo:
   date_of_our_investment: crwdns11942:0crwdne11942:0
   read_more: crwdns11944:0crwdne11944:0
   cimate_hero_toplist: crwdns11946:0crwdne11946:0
-  show_full_toplist: crwdns11948:0crwdne11948:0
-  hide_full_toplist: crwdns11950:0crwdne11950:0
+  show_full_toplist: crwdns13356:0crwdne13356:0
+  hide_full_toplist: crwdns13358:0crwdne13358:0
   climate_neutral_months:
     one: crwdns11952:1crwdne11952:1
     other: crwdns11952:5crwdne11952:5
