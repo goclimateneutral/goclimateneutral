@@ -1,1 +1,7 @@
 es:
+  views:
+    shared:
+      prefooter:
+        heading: '¡Detengamos el cambio climático juntos!'
+        body_text: Suscríbete para compensar tu huella de carbono.
+        button: Empezar
