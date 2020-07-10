@@ -4,19 +4,16 @@ sv:
       index:
         header: Låt din nästa present bli ett klimatneutralt liv
         intro: Letar du efter en present till någon som redan har allt? Vill du hjälpa till att sprida kunskapen om att det finns något som vi alla kan göra för att bromsa klimatförändringarna? Ge bort vårt klimat-gåvokort!
-        choose_header: Välj ditt klimat-gåvokort
-        1_months_header: 1 månad
-        1_months_description: 1 månads klimatneutralt liv
-        1_months_cta: Välj 1 månads gåvokort
-        3_months_header: 3 månader
-        3_months_description: 3 månader klimatneutralt liv
-        3_months_cta: Välj 3 månaders gåvokort
-        6_months_header: 6 månader
-        6_months_description: Ett halvår klimatneutralt liv
-        6_months_cta: Välj 6 månaders gåvokort
-        12_months_header: 12 månader
-        12_months_description: Ett helt år klimatneutralt liv
-        12_months_cta: Välj 12 månaders gåvokort
+        description:
+          1: 1 month of climate neutrality.
+          3: 3 months of climate neutrality.
+          6: Half a year of climate neutrality.
+          12: One full year of climate neutrality.
+        cta:
+          1: Choose 1 month
+          3: Choose 3 months
+          6: Choose 6 months
+          12: Choose 12 months
         details_html: "Gåvokorten är baserade på en medelsvensks klimatavtryck - 11 ton CO<sub>2</sub>eq. För att vara på säkra sidan - och för att våran planet behöver det - så dubblar vi även alla våra uträkningar och bygger därför kalkylerna ovan på utsläpp på 22 ton CO<sub>2</sub>eq."
       new:
         intro: Anpassa och betala för ditt gåvokort
@@ -38,7 +35,3 @@ sv:
       example:
         message_html: "Hej Mamma!\nVisst känns det bra att hjälpa klimatet?\n/Lisa"
         example: "Exempel"
-      thank_you:
-        you_have_purchased_a_gift_card_with_x_climate_neutral_months:
-          one: Du har köpt ett gåvokort på 1 månads klimatneutralt liv
-          other: "Du har köpt ett gåvokort på %{count} månaders klimatneutralt liv"
