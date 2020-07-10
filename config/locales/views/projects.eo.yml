@@ -1,12 +1,20 @@
 eo:
   views:
     projects:
+      heading: crwdns13272:0crwdne13272:0
+      latest_projects: crwdns13274:0crwdne13274:0
+      see_all: crwdns13276:0crwdne13276:0
+      how:
+        heading: crwdns13278:0crwdne13278:0
+        1: crwdns13280:0crwdne13280:0
+        2: crwdns13282:0crwdne13282:0
+        3: crwdns13284:0crwdne13284:0
+        4: crwdns13286:0crwdne13286:0
+        5: crwdns13288:0crwdne13288:0
+        read_more: crwdns13290:0crwdne13290:0
       index:
-        latest_project: crwdns13016:0crwdne13016:0
         read_more_link: crwdns13018:0crwdne13018:0
         map_link: crwdns13020:0crwdne13020:0
         invoice: crwdns13022:0crwdne13022:0
         certificate_link: crwdns13024:0crwdne13024:0
         map_header: crwdns13026:0crwdne13026:0
-        about_our_projects: |
-          crwdns13028:0crwdne13028:0
