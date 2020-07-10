@@ -1,25 +1,15 @@
 sv:
   views:
     projects:
-      heading: Våra klimatprojekt
-      latest_projects: Våra senaste projekt
-      see_all: Se alla våra projekt
       how:
-        heading: Så här funkar våra projekt
-        1: Projektens huvudsakliga syfte är att minska utsläpp av växthusgaser, exempelvis genom att bidra till omställningen till förnyelsebar energi.
-        2: Varje år som projekten är i drift mäts de undvikna utsläppen i koldioxidekvivalenter och dessa köper vi som klimatkrediter. Klimatnyttan kan alltså inte bli ogjord senare.
-        3: Vi väljer ut de projekt som gör störst marginalnytta. Det kan exempelvis vara projekt i länder med stort beroende av fossilbränslen där förnyelsebar energi gör stor skillnad.
-        4: Projekten bidrar utöver klimatnyttan till lokal hållbar utveckling, exempelvis genom att erbjuda arbetstillfällen eller förbättrad luftkvalitet.
-        5: Projekten certifieras av strikta standarder, bland annat Gold Standard, och granskas regelbundet av oberoende tredje part.
-        read_more: Läs mer om hur våra projekt fungerar
+        1: The purpose of all our projects is to reduce greenhouse gas emissions, for example by contributing to the transition towards renewable energy.
+        2: Each operational year of the projects, the avoided emissions are measured in carbon dioxide equivalents, which we purchase as carbon credits. This means that the impact can't later be undone.
+        3: We always pick the projects that make the most climate impact. This can, for example, be projects in highly fossil-fuel dependent countries where clean renewable energy makes a big difference.
+        4: In addition to the climate impact, the projects contribute to local sustainable development, for example by offering jobs or improving air quality.
+        5: Projects are certified by strict standards, such as the Gold Standard, and are regularly reviewed by independent third parties.
       index:
-        latest_project: Vårt senaste projekt
         read_more_link: Läs mer
         map_link: Visa på karta
         invoice: Faktura
         certificate_link: Visa certifikat
         map_header: Här gör vi klimatnytta!
-        about_our_projects: |
-          GoClimate väljer ut projekt bland de som har certifierats av Gold Standard. Det innebär att projekten gått igenom en noggrann kontroll, backad av WWF och andra internationella organisationer, så att de gör verklig nytta och bidrar till FNs hållbarhetsmål.
-
-          Vi väljer projekt av olika karaktär, för att bredda vår påverkan. Vi tittar på var projekten genomförs, av vem, när och hur. Vissa projekt är billiga och då kan vi få många ton för pengarna, andra är lite dyrare och då kan vi bidra med att stimulera hållbar utveckling inom ett specifikt område. Vi förklarar resonemanget bakom våra val, och du kan själv titta på alla detaljer om projekten på den här sidan och på <a href="https://www.goldstandard.org/">Gold Standards hemsida</a>.
