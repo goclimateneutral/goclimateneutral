@@ -3,20 +3,34 @@ eo:
     shared:
       header:
         navigation:
-          flights: crwdns13080:0crwdne13080:0
-          offset_flight: crwdns13082:0crwdne13082:0
+          flights: crwdns14634:0crwdne14634:0
+          offset_flight: crwdns14636:0crwdne14636:0
         region_recommendation:
-          select_country: crwdns13084:0crwdne13084:0
-          continue_button: "crwdns13086:0%{region}crwdne13086:0"
-        sign_up: crwdns13088:0crwdne13088:0
+          select_country: crwdns14638:0crwdne14638:0
+          continue_button: "crwdns14640:0%{region}crwdne14640:0"
+          dismiss: crwdns14642:0crwdne14642:0
+        sign_up: crwdns14644:0crwdne14644:0
       prefooter:
-        heading: crwdns13090:0crwdne13090:0
-        body_text: crwdns13092:0crwdne13092:0
-        button: crwdns13094:0crwdne13094:0
+        heading: crwdns14646:0crwdne14646:0
+        body_text: crwdns14648:0crwdne14648:0
+        button: crwdns14650:0crwdne14650:0
       footer:
-        short_intro: crwdns13096:0crwdne13096:0
-        jobs: 'crwdns13098:0crwdne13098:0'
+        short_intro: crwdns14652:0crwdne14652:0
+        jobs: 'crwdns14654:0crwdne14654:0'
         headers:
-          make_a_difference: crwdns13100:0crwdne13100:0
-          explore: crwdns13102:0crwdne13102:0
-          about: crwdns13104:0crwdne13104:0
+          make_a_difference: crwdns14656:0crwdne14656:0
+          explore: crwdns14658:0crwdne14658:0
+          about: crwdns14660:0crwdne14660:0
+      more_info:
+        about:
+          title: crwdns14662:0crwdne14662:0
+          description: crwdns14664:0crwdne14664:0
+          cta: crwdns14666:0crwdne14666:0
+        projects:
+          title: crwdns14668:0crwdne14668:0
+          description: crwdns14670:0crwdne14670:0
+          cta: crwdns14672:0crwdne14672:0
+        transparency:
+          title: crwdns14674:0crwdne14674:0
+          description: crwdns14676:0crwdne14676:0
+          cta: crwdns14678:0crwdne14678:0

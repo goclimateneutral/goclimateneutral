@@ -1,35 +1,41 @@
 eo:
   views:
     gift_cards:
+      heading: crwdns14408:0crwdne14408:0
       index:
-        header: crwdns12758:0crwdne12758:0
-        intro: crwdns12760:0crwdne12760:0
+        header: crwdns14410:0crwdne14410:0
+        intro: crwdns14412:0crwdne14412:0
         description:
-          1: crwdns12766:0crwdne12766:0
-          3: crwdns12772:0crwdne12772:0
-          6: crwdns12778:0crwdne12778:0
-          12: crwdns12784:0crwdne12784:0
-        details_html: "crwdns12788:0crwdne12788:0"
+          1: crwdns14414:0crwdne14414:0
+          3: crwdns14416:0crwdne14416:0
+          6: crwdns14418:0crwdne14418:0
+          12: crwdns14420:0crwdne14420:0
+        cta:
+          1: crwdns14422:0crwdne14422:0
+          3: crwdns14424:0crwdne14424:0
+          6: crwdns14426:0crwdne14426:0
+          12: crwdns14428:0crwdne14428:0
+        details_html: "crwdns14430:0crwdne14430:0"
       new:
-        intro: crwdns12790:0crwdne12790:0
-        your_gift_card_order: crwdns12792:0crwdne12792:0
-        write_a_message: crwdns12794:0crwdne12794:0
-        sample_message_html: "crwdns12796:0crwdne12796:0"
-        we_will_send_you_pdf: crwdns12798:0crwdne12798:0
-        click_here_for_an_example: "crwdns12800:0crwdne12800:0"
-        pay: crwdns12802:0crwdne12802:0
+        intro: crwdns14432:0crwdne14432:0
+        your_gift_card_order: crwdns14434:0crwdne14434:0
+        write_a_message: crwdns14436:0crwdne14436:0
+        sample_message_html: "crwdns14438:0crwdne14438:0"
+        we_will_send_you_pdf: crwdns14440:0crwdne14440:0
+        click_here_for_an_example: "crwdns14442:0crwdne14442:0"
+        pay: crwdns14444:0crwdne14444:0
       download:
-        gift_card: "crwdns12804:0crwdne12804:0"
+        gift_card: "crwdns14446:0crwdne14446:0"
         gift_card_x_climate_neutral_months:
-          one: crwdns12806:1crwdne12806:1
-          other: "crwdns12806:5%{count}crwdne12806:5"
-        about_go_climate_neutral: crwdns12808:0crwdne12808:0
-        calculation_based_on_html: "crwdns12810:0crwdne12810:0"
-        do_you_want_to_continue: crwdns12812:0crwdne12812:0
-        register: crwdns12814:0crwdne12814:0
+          one: crwdns14448:1crwdne14448:1
+          other: "crwdns14448:5%{count}crwdne14448:5"
+        about_go_climate_neutral: crwdns14450:0crwdne14450:0
+        calculation_based_on_html: "crwdns14452:0crwdne14452:0"
+        do_you_want_to_continue: crwdns14454:0crwdne14454:0
+        register: crwdns14456:0crwdne14456:0
       example:
-        message_html: "crwdns12816:0crwdne12816:0"
-        example: "crwdns12818:0crwdne12818:0"
+        message_html: "crwdns14458:0crwdne14458:0"
+        example: "crwdns14460:0crwdne14460:0"
       thank_you:
-        download_the_gift_card_here: crwdns12820:0crwdne12820:0
-        download_receipt_here: crwdns12822:0crwdne12822:0
+        download_the_gift_card_here: crwdns14462:0crwdne14462:0
+        download_receipt_here: crwdns14464:0crwdne14464:0

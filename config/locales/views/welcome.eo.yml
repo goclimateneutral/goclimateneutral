@@ -3,66 +3,69 @@ eo:
     welcome:
       index:
         hero:
-          heading: crwdns13108:0crwdne13108:0
-          body_text: crwdns13110:0crwdne13110:0
+          heading: crwdns14680:0crwdne14680:0
+          body_text: crwdns14682:0crwdne14682:0
         how_it_works:
           bullets:
-            bullet_1_heading: crwdns13112:0crwdne13112:0
-            bullet_1_text: crwdns13114:0crwdne13114:0
-            bullet_2_heading: crwdns13116:0crwdne13116:0
-            bullet_2_text: crwdns13118:0crwdne13118:0
-            bullet_3_heading: crwdns13120:0crwdne13120:0
-            bullet_3_text: crwdns13122:0crwdne13122:0
+            bullet_1_heading: crwdns14684:0crwdne14684:0
+            bullet_1_text: crwdns14686:0crwdne14686:0
+            bullet_2_heading: crwdns14688:0crwdne14688:0
+            bullet_2_text: crwdns14690:0crwdne14690:0
+            bullet_3_heading: crwdns14692:0crwdne14692:0
+            bullet_3_text: crwdns14694:0crwdne14694:0
         about_us:
-          heading: crwdns13124:0crwdne13124:0
-          body_text: crwdns13126:0crwdne13126:0
-          read_more: crwdns13128:0crwdne13128:0
+          heading: crwdns14696:0crwdne14696:0
+          body_text: crwdns14698:0crwdne14698:0
+          read_more: crwdns14700:0crwdne14700:0
         projects:
-          heading: crwdns13130:0crwdne13130:0
-          body_text_1: crwdns13132:0crwdne13132:0
-          body_text_2: crwdns13134:0crwdne13134:0
-          body_text_3: crwdns13136:0crwdne13136:0
-          read_more: crwdns13140:0crwdne13140:0
+          heading: crwdns14702:0crwdne14702:0
+          body_text_1: crwdns14704:0crwdne14704:0
+          body_text_2: crwdns14706:0crwdne14706:0
+          body_text_3: crwdns14708:0crwdne14708:0
+          read_more: crwdns14710:0crwdne14710:0
         transparency:
-          heading: crwdns13142:0crwdne13142:0
-          body_text: crwdns13144:0crwdne13144:0
-          read_more: crwdns13146:0crwdne13146:0
+          heading: crwdns14712:0crwdne14712:0
+          body_text: crwdns14714:0crwdne14714:0
+          read_more: crwdns14716:0crwdne14716:0
         climate_tips:
-          heading: crwdns13148:0crwdne13148:0
-          clothes_last_longer: crwdns13150:0crwdne13150:0
-          reduce_carbon_footprint_food: crwdns13152:0crwdne13152:0
-          civil_disobedience: crwdns13154:0crwdne13154:0
-          climate_friendly_housing_cooperative: crwdns13156:0crwdne13156:0
-          climate_friendly_pension_saving: crwdns13158:0crwdne13158:0
-          read_more: crwdns13160:0crwdne13160:0
+          heading: crwdns14718:0crwdne14718:0
+          clothes_last_longer: crwdns14720:0crwdne14720:0
+          reduce_carbon_footprint_food: crwdns14722:0crwdne14722:0
+          civil_disobedience: crwdns14724:0crwdne14724:0
+          climate_friendly_housing_cooperative: crwdns14726:0crwdne14726:0
+          climate_friendly_pension_saving: crwdns14728:0crwdne14728:0
+          read_more: crwdns14730:0crwdne14730:0
         community:
-          heading: crwdns13162:0crwdne13162:0
+          heading: crwdns14732:0crwdne14732:0
           people:
             annelie:
-              title: crwdns13164:0crwdne13164:0
-              quote: crwdns13166:0crwdne13166:0
+              title: crwdns14734:0crwdne14734:0
+              quote: crwdns14736:0crwdne14736:0
+            lydia:
+              title: crwdns14738:0crwdne14738:0
+              quote: crwdns14740:0crwdne14740:0
             mattias:
-              title: crwdns13168:0crwdne13168:0
-              quote: crwdns13170:0crwdne13170:0
+              title: crwdns14742:0crwdne14742:0
+              quote: crwdns14744:0crwdne14744:0
             shelbi:
-              title: crwdns13172:0crwdne13172:0
-              quote: crwdns13174:0crwdne13174:0
-        i_live_in: crwdns13178:0crwdne13178:0
-        get_started: crwdns13180:0crwdne13180:0
+              title: crwdns14746:0crwdne14746:0
+              quote: crwdns14748:0crwdne14748:0
+        i_live_in: crwdns14750:0crwdne14750:0
+        get_started: crwdns14752:0crwdne14752:0
       travel_calculator:
-        travel_emissions_calculator: crwdns13188:0crwdne13188:0
-        travel_emissions_calculator_description: crwdns13190:0crwdne13190:0
-        distance_in_kilometers: crwdns13192:0crwdne13192:0
-        calculate: crwdns13194:0crwdne13194:0
-        emissions_if_traveling_by: crwdns13196:0crwdne13196:0
-        flight: crwdns13198:0crwdne13198:0
-        car_petrol: crwdns13200:0crwdne13200:0
-        car_diesel: crwdns13202:0crwdne13202:0
-        car_etanol: crwdns13204:0crwdne13204:0
-        car_gas: crwdns13206:0crwdne13206:0
-        car_electric: crwdns13208:0crwdne13208:0
-        bus: crwdns13210:0crwdne13210:0
-        train: crwdns13212:0crwdne13212:0
-        subway: crwdns13214:0crwdne13214:0
-        boat: crwdns13216:0crwdne13216:0
-        offset_the_emissions_here: 'crwdns13218:0crwdne13218:0'
+        travel_emissions_calculator: crwdns14754:0crwdne14754:0
+        travel_emissions_calculator_description: crwdns14756:0crwdne14756:0
+        distance_in_kilometers: crwdns14758:0crwdne14758:0
+        calculate: crwdns14760:0crwdne14760:0
+        emissions_if_traveling_by: crwdns14762:0crwdne14762:0
+        flight: crwdns14764:0crwdne14764:0
+        car_petrol: crwdns14766:0crwdne14766:0
+        car_diesel: crwdns14768:0crwdne14768:0
+        car_etanol: crwdns14770:0crwdne14770:0
+        car_gas: crwdns14772:0crwdne14772:0
+        car_electric: crwdns14774:0crwdne14774:0
+        bus: crwdns14776:0crwdne14776:0
+        train: crwdns14778:0crwdne14778:0
+        subway: crwdns14780:0crwdne14780:0
+        boat: crwdns14782:0crwdne14782:0
+        offset_the_emissions_here: 'crwdns14784:0crwdne14784:0'
