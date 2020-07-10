@@ -21,9 +21,6 @@ sv:
           make_a_difference: Gör skillnad
           explore: Utforska
           about: Om
-      tonnes_co2e:
-        one: ton koldioxid
-        other: ton koldioxid
       more_info:
         about:
           title: Om oss
