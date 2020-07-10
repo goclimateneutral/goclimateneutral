@@ -11,9 +11,6 @@ de:
   i_want_to_know_more: Mehr erfahren!
   contact_us: Kontakt
   100_percent_transparency: 100% Transparenz
-  100_percent_transparency_intro: Wir glauben, dass Transparenz extrem wichtig ist, wenn man die Welt retten will, damit Sie sich sicher sein können, dass Ihr Geld so viel wie möglich dazu beiträgt, den Klimawandel zu stoppen. Auf dieser Seite finden Sie Informationen über alle Projekte, in die wir investieren, sowie über alle relevanten finanziellen Fragen.
-  100_percent_transparency_climate_projects: 100% Transparenz - Klimainvestitionen
-  for_more_information_about_climate_projects: Weitere Informationen zu unseren Klimainvestitionen finden Sie hier
   100_percent_transparency_financial_info: 100% Transparenz - Finanzielle Informationen
   100_percent_transparency_financial_info_intro: GoClimateNeutral Sweden AB (Registriernummer 559130-6583) wurde 2017 mit dem Fokus auf soziales Unternehmertum und das alleinige Ziel gegründet, den Klimawandel so schnell wie möglich zu verlangsamen. Wir haben ein verlängertes Geschäftsjahr und unser erster Jahresbericht wird den Zeitraum Mai 2017 bis Dezember 2018 umfassen. Der Jahresbericht wird hier veröffentlicht.
   fiscal_years: Geschäftsjahr
@@ -43,8 +40,6 @@ de:
   about_us_how_do_we_stop_climate_change_text: Um den Klimawandel stoppen zu können, müssen wir alle ab jetzt ein Klimaneutrales Leben führen. Die beste Möglichkeit ist, unseren ökologischen Fußabdruck zu minimieren und gleichzeitig die Dinge, die wir nicht vermeiden können, auszugleichen. Die GoClimate Webseite entstand 2017 mit dem Ziel, genau das zu schaffen - die negativen Auswirkungen auf unser Klima zu verringern und auszugleichen.
   about_us_how_do_we_stop_climate_change_text_2: Wir glauben, dass man die Auswirkungen auf das Klima am besten kompensieren kann, indem man es möglichst einfach macht, die Auswirkungen eines bestimmten Lebensstils auszugleichen. Wir glauben fest daran, dass wir den Klimawandel stoppen können - wenn wir es gemeinsam tun und jetzt damit anfangen.
   about_us_who_are_we: Wer sind wir?
-  about_us_who_are_we_stefan_html: Agiler Team- und Organisationscoach. Etwas zu idealistischer Pragmatiker.
-  about_us_who_are_we_alexandra_html: Umweltwissenschaftler mit langjähriger internationaler Erfahrung. Angetrieben von Neugierde und dem Willen, die Welt zu retten - einen Schritt nach dem anderen. Sie tanzen und laufen durch den Wald, um neue Energie zu tanken.
   blog: Blog
   we_are_100_transparent: Wir sind zu 100% transparent
   section_3_text: Wir bieten eine 100 %ige Transparenz, in welche UN- und Gold Standard-zertifizierte Projekte wir investieren und warum. Außerdem bieten wir 100 %ige Transparenz was die Menge an Emissionen angeht, die wir in Ihrem Namen und insgesamt ausgleichen.
@@ -58,7 +53,6 @@ de:
   your_payment_details_have_been_updated: Ihre Einstellungen wurden aktualisiert
   no_card_registered: Keine Karte registriert
   climate_plan: Klimaplan
-  go_climate_neutral: Anmelden!
   log_in_to_see_how_we_are_doing: Der Klimawandel ist die größte Herausforderung unserer Zeit. Loggen Sie sich ein, um zu erfahren, wie weit wir im Kampf gegen den Klimawandel schon gekommen sind.
   you_have_lived_climate_neutral_for:
     one: Sie sind seit 1 Monat klimaneutral.
@@ -72,15 +66,8 @@ de:
   climate_change_is_best_faced_together: Sie sind großartig! Da man den Klimawandel am besten gemeinsam bekämpfen kann, würden wir uns freuen, wenn Sie Anderen von GoClimate erzählen, damit auch sie ein klimaneutrales Leben führen können!
   share_on_facebook: Auf Facebook teilen
   share_on_twitter: Auf Twitter teilen
-  we_have_accomplished_alot_together: Gemeinsam haben wir viel geschafft!
-  amount_of_carbon_we_have_offset: Tonnen an CO2, die wir zusammen ausgeglichen haben
-  amount_of_carbon_i_have_offset: Tonnen an CO2, die Sie bisher ausgeglichen haben
   good_job: Gut gemacht!
-  number_of_months_you_have_been_climate_neutral: Anzahl Ihrer klimaneutralen Monate
-  number_of_climate_neutral_users_right_now: Aktuelle Anzahl klimaneutraler Nutzer
   our_projects: Unsere Klimainvestitionen
-  our_investments_in_climate_projects: Unsere Investitionen in Klimaprojekte
-  i_want_to_contribute: Ok, ich bin dabei!
   project_name: Projekt
   map: Karte
   more_info_on_blog: Weitere Informationen
@@ -93,26 +80,17 @@ de:
     one: Klimaneutraler Monat
     other: Klimaneutrale Monate
   climate_country_toplist: Topliste Klimaländer
-  total_carbon_offset_by_us: Gesamte gemeinsame Klimakompensation
-  read_more_about_investments_on_our_blog: 'Erfahren Sie in unserem Blog mehr über die Projekte, in die wir investieren >>'
   tonnes_CO2: Tonnen CO2
   tonnes: Tonnen
   type: Dauer
   price: Preis
-  thank_you_so_much_everyone_for_helping_to_save_the_world: Vielen Dank an alle, die helfen, die Welt zu retten! Sie sind großartig!
-  latest_carbon_offset_projects: Die jüngsten Klimaprojekte
   country: Land
-  location: Ort
-  more_info_on_our_blog: Weitere Infos in unserem Blog
   edit_settings: Einstellungen anpassen
   payment_settings: Zahlungseinstellungen
   user_name: Nutzername
   confirm_password: Passwort bestätigen
   update: Aktualisieren
-  what_is_goclimateneutral: Was ist GoClimate?
   this_is_how_it_works: So funktioniert's
-  1_describe_your_lifestyle: 1. Lifestyle beschreiben
-  2_sign_up: 2. Anmelden
   forgot_your_password: Passwort vergessen?
   enter_your_email_below_and_we_will_send_you: Geben Sie Ihre E-Mail Adresse ein und wir senden Ihnen eine Info-Mail.
   send_me_an_email_with_instructions: Anleitung zum Zurücksetzen des Passworts zusenden!
@@ -142,28 +120,18 @@ de:
   learn_more_about_what_we_have_achieved_here: 'Erfahren Sie hier mehr darüber, was wir bereits geschafft haben >>'
   thank_you: Vielen Dank!
   the_best_way_to_help_is_to_get_as_many_people_climate_neutral_as_possible: 'Bitte erzählen Sie Ihren Freunden davon. Je mehr Menschen klimaneutral leben, umso größer ist die Chance, dass wir erfolgreich den Klimawandel verlangsamen können!'
-  im_in: Ich bin dabei!
   faq: FAQ
   for_business: Für Unternehmen
   thats_amazing_from_the_bottom_of_our_hearts: Das ist großartig! Von ganzem Herzen
   navigation:
     gift_cards: Gutscheine
   welcome:
-    caption_line_1: Gemeinsam können wir unser Klima retten.
-    caption_line_2: Kompensieren Sie Ihre Emissionen noch heute!
-    what_is_gcn_text: Wir investieren in UN-zertifizierte Klimaprojekte und zeigen Ihnen, wie Sie ganz einfach Ihre Klimabilanz verbessern können. Auf diese Weise tragen wir dazu bei, den Klimawandel zu verlangsamen und den Planeten zu retten.
-    statistics_header: Jeder Einzelne macht einen Unterschied!
     users_prefix: Aktuell sind wir
     users_suffix: klimaneutrale Nutzer
     tonnes_prefix: Gemeinsam haben wir
     tonnes_suffix: Tonnen CO2 in der Atmosphäre reduziert
-    call_to_actions:
-      im_ready_to_sign_up: Ich möchte mich anmelden!
     how_it_works:
-      describe_your_lifestyle_text: Nutzen Sie unseren Klimarechner, um Ihre ungefähre Klimabilanz zu errechnen.
       sign_up_text: Melden Sie sich an, um jeden Monat Ihre Emissionen auszugleichen.
-      save_our_planet_header: 3. Die Erde retten
-      save_our_planet_text: Seien Sie Teil unserer Community, in der wir nicht länger den Klimawandel fördern.
     business:
       for_companies: Klimakompensation für Ihr Unternehmen
       for_companies_text_html: Möchten Sie die Emissionen eines Fluges oder für alle Ihre Mitarbeiter kompensieren? Wir helfen Ihnen gerne weiter!
