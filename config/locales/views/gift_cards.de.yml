@@ -4,19 +4,16 @@ de:
       index:
         header: Ihr nächstes Geschenk könnte ein klimaneutrales Leben sein
         intro: Suchen Sie nach einem Geschenk für jemanden, der bereits alles hat? Möchten Sie uns helfen, etwas gegen den Klimawandel zu tun? Versuchen Sie es mit unseren Geschenkgutscheinen!
-        choose_header: Wählen Sie Ihren Gutschein
-        1_months_header: 1 Monat
-        1_months_description: 1 Monat Klimaneutralität.
-        1_months_cta: Kaufen Sie einen 1-Monats-Gutschein
-        3_months_header: 3 Monate
-        3_months_description: 3 Monate Klimaneutralität.
-        3_months_cta: Kaufen Sie einen 3-Monats-Gutschein
-        6_months_header: 6 Monate
-        6_months_description: Ein halbes Jahr Klimaneutralität.
-        6_months_cta: Kaufen Sie einen 6-Monats-Gutschein
-        12_months_header: 12 Monate
-        12_months_description: Ein ganzes Jahr Klimaneutralität.
-        12_months_cta: Kaufen Sie einen 12-Monats-Gutschein
+        description:
+          1: 1 month of climate neutrality.
+          3: 3 months of climate neutrality.
+          6: Half a year of climate neutrality.
+          12: One full year of climate neutrality.
+        cta:
+          1: Choose 1 month
+          3: Choose 3 months
+          6: Choose 6 months
+          12: Choose 12 months
         details_html: "Die Gutscheine basieren auf den durchschnittlichen Emissionen der schwedischen Bevölkerung (11 Tonnen CO <sub>2</sub> -Äq)."
       new:
         intro: Kaufen und personalisieren Sie Ihren Gutschein
@@ -38,7 +35,3 @@ de:
       example:
         message_html: "Hallo Mama,\nfühlt es sich nicht gut an, dem Klima zu helfen?\nGenieße dieses Geschenk! / Lisa"
         example: "Beispiel"
-      thank_you:
-        you_have_purchased_a_gift_card_with_x_climate_neutral_months:
-          one: Sie haben einen Gutschein gekauft für 1 klimaneutral Monat
-          other: "Sie haben einen Gutschein gekauft für %{count} klimaneutrale Monate"
