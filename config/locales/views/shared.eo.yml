@@ -21,9 +21,6 @@ eo:
           make_a_difference: crwdns13100:0crwdne13100:0
           explore: crwdns13102:0crwdne13102:0
           about: crwdns13104:0crwdne13104:0
-      tonnes_co2e:
-        one: crwdns13106:1crwdne13106:1
-        other: crwdns13106:5crwdne13106:5
       more_info:
         about:
           title: crwdns13294:0crwdne13294:0
