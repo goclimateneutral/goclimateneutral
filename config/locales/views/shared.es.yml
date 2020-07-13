@@ -1,7 +1,19 @@
 es:
   views:
     shared:
+      header:
+        navigation:
+          flights: Vuelos
+          offset_flight: Compensar para emisiones de vuelo
+        sign_up: Regístrate
       prefooter:
         heading: '¡Detengamos el cambio climático juntos!'
         body_text: Suscríbete para compensar tu huella de carbono.
         button: Empezar
+      footer:
+        short_intro: GoClimate es una empresa social con el único propósito de facilitar el comienzo de una vida sin impacto climático.
+        jobs: 'Trabaja Con Nosotros'
+        headers:
+          make_a_difference: Involúcrate
+          explore: Explorar
+          about: Acerca de
