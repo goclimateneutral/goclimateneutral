@@ -13,7 +13,14 @@ es:
   100_percent_transparency: 100% transparencia
   climate_projects: Proyectos del clima
   employees: Empleados
+  about_us: Sobre nosotros
+  blog: Blog
+  our_projects: Nuestros proyectos climáticos
   this_is_how_it_works: Así funciona
+  faq: Preguntas Frecuentes
+  for_business: Para empresas
+  navigation:
+    gift_cards: Tarjetas de regalo
   welcome:
     users_prefix: Actualmente somos
     users_suffix: miembros de la comunidad
