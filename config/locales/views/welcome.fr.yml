@@ -1,1 +1,6 @@
 fr:
+  views:
+    welcome:
+      index:
+        hero:
+          heading: L'abonnement pour compenser votre empreinte carbone
