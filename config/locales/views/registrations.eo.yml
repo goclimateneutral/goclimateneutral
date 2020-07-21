@@ -2,7 +2,8 @@ eo:
   views:
     registrations:
       well_done: crwdns13030:0crwdne13030:0
-      your_yearly_climate_footprint: crwdns13032:0crwdne13032:0
+      result: crwdns13244:0crwdne13244:0
+      your_yearly_climate_footprint: crwdns14854:0crwdne14854:0
       corresponds_to: crwdns13034:0%{price}crwdne13034:0
       you: crwdns13036:0crwdne13036:0
       average_in: crwdns13040:0%{region}crwdne13040:0
@@ -13,8 +14,14 @@ eo:
       your_climate_footprint: crwdns13050:0%{footprint}crwdnd13050:0%{relative}crwdnd13050:0%{country}crwdne13050:0
       your_climate_footprint_compared_world: crwdns13052:0%{footprint}crwdnd13052:0%{relative}crwdne13052:0
       subscribe_heading: crwdns13054:0crwdne13054:0
+      step: crwdns13246:0crwdne13246:0
+      adjust_subscription: crwdns13248:0crwdne13248:0
+      create_account: crwdns13250:0crwdne13250:0
       your_subscription: crwdns13058:0crwdne13058:0
       number_of_people: crwdns13060:0crwdne13060:0
+      continue_to_payment: crwdns13252:0crwdne13252:0
+      start_subscription: crwdns13254:0crwdne13254:0
+      back: crwdns13256:0crwdne13256:0
       where_does_the_money_go:
         heading: crwdns13066:0crwdne13066:0
         point_1: crwdns13068:0crwdne13068:0
