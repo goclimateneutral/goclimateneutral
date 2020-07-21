@@ -2,8 +2,6 @@ sv:
   views:
     registrations:
       well_done: Toppen! Nu har du tagit första steget!
-      result: Resultat
-      your_yearly_climate_footprint: Ditt årliga klimatavtryck är
       corresponds_to: Det motsvarar %{price}/månad.
       you: Du
       average_in: Medel i %{region}
@@ -14,14 +12,8 @@ sv:
       your_climate_footprint: Ditt klimatavtryck på %{footprint} är %{relative} än genomsnittet i %{country}. För att ligga i linje med Parisavtalets 1,5 gradersmål måste vi globalt ha ett genomsnitt på 2,5 ton per person till år 2030. Genom att klimatkompensera dina utsläpp kan du nå noll redan idag.
       your_climate_footprint_compared_world: Ditt klimatavtryck på %{footprint} är %{relative} än genomsnittet i världen. För att ligga i linje med Parisavtalets 1,5 gradersmål måste vi globalt ha ett genomsnitt på 2,5 ton per person till år 2030. Genom att klimatkompensera dina utsläpp kan du nå noll redan idag.
       subscribe_heading: Prenumerera på ett klimatneutralt liv
-      step: Steg
-      adjust_subscription: Anpassa din prenumeration
-      create_account: Skapa konto
       your_subscription: Din prenumeration
       number_of_people: Antal personer
-      continue_to_payment: Fortsätt till betalning
-      start_subscription: Starta prenumeration
-      back: Tillbaka
       where_does_the_money_go:
         heading: Var går pengarna?
         point_1: Våra klimatprojekt ökar takten i den globala omställningen till förnyelsebara energikällor.
