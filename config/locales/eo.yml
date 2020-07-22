@@ -68,14 +68,14 @@ eo:
   about_us_how_do_we_stop_climate_change_text_2: crwdns11852:0crwdne11852:0
   about_us_who_are_we: crwdns11854:0crwdne11854:0
   about_us_team:
-    heading: crwdns11854:0crwdne11854:0
-    kalle_html: "crwdns11856:0crwdne11856:0"
-    cissi_html: "crwdns11858:0crwdne11858:0"
-    henrik_html: 'crwdns11860:0crwdne11860:0'
-    stefan_html: crwdns11862:0crwdne11862:0
-    alexandra_html: crwdns11864:0crwdne11864:0
-    tove_html: crwdns11868:0crwdne11868:0
-    emma_html: crwdns11870:0crwdne11870:0
+    heading: crwdns13360:0crwdne13360:0
+    kalle_html: "crwdns13362:0crwdne13362:0"
+    cissi_html: crwdns13364:0crwdne13364:0
+    henrik_html: 'crwdns13366:0crwdne13366:0'
+    stefan_html: crwdns13368:0crwdne13368:0
+    alexandra_html: crwdns13370:0crwdne13370:0
+    tove_html: crwdns13372:0crwdne13372:0
+    emma_html: crwdns13374:0crwdne13374:0
   blog: crwdns11872:0crwdne11872:0
   we_are_100_transparent: crwdns11874:0crwdne11874:0
   section_3_text: crwdns11876:0crwdne11876:0
@@ -102,6 +102,11 @@ eo:
   climate_change_is_best_faced_together: crwdns11908:0crwdne11908:0
   share_on_facebook: crwdns11910:0crwdne11910:0
   share_on_twitter: crwdns11912:0crwdne11912:0
+  dashboard:
+    heading: crwdns13348:0crwdne13348:0
+    your_months: crwdns13350:0crwdne13350:0
+    your_offsets: crwdns13352:0crwdne13352:0
+    together: crwdns13354:0%{number_of_members}crwdnd13354:0%{number_of_tonnes}crwdne13354:0
   good_job: crwdns11920:0crwdne11920:0
   our_projects: crwdns11926:0crwdne11926:0
   project_name: crwdns11932:0crwdne11932:0
@@ -112,8 +117,8 @@ eo:
   date_of_our_investment: crwdns11942:0crwdne11942:0
   read_more: crwdns11944:0crwdne11944:0
   cimate_hero_toplist: crwdns11946:0crwdne11946:0
-  show_full_toplist: crwdns11948:0crwdne11948:0
-  hide_full_toplist: crwdns11950:0crwdne11950:0
+  show_full_toplist: crwdns13356:0crwdne13356:0
+  hide_full_toplist: crwdns13358:0crwdne13358:0
   climate_neutral_months:
     one: crwdns11952:1crwdne11952:1
     other: crwdns11952:5crwdne11952:5
@@ -204,7 +209,7 @@ eo:
           answer: crwdns13226:0crwdne13226:0
         q5:
           question: crwdns12104:0crwdne12104:0
-          answer: crwdns12106:0crwdne12106:0
+          answer: crwdns14856:0crwdne14856:0
         q6:
           question: crwdns12108:0crwdne12108:0
           answer: crwdns13228:0crwdne13228:0
@@ -239,7 +244,7 @@ eo:
           question: crwdns12146:0crwdne12146:0
           answer: crwdns12148:0crwdne12148:0
     our_service:
-      heading: crwdns12150:0crwdne12150:0
+      heading: crwdns14858:0crwdne14858:0
       questions:
         q1:
           question: crwdns12152:0crwdne12152:0
@@ -259,6 +264,9 @@ eo:
         q6:
           question: crwdns12172:0crwdne12172:0
           answer: crwdns12174:0crwdne12174:0
+        q7:
+          question: crwdns14860:0crwdne14860:0
+          answer: crwdns14862:0crwdne14862:0
     for_businesses:
       heading: crwdns12176:0crwdne12176:0
       questions:
