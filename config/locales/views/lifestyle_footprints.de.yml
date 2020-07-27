@@ -1,1 +1,61 @@
 de:
+  views:
+    lifestyle_footprints:
+      title: Berechnen Sie Ihre CO2-Bilanz
+      questions:
+        region: In welcher Region wohnen Sie?
+        home: Wie wohnen Sie?
+        heating: Wie heizen Sie?
+        green_electricity: Nutzen Sie Ökostrom?
+        food: Wie sieht Ihre Ernährung hauptsächlich aus?
+        car_type: Was für eine Art Auto nutzen Sie?
+        car_distance: Wie häufig nutzen Sie das Auto pro Woche?
+        flight_hours: Wie viele Stunden sind Sie im vergangenen Jahr im Flugzeug gereist?
+      options:
+        region:
+          west: Westen
+          midwest: Mittlerer Westen
+          northeast: Nordosten
+          south: Süden
+          other: Andere
+        home:
+          house: Haus
+          apartment: Wohnung
+          one_or_two_bedrooms: 1-2 Schlafzimmer
+          three_or_four_bedrooms: 3-4 Schlafzimmer
+          five_or_more_bedrooms: 5+ Schlafzimmer
+          fifteen_sqm: 15 m² pro Person
+          twentyfive_sqm: 25 m² pro Person
+          fortytwo_sqm: 42 m² pro Person
+          sixty_sqm: 60 m² pro Person
+          eighty_sqm: 80 m² pro Person
+        heating:
+          electricity: Strom
+          natural_gas: Gas
+          district: Fernwärme
+          coal: Kohle
+          biomass: Biomasse
+          environmental_or_solar: Erneuerbare bzw. Solarenergie
+          airpump: Luftwärmepumpe
+          geothermal: Geothermiepumpe
+          heating_oil: Heizöl
+          propane: Propan
+          dont_know: Ich weiß nicht / Andere
+        green_electricity:
+          'yes': 'Ja'
+          seventyfive_percent: 75% grün
+          fifty_percent: 50% grün
+          twentyfive_percent: 25% grün
+          'no': 'Nein'
+          dont_know: Ich weiß nicht
+        food:
+          vegan: Pflanzenbasiert / vegan
+          vegetarian: Vegetarisch
+          pescetarian: Pescetarisch (Fisch aber kein Fleisch)
+          meat_low: Etwas Fleisch (weniger als 50 g pro Tag)
+          meat_medium: Fleischesser
+          meat_high: Viel Fleisch (mehr als 100 g pro Tag)
+        car_type:
+          gas: Benzin
+          petrol: Benzin
+          diesel: Diesel
