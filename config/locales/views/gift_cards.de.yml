@@ -1,6 +1,7 @@
 de:
   views:
     gift_cards:
+      heading: Gutscheine
       index:
         header: Ihr nächstes Geschenk könnte ein klimaneutrales Leben sein
         intro: Suchen Sie nach einem Geschenk für jemanden, der bereits alles hat? Möchten Sie uns helfen, etwas gegen den Klimawandel zu tun? Versuchen Sie es mit unseren Geschenkgutscheinen!
@@ -10,10 +11,10 @@ de:
           6: Ein halbes Jahr Klimaneutralität.
           12: Ein ganzes Jahr Klimaneutralität.
         cta:
-          1: Choose 1 month
-          3: Choose 3 months
-          6: Choose 6 months
-          12: Choose 12 months
+          1: 1 Monat wählen
+          3: 3 Monate wählen
+          6: 6 Monate wählen
+          12: 12 Monate wählen
         details_html: "Die Gutscheine basieren auf den durchschnittlichen Emissionen der schwedischen Bevölkerung (11 Tonnen CO <sub>2</sub> -Äq)."
       new:
         intro: Kaufen und personalisieren Sie Ihren Gutschein
