@@ -2,8 +2,35 @@ de:
   views:
     shared:
       header:
+        navigation:
+          flights: Flüge
+          offset_flight: Flugemissionen kompensieren
         region_recommendation:
           select_country: Wählen Sie Ihr Land oder Ihre Region aus, damit wir Ihnen die besten Informationen anzeigen können.
           continue_button: "Weiter nach %{region}"
+          dismiss: Änderung der Region verwerfen
+        sign_up: Registrieren
+      prefooter:
+        heading: Lassen Sie uns den Klimawandel gemeinsam aufhalten!
+        body_text: Melden Sie sich an, um Ihre CO2-Bilanz zu neutralisieren.
+        button: Los geht's
       footer:
+        short_intro: GoClimate ist ein soziales Unternehmen mit dem alleinigen Ziel, es leichter zu machen, ein klimaneutrales Leben zu beginnen.
         jobs: 'Jobs'
+        headers:
+          make_a_difference: Jetzt mitmachen
+          explore: Mehr herausfinden
+          about: Über uns
+      more_info:
+        about:
+          title: Über uns
+          description: GoClimate ist ein soziales Unternehmen mit dem alleinigen Ziel, es leichter zu machen, ein klimaneutrales Leben zu beginnen.
+          cta: Hier erfahren Sie mehr über uns
+        projects:
+          title: Unsere Klimaprojekte
+          description: Unsere Projekte folgen einem strengen Bewertungsprozess, werden sorgfältig ausgewählt, um maximale Auswirkungen auf das Klima zu erzielen und zu anderen UN-Nachhaltigkeitszielen beizutragen.
+          cta: Mehr über unsere Projekte
+        transparency:
+          title: 100% Transparenz
+          description: Wir möchten, dass Sie sicher sein können, dass Ihr Geld eine positive Wirkung entfaltet. Sie können jederzeit unsere Ausgaben einsehen und somit nachvollziehen, wo jeder Cent landet.
+          cta: Unsere Zahlen
