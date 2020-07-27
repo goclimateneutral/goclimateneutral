@@ -1,9 +1,20 @@
 de:
   views:
     projects:
+      heading: Unsere Klimaprojekte
+      latest_projects: Unsere neuesten Projekte
+      see_all: Alle Projekte ansehen
       how:
-        1: The purpose of all our projects is to reduce greenhouse gas emissions, for example by contributing to the transition towards renewable energy.
-        2: Each operational year of the projects, the avoided emissions are measured in carbon dioxide equivalents, which we purchase as carbon credits. This means that the impact can't later be undone.
-        3: We always pick the projects that make the most climate impact. This can, for example, be projects in highly fossil-fuel dependent countries where clean renewable energy makes a big difference.
-        4: In addition to the climate impact, the projects contribute to local sustainable development, for example by offering jobs or improving air quality.
-        5: Projects are certified by strict standards, such as the Gold Standard, and are regularly reviewed by independent third parties.
+        heading: Wie unsere Projekte funktionieren
+        1: Der Zweck all unserer Projekte ist es, die Treibhausgasemissionen zu reduzieren, zum Beispiel durch die Förderung erneuerbarer Energien.
+        2: In jedem Betriebsjahr der Projekte werden die vermiedenen Emissionen in Kohlendioxidäquivalenten gemessen, die wir als Carbon Credits, also CO2-Emissionsrechte, erwerben. Das bedeutet, dass die Auswirkungen später nicht rückgängig gemacht werden können.
+        3: Wir wählen immer die Projekte aus, die den größten Einfluss auf das Klima haben. Das können zum Beispiel Projekte in Ländern sein, die stark von fossilen Brennstoffen abhängig sind und in denen saubere erneuerbare Energien einen großen Effekt haben.
+        4: Neben der positiven Wirkung auf das Klima tragen die Projekte zur nachhaltigen Entwicklung vor Ort bei, indem sie beispielsweise Arbeitsplätze bieten oder die Luftqualität verbessern.
+        5: Die Projekte werden nach strengen Standards, wie dem Gold Standard, zertifiziert und regelmäßig von unabhängigen Dritten überprüft.
+        read_more: Erfahren Sie mehr über unsere Projekte
+      index:
+        read_more_link: Weiter lesen
+        map_link: Auf Karte zeigen
+        invoice: Rechnung
+        certificate_link: Zertifikat anzeigen
+        map_header: Hier bewirken wir bereits etwas!
