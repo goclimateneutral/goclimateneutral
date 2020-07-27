@@ -1,1 +1,32 @@
 de:
+  views:
+    registrations:
+      well_done: Großartig! Erster Schritt geschafft!
+      result: Ergebnis
+      your_yearly_climate_footprint: Ihre jährliche CO2-Bilanz beträgt
+      corresponds_to: Das entspricht %{price}/Monat.
+      you: Sie
+      average_in: Durchschnitt in %{region}
+      world_average: Weltweiter Durchschnitt
+      goal_2030: Ziel 2030
+      higher: höher
+      lower: niedriger
+      your_climate_footprint: Ihre CO2-Bilanz von %{footprint} ist %{relative} als der Durchschnitt in %{country}. Um dem 1,5-Grad-Ziel des Pariser Abkommens zu entsprechen, müssen wir bis zum Jahr 2030 weltweit einen Durchschnitt von 2,5 Tonnen pro Person erreichen. Durch die Kompensation Ihrer Emissionen können Sie heute schon die Null erreichen.
+      your_climate_footprint_compared_world: Ihre CO2-Bilanz von %{footprint} ist %{relative} als der weltweite Durchschnitt. Um dem 1,5-Grad-Ziel des Pariser Abkommens zu entsprechen, müssen wir bis zum Jahr 2030 weltweit einen Durchschnitt von 2,5 Tonnen pro Person erreichen. Durch die Kompensation Ihrer Emissionen können Sie heute schon die Null erreichen.
+      subscribe_heading: Abonnieren Sie jetzt ein klimaneutrales Leben
+      step: Schritt
+      adjust_subscription: Passen Sie Ihr Abo an
+      create_account: Konto erstellen
+      your_subscription: Ihr Abonnement
+      number_of_people: Anzahl Personen
+      continue_to_payment: Weiter zur Bezahlung
+      start_subscription: Abo starten
+      back: Zurück
+      where_does_the_money_go:
+        heading: Wohin fließt das Geld?
+        point_1: Unsere Klimaschutzprojekte beschleunigen den globalen Übergang zu erneuerbaren Energiequellen.
+        point_2: Ihr Beitrag basiert auf der von Ihnen errechneten CO2-Bilanz.
+        point_3: Wir wählen die Projekte aus, die den größten Nutzen für das ausgegebene Geld bringen, und tragen zu möglichst vielen Nachhaltigkeitszielen der UNO bei.
+        point_4: Wir sind 100% transparent mit allen unseren Ausgaben. Die aktuellsten Informationen dazu finden Sie immer hier auf unserer Website.
+      latest_projects: Unsere neuesten Projekte
+      faq: Häufig gestellte Fragen (FAQ)
