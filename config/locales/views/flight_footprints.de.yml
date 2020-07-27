@@ -1,1 +1,14 @@
 de:
+  views:
+    flight_footprints:
+      new:
+        flight_details: Ihre Flugdaten
+        from: Von
+        to: Nach
+        roundtrip: Hin- und Rückflug
+        connections: Anschlüsse
+        connections_return: Anschlüsse beim Rückflug
+        add_connection: Anschluss hinzufügen
+        cabin_class: Kabinenklasse
+        number_of_tickets: Anzahl der Tickets
+        not_a_valid_input: Ungültige Eingabe
