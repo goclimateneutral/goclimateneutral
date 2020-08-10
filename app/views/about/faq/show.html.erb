@@ -9,11 +9,7 @@
         <h2 class="heading my-3"><%= category[:heading] %></h2>
         <ul class="list-bullet space-y-3">
         <% category[:questions].each do |question_key, question| %>
-          <a href="#<%= "#{category_key}-#{question_key}" %>"class="link">
-          <li>
-              <%= question[:question] %>
-            </a>
-          </li>
+          <li><a href="#<%= "#{category_key}-#{question_key}" %>"class="link"><%= question[:question] %></a></li>
         <% end %>
         </ul>
       </div>
@@ -39,7 +35,7 @@
             </label>
 
             <div class="hidden toggler-checked:block">
-              <p class="mt-3"><%= raw question[:answer] %></p>
+              <p class="mt-3"><%= raw question[:answer].gsub('<a', '<a class="link" rel="noopener noreferrer"').html_safe %></p>
             </div>
           </div>
         <% end %>

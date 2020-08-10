@@ -208,7 +208,7 @@ en:
           answer: The situation is urgent. We need to do both. We must definitely reduce our own emissions. Studies show that those who do carbon offsetting are actually the ones who reduce their own emissions the most, and when we surveyed among our users we saw that the majority use carbon offsetting only as part of their climate commitment. Since it is not possible to live completely climate neutral in today's society, carbon offsetting can be used to reach net zero, and in addition help others in the transition to a sustainable society.
         q5: 
           question: What is a climate project?
-          answer: The main purpose of a climate project is to reduce the release of greenhouse gas emissions to the atmosphere. There are different ways of doing this, such as the development of renewable energy, and the capture and destruction of greenhouse gases with strong global warming potential (such as methane). Tree planting and forest management projects can also be climate projects. The project's positive impact on the climate, and the number of carbon dioxide equivalents it generates, are calculated against a scenario where the project is not implemented. Thus, if we do not build renewable energy, how much greenhouse gases would be emitted if the burning of fossil fuels continue? These are the emissions that are avoided through the construction of renewable energy. In addition, the projects often have other positive effects, such as improved air quality and increased employment.
+          answer: The main purpose of a climate project is to reduce the release of greenhouse gas emissions to the atmosphere. There are different ways of doing this, such as the development of renewable energy, and the capture and destruction of greenhouse gases with strong global warming potential (such as methane). Tree planting and forest management projects can also be climate projects. The project's positive impact on the climate, and the number of carbon dioxide equivalents it generates, are calculated against a scenario where the project is not implemented. Thus, if we do not build renewable energy, how much greenhouse gases would be emitted if the burning of fossil fuels continue? These are the emissions that are avoided through the construction of renewable energy. In addition, the projects often have other positive effects, such as improved air quality and increased employment. <a href="https://www.goclimate.com/blog/what-is-a-climate-project/">Read more on our blog</a>
         q6:
           question: Who makes sure that the projects are serious and well executed?
           answer: Climate projects are certified by various organizations. They register projects that make climate benefit and measure how much benefit they actually do, so that they can sell exactly the right amount of credits. GoClimate purchases climate credits that are certified by <a href="https://www.goldstandard.org/" target="_blank" rel="noopener">Gold Standard</a>, an organization founded by WWF and other environmental organizations, to ensure the highest possible quality of the climate projects. This also means that the projects are verified by a third-party, all documentation is public and we can track the project while it is being implemented and during its carbon credit period. Fundamental requirements for the projects, such as additionality, verifiability, traceability, permanence and contribution to sustainable development are guaranteed by the Gold Standard.
@@ -243,7 +243,7 @@ en:
           question: Can I apply for a job or internship with you?
           answer: We receive many unsolicited applications and inquiries, but we believe that we have a better chance of investing in the right person if we hire when we experience a need. Keep an eye on our <a href="https://jobs.goclimate.com/">job site</a> or connect with us there to receive an email when a vacancy shows up!
     our_service:
-      heading: About the subscription service
+      heading: About our subscriptions
       questions:
         q1:
           question: How do you calculate my carbon footprint?
@@ -263,6 +263,9 @@ en:
         q6:
           question: Where can I find my receipts?
           answer: You can find your receipts by logging into the page and <a href="https://www.goclimate.com/users/receipts">going to this link</a>.
+        q7:
+          question: Why do you offset the double amount?
+          answer: Because we want to do as much good as possible for the climate! This is such an easy and cost-efficient way to do so, that we wanted to double up on the good stuff. There are also some things that we cannot reasonably fit into the calculator, so by doubling the amount of tonnes we buy for each user, we are completely sure to cover all of your emissions.
     for_businesses:
       heading: For Businesses
       questions:

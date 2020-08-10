@@ -92,7 +92,16 @@
 
     <%= yield %>
 
-    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+      function reportLoadError(event) {
+        Sentry.captureException(
+          new Error("Failed to load " + event.target.src + ", stopping further error reporting")
+        );
+        Sentry.close();
+        Sentry.getCurrentHub().getClient().getOptions().enabled = false; // Prevents further errors reported before closing finishes.
+      }
+    </script>
+    <script src="https://js.stripe.com/v3/" onerror="reportLoadError(event)"></script>
     <script>
       window.locale = "<%= I18n.locale %>"
       window.stripe = Stripe("<%= ENV['PUBLISHABLE_KEY'] %>");
@@ -100,7 +109,7 @@
     <% if (javascripts = yield :javascripts).present? %>
       <%= javascripts %>
     <% else %>
-      <%= webpack_entrypoint_javascript_tags 'main', onerror: 'throw "Loading Javascript " + this.src + " failed"' %>
+      <%= webpack_entrypoint_javascript_tags 'main', onerror: 'reportLoadError(event)' %>
     <% end %>
     <%= yield :javascript_tags %>
   </body>

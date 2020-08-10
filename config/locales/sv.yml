@@ -243,6 +243,7 @@ sv:
           question: Kan jag söka jobb/praktik hos er?
           answer: Vi får in många spontanansökningar och förfrågningar, men vi tror att vi har större chans att satsa på rätt person om vi anställer när vi upplever ett behov. Håll utkik på vår <a href="https://jobs.goclimate.com/">jobbsida</a> eller connecta med oss där för att få ett mail när en ledig tjänst dyker upp!
     our_service:
+      heading: Om våra prenumerationer
       questions:
         q1:
           question: Hur beräknar ni mitt avtryck?
@@ -262,6 +263,9 @@ sv:
         q6:
           question: Var hittar jag mina kvitton?
           answer: Du kan hitta dina kvitton genom att logga in på sidan och <a href="https://www.goclimate.com/users/receipts">gå till den här länken</a>.
+        q7:
+          question: Varför kompenserar ni dubbelt upp?
+          answer: För att vi vill göra så mycket klimatnytta som möjligt! Detta är ett så enkelt och kostnadseffektivt sätt att göra skillnad, så vi ville ha mer av det goda. Det finns också element som vi inte kan täcka med kalkylatorn, så genom att dubbla mängden ton som vi kompenserar för användaren så är vi helt säkra på att vi täcker alla utsläpp.
     for_businesses:
       heading: För företag
       questions:

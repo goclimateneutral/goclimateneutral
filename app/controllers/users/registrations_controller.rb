@@ -28,7 +28,7 @@ module Users
     #
     # Rubocop warnings disabled because the "but no simpler" part of that
     # Einstein quote "As simple as possible, but no simpler".
-    def create # rubocop:disable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
+    def create # rubocop:disable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity, Metrics/MethodLength
       render_user_invalid_json && return unless @user.save
 
       sign_in(resource_name, @user, force: true) # Force because we have updated the password
@@ -48,6 +48,12 @@ module Users
         WelcomeMailer.with(email: @user.email).welcome_email.deliver_now
         render_success_json
       end
+    rescue StandardError => e
+      # Respond explicitly so cookies gets set in responses where a user record
+      # has been created that we want to reuse.
+      logger.error(e)
+      Raven.capture_exception(e)
+      head :internal_server_error
     end
 
     # PUT /resource
@@ -85,9 +91,8 @@ module Users
     private
 
     def set_footprint_and_price
-      unless params[:lifestyle_footprint].present? &&
-             (@footprint = LifestyleFootprint.find_by_key!(params[:lifestyle_footprint])).present? &&
-             @footprint.user_id.nil?
+      unless (@footprint = LifestyleFootprint.find_by_key!(params[:lifestyle_footprint])).present? &&
+             (@footprint.user_id.nil? || current_user.present? && @footprint.user_id == current_user.id)
         redirect_to root_url
         return
       end

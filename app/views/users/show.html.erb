@@ -11,7 +11,7 @@
   <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
 <% end %>
 <% content_for :javascripts do %>
-  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'throw "Loading Javascript " + this.src + " failed"' %>
+  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'reportLoadError(event)' %>
 <% end %>
 
 <div class="site-wrapper-first">

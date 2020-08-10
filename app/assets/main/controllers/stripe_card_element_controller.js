@@ -58,8 +58,11 @@ StripeCardElementController.targets = ['container', 'paymentMethodField', 'error
 StripeCardElementController.elementStyle = {
   base: {
     fontSize: '16px',
-    color: '#777',
-    lineHeight: '22px',
+    color: '#1C4637',
+    lineHeight: '24px',
     fontWeight: 300
+  },
+  invalid: {
+    color: '#994323'
   }
 };

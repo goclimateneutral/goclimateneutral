@@ -29,7 +29,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_region
-    Region.from_slug(params[:region])
+    Region.from_slug(request.path_parameters[:region])
   end
 
   def canonical_url

@@ -10,15 +10,16 @@
 <% end %>
 
 <script
-  src="https://browser.sentry-cdn.com/5.16.1/bundle.min.js"
-  integrity="sha384-XeIbINcUQP10HtmVHwZigannjNDpoQRe+uhAoW9J5HU5dHFpilP164LjqO78xtIB"
+  src="https://browser.sentry-cdn.com/5.19.2/bundle.min.js"
+  integrity="sha384-JpEWxJ7oLRn+baXBgcCKEv73uYWsgouzEResgJneOXvTjDZ+1crAXcNAKZoiL96Z"
   crossorigin="anonymous"></script>
 <% if ENV["SENTRY_DSN"].present? %>
   <script>
     Sentry.init({
       dsn: "<%= ENV["SENTRY_DSN"] %>",
       environment: "<%= Raven.configuration.current_environment %>",
-      release: "<%= Raven.configuration.release %>"
+      release: "<%= Raven.configuration.release %>",
+      allowUrls: ["<%= request.protocol + request.host_with_port %>"]
     });
   </script>
 <% end %>
