@@ -39,13 +39,13 @@ RSpec.feature 'Registrations', type: :feature, js: true do
     # Go to payment settings page
     visit '/users/edit'
     find('.registrations-edit', wait: 20)
-    click_link 'Payment Settings'
+    click_link 'Payment settings'
     find('.subscriptions-show', wait: 20)
 
-    expect(page).to have_text 'Payment Settings'
+    expect(page).to have_text 'Payment settings'
 
     # Update card
-    click_link 'edit card'
+    click_link 'Edit card'
     within_frame(0) do
       send_keys_to_card_field '4242424242424242'
       find('input[name=exp-date]').send_keys '522'
@@ -105,13 +105,13 @@ RSpec.feature 'Registrations', type: :feature, js: true do
       # Go to payment settings page
       visit '/users/edit'
       find('.registrations-edit', wait: 20)
-      click_link 'Payment Settings'
+      click_link 'Payment settings'
       find('.subscriptions-show', wait: 20)
 
-      expect(page).to have_text 'Payment Settings'
+      expect(page).to have_text 'Payment settings'
 
       # Update card
-      click_link 'edit card'
+      click_link 'Edit card'
       within_frame(0) do
         send_keys_to_card_field '4242424242424242'
         find('input[name=exp-date]').send_keys '522'
