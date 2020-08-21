@@ -1,5 +1,1 @@
 es:
-  mailers:
-    flight_offset:
-      subject: Tú certificado
-      certificate_is_attached: Tu certificado está adjunto a este correo electrónico. Si tienes alguna pregunta, sólo tienes que pulsar la respuesta en este correo electrónico, ¡estamos encantados de ayudarte! ¡Gracias de nuevo, eres el mejor!
