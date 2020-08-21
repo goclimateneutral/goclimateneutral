@@ -85,7 +85,7 @@ eo:
   our_privacy_policy: crwdns11884:0crwdne11884:0
   credit_or_debit_card: crwdns11886:0crwdne11886:0
   add_new_card: crwdns11888:0crwdne11888:0
-  edit_card: crwdns11890:0crwdne11890:0
+  edit_card: crwdns14866:0crwdne14866:0
   your_payment_details_have_been_updated: crwdns11892:0crwdne11892:0
   no_card_registered: crwdns11894:0crwdne11894:0
   climate_plan: crwdns11896:0crwdne11896:0
@@ -129,7 +129,8 @@ eo:
   price: crwdns11966:0crwdne11966:0
   country: crwdns11972:0crwdne11972:0
   edit_settings: crwdns11978:0crwdne11978:0
-  payment_settings: crwdns11980:0crwdne11980:0
+  account_settings: crwdns14868:0crwdne14868:0
+  payment_settings: crwdns14870:0crwdne14870:0
   user_name: crwdns11982:0crwdne11982:0
   confirm_password: crwdns11984:0crwdne11984:0
   update: crwdns11986:0crwdne11986:0
