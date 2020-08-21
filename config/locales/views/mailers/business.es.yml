@@ -1,0 +1,8 @@
+es:
+  mailers:
+    business:
+      climate_report_email:
+        subject: Comparte tu huella climática con tu equipo
+        thank_you: '¡Gracias por calcular tu huella climática!'
+        link_description: "Para que sea más fácil compartir tus resultados con tu equipo y volver a ellos más tarde, aquí hay un enlace a los resultados:"
+        reply_to_this_email: Si tienes alguna pregunta, responde a este correo electrónico. ¡Estamos encantados de ayudarte!
