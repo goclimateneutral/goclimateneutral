@@ -85,7 +85,6 @@ sv:
   our_privacy_policy: integritetspolicyn
   credit_or_debit_card: Kortuppgifter
   add_new_card: Nytt kort
-  edit_card: ändra kort
   your_payment_details_have_been_updated: Dina inställningar har uppdaterats
   no_card_registered: Inget kort registrerat
   climate_plan: Kompensation
@@ -129,7 +128,6 @@ sv:
   price: Pris
   country: Land
   edit_settings: Ändra inställningar
-  payment_settings: Betalningsinställningar
   user_name: Namn
   confirm_password: Bekräfta lösenord
   update: Uppdatera
