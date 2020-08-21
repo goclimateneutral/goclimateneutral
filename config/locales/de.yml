@@ -56,7 +56,6 @@ de:
   our_privacy_policy: unsere Datenschutzerklärung
   credit_or_debit_card: Kredit- oder Debitkarte
   add_new_card: Neue Karte hinzufügen
-  edit_card: Kartendetails bearbeiten
   your_payment_details_have_been_updated: Ihre Einstellungen wurden aktualisiert
   no_card_registered: Keine Karte registriert
   climate_plan: Klimaplan
@@ -95,7 +94,6 @@ de:
   price: Preis
   country: Land
   edit_settings: Einstellungen anpassen
-  payment_settings: Zahlungseinstellungen
   user_name: Nutzername
   confirm_password: Passwort bestätigen
   update: Aktualisieren
