@@ -1,0 +1,29 @@
+es:
+  views:
+    welcome:
+      index:
+        hero:
+          heading: La suscripción para compensar tu huella de carbono
+          body_text: Calcula tu huella de carbono para comenzar tu suscripción personalizada, todo en menos de 2 minutos
+        how_it_works:
+          bullets:
+            bullet_1_text: Nuestro simple quiz toma sólo un minuto en completar.
+            bullet_2_heading: Regístrate
+            bullet_2_text: Comienza tu suscripción mensual personalizada a tu propia huella.
+            bullet_3_heading: Salva nuestro planeta
+        about_us:
+          read_more: Leer más sobre nosotros
+        projects:
+          heading: '¿Adónde va el dinero?'
+          read_more: Leer sobre nuestros proyectos
+        transparency:
+          heading: 100% transparencia
+          read_more: Lee más acerca de nuestra transparencia
+        climate_tips:
+          heading: Consejos para el clima
+          clothes_last_longer: Haz que la ropa te dure más tiempo
+          reduce_carbon_footprint_food: Cómo reducir tu huella de carbono con alimentos
+          civil_disobedience: '¿Desobediencia civil por el clima?'
+          read_more: Leer más
+        i_live_in: Vivo en...
+        get_started: Empezar
