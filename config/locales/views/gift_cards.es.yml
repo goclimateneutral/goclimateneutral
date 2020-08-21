@@ -1,1 +1,14 @@
 es:
+  views:
+    gift_cards:
+      index:
+        description:
+          1: 1 month of climate neutrality.
+          3: 3 months of climate neutrality.
+          6: Half a year of climate neutrality.
+          12: One full year of climate neutrality.
+        cta:
+          1: Choose 1 month
+          3: Choose 3 months
+          6: Choose 6 months
+          12: Choose 12 months
