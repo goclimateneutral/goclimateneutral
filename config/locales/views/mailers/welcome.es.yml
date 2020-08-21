@@ -1,12 +1,1 @@
 es:
-  mailers:
-    welcome:
-      from: Tove de GoClimate
-      subject: Bienvenido a GoClimate
-      welcome_to_gcn: '¡Hola!'
-      big_thanks: '¡Un gran agradecimiento por unirte a nosotros y contribuir a un mundo más sostenible!'
-      you_now_support: Ahora apoyas proyectos climáticos certificados que también contribuyen a otros tipos de desarrollo sostenible en todo el mundo. ¡Bien hecho!
-      if_you_have_any_questions: Si tienes alguna pregunta o solo quieres decir hola, no dudes en enviarme una línea a tove@goclimate.com!
-      thank_you: '¡Gracias por contribuir a un futuro más sostenible!'
-      best_regards: Un cordial saludo,
-      the_gcn_team: Tove de GoClimate
