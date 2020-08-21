@@ -1,14 +1,20 @@
 eo:
   views:
     gift_cards:
+      heading: crwdns13312:0crwdne13312:0
       index:
         header: crwdns12758:0crwdne12758:0
         intro: crwdns12760:0crwdne12760:0
         description:
-          1: crwdns12766:0crwdne12766:0
-          3: crwdns12772:0crwdne12772:0
-          6: crwdns12778:0crwdne12778:0
-          12: crwdns12784:0crwdne12784:0
+          1: crwdns13376:0crwdne13376:0
+          3: crwdns13378:0crwdne13378:0
+          6: crwdns13380:0crwdne13380:0
+          12: crwdns13382:0crwdne13382:0
+        cta:
+          1: crwdns13384:0crwdne13384:0
+          3: crwdns13386:0crwdne13386:0
+          6: crwdns13388:0crwdne13388:0
+          12: crwdns13390:0crwdne13390:0
         details_html: "crwdns12788:0crwdne12788:0"
       new:
         intro: crwdns12790:0crwdne12790:0
@@ -31,5 +37,5 @@ eo:
         message_html: "crwdns12816:0crwdne12816:0"
         example: "crwdns12818:0crwdne12818:0"
       thank_you:
-        download_the_gift_card_here: crwdns12820:0crwdne12820:0
-        download_receipt_here: crwdns12822:0crwdne12822:0
+        download_the_gift_card_here: crwdns13316:0crwdne13316:0
+        download_receipt_here: crwdns13318:0crwdne13318:0
