@@ -8,6 +8,7 @@ eo:
         region_recommendation:
           select_country: crwdns13084:0crwdne13084:0
           continue_button: "crwdns13086:0%{region}crwdne13086:0"
+          dismiss: crwdns13328:0crwdne13328:0
         sign_up: crwdns13088:0crwdne13088:0
       prefooter:
         heading: crwdns13090:0crwdne13090:0
@@ -20,3 +21,16 @@ eo:
           make_a_difference: crwdns13100:0crwdne13100:0
           explore: crwdns13102:0crwdne13102:0
           about: crwdns13104:0crwdne13104:0
+      more_info:
+        about:
+          title: crwdns13294:0crwdne13294:0
+          description: crwdns13296:0crwdne13296:0
+          cta: crwdns13298:0crwdne13298:0
+        projects:
+          title: crwdns13300:0crwdne13300:0
+          description: crwdns13302:0crwdne13302:0
+          cta: crwdns13304:0crwdne13304:0
+        transparency:
+          title: crwdns13306:0crwdne13306:0
+          description: crwdns13308:0crwdne13308:0
+          cta: crwdns13310:0crwdne13310:0
