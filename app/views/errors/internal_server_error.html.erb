@@ -1,22 +1,12 @@
-<% content_for :stylesheets do %>
-  <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
-<% end %>
-<% content_for :javascripts do %>
-  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'reportLoadError(event)' %>
-<% end %>
+<%= render "shared/header" %>
+  <section class="section-padding text-center">
+    <div class="callout">
+      <h1 class="text-4xl font-bold my-6">An error occurred on our side <i class="fa fa-frown-o" aria-hidden="true"></i></h1>
+      <div class="space-y-3">
+        <p>We're sorry, but an error occured on our side. We have been notified about it and will look into it as soon as possible. Please try again in a few moments.</p>
+        <p>If you have any questions, please don't hesitate to get in touch with us at <%= link_to 'hello@goclimate.com', 'mailto:hello@goclimate.com', class: 'link' %>.</p>
+      </div>
+    </div>
+  </section>
+<%= render "shared/footer" %>
 
-<div class="site-wrapper-first">
-  <%= render "shared/header_old" %>
-  <div class="inner">
-
-    <h1>An error occurred on our side</h1>
-    <p>
-    We're sorry, but an error occured on our side. We have been notified about it and will look into it as soon as possible. Please try again in a few moments.<br>
-    <br>
-    If you have any questions, please don't hesitate to get in touch with us at <%= link_to 'hello@goclimate.com', 'mailto:hello@goclimate.com' %>.
-    </p>
-
-  </div>
-</div>
-
-<%= render "shared/footer_old" %>

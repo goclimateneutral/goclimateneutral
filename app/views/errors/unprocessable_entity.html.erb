@@ -1,22 +1,11 @@
-<% content_for :stylesheets do %>
-  <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
-<% end %>
-<% content_for :javascripts do %>
-  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'reportLoadError(event)' %>
-<% end %>
-
-<div class="site-wrapper-first">
-  <%= render "shared/header_old" %>
-  <div class="inner">
-
-    <h1>There was an error processing your request</h1>
-    <p>
-    We're sorry, but something your computer sent to us was not in the format we expected it to be. Please try again.<br>
-    <br>
-    If you have any questions, please don't hesitate to get in touch with us at <%= link_to 'hello@goclimate.com', 'mailto:hello@goclimate.com' %>.
-    </p>
-
-  </div>
-</div>
-
-<%= render "shared/footer_old" %>
+<%= render "shared/header" %>
+  <section class="section-padding text-center">
+    <div class="callout">
+      <h1 class="text-4xl font-bold my-6">There was an error processing your request <i class="fa fa-frown-o" aria-hidden="true"></i></h1>
+      <div class="space-y-3">
+        <p>We're sorry, but something your browser sent to us was not in the format we expected it to be. Please try again.</p>
+        <p>If you have any questions, please don't hesitate to get in touch with us at <%= link_to 'hello@goclimate.com', 'mailto:hello@goclimate.com', class: 'link' %>.</p>
+      </div>
+    </div>
+  </section>
+<%= render "shared/footer" %>
