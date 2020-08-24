@@ -1,0 +1,10 @@
+en:
+  views:
+    subscriptions:
+      update:
+        heading: Uppdatera prenumeration
+        no_subscription: Ingen prenumeration
+      cancel:
+        heading: Avsluta prenumeration
+        action: Avsluta prenumeration
+        confirm: Är du säker på att du vill avsluta din prenumeration? Du kan återuppta den när du vill.

@@ -1,0 +1,10 @@
+en:
+  views:
+    subscriptions:
+      update:
+        heading: Update subscription
+        no_subscription: No subscription
+      cancel:
+        heading: Terminate subscription
+        action: Terminate subscription
+        confirm: Are you sure you want to terminate your subscription? You can re-subscribe at any time.

@@ -48,7 +48,7 @@ Rails.application.routes.draw do
       registrations: 'users/registrations'
     }
     namespace :users, as: 'user' do
-      resource :subscription, only: [:show, :update]
+      resource :subscription, only: [:show, :update, :destroy]
       resources :receipts, only: [:index, :show], param: :card_charge_id
     end
 

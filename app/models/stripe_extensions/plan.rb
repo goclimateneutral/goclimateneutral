@@ -8,6 +8,8 @@ module StripeExtensions
 
     module ClassMethods
       def retrieve_or_create_climate_offset_plan(monthly_amount)
+        raise ArgumentError, 'Plans must have an amount' if monthly_amount.subunit_amount == 0
+
         retrieve(plan_id(monthly_amount))
       rescue ::Stripe::InvalidRequestError
         create(climate_offset_plan_params(monthly_amount))

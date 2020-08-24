@@ -19,11 +19,6 @@ module Users
     def update
       @manager = SubscriptionManager.new(@stripe_customer)
 
-      if plan_param == 'cancel'
-        @manager.cancel
-        render_successful_update && return
-      end
-
       @current_plan_price = Money.from_amount(plan_param, customer_currency)
       new_plan = Stripe::Plan.retrieve_or_create_climate_offset_plan(@current_plan_price)
 
@@ -32,6 +27,13 @@ module Users
       else
         render_bad_request(@manager.errors)
       end
+    end
+
+    def destroy
+      @manager = SubscriptionManager.new(@stripe_customer)
+
+      @manager.cancel
+      redirect_to action: :show
     end
 
     private

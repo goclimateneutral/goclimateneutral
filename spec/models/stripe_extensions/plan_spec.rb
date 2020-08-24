@@ -24,6 +24,12 @@ RSpec.describe StripeExtensions::Plan do
       expect(Stripe::Plan).to have_received(:retrieve).with('climate_offset_3_6_usd_monthly')
     end
 
+    it 'raises argument error when monthly amount is 0' do
+      expect do
+        Stripe::Plan.retrieve_or_create_climate_offset_plan(Money.from_amount(0, Currency::USD))
+      end.to raise_error(ArgumentError)
+    end
+
     context 'when plan exists' do
       it 'returns retrieved plan' do
         retrieved_plan = Stripe::Plan.retrieve_or_create_climate_offset_plan(monthly_amount)
