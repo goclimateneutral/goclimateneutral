@@ -1,8 +1,10 @@
 <%= render "shared/header" %>
-  <section class="section-padding text-center">
-    <div class="callout">
-      <h1 class="text-4xl font-bold my-6">Page not found <i class="fa fa-meh-o" aria-hidden="true"></i></h1>
-      <p class="">We're sorry, but we can't find that page.</p>
-    </div>
-  </section>
-<%= render "shared/footer" %>
+
+<section class="section-padding min-h-1/2-screen flex items-center">
+  <div class="max-w-xl mx-auto text-center space-y-3">
+    <h1 class="heading-lg">Page not found</h1>
+    <p class="t:text-lg">We're sorry, but we can't find that page.</p>
+  </div>
+</section>
+
+<%= render "shared/footer", skip_prefooter: true %>

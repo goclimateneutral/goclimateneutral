@@ -149,6 +149,9 @@ module.exports = {
         0: 0,
         ...theme('spacing')
       }),
+      minHeight: {
+        '1/2-screen': '50vh'
+      },
       maxWidth: {
         xs: '15rem',
         '1/4': '25%',
