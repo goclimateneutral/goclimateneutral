@@ -47,11 +47,11 @@
               <%=t 'credit_or_debit_card' %>
             </label>
 
-            <div id="current-card" class="m-lg:flex m-lg:items-center">
+            <div id="current-card" class="m-lg:flex m-lg:items-center m-lg:justify-between">
               <% if @customer_payment_method.nil? %>
-                t('no_card_registered')
+                <%= t('no_card_registered') %>
               <% else %>
-                <div class="flex-1">
+                <div>
                   <span>
                     <% if card_brand(@customer_payment_method) == 'visa' %>
                       <span class="card-visa"></span>
