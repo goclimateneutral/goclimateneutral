@@ -1,0 +1,10 @@
+eo:
+  views:
+    subscriptions:
+      update:
+        heading: crwdns14872:0crwdne14872:0
+        no_subscription: crwdns14874:0crwdne14874:0
+      cancel:
+        heading: crwdns14876:0crwdne14876:0
+        action: crwdns14878:0crwdne14878:0
+        confirm: crwdns14880:0crwdne14880:0
