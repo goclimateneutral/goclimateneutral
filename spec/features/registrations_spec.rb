@@ -62,8 +62,15 @@ RSpec.feature 'Registrations', type: :feature, js: true do
     end
     expect(page).to have_text 'No subscription', wait: 20
 
-    # Re-subscribe
+    # Add new card and re-subscribe
     select('€10', from: 'Climate Plan')
+
+    click_link 'Add new card'
+    within_frame(0) do
+      send_keys_to_card_field '5555555555554444'
+      find('input[name=exp-date]').send_keys '522'
+      find('input[name=cvc]').send_keys '123'
+    end
     click_button 'Update'
     expect(page).to have_text 'Terminate subscription', wait: 20
   end
@@ -139,8 +146,15 @@ RSpec.feature 'Registrations', type: :feature, js: true do
       end
       expect(page).to have_text 'No subscription', wait: 20
 
-      # Re-subscribe
+      # Add new card and re-subscribe
       select('€10', from: 'Climate Plan')
+
+      click_link 'Add new card'
+      within_frame(0) do
+        send_keys_to_card_field '5555555555554444'
+        find('input[name=exp-date]').send_keys '522'
+        find('input[name=cvc]').send_keys '123'
+      end
       click_button 'Update'
       expect(page).to have_text 'Terminate subscription', wait: 20
     end

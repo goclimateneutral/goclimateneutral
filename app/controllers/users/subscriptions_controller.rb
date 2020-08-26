@@ -31,8 +31,8 @@ module Users
 
     def destroy
       @manager = SubscriptionManager.new(@stripe_customer)
-
       @manager.cancel
+      @manager.remove_payment_methods
       redirect_to action: :show
     end
 
@@ -65,11 +65,9 @@ module Users
     end
 
     def customer_payment_method(customer)
-      if customer.invoice_settings&.default_payment_method
-        Stripe::PaymentMethod.retrieve(customer.invoice_settings.default_payment_method)
-      elsif customer.default_source
-        customer.sources.retrieve(customer.default_source)
-      end
+      return nil unless customer.invoice_settings&.default_payment_method
+
+      Stripe::PaymentMethod.retrieve(customer.invoice_settings.default_payment_method)
     end
 
     def update_subscription(new_plan)

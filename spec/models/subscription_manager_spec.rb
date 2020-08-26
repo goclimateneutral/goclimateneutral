@@ -20,6 +20,7 @@ RSpec.describe SubscriptionManager do
     )
     allow(Stripe::Customer).to receive(:update)
     allow(Stripe::PaymentMethod).to receive(:attach)
+    allow(Stripe::PaymentMethod).to receive(:detach)
     allow(Stripe::Subscription).to receive(:create).and_return(created_subscription)
     allow(Stripe::Subscription).to receive(:update).and_return(created_subscription)
     allow(Stripe::Subscription)
@@ -164,6 +165,15 @@ RSpec.describe SubscriptionManager do
         manager.cancel
 
         expect(manager.subscription).to have_received(:delete)
+      end
+    end
+
+    describe '#remove_payment_methods' do
+      it 'removes the current payment methods' do
+        manager.remove_payment_methods
+
+        expect(Stripe::PaymentMethod).to have_received(:detach)
+          .with(manager.customer.invoice_settings&.default_payment_method)
       end
     end
 

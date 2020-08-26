@@ -37,6 +37,13 @@ class SubscriptionManager
     subscription.delete
   end
 
+  def remove_payment_methods
+    payment_methods = Stripe::PaymentMethod.list(customer: customer.id, type: 'card')
+    payment_methods.each do |payment_method|
+      Stripe::PaymentMethod.detach(payment_method.id)
+    end
+  end
+
   def update(new_plan, payment_method_id = nil)
     handle_errors_and_return_status do
       update_default_card(payment_method_id) if payment_method_id.present?
