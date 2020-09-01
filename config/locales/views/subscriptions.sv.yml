@@ -7,4 +7,6 @@ sv:
       cancel:
         heading: Avsluta prenumeration
         action: Avsluta prenumeration
+        abort: Behåll prenumeration
         confirm: Är du säker på att du vill avsluta din prenumeration? Du kan återuppta den när du vill.
+        cancellation_successful: Din prenumeration har avslutats.

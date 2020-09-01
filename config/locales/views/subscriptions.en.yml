@@ -5,6 +5,8 @@ en:
         heading: Update subscription
         no_subscription: No subscription
       cancel:
-        heading: Terminate subscription
-        action: Terminate subscription
-        confirm: Are you sure you want to terminate your subscription? You can re-subscribe at any time.
+        heading: Cancel subscription
+        action: Cancel subscription
+        abort: Keep subscription
+        confirm: Are you sure you want to cancel your subscription? You can re-subscribe at any time.
+        cancellation_successful: Your subscription has been successfully cancelled.

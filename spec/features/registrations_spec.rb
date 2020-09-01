@@ -57,9 +57,8 @@ RSpec.feature 'Registrations', type: :feature, js: true do
     find('.subscriptions-show', wait: 20)
 
     # Unsubscribe
-    accept_confirm do
-      click_button 'Terminate subscription'
-    end
+    find('#start_cancellation').click
+    find('#confirm_cancellation', wait: 20).click
     expect(page).to have_text 'No subscription', wait: 20
 
     # Add new card and re-subscribe
@@ -72,7 +71,7 @@ RSpec.feature 'Registrations', type: :feature, js: true do
       find('input[name=cvc]').send_keys '123'
     end
     click_button 'Update'
-    expect(page).to have_text 'Terminate subscription', wait: 20
+    expect(page).to have_text 'Cancel subscription', wait: 20
   end
 
   context 'when using 3D Secure card' do
@@ -141,9 +140,8 @@ RSpec.feature 'Registrations', type: :feature, js: true do
       find('.subscriptions-show', wait: 20)
 
       # Unsubscribe
-      accept_confirm do
-        click_button 'Terminate subscription'
-      end
+      find('#start_cancellation').click
+      find('#confirm_cancellation', wait: 20).click
       expect(page).to have_text 'No subscription', wait: 20
 
       # Add new card and re-subscribe
@@ -156,7 +154,7 @@ RSpec.feature 'Registrations', type: :feature, js: true do
         find('input[name=cvc]').send_keys '123'
       end
       click_button 'Update'
-      expect(page).to have_text 'Terminate subscription', wait: 20
+      expect(page).to have_text 'Cancel subscription', wait: 20
     end
   end
 end

@@ -95,9 +95,24 @@
     <% if @current_plan_price %>
       <div class="callout max-w-xl mx-auto">
         <h2 class="heading mb-3"><%= t 'views.subscriptions.cancel.heading' %></h2>
-        <%= form_tag({ action: :destroy }, method: :delete) do %>
-          <%= button_tag t('views.subscriptions.cancel.action'), class: "button w-full", onclick: "return confirm('#{t('views.subscriptions.cancel.confirm')}')" %>
-        <% end %>
+        <div data-controller="modal">
+          <button type="button" id="start_cancellation" class="button w-full" data-target="modal.trigger" data-action="modal#open">
+            <%= t('views.subscriptions.cancel.action') %>
+          </button>
+
+          <div class="modal-container" data-target="modal.container">
+            <div class="modal-content" data-target="modal.content">
+              <h3 class="modal-heading"><%= t('views.subscriptions.cancel.action') %></h3>
+              <%= t('views.subscriptions.cancel.confirm') %>
+              <div class="modal-actions">
+                <button class="button button-cta" type="button" data-action="modal#close"><%= t('views.subscriptions.cancel.abort') %></button>
+                <%= form_tag({ action: :destroy }, method: :delete, class: 'button') do %>
+                  <%= button_tag t('views.subscriptions.cancel.action'), id: 'confirm_cancellation' %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     <% end %>
   </section>
