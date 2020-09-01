@@ -34,6 +34,7 @@ module Users
       @manager.cancel
       @manager.remove_payment_methods
       redirect_to action: :show
+      flash[:notice] = I18n.t('views.subscriptions.cancel.cancellation_successful')
     end
 
     private
