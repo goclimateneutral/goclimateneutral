@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_09_131845) do
+ActiveRecord::Schema.define(version: 2020_09_03_125622) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -230,6 +230,13 @@ ActiveRecord::Schema.define(version: 2020_06_09_131845) do
     t.datetime "stripe_created"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "subscription_cancellation_feedbacks", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "subscribed_at"
+    t.text "reason"
   end
 
   create_table "users", force: :cascade do |t|

@@ -103,13 +103,37 @@
           <div class="modal-container" data-target="modal.container">
             <div class="modal-content" data-target="modal.content">
               <h3 class="modal-heading"><%= t('views.subscriptions.cancel.action') %></h3>
-              <%= t('views.subscriptions.cancel.confirm') %>
-              <div class="modal-actions">
-                <button class="button button-cta" type="button" data-action="modal#close"><%= t('views.subscriptions.cancel.abort') %></button>
-                <%= form_tag({ action: :destroy }, method: :delete, class: 'button') do %>
-                  <%= button_tag t('views.subscriptions.cancel.action'), id: 'confirm_cancellation' %>
-                <% end %>
-              </div>
+              <p class="my-3"><%= t('views.subscriptions.cancel.confirm') %></p>
+              <%= form_tag({ action: :destroy }, method: :delete) do %>
+                <div class="space-y-1">
+                  <% [
+                    'price_too_high',
+                    'different_finantial_conditions',
+                    'dont_believe_goclimate_makes_difference',
+                    'dont_belive_climate_change',
+                    'wont_disclose',
+                    'other' ].each do |reason| %>
+                    <% if reason != 'other' %>
+                      <div class="flex">
+                        <%= radio_button_tag 'cancellation_reason', reason, false, class: 'cursor-pointer' %>
+                        <%= label_tag "cancellation_reason_#{reason}", t("views.subscriptions.cancel.cancellation_reasons.#{reason}"), class: 'ml-2 cursor-pointer' %>
+                      </div>
+                    <% else %>
+                      <div>
+                        <div class="flex">
+                          <%= radio_button_tag 'cancellation_reason', reason, false, class: 'cursor-pointer' %>
+                          <%= label_tag "cancellation_reason_#{reason}", t("views.subscriptions.cancel.cancellation_reasons.#{reason}"), class: 'ml-2 cursor-pointer' %>
+                        </div>
+                        <%= text_field_tag 'cancellation_reason_other_text', nil, class: 'input ml-5' %>
+                      </div>
+                    <% end %>
+                  <% end %>
+                </div>
+                <div class="modal-actions">
+                  <button type="button" class="button button-cta" data-action="modal#close"><%= t('views.subscriptions.cancel.abort') %></button>
+                  <%= button_tag t('views.subscriptions.cancel.action'), id: 'confirm_cancellation', class: 'button', type: 'submit' %>
+                </div>
+              <% end %>
             </div>
           </div>
         </div>

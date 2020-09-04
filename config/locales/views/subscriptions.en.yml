@@ -8,5 +8,12 @@ en:
         heading: Cancel subscription
         action: Cancel subscription
         abort: Keep subscription
-        confirm: Are you sure you want to cancel your subscription? You can re-subscribe at any time.
+        confirm: Thank you for contributing! Feel free to tell us why you are cancelling so that we can become better in the future.
         cancellation_successful: Your subscription has been successfully cancelled.
+        cancellation_reasons:
+          price_too_high: The price is too high
+          different_finantial_conditions: My financial prerequisites have changed
+          dont_believe_goclimate_makes_difference: I don't believe GoClimate makes a difference for the climate
+          dont_belive_climate_change: I don't think we need to stop climate change
+          wont_disclose: I don't want to disclose
+          other: Other (please specify)

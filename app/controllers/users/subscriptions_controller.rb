@@ -31,8 +31,17 @@ module Users
 
     def destroy
       @manager = SubscriptionManager.new(@stripe_customer)
+
+      cancellation_feedback = SubscriptionCancellationFeedback.new(
+        subscribed_at: Time.at(@manager.subscription.start_date),
+        reason: params[:cancellation_reason] == 'other' ?
+            params[:cancellation_reason_other_text] : params[:cancellation_reason]
+      )
+      cancellation_feedback.save
+
       @manager.cancel
       @manager.remove_payment_methods
+
       redirect_to action: :show
       flash[:notice] = I18n.t('views.subscriptions.cancel.cancellation_successful')
     end
