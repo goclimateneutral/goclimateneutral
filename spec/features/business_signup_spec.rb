@@ -9,7 +9,7 @@ RSpec.feature 'Business signup', type: :feature, js: true do
     click_link 'Calculate my business footprint'
 
     # Wait for climate report form to render
-    find('.climate_reports-new', wait: 20)
+    find('#climate-report-form', wait: 20)
 
     fill_in 'climate_report_company_name', with: 'Test AB'
     fill_in 'climate_report_employees', with: '4'
@@ -17,7 +17,7 @@ RSpec.feature 'Business signup', type: :feature, js: true do
     click_button 'See my business footprint'
 
     # Wait for climate report form to render
-    find('.climate_reports-show', wait: 20)
+    find('#climate-report', wait: 20)
 
     expect(page).to have_text('Your business footprint')
 

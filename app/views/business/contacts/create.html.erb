@@ -1,18 +1,13 @@
-<% content_for :stylesheets do %>
-  <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
-<% end %>
-<% content_for :javascripts do %>
-  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'reportLoadError(event)' %>
-<% end %>
+<%= render "shared/header" %>
 
-<div class="site-wrapper-first">
-  <%= render "shared/header_old" %>
-  <div class="inner">
-
-    <h1 class="cover-heading"><%=t('thank_you') %></h1>
-    <p class="lead"><%=t('welcome.business.we_will_contact_you_shortly_html', email: @email) %></p>
-
+<section class="section-padding">
+  <h1 class="heading-xl mb-6"><%=t 'thank_you' %></h1>
+  <div class="d:w-1/2 space-y-3">
+    <p class="text-lg">
+      <%=t('welcome.business.we_will_contact_you_shortly_html', email: @email) %>
+    </p>
   </div>
-</div>
+</section>
 
-<%= render "shared/footer_old" %>
+<%= render "shared/bottom_landscape" %>
+<%= render "shared/footer", skip_prefooter: true %>

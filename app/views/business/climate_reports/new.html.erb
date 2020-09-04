@@ -1,400 +1,284 @@
-<% content_for :stylesheets do %>
-  <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
-<% end %>
-<% content_for :javascripts do %>
-  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'reportLoadError(event)' %>
-<% end %>
+<%= render "shared/header" %>
 
-<div class="site-wrapper-first site-wrapper-first--nav-only">
-  <%= render "shared/header_old" %>
-</div>
+<section class="section-padding">
+  <h1 class="heading-xl"><%= title(t('business.climate_reports.business_footprint_header')) %></h1>
+  <p class="mt-6 t:w-2/3 d:w-1/2"><%= description(t('business.climate_reports.business_footprint_intro')) %></p>
+</section>
 
-<div class="site-wrapper-second">
-  <div class="inner inner--with-grid">
-    <div class="container">
+<section class="section-padding">
+  <%= form_for [:business, @report], html: { id: 'climate-report-form', class: "space-y-12" } do |f| %>
+    <% if @report.errors.any? %>
+      <%# This is a panel because alerts are currently scripted to be dismissed automatically %>
+      <div class="callout space-y-3">
+        <% @report.errors.full_messages.each do |message| %>
+          <p><%= message %></p>
+        <% end %>
+      </div>
+    <% end %>
 
-      <div class="row">
-        <div class="col-xs-12">
+    <div class="space-y-3">
+      <h2 class="heading-lg">1. <%= t 'business.climate_reports.general_information' %></h2>
 
-          <%= image_tag webpack_asset_path('images/breakit.gif'), size: 200, style: 'padding: 20px 0px;' %>
+      <div class="space-y-1">
+        <label for="climate_report_company_name" class="font-bold block">
+          <%= t 'business.climate_reports.company_name' %>
+        </label>
+        <%= f.text_field :company_name, class: 'input', required: '' %>
+      </div>
 
-          <h1 class="cover-heading">
-            <%=title(t('business.climate_reports.business_footprint_header')) %>
-          </h1>
-          <p class="lead">
-            <%= description(t('business.climate_reports.business_footprint_intro')) %>
-          </p>
+      <div class="space-y-1">
+        <label for="climate_report_country" class="font-bold block">
+          <%= t 'business.climate_reports.country' %>
+          <span class="tooltip" data-tooltip="<%= t 'business.climate_reports.country_tooltip' %>">[?]</span>
+        </label>
+        <span class="form-control-static" style="display: block;"><%= t 'business.climate_reports.sweden' %></span>
+        <%= f.hidden_field :country, id: 'country' %>
+      </div>
 
+      <div class="space-y-1">
+        <label for="climate_report_employees" class="font-bold block">
+          <%= t 'business.climate_reports.number_of_employees' %>
+          <span class="tooltip" data-tooltip="<%= t 'business.climate_reports.number_of_employees_tooltip' %>">[?]</span>
+        </label>
+        <%= f.number_field :employees, class: 'input', required: '' %>
+      </div>
+
+      <div class="space-y-1">
+        <label for="climate_report_office_area" class="font-bold block">
+          <%= t 'business.climate_reports.office_area' %>
+          <span class="tooltip" data-tooltip="<%= t 'business.climate_reports.office_area_tooltip' %>">[?]</span>
+        </label>
+        <%= f.number_field :office_area, class: 'input' %>
+        <span class="ml-1">m<sup>2</sup></span>
+      </div>
+
+      <div class="space-y-1">
+        <label for="climate_report_calculation_period" class="font-bold block">
+          <%= t 'business.climate_reports.calculation_period' %>
+          <span class="tooltip" data-tooltip="<%= t 'business.climate_reports.calculation_period_tooltip' %>">[?]</span>
+        </label>
+        <%= f.text_field :calculation_period, class: 'input', required: '' %>
+      </div>
+
+      <div class="space-y-1">
+        <label for="climate_report_calculation_period_length" class="font-bold block">
+          <%= t 'business.climate_reports.calculation_period_length' %>
+        </label>
+        <div class="select-wrapper">
+          <%= f.select :calculation_period_length,
+            [
+              [t('business.climate_reports.calculation_period_length_options.year'), 'year'],
+              [t('business.climate_reports.calculation_period_length_options.half-year'), 'half-year'],
+              [t('business.climate_reports.calculation_period_length_options.quarter'), 'quarter']
+            ],
+            {}, class: 'select', required: '' 
+          %>
         </div>
       </div>
 
-      <%= form_for [:business, @report], html: { class: "form-horizontal" } do |f| %>
-        <% if @report.errors.any? %>
-          <%# This is a panel because alerts are currently scripted to be dismissed automatically %>
-          <div class="panel panel-danger">
-            <div class="panel-heading">
-              <% @report.errors.full_messages.each do |message| %>
-                <p><%= message %></p>
-              <% end %>
-            </div>
-          </div>
-        <% end %>
-        <div class="content-section">
-          <div class="row">
-            <div class="col-sm-offset-5 col-sm-7">
-              <h3 class="text-left">1. <%=t 'business.climate_reports.general_information' %></h3>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="climate_report_company_name" class="col-sm-5 control-label"><%=t 'business.climate_reports.company_name' %></label>
-            <div class="col-sm-7">
-              <%= f.text_field :company_name, class: 'form-control', required: '' %>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="climate_report_country" class="col-sm-5 control-label">
-              <%=t 'business.climate_reports.country' %>
-              <a class="business-tooltip" data-toggle="tooltip" title="<%=t 'business.climate_reports.country_tooltip' %>">[?]</a>
-            </label>
-            <div class="col-sm-7">
-              <span class="form-control-static" style="display: block;"><%=t 'business.climate_reports.sweden' %></span>
-              <%= f.hidden_field :country, id: 'country' %>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="climate_report_employees" class="col-sm-5 control-label">
-              <%=t 'business.climate_reports.number_of_employees' %> 
-              <a class="business-tooltip" data-toggle="tooltip" title="<%=t 'business.climate_reports.number_of_employees_tooltip' %>">[?]</a>
-            </label>
-            <div class="col-sm-7">
-              <%= f.number_field :employees, class: 'form-control', required: '' %>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="climate_report_office_area" class="col-sm-5 control-label">
-            <%=t 'business.climate_reports.office_area' %>
-            <a class="business-tooltip" data-toggle="tooltip" title="<%=t 'business.climate_reports.office_area_tooltip' %>">[?]</a>
-          </label>
-            <div class="col-sm-7">
-              <div class="input-group">
-                <%= f.number_field :office_area, class: 'form-control' %>
-                <div class="input-group-addon">m<sup>2</sup></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="climate_report_calculation_period" class="col-sm-5 control-label">
-              <%=t 'business.climate_reports.calculation_period' %>
-              <a class="business-tooltip" data-toggle="tooltip" title="<%=t 'business.climate_reports.calculation_period_tooltip' %>">[?]</a>
-            </label>
-            <div class="col-sm-7">
-              <%= f.text_field :calculation_period, class: 'form-control', required: '' %>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="climate_report_calculation_period_length" class="col-sm-5 control-label">
-              <%=t 'business.climate_reports.calculation_period_length' %>
-            </label>
-            <div class="col-sm-7">
-              <%= f.select :calculation_period_length,
-                    [
-                      [t('business.climate_reports.calculation_period_length_options.year'), 'year'],
-                      [t('business.climate_reports.calculation_period_length_options.half-year'), 'half-year'],
-                      [t('business.climate_reports.calculation_period_length_options.quarter'), 'quarter']
-                    ],
-                    {}, class: 'form-control', required: '' %>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="col-sm-5 control-label">
-              <%=t 'business.climate_reports.name_and_logo' %>
-              <a class="business-tooltip" data-toggle="tooltip" title="<%=t 'business.climate_reports.name_and_logo_tooltip' %>">[?]</a>
-            </label>
-            <div class="col-sm-5 checkbox">
-              <label>
-                <%= f.check_box :consent_to_show_publicly %>
-                <%=t 'business.climate_reports.ok_with_showing_logo' %>
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <div class="content-section">
-          <div class="row">
-            <div class="col-sm-offset-5 col-sm-6">
-              <h3 class="text-left">2. <%=t 'business.climate_reports.energy' %></h3>
-              <p class="description"><%=t 'business.climate_reports.energy_intro' %></p>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="climate_report_electricity_consumption" class="col-sm-5 control-label">
-              <%=t 'business.climate_reports.electricity_consumption' %>
-              <a class="business-tooltip" data-toggle="tooltip" title="<%=t 'business.climate_reports.electricity_consumption_tooltip' %>">[?]</a>
-            </label>
-            <div class="col-sm-5">
-              <div class="input-group">
-                <%= f.number_field :electricity_consumption, class: 'form-control' %>
-                <div class="input-group-addon">kWh</div>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <%= f.check_box :use_electricity_averages, onchange: 'document.getElementById("climate_report_electricity_consumption").disabled = this.checked' %>
-                  <%=t 'business.climate_reports.use_average_values' %>
-                </label>
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="col-sm-5 control-label">
-              <%=t 'business.climate_reports.green_electricity' %>
-              <a class="business-tooltip" data-toggle="tooltip" title="<%=t 'business.climate_reports.green_electricity_tooltip' %>">[?]</a>
-            </label>
-            <div class="col-sm-5">
-              <div class="checkbox">
-                <label>
-                  <%= f.check_box :green_electricity %>
-                  <%=t 'business.climate_reports.green_electricity_text' %>
-                </label>
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="climate_report_heating" class="col-sm-5 control-label">
-              <%=t 'business.climate_reports.heating' %>
-              <a class="business-tooltip" data-toggle="tooltip" title="<%=t 'business.climate_reports.heating_tooltip' %>">[?]</a>
-            </label>
-            <div class="col-sm-5">
-              <div class="input-group">
-                <%= f.number_field :heating, class: 'form-control' %>
-                <div class="input-group-addon">kWh</div>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <%= f.check_box :use_heating_averages, onchange: 'document.getElementById("climate_report_heating").disabled = this.checked' %>
-                  <%=t 'business.climate_reports.use_average_values' %>
-                </label>
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="climate_report_number_of_servers" class="col-sm-5 control-label">
-              <%=t 'business.climate_reports.average_number_of_servers' %>
-
-              <a class="business-tooltip" data-toggle="tooltip" title="<%=t 'business.climate_reports.average_number_of_servers_tooltip' %>">[?]</a>
-            </label>
-            <div class="col-sm-5">
-              <%= f.number_field :number_of_servers, class: 'form-control' %>
-              <div class="checkbox">
-                <label>
-                  <%= f.check_box :servers_green_electricity %>
-                  <%=t 'business.climate_reports.servers_green_electricity' %>
-                </label>
-                <a href="https://www.goclimate.com/blog/the-carbon-footprint-of-servers/#green-electricity" target="_blank">(<%=t 'business.climate_reports.how_do_i_know' %>)</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="climate_report_number_of_cloud_servers" class="col-sm-5 control-label">
-              <%=t 'business.climate_reports.number_of_cloud_servers' %>
-              <a class="business-tooltip" data-toggle="tooltip" title="<%=t 'business.climate_reports.number_of_cloud_servers_tooltip' %>">[?]</a>
-            </label>
-            <div class="col-sm-7">
-              <%= f.number_field :number_of_cloud_servers, class: 'form-control' %>
-              <div class="checkbox">
-                <label>
-                  <%= f.check_box :cloud_servers_green_electricity %>
-                  <%=t 'business.climate_reports.cloud_servers_green_electricity' %>
-                </label>
-                <a href="https://www.goclimate.com/blog/the-carbon-footprint-of-servers/#green-electricity" target="_blank">(<%=t 'business.climate_reports.how_do_i_know' %>)</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="content-section">
-          <div class="row">
-            <div class="col-sm-offset-5 col-sm-6">
-              <h3 class="text-left">3. <%=t 'business.climate_reports.business_trips' %></h3>
-              <p class="description"><%=t 'business.climate_reports.business_trips_intro' %></p>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="climate_report_flight_hours" class="col-sm-5 control-label">
-              <%=t 'business.climate_reports.flight_hours' %>
-              <a class="business-tooltip" data-toggle="tooltip" title="<%=t 'business.climate_reports.flight_hours_tooltip' %>">[?]</a>
-            </label>
-            <div class="col-sm-5">
-              <div class="input-group">
-                <%= f.number_field :flight_hours, class: 'form-control' %>
-                <div class="input-group-addon"><%=t 'business.climate_reports.hours' %></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="climate_report_car_distance" class="col-sm-5 control-label">
-              <%=t 'business.climate_reports.distance_car' %>
-              <a class="business-tooltip" data-toggle="tooltip" title="<%=t 'business.climate_reports.distance_car_tooltip' %>">[?]</a>
-            </label>
-            <div class="col-sm-5">
-              <div class="input-group">
-                <%= f.number_field :car_distance, class: 'form-control' %>
-                <div class="input-group-addon"><%=t 'business.climate_reports.kilometers' %></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="content-section">
-          <div class="row">
-            <div class="col-sm-offset-5 col-sm-6">
-              <h3 class="text-left">4. <%=t 'business.climate_reports.food' %></h3>
-              <p class="description"><%=t 'business.climate_reports.food_intro' %></p>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="climate_report_meals" class="col-sm-5 control-label">
-              <%=t 'business.climate_reports.meals' %>
-              <a class="business-tooltip" data-toggle="tooltip" title="<%=t 'business.climate_reports.meals_tooltip' %>">[?]</a>
-            </label>
-            <div class="col-sm-5">
-              <%= f.number_field :meals, class: 'form-control' %>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="climate_report_meals_vegetarian_share" class="col-sm-5 control-label">
-              <%=t 'business.climate_reports.meals_vegetarian_share' %>
-              <a class="business-tooltip" data-toggle="tooltip" title="<%=t 'business.climate_reports.meals_vegetarian_share_tooltip' %>">[?]</a>
-            </label>
-            <div class="col-sm-7">
-              <div class="input-group">
-                <%= f.number_field :meals_vegetarian_share, class: 'form-control', min: 0, max: 100 %>
-                <div class="input-group-addon">%</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="content-section">
-          <div class="row">
-            <div class="col-sm-offset-5 col-sm-6">
-              <h3 class="text-left">5. <%=t 'business.climate_reports.material' %></h3>
-              <p class="description"><%=t 'business.climate_reports.material_intro' %></p>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="climate_report_purchased_computers" class="col-sm-5 control-label"><%=t 'business.climate_reports.purchased_computers' %></label>
-            <div class="col-sm-7">
-              <div class="input-group">
-                <%= f.number_field :purchased_computers, class: 'form-control' %>
-                <div class="input-group-addon"><%=t 'business.climate_reports.units' %></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="climate_report_purchased_phones" class="col-sm-5 control-label"><%=t 'business.climate_reports.purchased_phones' %></label>
-            <div class="col-sm-7">
-              <div class="input-group">
-                <!-- Chrome mistakenly considers this field a phone number field for autofill and also ignores the standard 'off' value for 'autocomplete', so use non-standard and arbritrary attribute 'disabledinchrome' which actually disables autofill -->
-                <%= f.number_field :purchased_phones, class: 'form-control', autocomplete: 'disabledinchrome' %>
-                <div class="input-group-addon"><%=t 'business.climate_reports.units' %></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="climate_report_purchased_monitors" class="col-sm-5 control-label"><%=t 'business.climate_reports.purchased_monitors' %></label>
-            <div class="col-sm-7">
-              <div class="input-group">
-                <%= f.number_field :purchased_monitors, class: 'form-control' %>
-                <div class="input-group-addon"><%=t 'business.climate_reports.units' %></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="content-section">
-          <div class="row">
-            <div class="col-sm-offset-5 col-sm-6">
-              <h3 class="text-left">6. <%=t 'business.climate_reports.other' %></h3>
-              <p class="description"><%=t 'business.climate_reports.other_intro' %></p>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="climate_report_other_co2e" class="col-sm-5 control-label"><%=t 'business.climate_reports.other_emissions' %></label>
-            <div class="col-sm-7">
-              <div class="input-group">
-                <%= f.number_field :other_co2e, class: 'form-control' %>
-                <div class="input-group-addon">kg CO2e</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="climate_report_other_specification" class="col-sm-5 control-label"><%=t 'business.climate_reports.specify_other_emissions' %></label>
-            <div class="col-sm-7">
-              <%= f.text_area :other_specification, class: 'form-control', step: '0.1' %>
-            </div>
-          </div>
-        </div>
-
-        <div class="content-section">
-          <div class="row">
-            <div class="col-sm-offset-5 col-sm-6">
-              <h3 class="text-left">7. <%=t 'business.climate_reports.contact' %></h3>
-              <p class="description"><%=t 'business.climate_reports.contact_intro' %></p>
-            </div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="climate_report_contact_email" class="col-sm-5 control-label"><%=t 'business.climate_reports.contact_email' %></label>
-            <div class="col-sm-7">
-              <%= f.email_field :contact_email, class: 'form-control', required: '' %>
-            </div>
-          </div>
-        </div>
-
-        <div class="content-section">
-          <div class="form-group">
-            <div class="col-sm-offset-5 col-sm-7">
-              <%= f.submit I18n.t('business.climate_reports.calculate_button'), class: 'btn btn-success' %>
-            </div>
-          </div>
-        </div>
-      <% end %>
-
+      <div class="space-y-1">
+        <label class="font-bold block">
+          <%= t 'business.climate_reports.name_and_logo' %>
+          <span class="tooltip" data-tooltip="<%= t 'business.climate_reports.name_and_logo_tooltip' %>">[?]</span>
+        </label>
+        <label>
+          <%= f.check_box :consent_to_show_publicly %>
+          <%= t 'business.climate_reports.ok_with_showing_logo' %>
+        </label>
+      </div>
     </div>
-  </div>
-  <p><a href="https://www.goclimate.com/blog/klimatberakningar-for-foretag/" target="_blank"><%=t 'business.climate_reports.read_more_about_calculations' %></a></p>
-</div>
 
-<%= render "shared/footer_old" %>
+    <div class="space-y-3">
+      <h2 class="heading-lg">2. <%= t 'business.climate_reports.energy' %></h2>
+      <p class="t:w-2/3 d:w-1/2"><%= t 'business.climate_reports.energy_intro' %></p>
 
-<% content_for :javascript_tags do %>
-  <script>
-    $(document).ready(function() {
-      $('.business-tooltip').tooltip();
-    });
-  </script>
-<% end %>
+      <div class="space-y-1">
+        <label for="climate_report_electricity_consumption" class="font-bold block">
+          <%= t 'business.climate_reports.electricity_consumption' %>
+          <span class="tooltip" data-tooltip="<%= t 'business.climate_reports.electricity_consumption_tooltip' %>">[?]</span>
+        </label>
+        <%= f.number_field :electricity_consumption, class: 'input' %>
+        <span class="ml-1">kWh</span>
+        <div>
+          <label>
+            <%= f.check_box :use_electricity_averages, onchange: 'document.getElementById("climate_report_electricity_consumption").disabled = this.checked' %>
+            <%= t 'business.climate_reports.use_average_values' %>
+          </label>
+        </div>
+      </div>
+
+      <div class="space-y-1">
+        <label class="font-bold block">
+          <%= t 'business.climate_reports.green_electricity' %>
+          <span class="tooltip" data-tooltip="<%= t 'business.climate_reports.green_electricity_tooltip' %>">[?]</span>
+        </label>
+        <label>
+          <%= f.check_box :green_electricity %>
+          <%= t 'business.climate_reports.green_electricity_text' %>
+        </label>
+      </div>
+
+      <div class="space-y-1">
+        <label for="climate_report_heating" class="font-bold block">
+          <%= t 'business.climate_reports.heating' %>
+          <span class="tooltip" data-tooltip="<%= t 'business.climate_reports.heating_tooltip' %>">[?]</span>
+        </label>
+        <%= f.number_field :heating, class: 'input' %>
+        <span class="ml-1">kWh</span>
+        <div>
+          <label>
+            <%= f.check_box :use_heating_averages, onchange: 'document.getElementById("climate_report_heating").disabled = this.checked' %>
+            <%= t 'business.climate_reports.use_average_values' %>
+          </label>
+        </div>
+      </div>
+
+      <div class="space-y-1">
+        <label for="climate_report_number_of_servers" class="font-bold block">
+          <%= t 'business.climate_reports.average_number_of_servers' %>
+          <span class="tooltip" data-tooltip="<%= t 'business.climate_reports.average_number_of_servers_tooltip' %>">[?]</span>
+        </label>
+        <%= f.number_field :number_of_servers, class: 'input' %>
+        <div>
+          <label>
+            <%= f.check_box :servers_green_electricity %>
+            <%= t 'business.climate_reports.servers_green_electricity' %>
+          </label>
+          (<a href="https://www.goclimate.com/blog/the-carbon-footprint-of-servers/#green-electricity" target="_blank" class="link"><%= t 'business.climate_reports.how_do_i_know' %></a>)
+        </div>
+      </div>
+
+      <div class="space-y-1">
+        <label for="climate_report_number_of_cloud_servers" class="font-bold block">
+          <%= t 'business.climate_reports.number_of_cloud_servers' %>
+          <span class="tooltip" data-tooltip="<%= t 'business.climate_reports.number_of_cloud_servers_tooltip' %>">[?]</span>
+        </label>
+        <%= f.number_field :number_of_cloud_servers, class: 'input' %>
+        <div>
+          <label>
+            <%= f.check_box :cloud_servers_green_electricity %>
+            <%= t 'business.climate_reports.cloud_servers_green_electricity' %>
+          </label>
+          (<a href="https://www.goclimate.com/blog/the-carbon-footprint-of-servers/#green-electricity" target="_blank" class="link"><%= t 'business.climate_reports.how_do_i_know' %></a>)
+        </div>
+      </div>
+    </div>
+
+    <div class="space-y-3">
+      <h2 class="heading-lg">3. <%= t 'business.climate_reports.business_trips' %></h2>
+      <p class="t:w-2/3 d:w-1/2"><%= t 'business.climate_reports.business_trips_intro' %></p>
+
+      <div class="space-y-1">
+        <label for="climate_report_flight_hours" class="font-bold block">
+          <%= t 'business.climate_reports.flight_hours' %>
+          <span class="tooltip" data-tooltip="<%= t 'business.climate_reports.flight_hours_tooltip' %>">[?]</span>
+        </label>
+        <%= f.number_field :flight_hours, class: 'input' %>
+        <span class="ml-1"><%= t 'business.climate_reports.hours' %></span>
+      </div>
+
+      <div class="space-y-1">
+        <label for="climate_report_car_distance" class="font-bold block">
+          <%= t 'business.climate_reports.distance_car' %>
+          <span class="tooltip" data-tooltip="<%= t 'business.climate_reports.distance_car_tooltip' %>">[?]</span>
+        </label>
+        <%= f.number_field :car_distance, class: 'input' %>
+        <span class="ml-1"><%= t 'business.climate_reports.kilometers' %></span>
+      </div>
+    </div>
+
+    <div class="space-y-3">
+      <h2 class="heading-lg">4. <%= t 'business.climate_reports.food' %></h2>
+      <p class="t:w-2/3 d:w-1/2"><%= t 'business.climate_reports.food_intro' %></p>
+
+      <div class="space-y-1">
+        <label for="climate_report_meals" class="font-bold block">
+          <%= t 'business.climate_reports.meals' %>
+          <span class="tooltip" data-tooltip="<%= t 'business.climate_reports.meals_tooltip' %>">[?]</span>
+        </label>
+        <%= f.number_field :meals, class: 'input' %>
+      </div>
+
+      <div class="space-y-1">
+        <label for="climate_report_meals_vegetarian_share" class="font-bold block">
+          <%= t 'business.climate_reports.meals_vegetarian_share' %>
+          <span class="tooltip" data-tooltip="<%= t 'business.climate_reports.meals_vegetarian_share_tooltip' %>">[?]</span>
+        </label>
+        <%= f.number_field :meals_vegetarian_share, class: 'input', min: 0, max: 100 %>
+        <span class="ml-1">%</span>
+      </div>
+    </div>
+
+    <div class="space-y-3">
+      <h2 class="heading-lg">5. <%= t 'business.climate_reports.material' %></h2>
+      <p class="t:w-2/3 d:w-1/2"><%= t 'business.climate_reports.material_intro' %></p>
+
+      <div class="space-y-1">
+        <label for="climate_report_purchased_computers" class="font-bold block">
+          <%= t 'business.climate_reports.purchased_computers' %>
+        </label>
+        <%= f.number_field :purchased_computers, class: 'input' %>
+        <span class="ml-1"><%= t 'business.climate_reports.units' %></span>
+      </div>
+
+      <div class="space-y-1">
+        <label for="climate_report_purchased_phones" class="font-bold block">
+          <%= t 'business.climate_reports.purchased_phones' %>
+        </label>
+        <!-- Chrome mistakenly considers this field a phone number field for autofill and also ignores the standard 'off' value for 'autocomplete', so use non-standard and arbritrary attribute 'disabledinchrome' which actually disables autofill -->
+        <%= f.number_field :purchased_phones, class: 'input', autocomplete: 'disabledinchrome' %>
+        <span class="ml-1"><%= t 'business.climate_reports.units' %></span>
+      </div>
+
+      <div class="space-y-1">
+        <label for="climate_report_purchased_monitors" class="font-bold block">
+          <%= t 'business.climate_reports.purchased_monitors' %>
+        </label>
+        <%= f.number_field :purchased_monitors, class: 'input' %>
+        <span class="ml-1"><%= t 'business.climate_reports.units' %></span>
+      </div>
+    </div>
+
+    <div class="space-y-3">
+      <h2 class="heading-lg">6. <%= t 'business.climate_reports.other' %></h2>
+      <p class="t:w-2/3 d:w-1/2"><%= t 'business.climate_reports.other_intro' %></p>
+
+      <div class="space-y-1">
+        <label for="climate_report_other_co2e" class="font-bold block">
+          <%= t 'business.climate_reports.other_emissions' %>
+        </label>
+        <%= f.number_field :other_co2e, class: 'input' %>
+        <span class="ml-1">kg CO2e</span>
+      </div>
+
+      <div class="space-y-1">
+        <label for="climate_report_other_specification" class="font-bold block">
+          <%= t 'business.climate_reports.specify_other_emissions' %>
+        </label>
+        <%= f.text_area :other_specification, class: 'input', step: '0.1' %>
+      </div>
+    </div>
+
+    <div class="space-y-3">
+      <h2 class="heading-lg">7. <%= t 'business.climate_reports.contact' %></h2>
+      <p class="t:w-2/3 d:w-1/2"><%= t 'business.climate_reports.contact_intro' %></p>
+
+      <div class="space-y-1">
+        <label for="climate_report_contact_email" class="font-bold block">
+          <%= t 'business.climate_reports.contact_email' %>
+        </label>
+        <%= f.text_field :contact_email, class: 'input mb-3 w-full m-lg:w-auto', required: '' %>
+      </div>
+      <%= f.submit I18n.t('business.climate_reports.calculate_button'), class: 'button button-cta w-full m-lg:w-auto' %>
+    </div>
+
+    <div>
+      <a href="https://www.goclimate.com/blog/klimatberakningar-for-foretag/" target="_blank" class="link"><%=t 'business.climate_reports.read_more_about_calculations' %></a>
+    </div>
+  <% end %>
+</section>
+
+<%= render "shared/bottom_landscape" %>
+<%= render "shared/footer", skip_prefooter: true %>
 
 <%= intercom_script_tag %>

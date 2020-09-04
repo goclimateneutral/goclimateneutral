@@ -1,271 +1,254 @@
-<% content_for :stylesheets do %>
-  <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
-<% end %>
-<% content_for :javascripts do %>
-  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'reportLoadError(event)' %>
-<% end %>
+<%= render "shared/header" %>
 
-<div class="site-wrapper-first">
-  <%= render "shared/header_old" %>
-  <div class="inner inner--with-grid">
-    <div class="container">
+<section id="climate-report" class="section-padding">
+  <h1 class="heading-xl"><%= title(t('business.climate_reports.show.header')) %></h1>
+  <p class="mt-6 t:w-2/3 d:w-1/2">
+    <%=t 'business.climate_reports.show.result',
+          calculation_period: @report.calculation_period,
+          total_emissions: co2e_string(@report.calculation.total_emissions, omit_unit: true)
+    %>
+    <% if @report.employees > 1 %>
+      <%=t 'business.climate_reports.show.result_per_employee',
+            emissions_per_employee: co2e_string(@report.calculation.per_employee_emissions, omit_unit: true) %>
+    <% end %>
+  </p>
 
-      <div class="row">
-        <div class="col-xs-12">
+  <table class="table max-w-md w-full">
+    <tbody>
+      <% if @report.calculation.energy_emissions > 0 %>
+        <tr>
+          <th class="pt-3 text-left"><%=t 'business.climate_reports.energy' %></th>
+          <td class="pt-3 text-right"><%= co2e_string(@report.calculation.energy_emissions) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+    <tbody class="divider-y">
+      <% if @report.calculation.electricity_consumption_emissions > 0 %>
+        <tr>
+          <td>- <%=t 'business.climate_reports.electricity' %></td>
+          <td class="text-right"><%= co2e_string(@report.calculation.electricity_consumption_emissions) %></td>
+        </tr>
+      <% end %>
+      <% if @report.calculation.heating_emissions > 0 %>
+        <tr>
+          <td>- <%=t 'business.climate_reports.heating' %></td>
+          <td class="text-right"><%= co2e_string(@report.calculation.heating_emissions) %></td>
+        </tr>
+      <% end %>
+      <% if @report.calculation.servers_emissions > 0 %>
+        <tr>
+          <td>- <%=t 'business.climate_reports.servers' %></td>
+          <td class="text-right"><%= co2e_string(@report.calculation.servers_emissions) %></td>
+        </tr>
+      <% end %>
+      <% if @report.calculation.cloud_servers_emissions > 0 %>
+        <tr>
+          <td>- <%=t 'business.climate_reports.cloud_servers' %></td>
+          <td class="text-right"><%= co2e_string(@report.calculation.cloud_servers_emissions) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+    <tbody>
+      <% if @report.calculation.business_trips_emissions > 0 %>
+        <tr>
+          <th class="pt-3 text-left"><%=t 'business.climate_reports.business_trips' %></th>
+          <td class="pt-3 text-right"><%= co2e_string(@report.calculation.business_trips_emissions) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+    <tbody class="divider-y">
+      <% if @report.calculation.flight_emissions > 0 %>
+        <tr>
+          <td>- <%=t 'business.climate_reports.flights' %></td>
+          <td class="text-right"><%= co2e_string(@report.calculation.flight_emissions) %></td>
+        </tr>
+      <% end %>
+      <% if @report.calculation.car_emissions > 0 %>
+        <tr>
+          <td>- <%=t 'business.climate_reports.car_taxi' %></td>
+          <td class="text-right"><%= co2e_string(@report.calculation.car_emissions) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+    <tbody>
+      <% if @report.calculation.meals_emissions > 0 %>
+        <tr>
+          <th class="pt-3 text-left"><%=t 'business.climate_reports.food' %></th>
+          <td class="pt-3 text-right"><%= co2e_string(@report.calculation.meals_emissions) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+    <tbody>
+      <% if @report.calculation.material_emissions > 0 %>
+        <tr>
+          <th class="pt-3 text-left"><%=t 'business.climate_reports.material' %></th>
+          <td class="pt-3 text-right"><%= co2e_string(@report.calculation.material_emissions) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+    <tbody class="divider-y">
+      <% if @report.calculation.purchased_computers_emissions > 0 %>
+        <tr>
+          <td>- <%=t 'business.climate_reports.purchased_computers' %></td>
+          <td class="text-right"><%= co2e_string(@report.calculation.purchased_computers_emissions) %></td>
+        </tr>
+      <% end %>
+      <% if @report.calculation.purchased_phones_emissions > 0 %>
+        <tr>
+          <td>- <%=t 'business.climate_reports.purchased_phones' %></td>
+          <td class="text-right"><%= co2e_string(@report.calculation.purchased_phones_emissions) %></td>
+        </tr>
+      <% end %>
+      <% if @report.calculation.purchased_monitors_emissions > 0 %>
+        <tr>
+          <td>- <%=t 'business.climate_reports.purchased_monitors' %></td>
+          <td class="text-right"><%= co2e_string(@report.calculation.purchased_monitors_emissions) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+    <% if @report.calculation.other_emissions > 0 %>
+      <tbody>
+        <tr>
+          <th class="pt-3 text-left"><%=t 'business.climate_reports.other' %></th>
+          <td class="pt-3 text-right"><%= co2e_string(@report.calculation.other_emissions) %></td>
+        </tr>
+      </tbody>
+      <tbody class="divider-y">
+        <% if @report.other_specification.present? %>
+          <tr>
+            <td><%= simple_format(@report.other_specification) %></td>
+            <td></td>
+          </tr>
+        <% end %>
+      </tbody>
+    <% end %>
+    <tfoot>
+      <tr class="font-bold">
+        <td class="pt-3"><%=t 'business.climate_reports.total' %></td>
+        <td class="pt-3 text-right"><%= co2e_string(@report.calculation.total_emissions) %></td>
+      </tr>
+    </tfoot>
+  </table>
+</section>
 
-          <h1 class="cover-heading">
-            <%=t 'business.climate_reports.show.header' %>
-          </h1>
-          <p class="lead">
-            <%=t 'business.climate_reports.show.result', 
-                 calculation_period: @report.calculation_period, 
-                 total_emissions: co2e_string(@report.calculation.total_emissions, omit_unit: true)
-            %>
-            <% if @report.employees > 1 %>
-              <%=t 'business.climate_reports.show.result_per_employee', 
-                   emissions_per_employee: co2e_string(@report.calculation.per_employee_emissions, omit_unit: true) %>
-             <% end %>
-          </p>
 
-        </div>
-      </div>
+<section class="section-padding">
+  <div class="section-gutter flex flex-col d:flex-row">
+    <div class="d:w-1/2">
+      <h2 class="heading-lg"><%=t 'business.climate_reports.show.offset_and_get_report' %></h2>
+      <p class="mt-6"><%=t 'business.climate_reports.show.offset_and_get_report_text' %></p>
+
+      <h3 class="heading mt-6 mb-3"><%=t 'this_is_how_the_money_is_used_header' %></h3>
+      <ul class="space-y-3">
+        <% @projects.each do |project| %>
+          <li class="flex items-center p-3 bg-white rounded border border-gray-tint-2">
+            <div class="mr-4">
+              <div class="rounded-full overflow-hidden bg-cover bg-center w-12 h-12" style="background-image: url('<%= project.image_url %>')"></div>
+            </div>
+            <span>
+              <p class="font-semibold"><%= project.name %></p>
+              <p><%= project.country %></p>
+            </span>
+          </li>
+        <% end %>
+      </ul>
     </div>
-  </div>
-  <span class="glyphicon glyphicon-large glyphicon-chevron-down first" aria-hidden="true"></span>
-</div>
+    <div class="d:w-1/2">
+      <div class="callout d-md:mx-8 d-lg:mx-24">
+        <h2 class="heading-lg text-center mb-6">
+          <%=t 'business.climate_reports.show.your_order' %>
+        </h2>
 
-<div class="site-wrapper-second">
-  <div class="inner inner--with-grid">
-    <div class="container">
+        <table class="table">
+          <tbody>
+            <tr>
+              <td colspan="2">
+                <ul class="list-bullet">
+                  <li><%=t 'business.climate_reports.show.carbon_offseting' %>:
+                    <%= co2e_string(@report.calculation.total_emissions, omit_unit: true) %> x
+                    <%= ClimateReportInvoice::BUFFER_FACTOR %>
+                    (<%=t 'business.climate_reports.show.safety_factor' %>
+                    <span class="tooltip font-bold" data-tooltip="<%=t 'business.climate_reports.show.safety_factor_explanation' %>">[?]</span>) = 
+                    <%= co2e_string(@invoice.co2e) %>
+                  </li>
+                  <li><%=t 'business.climate_reports.show.climate_report' %></li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr class="font-bold">
+              <td><%=t 'business.climate_reports.show.sum' %></td>
+              <td class="text-right"><%= price_string(@invoice.amount, 'sek', lowest_denominator: true) %></td>
+            </tr>
+          </tfoot>
+        </table>
 
-      <div class="row">
-        <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
-          <h1 class="cover-heading"><%=t 'business.climate_reports.show.reduce_header' %></h1>
-          <p class="lead"><%=t 'business.climate_reports.show.reduce_body' %></p>
+        <div class="border-t border-gray-accent my-3"></div>
 
-          <table class="table climate-report-table">
-            <tbody>
-              <% if @report.calculation.energy_emissions > 0 %>
-                <tr class="active">
-                  <th><%=t 'business.climate_reports.energy' %></th>
-                  <td><%= co2e_string(@report.calculation.energy_emissions) %></td>
-                </tr>
-              <% end %>
-              <% if @report.calculation.electricity_consumption_emissions > 0 %>
-                <tr>
-                  <td>- <%=t 'business.climate_reports.electricity' %></td>
-                  <td><%= co2e_string(@report.calculation.electricity_consumption_emissions) %></td>
-                </tr>
-              <% end %>
-              <% if @report.calculation.heating_emissions > 0 %>
-                <tr>
-                  <td>- <%=t 'business.climate_reports.heating' %></td>
-                  <td><%= co2e_string(@report.calculation.heating_emissions) %></td>
-                </tr>
-              <% end %>
-              <% if @report.calculation.servers_emissions > 0 %>
-                <tr>
-                  <td>- <%=t 'business.climate_reports.servers' %></td>
-                  <td><%= co2e_string(@report.calculation.servers_emissions) %></td>
-                </tr>
-              <% end %>
-              <% if @report.calculation.cloud_servers_emissions > 0 %>
-                <tr>
-                  <td>- <%=t 'business.climate_reports.cloud_servers' %></td>
-                  <td><%= co2e_string(@report.calculation.cloud_servers_emissions) %></td>
-                </tr>
-              <% end %>
-              <% if @report.calculation.business_trips_emissions > 0 %>
-                <tr class="active">
-                  <th><%=t 'business.climate_reports.business_trips' %></th>
-                  <td><%= co2e_string(@report.calculation.business_trips_emissions) %></td>
-                </tr>
-              <% end %>
-              <% if @report.calculation.flight_emissions > 0 %>
-                <tr>
-                  <td>- <%=t 'business.climate_reports.flights' %></td>
-                  <td><%= co2e_string(@report.calculation.flight_emissions) %></td>
-                </tr>
-              <% end %>
-              <% if @report.calculation.car_emissions > 0 %>
-                <tr>
-                  <td>- <%=t 'business.climate_reports.car_taxi' %></td>
-                  <td><%= co2e_string(@report.calculation.car_emissions) %></td>
-                </tr>
-              <% end %>
-              <% if @report.calculation.meals_emissions > 0 %>
-                <tr class="active">
-                  <th><%=t 'business.climate_reports.food' %></th>
-                  <td><%= co2e_string(@report.calculation.meals_emissions) %></td>
-                </tr>
-              <% end %>
-              <% if @report.calculation.material_emissions > 0 %>
-                <tr class="active">
-                  <th><%=t 'business.climate_reports.material' %></th>
-                  <td><%= co2e_string(@report.calculation.material_emissions) %></td>
-                </tr>
-              <% end %>
-              <% if @report.calculation.purchased_computers_emissions > 0 %>
-                <tr>
-                  <td>- <%=t 'business.climate_reports.purchased_computers' %></td>
-                  <td><%= co2e_string(@report.calculation.purchased_computers_emissions) %></td>
-                </tr>
-              <% end %>
-              <% if @report.calculation.purchased_phones_emissions > 0 %>
-                <tr>
-                  <td>- <%=t 'business.climate_reports.purchased_phones' %></td>
-                  <td><%= co2e_string(@report.calculation.purchased_phones_emissions) %></td>
-                </tr>
-              <% end %>
-              <% if @report.calculation.purchased_monitors_emissions > 0 %>
-                <tr>
-                  <td>- <%=t 'business.climate_reports.purchased_monitors' %></td>
-                  <td><%= co2e_string(@report.calculation.purchased_monitors_emissions) %></td>
-                </tr>
-              <% end %>
-              <% if @report.calculation.other_emissions > 0 %>
-                <tr class="active">
-                  <th><%=t 'business.climate_reports.other' %></th>
-                  <td><%= co2e_string(@report.calculation.other_emissions) %></td>
-                </tr>
-                <% if @report.other_specification.present? %>
-                  <tr>
-                    <td><%= simple_format(@report.other_specification) %></td>
-                    <td></td>
-                  </tr>
+        <%= form_for @invoice, url: business_climate_report_invoice_path(@report), html: { id: "payment-form", class: "space-y-3" } do |f| %>
+          <% if @invoice.errors.any? %>
+            <div class="border border-primary rounded">
+              <div class="space-y-3">
+                <% @invoice.errors.full_messages.each do |message| %>
+                  <p><%= message %></p>
                 <% end %>
-              <% end %>
-            </tbody>
-            <tfoot>
-              <tr class="active">
-                <td><%=t 'business.climate_reports.total' %></td>
-                <td><%= co2e_string(@report.calculation.total_emissions) %></td>
-              </tr>
-            </tfoot>
-          </table>
-        </div>
-      </div>
+              </div>
+            </div>
+          <% end %>
 
-    </div>
-  </div>
-</div>
-
-<div class="site-wrapper-third">
-  <div class="inner inner--with-grid">
-    <div class="container">
-
-      <div class="row">
-        <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
-          <h1 class="cover-heading"><%=t 'business.climate_reports.show.offset_and_get_report' %></h1>
-          <p class="lead"><%=t 'business.climate_reports.show.offset_and_get_report_text' %></p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<div class="site-wrapper-second">
-  <div class="inner inner--with-grid">
-    <div class="container">
-
-      <div class="row content-section">
-        <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
-
-          <h1 class="cover-heading content-section"><%=t 'business.climate_reports.show.your_order' %></h1>
-
-          <table class="content-section flight-offset-details">
-            <tbody>
-              <tr>
-                <td colspan="2">
-                  <ul class="flight-offset-details__segments">
-                    <li>
-                      <%=t 'business.climate_reports.show.carbon_offseting' %>: 
-                      <%= co2e_string(@report.calculation.total_emissions, omit_unit: true) %> x <%= ClimateReportInvoice::BUFFER_FACTOR %> (<%=t 'business.climate_reports.show.safety_factor' %>) = <%= co2e_string(@invoice.co2e) %>
-                    <br>
-                      <%=t 'business.climate_reports.show.safety_factor_explanation' %>
-                    </li>
-                    <li><%=t 'business.climate_reports.show.climate_report' %></li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr class="flight-offset-details__key-row">
-                <td><%=t 'business.climate_reports.show.sum' %>:</td>
-                <td><%= price_string(@invoice.amount, 'sek', lowest_denominator: true) %></td>
-              </tr>
-            </tfoot>
-          </table>
-
-          <%= render 'shared/projects' %>
-
-        </div>
-      </div>
-
-      <%= form_for @invoice, url: business_climate_report_invoice_path(@report), html: { id: "payment-form", class: "form-horizontal content-section" } do |f| %>
-        <% if @invoice.errors.any? %>
-          <%# This is a panel because alerts are currently scripted to be dismissed automatically %>
-          <div class="panel panel-danger">
-            <div class="panel-heading">
-              <% @invoice.errors.full_messages.each do |message| %>
-                <p><%= message %></p>
-              <% end %>
+          <div>
+            <label for="address" class="font-bold">
+              <%=t 'business.climate_reports.show.invoice_address' %>
+            </label>
+            <div>
+              <%= f.text_area :invoice_address, class: 'input w-full', required: '' %>
             </div>
           </div>
-        <% end %>
-        <div class="form-group">
-          <label for="address" class="col-sm-5 control-label">
-            <%=t 'business.climate_reports.show.invoice_address' %>
-          </label>
-          <div class="col-sm-7">
-            <%= f.text_area :invoice_address, class: 'form-control', required: '' %>
-          </div>
-        </div>
 
-        <div class="form-group">
-          <label for="vat_number" class="col-sm-5 control-label">
-            <%=t 'business.climate_reports.show.vat_number' %>
-          </label>
-          <div class="col-sm-7">
-            <%= f.text_field :vat_number, class: 'form-control' %>
+          <div>
+            <label for="vat_number" class="font-bold block">
+              <%=t 'business.climate_reports.show.vat_number' %>
+            </label>
+            <%= f.text_field :vat_number, class: 'input w-full' %>
           </div>
-        </div>
 
-        <div class="form-group">
-          <label for="email" class="col-sm-5 control-label">
-            <%=t 'business.climate_reports.show.invoice_email' %>
-          </label>
-          <div class="col-sm-7">
-            <%= f.email_field :invoice_email, class: 'form-control' %>
-          </div>
-          <div class="col-sm-offset-5 col-sm-7">
-            <span id="helpBlock" class="help-block text-left">
+          <div>
+            <label for="email" class="font-bold block">
+              <%=t 'business.climate_reports.show.invoice_email' %>
+            </label>
+            <%= f.email_field :invoice_email, class: 'input w-full' %>
+            <p class="text-sm">
               <%=t 'business.climate_reports.show.invoice_email_text' %>
-            </span>
+            </p>
           </div>
-        </div>
 
-        <div class="form-group form-group-sm-centered">
-          <div class="col-sm-offset-5 col-sm-7">
-            <input type="submit" value="<%=t 'business.climate_reports.show.order' %>" class="btn btn-success">
+          <div>
+            <%= f.submit t('business.climate_reports.show.order'), class: 'button button-cta w-full' %>
           </div>
-        </div>
-      <% end %>
-
-      <div class="content-section">
-        <p><%=t 'business.climate_reports.show.well_get_in_touch_html' %></p>
+        <% end %>
       </div>
 
-      <div class="content-section">
-        <p><%= link_to t('business.climate_reports.show.new_based_on_this'), new_business_climate_report_path(based_on: @report), class: 'btn btn-default' %></p>
-      </div>
-
+      <p class="mt-6 text-sm text-center">
+        <%= link_to t('business.climate_reports.show.new_based_on_this'), new_business_climate_report_path(based_on: @report), class: 'link' %>
+      </p>
     </div>
+    <!-- end of right column-->
   </div>
-</div>
+</section>
 
-<%= render "shared/footer_old" %>
+<section class="section-padding">
+  <p><%=t 'business.climate_reports.show.well_get_in_touch_html' %></p>
+</section>
+
+
+<section class="section-padding text-center">
+  <h2 class="heading-lg"><%=t 'business.climate_reports.show.reduce_header' %></h2>
+  <p class="mt-6 t:w-2/3 d:w-1/2 mx-auto"><%=t 'business.climate_reports.show.reduce_body' %></p>
+</section>
+
+<%= render "shared/bottom_landscape" %>
+<%= render "shared/footer", skip_prefooter: true %>
 
 <%= intercom_script_tag(
   custom_data: {

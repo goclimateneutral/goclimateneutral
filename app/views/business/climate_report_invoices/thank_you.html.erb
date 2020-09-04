@@ -1,33 +1,22 @@
-<% content_for :stylesheets do %>
-  <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
-<% end %>
-<% content_for :javascripts do %>
-  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'reportLoadError(event)' %>
-<% end %>
+<%= render "shared/header" %>
 
-<div class="site-wrapper-first">
-  <%= render "shared/header_old" %>
-  <div class="inner inner--bottom-padding">
-
-    <span class="glyphicon glyphicon-large glyphicon-heart" aria-hidden="true"></span>
-
-    <div class="content-section">
-      <h1 class="cover-heading"><%=t 'thank_you' %></h1>
-      <p class="lead">
-        <%=t 'business.climate_report_invoices.thank_you.thank_you_text' %>
-      </p>
-      <p class="lead">
-        <%=t 'business.climate_report_invoices.thank_you.well_be_in_touch' %>
-      </p>
-      <p class="lead">
-        <%=t 'business.climate_report_invoices.thank_you.thanks_again' %>
-      </p>
-    </div>
-
+<section class="section-padding">
+  <h1 class="heading-xl mb-6"><%=t 'thank_you' %></h1>
+  <div class="d:w-1/2 space-y-3">
+    <p class="text-lg">
+      <%=t 'business.climate_report_invoices.thank_you.thank_you_text' %>
+    </p>
+    <p class="text-lg">
+      <%=t 'business.climate_report_invoices.thank_you.well_be_in_touch' %>
+    </p>
+    <p class="text-lg">
+      <%=t 'business.climate_report_invoices.thank_you.thanks_again' %>
+    </p>
   </div>
-</div>
+</section>
 
-<%= render "shared/footer_old" %>
+<%= render "shared/bottom_landscape" %>
+<%= render "shared/footer", skip_prefooter: true %>
 
 <%= intercom_script_tag(
   custom_data: {
