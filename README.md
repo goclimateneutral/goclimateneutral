@@ -169,6 +169,14 @@ We have a custom set up for A/B testing. Setting up an A/B test is done in `expe
 * Run Ruby tests: `bin/rspec`
 * Run Ruby linter: `bin/rubocop`
 
+## Deployment
+
+The deployment process is automatic if you are not making any database changes - just merge into master.
+
+### Deploying database changes
+
+If you are making database changes, you need to manually run them in the Heroku console. Good and safe practise is to keep your migrations into its own commit and deploy separate from the code that is affected by your database changes. The order depends of whether you're adding or removing things from the database. The command to run the migrations is: `heroku run rails db:migrate -a goclimateneutral`.
+
 ## Troubleshooting
 
 ### Reseting your database
