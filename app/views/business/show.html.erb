@@ -1,122 +1,110 @@
-<% content_for :stylesheets do %>
-  <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
-<% end %>
-<% content_for :javascripts do %>
-  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'reportLoadError(event)' %>
-<% end %>
+<%= render "shared/header" %>
 
-<div class="site-wrapper-first">
-  <%= render "shared/header_old" %>
-  <div class="inner">
+<section class="section-padding">
+  <h1 class="heading-xl"><%= title(t('welcome.business.for_companies')) %></h1>
+  <p class="mt-6 t:w-2/3 d:w-1/2"><%= description(t('welcome.business.for_companies_text_html')) %></p>
+</section>
 
-    <h1 class="cover-heading"><%= title(t('welcome.business.for_companies')) %></h1>
-    <p class="lead"><%= description(t('welcome.business.for_companies_text_html')) %></p>
-
-  </div>
-  <span class="glyphicon glyphicon-large glyphicon-chevron-down first" aria-hidden="true"></span>
-</div>
-
-<div class="site-wrapper-second company-logos">
-  <div class="inner">
-
-    <h4 class="cover-heading"><%=t 'welcome.business.customers_we_work_with' %>:</h4>
-    <div class="row">
-      <div class="col-lg-4">
-        <%= image_tag webpack_asset_path("images/companies/norrsken.png"), width: "300", alt: "norrsken" %>
-      </div>
-      <div class="col-lg-4">
-        <%= image_tag webpack_asset_path("images/companies/netlight.png"), width: "300", alt: "netlight" %>
-      </div>
-      <div class="col-lg-4">
-        <%= image_tag webpack_asset_path("images/companies/mentimeter.png"), width: "300", alt: "mentimeter" %>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-4">
-        <%= image_tag webpack_asset_path("images/companies/wdht.png"), width: "300", alt: "wedonthavetime" %>
-      </div>
-      <div class="col-lg-4">
-        <%= image_tag webpack_asset_path("images/companies/blocket.png"), width: "300", alt: "blocket" %>
-      </div>
-      <div class="col-lg-4">
-        <%= image_tag webpack_asset_path("images/companies/breakit.png"), width: "300", alt: "breakit" %>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<div class="site-wrapper-third">
-  <div class="inner">
-    <div class="content-section">
-      <span class="glyphicon glyphicon-large glyphicon-leaf" aria-hidden="true"></span>
-      <h2 class="cover-heading"><%=t 'welcome.business.calculate_footprint' %></h2>
-      <p class="lead"><%=t 'welcome.business.calculate_footprint_html' %></p>
-    </div>
-    <div class="content-section">
-      <p>
-        <%= link_to I18n.t('welcome.business.calculate_footprint_button'), new_business_climate_report_path, class: 'btn btn-lg btn-success' %>
-      </p>
+<section class="section-padding">
+  <div class="callout">
+    <h2 class="heading-lg mb-6 text-center"><%=t 'welcome.business.customers_we_work_with' %></h2>
+    <div class="flex flex-col items-center t:flex-row t:flex-wrap">
+      <% [
+        {
+          alt: 'norrsken',
+          img_url: 'images/companies/norrsken.png',
+        },
+        {
+          alt: 'netlight',
+          img_url: 'images/companies/netlight.png',
+        },
+        {
+          alt: 'mentimeter',
+          img_url: 'images/companies/mentimeter.png',
+        },
+        {
+          alt: 'wedonthavetime',
+          img_url: 'images/companies/wdht.png',
+        },
+        {
+          alt: 'blocket',
+          img_url: 'images/companies/blocket.png',
+        },
+        {
+          alt: 'breakit',
+          img_url: 'images/companies/breakit.png',
+        }
+      ].each do |partner| %>
+        <div class="t:w-1/3 px-8 py-4">
+          <%= image_tag webpack_asset_path(partner[:img_url]), width: "300", alt: partner[:alt] %>
+        </div>
+      <% end %>
     </div>
   </div>
-  <span class="glyphicon glyphicon-large glyphicon-chevron-down" aria-hidden="true"></span>
-</div>
+</section>
 
-<div class="site-wrapper-second offset-employees">
-  <div class="inner">
+<section class="section-padding">
+  <div class="section-gutter t:flex flex-row items-center">
+    <div class="t:w-1/2">
+      <h2 class="heading-lg"><%= t 'welcome.business.calculate_footprint' %></h2>
+      <p class="my-6"><%= t('welcome.business.calculate_footprint_html').gsub('<a', '<a class="link"').html_safe %></p>
+      <%= link_to I18n.t('welcome.business.calculate_footprint_button'), 
+        new_business_climate_report_path, class: 'button button-cta' %>
+    </div>
+    <div class="t:w-1/2">
+      <%= image_tag webpack_asset_path('images/illustrations/save_the_planet.png'), class: 'mx-auto', alt: '' %>
+    </div>
+  </div>
+</section>
 
-    <span class="glyphicon glyphicon-large glyphicon-sunglasses" aria-hidden="true"></span>
-    <h2 class="cover-heading"><%=t 'welcome.business.offset_employees' %></h2>
-    <p class="lead"><%=t 'welcome.business.offset_employees_html' %></p>
-    <div class="container">
-      <p class="big-number">
-        <% case I18n.locale when :en %>
-          $<span id="big-number"></span> /month
-        <% when :de %>
-          <span id="big-number"></span> €/month
-        <% when :sv %>
-          <span id="big-number"></span> kr/månad
-        <% end %>
-      </p>
-        <p><%=t 'welcome.business.equivalent_co2_offset' %></p>
+<section class="section-padding">
+  <div class="section-gutter t:flex t:flex-row-reverse items-center">
+    <div class="t:w-1/2">
+      <h2 class="heading-lg"><%=t 'welcome.business.offset_employees' %></h2>
+      <p class="my-6"><%=t 'welcome.business.offset_employees_html' %></p>
+      <div class="callout">
+        <p class="heading-lg text-center">
+          <% case I18n.locale when :en %>
+            $<span id="big-number"></span> /month
+          <% when :de %>
+            <span id="big-number"></span> €/month
+          <% when :sv %>
+            <span id="big-number"></span> kr/månad
+          <% end %>
+        </p>
+        <p class="text-sm text-center"><%=t 'welcome.business.equivalent_co2_offset' %></p>
 
-        <%= form_tag(business_contacts_path, class: 'form-horizontal') do %>
-          <div class="form-group">
-            <%= label_tag(:number_of_employees, t('welcome.business.number_of_employees'), class: 'col-sm-5 control-label') %>
-            <div class="col-sm-3">
-              <%= text_field_tag :number_of_employees, '10', class: 'form-control', required: '' %>
+        <%= form_tag(business_contacts_path, class: 'my-3') do %>
+          <div class="text-center">
+            <%= label_tag(:number_of_employees, t('welcome.business.number_of_employees'), class: 'font-bold') %>
+            <div class="">
+              <%= number_field_tag :number_of_employees, '10', class: 'input w-full d:w-auto', required: '' %>
             </div>
           </div>
-          <div class="form-group">
-            <%= label_tag(:email, t('welcome.business.your_email'), class: 'col-sm-5 control-label') %>
-            <div class="col-sm-3">
-              <%= email_field_tag :email, '', class: 'form-control', required: '' %>
+          <div class="text-center mt-1">
+            <%= label_tag(:email, t('welcome.business.your_email'), class: 'font-bold') %>
+            <div class="">
+              <%= email_field_tag :email, '', class: 'input w-full d:w-auto', required: '' %>
             </div>
           </div>
-          <div class="form-group">
-            <div class="col-lg-offset-5 col-lg-2 button">
-              <button type="submit" class="btn btn-success"><%=t 'welcome.business.im_interested' %>!</button>
-            </div>
+          <div class="mt-3 text-center">
+              <button type="submit" class="button button-cta w-full d:w-auto"><%=t 'welcome.business.im_interested' %>!</button>
           </div>
         <% end %>
       </div>
     </div>
-  <span class="glyphicon glyphicon-large glyphicon-chevron-down" aria-hidden="true"></span>
-</div>
-
-
-
-<div class="site-wrapper-third">
-  <div class="inner">
-
-    <span class="glyphicon glyphicon-large glyphicon-heart-empty" aria-hidden="true"></span>
-    <h2 class="cover-heading"><%=t 'welcome.business.other_offsetting' %></h2>
-    <p class="lead"><%=t 'welcome.business.other_offsetting_html' %></p>
-
+    <div class="t:w-1/2">
+      <%= image_tag webpack_asset_path('images/illustrations/describe_lifestyle.png'), class: 'mx-auto', alt: '' %>
+    </div>
   </div>
-</div>
+</section>
 
-<%= render "shared/footer_old" %>
+<section class="section-padding">
+  <h2 class="heading-lg"><%=t 'welcome.business.other_offsetting' %></h2>
+  <p class="mt-6 t:w-2/3 d:w-1/2"><%=t('welcome.business.other_offsetting_html').gsub('<a', '<a class="link"').html_safe %></p>
+</section>
+
+<%= render 'shared/footer' %>
 
 <% content_for :javascript_tags do %>
   <script>
