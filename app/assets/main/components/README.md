@@ -10,6 +10,7 @@ Table of contents
 - [Input](#input)
 - [Link](#link)
 - [Lists](#lists)
+- [Modal](#modal)
 - [Section gutter](#section-gutter)
 - [Section padding](#section-padding)
 - [Select](#select)
@@ -224,6 +225,33 @@ By our default CSS normalization and Tailwind preflight, `<ul>` and `<ol>` are u
   <li>I too, have a point in this list</li>
   <li>What is the point?</li>
 </ul>
+```
+
+## Modal
+
+Modal is component that requires Javascript to function properly, it's however pretty simple to use out of the box. The component is composed of five classes, where only four needs to be used when implementing a modal; `modal-close-button` is added by the controller for simplicity. To make the modal interactive, use the Javascript controller `modal`. See implementation below.
+
+- `modal-container` takes care of the modal layer and dark overlay background
+- `modal-content` is the actual modal, it's basically the same styles as in a `callout`
+- `modal-heading` is a simple heading class that adds right padding to not interfere with the close "x" buton of the modal
+- `modal-close-button` positions the close button in the top right corner of the modal. NB! This is added by the controller
+- `modal-actions` positions the modal actions, i.o.w. the buttons. NB! This class assumes the actions have the class `button` applied to them
+
+### Examples
+
+```
+<div data-controller="modal">
+  <button data-target="modal.trigger" data-action="modal#open">I open the modal</button>
+
+  <div class="modal-container" data-target="modal.container">
+    <div class="modal-content" data-target="modal.content">
+      <h3 class="modal-heading">My modal heading</h3>
+      <p>My modal content</p>
+      <button data-action="modal#close">Close modal</button>
+      <button>Confirm modal</button>
+    </div>
+  </div>
+</div>
 ```
 
 ## Section gutter
