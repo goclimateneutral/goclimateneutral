@@ -8,12 +8,5 @@ eo:
         heading: crwdns14884:0crwdne14884:0
         action: crwdns14886:0crwdne14886:0
         abort: crwdns14888:0crwdne14888:0
-        confirm: crwdns14890:0crwdne14890:0
+        confirm: crwdns14906:0crwdne14906:0
         cancellation_successful: crwdns14892:0crwdne14892:0
-        cancellation_reasons:
-          price_too_high: crwdns14894:0crwdne14894:0
-          different_finantial_conditions: crwdns14896:0crwdne14896:0
-          dont_believe_goclimate_makes_difference: crwdns14898:0crwdne14898:0
-          dont_belive_climate_change: crwdns14900:0crwdne14900:0
-          wont_disclose: crwdns14902:0crwdne14902:0
-          other: crwdns14904:0crwdne14904:0
