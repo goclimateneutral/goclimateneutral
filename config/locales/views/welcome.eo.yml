@@ -3,6 +3,7 @@ eo:
     welcome:
       index:
         hero:
+          heading_alternative: crwdns14882:0crwdne14882:0
           heading: crwdns13108:0crwdne13108:0
           body_text: crwdns13110:0crwdne13110:0
         how_it_works:
