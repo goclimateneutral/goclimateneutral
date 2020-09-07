@@ -1,0 +1,19 @@
+eo:
+  views:
+    subscriptions:
+      update:
+        heading: crwdns14872:0crwdne14872:0
+        no_subscription: crwdns14874:0crwdne14874:0
+      cancel:
+        heading: crwdns14884:0crwdne14884:0
+        action: crwdns14886:0crwdne14886:0
+        abort: crwdns14888:0crwdne14888:0
+        confirm: crwdns14908:0crwdne14908:0
+        cancellation_successful: crwdns14892:0crwdne14892:0
+        cancellation_reasons:
+          price_too_high: crwdns14910:0crwdne14910:0
+          different_finantial_conditions: crwdns14912:0crwdne14912:0
+          dont_believe_goclimate_makes_difference: crwdns14914:0crwdne14914:0
+          dont_belive_climate_change: crwdns14916:0crwdne14916:0
+          wont_disclose: crwdns14918:0crwdne14918:0
+          other: crwdns14920:0crwdne14920:0
