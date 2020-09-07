@@ -20,4 +20,12 @@
 
   /* Disable native styling for Webkit on iOS */
   &, & input { -webkit-appearance: none; }
+
+  &:disabled {
+    @apply 
+      text-gray-shade-1
+      border-gray-shade-2
+      bg-gray-tint-2
+      cursor-not-allowed;
+  }
 }
