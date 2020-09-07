@@ -1,19 +1,1 @@
 sv:
-  views:
-    subscriptions:
-      update:
-        heading: Uppdatera prenumeration
-        no_subscription: Ingen prenumeration
-      cancel:
-        heading: Avsluta prenumeration
-        action: Avsluta prenumeration
-        abort: Behåll prenumeration
-        confirm: Tack för att du har varit med och bidragit! Berätta gärna varför du avslutar så att vi kan bli bättre i framtiden.
-        cancellation_successful: Din prenumeration har avslutats.
-        cancellation_reasons:
-          price_too_high: Priset är för högt
-          different_finantial_conditions: Mina ekonomiska förutsättningar har ändrats
-          dont_believe_goclimate_makes_difference: Jag tror inte GoClimate gör skillnad för klimatet
-          dont_belive_climate_change: Jag tror inte vi behöver stoppa klimatförändringarna
-          wont_disclose: Jag vill ej ange
-          other: Annat
