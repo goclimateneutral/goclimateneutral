@@ -1,0 +1,8 @@
+en:
+  views:
+    receipts:
+      heading: Your receipts
+      date: Date
+      amount: Amount
+      link: Link
+      view: View receipt

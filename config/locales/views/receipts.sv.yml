@@ -1,0 +1,8 @@
+sv:
+  views:
+    receipts:
+      heading: Dina kvitton
+      date: Datum
+      amount: Belopp
+      link: Länk
+      view: Visa kvitto
