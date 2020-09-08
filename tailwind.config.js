@@ -143,6 +143,7 @@ module.exports = {
         '-1/2': '-50%'
       },
       width: {
+        100: '25rem',
         'max-content': 'max-content'
       },
       maxHeight: (theme) => ({
