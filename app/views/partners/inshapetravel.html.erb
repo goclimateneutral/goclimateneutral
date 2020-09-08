@@ -1,72 +1,62 @@
-<% content_for :stylesheets do %>
-  <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
-<% end %>
-<% content_for :javascripts do %>
-  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'reportLoadError(event)' %>
-<% end %>
+<%= render "shared/header" %>
 
-<div class="site-wrapper-first">
-  <%= render "shared/header_old" %>
-  <div class="inner">
+<section class="section-padding">
+    <h1 class="heading-xl mb-6">Klimatkompensera din flygresa!</h1>
+    <p class="d:w-1/2">GoClimate hjälper Inshape Travels kunder att klimatkompensera sina flygresor. Välj att du vill klimatkompensera när du bokar din resa på <%= link_to 'inshapetravel.se', 'https://www.inshapetravel.se/', class: 'link', target: '_blank', rel: 'noopener' %> så fixar Inshape Travel och vi resten!</p>
+</section>
 
-    <span class="glyphicon glyphicon-large glyphicon-plane" aria-hidden="true"></span>
-    <h1 class="cover-heading">Klimatkompensera din flygresa!</h1>
-    <p class="lead">GoClimate hjälper Inshape Travels kunder att klimatkompensera sina flygresor. Välj att du vill klimatkompensera när du bokar din resa på <%= link_to 'inshapetravel.se', 'https://www.inshapetravel.se/' %> så fixar Inshape Travel och vi resten!<br><br><br><br><br><br></p>
+<section class="section-padding space-y-3">
+  <h2 class="heading-lg">Klimatprojekt som Inshape Travel har stöttat</h2>
+  <p class="d:w-1/2">Inshape Travels kunder har stöttat följande klimatprojekt när de klimatkompenserat sina flygresor.</p>
 
-  </div>
-</div>
+  <table class="w-full text-center">
+    <tbody class="divider-y">
+      <tr>
+        <th></th>
+        <th class="p-2 align-middle"><%=t 'project_name' %></th>
+        <th class="p-2 align-middle"><%=t 'country' %></th>
+        <th class="p-2 align-middle"><%=t 'map' %></th>
+        <th class="p-2 align-middle"><%=t 'our_investment_certificate' %></th>
+        <th class="p-2 align-middle"><%=t 'date_of_our_investment' %></th>
+        <th class="p-2 align-middle"><%=t 'more_info_on_blog' %></th>
+      </tr>
+      <% @projects.each do |project| %>
+        <tr>
+          <td class="p-2 align-middle"><%= image_tag project.image_url, class: "rounded h-12 inline-block" %></td>
+          <td class="p-2 align-middle"><a href ="<%= project.blog_url %>" class="link"><%= project.name %></a></td>
+          <td class="p-2 align-middle"><%= project.country %></td>
+          <td class="p-2 align-middle"><a href="https://www.google.com/maps?z=15&t=k&q=loc:<%= project.latitude %>+<%= project.longitude %>" target="_blank" rel="noopener noreferrer" class="link">Google Maps</a></td>
+          <% if project.certificate_url.nil? || project.certificate_url.empty? %>
+            <td class="p-2 align-middle">-</td>
+          <% else %>
+            <td class="p-2 align-middle"><a href="<%= project.certificate_url %>" class="link"><%=t 'certificate' %></a></td>
+          <% end %>
+          <td class="p-2 align-middle"><%= project.date_bought.to_date %></td>
+          <td class="p-2 align-middle"><a href ="<%= project.blog_url %>" class="link"><%=t 'read_more' %></a></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</section>
 
-<div class="site-wrapper-second">
-  <div class="inner">
-
-    <span class="glyphicon glyphicon-large glyphicon-ok" aria-hidden="true"></span>
-    <div class="row stats offset-projects">
-        <div class="col-md-12">
-            <h1 class="cover-heading">Klimatprojekt som Inshape Travel har stöttat</h1>
-            <p class="lead">Inshape Travels kunder har stöttat följande klimatprojekt när de klimatkompenserat sina flygresor.</p>
-            <div class="table-responsive">
-              <table class="table table-striped our-projects">
-                <tbody>
-                <tr>
-                  <th></th>
-                  <th><%=t 'project_name' %></th>
-                  <th><%=t 'country' %></th>
-                  <th><%=t 'map' %></th>
-                  <th><%=t 'our_investment_certificate' %></th>
-                  <th><%=t 'date_of_our_investment' %></th>
-                  <th><%=t 'more_info_on_blog' %></th>
-                </tr>
-                <% @projects.each do |project| %>
-                <tr>
-                  <td><%= image_tag project.image_url, height: "50" %></td>
-                  <td><a href ="<%= project.blog_url %>"><%= project.name %></a></td>
-                  <td><%= project.country %></td>
-                  <td><a href="https://www.google.com/maps?z=15&t=k&q=loc:<%= project.latitude %>+<%= project.longitude %>" target="_blank">Google Maps</a></td>
-                  <% if project.certificate_url.nil? || project.certificate_url.empty? %>
-                    <td>-</td>
-                  <% else %>
-                    <td><a href="<%= project.certificate_url %>"><%=t 'certificate' %></a></td>
-                  <% end %>
-                  <td><%= project.date_bought.to_date %></td>
-                  <td><a href ="<%= project.blog_url %>"><%=t 'read_more' %></a></td>
-                </tr>
-                </tbody>
-              <% end %>
-            </table>
-          </div>
-        </div>
+<section class="section-padding">
+  <div class="section-gutter t:flex t:flex-row t:items-center">
+    <div class="t:w-1/2 space-y-6">
+      <h2 class="heading-lg"><%=t 'we_are_100_transparent' %></h2>
+      <p>
+        <%=t 'section_3_text' %>
+        <%= link_to 'Läs mer om vår transparens här', transparency_path, class: 'link' %>.
+      </p>
     </div>
-
+    <div class="t:w-1/2">
+      <%= image_tag webpack_asset_path('images/illustrations/transparency.png'), 
+        srcset: { 
+            webpack_asset_path("images/illustrations/transparency-2x.png") => "2x", 
+            webpack_asset_path("images/illustrations/transparency-3x.png") => "3x" 
+        }, 
+        class: 'w-full max-w-md mx-auto', alt: '' %>
+    </div>
   </div>
-</div>
+</section>
 
-<div id="second-section" class="site-wrapper-third">
-  <div class="inner">
-    <span class="glyphicon glyphicon-large glyphicon-search" aria-hidden="true"></span>
-    <h1 class="cover-heading"><%=t 'we_are_100_transparent' %></h1>
-    <p class="lead"><%=t 'section_3_text' %></p>
-    <p class="lead">Kontakta gärna oss om du har några frågor: <%= link_to 'hello@goclimate.com', 'mailto:hello@goclimate.com' %></p>
-  </div>
-</div>
-
-<%= render "shared/footer_old" %>
+<%= render "shared/footer" %>
