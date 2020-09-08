@@ -4,6 +4,9 @@ sv:
       update:
         heading: Uppdatera prenumeration
         no_subscription: Ingen prenumeration
+      receipts:
+        heading: Kvitton
+        action: Se dina kvitton
       cancel:
         heading: Avsluta prenumeration
         action: Avsluta prenumeration

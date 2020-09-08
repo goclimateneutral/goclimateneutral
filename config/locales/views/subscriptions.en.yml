@@ -4,6 +4,9 @@ en:
       update:
         heading: Update subscription
         no_subscription: No subscription
+      receipts:
+        heading: Receipts
+        action: See your receipts
       cancel:
         heading: Cancel subscription
         action: Cancel subscription

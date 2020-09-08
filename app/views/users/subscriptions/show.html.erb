@@ -92,6 +92,12 @@
       <% end %>
     </div>
 
+    <div class="callout max-w-xl mx-auto">
+      <h2 class="heading mb-3"><%= t 'views.subscriptions.receipts.heading' %></h2>
+
+      <%= link_to t('views.subscriptions.receipts.action'), user_receipts_path, class: 'button w-full' %>
+    </div>
+
     <% if @current_plan_price %>
       <div class="callout max-w-xl mx-auto">
         <h2 class="heading mb-3"><%= t 'views.subscriptions.cancel.heading' %></h2>
