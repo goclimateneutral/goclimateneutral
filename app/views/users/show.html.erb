@@ -7,45 +7,105 @@
   window.urlToShare = '<%= user_url(@user) %>'
 <% end %>
 
-<% content_for :stylesheets do %>
-  <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
-<% end %>
-<% content_for :javascripts do %>
-  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'reportLoadError(event)' %>
-<% end %>
+<%= render "shared/header" %>
 
-<div class="site-wrapper-first">
-  <%= render "shared/header_old" %>
-  <div class="inner">
+<section class="bg-blue-tint-1">
+  <div class="relative z-20 max-w-3xl mx-auto px-4 t:px-16 d:px-0 pt-16 t:pt-24 d:pt-32 text-center">
+    <h1 class="heading-xl mb-6">
+      <%= social_quote_for(@user.user_name, @neutral_months) %>
+    </h1>
 
-    <a id="show-video" href=""><span class="glyphicon glyphicon-large" aria-hidden="true"><%= image_tag webpack_asset_path("images/play.png") %></span></a>
-    <h3 class="cover-heading"><%= social_quote_for(@user.user_name, @neutral_months) %></h3>
-
-    <% if @sharing %>
-      <p><%=t 'climate_change_is_best_faced_together' %></p>
-      <div>
-        <div class="row share-buttons last">
-            <div class="col-sm-1"></div>
-            <div class="col-sm-5">
-              <a class="btn btn-social btn-lg btn-facebook" id="share-facebook-bottom"><span class="fa fa-facebook"></span> <%=t 'share_on_facebook' %></a>
-            </div>
-            <div class="col-sm-5">
-              <a class="btn btn-social btn-lg btn-twitter" href="https://twitter.com/intent/tweet?text=<%= encoded_social_quote_for(@user.user_name, @neutral_months) %>" data-size="large"><span class="fa fa-twitter"></span> <%=t 'share_on_twitter' %></a>
-            </div>
-            <div class="col-sm-1"></div>
+    <div class="space-y-3">
+      <% if @sharing %>
+        <p><%=t 'climate_change_is_best_faced_together' %></p>
+        <div class="flex flex-col m-lg:flex-row m-lg:justify-center space-y-1 m-lg:space-y-0 m-lg:space-x-1">
+          <a class="button" id="share-facebook-bottom"><span class="fa fa-facebook"></span> <%=t 'share_on_facebook' %></a>
+          <a class="button" href="https://twitter.com/intent/tweet?text=<%= encoded_social_quote_for(@user.user_name, @neutral_months) %>" data-size="large"><span class="fa fa-twitter"></span> <%=t 'share_on_twitter' %></a>
         </div>
-      </div>
-    <% else %>
-      <p class="welcome"><%=t 'climate_change_is_the_greatest_challange' %></p>
-      <p class="lead lead-btn">
-        <a href="/#choose-plan" class="btn btn-lg btn-success"><%=t 'i_want_to_know_more' %></a>
-      </p>
-    <% end %>
+      <% else %>
+        <p><%=t 'climate_change_is_the_greatest_challange' %></p>
+        <div>
+          <a href="/" class="button button-cta"><%=t 'i_want_to_know_more' %></a>
+        </div>
+      <% end %>
+    </div>
 
   </div>
-</div>
+  <div class="t:-mt-32">
+    <div class="relative overflow-x-hidden w-full h-96 t:h-128">
+      <div class="absolute h-full w-full">
+        <div class="relative h-full mx-auto" style="max-width: 1440px">
+          <%= image_tag webpack_asset_path('images/illustrations/hero/left_behind_horizon-1x.png'), 
+            srcset: { 
+                webpack_asset_path('images/illustrations/hero/left_behind_horizon-2x.png') => "2x"
+            }, 
+            class: 'absolute right-1/2 d:right-auto d:left-0 h-full max-w-none', 
+            style: 'margin-left: -120px', alt: '' %>
+          <%= image_tag webpack_asset_path('images/illustrations/hero/right_behind_horizon-1x.png'),
+            srcset: { 
+                webpack_asset_path('images/illustrations/hero/right_behind_horizon-2x.png') => "2x"
+            },
+            class: 'absolute left-1/3 m-lg:left-1/2 d:left-auto d:right-0 h-full max-w-none',
+            style: 'margin-right: -120px', alt: '' %>
+        </div>
+      </div>
+      <div class="absolute h-full w-full">
+        <%= image_tag webpack_asset_path('images/illustrations/hero/horizon.svg'), class: 'w-full h-full', alt: '' %>
+      </div>
+      <div class="absolute h-full w-full">
+        <div class="h-full mx-auto text-center d-md:space-x-4">
+          <%= image_tag webpack_asset_path('images/illustrations/hero/middle_left-1x.png'),
+            srcset: { 
+              webpack_asset_path('images/illustrations/hero/middle_left-2x.png') => "2x"
+            },
+            class: 'hidden d-md:inline h-full max-w-none', alt: '' %>
+          <%= image_tag webpack_asset_path('images/illustrations/hero/middle_right-1x.png'),
+            srcset: { 
+              webpack_asset_path('images/illustrations/hero/middle_right-2x.png') => "2x"
+            },
+            class: 'hidden d:inline h-full max-w-none', alt: '' %>
+        </div>
+      </div>
+      <div class="absolute h-full w-full">
+        <div class="relative h-full mx-auto" style="max-width: 1440px">
+          <%= image_tag webpack_asset_path('images/illustrations/hero/left-1x.png'),
+            srcset: { 
+              webpack_asset_path('images/illustrations/hero/left-2x.png') => "2x"
+            },
+            class: 'absolute right-1/3 m-lg:right-1/2 d:right-auto d:left-0 h-full max-w-none',
+            style: 'margin-left: -120px', alt: '' %>
+          <%= image_tag webpack_asset_path('images/illustrations/hero/right-1x.png'),
+            srcset: { 
+              webpack_asset_path('images/illustrations/hero/right-2x.png') => "2x"
+            },
+            class: 'absolute left-2/3 m-lg:left-1/2 d:left-auto d:right-0 h-full max-w-none',
+            style: 'margin-right: -120px', alt: '' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<%= render "shared/video_modal" %>
+<section class="section-padding bg-green-tint-1 space-y-6 text-center">
+  <h2 class="heading-lg"><%= t 'views.welcome.index.about_us.heading' %></h2>
+  <div class="max-w-2xl mx-auto">
+    <div class="pb-9/16 relative">
+      <% if I18n.locale == :sv %>
+        <iframe src='https://player.vimeo.com/video/241825913' align='top' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen class="w-full h-full absolute"></iframe>
+      <% else %>
+        <iframe src='https://player.vimeo.com/video/246406263' align='top' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen class="w-full h-full absolute"></iframe>
+      <% end %>
+    </div>
+  </div>
+  <div class="space-y-3">
+    <h3 class="heading"><%= t('views.shared.prefooter.heading') %></h3>
+    <p><%= t('views.shared.prefooter.body_text') %> </p>
+    <p><%= link_to t('views.shared.prefooter.button'), root_path, class: 'button button-cta' %></p>
+  </div>
+</section>
+
+
+<%= render "shared/footer", skip_prefooter: true %>
 
 <% content_for :javascript_tags do %>
   <script>
