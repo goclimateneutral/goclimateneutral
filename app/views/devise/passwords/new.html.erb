@@ -14,10 +14,11 @@
 
       <%= render "devise/shared/error_messages", resource: resource %>
 
-      <button type="submit" class="button button-cta"><%=t 'send_me_an_email_with_instructions' %></button>
+      <button type="submit" class="button button-cta w-full"><%=t 'send_me_an_email_with_instructions' %></button>
     <% end %>
 
   </div>
 </div>
 
-<%= render "shared/footer" %>
+<%= render "shared/bottom_landscape" %>
+<%= render "shared/footer", skip_prefooter: true %>

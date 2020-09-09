@@ -25,17 +25,17 @@
         </label>
       <% end -%>
 
-      <div class="flex items-center space-x-4">
-        <button type="submit" class="button button-cta">
-          <%=t 'log_in' %>
-        </button>
+      <button type="submit" class="button button-cta w-full">
+        <%=t 'log_in' %>
+      </button>
 
-        <span>
-          <%= link_to t('forgot_your_password'), new_user_password_path, class: 'link' %>
-        </span>
-      </div>
     <% end %>
+  </div>
+
+  <div class="text-center mt-6">
+    <%= link_to t('forgot_your_password'), new_user_password_path, class: 'link' %>
   </div>
 </div>
 
-<%= render "shared/footer" %>
+<%= render "shared/bottom_landscape" %>
+<%= render "shared/footer", skip_prefooter: true %>
