@@ -1,46 +1,31 @@
-<% content_for :stylesheets do %>
-  <%= webpack_entrypoint_stylesheet_tags 'main_old' %>
-<% end %>
-<% content_for :javascripts do %>
-  <%= webpack_entrypoint_javascript_tags 'main_old', onerror: 'reportLoadError(event)' %>
-<% end %>
+<%= render "shared/header" %>
 
-<div class="site-wrapper-first">
-  <%= render "shared/header_old" %>
-  <div class="inner">
+<div class="section-padding">
 
-    <span class="glyphicon glyphicon-large glyphicon-globe" aria-hidden="true"></span>
-    <h1 class="cover-heading"><%=t 'change_your_password' %></h1>
-    <p class="lead"><%=t 'change_your_password_by_entering_your_new_password_below' %></p>
+  <div class="callout max-w-lg mx-auto space-y-4">
+    <h1 class="heading-lg"><%=t 'change_your_password' %></h1>
+    <p><%=t 'change_your_password_by_entering_your_new_password_below' %></p>
 
-    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put, class: "form-horizontal" }) do |f| %>
-      <%= render "devise/shared/error_messages", resource: resource %>
-
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put, class: 'space-y-4' }) do |f| %>
       <%= f.hidden_field :reset_password_token %>
 
-      <div class="form-group">
-        <div class="col-sm-1"></div>
-        <label for="password" class="col-sm-4 control-label"><%=t 'password' %></label>
-        <div class="col-sm-4">
-        <%= f.password_field :password, autocomplete: "off", id: "password", class: "form-control" %>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="col-sm-1"></div>
-        <label for="confirmationPassword" class="col-sm-4 control-label"><%=t 'confirm_password' %></label>
-        <div class="col-sm-4">
-        <%= f.password_field :password_confirmation, autocomplete: "off", id: "confirmationPassword", class: "form-control" %>
-        </div>
-      </div>
+      <label class="block">
+        <strong class="block"><%=t 'password' %></strong>
+        <%= f.password_field :password, autocomplete: "off", autofocus: true, required: true, class: "input w-full" %>
+      </label>
 
-      <div class="form-group">
-        <div class="col-sm-offset-5 col-sm-4">
-          <button type="submit" class="btn btn-success sign-in"><%=t 'change_password' %></button>
-        </div>
-      </div>
+      <label class="block">
+        <strong class="block"><%=t 'confirm_password' %></strong>
+        <%= f.password_field :password_confirmation, autocomplete: "off", required: true, class: "input w-full" %>
+      </label>
+
+      <button type="submit" class="button button-cta w-full">
+        <%=t 'change_password' %>
+      </button>
     <% end %>
-
   </div>
+
 </div>
 
-<%= render "shared/footer_old" %>
+<%= render "shared/bottom_landscape" %>
+<%= render "shared/footer", skip_prefooter: true %>
