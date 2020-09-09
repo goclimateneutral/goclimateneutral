@@ -171,7 +171,7 @@ We have a custom set up for A/B testing. Setting up an A/B test is done in `expe
 
 ## Deployment
 
-The deployment process is automatic if you are not making any database changes - just merge into master.
+Deployment is done automatically on pushes to `master` – just merge your changes.
 
 ### Deploying database changes
 
