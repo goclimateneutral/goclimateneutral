@@ -1,20 +1,22 @@
 <%= render "shared/header" %>
 
-<section class="section-padding text-center">
-  <h1 class="heading-xl">
-    <%= title(t('views.welcome.travel_calculator.travel_emissions_calculator')) %>
-  </h1>
-  <p class="mt-6 t:w-2/3 d:w-1/2 mx-auto">
-    <%= description(t('views.welcome.travel_calculator.travel_emissions_calculator_description')) %>
-  </p>
+<section class="section-padding">
+  <div class="section-gutter">
+    <div>
+      <h1 class="heading-xl">
+        <%= title(t('views.welcome.travel_calculator.travel_emissions_calculator')) %>
+      </h1>
+      <p class="mt-6 t:w-2/3 d:w-1/2">
+        <%= description(t('views.welcome.travel_calculator.travel_emissions_calculator_description')) %>
+      </p>
+    </div>
 
-  <div class="space-y-3">
-    <form class="mt-16 space-y-1" id="distance-form">
-        <label for="distance" class="font-bold block"><%= t('views.welcome.travel_calculator.distance_in_kilometers') %></label>
-        <div class="flex flex-col m-lg:flex-row m-lg:justify-center space-y-1 m-lg:space-x-1 m-lg:space-y-0">
-          <input type="text" class="input" id="distance" placeholder="100" value="100" size="5">
-          <button type="submit" class="button"><%= t('views.welcome.travel_calculator.calculate') %></button>
-        </div>
+    <form class="space-y-1" id="distance-form">
+      <label for="distance" class="font-bold block"><%= t('views.welcome.travel_calculator.distance_in_kilometers') %></label>
+      <div class="flex flex-col m-lg:flex-row space-y-1 m-lg:space-x-1 m-lg:space-y-0">
+        <input type="text" class="input" id="distance" placeholder="100" value="100" size="5">
+        <button type="submit" class="button"><%= t('views.welcome.travel_calculator.calculate') %></button>
+      </div>
     </form>
 
     <div>
@@ -22,7 +24,7 @@
         <%= t('views.welcome.travel_calculator.emissions_if_traveling_by') %>
       </p>
 
-      <div class="w-100 mx-auto space-y-2">
+      <div class="w-100 space-y-2">
         <% ['flight',
             'car_petrol',
             'car_diesel',
@@ -34,7 +36,7 @@
             'subway',
             'boat'].each do |type| %>
               <div class="flex flex-row items-center">
-                <div class="text-right w-32">
+                <div class="w-32">
                   <%= t("views.welcome.travel_calculator.#{type}") %>
                 </div>
                 <div class="text-left ml-2 relative">
