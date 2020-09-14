@@ -107,6 +107,10 @@ sv:
     your_months: Du har varit klimatneutral i
     your_offsets: Antal undvikna ton koldioxidutsläpp
     together: Tillsammans med alla <span>%{number_of_members} medlemmar</span> har vi förhindrat <span>%{number_of_tonnes} ton</span> koldioxid från att nå atmosfären!
+    footprint:
+      heading: Ditt årliga klimatavtryck
+      your_climate_footprint: Ditt klimatavtryck på %{footprint} är %{relative} än genomsnittet i %{country}. För att ligga i linje med Parisavtalets 1,5 gradersmål måste vi globalt ha ett genomsnitt på 2,5 ton per person till år 2030.
+      your_climate_footprint_compared_world: Ditt klimatavtryck på %{footprint} är %{relative} än genomsnittet i världen. För att ligga i linje med Parisavtalets 1,5 gradersmål måste vi globalt ha ett genomsnitt på 2,5 ton per person till år 2030.
   good_job: Bra jobbat!
   our_projects: Våra klimatprojekt
   project_name: Namn på projekt

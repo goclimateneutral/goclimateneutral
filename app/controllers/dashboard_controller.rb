@@ -13,6 +13,9 @@ class DashboardController < ApplicationController
     @my_neutral_months = my_neutral_months
     @unique_climate_neutral_users = User.with_active_subscription.count
 
+    @footprint = current_user.current_lifestyle_footprint
+    @country_average = LifestyleFootprintAverage.find_by_country(@footprint.country)
+
     @user_top_list = user_top_list
     @country_top_list = country_top_list
 

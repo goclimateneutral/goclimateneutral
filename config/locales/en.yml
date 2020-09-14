@@ -107,6 +107,10 @@ en:
     your_months: You have been climate neutral for
     your_offsets: Your CO2 offsets add up to
     together: Together with all <span>%{number_of_members} members</span>, we have prevented <span>%{number_of_tonnes} tonnes</span> of CO2 from reaching the atmosphere!
+    footprint:
+      heading: Your yearly carbon footprint
+      your_climate_footprint: Your carbon footprint of %{footprint} is %{relative} than the average in %{country}. To be in line with the 1.5 degree target set by the Paris agreement, we need to reach an average of 2.5 tonnes per person globally by the year 2030.
+      your_climate_footprint_compared_world: Your carbon footprint of %{footprint} is %{relative} than the world average. To be in line with the 1.5 degree target set by the Paris agreement, we need to reach an average of 2.5 tonnes per person globally by the year 2030.
   good_job: Good job!
   our_projects: Our Climate Projects
   project_name: Project name

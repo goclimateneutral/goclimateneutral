@@ -6,6 +6,7 @@ FactoryBot.define do
     password { 'password' }
     stripe_customer_id { 'cus_TEST' }
     region { 'se' }
+    lifestyle_footprints { [association(:lifestyle_footprint)] }
 
     factory :user_with_ended_subscription do
       subscription_end_at { 2.days.ago }

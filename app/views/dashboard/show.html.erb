@@ -7,7 +7,7 @@
   <section class="section-padding">
     <h2 class="heading-xl mb-12"><%= t 'dashboard.heading' %></h2>
 
-    <div class="callout max-w-4xl mx-auto">
+    <div class="max-w-4xl mx-auto">
       <div class="section-gutter flex flex-col t:flex-row">
         <div class="t:w-1/2 text-center space-y-2">
           <p class="font-bold"><%= t 'dashboard.your_months' %></p>
@@ -34,6 +34,84 @@
       </div>
     </div>
   </section>
+
+  <% if @footprint %>
+  <section class="section-padding">
+    <div class="max-w-5xl mx-auto t:bg-white t:rounded-lg t:shadow-lg t:p-8 t:border t:border-gray-tint-2">
+      <div class="flex flex-col t:flex-row t:space-x-8 space-y-6 t:space-y-0">
+        <div class="t:w-1/2 space-y-6">
+          <h2 class="heading-lg"><%= t 'dashboard.footprint.heading' %></h2>
+          <div>
+            <span class="text-5xl font-bold text-green-accent"><%= @footprint.total.tonnes.round(1) %></span>
+            <span class="heading text-green-accent"><%= t 'tonnes_CO2' %></span>
+          </div>
+          <p class="hidden t:block">
+            <% footprint_text_options = {
+                footprint: @footprint.total.to_s(precision: :auto),
+                relative:
+                  if @footprint.total > @country_average.co2e
+                    "#{((@footprint.total.co2e.to_f / @country_average.co2e.co2e - 1) * 100).ceil} % #{t 'views.registrations.higher'}"
+                  else
+                    "#{((1 - @footprint.total.co2e.to_f / @country_average.co2e.co2e) * 100).ceil} % #{t 'views.registrations.lower'}"
+                  end,
+                country: @footprint.country.translation(I18n.locale)
+            } %>
+            <% if @country_average.countries.nil? %>
+              <%= t("dashboard.footprint.your_climate_footprint_compared_world", **footprint_text_options) %>
+            <% else %>
+              <%= t("dashboard.footprint.your_climate_footprint", **footprint_text_options) %>
+            <% end %>
+          </p>
+        </div>
+        <div class="t:w-1/2">
+          <!-- diagram -->
+          <div class="pr-24">
+            <div class="relative pb-1">
+              <div class="space-y-3">
+                <% max_value = [@footprint.housing.tonnes.round(1), @footprint.food.tonnes.round(1), @footprint.car.tonnes.round(1), @footprint.flights.tonnes.round(1), @footprint.public.tonnes.round(1)].max %>
+                <%
+                  [
+                    {
+                      amount: @footprint.housing,
+                      icon: 'fa-home'
+                    },
+                    {
+                      amount: @footprint.food,
+                      icon: 'fa-cutlery'
+                    },
+                    {
+                      amount: @footprint.car,
+                      icon: 'fa-car'
+                    },
+                    {
+                      amount: @footprint.flights,
+                      icon: 'fa-plane'
+                    },
+                    {
+                      amount: @footprint.public,
+                      icon: 'fa-shopping-cart'
+                    },
+                  ]. each do |footprint| %>
+                <div class="flex items-center">
+                  <div class="bg-white border border-gray-tint-2 rounded-full w-12 h-12 flex justify-center items-center box-content p-1 mr-2">
+                    <i class="fa fa-lg <%= footprint[:icon] %>" aria-hidden="true"></i>
+                  </div>
+                  <div class="flex-1">
+                    <div class="relative h-6 bg-primary rounded-r" style="width: <%= footprint[:amount].tonnes.round(1) / max_value * 100 %>%">
+                      <span class="absolute left-100 top-1/2 ml-2 font-bold w-24 transform -translate-y-1/2"><%= footprint[:amount].tonnes.round(1) %> <%= t 'tonnes' %></span>
+                    </div>
+                  </div>
+                </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <!-- end -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <% end %>
 
   <section class="section-padding">
     <div class="section-gutter t:flex t:flex-row">
