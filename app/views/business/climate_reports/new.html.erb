@@ -5,18 +5,19 @@
   <p class="mt-6 t:w-2/3 d:w-1/2"><%= description(t('business.climate_reports.business_footprint_intro')) %></p>
 </section>
 
-<section class="section-padding">
-  <%= form_for [:business, @report], html: { id: 'climate-report-form', class: "space-y-12" } do |f| %>
+<%= form_for [:business, @report], html: { id: 'climate-report-form' } do |f| %>
+  <section class="section-padding section-gutter">
     <% if @report.errors.any? %>
-      <%# This is a panel because alerts are currently scripted to be dismissed automatically %>
-      <div class="callout space-y-3">
-        <% @report.errors.full_messages.each do |message| %>
-          <p><%= message %></p>
-        <% end %>
+      <div>
+        <div class="callout space-y-3">
+          <% @report.errors.full_messages.each do |message| %>
+            <p><%= message %></p>
+          <% end %>
+        </div>
       </div>
     <% end %>
 
-    <div class="space-y-3">
+    <div class="space-y-6">
       <h2 class="heading-lg">1. <%= t 'business.climate_reports.general_information' %></h2>
 
       <div class="space-y-1">
@@ -88,7 +89,7 @@
       </div>
     </div>
 
-    <div class="space-y-3">
+    <div class="space-y-6">
       <h2 class="heading-lg">2. <%= t 'business.climate_reports.energy' %></h2>
       <p class="t:w-2/3 d:w-1/2"><%= t 'business.climate_reports.energy_intro' %></p>
 
@@ -164,7 +165,7 @@
       </div>
     </div>
 
-    <div class="space-y-3">
+    <div class="space-y-6">
       <h2 class="heading-lg">3. <%= t 'business.climate_reports.business_trips' %></h2>
       <p class="t:w-2/3 d:w-1/2"><%= t 'business.climate_reports.business_trips_intro' %></p>
 
@@ -187,7 +188,7 @@
       </div>
     </div>
 
-    <div class="space-y-3">
+    <div class="space-y-6">
       <h2 class="heading-lg">4. <%= t 'business.climate_reports.food' %></h2>
       <p class="t:w-2/3 d:w-1/2"><%= t 'business.climate_reports.food_intro' %></p>
 
@@ -209,7 +210,7 @@
       </div>
     </div>
 
-    <div class="space-y-3">
+    <div class="space-y-6">
       <h2 class="heading-lg">5. <%= t 'business.climate_reports.material' %></h2>
       <p class="t:w-2/3 d:w-1/2"><%= t 'business.climate_reports.material_intro' %></p>
 
@@ -239,7 +240,7 @@
       </div>
     </div>
 
-    <div class="space-y-3">
+    <div class="space-y-6">
       <h2 class="heading-lg">6. <%= t 'business.climate_reports.other' %></h2>
       <p class="t:w-2/3 d:w-1/2"><%= t 'business.climate_reports.other_intro' %></p>
 
@@ -259,7 +260,7 @@
       </div>
     </div>
 
-    <div class="space-y-3">
+    <div class="space-y-6">
       <h2 class="heading-lg">7. <%= t 'business.climate_reports.contact' %></h2>
       <p class="t:w-2/3 d:w-1/2"><%= t 'business.climate_reports.contact_intro' %></p>
 
@@ -272,11 +273,11 @@
       <%= f.submit I18n.t('business.climate_reports.calculate_button'), class: 'button button-cta w-full m-lg:w-auto' %>
     </div>
 
-    <div>
+    <div class="space-y-6">
       <a href="https://www.goclimate.com/blog/klimatberakningar-for-foretag/" target="_blank" class="link"><%=t 'business.climate_reports.read_more_about_calculations' %></a>
     </div>
-  <% end %>
-</section>
+  </section>
+<% end %>
 
 <%= render "shared/bottom_landscape" %>
 <%= render "shared/footer", skip_prefooter: true %>

@@ -415,7 +415,6 @@ sv:
         invoice_email_text: Skriv in en e-postadress om du vill få fakturan via e-post
         order: Beställ
         well_get_in_touch_html: Vi hör av oss när nästa rapporteringsperiod håller på att ta slut om ni vill uppdatera ert klimatavtryck då. Om du har några frågor om klimatkompensation eller ordern, hör gärna av dig till <a href="mailto:hello@goclimate.com">hello@goclimate.com</a>!
-        reduce_header: Kan ni minska era utsläpp mer?
         reduce_body: Fundera gärna igenom en extra gång om det är något av era utsläpp som ni kan minska. Vi uppmanar alla företag att ta ansvar för sina utsläpp genom att klimatkompensera, men ännu viktigare är att minska sina utsläpp så mycket man kan.
         safety_factor: säkerhetsfaktor
         safety_factor_explanation: För att säkerställa att klimatkompensationen gör motsvarande klimatnytta som de beräknade klimatutsläppen så använder vi en säkerhetsfaktor på två vid köp av klimatkompensation hos oss.

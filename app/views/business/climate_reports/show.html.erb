@@ -1,8 +1,8 @@
 <%= render "shared/header" %>
 
-<section id="climate-report" class="section-padding">
+<section id="climate-report" class="section-padding space-y-6">
   <h1 class="heading-xl"><%= title(t('business.climate_reports.show.header')) %></h1>
-  <p class="mt-6 t:w-2/3 d:w-1/2">
+  <p class="t:w-2/3 d:w-1/2">
     <%=t 'business.climate_reports.show.result',
           calculation_period: @report.calculation_period,
           total_emissions: co2e_string(@report.calculation.total_emissions, omit_unit: true)
@@ -129,14 +129,19 @@
       </tr>
     </tfoot>
   </table>
+
+  <p class="mt-6 t:w-2/3 d:w-1/2"><%=t 'business.climate_reports.show.reduce_body' %></p>
 </section>
 
 
 <section class="section-padding">
   <div class="section-gutter flex flex-col d:flex-row">
     <div class="d:w-1/2">
-      <h2 class="heading-lg"><%=t 'business.climate_reports.show.offset_and_get_report' %></h2>
-      <p class="mt-6"><%=t 'business.climate_reports.show.offset_and_get_report_text' %></p>
+      <div class="space-y-6">
+        <h2 class="heading-lg"><%=t 'business.climate_reports.show.offset_and_get_report' %></h2>
+        <p><%=t 'business.climate_reports.show.offset_and_get_report_text' %></p>
+        <p><%=t 'business.climate_reports.show.well_get_in_touch_html' %></p>
+      </div>
 
       <h3 class="heading mt-6 mb-3"><%=t 'this_is_how_the_money_is_used_header' %></h3>
       <ul class="space-y-3">
@@ -163,7 +168,7 @@
           <tbody>
             <tr>
               <td colspan="2">
-                <ul class="list-bullet">
+                <ul class="list-bullet space-y-1">
                   <li><%=t 'business.climate_reports.show.carbon_offseting' %>:
                     <%= co2e_string(@report.calculation.total_emissions, omit_unit: true) %> x
                     <%= ClimateReportInvoice::BUFFER_FACTOR %>
@@ -178,8 +183,8 @@
           </tbody>
           <tfoot>
             <tr class="font-bold">
-              <td><%=t 'business.climate_reports.show.sum' %></td>
-              <td class="text-right"><%= price_string(@invoice.amount, 'sek', lowest_denominator: true) %></td>
+              <td class="pt-3"><%=t 'business.climate_reports.show.sum' %></td>
+              <td class="pt-3 text-right"><%= price_string(@invoice.amount, 'sek', lowest_denominator: true) %></td>
             </tr>
           </tfoot>
         </table>
@@ -229,22 +234,14 @@
         <% end %>
       </div>
 
-      <p class="mt-6 text-sm text-center">
-        <%= link_to t('business.climate_reports.show.new_based_on_this'), new_business_climate_report_path(based_on: @report), class: 'link' %>
-      </p>
     </div>
-    <!-- end of right column-->
   </div>
 </section>
 
 <section class="section-padding">
-  <p><%=t 'business.climate_reports.show.well_get_in_touch_html' %></p>
-</section>
-
-
-<section class="section-padding text-center">
-  <h2 class="heading-lg"><%=t 'business.climate_reports.show.reduce_header' %></h2>
-  <p class="mt-6 t:w-2/3 d:w-1/2 mx-auto"><%=t 'business.climate_reports.show.reduce_body' %></p>
+  <p class="mt-6 text-sm text-center">
+    <%= link_to t('business.climate_reports.show.new_based_on_this'), new_business_climate_report_path(based_on: @report), class: 'button' %>
+  </p>
 </section>
 
 <%= render "shared/bottom_landscape" %>
