@@ -36,21 +36,23 @@
   </div>
 </section>
 
-<section class="section-padding bg-green-tint-1 space-y-6 text-center">
-  <h2 class="heading-lg"><%= t 'views.welcome.index.about_us.heading' %></h2>
-  <div class="max-w-2xl mx-auto">
-    <div class="pb-9/16 relative">
-      <% if I18n.locale == :sv %>
-        <iframe src='https://player.vimeo.com/video/241825913' align='top' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen class="w-full h-full absolute"></iframe>
-      <% else %>
-        <iframe src='https://player.vimeo.com/video/246406263' align='top' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen class="w-full h-full absolute"></iframe>
-      <% end %>
+<section class="bg-green-tint-1">
+  <div class="section-padding space-y-6 text-center">
+    <h2 class="heading-lg"><%= t 'views.welcome.index.about_us.heading' %></h2>
+    <div class="max-w-2xl mx-auto">
+      <div class="pb-9/16 relative">
+        <% if I18n.locale == :sv %>
+          <iframe src='https://player.vimeo.com/video/241825913' align='top' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen class="w-full h-full absolute"></iframe>
+        <% else %>
+          <iframe src='https://player.vimeo.com/video/246406263' align='top' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen class="w-full h-full absolute"></iframe>
+        <% end %>
+      </div>
     </div>
-  </div>
-  <div class="space-y-3">
-    <h3 class="heading"><%= t('views.shared.prefooter.heading') %></h3>
-    <p><%= t('views.shared.prefooter.body_text') %> </p>
-    <p><%= link_to t('views.shared.prefooter.button'), root_path, class: 'button button-cta' %></p>
+    <div class="space-y-3">
+      <h3 class="heading"><%= t('views.shared.prefooter.heading') %></h3>
+      <p><%= t('views.shared.prefooter.body_text') %> </p>
+      <p><%= link_to t('views.shared.prefooter.button'), root_path, class: 'button button-cta' %></p>
+    </div>
   </div>
 </section>
 
