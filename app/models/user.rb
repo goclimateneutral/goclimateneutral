@@ -72,6 +72,10 @@ class User < ApplicationRecord
     save
   end
 
+  def current_lifestyle_footprint
+    lifestyle_footprints.order(:created_at).last
+  end
+
   private
 
   def subscription_end_at_from_stripe(stripe_subscription)
