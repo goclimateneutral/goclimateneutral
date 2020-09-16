@@ -1,1 +1,19 @@
 de:
+  views:
+    subscriptions:
+      update:
+        heading: Abonnement aktualisieren
+        no_subscription: Kein Abonnement
+      cancel:
+        heading: Abonnement kündigen
+        action: Abonnement kündigen
+        abort: Abonnement behalten
+        confirm: Vielen Dank für Ihren Beitrag! Teilen Sie uns gerne mit, warum Sie Ihr Abonnement kündigen, damit wir unser Angebot in Zukunft verbessern können.
+        cancellation_successful: Ihr Abonnement wurde erfolgreich gekündigt.
+        cancellation_reasons:
+          price_too_high: Der Preis ist zu hoch
+          different_finantial_conditions: Meine finanzielle Situation hat sich geändert
+          dont_believe_goclimate_makes_difference: Ich glaube nicht, dass GoClimate etwas für das Klima bewirkt
+          dont_belive_climate_change: Ich glaube nicht, dass wir etwas gegen den Klimawandel tun müssen
+          wont_disclose: Das möchte ich nicht preisgeben
+          other: Andere (bitte angeben)
