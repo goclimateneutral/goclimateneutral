@@ -59,3 +59,11 @@ de:
           gas: Benzin
           petrol: Benzin
           diesel: Diesel
+          hybrid_plugin: Plug-in-Hybrid
+          etanol: Ethanol (E85)
+          electric: Elektrisch
+          hvo_electric: Elektrisch oder HVO
+          vehicle_gas: Autogas (CNG)
+          no_car: Ich habe kein Auto
+      next: Weiter
+      back: Zurück
