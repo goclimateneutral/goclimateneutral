@@ -1,1 +1,68 @@
 de:
+  views:
+    welcome:
+      index:
+        hero:
+          heading_alternative: Gemeinsam können wir unser Klima retten!
+          heading: Das Abonnement zum Ausgleich Ihrer CO2-Bilanz
+          body_text: Berechnen Sie Ihre CO2-Bilanz und starten Sie Ihr personalisiertes Abonnement, alles in weniger als 2 Minuten
+        how_it_works:
+          bullets:
+            bullet_1_heading: Berechnen Sie Ihre CO2-Bilanz
+            bullet_1_text: Unser einfacher Test dauert nur eine Minute.
+            bullet_2_heading: Registrieren
+            bullet_2_text: Starten Sie Ihr monatliches, individuell auf Ihre CO2-Bilanz abgestimmtes Abonnement.
+            bullet_3_heading: Die Erde retten
+            bullet_3_text: Gemeinsam finanzieren wir Projekte, die den CO2-Ausstoß in der Atmosphäre reduzieren.
+        about_us:
+          heading: Was ist GoClimate?
+          body_text: Wir unterstützen Klimaschutzprojekte mit UN- und Gold-Standard--Zertifizierung und geben Ihnen Tipps, wie Sie Ihre CO2-Bilanz senken können. Gemeinsam sind wir der Wandel, den wir für den Planeten brauchen.
+          read_more: Hier erfahren Sie mehr über uns
+        projects:
+          heading: Wohin fließt das Geld?
+          body_text_1: Wir folgen einem Bewertungsprozess mit strengen Kriterien für qualitativ hochwertige CO2-Projekte, die vom WWF definiert wurden.
+          body_text_2: Wir wählen Projekte aus, die einen maximalen Einfluss auf das Klima haben und gleichzeitig zu anderen UN-Nachhaltigkeitszielen beitragen.
+          body_text_3: Ihr finanzieller Beitrag entspricht Ihrem individuellen CO2-Fußabdruck.
+          read_more: Mehr über unsere Projekte
+        transparency:
+          heading: 100% Transparenz
+          body_text: Wir möchten, dass Sie sich sicher fühlen können, dass Ihr Geld eine positive Wirkung entfaltet. Sie können jederzeit unsere aktuellen Ausgaben auf unserer Webseite einsehen und somit nachvollziehen, wo jeder einzelne Cent landet.
+          read_more: Lesen Sie mehr über unsere Transparenz
+        climate_tips:
+          heading: Klima-Tipps
+          clothes_last_longer: So hält Ihre Kleidung länger
+          reduce_carbon_footprint_food: Wie Sie Ihren CO2-Fußabdruck mit den richtigen Lebensmitteln reduzieren können
+          civil_disobedience: Ziviler Ungehorsam für das Klima?
+          climate_friendly_housing_cooperative: Klimafreundliche Wohnungsgenossenschaft - so können Sie helfen
+          climate_friendly_pension_saving: Fossilfreie Altersvorsorge
+          read_more: Mehr lesen
+        community:
+          heading: Lernen Sie unsere Community kennen
+          people:
+            annelie:
+              title: Abenteurer, Sprecher und Guide
+              quote: Ich nehme an vielen Strandreinigungsaktionen teil und hole beim Tauchen alte Fischernetze aus dem Meer. Ich lebe in einem kleinen Hausboot und habe keine Kinder. Außerdem versuche ich, andere zu inspirieren, sich besser um unsere Natur zu kümmern.
+            lydia:
+              title: Projektpartner, UNDP
+              quote: Mein erster Tipp wäre, mehr über den Klimawandel und was in unserer Welt so los ist zu lesen. Wenn man sich informiert, kann man sehen, welche Veränderungen man selbst vornehmen kann, um ein klimafreundlicheres Leben zu führen, und an welchen Veränderungen wir gemeinsam arbeiten müssen.
+            mattias:
+              title: Partner @ Netlight Consulting
+              quote: Als Vorbild in der IT-Industrie wollen wir unsere Umweltbelastung senken, um das Klima zu retten.
+            shelbi:
+              title: Influencer für Nachhaltigkeit
+              quote: Es ist schwierig, zu sagen, was am nachhaltigsten ist, wenn es um unsere persönlichen Entscheidungen geht, also dachte ich mir, dass ich durch die Kompensation meines Fußabdrucks sicherstellen kann, dass ich etwas Sinnvolles und Hilfreiches tue, unabhängig davon, ob ich jeden Tag nur perfekte Entscheidungen für meinen Lebensstil treffe.
+        i_live_in: Ich lebe in...
+        get_started: Los geht's
+      travel_calculator:
+        travel_emissions_calculator: Reise-Emissionen-Rechner
+        travel_emissions_calculator_description: Wollen Sie die Emissionen Ihrer Reisen berechnen? Geben Sie die Entfernung unten ein und sehen Sie die CO2-Emissionen, die die verschiedenen Reisearten verursachen!
+        distance_in_kilometers: Reisedistanz in km
+        calculate: Berechnen
+        emissions_if_traveling_by: Emissionen bei Reisen mit
+        flight: Flug
+        car_petrol: Auto (Benzin)
+        car_diesel: Auto (Diesel)
+        car_etanol: Auto (Ethanol)
+        car_gas: Auto (Gas)
+        car_electric: Elektroauto
+        bus: Bus
