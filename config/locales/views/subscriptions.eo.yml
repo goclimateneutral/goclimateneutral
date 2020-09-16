@@ -4,6 +4,9 @@ eo:
       update:
         heading: crwdns14872:0crwdne14872:0
         no_subscription: crwdns14874:0crwdne14874:0
+      receipts:
+        heading: crwdns14934:0crwdne14934:0
+        action: crwdns14936:0crwdne14936:0
       cancel:
         heading: crwdns14884:0crwdne14884:0
         action: crwdns14886:0crwdne14886:0
