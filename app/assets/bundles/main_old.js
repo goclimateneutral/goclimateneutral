@@ -71,5 +71,4 @@ import '../javascripts/components/counting_number';
 import '../javascripts/components/projects_map_marker';
 import '../javascripts/dashboard';
 import '../javascripts/users';
-import '../javascripts/users/edit_card';
 import '../javascripts/users/edit_user';
