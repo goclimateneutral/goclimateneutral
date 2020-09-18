@@ -22,7 +22,7 @@ module Users
       @current_plan_price = Money.from_amount(plan_param, customer_currency)
       new_plan = Stripe::Plan.retrieve_or_create_climate_offset_plan(@current_plan_price)
 
-      if @manager.update(new_plan, params[:paymentMethodId])
+      if @manager.update(new_plan, params[:payment_method_id])
         render_successful_update
       else
         render_bad_request(@manager.errors)

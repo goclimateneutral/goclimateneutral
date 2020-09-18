@@ -45,33 +45,36 @@ RSpec.feature 'Registrations', type: :feature, js: true do
     expect(page).to have_text 'Payment settings'
 
     # Update card
-    click_link 'Edit card'
+    click_button 'Edit card'
     within_frame(0) do
       send_keys_to_card_field '4242424242424242'
       find('input[name=exp-date]').send_keys '522'
       find('input[name=cvc]').send_keys '123'
     end
     click_button 'Update'
+    expect(page).to have_text 'Your settings has been updated', wait: 20
 
     # Wait for payment page to render
     find('.subscriptions-show', wait: 20)
 
     # Unsubscribe
     find('#start_cancellation').click
-    find('#confirm_cancellation', wait: 20).click
-    expect(page).to have_text 'No subscription', wait: 20
+    find('label', text: 'The price is too high', wait: 20).click
+    find('#confirm_cancellation').click
+    expect(page).to_not have_text('The price is too high', wait: 20)
+    expect(page).to have_text 'Your subscription has been successfully cancelled', wait: 20
 
     # Add new card and re-subscribe
     select('€10', from: 'Climate Plan')
 
-    click_link 'Add new card'
+    click_button 'Add new card', wait: 20
     within_frame(0) do
       send_keys_to_card_field '5555555555554444'
       find('input[name=exp-date]').send_keys '522'
       find('input[name=cvc]').send_keys '123'
     end
     click_button 'Update'
-    expect(page).to have_text 'Cancel subscription', wait: 20
+    expect(page).to have_text 'Your settings has been updated', wait: 20
   end
 
   context 'when using 3D Secure card' do
@@ -128,33 +131,36 @@ RSpec.feature 'Registrations', type: :feature, js: true do
       expect(page).to have_text 'Payment settings'
 
       # Update card
-      click_link 'Edit card'
+      click_button 'Edit card'
       within_frame(0) do
         send_keys_to_card_field '4242424242424242'
         find('input[name=exp-date]').send_keys '522'
         find('input[name=cvc]').send_keys '123'
       end
       click_button 'Update'
+      expect(page).to have_text 'Your settings has been updated', wait: 20
 
       # Wait for payment page to render
       find('.subscriptions-show', wait: 20)
 
       # Unsubscribe
       find('#start_cancellation').click
-      find('#confirm_cancellation', wait: 20).click
-      expect(page).to have_text 'No subscription', wait: 20
+      find('label', text: 'The price is too high', wait: 20).click
+      find('#confirm_cancellation').click
+      expect(page).to_not have_text('The price is too high', wait: 20)
+      expect(page).to have_text 'Your subscription has been successfully cancelled', wait: 20
 
       # Add new card and re-subscribe
       select('€10', from: 'Climate Plan')
 
-      click_link 'Add new card'
+      click_button 'Add new card', wait: 20
       within_frame(0) do
         send_keys_to_card_field '5555555555554444'
         find('input[name=exp-date]').send_keys '522'
         find('input[name=cvc]').send_keys '123'
       end
-      click_button 'Update'
-      expect(page).to have_text 'Cancel subscription', wait: 20
+      click_button 'Update', wait: 20
+      expect(page).to have_text 'Your settings has been updated', wait: 20
     end
   end
 end
