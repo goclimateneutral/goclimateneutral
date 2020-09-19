@@ -144,10 +144,6 @@ sv:
   the_payment_unfortunately_failed: Betalningen misslyckades tyvärr
   no_worries_we_will_try_again_within_a_few_days: Det är ingen fara. Vi försöker genomföra betalningen igen under de närmaste dagarna.
   you_might_need_to_update_your_payment_info: Om du vill fortsätta att leva ett klimatneutralt liv med oss kan du behöva uppdatera din betalningsinformation.
-  link_to_update_your_payment_info: 'Uppdatera betalningsinformationen här >>'
-  this_mail_was_sent_by: Det här mailet skickades av
-  to_stop_recieving_these_emails: För att sluta få de här mailen
-  click_here: klicka här
   thank_you_for_saving_our_planet: Tack för att du är med och räddar vår planet!
   you_have_lived_a_climate_neutral_life_for: Du har varit klimatneutral i
   months:
@@ -161,7 +157,6 @@ sv:
     other: år
   together_we_have_offset: Vi har nu minskat världens klimatutsläpp med
   goclimateneutral_and_this_planet_loves_you: GoClimate och den här planeten älskar dig! Tack! Du är bäst!
-  learn_more_about_what_we_have_achieved_here: 'Läs mer om hur det går för oss här >>'
   thank_you: Stort Tack!
   the_best_way_to_help_is_to_get_as_many_people_climate_neutral_as_possible: 'Dela gärna det här med dina vänner, ju fler vi blir, desto större är chansen att vi lyckas bromsa klimatförändringarna!'
   faq: Frågor & Svar
@@ -284,7 +279,6 @@ sv:
           question: Hur använder ni den data som samlas in i kalkylatorn?
           answer: "Uppgifterna används för att beräkna företagets klimatavtryck. Vi använder även siffrorna helt anonymt för att ta fram snittvärden som alla företag kan jämföra sig mot. Inga uppgifter kommer att visas offentligt utan ert godkännande. <br><br>Om ni klickar i godkännandet att använda er logga och ert namn så kan vi komma att använda det publikt tillsammans med siffran för totala utsläpp eller utsläpp per anställd. Det är till för att vi i framtiden ska kunna skapa topplistor och möjligheten jämföra sig med andra bolag. Förutom detta så är samtliga uppgifter skyddade även om ni väljer att ge det godkännandet."
   for_business: För företag
-  thats_amazing_from_the_bottom_of_our_hearts: Vilket är fantastiskt! Från djupet av våra hjärtan
   navigation:
     gift_cards: Gåvokort
   welcome:
