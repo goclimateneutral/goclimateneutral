@@ -144,10 +144,6 @@ de:
   the_payment_unfortunately_failed: Leider ist Ihre Zahlung fehlgeschlagen
   no_worries_we_will_try_again_within_a_few_days: Keine Sorge, wir versuchen es in ein paar Tagen erneut.
   you_might_need_to_update_your_payment_info: Um weiterhin mit uns ein klimaneutrales Leben führen zu können, müssen Sie evtl. Ihre Zahlungsinformationen aktualisieren.
-  link_to_update_your_payment_info: 'Hier Zahlungsinformationen aktualisieren >>'
-  this_mail_was_sent_by: Diese E-Mail wurde versendet von
-  to_stop_recieving_these_emails: Um diese E-Mails nicht mehr zu erhalten
-  click_here: klicken Sie hier
   thank_you_for_saving_our_planet: Vielen Dank, dass Sie unseren Planeten retten!
   you_have_lived_a_climate_neutral_life_for: Sie leben ein klimaneutrales Leben seit
   months:
@@ -161,7 +157,6 @@ de:
     other: Jahr
   together_we_have_offset: Unsere gemeinsamen Klimakompensationen
   goclimateneutral_and_this_planet_loves_you: GoClimate und unser Planet lieben Sie! Sie sind großartig!
-  learn_more_about_what_we_have_achieved_here: 'Erfahren Sie hier mehr darüber, was wir bereits geschafft haben >>'
   thank_you: Vielen Dank!
   the_best_way_to_help_is_to_get_as_many_people_climate_neutral_as_possible: 'Bitte erzählen Sie Ihren Freunden davon. Je mehr Menschen klimaneutral leben, umso größer ist die Chance, dass wir erfolgreich den Klimawandel verlangsamen können!'
   faq: FAQ
@@ -226,7 +221,6 @@ de:
         q10:
           question: Sind die Projekte nachhaltig?
   for_business: Für Unternehmen
-  thats_amazing_from_the_bottom_of_our_hearts: Das ist großartig! Von ganzem Herzen
   navigation:
     gift_cards: Gutscheine
   welcome:
