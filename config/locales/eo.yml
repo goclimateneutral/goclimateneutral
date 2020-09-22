@@ -107,6 +107,10 @@ eo:
     your_months: crwdns13350:0crwdne13350:0
     your_offsets: crwdns13352:0crwdne13352:0
     together: crwdns13354:0%{number_of_members}crwdnd13354:0%{number_of_tonnes}crwdne13354:0
+    footprint:
+      heading: crwdns14948:0crwdne14948:0
+      your_climate_footprint: crwdns14950:0%{footprint}crwdnd14950:0%{relative}crwdnd14950:0%{country}crwdne14950:0
+      your_climate_footprint_compared_world: crwdns14952:0%{footprint}crwdnd14952:0%{relative}crwdne14952:0
   good_job: crwdns11920:0crwdne11920:0
   our_projects: crwdns11926:0crwdne11926:0
   project_name: crwdns11932:0crwdne11932:0
