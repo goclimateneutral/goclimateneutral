@@ -6,10 +6,17 @@ module Users
     before_action :set_stripe_customer
 
     def show
-      @customer_payment_method = customer_payment_method(@stripe_customer)
-      @setup_intent = Stripe::SetupIntent.create(customer: @stripe_customer.id)
+      puts "-.-.-..-.-.-.-. in show"
+      puts @stripe_customer
+      puts "-.--.-."
+      if @stripe_customer
+        @customer_payment_method = customer_payment_method(@stripe_customer)
+        @setup_intent = Stripe::SetupIntent.create(customer: @stripe_customer.id)
+      end
       @current_plan_price =
-        if @stripe_customer.subscriptions.total_count > 0
+        if @stripe_customer.nil?
+          nil
+        elsif @stripe_customer.subscriptions.total_count > 0
           plan = @stripe_customer.subscriptions.first.plan
           Money.new(plan.amount, Currency.from_iso_code(plan.currency))
         end
@@ -17,10 +24,21 @@ module Users
     end
 
     def update
-      @manager = SubscriptionManager.new(@stripe_customer)
-
       @current_plan_price = Money.from_amount(plan_param, customer_currency)
       new_plan = Stripe::Plan.retrieve_or_create_climate_offset_plan(@current_plan_price)
+
+      puts "------------ in update this is paramas"
+      puts params
+      puts "........ "
+      if @stripe_customer
+        @manager = SubscriptionManager.new(@stripe_customer)
+      else
+        @manager = SubscriptionManager.new()
+        @manager.set_up_new_customer(current_user.email, new_plan, params[:payment_method_id])
+      end
+      if @manager.customer.present? && current_user.stripe_customer_id != @manager.customer.id
+        current_user.update!(stripe_customer_id: @manager.customer.id)
+      end
 
       if @manager.update(new_plan, params[:payment_method_id])
         render_successful_update
@@ -67,11 +85,16 @@ module Users
     end
 
     def set_stripe_customer
-      @stripe_customer = Stripe::Customer.retrieve(current_user.stripe_customer_id)
+      puts "set_stripe_customer * * * ** * *  *"
+      if current_user.stripe_customer_id
+        @stripe_customer = Stripe::Customer.retrieve(current_user.stripe_customer_id)
+      else
+        @stripe_customer = nil
+      end
     end
 
     def customer_currency
-      Currency.from_iso_code(@stripe_customer.currency) || current_region.currency
+      Currency.from_iso_code(@stripe_customer&.currency) || current_region.currency
     end
 
     def customer_payment_method(customer)

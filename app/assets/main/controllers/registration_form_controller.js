@@ -39,6 +39,31 @@ export default class RegistrationFormController extends Controller {
       });
   }
 
+  submitWithoutCardDetails(event) {
+    event.preventDefault();
+
+    if (!this.formTarget.reportValidity()) { return; }
+
+    this.enableLoadingState();
+    this.setErrorMessage('');
+
+    submitForm(this.formTarget)
+      .then((response) => response.json())
+      .then((data) => this.resolveFormResponse(data))
+      .catch((error) => {
+        if (error.cardError) {
+          this.setErrorMessage(error.message);
+          return;
+        }
+
+        window.Sentry.captureException(error); // These errors are unexpected, so report them.
+        this.setErrorMessage('An unexpected error occurred. Please start over and try again. If the issue remains, please contact us at hello@goclimate.com.');
+      })
+      .finally(() => {
+        this.disableLoadingState();
+      });
+  }
+
   resolveFormResponse(data) {
     return new Promise((resolve) => {
       switch (data.next_step) {

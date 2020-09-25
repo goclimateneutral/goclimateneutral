@@ -25,10 +25,14 @@ class User < ApplicationRecord
   end
 
   def subscription_amount
+    return 0 unless stripe_customer
+    
     stripe_customer.subscriptions.first.plan.amount.to_f / 100
   end
 
   def subscription_amount_in_sek
+    return 0 unless stripe_customer
+    
     case Currency.from_iso_code(stripe_customer.subscriptions.first.plan.currency)
     when Currency::USD
       subscription_amount * GreenhouseGases::PRICE_FACTOR_USD
@@ -74,6 +78,11 @@ class User < ApplicationRecord
 
   def current_lifestyle_footprint
     lifestyle_footprints.order(:created_at).last
+  end
+
+  def is_free_user
+    return true unless stripe_customer
+    return false
   end
 
   private

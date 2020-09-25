@@ -33,6 +33,14 @@ class SubscriptionManager
     end
   end
 
+  def set_up_new_customer(email, plan, payment_method_id)
+    handle_errors_and_return_status do
+      use_or_create_customer(email)
+      update_default_card(payment_method_id)
+      create_subscription(plan)
+    end
+  end
+
   def cancel
     subscription.delete
   end

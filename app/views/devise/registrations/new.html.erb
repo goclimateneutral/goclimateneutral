@@ -171,6 +171,49 @@
 
 <section class="bg-green-tint-1">
   <div class="section-padding">
+    <div>
+      <div class="callout" data-controller="registration-price registration-form">
+          <h2 class="heading mb-6 text-center"><%= t 'views.registrations.subscribe_heading' %></h2>
+
+          <div class="">
+            <p class="text-sm text-center mb-6"><%= t 'views.registrations.step' %> 2/2 &mdash; <%= t 'views.registrations.create_account' %></p>
+
+            <%= form_with url: registration_path(resource_name, format: :json), html: { 'data-target': 'registration-form.form' } do |f| %>
+              <%= f.hidden_field(:lifestyle_footprint, :value => @footprint&.key) %>
+              <%= f.hidden_field(:no_subscription, :value => true) %>
+              <%= fields_for @user do |user_form| %>
+                <%= user_form.hidden_field :region %>
+
+                <label for="email" class="block font-semibold"><%=t 'email' %></label>
+                <%= user_form.email_field :email, required: true, id: "email", class: "input w-full" %>
+
+                <label for="password" class="block font-semibold mt-3"><%=t 'password' %></label>
+                <%= user_form.password_field :password, required: true, minlength: '6', maxlength: '128', size: 'auto', autocomplete: "off", id: "password", class: "input w-full" %>
+
+                <div class="mt-3">
+                  <label>
+                    <%= f.check_box :privacy_policy, 'data-target': 'registration-form.privacyPolicyAgreement', 'data-action': 'change->registration-form#updateSubmitButton' %>
+                    <span>
+                      <%=t 'i_accept' %>
+                      <%= link_to I18n.t('our_privacy_policy'), privacy_policy_path, target: '_blank', class: 'link' %>
+                    </span>
+                  </label>
+                </div>
+              <% end %>
+            <% end %>
+
+            <p class="heading-lg text-center py-6">
+              <span data-target="registration-price.price"><%= @plan_price.to_s(precision: :auto) %></span>/<%= t 'months.one' %>
+            </p>
+
+            <button class="button button-cta w-full" data-target="registration-form.submitButton" data-action="registration-form#submitWithoutCardDetails">
+              <i class="fa fa-spinner fa-spin hidden" data-target="registration-form.loadingIndicator"></i>
+              <%= t 'devise.registrations.new.sign_up' %>
+            </button>
+            <p class="text-orange-shade-1 ml-4" data-target="registration-form.errorMessage"></p>
+          </div>
+        </div>
+    </div>
     <div class="section-gutter m-lg:flex">
       <div class="m-lg:w-1/2 m-lg:pr-16 space-y-3">
         <h3 class="font-semibold"><%= t 'views.registrations.where_does_the_money_go.heading' %></h3>

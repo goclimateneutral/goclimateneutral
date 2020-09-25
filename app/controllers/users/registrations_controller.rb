@@ -32,23 +32,44 @@ module Users
       render_user_invalid_json && return unless @user.save
 
       sign_in(resource_name, @user, force: true) # Force because we have updated the password
+      
+      puts "....................."
+      puts params
+      puts @plan_price
+      puts "\n\n\n.....------................"
 
-      stripe_plan = Stripe::Plan.retrieve_or_create_climate_offset_plan(@plan_price)
-      @manager.sign_up(@user.email, stripe_plan, params[:payment_method_id])
+      puts "\n1\n"
+      
+      unless params[:no_subscription]
+        puts "jkjkdjdjfdsjkhfshkjfshjka.------------"
+        stripe_plan = Stripe::Plan.retrieve_or_create_climate_offset_plan(@plan_price)
+        @manager.sign_up(@user.email, stripe_plan, params[:payment_method_id])
+        
+        if @manager.customer.present? && @user.stripe_customer_id != @manager.customer.id
+          @user.update!(stripe_customer_id: @manager.customer.id)
+        end
+        puts "\n2\n"
 
-      if @manager.customer.present? && @user.stripe_customer_id != @manager.customer.id
-        @user.update!(stripe_customer_id: @manager.customer.id)
-      end
-
-      if @manager.errors.any?
-        render_signup_failed_json
-      elsif @manager.payment_verification_required?
-        render_verification_required_json
-      else
+        if @manager.errors.any?
+          puts "\n2.1\n"
+          render_signup_failed_json
+        elsif @manager.payment_verification_required?
+          puts "\n2.2\n"
+          render_verification_required_json
+        else
+          puts "\n2.3\n"
+          WelcomeMailer.with(email: @user.email).welcome_email.deliver_now
+          render_success_json
+        end
+      else 
+        puts "\n3\n"
         WelcomeMailer.with(email: @user.email).welcome_email.deliver_now
         render_success_json
       end
+      
+      
     rescue StandardError => e
+      puts "\n4\n"
       # Respond explicitly so cookies gets set in responses where a user record
       # has been created that we want to reuse.
       logger.error(e)
@@ -101,7 +122,9 @@ module Users
 
       @footprint_tonnes = @footprint&.total
       @subscription_tonnes = @footprint_tonnes * (params[:people].presence&.to_i || 1)
+      puts "set_footprint_and_price .. soon"
       @plan_price = SubscriptionManager.price_for_footprint(@subscription_tonnes, current_region.currency)
+      puts "set_footprint_and_price .. done"
     end
 
     def set_user

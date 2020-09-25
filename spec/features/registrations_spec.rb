@@ -77,6 +77,55 @@ RSpec.feature 'Registrations', type: :feature, js: true do
     expect(page).to have_text 'Your settings has been updated', wait: 20
   end
 
+  scenario 'Register without subscribing' do
+    # Homepage
+    visit '/'
+
+    select('Sweden', from: 'country')
+    click_button 'Get started'
+
+    # Calculator
+    find('label', text: 'Apartment').click
+    find('label', text: 'Electricity').click
+    find('label', text: 'Yes').click
+    find('label', text: 'Vegetarian').click
+    find('label', text: 'I don\'t have a car').click
+    click_button 'Next'
+
+    # Sign up page
+    fill_in 'Email', with: 'test@example.com'
+    fill_in 'Password', with: 'password'
+    check 'I accept our Privacy policy'
+    click_button 'Sign up'
+
+    # Wait for success page to render
+    find('.dashboard-show', wait: 20)
+
+    expect(page).to have_text 'Hello, climate friend!'
+
+    # Go to payment settings page
+    visit '/users/edit'
+    find('.registrations-edit', wait: 20)
+    click_link 'Payment settings'
+    find('.subscriptions-show', wait: 20)
+
+    expect(page).to have_text 'Payment settings'
+    expect(page).to have_text 'No subscription', wait: 20
+
+    # Add new card and subscribe
+    select('€10', from: 'Climate Plan')
+
+    click_button 'Add new card', wait: 20
+    within_frame(0) do
+      send_keys_to_card_field '5555555555554444'
+      find('input[name=exp-date]').send_keys '522'
+      find('input[name=cvc]').send_keys '123'
+    end
+    click_button 'Update'
+    expect(page).to have_text 'Your settings has been updated', wait: 20
+    expect(page).to have_text 'Cancel subscription', wait: 20
+  end
+
   context 'when using 3D Secure card' do
     scenario 'Register and update card' do
       # Homepage
