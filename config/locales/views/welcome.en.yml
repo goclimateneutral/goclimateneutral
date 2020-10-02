@@ -3,8 +3,7 @@ en:
     welcome:
       index:
         hero:
-          heading_alternative: Together we can save the climate!
-          heading: The subscription for offsetting your carbon footprint
+          heading: Together we can save the climate!
           body_text: Calculate your carbon footprint to start your personalized subscription, all in less than 2 minutes
         how_it_works:
           bullets:

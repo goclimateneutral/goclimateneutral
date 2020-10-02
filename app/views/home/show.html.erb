@@ -12,11 +12,7 @@
 <section class="z-0 bg-blue-tint-1">
   <div class="relative z-20 max-w-3xl mx-auto px-4 t:px-16 d:px-0 pt-16 t:pt-24 d:pt-32 text-center">
     <h1 class="heading-xl mb-6 t:mb-12">
-      <% if @active_experiments&.include?(:old_startpage_header) %>
-        <%= t 'views.welcome.index.hero.heading_alternative' %><br>
-      <% else %>
-        <%= t 'views.welcome.index.hero.heading' %><br>
-      <% end %>
+      <%= t 'views.welcome.index.hero.heading' %><br>
     </h1>
     <p class="my-4 max-w-lg mx-auto"><%=t 'views.welcome.index.hero.body_text' %></p>
     <div>
