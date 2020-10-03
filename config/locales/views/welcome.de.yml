@@ -3,8 +3,6 @@ de:
     welcome:
       index:
         hero:
-          heading_alternative: Gemeinsam können wir unser Klima retten!
-          heading: Das Abonnement zum Ausgleich Ihrer CO2-Bilanz
           body_text: Berechnen Sie Ihre CO2-Bilanz und starten Sie Ihr personalisiertes Abonnement, alles in weniger als 2 Minuten
         how_it_works:
           bullets:
