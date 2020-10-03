@@ -3,8 +3,6 @@ sv:
     welcome:
       index:
         hero:
-          heading_alternative: Tillsammans räddar vi klimatet!
-          heading: Prenumerationen som nollar ditt klimatavtryck
           body_text: Räkna ut ditt avtryck och starta din personliga prenumeration, på under 2 minuter.
         how_it_works:
           bullets:
