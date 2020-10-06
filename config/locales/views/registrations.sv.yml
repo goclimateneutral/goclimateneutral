@@ -11,8 +11,6 @@ sv:
       goal_2030: Mål 2030
       higher: högre
       lower: lägre
-      your_climate_footprint: Ditt klimatavtryck på %{footprint} är %{relative} än genomsnittet i %{country}. För att ligga i linje med Parisavtalets 1,5 gradersmål måste vi globalt ha ett genomsnitt på 2,5 ton per person till år 2030. Genom att klimatkompensera dina utsläpp kan du nå noll redan idag.
-      your_climate_footprint_compared_world: Ditt klimatavtryck på %{footprint} är %{relative} än genomsnittet i världen. För att ligga i linje med Parisavtalets 1,5 gradersmål måste vi globalt ha ett genomsnitt på 2,5 ton per person till år 2030. Genom att klimatkompensera dina utsläpp kan du nå noll redan idag.
       subscribe_heading: Prenumerera på ett klimatneutralt liv
       step: Steg
       adjust_subscription: Anpassa din prenumeration
