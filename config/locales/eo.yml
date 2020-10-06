@@ -111,7 +111,15 @@ eo:
       heading: crwdns14948:0crwdne14948:0
       your_climate_footprint: crwdns14950:0%{footprint}crwdnd14950:0%{relative}crwdnd14950:0%{country}crwdne14950:0
       your_climate_footprint_compared_world: crwdns14952:0%{footprint}crwdnd14952:0%{relative}crwdne14952:0
+      heading_compared: crwdns14958:0crwdne14958:0
+      heading_more: crwdns14960:0crwdne14960:0
       more_about_public_category: crwdns14954:0crwdne14954:0
+      category:
+        housing: crwdns14962:0crwdne14962:0
+        food: crwdns14964:0crwdne14964:0
+        car: crwdns14966:0crwdne14966:0
+        flights: crwdns14968:0crwdne14968:0
+        public: crwdns14970:0crwdne14970:0
   good_job: crwdns11920:0crwdne11920:0
   our_projects: crwdns11926:0crwdne11926:0
   project_name: crwdns11932:0crwdne11932:0
