@@ -11,8 +11,8 @@ eo:
       goal_2030: crwdns13044:0crwdne13044:0
       higher: crwdns13046:0crwdne13046:0
       lower: crwdns13048:0crwdne13048:0
-      your_climate_footprint: crwdns13050:0%{footprint}crwdnd13050:0%{relative}crwdnd13050:0%{country}crwdne13050:0
-      your_climate_footprint_compared_world: crwdns13052:0%{footprint}crwdnd13052:0%{relative}crwdne13052:0
+      your_climate_footprint: crwdns14972:0%{footprint}crwdnd14972:0%{relative}crwdnd14972:0%{country}crwdne14972:0
+      your_climate_footprint_compared_world: crwdns14974:0%{footprint}crwdnd14974:0%{relative}crwdne14974:0
       subscribe_heading: crwdns13054:0crwdne13054:0
       step: crwdns13246:0crwdne13246:0
       adjust_subscription: crwdns13248:0crwdne13248:0
