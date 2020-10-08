@@ -3,6 +3,7 @@
 class GiftCardsController < ApplicationController
   before_action :validate_months_parameter, only: [:new]
   before_action :clear_gift_card_in_checkout, except: [:create]
+  before_action :set_canonical, only: [:new]
   after_action :set_gift_card_in_checkout, only: [:create]
 
   def index
@@ -94,5 +95,9 @@ class GiftCardsController < ApplicationController
 
   def clear_gift_card_in_checkout
     session[:gift_card_in_checkout] = nil
+  end
+
+  def set_canonical
+    set_meta_tags(canonical: gift_cards_url)
   end
 end
