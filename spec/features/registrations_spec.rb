@@ -73,4 +73,34 @@ RSpec.feature 'Registrations', type: :feature, js: true do
     expect(page).to have_text 'Welcome to a climate neutral life'
     expect(User.last.stripe_customer.subscriptions.first.status).to eq('active')
   end
+
+  scenario 'Register without subscription' do
+    visit '/'
+
+    select('Sweden', from: 'country')
+    click_button 'Get started'
+
+    # Calculator
+    find('label', text: 'Apartment').click
+    find('label', text: 'Electricity').click
+    find('label', text: 'Yes').click
+    find('label', text: 'Vegetarian').click
+    find('label', text: 'I don\'t have a car').click
+    click_button 'Next'
+
+    # Sign up page behind feature flag
+    # TODO: remove feature flag
+    visit "#{current_url}&sign_up_without_subscription=2"
+
+    # Sign up page
+    find('input#free').click
+    find('#continue-to-payment').click
+    fill_in 'Email', with: 'test@example.com'
+    fill_in 'Password', with: 'password'
+    check 'I accept our Privacy policy'
+    click_button 'Create account'
+
+    # Wait for success page to render
+    # find('.dashboard-show', wait: 20)
+  end
 end

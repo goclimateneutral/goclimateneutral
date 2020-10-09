@@ -7,6 +7,16 @@ export default class RegistrationFormController extends Controller {
     this.updateSubmitButton();
   }
 
+  handleSubmit(event) {
+    event.preventDefault();
+
+    if (this.membership === 'free') {
+      this.submitWithoutCardDetails();
+    } else {
+      this.submit();
+    }
+  }
+
   submit(event) {
     event.preventDefault();
 
@@ -35,6 +45,29 @@ export default class RegistrationFormController extends Controller {
       })
       .finally(() => {
         this.stripeCardElementController.invalidatePaymentMethodField();
+        this.disableLoadingState();
+      });
+  }
+
+  submitWithoutCardDetails() {
+    if (!this.formTarget.reportValidity()) { return; }
+
+    this.enableLoadingState();
+    this.setErrorMessage('');
+
+    submitForm(this.formTarget)
+      .then((response) => response.json())
+      .then((data) => this.resolveFormResponse(data))
+      .catch((error) => {
+        if (error.cardError) {
+          this.setErrorMessage(error.message);
+          return;
+        }
+
+        window.Sentry.captureException(error); // These errors are unexpected, so report them.
+        this.setErrorMessage('An unexpected error occurred. Please start over and try again. If the issue remains, please contact us at hello@goclimate.com.');
+      })
+      .finally(() => {
         this.disableLoadingState();
       });
   }

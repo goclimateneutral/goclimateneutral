@@ -33,8 +33,10 @@ module Users
 
       sign_in(resource_name, @user, force: true) # Force because we have updated the password
 
-      stripe_plan = Stripe::Plan.retrieve_or_create_climate_offset_plan(@plan_price)
-      @manager.sign_up(stripe_plan, params[:payment_method_id])
+      unless params[:membership] == "free"
+        stripe_plan = Stripe::Plan.retrieve_or_create_climate_offset_plan(@plan_price)
+        @manager.sign_up(stripe_plan, params[:payment_method_id])
+      end
 
       if @manager.errors.any?
         render_signup_failed_json
