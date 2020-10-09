@@ -4,36 +4,39 @@
 <%= render "shared/header" %>
 
 <div class="bg-blue-pastel">
-  <section class="section-padding">
-    <h2 class="heading-xl mb-12"><%= t 'dashboard.heading' %></h2>
-
-    <div class="max-w-4xl mx-auto">
-      <div class="section-gutter flex flex-col t:flex-row">
-        <div class="t:w-1/2 text-center space-y-2">
-          <p class="font-bold"><%= t 'dashboard.your_months' %></p>
-          <p class="text-3xl font-bold text-green-accent">
-            <%= @my_neutral_months %>
-            <% if @my_neutral_months == 1 %>
-              <%=t 'months.one' %>
-            <% else %>
-              <%=t 'months.other' %>
-            <% end %>
-          </p>
-        </div>
-        <div class="t:w-1/2 text-center space-y-2">
-          <p class="font-bold"><%= t 'dashboard.your_offsets' %></p>
-          <p class="text-3xl font-bold text-green-accent">
-            <%= number_with_delimiter(@my_carbon_offset) %>
-            <%=t 'tonnes' %>
-          </p>
-        </div>
-      </div>
-
-      <div class="text-center mt-12">
-        <%= raw(t('dashboard.together', number_of_members: @unique_climate_neutral_users, number_of_tonnes: number_with_delimiter(@total_carbon_offset)).gsub('<span>', '<span class="font-bold">')) %>
-      </div>
-    </div>
+  <section class="section-padding pb-0">
+    <h2 class="heading-xl"><%= t 'dashboard.heading' %></h2>
   </section>
+  <% unless current_user.free_account? %>
+    <section class="section-padding">
+      <div class="max-w-4xl mx-auto">
+        <div class="section-gutter flex flex-col t:flex-row">
+          <div class="t:w-1/2 text-center space-y-2">
+            <p class="font-bold"><%= t 'dashboard.your_months' %></p>
+            <p class="text-3xl font-bold text-green-accent">
+              <%= @my_neutral_months %>
+              <% if @my_neutral_months == 1 %>
+                <%=t 'months.one' %>
+              <% else %>
+                <%=t 'months.other' %>
+              <% end %>
+            </p>
+          </div>
+          <div class="t:w-1/2 text-center space-y-2">
+            <p class="font-bold"><%= t 'dashboard.your_offsets' %></p>
+            <p class="text-3xl font-bold text-green-accent">
+              <%= number_with_delimiter(@my_carbon_offset) %>
+              <%=t 'tonnes' %>
+            </p>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <%= raw(t('dashboard.together', number_of_members: @unique_climate_neutral_users, number_of_tonnes: number_with_delimiter(@total_carbon_offset)).gsub('<span>', '<span class="font-bold">')) %>
+        </div>
+      </div>
+    </section>
+  <% end %>
 
   <% if @footprint %>
   <section class="section-padding">

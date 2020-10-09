@@ -101,6 +101,6 @@ RSpec.feature 'Registrations', type: :feature, js: true do
     click_button 'Create account'
 
     # Wait for success page to render
-    # find('.dashboard-show', wait: 20)
+    find('.dashboard-show', wait: 20)
   end
 end

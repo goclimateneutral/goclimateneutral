@@ -65,7 +65,9 @@ module Users
 
     # The path used after sign up.
     def after_sign_up_path_for(_resource)
-      dashboard_path(registered: 1)
+      return dashboard_path(registered: 1) if params[:membership] == "free"
+
+      dashboard_path(subscribed: 1)
     end
 
     def after_update_path_for(_resource)

@@ -76,6 +76,11 @@ class User < ApplicationRecord
     lifestyle_footprints.order(:created_at).last
   end
 
+  def free_account?
+    return true unless stripe_customer&.subscriptions&.first
+    return false
+  end
+
   private
 
   def subscription_end_at_from_stripe(stripe_subscription)

@@ -28,7 +28,8 @@ class DashboardController < ApplicationController
   private
 
   def flash_when_registered
-    flash.now[:notice] = t('devise.registrations.signed_up') if params[:registered]
+    flash.now[:notice] = t('devise.registrations.signed_up') if params[:subscribed]
+    flash.now[:notice] = t('devise.registrations.signed_up_without_subscription') if params[:registered]
   end
 
   def my_amount_invested_sek

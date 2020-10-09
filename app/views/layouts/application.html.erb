@@ -59,7 +59,23 @@
   <%# TODO: Change text-green-dark to text-primary when Bootstrap is gone. These apply to both new and old worlds, so text-primary clashes because it exists in both. %>
   <body class="<%= controller_name + " " + controller_name + "-" + action_name %> min-h-screen text-base text-green-dark bg-green-dark">
 
+    <!-- TODO: Set up events in respective tracking service and add here
     <% if params[:registered].to_i == 1 %>
+      <script>
+        fbq('track', 'Sign up');
+        gtag('event', 'signup', {
+          'send_to': 'AW-823228700/-nQJCJXUrrcBEJzyxYgD',
+        });
+        ga('send',
+          'event',
+          'signup',
+          'conversion',
+          '',
+          );
+      </script>
+    <% end %>
+    -->
+    <% if params[:subscribed].to_i == 1 %>
       <script>
         fbq('track', 'Purchase', {
           currency: "<%= current_region.currency %>",
