@@ -7,16 +7,6 @@ export default class RegistrationFormController extends Controller {
     this.updateSubmitButton();
   }
 
-  handleSubmit(event) {
-    event.preventDefault();
-
-    if (this.membership === 'free') {
-      this.submitWithoutCardDetails();
-    } else {
-      this.submit();
-    }
-  }
-
   submit(event) {
     event.preventDefault();
 

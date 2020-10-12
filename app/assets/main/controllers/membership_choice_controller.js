@@ -25,6 +25,7 @@ export default class MembershipChoiceController extends Controller {
     if (!['free', 'single', 'multi'].includes(this.membership)) {
       return;
     }
+    this.membershipFieldTarget.value = this.membership;
     this.choiceTargets.forEach((target) => {
       if (target.value === this.membership) {
         MembershipChoiceController.activateChoice(target);

@@ -117,10 +117,24 @@
         </p>
       </div>
 
-      <button class="button button-cta w-full" data-target="registration-form.submitButton" data-action="registration-form#submit">
+      <button class="button button-cta w-full"
+        data-target="registration-form.submitButton membership-choice.subscriptionInfo"
+        data-action="registration-form#submit"
+        data-active-class="button button-cta w-full block"
+        data-inactive-class="hidden"
+      >
         <i class="fa fa-spinner fa-spin hidden" data-target="registration-form.loadingIndicator"></i>
-        <span data-target="membership-choice.subscriptionInfo" data-active-class="inline" data-inactive-class="hidden"><%= t 'views.registrations.start_subscription' %></span>
-        <span class="hidden" data-target="membership-choice.noSubscriptionInfo" data-active-class="inline" data-inactive-class="hidden">Create account</span>
+        <span><%= t 'views.registrations.start_subscription' %></span>
+      </button>
+
+      <button class="button button-cta w-full hidden"
+        data-target="registration-form.submitButton membership-choice.noSubscriptionInfo"
+        data-action="registration-form#submitWithoutCardDetails"
+        data-active-class="button button-cta block w-full"
+        data-inactive-class="hidden"
+      >
+        <i class="fa fa-spinner fa-spin hidden" data-target="registration-form.loadingIndicator"></i>
+        <span>Create account</span>
       </button>
       <p class="text-orange-shade-1 ml-4" data-target="registration-form.errorMessage"></p>
       <div class="mt-3 flex justify-between">
