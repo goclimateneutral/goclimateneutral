@@ -16,7 +16,7 @@
       </div>
 
       <div class="t:w-1/2">
-        <% if params[:sign_up_without_subscription].present? %>
+        <% if @active_experiments&.include?(:new_signup) && params[:sign_up_without_subscription].present? %>
           <%= render "sign_up_form_without_subscription" %>
         <% else %>
           <%= render "sign_up_form" %>
