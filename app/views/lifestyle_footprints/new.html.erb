@@ -189,6 +189,7 @@
             <h2 class="heading my-4"><%=t 'views.lifestyle_footprints.questions.flight_hours' %></h2>
             <div class="flex flex-col m-lg:flex-row">
               <%= f.number_field :flight_hours_answer, min: 0, size: 7, class: 'input mb-3 m-lg:mb-0 m-lg:mr-3' %>
+              <%= f.hidden_field :campaign, value: params[:campaign] %>
               <%= f.submit t('views.lifestyle_footprints.next'), class: 'button flex-1' %>
             </div>
           </div>

@@ -11,12 +11,18 @@ class LifestyleFootprintsController < ApplicationController
   end
 
   def create
+    campaign_param = params[:lifestyle_footprint][:campaign]
+
     @footprint = LifestyleFootprint.new(footprint_params)
     @footprint.update_from_lifestyle_calculator
     @footprint.user = current_user
     @footprint.save!
 
-    redirect_to new_registration_path(:user, lifestyle_footprint: @footprint)
+    query_params = {
+      lifestyle_footprint: @footprint
+    }
+    query_params[:campaign] = campaign_param unless campaign_param.blank?
+    redirect_to new_registration_path(:user, **query_params)
   end
 
   private

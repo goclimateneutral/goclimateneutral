@@ -16,7 +16,7 @@ module Users
       @country_average = LifestyleFootprintAverage.find_by_country(@footprint.country)
 
       respond_to do |format|
-        format.html { render }
+        format.html { render params[:campaign].presence ? 'new_campaign' : 'new' }
         format.json { render_price_json }
       end
     end

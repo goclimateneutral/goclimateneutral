@@ -1,0 +1,362 @@
+<%= render "shared/header" %>
+
+<section class="bg-blue-tint-1">
+  <div class="section-padding">
+    <div class="text-center pb-8 t:pb-16 d:pb-32 lg:px-0 max-w-4xl mx-auto">
+      <h1 class="font-semibold text-xl t:text-2xl d-md:text-3xl my-5"><%= t 'views.registrations.well_done' %></h1>
+      <h1 class="font-semibold text-xl t:text-2xl d-md:text-3xl my-5">hej</h1>
+    </div>
+
+    <div class="section-gutter flex flex-col t:flex-row t:justify-between">
+      <div class="space-y-6 d:space-y-12 t:w-1/2">
+        <% if @active_experiments&.include?(:new_signup) %>
+          <div>
+            <h2 class="text-sm"><%= t 'dashboard.footprint.heading' %></h2>
+            <div class="mt-1">
+              <span class="text-xl font-bold text-green-accent"><%= @footprint_tonnes.tonnes.round(1) %></span>
+              <span class="text-lg font-semibold"><%= t 'tonnes_CO2' %></span>
+            </div>
+          </div>
+
+          <div data-controller="tabs">
+            <ul data-target="tabs.tablist">
+              <li>
+                <button type="button" data-target="tabs.tab"><%= t 'dashboard.footprint.heading_compared' %></button>
+              </li>
+              <li>
+                <button type="button" data-target="tabs.tab"><%= t 'dashboard.footprint.heading_more' %></button>
+              </li>
+            </ul>
+            <section class="space-y-6" data-target="tabs.panel">
+              <% max_value_comparison = [@footprint.total.tonnes.round(1), @country_average.co2e.tonnes.round(1), 2.5].max %>
+              <div class="pr-16">
+                <div class="relative pb-1">
+                  <div class="space-y-6">
+                    <div>
+                      <p class="relative font-bold z-10 "><%= t 'views.registrations.you' %> <-</p>
+                      <div class="relative h-6 bg-green-accent rounded-r" style="width: <%= @footprint.total.tonnes.round(1) / max_value_comparison * 100 %>%">
+                        <span class="absolute left-100 ml-2 font-bold"><%= @footprint.total.tonnes.round(1) %></span>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="relative z-10 "><%= @country_average.countries.nil? ? t('views.registrations.world_average') : t('views.registrations.average_in', region: @footprint.country.translation(I18n.locale)) %></p>
+                      <div class="relative h-6 bg-primary rounded-r" style="width: <%= @country_average.co2e.tonnes.round(1) / max_value_comparison * 100 %>%">
+                        <span class="absolute left-100 ml-2 font-bold"><%= @country_average.co2e.tonnes.round(1) %></span>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="relative z-10 "><%= t 'views.registrations.goal_2030' %></p>
+                      <div class="relative h-6 bg-primary rounded-r" style="width: <%= 2.5 / max_value_comparison * 100 %>%">
+                        <span class="absolute left-100 ml-2 font-bold">2.5</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <% footprint_text_options = {
+                    footprint: @footprint.total.to_s(precision: :auto),
+                    relative:
+                      if @footprint.total > @country_average.co2e
+                        "#{((@footprint.total.co2e.to_f / @country_average.co2e.co2e - 1) * 100).ceil} % #{t 'views.registrations.higher'}"
+                      else
+                        "#{((1 - @footprint.total.co2e.to_f / @country_average.co2e.co2e) * 100).ceil} % #{t 'views.registrations.lower'}"
+                      end,
+                    country: @footprint.country.translation(I18n.locale)
+                } %>
+                <% if @country_average.countries.nil? %>
+                  <%= t("views.registrations.your_climate_footprint_compared_world", **footprint_text_options) %>
+                <% else %>
+                  <%= t("views.registrations.your_climate_footprint", **footprint_text_options) %>
+                <% end %>
+              </p>
+            </section>
+            <section class="space-y-3 m-lg:space-y-0" data-target="tabs.panel">
+              <h3 class="heading m-lg:hidden"><%= t 'dashboard.footprint.heading_more' %></h3>
+              <!-- diagram -->
+              <div class="relative pb-1">
+                <div class="space-y-6">
+                  <% max_value_categories = [@footprint.housing.tonnes.round(1), @footprint.food.tonnes.round(1), @footprint.car.tonnes.round(1), @footprint.flights.tonnes.round(1), @footprint.public.tonnes.round(1)].max %>
+                  <% [
+                      {
+                        amount: @footprint.housing,
+                        icon: 'fa-home',
+                        title: t('dashboard.footprint.category.housing'),
+                        'bg-color': 'bg-green-accent'
+                      },
+                      {
+                        amount: @footprint.food,
+                        icon: 'fa-cutlery',
+                        title: t('dashboard.footprint.category.food'),
+                        'bg-color': 'bg-yellow-accent'
+                      },
+                      {
+                        amount: @footprint.car,
+                        icon: 'fa-car',
+                        title: t('dashboard.footprint.category.car'),
+                        'bg-color': 'bg-orange-accent'
+                      },
+                      {
+                        amount: @footprint.flights,
+                        icon: 'fa-plane',
+                        title: t('dashboard.footprint.category.flights'),
+                        'bg-color': 'bg-blue-accent'
+                      },
+                      {
+                        key: 'public',
+                        amount: @footprint.public,
+                        icon: 'fa-university',
+                        title: t('dashboard.footprint.category.public'),
+                        'bg-color': 'bg-pink-accent'
+                      },
+                    ].each do |footprint| %>
+                    <div class="space-y-2">
+                      <div>
+                        <i class="fa fa-lg mr-1 m-lg:inline <%= footprint[:icon] %>" aria-hidden="true"></i>
+                        <span class="m-lg:text-sm"><%= footprint[:title] %></span>
+                      </div>
+                      <div class="flex-1 pr-24">
+                        <div class="relative h-6 <%= footprint[:amount].tonnes.round(1) > 0 ? 'pr-2 box-content' : '' %>" style="width: <%= footprint[:amount].tonnes.round(1) / max_value_categories * 100 %>%">
+                          <div class="w-full h-full rounded-r <%= footprint[:'bg-color'] %>"></div>
+                          <span class="absolute left-100 top-1/2 w-24 transform -translate-y-1/2 leading-none">
+                            <span class="font-bold"><%= footprint[:amount].tonnes.round(1) > 0 ? footprint[:amount].tonnes.round(1) : 0 %> <%= t 'tonnes' %></span>
+                            <% if footprint[:key] == 'public' %>
+                              <div>
+                                <a href="https://www.goclimate.com/blog/methodology-behind-the-carbon-footprint-calculator/" target="_blank" class="link text-sm">
+                                  <%= t 'dashboard.footprint.more_about_public_category' %>
+                                </a>
+                              </div>
+                            <% end %>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+              <!-- end of diagram -->
+            </section>
+          </div>
+        <% else %>
+          <!-- old signup -->
+          <div>
+            <h2 class="text-sm"><%= t 'views.registrations.result' %></h2>
+            <p class="font-bold mb-12">
+              <%= t 'views.registrations.your_yearly_climate_footprint' %>
+              <span class="text-green-accent"><%= @footprint_tonnes.to_s(precision: :auto) %></span>.
+              <%= t 'views.registrations.corresponds_to', price: @footprint_price.to_s(precision: :auto) %>
+            </p>
+          </div>
+
+          <% max_value = [@footprint.total.tonnes.round(1), @country_average.co2e.tonnes.round(1), 2.5].max %>
+          <div class="pr-16">
+            <div class="relative pb-1">
+              <div class="space-y-6">
+                <div>
+                  <p class="relative font-bold z-10 "><%= t 'views.registrations.you' %> <-</p>
+                  <div class="relative h-6 bg-green-accent rounded-r" style="width: <%= @footprint.total.tonnes.round(1) / max_value * 100 %>%">
+                    <span class="absolute left-100 ml-2 font-bold"><%= @footprint.total.tonnes.round(1) %></span>
+                  </div>
+                </div>
+                <div>
+                  <p class="relative z-10 "><%= @country_average.countries.nil? ? t('views.registrations.world_average') : t('views.registrations.average_in', region: @footprint.country.translation(I18n.locale)) %></p>
+                  <div class="relative h-6 bg-primary rounded-r" style="width: <%= @country_average.co2e.tonnes.round(1) / max_value * 100 %>%">
+                    <span class="absolute left-100 ml-2 font-bold"><%= @country_average.co2e.tonnes.round(1) %></span>
+                  </div>
+                </div>
+                <div>
+                  <p class="relative z-10 "><%= t 'views.registrations.goal_2030' %></p>
+                  <div class="relative h-6 bg-primary rounded-r" style="width: <%= 2.5 / max_value * 100 %>%">
+                    <span class="absolute left-100 ml-2 font-bold">2.5</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="absolute top-0 h-full w-0 border-l border-dashed border-primary" style="left: <%= 2.5 / max_value * 100 %>%"></div>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            <% footprint_text_options = {
+                footprint: @footprint.total.to_s(precision: :auto),
+                relative:
+                  if @footprint.total > @country_average.co2e
+                    "#{((@footprint.total.co2e.to_f / @country_average.co2e.co2e - 1) * 100).ceil} % #{t 'views.registrations.higher'}"
+                  else
+                    "#{((1 - @footprint.total.co2e.to_f / @country_average.co2e.co2e) * 100).ceil} % #{t 'views.registrations.lower'}"
+                  end,
+                country: @footprint.country.translation(I18n.locale)
+            } %>
+            <% if @country_average.countries.nil? %>
+              <%= t("views.registrations.your_climate_footprint_compared_world", **footprint_text_options) %>
+            <% else %>
+              <%= t("views.registrations.your_climate_footprint", **footprint_text_options) %>
+            <% end %>
+          </p>
+        <% end %>
+        <!-- end of A/B -->
+      </div>
+
+      <div class="t:w-1/2 d:w-1/3">
+        <div class="callout" data-controller="registration-price registration-form">
+          <h2 class="heading mb-6 text-center"><%= t 'views.registrations.subscribe_heading' %></h2>
+          <input type="checkbox" id="step-one-done" class="toggler">
+
+          <div class="toggler-checked:hidden">
+            <p class="text-sm text-center mb-6"><%= t 'views.registrations.step' %> 1/2 &mdash; <%= t 'views.registrations.adjust_subscription' %></p>
+          
+            <div class="space-y-3">
+              <div class="h-px w-full bg-gray-tint-2"></div>
+
+              <div class="flex justify-between items-center">
+                <span class="font-semibold"><%= t 'views.registrations.number_of_people' %></span>
+                <div class="select-wrapper">
+                  <%= form_with method: :get, html: { 'data-target': 'registration-price.peopleForm' } do |f| %>
+                    <%= f.hidden_field(:lifestyle_footprint, :value => @footprint.key) %>
+                    <%= f.select :people,
+                      options_for_select(1..20, params[:people].presence || 1),
+                      {},
+                      { class: 'select', 'data-action': 'registration-price#update' }
+                    %>
+                  <% end %>
+                </div>
+              </div>
+
+              <div class="h-px w-full bg-gray-tint-2"></div>
+
+              <div class="flex justify-between">
+                <span class="font-semibold"><%= t 'views.registrations.your_subscription' %></span>
+                <span class="text-right"><span data-target="registration-price.subscription"><%= @subscription_tonnes.to_s(precision: :auto) %></span>/<%= t 'years.one' %></span>
+              </div>
+
+              <div class="h-px w-full bg-gray-tint-2"></div>
+
+              <p class="heading-lg text-center py-6">
+                <span data-target="registration-price.price"><%= @plan_price.to_s(precision: :auto) %></span>/<%= t 'months.one' %>
+              </p>
+
+              <label for="step-one-done" id="continue-to-payment" class="button button-cta w-full"><%= t 'views.registrations.continue_to_payment' %></label>
+            </div>
+          </div>
+
+          <div class="toggler-not-checked:hidden">
+            <p class="text-sm text-center mb-6"><%= t 'views.registrations.step' %> 2/2 &mdash; <%= t 'views.registrations.create_account' %></p>
+
+            <%= form_with url: registration_path(resource_name, format: :json), html: { 'data-target': 'registration-form.form' } do |f| %>
+              <%= f.hidden_field(:lifestyle_footprint, :value => @footprint&.key) %>
+              <%= f.hidden_field :people, value: (params[:people].presence || 1), 'data-target': 'registration-price.peopleField' %>
+              <%= fields_for @user do |user_form| %>
+                <%= user_form.hidden_field :region %>
+
+                <label for="email" class="block font-semibold"><%=t 'email' %></label>
+                <%= user_form.email_field :email, required: true, id: "email", class: "input w-full" %>
+
+                <label for="password" class="block font-semibold mt-3"><%=t 'password' %></label>
+                <%= user_form.password_field :password, required: true, minlength: '6', maxlength: '128', size: 'auto', autocomplete: "off", id: "password", class: "input w-full" %>
+
+                <div class="mt-3" data-controller="stripe-card-element" data-target="registration-form.stripeCardElement">
+                  <label for="card" class=" font-semibold"><%=t 'credit_or_debit_card' %></label>
+                  <div class="">
+                    <div id="card" class="input mb-1" data-target="stripe-card-element.container"></div>
+                    <div class="text-orange-shade-1" data-target="stripe-card-element.errors"></div>
+                    <i class="fa fa-lock" aria-hidden="true"></i> <span class="ml-1">Secured by Stripe</span>
+                    <%= f.hidden_field :payment_method_id, 'data-target': 'stripe-card-element.paymentMethodField' %>
+                  </div>
+                </div>
+
+                <div class="mt-3">
+                  <label>
+                    <%= f.check_box :privacy_policy, 'data-target': 'registration-form.privacyPolicyAgreement', 'data-action': 'change->registration-form#updateSubmitButton' %>
+                    <span>
+                      <%=t 'i_accept' %>
+                      <%= link_to I18n.t('our_privacy_policy'), privacy_policy_path, target: '_blank', class: 'link' %>
+                    </span>
+                  </label>
+                </div>
+              <% end %>
+            <% end %>
+
+            <p class="heading-lg text-center py-6">
+              <span data-target="registration-price.price"><%= @plan_price.to_s(precision: :auto) %></span>/<%= t 'months.one' %>
+            </p>
+
+            <button class="button button-cta w-full" data-target="registration-form.submitButton" data-action="registration-form#submit">
+              <i class="fa fa-spinner fa-spin hidden" data-target="registration-form.loadingIndicator"></i>
+              <%= t 'views.registrations.start_subscription' %>
+            </button>
+            <p class="text-orange-shade-1 ml-4" data-target="registration-form.errorMessage"></p>
+            <div class="mt-3">
+              <label for="step-one-done" class="link-ui text-sm"><- <%= t 'views.registrations.back' %></label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="bg-blue-tint-1 relative">
+  <%= image_tag webpack_asset_path('images/illustrations/forest_and_city.png'), class: 'w-11/12 t:w-3/4 mx-auto', style: 'max-width: 812px'%>
+  <%= image_tag webpack_asset_path('images/illustrations/horizon_curve.svg'), class: 'w-full max-h-6 absolute bottom-0' %>
+</div>
+
+<section class="bg-green-tint-1">
+  <div class="section-padding">
+    <div class="section-gutter m-lg:flex">
+      <div class="m-lg:w-1/2 m-lg:pr-16 space-y-3">
+        <h3 class="font-semibold"><%= t 'views.registrations.where_does_the_money_go.heading' %></h3>
+        <ul class="list-check space-y-3">
+          <li><%= t 'views.registrations.where_does_the_money_go.point_1' %></li>
+          <li><%= t 'views.registrations.where_does_the_money_go.point_2' %></li>
+          <li><%= t 'views.registrations.where_does_the_money_go.point_3' %></li>
+          <li><%= t 'views.registrations.where_does_the_money_go.point_4' %></li>
+        </ul>
+      </div>
+      <div class="m-lg:w-1/2 space-y-3">
+        <h3 class="font-semibold"><%= t 'views.registrations.latest_projects' %></h3>
+        <ul class="space-y-3">
+          <% @projects.each do |project| %>
+            <li class="flex items-center p-3 bg-white rounded border border-gray-tint-2">
+              <div class="mr-4">
+                <div class="rounded-full overflow-hidden bg-cover bg-center w-12 h-12" style="background-image: url('<%= project.image_url %>')"></div>
+              </div>
+              <span>
+                <p class="font-semibold"><%= project.name %></p>
+                <p><%= project.country %></p>
+              </span>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-green-tint-1">
+  <div class="section-padding">
+    <div class="text-center max-w-2xl mx-auto space-y-3">
+      <h2 class="heading"><%= t 'views.registrations.faq' %></h2>
+      <% [
+        "climate_neutrality.questions.q2",
+        "offsetting.questions.q2",
+        "offsetting.questions.q3",
+        "offsetting.questions.q6",
+        "offsetting.questions.q9",
+        "our_service.questions.q1",
+        "our_service.questions.q3",
+        "our_service.questions.q4",
+      ].each do |q| %>
+        <div class="block border p-3 rounded text-left collapse">
+          <input id="question-<%= q %>" type="checkbox">
+          <label for="question-<%= q %>" class="flex justify-between cursor-pointer">
+            <div class="font-semibold"><%= t "faq_questions.#{q}.question" %></div>
+            <div class="pl-3"><i class="fa fa-chevron-circle-down collapse-chevron" aria-hidden="true"></i></div>
+          </label>
+          <div class="pt-4 collapse-content"><%= raw(t("faq_questions.#{q}.answer")) %></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
