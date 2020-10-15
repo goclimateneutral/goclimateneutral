@@ -7,12 +7,12 @@ export default class RegistrationFormController extends Controller {
     this.updateSubmitButton();
   }
 
-  submit(event) {
+  submit(event, includePaymentMethod = false) {
     event.preventDefault();
 
     if (!this.formTarget.reportValidity()) { return; }
 
-    if (!this.stripeCardElementController.complete) {
+    if (includePaymentMethod && !this.stripeCardElementController.complete) {
       this.setErrorMessage('Please complete your card details.');
       return;
     }
@@ -20,7 +20,11 @@ export default class RegistrationFormController extends Controller {
     this.enableLoadingState();
     this.setErrorMessage('');
 
-    this.stripeCardElementController.populatePaymentMethodField()
+    (
+      includePaymentMethod
+        ? this.stripeCardElementController.populatePaymentMethodField()
+        : Promise.resolve()
+    )
       .then(() => submitForm(this.formTarget))
       .then((response) => response.json())
       .then((data) => this.resolveFormResponse(data))
@@ -34,32 +38,16 @@ export default class RegistrationFormController extends Controller {
         this.setErrorMessage('An unexpected error occurred. Please start over and try again. If the issue remains, please contact us at hello@goclimate.com.');
       })
       .finally(() => {
-        this.stripeCardElementController.invalidatePaymentMethodField();
+        if (includePaymentMethod) {
+          this.stripeCardElementController.invalidatePaymentMethodField();
+        }
         this.disableLoadingState();
       });
   }
 
-  submitWithoutCardDetails() {
-    if (!this.formTarget.reportValidity()) { return; }
-
-    this.enableLoadingState();
-    this.setErrorMessage('');
-
-    submitForm(this.formTarget)
-      .then((response) => response.json())
-      .then((data) => this.resolveFormResponse(data))
-      .catch((error) => {
-        if (error.cardError) {
-          this.setErrorMessage(error.message);
-          return;
-        }
-
-        window.Sentry.captureException(error); // These errors are unexpected, so report them.
-        this.setErrorMessage('An unexpected error occurred. Please start over and try again. If the issue remains, please contact us at hello@goclimate.com.');
-      })
-      .finally(() => {
-        this.disableLoadingState();
-      });
+  submitWithCardDetails(event) {
+    event.preventDefault();
+    this.submit(event, true);
   }
 
   resolveFormResponse(data) {

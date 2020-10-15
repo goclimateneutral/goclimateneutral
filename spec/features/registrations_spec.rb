@@ -93,7 +93,7 @@ RSpec.feature 'Registrations', type: :feature, js: true do
     visit "#{current_url}&sign_up_without_subscription=2"
 
     # Sign up page
-    find('input#free').click
+    find('input#free', wait: 20).click
     find('#continue-to-payment').click
     fill_in 'Email', with: 'test@example.com'
     fill_in 'Password', with: 'password'
@@ -102,5 +102,6 @@ RSpec.feature 'Registrations', type: :feature, js: true do
 
     # Wait for success page to render
     find('.dashboard-show', wait: 20)
+    expect(page).to have_text 'Welcome to GoClimate!'
   end
 end

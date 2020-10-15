@@ -33,7 +33,7 @@ module Users
 
       sign_in(resource_name, @user, force: true) # Force because we have updated the password
 
-      unless params[:membership] == "free"
+      unless params[:membership] == 'free'
         stripe_plan = Stripe::Plan.retrieve_or_create_climate_offset_plan(@plan_price)
         @manager.sign_up(stripe_plan, params[:payment_method_id])
       end
@@ -65,7 +65,7 @@ module Users
 
     # The path used after sign up.
     def after_sign_up_path_for(_resource)
-      return dashboard_path(registered: 1) if params[:membership] == "free"
+      return dashboard_path(registered: 1) if params[:membership] == 'free'
 
       dashboard_path(subscribed: 1)
     end

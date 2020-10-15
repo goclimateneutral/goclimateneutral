@@ -77,8 +77,9 @@ class User < ApplicationRecord
   end
 
   def free_account?
-    return true unless stripe_customer&.subscriptions&.first
-    return false
+    return true unless stripe_customer&.subscriptions&.any?
+
+    false
   end
 
   private

@@ -81,7 +81,7 @@
       <span data-target="registration-price.price"><%= @plan_price.to_s(precision: :auto) %></span>/<%= t 'months.one' %>
     </p>
 
-    <button class="button button-cta w-full" data-target="registration-form.submitButton" data-action="registration-form#submit">
+    <button class="button button-cta w-full" data-target="registration-form.submitButton" data-action="registration-form#submitWithCardDetails">
       <i class="fa fa-spinner fa-spin hidden" data-target="registration-form.loadingIndicator"></i>
       <%= t 'views.registrations.start_subscription' %>
     </button>
