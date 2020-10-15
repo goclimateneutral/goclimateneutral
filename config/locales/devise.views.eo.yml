@@ -82,6 +82,7 @@ eo:
       new:
         sign_up: crwdns12612:0crwdne12612:0
       signed_up: crwdns12614:0crwdne12614:0
+      signed_up_without_subscription: crwdns14990:0crwdne14990:0
       signed_up_but_inactive: crwdns12616:0crwdne12616:0
       signed_up_but_locked: crwdns12618:0crwdne12618:0
       signed_up_but_unconfirmed: crwdns12620:0crwdne12620:0
