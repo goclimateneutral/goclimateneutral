@@ -33,7 +33,6 @@
 <% if client_prefers_no_tracking? %>
   <script>
     function ga() {}
-    function gtag() {}
     function fbq() {}
   </script>
 <% else %>
@@ -46,15 +45,6 @@
     <% unless ENV['GOOGLE_ANALYTICS_SENDING'] == 'enabled' %>ga('set', 'sendHitTask', null);<% end %>
     ga('set', 'dimension1', '<%= @active_experiments.any? ? @active_experiments.sort.join(',') : 'none' %>');
     ga('send', 'pageview');
-  </script>
-
-  <!-- Global site tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-823228700"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-823228700');
   </script>
 
   <!-- Facebook Pixel Code -->
