@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.feature 'Registrations', type: :feature, js: true do
   scenario 'Register' do
     # Homepage
-    visit '/'
+    visit '/?disable_experiments=new_signup'
 
     select('Sweden', from: 'country')
     click_button 'Get started'
@@ -39,7 +39,7 @@ RSpec.feature 'Registrations', type: :feature, js: true do
 
   scenario 'Register with 3D Secure card' do
     # Homepage
-    visit '/'
+    visit '/?disable_experiments=new_signup'
 
     select('Sweden', from: 'country')
     click_button 'Get started'
@@ -75,7 +75,7 @@ RSpec.feature 'Registrations', type: :feature, js: true do
   end
 
   scenario 'Register without subscription' do
-    visit '/'
+    visit '/?enable_experiments=new_signup'
 
     select('Sweden', from: 'country')
     click_button 'Get started'
@@ -87,10 +87,6 @@ RSpec.feature 'Registrations', type: :feature, js: true do
     find('label', text: 'Vegetarian').click
     find('label', text: 'I don\'t have a car').click
     click_button 'Next'
-
-    # Sign up page behind feature flag
-    # TODO: remove feature flag
-    visit "#{current_url}&sign_up_without_subscription=2"
 
     # Sign up page
     find('input#free', wait: 20).click
