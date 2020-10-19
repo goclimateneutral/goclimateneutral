@@ -131,6 +131,15 @@ We have a custom set up for A/B testing. Setting up an A/B test is done in `expe
   <% end %>
 ```
 
+A/B tests can be manually enabled or disabled with a query string. You can specify multiple tests by separating them with a `,`.
+
+```
+enable_experiments=my_feature,my_other_feature
+```
+```
+disable_experiments=my_feature,my_other_feature
+```
+
 ## Getting started
 
 ### Requirements
