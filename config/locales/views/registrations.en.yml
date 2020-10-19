@@ -16,7 +16,7 @@ en:
       your_climate_footprint_compared_world: Your carbon footprint of %{footprint} is %{relative} than the world average. To be in line with the 1.5 degree target set by the Paris agreement, we need to reach an average of 2.5 tonnes per person globally by the year 2030.
 
       subscribe_heading: Subscribe to a climate neutral life
-      sign_up_heading: Let's save the planet together!
+      sign_up_heading: Let's stop climate change together!
       sign_up_description: Sign up to save your result, get support in reducing your footprint, and opt in to carbon offsetting.
       step: Step
       adjust_subscription: Adjust your subscription
@@ -25,9 +25,9 @@ en:
       your_subscription: Your subscription
       number_of_people: Number of people
       membership:
-        free: <span>Free account</span>. Save your carbon footprint result.
-        single: <span>Offsetting</span>. Offset your carbon footprint through climate projects.
-        multi: <span>Offsetting extra</span>. Offset your carbon footprint multiple times over.
+        free: <span>Free account</span>. Track your carbon footprint over time.
+        single: <span>Offset</span> your carbon footprint through climate projects.
+        multi: <span>Offset multiple times</span>. Offset more for yourself or for loved ones.
       continue: Continue
       continue_to_payment: Continue to payment
       start_subscription: Start subscription
