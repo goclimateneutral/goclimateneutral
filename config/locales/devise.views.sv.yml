@@ -82,6 +82,7 @@ sv:
       new:
         sign_up: Registrera dig
       signed_up: Välkommen till ett klimatneutralt liv!
+      signed_up_without_subscription: Välkommen till GoClimate!
       signed_up_but_inactive: Du är nu registrerad. Däremot kunde vi inte logga in dig, eftersom ditt konto ännu inte aktiverats.
       signed_up_but_locked: Du är nu registrerad. Däremot kunde vi inte logga in dig, eftersom ditt konto är låst.
       signed_up_but_unconfirmed: Ett meddelande med en länk för att bekräfta din registrering har skickats till din epostadress. Följ länken för att aktivera ditt konto.
