@@ -14,7 +14,6 @@ sv:
       your_climate_footprint: Ditt klimatavtryck på %{footprint} är %{relative} än genomsnittet i %{country}. För att ligga i linje med Parisavtalets 1,5 gradersmål måste vi globalt ha ett genomsnitt på 2,5 ton per person till år 2030.
       your_climate_footprint_compared_world: Ditt klimatavtryck på %{footprint} är %{relative} än genomsnittet i världen. För att ligga i linje med Parisavtalets 1,5 gradersmål måste vi globalt ha ett genomsnitt på 2,5 ton per person till år 2030.
       subscribe_heading: Prenumerera på ett klimatneutralt liv
-      sign_up_heading: Rädda klimatet med oss!
       sign_up_description: Bli medlem och spara ditt resultat, få hjälp att minska ditt avtryck och få möjlighet att klimatkompensera.
       step: Steg
       adjust_subscription: Anpassa din prenumeration
@@ -22,10 +21,6 @@ sv:
       create_account: Skapa konto
       your_subscription: Din prenumeration
       number_of_people: Antal personer
-      membership:
-        free: <span>Gratis konto</span>. Spara ditt klimatavtryck.
-        single: <span>Kompensera</span>. Klimatkompensera ditt avrtyck genom klimatprojekt.
-        multi: <span>Kompensera extra</span>. Klimatkompensera ditt avtryck flera gånger om.
       continue: Fortsätt
       continue_to_payment: Fortsätt till betalning
       start_subscription: Starta prenumeration
