@@ -64,7 +64,7 @@ Rails.application.routes.draw do
 
     resources :projects, path: 'climate-projects', only: [:index]
 
-    resources :campaigns, path: 'know-your-footprint', only: [:index, :show], path_names: { show: '' }
+    resource :know_your_footprint, controller: 'know_your_footprint', path: 'know-your-footprint', only: [:show]
 
     resource :business, controller: 'business', only: [:show]
     namespace :business do
