@@ -1,1 +1,115 @@
-<h1>Know your footprint</h1>
+<%= render "shared/header" %>
+
+<section class="section-padding">
+  <div class="section-gutter t:flex t:items-center t:justify-between">
+    <div class="t:w-1/2 space-y-6">
+      <h1 class="heading-xl">Know your carbon footprint</h1>
+      <p>
+        GoClimate fights climate catastrophe by reducing greenhouse gas emissions, whilst centring climate justice and operating with 100% transparency. As a community, we finance effective climate projects that build a foundation for a sustainable future. 
+      </p>
+      <div class="callout max-w-xl">
+        <p class="text-center font-bold">Take the test and start your journey towards a more climate friendly life</p>
+        <div>
+          <%= form_with url: new_lifestyle_footprint_path, method: :get, class: 'm-lg:flex m-lg:justify-center mt-3' do |f| %>
+            <div class="select-wrapper w-full m-lg:w-auto">
+              <label for="country" class="sr-only">Select your country</label>
+              <%= f.country_select :country,
+                    {
+                      include_blank: t('views.welcome.index.i_live_in'),
+                      priority_countries: [
+                        ISO3166::Country.new(request.headers['CF-IPCountry'])&.alpha2 || current_region.country_codes
+                      ].flatten.compact
+                    },
+                    {
+                      class: 'select',
+                      required: ''
+                    } %>
+            </div>
+            <%= f.submit t('views.welcome.index.get_started'), name: nil, class: 'button button-cta mt-2 m-lg:mt-0 m-lg:ml-2 w-full m-lg:w-auto' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="t:w-1/2">
+      <%= image_tag webpack_asset_path('images/illustrations/co2.png'), class: 'w-full max-w-lg' %>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding">
+  <div class="section-gutter t:flex t:flex-row-reverse t:items-center t:justify-between">
+    <div class="t:w-1/2 space-y-6">
+      <h2 class="heading-lg">What is a carbon footprint?</h2>
+      <div class="space-y-3">
+        <p>We all have an individual carbon footprint, as pretty much everything we do emits CO2 (carbon dioxide). Even though a lot of responsibility lies on large companies and governments, we need to come together in order to make a change and create a way of living that doesn’t harm the planet. The average of someone living in the Global North is 10 tonnes/year. We need to cut this number in half every decade to stay reasonably safe from further climate catastrophe.</p>
+        <p>Main areas to look at in terms of your carbon footprint are home, diet, travelling, shopping and public consumption. By signing up with GoClimate you will be able to get a better idea of which of your lifestyle choices emit the most CO2 today, as well as get support in reducing it over time.</p>
+      </div>
+    </div>
+    <div class="t:w-1/2">
+      <%= image_tag webpack_asset_path('images/illustrations/carbon_footprint.png'), class: 'w-full max-w-lg' %>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding">
+  <div class="section-gutter t:flex t:items-center t:justify-between">
+    <div class="t:w-1/2 space-y-6">
+      <h2 class="heading-lg">System change and behavioral change</h2>
+      <p>Big corporations and governments are responsible for national policies and collective emissions, but as individuals, we are also responsible for a share in all of this. If we all join forces, we can both reduce emissions on an individual and collective level, as well as exert pressure on governments to improve legislation. This is not an either/or situation, we need to do everything - drive system change AND change our own behavior!</p>
+    </div>
+    <div class="t:w-1/2">
+      <%= image_tag webpack_asset_path('images/illustrations/changes.png'), class: 'w-full max-w-lg' %>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding">
+  <div class="section-gutter t:flex t:flex-row-reverse t:items-center t:justify-between">
+    <div class="t:w-1/2 space-y-6">
+      <h2 class="heading-lg">Global North vs Global South</h2>
+      <p>The carbon footprint of someone living in the Global North is so much higher than that of the average individual living in the Global South. Therefore, those of us who are privileged enough to have a choice to make changes, need to act now to get our emissions down.</p>
+    </div>
+    <div class="t:w-1/2">
+      <%= image_tag webpack_asset_path('images/illustrations/climate_justice.png'), class: 'w-full max-w-lg' %>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding">
+  <div class="section-gutter t:flex t:items-center t:justify-between">
+    <div class="t:w-1/2 space-y-6">
+      <h2 class="heading-lg">Join us!</h2>
+      <p>As a community, we finance effective climate projects that build a foundation for a sustainable future. We only support Gold standard certified climate projects to ensure your money makes as much of a difference as possible.</p>
+      <div class="callout max-w-xl">
+        <p class="text-center font-bold">Take the test and start your journey towards a more climate friendly life</p>
+        <div>
+          <%= form_with url: new_lifestyle_footprint_path, method: :get, class: 'm-lg:flex m-lg:justify-center mt-3' do |f| %>
+            <div class="select-wrapper w-full m-lg:w-auto">
+              <label for="country" class="sr-only">Select your country</label>
+              <%= f.country_select :country,
+                    {
+                      include_blank: t('views.welcome.index.i_live_in'),
+                      priority_countries: [
+                        ISO3166::Country.new(request.headers['CF-IPCountry'])&.alpha2 || current_region.country_codes
+                      ].flatten.compact
+                    },
+                    {
+                      class: 'select',
+                      required: ''
+                    } %>
+            </div>
+            <%= f.submit t('views.welcome.index.get_started'), name: nil, class: 'button button-cta mt-2 m-lg:mt-0 m-lg:ml-2 w-full m-lg:w-auto' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="t:w-1/2">
+      <%= image_tag webpack_asset_path('images/illustrations/participate.png'), class: 'w-full max-w-lg' %>
+    </div>
+  </div>
+</section>
+
+<%= render 'shared/more_info', pages: [:about, :transparency] %>
+
+<%= render "shared/bottom_landscape" %>
+<%= render 'shared/footer', skip_prefooter: true %>
