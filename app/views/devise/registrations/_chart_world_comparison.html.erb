@@ -1,0 +1,42 @@
+<% max_value_comparison = [@footprint.total.tonnes.round(1), @country_average.co2e.tonnes.round(1), 2.5].max %>
+<div class="pr-16">
+  <div class="relative pb-1">
+    <div class="space-y-6">
+      <div>
+        <p class="relative font-bold z-10 "><%= t 'views.registrations.you' %> <-</p>
+        <div class="relative h-6 bg-green-accent rounded-r" style="width: <%= @footprint.total.tonnes.round(1) / max_value_comparison * 100 %>%">
+          <span class="absolute left-100 ml-2 font-bold"><%= @footprint.total.tonnes.round(1) %></span>
+        </div>
+      </div>
+      <div>
+        <p class="relative z-10 "><%= @country_average.countries.nil? ? t('views.registrations.world_average') : t('views.registrations.average_in', region: @footprint.country.translation(I18n.locale)) %></p>
+        <div class="relative h-6 bg-primary rounded-r" style="width: <%= @country_average.co2e.tonnes.round(1) / max_value_comparison * 100 %>%">
+          <span class="absolute left-100 ml-2 font-bold"><%= @country_average.co2e.tonnes.round(1) %></span>
+        </div>
+      </div>
+      <div>
+        <p class="relative z-10 "><%= t 'views.registrations.goal_2030' %></p>
+        <div class="relative h-6 bg-primary rounded-r" style="width: <%= 2.5 / max_value_comparison * 100 %>%">
+          <span class="absolute left-100 ml-2 font-bold">2.5</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<p>
+  <% footprint_text_options = {
+      footprint: @footprint.total.to_s(precision: :auto),
+      relative:
+        if @footprint.total > @country_average.co2e
+          "#{((@footprint.total.co2e.to_f / @country_average.co2e.co2e - 1) * 100).ceil} % #{t 'views.registrations.higher'}"
+        else
+          "#{((1 - @footprint.total.co2e.to_f / @country_average.co2e.co2e) * 100).ceil} % #{t 'views.registrations.lower'}"
+        end,
+      country: @footprint.country.translation(I18n.locale)
+  } %>
+  <% if @country_average.countries.nil? %>
+    <%= t("views.registrations.your_climate_footprint_compared_world", **footprint_text_options) %>
+  <% else %>
+    <%= t("views.registrations.your_climate_footprint", **footprint_text_options) %>
+  <% end %>
+</p>
