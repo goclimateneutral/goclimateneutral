@@ -64,7 +64,9 @@ Rails.application.routes.draw do
 
     resources :projects, path: 'climate-projects', only: [:index]
 
-    resource :know_your_footprint, controller: 'know_your_footprint', path: 'know-your-footprint', only: [:show]
+    resource :know_your_footprint, controller: 'know_your_footprint', path: 'know-your-carbon-footprint', only: [:show]
+    get '/knowyourcarbonfootprint', to: redirect('know-your-carbon-footprint')
+    get '/KnowYourCarbonFootprint', to: redirect('know-your-carbon-footprint')
 
     resource :business, controller: 'business', only: [:show]
     namespace :business do
