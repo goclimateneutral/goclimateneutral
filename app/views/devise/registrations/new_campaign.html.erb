@@ -7,7 +7,7 @@
     </div>
 
     <div class="section-gutter flex flex-col t:flex-row t:justify-between">
-      <div class="space-y-6 d:space-y-12 t:w-1/2">
+      <div class="t:w-3/5 d-lg:w-1/2 space-y-6 d:space-y-12">
         <div>
           <h2 class="text-sm"><%= t 'dashboard.footprint.heading' %></h2>
           <div class="mt-1">
@@ -17,10 +17,10 @@
         </div>
         <%= render "chart_world_comparison" %>
       </div>
-      <div class="t:w-1/2">
+      <div class="t:w-2/5 d-lg:w-1/2">
         <div class="relative mx-auto w-3/4 m-lg:w-1/2 t:w-full max-w-lg">
-          <%= image_tag webpack_asset_path('images/shapes/blob_1.svg'), class: 'w-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2' %>
-          <%= image_tag webpack_asset_path('images/illustrations/co2.png'), class: 'w-full relative' %>
+          <%= image_tag webpack_asset_path('images/shapes/blob_1.svg'), class: 'w-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2', alt: '' %>
+          <%= image_tag webpack_asset_path('images/illustrations/co2.png'), class: 'w-full relative', alt: '' %>
         </div>
       </div>
     </div>
@@ -34,7 +34,7 @@
           <p>Main areas to look at in terms of your footprint are living situation, diet, travelling and means of transporation, private consumption and public consumption</p>
         </div>
         <div class="t:w-1/2">
-          <%= render "chart_categories" %>
+          <%= render "chart_categories", skip_public_explanation: true %>
         </div>
       </div>
     </div>
@@ -130,13 +130,15 @@
           <%= fields_for @user do |user_form| %>
             <%= user_form.hidden_field :region %>
 
-            <label for="email" class="block font-semibold"><%=t 'email' %></label>
-            <%= user_form.email_field :email, required: true, id: "email", class: "input w-full" %>
-
-            <label for="password" class="block font-semibold mt-3"><%=t 'password' %></label>
-            <%= user_form.password_field :password, required: true, minlength: '6', maxlength: '128', size: 'auto', autocomplete: "off", id: "password", class: "input w-full" %>
-
-            <div class="mt-3">
+            <div>
+              <label for="email" class="block font-semibold"><%=t 'email' %></label>
+              <%= user_form.email_field :email, required: true, id: "email", class: "input w-full" %>
+            </div>
+            <div>
+              <label for="password" class="block font-semibold"><%=t 'password' %></label>
+              <%= user_form.password_field :password, required: true, minlength: '6', maxlength: '128', size: 'auto', autocomplete: "off", id: "password", class: "input w-full" %>
+            </div>
+            <div>
               <label>
                 <%= f.check_box :privacy_policy, 'data-target': 'registration-form.privacyPolicyAgreement', 'data-action': 'change->registration-form#updateSubmitButton' %>
                 <span>
@@ -176,14 +178,17 @@
           <%= f.hidden_field :membership, value: 'multi' %>
           <%= fields_for @user do |user_form| %>
             <%= user_form.hidden_field :region %>
+            <div>
+              <label for="email" class="block font-semibold"><%=t 'email' %></label>
+              <%= user_form.email_field :email, required: true, id: "email", class: "input w-full" %>
+            </div>
 
-            <label for="email" class="block font-semibold"><%=t 'email' %></label>
-            <%= user_form.email_field :email, required: true, id: "email", class: "input w-full" %>
+            <div>
+              <label for="password" class="block font-semibold"><%=t 'password' %></label>
+              <%= user_form.password_field :password, required: true, minlength: '6', maxlength: '128', size: 'auto', autocomplete: "off", id: "password", class: "input w-full" %>
+            </div>
 
-            <label for="password" class="block font-semibold mt-3"><%=t 'password' %></label>
-            <%= user_form.password_field :password, required: true, minlength: '6', maxlength: '128', size: 'auto', autocomplete: "off", id: "password", class: "input w-full" %>
-
-            <div class="mt-3" data-controller="stripe-card-element" data-target="registration-form.stripeCardElement membership-choice-campaign.stripeCardElement" data-active-class="mt-3 block" data-inactive-class="hidden">
+            <div data-controller="stripe-card-element" data-target="registration-form.stripeCardElement membership-choice-campaign.stripeCardElement" data-active-class="block" data-inactive-class="hidden">
               <label for="card" class=" font-semibold"><%=t 'credit_or_debit_card' %></label>
               <div class="">
                 <div id="card" class="input mb-1" data-target="stripe-card-element.container"></div>
@@ -193,7 +198,7 @@
               </div>
             </div>
 
-            <div class="mt-3">
+            <div>
               <label>
                 <%= f.check_box :privacy_policy, 'data-target': 'registration-form.privacyPolicyAgreement', 'data-action': 'change->registration-form#updateSubmitButton' %>
                 <span>
