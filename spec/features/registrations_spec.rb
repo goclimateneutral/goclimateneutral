@@ -100,4 +100,110 @@ RSpec.feature 'Registrations', type: :feature, js: true do
     find('.dashboard-show', wait: 20)
     expect(page).to have_text 'Welcome to GoClimate!'
   end
+
+  scenario 'Register through campaign page' do
+    # Campaign page
+    visit '/know-your-carbon-footprint'
+
+    within '#first-registration-form' do
+      select('Sweden', from: 'country')
+      click_button 'Get started'
+    end
+
+    # Calculator
+    find('label', text: 'Apartment').click
+    find('label', text: 'Electricity').click
+    find('label', text: 'Yes').click
+    find('label', text: 'Vegetarian').click
+    find('label', text: 'I don\'t have a car').click
+    click_button 'Next'
+
+    # Result page
+    click_button 'Continue to payment'
+    fill_in 'Email', with: 'test@example.com'
+    fill_in 'Password', with: 'password'
+    within_frame(0) do
+      send_keys_to_card_field '4242424242424242'
+      find('input[name=exp-date]').send_keys '522'
+      find('input[name=cvc]').send_keys '123'
+    end
+    check 'I accept our Privacy policy'
+    click_button 'Start subscription'
+
+    # Wait for success page to render
+    find('.dashboard-show', wait: 30)
+
+    expect(page).to have_text 'Welcome to a climate neutral life'
+    expect(User.last.stripe_customer.subscriptions.first.status).to eq('active')
+  end
+
+  scenario 'Register through campaign page with 3D Secure card' do
+    # Campaign page
+    visit '/know-your-carbon-footprint'
+
+    within '#first-registration-form' do
+      select('Sweden', from: 'country')
+      click_button 'Get started'
+    end
+
+    # Calculator
+    find('label', text: 'Apartment').click
+    find('label', text: 'Electricity').click
+    find('label', text: 'Yes').click
+    find('label', text: 'Vegetarian').click
+    find('label', text: 'I don\'t have a car').click
+    click_button 'Next'
+
+    # Result page
+    click_button 'Continue to payment'
+    fill_in 'Email', with: 'test@example.com'
+    fill_in 'Password', with: 'password'
+    within_frame(0) do
+      send_keys_to_card_field '4000000000003063'
+      find('input[name=exp-date]').send_keys '522'
+      find('input[name=cvc]').send_keys '123'
+    end
+    check 'I accept our Privacy policy'
+    click_button 'Start subscription'
+
+    # 3D Secure authorization pop up
+    authorize_3d_secure
+
+    # Wait for success page to render
+    find('.dashboard-show', wait: 30)
+
+    expect(page).to have_text 'Welcome to a climate neutral life'
+    expect(User.last.stripe_customer.subscriptions.first.status).to eq('active')
+  end
+
+  scenario 'Register through campaign page without subscription' do
+    # Campaign page
+    visit '/know-your-carbon-footprint'
+
+    within '#first-registration-form' do
+      select('Sweden', from: 'country')
+      click_button 'Get started'
+    end
+
+    # Calculator
+    find('label', text: 'Apartment').click
+    find('label', text: 'Electricity').click
+    find('label', text: 'Yes').click
+    find('label', text: 'Vegetarian').click
+    find('label', text: 'I don\'t have a car').click
+    click_button 'Next'
+
+    # Result page
+    click_button 'Sign up'
+    fill_in 'Email', with: 'test@example.com'
+    fill_in 'Password', with: 'password'
+    check 'I accept our Privacy policy'
+    click_button 'Create account'
+
+    # Wait for success page to render
+    find('.dashboard-show', wait: 30)
+
+    expect(page).to have_text 'Welcome to GoClimate!'
+    expect(User.last.stripe_customer.subscriptions.first).to eq(nil)
+  end
 end
