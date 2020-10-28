@@ -1,0 +1,20 @@
+en:
+  views:
+    know_your_footprint:
+      show:
+        heading: Know your carbon footprint
+        description: GoClimate fights climate catastrophe by reducing greenhouse gas emissions, while always keeping climate justice in mind and operating with 100% transparency. As a community, we finance effective climate projects that build a foundation for a sustainable future and support you in reducing your carbon footprint.
+        cta: Take the test to learn more!
+        what_is_a_carbon_footprint:
+          heading: What is a carbon footprint?
+          text: We all have an individual carbon footprint, as pretty much everything we do emits CO2 (carbon dioxide). Even though a lot of responsibility lies on large companies and governments, we need to come together in order to make a change and create a way of living that doesn’t harm the planet. The average of someone living in the Global North is 10 tonnes/year. We need to cut this number in half every decade to stay reasonably safe from further climate catastrophe.
+        system_change:
+          heading: System change and behavioral change
+          text: Big corporations and governments are responsible for national policies and collective emissions, but as individuals, we are also responsible for a share in all of this. If we all join forces, we can both reduce emissions on an individual and collective level, as well as exert pressure on governments to improve legislation. This is not an either/or situation, we need to do everything - drive system change AND change our own behavior!
+        global_north_south:
+          heading: Global North vs Global South
+          text: The Global North and Global South are terms used to describe two groups of the Earth's countries, defined by differences in socio-economic levels and political views. In general, countries in the Global North tend to be developed countries, wealthier, less unequal and considered more democratic, while countries in the Global South are developing countries that are generally poorer and have a shorter history of democracy.
+          text_2: A lot of the production of items consumed by the Global North take place in the Global South, which creates an imbalance in emissions that we believe must be addressed. One way of starting to take responsibility is to balance your carbon footprint by supporting climate projects through our subscription service.
+        sign_up:
+          heading: Join us!
+          text: As a community, we finance effective climate projects that build a foundation for a sustainable future and support you in reducing your carbon footprint. We only support Gold standard certified climate projects to ensure your money makes as much of a difference as possible.

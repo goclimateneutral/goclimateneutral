@@ -40,3 +40,30 @@ en:
         point_4: We are 100% transparent with all our expenses. The latest information is always available here on our website.
       latest_projects: The latest projects
       faq: Frequently asked questions
+      know_your_footprint:
+        consist_of:
+          heading: What does my carbon footprint consist of?
+          text: The main areas to look at in terms of your footprint are living situation, diet, travelling and means of transportation, as well as shopping and public consumption. Housing and car emissions can differ quite a lot depending on what country you live in, so does public consumption - which includes infrastructure, hospitals, education etc. The areas where most of us can make choices that have a high impact on our carbon footprint in a fairly short amount of time, are generally diet and shopping, as well as looking over how we travel.
+          text_2: Learn more by signing up and get support in reducing your individual carbon footprint today!
+        tips:
+          heading: What can I do about this?
+          text: We all need to reduce our carbon emissions – here are a few key points to consider. More tips are available upon joining our community.
+          flights:
+            heading: Travel more consciously
+            text: The best thing you can do is to completely avoid flying as even a short flight is very harmful to the climate. The most climate friendly travel options in general are train or electric car.
+          food:
+            heading: Eat more plant-based
+            text: The most climate friendly diet is without a doubt a plant based one. The biggest culprit food-wise is red meat, and even cutting your meat and dairy consumption in half has a great impact on reducing your emissions.
+          offsetting:
+            heading: Balance your emissions
+            text: The most crucial thing we as individuals have to do in order to combat climate change is to reduce our own emissions. A great complement to a more climate friendly lifestyle is to balance your carbon footprint to take full responsibility for your emissions.
+        sign_up:
+          heading: Let's stop climate change together!
+          text: Understanding and reducing your emissions is crucial - however, there is more that needs to be done. Sign up to track your emissions over time, whilst getting support in reducing your footprint - and opt in to offset your lifestyle through climate projects to kickstart your journey towards a climate friendly lifestyle now.
+          free_account:
+            heading: Free account
+            text: Track your carbon footprint over time and get support in reducing your emissions.
+            your_footprint: Your carbon footprint
+          offset_account:
+            heading: Balance your emissions
+            text: Offset your carbon footprint through climate projects and get support in reducing your emissions.

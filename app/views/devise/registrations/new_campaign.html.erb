@@ -30,8 +30,9 @@
     <div class="callout">
       <div class="section-gutter flex flex-col t:flex-row t:justify-between">
         <div class="t:w-1/2 space-y-6">
-          <h2 class="heading-lg">What does my carbon footprint consist of?</h2>
-          <p>Main areas to look at in terms of your footprint are living situation, diet, travelling and means of transporation, private consumption and public consumption</p>
+          <h2 class="heading-lg"><%= t 'views.registrations.know_your_footprint.consist_of.heading' %></h2>
+          <p><%= t 'views.registrations.know_your_footprint.consist_of.text' %></p>
+          <p><%= t 'views.registrations.know_your_footprint.consist_of.text_2' %></p>
         </div>
         <div class="t:w-1/2">
           <%= render "chart_categories", skip_public_explanation: true %>
@@ -41,32 +42,51 @@
   </section>
 
   <section class="section-padding space-y-6">
-    <h2 class="heading-lg">What can I do about this?</h2>
-    <p>We all need to reduce our carbon emissions – here's the top 3 categories–and we'll help you</p>
-    <div class="flex flex-col t:flex-row space-y-6 t:space-y-0 t:space-x-6">
-      <% [1, 2, 3].each do %>
-        <div class="callout t:w-1/3">
-          <h3>This is a climate tip</h3>
+    <h2 class="heading-lg"><%= t 'views.registrations.know_your_footprint.tips.heading' %></h2>
+    <p><%= t 'views.registrations.know_your_footprint.tips.text' %></p>
+    <div class="flex flex-col t:flex-row space-y-24 t:space-y-0 t:space-x-6 pt-10">
+      <% [{
+        title: t('views.registrations.know_your_footprint.tips.flights.heading'),
+        text: t('views.registrations.know_your_footprint.tips.flights.text'),
+        image: 'images/illustrations/plane.png'
+      }, {
+        title: t('views.registrations.know_your_footprint.tips.food.heading'),
+        text: t('views.registrations.know_your_footprint.tips.food.text'),
+        image: 'images/illustrations/diet.png'
+      }, {
+        title: t('views.registrations.know_your_footprint.tips.offsetting.heading'),
+        text: t('views.registrations.know_your_footprint.tips.offsetting.text'),
+        image: 'images/illustrations/planet.png'
+      }].each do |tip| %>
+        <div class="callout t:w-1/3 relative">
+          <%= image_tag webpack_asset_path(tip[:image]), class: 'max-w-1/2 t:max-w-3/4 -mt-24 mx-auto', alt: '' %>
+          <div class="space-y-3">
+            <h3 class="font-bold text-lg text-center"><%= tip[:title] %></h3>
+            <p><%= tip[:text] %></p>
+          </div>
         </div>
       <% end %>
     </div>
   </section>
 
   <section class="section-padding space-y-6" data-controller="registration-price">
-    <h2 class="heading-lg text-center">Let's stop climate change together!</h2>
-    <p class="max-w-2xl mx-auto">Something about how even though reducing your emissions is the first and most important thing - it's still not enough. Sign up to save your result and track your emissions over time. Get support in reducing your footprint, and opt in to offset your lifestyle through climate projects.</p>
+    <h2 class="heading-lg text-center"><%= t 'views.registrations.know_your_footprint.sign_up.heading' %></h2>
+    <p class="max-w-2xl mx-auto"><%= t 'views.registrations.know_your_footprint.sign_up.text' %></p>
     <div class="flex flex-col t:flex-row t:justify-center items-center space-y-6 t:space-y-0 t:space-x-6" data-controller="membership-choice-campaign">
 
       <div class="callout max-w-md space-y-6"
         data-target="membership-choice-campaign.free"
         data-inactive-class="callout max-w-md space-y-6 hidden"
         data-active-class="callout max-w-md space-y-6">
-        <h3 class="heading text-center">Free account to track your carbon footprint over time</h3>
+        <div class="space-y-3">
+          <h3 class="heading text-center"><%= t 'views.registrations.know_your_footprint.sign_up.free_account.heading' %></h3>
+          <p><%= t 'views.registrations.know_your_footprint.sign_up.free_account.text' %></p>
+        </div>
         <div class="space-y-3">
           <div class="h-px w-full bg-gray-tint-2"></div>
 
           <div class="flex justify-between">
-            <span class="font-semibold">Your carbon footprint</span>
+            <span class="font-semibold"><%= t 'views.registrations.know_your_footprint.sign_up.free_account.your_footprint' %></span>
             <span class="text-right"><%= @subscription_tonnes.to_s(precision: :auto) %>/<%= t 'years.one' %></span>
           </div>
 
@@ -76,14 +96,19 @@
             <%= t 'views.registrations.price_free' %>
           </p>
 
-          <button type="button" class="button w-full" data-action="membership-choice-campaign#showFree">Sign up</button>
+          <button type="button" class="button w-full" data-action="membership-choice-campaign#showFree">
+            <%= t 'views.shared.header.sign_up' %>
+          </button>
         </div>
       </div>
       <div class="callout max-w-md space-y-6"
         data-target="membership-choice-campaign.paying"
         data-inactive-class="callout max-w-md space-y-6 hidden"
         data-active-class="callout max-w-md space-y-6">
-        <h3 class="heading text-center">Offset your carbon footprint through climate projects</h3>
+        <div class="space-y-3">
+          <h3 class="heading text-center"><%= t 'views.registrations.know_your_footprint.sign_up.offset_account.heading' %></h3>
+          <p><%= t 'views.registrations.know_your_footprint.sign_up.offset_account.text' %></p>
+        </div>
         <div class="space-y-3">
           <div class="h-px w-full bg-gray-tint-2"></div>
 
@@ -123,7 +148,10 @@
         data-target="membership-choice-campaign.signupFree"
         data-inactive-class="callout max-w-md space-y-6 hidden"
         data-active-class="callout max-w-md space-y-6">
-        <h3 class="heading text-center">Free account to track your carbon footprint over time</h3>
+        <div class="space-y-3">
+          <h3 class="heading text-center"><%= t 'views.registrations.know_your_footprint.sign_up.free_account.heading' %></h3>
+          <p><%= t 'views.registrations.know_your_footprint.sign_up.free_account.text' %></p>
+        </div>
         <%= form_with url: registration_path(resource_name, format: :json), class: 'space-y-3', html: { 'data-target': 'registration-form.form' } do |f| %>
           <%= f.hidden_field(:lifestyle_footprint, :value => @footprint&.key) %>
           <%= f.hidden_field :membership, value: 'free' %>
@@ -171,7 +199,10 @@
         data-target="membership-choice-campaign.signupPaying"
         data-inactive-class="callout max-w-md space-y-6 hidden"
         data-active-class="callout max-w-md space-y-6">
-        <h3 class="heading text-center">Offset your carbon footprint through climate projects</h3>
+        <div class="space-y-3">
+          <h3 class="heading text-center"><%= t 'views.registrations.know_your_footprint.sign_up.offset_account.heading' %></h3>
+          <p><%= t 'views.registrations.know_your_footprint.sign_up.offset_account.text' %></p>
+        </div>
         <%= form_with url: registration_path(resource_name, format: :json), class: 'space-y-3', html: { 'data-target': 'registration-form.form' } do |f| %>
           <%= f.hidden_field(:lifestyle_footprint, :value => @footprint&.key) %>
           <%= f.hidden_field :people, value: (params[:people].presence || 1), 'data-target': 'registration-price.peopleField' %>
