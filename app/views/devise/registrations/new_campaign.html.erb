@@ -45,19 +45,27 @@
     <h2 class="heading-lg"><%= t 'views.registrations.know_your_footprint.tips.heading' %></h2>
     <p><%= t 'views.registrations.know_your_footprint.tips.text' %></p>
     <div class="flex flex-col t:flex-row space-y-24 t:space-y-0 t:space-x-6 pt-10">
-      <% [{
+      <%
+      sorted_categories = [
+        {
         title: t('views.registrations.know_your_footprint.tips.flights.heading'),
         text: t('views.registrations.know_your_footprint.tips.flights.text'),
-        image: 'images/illustrations/plane.png'
+        image: 'images/illustrations/plane.png',
+        amount: @footprint.flights.tonnes
       }, {
         title: t('views.registrations.know_your_footprint.tips.food.heading'),
         text: t('views.registrations.know_your_footprint.tips.food.text'),
-        image: 'images/illustrations/diet.png'
-      }, {
+        image: 'images/illustrations/diet.png',
+        amount: @footprint.food.tonnes
+      }].sort_by { |cat| cat[:amount] }.reverse!
+
+      resulting_tips = sorted_categories.take(2) + [{
         title: t('views.registrations.know_your_footprint.tips.offsetting.heading'),
         text: t('views.registrations.know_your_footprint.tips.offsetting.text'),
         image: 'images/illustrations/planet.png'
-      }].each do |tip| %>
+      }]
+      %>
+      <% resulting_tips.each do |tip| %>
         <div class="callout t:w-1/3 relative">
           <%= image_tag webpack_asset_path(tip[:image]), class: 'max-w-1/2 t:max-w-3/4 -mt-24 mx-auto', alt: '' %>
           <div class="space-y-3">
