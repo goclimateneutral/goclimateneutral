@@ -8,19 +8,11 @@
 
     <div class="section-gutter flex flex-col t:flex-row t:justify-between">
       <div class="space-y-6 d:space-y-12 t:w-1/2">
-        <% if @active_experiments&.include?(:new_signup) %>
-          <%= render "calculator_result_new" %>
-        <% else %>
-          <%= render "calculator_result" %>
-        <% end %>
+        <%= render "calculator_result_new" %>
       </div>
 
       <div class="t:w-1/2">
-        <% if @active_experiments&.include?(:new_signup) %>
-          <%= render "sign_up_form_without_subscription" %>
-        <% else %>
-          <%= render "sign_up_form" %>
-        <% end %>
+        <%= render "sign_up_form_without_subscription" %>
       </div>
     </div>
   </div>

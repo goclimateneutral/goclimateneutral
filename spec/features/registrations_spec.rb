@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.feature 'Registrations', type: :feature, js: true do
   scenario 'Register' do
     # Homepage
-    visit '/?disable_experiments=new_signup'
+    visit '/'
 
     select('Sweden', from: 'country')
     click_button 'Get started'
@@ -39,7 +39,7 @@ RSpec.feature 'Registrations', type: :feature, js: true do
 
   scenario 'Register with 3D Secure card' do
     # Homepage
-    visit '/?disable_experiments=new_signup'
+    visit '/'
 
     select('Sweden', from: 'country')
     click_button 'Get started'
@@ -75,7 +75,7 @@ RSpec.feature 'Registrations', type: :feature, js: true do
   end
 
   scenario 'Register without subscription' do
-    visit '/?enable_experiments=new_signup'
+    visit '/'
 
     select('Sweden', from: 'country')
     click_button 'Get started'

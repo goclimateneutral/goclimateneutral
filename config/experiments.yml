@@ -2,6 +2,3 @@
 #
 # new_feature:
 #   frequency: 0.5
-
-new_signup:
-  frequency: 0.5
