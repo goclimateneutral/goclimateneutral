@@ -161,6 +161,11 @@ Rails.application.routes.draw do
     end
   end
 
+  # These will soon be handled by ReferralCode functionality, but in the
+  # meantime we redirect our upcoming partnerships
+  get 'govenetia', to: redirect('/know-your-carbon-footprint', status: 302), as: nil
+  get 'gomikaela', to: redirect('/know-your-carbon-footprint', status: 302), as: nil
+
   namespace :webhooks do
     resource :stripe_events, only: [:create]
   end
