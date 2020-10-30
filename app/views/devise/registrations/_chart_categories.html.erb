@@ -1,6 +1,6 @@
 <div class="relative pb-1">
   <div class="space-y-6">
-    <% max_value_categories = [@footprint.housing.tonnes.round(1), @footprint.food.tonnes.round(1), @footprint.car.tonnes.round(1), @footprint.flights.tonnes.round(1), @footprint.public.tonnes.round(1)].max %>
+    <% max_value_categories = [@footprint.housing.tonnes.round(1), @footprint.food.tonnes.round(1), @footprint.car.tonnes.round(1), @footprint.flights.tonnes.round(1), (@footprint.public.tonnes.round(1) + @footprint.consumption.tonnes.round(1))].max %>
     <% [
         {
           amount: @footprint.housing,
@@ -17,6 +17,7 @@
         {
           amount: @footprint.car,
           icon: 'fa-car',
+
           title: t('dashboard.footprint.category.car'),
           'bg-color': 'bg-orange-accent'
         },
@@ -28,7 +29,7 @@
         },
         {
           key: 'public',
-          amount: @footprint.public,
+          amount: @footprint.public + @footprint.consumption,
           icon: 'fa-university',
           title: t('dashboard.footprint.category.public'),
           'bg-color': 'bg-pink-accent'
