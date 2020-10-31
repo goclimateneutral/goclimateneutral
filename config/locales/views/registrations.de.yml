@@ -2,9 +2,6 @@ de:
   views:
     registrations:
       well_done: Großartig! Erster Schritt geschafft!
-      result: Ergebnis
-      your_yearly_climate_footprint: Ihre jährliche CO2-Bilanz beträgt
-      corresponds_to: Das entspricht %{price}/Monat.
       you: Sie
       average_in: Durchschnitt in %{region}
       world_average: Weltweiter Durchschnitt
@@ -13,9 +10,7 @@ de:
       lower: niedriger
       your_climate_footprint: Ihre CO2-Bilanz von %{footprint} ist %{relative} als der Durchschnitt in %{country}. Um dem 1,5-Grad-Ziel des Pariser Abkommens zu entsprechen, müssen wir bis zum Jahr 2030 weltweit einen Durchschnitt von 2,5 Tonnen pro Person erreichen.
       your_climate_footprint_compared_world: Ihre CO2-Bilanz von %{footprint} ist %{relative} als der weltweite Durchschnitt. Um dem 1,5-Grad-Ziel des Pariser Abkommens zu entsprechen, müssen wir bis zum Jahr 2030 weltweit einen Durchschnitt von 2,5 Tonnen pro Person erreichen.
-      subscribe_heading: Abonnieren Sie jetzt ein klimaneutrales Leben
       step: Schritt
-      adjust_subscription: Passen Sie Ihr Abo an
       create_account: Konto erstellen
       your_subscription: Ihr Abonnement
       number_of_people: Anzahl Personen
