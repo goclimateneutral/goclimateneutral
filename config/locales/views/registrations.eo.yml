@@ -2,9 +2,6 @@ eo:
   views:
     registrations:
       well_done: crwdns13030:0crwdne13030:0
-      result: crwdns13244:0crwdne13244:0
-      your_yearly_climate_footprint: crwdns14854:0crwdne14854:0
-      corresponds_to: crwdns13034:0%{price}crwdne13034:0
       you: crwdns13036:0crwdne13036:0
       average_in: crwdns13040:0%{region}crwdne13040:0
       world_average: crwdns13042:0crwdne13042:0
@@ -13,12 +10,10 @@ eo:
       lower: crwdns13048:0crwdne13048:0
       your_climate_footprint: crwdns14972:0%{footprint}crwdnd14972:0%{relative}crwdnd14972:0%{country}crwdne14972:0
       your_climate_footprint_compared_world: crwdns14974:0%{footprint}crwdnd14974:0%{relative}crwdne14974:0
-      subscribe_heading: crwdns13054:0crwdne13054:0
       sign_up_heading: crwdns14992:0crwdne14992:0
       sign_up_description: crwdns14978:0crwdne14978:0
       step: crwdns13246:0crwdne13246:0
-      adjust_subscription: crwdns13248:0crwdne13248:0
-      price_free: crwdns14980:0crwdne14980:0
+      price_free: crwdns15034:0crwdne15034:0
       create_account: crwdns13250:0crwdne13250:0
       your_subscription: crwdns13058:0crwdne13058:0
       number_of_people: crwdns13060:0crwdne13060:0
@@ -38,3 +33,30 @@ eo:
         point_4: crwdns13074:0crwdne13074:0
       latest_projects: crwdns13076:0crwdne13076:0
       faq: crwdns13078:0crwdne13078:0
+      know_your_footprint:
+        consist_of:
+          heading: crwdns15036:0crwdne15036:0
+          text: crwdns15038:0crwdne15038:0
+          text_2: crwdns15040:0crwdne15040:0
+        tips:
+          heading: crwdns15042:0crwdne15042:0
+          text: crwdns15044:0crwdne15044:0
+          flights:
+            heading: crwdns15046:0crwdne15046:0
+            text: crwdns15048:0crwdne15048:0
+          food:
+            heading: crwdns15050:0crwdne15050:0
+            text: crwdns15052:0crwdne15052:0
+          offsetting:
+            heading: crwdns15054:0crwdne15054:0
+            text: crwdns15056:0crwdne15056:0
+        sign_up:
+          heading: crwdns15058:0crwdne15058:0
+          text: crwdns15060:0crwdne15060:0
+          free_account:
+            heading: crwdns15062:0crwdne15062:0
+            text: crwdns15064:0crwdne15064:0
+            your_footprint: crwdns15066:0crwdne15066:0
+          offset_account:
+            heading: crwdns15068:0crwdne15068:0
+            text: crwdns15070:0crwdne15070:0
