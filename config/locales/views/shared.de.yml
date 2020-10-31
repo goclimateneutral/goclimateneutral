@@ -15,7 +15,6 @@ de:
         body_text: Melden Sie sich an, um Ihre CO2-Bilanz zu neutralisieren.
         button: Los geht's
       footer:
-        short_intro: GoClimate ist ein soziales Unternehmen mit dem alleinigen Ziel, es leichter zu machen, ein klimaneutrales Leben zu beginnen.
         jobs: 'Jobs'
         headers:
           make_a_difference: Jetzt mitmachen
@@ -24,7 +23,6 @@ de:
       more_info:
         about:
           title: Über uns
-          description: GoClimate ist ein soziales Unternehmen mit dem alleinigen Ziel, es leichter zu machen, ein klimaneutrales Leben zu beginnen.
           cta: Hier erfahren Sie mehr über uns
         projects:
           title: Unsere Klimaprojekte
