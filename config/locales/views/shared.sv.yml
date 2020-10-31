@@ -15,7 +15,6 @@ sv:
         body_text: Prenumerera och kompensera för hela ditt klimatavtryck.
         button: Kom igång
       footer:
-        short_intro: GoClimate grundades 2017 med enda syfte att göra det enklare att leva ett klimatneutralt liv.
         jobs: 'Jobb'
         headers:
           make_a_difference: Gör skillnad
@@ -24,7 +23,6 @@ sv:
       more_info:
         about:
           title: Om oss
-          description: GoClimate grundades 2017 med enda syfte att göra det enklare att leva ett klimatneutralt liv.
           cta: Läs mer om oss
         projects:
           title: Våra klimatprojekt
