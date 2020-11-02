@@ -17,6 +17,11 @@ eo:
       create_account: crwdns13250:0crwdne13250:0
       your_subscription: crwdns13058:0crwdne13058:0
       number_of_people: crwdns13060:0crwdne13060:0
+      referral_code: crwdns15072:0crwdne15072:0
+      referral_code_change: crwdns15074:0crwdne15074:0
+      referral_code_link: crwdns15076:0crwdne15076:0
+      first_month_free: crwdns15078:0crwdne15078:0
+      then: crwdns15080:0crwdne15080:0
       membership:
         free: crwdns14994:0crwdne14994:0
         single: crwdns14996:0crwdne14996:0
