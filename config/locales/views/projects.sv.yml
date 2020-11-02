@@ -2,8 +2,8 @@ sv:
   views:
     projects:
       heading: Våra klimatprojekt
-      latest_projects: Våra senaste projekt
-      see_all: Se alla våra projekt
+      current_projects: Nuvarande projekt
+      see_all: Läs mer om tidigare projekt
       how:
         heading: Så här funkar våra projekt
         1: Projektens huvudsakliga syfte är att minska utsläpp av växthusgaser, exempelvis genom att bidra till omställningen till förnyelsebar energi.

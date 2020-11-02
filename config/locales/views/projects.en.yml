@@ -2,8 +2,8 @@ en:
   views:
     projects:
       heading: Our Climate Projects
-      latest_projects: Our latest projects
-      see_all: See all our projects
+      current_projects: Current projects
+      see_all: Learn about our previous projects
       how:
         heading: How our projects work
         1: The purpose of all our projects is to reduce greenhouse gas emissions, for example by contributing to the transition towards renewable energy.
