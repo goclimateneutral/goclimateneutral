@@ -26,9 +26,13 @@ class User < ApplicationRecord
     if stripe_customer_id.present?
       Stripe::Customer.retrieve(stripe_customer_id)
     else
-      Stripe::Customer.create(email: email).tap do |c|
-        update_attribute(:stripe_customer_id, c.id)
-      end
+      create_stripe_customer
+    end
+  end
+
+  def create_stripe_customer
+    Stripe::Customer.create(email: email).tap do |c|
+      update_attribute(:stripe_customer_id, c.id)
     end
   end
 
