@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_31_191901) do
+ActiveRecord::Schema.define(version: 2020_11_05_092740) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -280,7 +280,9 @@ ActiveRecord::Schema.define(version: 2020_10_31_191901) do
     t.datetime "subscription_end_at"
     t.string "region"
     t.bigint "referred_from_id"
+    t.datetime "first_subscription_created_at"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["first_subscription_created_at"], name: "index_users_on_first_subscription_created_at"
     t.index ["referred_from_id"], name: "index_users_on_referred_from_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
