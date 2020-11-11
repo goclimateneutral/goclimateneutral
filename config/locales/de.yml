@@ -103,7 +103,7 @@ de:
     heading: Hallo Klima-Freund!
     your_months: Sie sind klimaneutral seit
     your_offsets: Ihr CO2-Ausgleich beläuft sich auf
-    together: Zusammen mit allen <span>%{number_of_members} Mitgliedern</span> haben wir verhindert, dass <span>%{number_of_tonnes} Tonnen</span> CO2 in die Atmosphäre gelangen!
+    together: Zusammen mit allen <span>%{number_of_members} Mitgliedern</span>haben wir verhindert, dass <span>%{number_of_tonnes} Tonnen</span> CO2 in die Atmosphäre gelangen!
   good_job: Gut gemacht!
   our_projects: Unsere Klimainvestitionen
   project_name: Projekt
@@ -224,6 +224,7 @@ de:
     gift_cards: Gutscheine
   welcome:
     users_prefix: Aktuell sind wir
+    users_suffix: klimaneutrale Nutzer
     tonnes_prefix: Gemeinsam haben wir
     tonnes_suffix: Tonnen CO2 in der Atmosphäre reduziert
     how_it_works:
