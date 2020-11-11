@@ -23,7 +23,7 @@ eo:
   full_time: crwdns11754:0crwdne11754:0
   Main_KPI: crwdns11756:0crwdne11756:0
   climate_footprint_2019: crwdns11758:0crwdne11758:0
-  number_of_climate_neutral_users: crwdns11760:0crwdne11760:0
+  number_of_climate_neutral_users: crwdns15098:0crwdne15098:0
   users_from: crwdns11762:0crwdne11762:0
   different_countries: crwdns11764:0crwdne11764:0
   number_of_companies_we_have_helped: crwdns11766:0crwdne11766:0
@@ -60,9 +60,10 @@ eo:
   general_questions_twitter_html: 'crwdns11836:0crwdne11836:0'
   about_us: crwdns11838:0crwdne11838:0
   about_us_intro: crwdns11840:0crwdne11840:0
-  about_us_intro_2: crwdns11842:0crwdne11842:0
+  about_us_intro_2: crwdns15000:0crwdne15000:0
   about_us_why_do_we_exist: crwdns11844:0crwdne11844:0
-  about_us_why_do_we_exist_text: crwdns11846:0crwdne11846:0
+  about_us_why_do_we_exist_text: crwdns15082:0crwdne15082:0
+  about_us_why_do_we_exist_text_2: crwdns15084:0crwdne15084:0
   about_us_how_do_we_stop_climate_change: crwdns11848:0crwdne11848:0
   about_us_how_do_we_stop_climate_change_text: crwdns11850:0crwdne11850:0
   about_us_how_do_we_stop_climate_change_text_2: crwdns11852:0crwdne11852:0
@@ -99,14 +100,29 @@ eo:
   name_have_lived_climate_neutral_for_join_me:
     one: 'crwdns11906:1%{name}crwdne11906:1'
     other: 'crwdns11906:5%{name}crwdnd11906:5%{count}crwdne11906:5'
-  climate_change_is_best_faced_together: crwdns11908:0crwdne11908:0
+  share_heading: crwdns15092:0crwdne15092:0
+  climate_change_is_best_faced_together: crwdns15094:0crwdne15094:0
   share_on_facebook: crwdns11910:0crwdne11910:0
   share_on_twitter: crwdns11912:0crwdne11912:0
+  share_quote_without_months: crwdns15096:0crwdne15096:0
   dashboard:
     heading: crwdns13348:0crwdne13348:0
     your_months: crwdns13350:0crwdne13350:0
     your_offsets: crwdns13352:0crwdne13352:0
     together: crwdns13354:0%{number_of_members}crwdnd13354:0%{number_of_tonnes}crwdne13354:0
+    footprint:
+      heading: crwdns14948:0crwdne14948:0
+      your_climate_footprint: crwdns14950:0%{footprint}crwdnd14950:0%{relative}crwdnd14950:0%{country}crwdne14950:0
+      your_climate_footprint_compared_world: crwdns14952:0%{footprint}crwdnd14952:0%{relative}crwdne14952:0
+      heading_compared: crwdns14958:0crwdne14958:0
+      heading_more: crwdns14960:0crwdne14960:0
+      more_about_public_category: crwdns14954:0crwdne14954:0
+      category:
+        housing: crwdns14962:0crwdne14962:0
+        food: crwdns14964:0crwdne14964:0
+        car: crwdns14966:0crwdne14966:0
+        flights: crwdns14968:0crwdne14968:0
+        public: crwdns14970:0crwdne14970:0
   good_job: crwdns11920:0crwdne11920:0
   our_projects: crwdns11926:0crwdne11926:0
   project_name: crwdns11932:0crwdne11932:0
@@ -144,7 +160,7 @@ eo:
   the_payment_unfortunately_failed: crwdns12008:0crwdne12008:0
   no_worries_we_will_try_again_within_a_few_days: crwdns12010:0crwdne12010:0
   you_might_need_to_update_your_payment_info: crwdns12012:0crwdne12012:0
-  link_to_update_your_payment_info: 'crwdns12014:0crwdne12014:0'
+  link_to_update_your_payment_info: crwdns14944:0crwdne14944:0
   thank_you_for_saving_our_planet: crwdns12022:0crwdne12022:0
   you_have_lived_a_climate_neutral_life_for: crwdns12024:0crwdne12024:0
   months:
@@ -158,7 +174,7 @@ eo:
     other: crwdns12030:5crwdne12030:5
   together_we_have_offset: crwdns12032:0crwdne12032:0
   goclimateneutral_and_this_planet_loves_you: crwdns12034:0crwdne12034:0
-  learn_more_about_what_we_have_achieved_here: 'crwdns12036:0crwdne12036:0'
+  learn_more_about_what_we_have_achieved_here: crwdns14946:0crwdne14946:0
   thank_you: crwdns12038:0crwdne12038:0
   the_best_way_to_help_is_to_get_as_many_people_climate_neutral_as_possible: 'crwdns12040:0crwdne12040:0'
   faq: crwdns12052:0crwdne12052:0
@@ -223,6 +239,9 @@ eo:
         q10:
           question: crwdns12124:0crwdne12124:0
           answer: crwdns13234:0crwdne13234:0
+        q11:
+          question: crwdns15002:0crwdne15002:0
+          answer: crwdns15004:0crwdne15004:0
     about_us:
       heading: crwdns12128:0crwdne12128:0
       questions:
