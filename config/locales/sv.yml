@@ -23,7 +23,6 @@ sv:
   full_time: heltidsanställda
   Main_KPI: Fokus-KPI
   climate_footprint_2019: Klimatavtryck 2019
-  number_of_climate_neutral_users: Antal medlemmar
   users_from: Användare från
   different_countries: olika länder
   number_of_companies_we_have_helped: Antal företag som vi har hjälpt
@@ -100,11 +99,8 @@ sv:
   name_have_lived_climate_neutral_for_join_me:
     one: '%{name} har levt klimatneutralt i 1 månad!'
     other: '%{name} har levt klimatneutralt i %{count} månader!'
-  share_heading: Dela med dina nära och kära
-  climate_change_is_best_faced_together: Du är en hjälte! Bäst bromsar vi klimatförändringarna tillsammans, så dela gärna det här så att vi kan bli ännu fler!
   share_on_facebook: Dela på Facebook
   share_on_twitter: Dela på Twitter
-  share_quote_without_months: Var med och stoppa klimatförändringarna!
   dashboard:
     heading: Hej, klimatvän!
     your_months: Du har varit klimatneutral i
