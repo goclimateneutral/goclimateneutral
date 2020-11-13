@@ -5,17 +5,11 @@ de:
       index:
         header: Ihr nächstes Geschenk könnte ein klimaneutrales Leben sein
         intro: Suchen Sie nach einem Geschenk für jemanden, der bereits alles hat? Möchten Sie uns helfen, etwas gegen den Klimawandel zu tun? Versuchen Sie es mit unseren Geschenkgutscheinen!
-        description:
-          1: 1 Monat Klimaneutralität.
-          3: 3 Monate Klimaneutralität.
-          6: Ein halbes Jahr Klimaneutralität.
-          12: Ein ganzes Jahr Klimaneutralität.
         cta:
           1: 1 Monat wählen
           3: 3 Monate wählen
           6: 6 Monate wählen
           12: 12 Monate wählen
-        details_html: "Die Gutscheine basieren auf den durchschnittlichen Emissionen der schwedischen Bevölkerung (11 Tonnen CO <sub>2</sub> -Äq)."
       new:
         intro: Kaufen und personalisieren Sie Ihren Gutschein
         your_gift_card_order: Ihre Gutscheinbestellung
@@ -30,7 +24,6 @@ de:
           one: 1 klimaneutral Monat
           other: "%{count} klimaneutrale Monate"
         about_go_climate_neutral: <a href='http://www.goclimate.com'>GoClimate</a> unterstützt Klimaprojekte und gibt Anregungen und Tipps, wie Sie Ihren Klima-Fußabdruck reduzieren können. Die von Ihnen unterstützten Projekte sind UN-zertifizierte Klimaprojekte (CDM), die ebenfalls nach Gold Standard zertifiziert sind. Sie werden von allen Mitgliedern der UN und 80 verschiedenen Umwelt-NGOs unterstützt - darunter auch der WWF. Zusammen tragen wir dazu bei, den Klimawandel zu stoppen und die Welt zu retten.
-        calculation_based_on_html: "Die Berechnung basiert auf einem durchschnittlichen CO2-Ausstoß von 11 Tonnen CO<sub>2</sub>eq pro Person und Jahr"
         do_you_want_to_continue: Möchten Sie auch nach Ablauf des Gutscheins ein klimaneutrales Leben führen?
         register: Gehen Sie auf <a href="http://www.goclimate.com">goclimate.com</a> und registrieren Sie sich!
       example:
