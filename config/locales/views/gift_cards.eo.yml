@@ -6,16 +6,16 @@ eo:
         header: crwdns12758:0crwdne12758:0
         intro: crwdns12760:0crwdne12760:0
         description:
-          1: crwdns13376:0crwdne13376:0
-          3: crwdns13378:0crwdne13378:0
-          6: crwdns13380:0crwdne13380:0
-          12: crwdns13382:0crwdne13382:0
+          1: crwdns15100:0crwdne15100:0
+          3: crwdns15102:0crwdne15102:0
+          6: crwdns15104:0crwdne15104:0
+          12: crwdns15106:0crwdne15106:0
         cta:
           1: crwdns13384:0crwdne13384:0
           3: crwdns13386:0crwdne13386:0
           6: crwdns13388:0crwdne13388:0
           12: crwdns13390:0crwdne13390:0
-        details_html: "crwdns12788:0crwdne12788:0"
+        details: crwdns15108:0%{country}crwdnd15108:0%{footprint}crwdne15108:0
       new:
         intro: crwdns12790:0crwdne12790:0
         your_gift_card_order: crwdns12792:0crwdne12792:0
@@ -30,7 +30,7 @@ eo:
           one: crwdns12806:1crwdne12806:1
           other: "crwdns12806:5%{count}crwdne12806:5"
         about_go_climate_neutral: crwdns12808:0crwdne12808:0
-        calculation_based_on_html: "crwdns12810:0crwdne12810:0"
+        calculation_based_on_html: "crwdns15110:0%{yearly_footprint}crwdne15110:0"
         do_you_want_to_continue: crwdns12812:0crwdne12812:0
         register: crwdns12814:0crwdne12814:0
       example:
