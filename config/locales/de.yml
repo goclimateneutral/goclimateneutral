@@ -224,6 +224,7 @@ de:
     gift_cards: Gutscheine
   welcome:
     users_prefix: Aktuell sind wir
+    users_suffix: klimaneutrale Nutzer
     tonnes_prefix: Gemeinsam haben wir
     tonnes_suffix: Tonnen CO2 in der Atmosphäre reduziert
     how_it_works:
