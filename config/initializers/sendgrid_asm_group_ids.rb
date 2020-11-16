@@ -7,7 +7,8 @@ SENDGRID_ASM_GROUP_IDS =
       gift_card: 21_453,
       flight_offset: 22_943,
       invoice_certificates: 26_003,
-      welcome: 27_414
+      welcome: 27_414,
+      payment_failed: 28_840
     }
   else
     {
@@ -15,6 +16,7 @@ SENDGRID_ASM_GROUP_IDS =
       gift_card: 8345,
       flight_offset: 9519,
       invoice_certificates: 12_404,
-      welcome: 13_849
+      welcome: 13_849,
+      payment_failed: 15_417
     }
   end

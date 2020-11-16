@@ -25,10 +25,6 @@ RSpec.describe SubscriptionMailer, type: :mailer do
     it 'renders the sender email' do
       expect(mail.from).to eql(['hello@goclimate.com'])
     end
-
-    it 'sets Sendgrid unsubscribe group' do
-      expect(mail['asm'].value).to eq("{:group_id=>#{SENDGRID_ASM_GROUP_IDS[:subscription]}}")
-    end
   end
 
   describe '.one_more_month_email' do
@@ -46,6 +42,10 @@ RSpec.describe SubscriptionMailer, type: :mailer do
 
     it 'matches number of months' do
       expect(mail.body.encoded).to match('You have lived a climate neutral life for 1 month.')
+    end
+
+    it 'sets Sendgrid unsubscribe group' do
+      expect(mail['asm'].value).to eq("{:group_id=>#{SENDGRID_ASM_GROUP_IDS[:subscription]}}")
     end
   end
 
@@ -65,6 +65,10 @@ RSpec.describe SubscriptionMailer, type: :mailer do
     it 'matches number of months' do
       expect(mail.body.encoded).to match('You have lived a climate neutral life for 1 year.')
     end
+
+    it 'sets Sendgrid unsubscribe group' do
+      expect(mail['asm'].value).to eq("{:group_id=>#{SENDGRID_ASM_GROUP_IDS[:subscription]}}")
+    end
   end
 
   describe '.payment_failed_email' do
@@ -78,6 +82,10 @@ RSpec.describe SubscriptionMailer, type: :mailer do
 
     it 'renders a payment has failed text' do
       expect(mail.body.encoded).to match('Unfortunately your payment has failed')
+    end
+
+    it 'sets Sendgrid unsubscribe group' do
+      expect(mail['asm'].value).to eq("{:group_id=>#{SENDGRID_ASM_GROUP_IDS[:payment_failed]}}")
     end
   end
 end

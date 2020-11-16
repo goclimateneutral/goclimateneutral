@@ -24,7 +24,8 @@ class SubscriptionMailer < ApplicationMailer
   end
 
   def payment_failed_email
-    mail subject: I18n.t('the_payment_unfortunately_failed')
+    mail subject: I18n.t('the_payment_unfortunately_failed'),
+         asm: { group_id: SENDGRID_ASM_GROUP_IDS[:payment_failed] }
   end
 
   protected
