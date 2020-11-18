@@ -13,3 +13,8 @@ de:
       kg:
         one: '%{count} kg CO2e'
         other: '%{count} kg CO2e'
+    project:
+      offset_type:
+        'GS': Gold Standard zertifiziert
+        'CDM+GS': CDM & Gold Standard zertifiziert
+        'CDM': CDM zertifiziert
