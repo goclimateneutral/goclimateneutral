@@ -104,6 +104,19 @@ de:
     your_months: Sie sind klimaneutral seit
     your_offsets: Ihr CO2-Ausgleich beläuft sich auf
     together: Zusammen mit allen <span>%{number_of_members} Mitgliedern</span> haben wir verhindert, dass <span>%{number_of_tonnes} Tonnen</span> CO2 in die Atmosphäre gelangen!
+    footprint:
+      heading: Deine jährliche CO2-Bilanz
+      your_climate_footprint: Deine CO2-Bilanz von %{footprint} ist %{relative} als der Durchschnitt in %{country}. Um dem 1,5-Grad-Ziel des Pariser Abkommens zu entsprechen, müssen wir bis zum Jahr 2030 weltweit einen Durchschnitt von 2,5 Tonnen pro Person erreichen.
+      your_climate_footprint_compared_world: Deine CO2-Bilanz von %{footprint} ist %{relative} als der weltweite Durchschnitt. Um dem 1,5-Grad-Ziel des Pariser Abkommens zu entsprechen, müssen wir bis zum Jahr 2030 weltweit einen Durchschnitt von 2,5 Tonnen pro Person erreichen.
+      heading_compared: Im Vergleich zur Welt
+      heading_more: Mehr über deine CO2-Bilanz
+      more_about_public_category: Was ist das?
+      category:
+        housing: Wohnen
+        food: Ernährung
+        car: Auto
+        flights: Flüge
+        public: Öffentliche Emissionen und Einkäufe
   good_job: Gut gemacht!
   our_projects: Unsere Klimainvestitionen
   project_name: Projekt
@@ -219,14 +232,74 @@ de:
           answer: Wenn Sie denken, dass der CO2-Ausgleich billig ist, liegt das wahrscheinlich daran, dass Sie zum reicheren Teil der Weltbevölkerung gehören. Klimaprojekte sind für uns relativ preiswert, da wir denen helfen, die es sich nicht leisten können, in die besseren Lösungen zu investieren. Auf diese Weise helfen wir, leicht erreichbare Ziele in Ländern mit niedrigem Einkommen zu erreichen, damit die Menschen dort Zugang zu derselben Technologie und Entwicklung haben, die wir in den reicheren Ländern bereits haben. Darüber hinaus wird in der Regel nicht das gesamte Projekt mit Emissionsgutschriften finanziert, aber wir stellen einen Teil der Finanzierung zur Verfügung, um es finanziell durchführbar zu machen.<br><br> Es ist zudem leicht, das Konzept der CO2-Kompensation, welches die tatsächlichen Kosten für die Vermeidung einer Tonne Kohlenstoffemissionen darstellt, und das Konzept einer CO2-Steuer oder CO2-Bepreisung (einem Mittel zur Verhaltensänderung bei dem eine hohe CO2-Steuer einige Menschen veranlasst, sich für andere, klimaschonendere Alternativen zu entscheiden) zu kombinieren.
         q10:
           question: Sind die Projekte nachhaltig?
+          answer: Ja, die Projekte werden mit Vorsicht und Sorge für die lokale Umwelt und Bevölkerung entwickelt. In Fällen, in denen die Projekte negative Auswirkungen haben, werden sie kompensiert - zum Beispiel wenn Bäume abgeholzt werden, um eine Straße zu erweitern, werden neue Bäume gepflanzt. Darüber hinaus erfordert Gold Standard, dass die Projekte zu anderen globalen Nachhaltigkeitszielen beitragen als nur zu dem Klimaziel. Einige Projekte schaffen Arbeitsplätze, verbessern die Gesundheit, tragen zur nachhaltigen Industrie und/oder erneuerbaren Energien bei.<br><br>Wir wählen Projekte mit Vorsicht aus und prüfen das, was während der Implementierung des Projekts gemeldet wurde, so dass wir das Risiko minimieren, dass die von uns geförderten Projekte negative Folgen für die Umwelt und die lokale Bevölkerung haben. Bei der ersten Entwicklung der Klimakompensationen waren die Anforderungen nicht so streng und deshalb gab es historisch gesehen Projekte, die negative Nebenwirkungen hatten. Die heutigen Anforderungen sind viel höher und die Kontrollen sind strenger.
+    about_us:
+      heading: Über GoClimate
+      questions:
+        q1:
+          question: Was macht GoClimate mit seinen Einnahmen?
+          answer: Die meisten unserer Einnahmen gehen an die Klimaprojekte, aber wir geben auch Geld für Dinge wie Gehälter an unsere Mitarbeiter aus (welche die Projekte auswählen, sicherstellen, dass der Service funktioniert und das Geschäft ausbauen) und Marketing (um mehr Beitragsmitglieder zu bekommen). <a href="https://www.goclimate.com/se/100_percent_transparency">Wir haben volle Transparenz, damit Sie selbst sehen können, wohin das Geld geht</a>. Es wäre fantastisch gewesen, das gesamte Geld direkt an die Projekte zu geben, aber wir sind überzeugt davon, dass wir einen besseren Einfluss auf das Klima haben werden, wenn wir wachsen und mehr Menschen an Bord bringen können und den Menschen zu mehr Verständnis über das Klima, und wie wir unsere Emissionen reduzieren können, helfen. Es wird kein Gewinn aus dem Unternehmen erwirtschaftet.
+        q2:
+          question: Ist GoClimate ein Unternehmen?
+          answer: Ja, wir sind ein soziales Unternehmen, dessen Ziel darin besteht, Sozialleistungen zu schaffen, insbesondere Vorteile für den Klimaschutz. Deshalb sind wir keine Wohltätigkeitsorganisation. Sie können trotzdem darauf vertrauen, dass wir das Geld so gut wie möglich nutzen. <a href="https://www.goclimate.com/se/100_percent_transparency">Sie können unsere Finanzkonten für sich selbst einsehen</a>, und wir haben keine Gewinnausschttung. Der Überschuss, den wir generieren, bleibt im Unternehmen, um mehr Klimaeinfluss zu erzeugen. Wir haben dieses Format gewählt, weil wir glauben, dass es uns maximale Möglichkeiten bietet, effizient zu sein und schnell etwas für das Klima zu bewirken.
+        q3:
+          question: Macht ihr einen Gewinn?
+          answer: Nein, wir machen derzeit keinen Gewinn, und Geld treibt uns nicht an. Unser vorrangiges Ziel ist es, den Klimawandel zu stoppen. Falls Gewinn notwendig ist, um das effektiv zu erreichen, z.B. um Investoren aufnehmen zu können, könnten wir in Zukunft profitabel werden, aber der finanzielle Gewinn wird niemals ein Selbstzweck sein.
+        q4:
+          question: Kann ich die GoClimate Flugemissions-API verwenden?
+          answer: Wir haben eine API zur Berechnung der Klimaauswirkungen von Flugreisen entwickelt. <a href="https://api.goclimate.com/docs">Hier sind alle Informationen darüber</a>, und Sie können uns kontaktieren, wenn Sie es verwenden möchten.
+        q5:
+          question: Kann ich mich bei euch für eine Stelle oder ein Praktikum bewerben?
+          answer: Wir erhalten viele unaufgeforderte Bewerbungen und Anfragen, aber wir glauben, dass wir eine bessere Chance haben, in die richtige Person zu investieren, wenn wir einen konkreten Bedarf haben. Behalte unsere <a href="https://jobs.goclimate.com/">Job-Seite</a> im Auge oder verbinde dich mit uns, um eine E-Mail zu erhalten, wenn eine freie Stelle erscheint!
+    our_service:
+      heading: Über unsere Abonnements
+      questions:
+        q1:
+          question: Wie wird meine persönliche Klimabilanz errechnet?
+          answer: Wir haben eine detaillierte <a href="https://www.goclimate.com/blog/methodology-behind-the-carbon-footprint-calculator/">Beschreibung unserer Methodik</a> in der Sie alle Werte, die wir verwenden, sehen können und woher sie kommen. Wir verwenden öffentliche Daten in dem Maße, wie sie zur Verfügung stehen, ergänzt durch wissenschaftliche Forschung und Studien relevanter Branchenorganisationen. Die CO2-Bilanz beinhaltet auch die Emissionen durch den öffentlichen Verbrauch, die nicht direkt durch Ihre Wahl des Lebensstils beeinflusst werden können.
+        q2:
+          question: Kann ich einen einzelnen Flug kompensieren?
+          answer: Ja, als Mitglied können Sie sich anmelden und dann im Menü oben rechts auf der Seite „Flugreisen kompensieren“ auswählen.
+        q3:
+          question: Wie kann ich mein Abonnement stornieren?
+          answer: Sie können Ihr Abonnement kündigen oder pausieren, indem Sie sich auf der Seite anmelden, in der rechten oberen Ecke Einstellungen, Zahlungseinstellungen wählen und dann den Betrag zu "Klimaplan stornieren" ändern. <a href="https://www.goclimate.com/se/users/subscription">Hier ist ein direkter Link</a>.
+        q4:
+          question: Wie werden meine Kartendaten behandelt?
+          answer: Wir nutzen verwenden <a href="https://stripe.com/en-se" target="_blank" rel="noopener">/</a> als Zahlungsanbieter, der einer der größten Online-Zahlungsanbieter ist. Alle Kartendaten und Zahlungen werden vollständig von Stripe abgewickelt - voll verschlüsselt natürlich. Ihre Kartendaten landen zu keinem Zeitpunkt auf unseren oder anderen Servern, sondern werden nur von Stripe bearbeitet.
+        q5:
+          question: Akzeptiert Ihr andere Zahlungsmethoden?
+          answer: Leider haben wir derzeit nur die Möglichkeit, Kartenzahlungen zu erhalten.
+        q6:
+          question: Wo kann ich meine Rechnung finden?
+          answer: Sie können Ihre Rechnungen finden, indem Sie sich auf der Seite einloggen und <a href="https://www.goclimate.com/users/receipts">zu diesem Link</a> gehen.
+        q7:
+          question: Warum wird der doppelte Betrag ausgeglichen?
+          answer: Weil wir so viel wie möglich für das Klima tun wollen! Das ist eine so einfache und kosteneffiziente Methode, dass wir die guten Dinge verdoppeln wollten. Es gibt auch einige Dinge, die nicht vernünftig in die Berechnung miteinbezogen werden können. Durch die Verdopplung der Menge an Tonnen, die wir für jeden Nutzer kaufen, sind wir absolut sicher, dass alle Ihre Emissionen abgedeckt werden.
+    for_businesses:
+      heading: Für Unternehmen
+      questions:
+        q1:
+          question: Ist der CO2-Ausgleich steuerlich absetzbar?
+          answer: "Das hängt davon ab, in welchem Land Sie tätig sind. In Schweden scheint es so zu sein: In einem bemerkenswerten Fall von 2018, gewann Arla gegen die schwedische Steuerbehörde und konnte ihre CO2-Ausgleichszahlungen abziehen, da sie zu Marketingzwecken durchgeführt wurden. Auf diese Weise wird der CO2-Ausgleich nicht als Geschenk betrachtet, sondern mit dem Ergebnis des Unternehmens in Zusammenhang gebracht, da sie den Wert des Produkts steigern. Daher könnte in Schweden der CO2-Ausgleich unter das allgemeine Abzugsrecht für die Kosten des Erwerbs oder der Beibehaltung von Einkommen fallen."
+        q2:
+          question: Wie kann ich kommunizieren, dass unser Unternehmen CO2 kompensiert?
+          answer: "Um extern zu kommunizieren, dass Sie CO2 kompensieren, ist es vorteilhaft, einen Plan zu haben, wie Sie Ihre Emissionen auch in Zukunft reduzieren wollen oder zumindest Ihre Gründe mitteilen - zum Beispiel durch irgendeine Form der Umweltpolitik. Damit wird der Ausgleich von CO2-Emissionen nicht als Greenwashing wahrgenommen. Die Faustregel für die Unternehmen lautet: Berechnen Sie die Emissionen, reduzieren Sie sie und kompensieren Sie schließlich die Emissionen, die Sie derzeit nicht reduzieren können."
+        q3:
+          question: Kann ich mein Unternehmen klimaneutral machen?
+          answer: Ja, aber nicht nur durch einen Ausgleich der Emissionen des Unternehmens, dafür muss auch ein Emissionsreduktionsplan aufgestellt werden. Das gesamte Unternehmen (oder ein Produkt) klimaneutral zu machen, ist ein bisschen komplexer, da es einem ISO-Standard folgt und sorgfältige Berechnungen erfordert. Aber es ist absolut möglich und etwas, womit wir von GoClimate Ihnen helfen können.
+        q4:
+          question: Wie nutzen Sie die im Geschäftsrechner erhobenen Daten?
+          answer: "Die Daten werden zur Berechnung des ökologischen Fußabdrucks des Unternehmens verwendet. Wir nutzen die Zahlen also völlig anonym, um Durchschnittswerte zu generieren, mit denen sich alle Unternehmen vergleichen können. Ohne Ihre Zustimmung werden keine Informationen öffentlich angezeigt. <br><br> Wenn Sie uns erlauben, Ihr Logo und Ihren Namen zu verwenden wir können es öffentlich zusammen mit der Zahl für die Gesamtemissionen oder Emissionen pro Mitarbeiter verwenden. So werden wir in Zukunft in der Lage sein, Top-Listen und die Möglichkeit eines Vergleichs zwischen den Unternehmen zu erstellen. Darüber hinaus sind alle Informationen auch dann geschützt, wenn Sie diese Genehmigung erteilen."
   for_business: Für Unternehmen
   navigation:
     gift_cards: Gutscheine
   welcome:
     users_prefix: Aktuell sind wir
-    users_suffix: klimaneutrale Nutzer
     tonnes_prefix: Gemeinsam haben wir
     tonnes_suffix: Tonnen CO2 in der Atmosphäre reduziert
+    call_to_actions:
+      lets_save_our_planet_together: Lass uns gemeinsam unseren Planeten retten!
+      go_climate_neutral: Werde klimaneutral
     how_it_works:
       sign_up_text: Melden Sie sich an, um jeden Monat Ihre Emissionen auszugleichen.
     business:
@@ -291,6 +364,7 @@ de:
       average_number_of_servers: Anzahl aktiver Server
       average_number_of_servers_tooltip: Die durchschnittliche Anzahl der aktiven Rechenzentrumsserver während des Zeitraums. Ausgenommen sind Server, die auf Ihrer eigenen Stromrechnung laufen und Server, die sich bei großen Cloud-Anbietern befinden. Wenn Sie beispielsweise 4 Server in einem lokalen Rechenzentrum für die Hälfte der Zeit und 2 für den Rest betrieben haben, geben Sie 3 als Durchschnitt ein. Dieses Feld ist nur für selbstverwaltete Rechenzentrumsserver vorgesehen (die statistisch gesehen einen größeren CO2-Fußabdruck haben als Cloud-Server).
       servers_green_electricity: Unsere Server laufen zu 100% mit Oköstrom
+      how_do_i_know: Woher weiß ich das?
       cloud_servers: Cloud-Server
       number_of_cloud_servers: Anzahl aktiver Cloud-Server
       number_of_cloud_servers_tooltip: "Die durchschnittliche Anzahl der aktiven Cloud-Server während des Zeitraums. Darunter verstehen wir große Cloud-Anbieter wie Amazon AWS, Google Cloud und Microsoft Azure. Dies kann schwer einzuschätzen sein, manchmal entspricht 1 Instanz in der Cloud 20% eines dedizierten Servers und manchmal entspricht 1 große Instanz 2 normalen Servern. Versuchen Sie, die Anzahl der Äquivalente zu einem dedizierten High-End-Server zu schätzen. Beispiel: Es laufen 15 kleine Instanzen in der Cloud während der ersten Hälfte der Zeitspanne und 5 während der anderen Hälfte. Der Durchschnitt beträgt 10 Instanzen, und wenn sie auf 50% eines dedizierten Servers geschätzt werden, sollten hier 5 eingetragen werden."
@@ -316,6 +390,7 @@ de:
       purchased_computers: Gekaufte Computer
       purchased_phones: Gekaufte Telefone/Tablets
       purchased_monitors: Gekaufte Monitore
+      units: Einheiten
       other: Sonstiges
       other_intro: 'Es ist schwierig, alle Emissionen eines Unternehmens in einer Form zu erfassen. Die meisten Unternehmen haben andere Emissionsquellen, die zwar groß, aber nicht sehr verbreitet sind. Organisiert Ihr Unternehmen Veranstaltungen mit Referenten aus der ganzen Welt, die eingeflogen werden? Haben Sie Berater, die jede Woche lange Wege zurücklegen müssen, um zu Ihren Kunden zu gelangen? Berechnen Sie dieses  Emissionen, indem Sie sie unten eingeben. Wenn Sie Hilfe bei der Kalkulation benötigen, können Sie sich gerne schreiben: hello@goclimate.com'
       other_emissions: Andere Emissionen
@@ -326,6 +401,9 @@ de:
       calculate_button: Die Emissionen meines Unternehmens ansehen
       read_more_about_calculations: Mehr über die Berechnung finden Sie hier
       total: Gesamt
+      car: Auto
+      flight: Flüge
+      average: Durchschnitt
       show:
         header: Die Emissionen Ihres Unternehmens
         result: Der Fußabdruck Ihres Unternehmens für die Berichtsperiode %{calculation_period} beträgt %{total_emissions} Tonnen CO2-Äquivalente.
@@ -345,6 +423,7 @@ de:
         reduce_body: Bitte denken Sie noch einmal darüber nach, ob Sie noch etwas tun können, um Ihre Emissionen zu reduzieren. Wir ermutigen alle Unternehmen, Verantwortung für ihre Emissionen durch CO2-Kompensation zu übernehmen, aber noch wichtiger ist es, die Emissionen so weit wie möglich zu reduzieren.
         safety_factor: Sicherheitsfaktor
         safety_factor_explanation: Um sicherzustellen, dass die Auswirkungen der CO2-Kompensation den berechneten Emissionen entsprechen, verwenden wir für Ihren Kauf von CO2-Kompensationen bei uns einen Sicherheitsfaktor von zwei.
+        new_based_on_this: Erstelle eine neue Berechnung basierend auf den in diesem Bericht verwendeten Werten
     climate_report_invoices:
       thank_you:
         thank_you_text: "\nIndem Sie den Fußabdruck Ihres Unternehmens ausgleichen, übernehmen Sie die Verantwortung für die Auswirkungen, die Ihr Unternehmen auf das Klima hat."
