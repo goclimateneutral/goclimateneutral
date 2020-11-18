@@ -51,6 +51,9 @@ de:
         instruction: 'Klicken Sie auf untenstehenden Link, um Ihr Konto zu entsperren:'
         message: Das Login ist mehrfach gescheitert. Ihr Konto wurde deshalb gesperrt.
         subject: Anleitung zum Entsperren
+    omniauth_callbacks:
+      failure: Du konntest nicht mit Deinem %{kind}-Konto angemeldet werden, weil "%{reason}".
+      success: Sie haben sich erfolgreich mit Ihrem %{kind}-Account angemeldet.
     passwords:
       edit:
         change_my_password: Mein Passwort ändern
@@ -79,6 +82,7 @@ de:
       new:
         sign_up: Registrieren
       signed_up: Willkommen in einem klimaneutralen Leben!
+      signed_up_without_subscription: Willkommen bei GoClimate!
       signed_up_but_inactive: Sie haben sich erfolgreich registriert. Sie können sich jedoch erst nach der Aktivierung Ihres Kontos anmelden.
       signed_up_but_locked: Sie haben sich erfolgreich registriert. Wir konnten Sie jedoch nicht anmelden, weil Ihr Konto gesperrt ist.
       signed_up_but_unconfirmed: Eine Nachricht mit dem Bestätigungslink wurde an Ihre E-Mail-Adresse gesendet. Bitte folgen Sie dem Link, um das Konto zu aktivieren.
@@ -112,3 +116,6 @@ de:
       expired: ist abgelaufen, bitte neu anfordern
       not_found: nicht gefunden
       not_locked: war nicht gesperrt
+      not_saved:
+        one: '1 Fehler hat verhindert, dass diese %{resource} gespeichert wurde:'
+        other: "%{count} Fehler verhinderten das Speichern von %{resource}:"
