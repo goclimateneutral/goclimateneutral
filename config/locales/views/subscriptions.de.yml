@@ -4,6 +4,9 @@ de:
       update:
         heading: Abonnement aktualisieren
         no_subscription: Kein Abonnement
+      receipts:
+        heading: Belege
+        action: Belege ansehen
       cancel:
         heading: Abonnement kündigen
         action: Abonnement kündigen
