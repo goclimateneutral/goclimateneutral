@@ -1,1 +1,8 @@
 de:
+  views:
+    receipts:
+      heading: Ihre Belege
+      date: Datum
+      amount: Betrag
+      link: Verweis
+      view: Rechnung anzeigen
