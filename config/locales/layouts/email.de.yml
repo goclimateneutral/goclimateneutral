@@ -1,1 +1,6 @@
 de:
+  layouts:
+    email:
+      sent_by_plaintext: Diese E-Mail wurde versendet von
+      unsubscribe: Abbestellen
+      unsubscribe_plaintext: Alle zukünftigen E-Mails abbestellen
