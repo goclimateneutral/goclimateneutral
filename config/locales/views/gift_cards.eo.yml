@@ -26,13 +26,6 @@ eo:
         pay: crwdns12802:0crwdne12802:0
       download:
         gift_card: "crwdns12804:0crwdne12804:0"
-        gift_card_x_climate_neutral_months:
-          one: crwdns12806:1crwdne12806:1
-          other: "crwdns12806:5%{count}crwdne12806:5"
-        about_go_climate_neutral: crwdns12808:0crwdne12808:0
-        calculation_based_on_html: "crwdns15110:0%{yearly_footprint}crwdne15110:0"
-        do_you_want_to_continue: crwdns12812:0crwdne12812:0
-        register: crwdns12814:0crwdne12814:0
       example:
         message_html: "crwdns12816:0crwdne12816:0"
         example: "crwdns12818:0crwdne12818:0"

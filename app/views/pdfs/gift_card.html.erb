@@ -8,135 +8,170 @@
 <html>
   <head>
     <meta charset='utf-8' />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--
+      Best to embed the css here because PDF generating is done by a separate tool (wkhtmltopdf)
+      and it's tricky to figure how that tool will find our separate css files.
+    -->
+    <style>
+      /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+      html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,[type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px}[type="search"]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+
+      body {
+        font-family: 'Inter', 'Arial', sans-serif;
+      }
+
+      /* utility classes based on our tailwind config */
+      .relative { position: relative; }
+      .absolute { position: absolute; }
+      .top-0 { top: 0; }
+
+      .bg-green-tint-1 {
+      --bg-opacity:1;
+      background-color:#ebf6e6;
+      background-color:rgba(235,246,230,var(--bg-opacity))
+      }
+
+      .inline-block { display: inline-block; }
+      .block { display: block; }
+
+      .align-top { vertical-align: top; }
+      .align-middle { vertical-align: middle; }
+
+      .w-1\/3 { width:33.3333% }
+      .w-full { width:100% }
+      .h-full { height: 100% }
+
+      .text-sm { font-size:.8125rem; }
+      .text-base { font-size:1rem; }
+      .text-primary {
+      --text-opacity:1;
+      color:#1c4637;
+      color:rgba(28,70,55,var(--text-opacity))
+      }
+      .text-blue-accent {
+      --text-opacity:1;
+      color:#6f9bd9;
+      color:rgba(111,155,217,var(--bg-opacity))
+      }
+      .font-bold { font-weight:700 }
+      .text-left { text-align:left }
+      .text-center { text-align:center }
+      .text-right { text-align:right }
+      .uppercase { text-transform: uppercase; }
+
+      .mx-auto { margin-left:auto; margin-right:auto }
+      .mb-0 { margin-bottom: 0px; }
+
+      .p-0 { padding: 0px; }
+      .pb-0 { padding-bottom: 0px; }
+      .rounded-full { border-radius:9999px }
+
+      .z-0 { z-index:0 }
+      .z-10 { z-index:10 }
+
+      /* components */
+      .link {
+      --text-opacity:1;
+      color:#317050;
+      color:rgba(49,112,80,var(--text-opacity));
+      border-bottom-width:2px;
+      transition-property:background-color,border-color,color,fill,stroke,opacity,box-shadow,transform,border-width,height,width,max-height,max-width;
+      transition-duration:.1s;
+      transition-timing-function:linear
+      }
+      .link:hover {
+      --text-opacity:1;
+      color:#1c4637;
+      color:rgba(28,70,55,var(--text-opacity));
+      border-bottom-width:4px
+      }
+
+    </style>
   </head>
-  <body>
-
-<div>
-  <!--
-    Best to embed the css here because PDF generating is done by a separate tool (wkhtmltopdf)
-    and it's tricky to figure how that tool will find our separate css files.
-   -->
-  <style scoped>
-    .text {
-      color: #444444;
-      font-family: 'Raleway', sans-serif;
-      margin-top: 10px;
-      margin-left: 20px;
-      margin-right: 20px;
-
-    }
-    .content {
-      position: absolute;
-      top: 10px;
-      text-align: center;
-    }
-
-    .marginTop {
-      margin-top: 50px;
-    }
-
-    .logo {
-      margin-top: 60px;
-    }
-
-    .logoColor {
-      color: #768a78;
-    }
-
-    .message {
-      font-size: 20px;
-      white-space: pre-wrap;
-      margin-left: 50px;
-      margin-right: 50px;
-      border-radius: 25px;
-      padding: 10px;
-      margin-bottom: 50px;
-    }
-
-    .message:not(:empty) {
-      background: #ffffff;
-    }
-
-    a:link, a:visited {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .exampleStamp {
-      position: absolute;
-      top: 540px;
-      left: 90px;
-      color: red;
-      font-size: 100px;
-      font-family: "Impact", Sans-serif;
-      font-weight: bold;
-      opacity: 0.3;
-      transform: rotate(-15deg);
-    }
-
-    /* Mostly for layout testing */
-    .box {
-      border: 0px solid #4e4e4e;
-    }
-
-    .grayText {
-      color: gray;
-    }
-
-    .footer {
-      position: absolute;
-      text-align: center;
-      width: 680px;
-      top: 820px;
-    }
-
-  </style>
-
-
-
-  <div class="background box" style="width: 700px; height: 1025px; background-color: white;">
-    <%= image_tag wicked_pdf_file_base64('app/assets/images/gift-card-background.png'), size: "700x800"%>
-  </div>
-
-  <div class="content" style="width: 700px; height: 1025px">
-    <div class="logo">
-      <%= image_tag wicked_pdf_file_base64('app/assets/images/logo.svg'), width: "230" %>
-    </div>
-
-    <div class="text logoColor marginTop" style="font-size: 25px;">
-      <%=t 'views.gift_cards.download.gift_card' %>
-    </div>
-
-    <div class="text marginTop" style="font-size: 45px;">
-      <%=t 'views.gift_cards.download.gift_card_x_climate_neutral_months', count: @gift_card.number_of_months %>
-    </div>
-
-    <div class="text grayText" style="font-size: 12px;">
-      <%=t 'views.gift_cards.download.calculation_based_on_html', yearly_footprint: number_with_delimiter(@gift_card.yearly_footprint.tonnes) %>
-    </div>
-
-    <div class="text message marginTop"><%= @gift_card.message %></div>
-
+  <body class="text-primary relative">
     <% if @example == true %>
-        <div class="exampleStamp">
-          <%= t 'views.gift_cards.example.example' %>
-        </div>
+      <div class="absolute text-center uppercase z-10" style="top: 62%; right: 5%; font-size: 90px; color: red; letter-spacing: 3px">
+        <%= t 'views.gift_cards.example.example' %>
+      </div>
     <% end %>
 
-  </div>
+    <header>
+      <!-- table for a clean row of items -->
+      <table class="w-full">
+        <tr>
+          <td class="w-1/3 align-top">
+            <%= image_tag wicked_pdf_file_base64('app/assets/images/logo.svg'), width: "100" %>
+          </td>
+          <td class="w-1/3 text-center relative align-middle">
+            <% gift_card_title = t('views.gift_cards.download.gift_card') %>
+            <!-- handling of other languages where "gift card" is one long word that overflows the illustration -->
+            <% if gift_card_title.length < 10 %>
+              <%= image_tag wicked_pdf_file_base64('app/assets/images/shapes/gift_card_blob.svg'), width: "130" %>
+            <% else %>
+              <%= image_tag wicked_pdf_file_base64('app/assets/images/shapes/gift_card_blob_alternative.svg'), width: "130" %>
+            <% end %>
+            <div class="absolute text-center"
+              style="height: 90%; width: 100%; top: 0; left: 0; white-space: nowrap;"
+            >
+              <span class="inline-block align-middle h-full" style="width: 1px;"></span>
+              <span class="uppercase font-bold inline-block align-middle"
+                style="max-width: 100%; overflow-wrap: break-word; white-space: normal;">
+                <%= gift_card_title %>
+              </span>
+            </div>
+          </td>
+          <td class="w-1/3 text-right text-sm align-top">
+            <% if @example == true %>
+              GCN-GIFT-EXAMPLE
+            <% else %>
+              <%= @gift_card.order_id %>
+            <% end %>
+          </td>
+        </tr>
+      </table>
+    </header>
 
-  <div class="footer">
-    <div class="text grayText" style="font-size: 14px;">
-      <%= raw t 'views.gift_cards.download.about_go_climate_neutral' %>
-    </div>
+    <section style="margin-top: 60px">
+      <div class="relative mx-auto" style="width: 600px">
+        <div class="bg-green-tint-1 rounded-full" style="padding-bottom: 100%"></div>
+        <%= image_tag wicked_pdf_file_base64('app/assets/images/shapes/gift_card_line.svg'), width: "114%", class: 'absolute', style: 'left: -8%; top: 0' %>
+        <div class="absolute w-full h-full top-0">
+          <!-- table for vertical centering -->
+          <table class="w-full h-full">
+            <tr>
+              <td style="width: 17.5%"></td>
+              <td class="align-middle uppercase text-center font-bold" style="width: 65%; font-size: 46px;">
+                <span>
+                  <%= t 'views.gift_cards.download.heading' %>
+                </span>
+                <span class="block text-blue-accent" style="font-size: 60px">
+                  <% if @gift_card.number_of_months == 1 %>
+                    <%= t 'views.gift_cards.download.one_month' %>
+                  <% else %>
+                    <%= t('views.gift_cards.download.x_months', count: @gift_card.number_of_months) %>
+                  <% end %>
+                </span>
+              </td>
+              <td style="width: 17.5%"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
 
-    <div class="text grayText" style="font-size: 14px;">
-      <%= t 'views.gift_cards.download.do_you_want_to_continue' %> <br>
-      <%= raw t 'views.gift_cards.download.register' %>
-    </div>
-  </div>
+    <article class="mx-auto" style="margin-top: 30px; height: 195px; width: 600px">
+      <p class="text-center text-base font-bold">
+        <%= @gift_card.message %>
+      </p>
+    </article>
 
-</div>
-
+    <footer class="mx-auto" style="width: 600px">
+      <p class="text-center text-sm pb-0 mb-0">
+        <%= raw(t('views.gift_cards.download.about').gsub('<a ', '<a class="link" target="_blank" ')) %>
+      </p>
+    </footer>
   </body>
 </html>

@@ -25,13 +25,6 @@ de:
         pay: Gutschein kaufen
       download:
         gift_card: "Gutschein"
-        gift_card_x_climate_neutral_months:
-          one: 1 klimaneutral Monat
-          other: "%{count} klimaneutrale Monate"
-        about_go_climate_neutral: <a href='http://www.goclimate.com'>GoClimate</a> unterstützt Klimaprojekte und gibt Anregungen und Tipps, wie Sie Ihren Klima-Fußabdruck reduzieren können. Die von Ihnen unterstützten Projekte sind UN-zertifizierte Klimaprojekte (CDM), die ebenfalls nach Gold Standard zertifiziert sind. Sie werden von allen Mitgliedern der UN und 80 verschiedenen Umwelt-NGOs unterstützt - darunter auch der WWF. Zusammen tragen wir dazu bei, den Klimawandel zu stoppen und die Welt zu retten.
-        calculation_based_on_html: "Die Berechnung basiert auf einem durchschnittlichen CO2-Ausstoß von %{yearly_footprint} Tonnen CO<sub>2</sub>eq pro Person und Jahr"
-        do_you_want_to_continue: Möchten Sie auch nach Ablauf des Gutscheins ein klimaneutrales Leben führen?
-        register: Gehen Sie auf <a href="http://www.goclimate.com">goclimate.com</a> und registrieren Sie sich!
       example:
         message_html: "Hallo Mama,\nfühlt es sich nicht gut an, dem Klima zu helfen?\nGenieße dieses Geschenk! / Lisa"
         example: "Beispiel"

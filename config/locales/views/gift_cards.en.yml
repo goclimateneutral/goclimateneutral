@@ -31,14 +31,11 @@ en:
         pay: Purchase gift card
       download:
         gift_card: "Gift card"
-        gift_card_x_climate_neutral_months:
-          one: 1 climate neutral month
-          other: "%{count} climate neutral months"
-        about_go_climate_neutral:
-          <a href='http://www.goclimate.com'>GoClimate</a> supports climate projects and gives inspiration and advice on how to reduce your climate footprint. All supported projects are certified by Gold Standard, established by WWF and about 80 other international NGOs. Together we contribute to stop climate change and save the world!
-        calculation_based_on_html: "Calculation based on the average climate footprint of %{yearly_footprint} tonnes CO<sub>2</sub>eq per person and year x 2."
-        do_you_want_to_continue: If you want to continue living a climate neutral life after this gift card has expired,
-        register: visit <a href="http://www.goclimate.com">goclimate.com</a> and register!
+        heading: Supporting a sustainable planet for
+        one_month: 1 month
+        x_months: "%{count} months"
+        about:
+          <a href='http://www.goclimate.com'>GoClimate</a> finances effective climate projects, and support you in your journey towards a climate friendly lifestyle.
       example:
         message_html: "Hi Mom,\nDoesn't it feel great to help the climate?\nEnjoy this gift! /Lisa"
         example: "Example"
