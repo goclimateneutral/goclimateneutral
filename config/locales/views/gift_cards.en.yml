@@ -35,7 +35,7 @@ en:
         one_month: 1 month
         x_months: "%{count} months"
         about:
-          <a href='http://www.goclimate.com'>GoClimate</a> finances effective climate projects, and support you in your journey towards a climate friendly lifestyle.
+          This gift card corresponds to the offsetting of %{co2} tonnes of carbon dioxide, which is the emissions for one average person living in %{country} for %{time_period}. <a href='http://www.goclimate.com'>GoClimate</a> finances effective climate projects, and support you in your journey towards a climate friendly lifestyle.
       example:
         message_html: "Hi Mom,\nDoesn't it feel great to help the climate?\nEnjoy this gift! /Lisa"
         example: "Example"
