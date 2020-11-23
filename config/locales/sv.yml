@@ -17,7 +17,6 @@ sv:
   climate_projects: Klimatprojekt
   climate_projects_description: Vi stöttar Gold Standard-certifierade klimatprojekt för att snabba på omställningen till ett hållbart energisystem och samhälle.
   behavioral_change: Beteendeförändring
-  behavioral_change_description: Klimatkompensation är viktigt men tyvärr inte tillräckligt. Därför utbildar vi, inspirerar och hjälper individer att minska sina klimatavtryck också.
   basic_facts: GoClimate i siffror
   employees: Anställda
   full_time: heltidsanställda
@@ -64,9 +63,7 @@ sv:
   about_us_why_do_we_exist: Varför finns GoClimate?
   about_us_why_do_we_exist_text: För att hålla den globala temperaturökningen under 1.5°C så måste koldioxidutsläppen minskas med 50% senast år 2030 - och sedan fortsätta minska i samma takt. Många människor, framför allt i utvecklingsländer, upplever redan de förödande effekterna av klimatförändringarna. Vi måste agera nu, för att ha en chans att möta de nödvändiga mål som håller temperaturen på en någorlunda stabil nivå.
   about_us_why_do_we_exist_text_2: Detta sätter press på både regeringar, företag och privatpersoner. Förändringarna som vi alla behöver göra för att nå målet och undvika ytterligare klimatkatastrof kan vara svåra att förstå och genomföra. Vi vill underlätta resan mot en klimatvänlig livsstil och visa att ett liv där vi bryr oss om vår planet - och varandra - kan vara ett lyxigt liv. Ett liv med mer fokus på det som verkligen är viktigt.
-  about_us_how_do_we_stop_climate_change: Hur bromsar vi klimatförändringar?
-  about_us_how_do_we_stop_climate_change_text: För att hejda klimatförändringarna behöver så många som möjligt bli klimatneutrala (eller ännu bättre – klimatpositiva) nu. Det bästa tillvägagångssättet är att minska våra egna fotavtryck så mycket det bara går samtidigt som vi klimatkompenserar för resterande.
-  about_us_how_do_we_stop_climate_change_text_2: GoClimate skapades i syfte att göra ovanstående så enkelt som möjligt – ge tips om hur vi alla kan minska vår egen klimatpåverkan och erbjuda möjligheten att klimatkompensera för de fotavtryck vi personligen orsakar. Vi tror att det bästa sättet att få människor att klimatkompensera för sin livsstil är att göra det så enkelt som möjligt. Vi är övertygade om att klimatförändringarna kan stoppas – om vi är tillräckligt många som agerar och om vi gör det nu.
+  about_us_how_do_we_stop_climate_change: Hur bromsar vi klimatförändringarna?
   about_us_who_are_we: Vilka är vi?
   about_us_team:
     heading: Vilka är vi?
@@ -88,7 +85,6 @@ sv:
   add_new_card: Nytt kort
   edit_card: Ändra kort
   your_payment_details_have_been_updated: Dina inställningar har uppdaterats
-  no_card_registered: Inget kort registrerat
   climate_plan: Kompensation
   log_in_to_see_how_we_are_doing: Logga in för att se hur det går i vår kamp med att försöka ställa klimatet till rätta igen.
   you_have_lived_climate_neutral_for:
@@ -239,6 +235,8 @@ sv:
         q10:
           question: Är projekten hållbara?
           answer: Ja! Projekten utvecklas med försiktighet och med omtanke för lokal miljö och befolkning. I de fall där projekten har påverkan så kompenseras det för, tex om träd huggs ned för att bredda en väg så planteras nya träd. Dessutom kräver Gold Standard att projekten bidrar till fler av de globala hållbarhetsmålen än bara klimatmålet. Vissa projekt skapar bra arbetstillfällen, förbättrar hälsan, bidrar till hållbar industri och/eller förnybar energi. Vi väljer projekt med omsorg och kontrollerar vad som rapporterats under projektets genomförande, så att vi minimerar risken för att de projekt vi stöttar har haft negativa konsekvenser på miljön och lokalbefolkningen. När klimatkompensation utvecklades var kraven inte lika höga och därför finns det historiskt sett projekt som haft negativa bieffekter, men med dagens högre krav och hårdare kontroller har vi större möjlighet att undvika detta.
+        q11:
+          question: Hur kan ni säkerställa att ursprungsbefolkningar inte tar skada av de klimatprojekt ni stöder?
     about_us:
       heading: Om GoClimate
       questions:
@@ -316,8 +314,6 @@ sv:
       calculate_footprint_html: Beräkna ditt företags klimatavtryck, minska det du kan och klimatkompensera resten. Vi har tagit fram ett enkelt verktyg för tjänsteföretag utan egen fysisk produktion.
       calculate_footprint_button: Beräkna mitt företags klimatavtryck
       customers_we_work_with: Några av våra fantastiska kunder och samarbetspartners
-      offset_employees: Klimatkompensera era anställda
-      offset_employees_html: Genom att klimatkompensera för era anställdas livsstil tar ni ansvar för deras privata klimatavtryck. Det är ett sätt att göra stor klimatnytta samtidigt som det bidrar till att ni blir en attraktiv och ansvarstagande arbetsgivare.
       equivalent_co2_offset: motsvarar 22 ton CO2-utsläpp per anställd och år
       im_interested: Kontakta mig!
       we_will_contact_you_shortly_html: Vi kontaktar dig inom kort på <b>%{email}</b> med information om nästa steg! Vi hörs!
