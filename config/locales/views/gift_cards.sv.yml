@@ -26,10 +26,6 @@ sv:
         pay: Betala gåvokortet
       download:
         gift_card: "Gåvokort"
-        heading: Stöttar en hållbar planet i
-        one_month: 1 månad
-        x_months: "%{count} månader"
-        about: Gåvokortet motsvarar klimatkompensering av %{co2} ton koldioxid, vilket är utsläppen för en genomsnittlig person som bor i %{country} under %{time_period}. <a href='http://www.goclimate.com'>GoClimate</a> finansierar effektiva klimatprojekt och stöttar dig på din resa mot ett klimatvänligt liv!
       example:
         message_html: "Hej Mamma!\nVisst känns det bra att hjälpa klimatet?\n/Lisa"
         example: "Exempel"
