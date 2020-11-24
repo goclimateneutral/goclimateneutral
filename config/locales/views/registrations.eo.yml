@@ -16,7 +16,7 @@ eo:
       price_free: crwdns15034:0crwdne15034:0
       create_account: crwdns13250:0crwdne13250:0
       your_subscription: crwdns13058:0crwdne13058:0
-      number_of_people: crwdns13060:0crwdne13060:0
+      number_of_people: crwdns15138:0crwdne15138:0
       referral_code: crwdns15072:0crwdne15072:0
       referral_code_change: crwdns15074:0crwdne15074:0
       referral_code_link: crwdns15076:0crwdne15076:0
@@ -41,7 +41,7 @@ eo:
       know_your_footprint:
         consist_of:
           heading: crwdns15036:0crwdne15036:0
-          text: crwdns15090:0crwdne15090:0
+          text: crwdns15140:0crwdne15140:0
           text_2: crwdns15040:0crwdne15040:0
         tips:
           heading: crwdns15042:0crwdne15042:0
@@ -54,7 +54,7 @@ eo:
             text: crwdns15052:0crwdne15052:0
           offsetting:
             heading: crwdns15054:0crwdne15054:0
-            text: crwdns15056:0crwdne15056:0
+            text: crwdns15142:0crwdne15142:0
         sign_up:
           heading: crwdns15058:0crwdne15058:0
           text: crwdns15060:0crwdne15060:0
@@ -65,3 +65,5 @@ eo:
           offset_account:
             heading: crwdns15068:0crwdne15068:0
             text: crwdns15070:0crwdne15070:0
+      settings:
+        user_name_description: crwdns15146:0crwdne15146:0
