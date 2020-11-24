@@ -26,6 +26,10 @@ eo:
         pay: crwdns12802:0crwdne12802:0
       download:
         gift_card: "crwdns12804:0crwdne12804:0"
+        heading: crwdns15148:0crwdne15148:0
+        one_month: crwdns15150:0crwdne15150:0
+        x_months: "crwdns15152:0%{count}crwdne15152:0"
+        about: crwdns15154:0%{co2}crwdnd15154:0%{country}crwdnd15154:0%{time_period}crwdne15154:0
       example:
         message_html: "crwdns12816:0crwdne12816:0"
         example: "crwdns12818:0crwdne12818:0"
