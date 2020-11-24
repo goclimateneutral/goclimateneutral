@@ -106,6 +106,13 @@ Lyssna på Cissi i <a href="https://klimatpodden.se/66-cecilia-linden-klimatkomp
         translation_key: 'emma_html',
         full_name: 'Emma Bäckström',
       },
+      {
+        key: 'petter',
+        translation_key: 'petter_html',
+        full_name: 'Petter Palander',
+        twitter_handle_sv: 'achaido',
+        twitter_handle_en: 'petterpalander',
+      },
     ].each do |person| %>
       <div class="w-full t:w-1/2 d:w-1/3 space-y-3 text-center">
         <%= image_tag webpack_asset_path("images/about/#{person[:key]}.jpg"), class: 'rounded-full mx-auto w-48', alt: person[:key] %>
@@ -120,6 +127,20 @@ Lyssna på Cissi i <a href="https://klimatpodden.se/66-cecilia-linden-klimatkomp
           <% if person[:twitter_handle] %>
             <div class="inline-block mx-2">
               <%= link_to "https://twitter.com/#{person[:twitter_handle]}", target: "_blank", rel: "noopener", class: 'link-icon' do %>
+                <i class="fa fa-2x fa-twitter" aria-hidden="true"></i>
+              <% end %>
+            </div>
+          <% end %>
+          <% if person[:twitter_handle_sv] && I18n.locale == :sv  %>
+            <div class="inline-block mx-2">
+              <%= link_to "https://twitter.com/#{person[:twitter_handle_sv]}", target: "_blank", rel: "noopener", class: 'link-icon' do %>
+                <i class="fa fa-2x fa-twitter" aria-hidden="true"></i>
+              <% end %>
+            </div>
+          <% end %>
+          <% if person[:twitter_handle_en] && I18n.locale == :en  %>
+            <div class="inline-block mx-2">
+              <%= link_to "https://twitter.com/#{person[:twitter_handle_en]}", target: "_blank", rel: "noopener", class: 'link-icon' do %>
                 <i class="fa fa-2x fa-twitter" aria-hidden="true"></i>
               <% end %>
             </div>
