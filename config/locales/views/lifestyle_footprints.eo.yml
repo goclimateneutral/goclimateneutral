@@ -4,7 +4,8 @@ eo:
       title: crwdns12826:0crwdne12826:0
       questions:
         region: crwdns12828:0crwdne12828:0
-        home: crwdns12830:0crwdne12830:0
+        home: crwdns15164:0crwdne15164:0
+        home_area: crwdns15166:0crwdne15166:0
         heating: crwdns12832:0crwdne12832:0
         green_electricity: crwdns12834:0crwdne12834:0
         food: crwdns12836:0crwdne12836:0
@@ -24,11 +25,18 @@ eo:
           one_or_two_bedrooms: crwdns12858:0crwdne12858:0
           three_or_four_bedrooms: crwdns12860:0crwdne12860:0
           five_or_more_bedrooms: crwdns12862:0crwdne12862:0
-          fifteen_sqm: crwdns12864:0crwdne12864:0
-          twentyfive_sqm: crwdns12866:0crwdne12866:0
-          fortytwo_sqm: crwdns12868:0crwdne12868:0
-          sixty_sqm: crwdns12870:0crwdne12870:0
-          eighty_sqm: crwdns12872:0crwdne12872:0
+          #TODO: Remove after LifestyleFootprints have been migrated to use home_area for these
+          fifteen_sqm: crwdns15168:0crwdne15168:0
+          twentyfive_sqm: crwdns15170:0crwdne15170:0
+          fortytwo_sqm: crwdns15172:0crwdne15172:0
+          sixty_sqm: crwdns15174:0crwdne15174:0
+          eighty_sqm: crwdns15176:0crwdne15176:0
+        home_area:
+          fifteen_sqm: crwdns15178:0crwdne15178:0
+          twentyfive_sqm: crwdns15180:0crwdne15180:0
+          fortytwo_sqm: crwdns15182:0crwdne15182:0
+          sixty_sqm: crwdns15184:0crwdne15184:0
+          eighty_sqm: crwdns15186:0crwdne15186:0
         heating:
           electricity: crwdns12874:0crwdne12874:0
           natural_gas: crwdns12876:0crwdne12876:0
