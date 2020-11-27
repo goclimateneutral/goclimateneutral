@@ -4,7 +4,6 @@ de:
       title: Berechnen Sie Ihre CO2-Bilanz
       questions:
         region: In welcher Region wohnen Sie?
-        home: Wie wohnen Sie?
         heating: Wie heizen Sie?
         green_electricity: Nutzen Sie Ökostrom?
         food: Wie sieht Ihre Ernährung hauptsächlich aus?
@@ -24,11 +23,6 @@ de:
           one_or_two_bedrooms: 1-2 Schlafzimmer
           three_or_four_bedrooms: 3-4 Schlafzimmer
           five_or_more_bedrooms: 5+ Schlafzimmer
-          fifteen_sqm: 15 m² pro Person
-          twentyfive_sqm: 25 m² pro Person
-          fortytwo_sqm: 42 m² pro Person
-          sixty_sqm: 60 m² pro Person
-          eighty_sqm: 80 m² pro Person
         heating:
           electricity: Strom
           natural_gas: Gas
