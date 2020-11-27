@@ -17,7 +17,7 @@ eo:
   climate_projects: crwdns11742:0crwdne11742:0
   climate_projects_description: crwdns11744:0crwdne11744:0
   behavioral_change: crwdns11746:0crwdne11746:0
-  behavioral_change_description: crwdns11748:0crwdne11748:0
+  behavioral_change_description: crwdns15126:0crwdne15126:0
   basic_facts: crwdns11750:0crwdne11750:0
   employees: crwdns11752:0crwdne11752:0
   full_time: crwdns11754:0crwdne11754:0
@@ -65,7 +65,7 @@ eo:
   about_us_why_do_we_exist_text: crwdns15082:0crwdne15082:0
   about_us_why_do_we_exist_text_2: crwdns15084:0crwdne15084:0
   about_us_how_do_we_stop_climate_change: crwdns11848:0crwdne11848:0
-  about_us_how_do_we_stop_climate_change_text: crwdns11850:0crwdne11850:0
+  about_us_how_do_we_stop_climate_change_text: crwdns15128:0crwdne15128:0
   about_us_who_are_we: crwdns11854:0crwdne11854:0
   about_us_team:
     heading: crwdns13360:0crwdne13360:0
@@ -76,13 +76,14 @@ eo:
     alexandra_html: crwdns13370:0crwdne13370:0
     tove_html: crwdns13372:0crwdne13372:0
     emma_html: crwdns13374:0crwdne13374:0
+    petter_html: crwdns15156:0crwdne15156:0
   blog: crwdns11872:0crwdne11872:0
   we_are_100_transparent: crwdns11874:0crwdne11874:0
   section_3_text: crwdns11876:0crwdne11876:0
   email: crwdns11878:0crwdne11878:0
   password: crwdns11880:0crwdne11880:0
   i_accept: crwdns11882:0crwdne11882:0
-  our_privacy_policy: crwdns11884:0crwdne11884:0
+  our_privacy_policy: crwdns15158:0crwdne15158:0
   credit_or_debit_card: crwdns11886:0crwdne11886:0
   add_new_card: crwdns11888:0crwdne11888:0
   edit_card: crwdns14866:0crwdne14866:0
@@ -120,7 +121,8 @@ eo:
         food: crwdns14964:0crwdne14964:0
         car: crwdns14966:0crwdne14966:0
         flights: crwdns14968:0crwdne14968:0
-        public: crwdns14970:0crwdne14970:0
+        shopping: crwdns15160:0crwdne15160:0
+        public: crwdns15162:0crwdne15162:0
   good_job: crwdns11920:0crwdne11920:0
   our_projects: crwdns11926:0crwdne11926:0
   project_name: crwdns11932:0crwdne11932:0
@@ -238,7 +240,7 @@ eo:
           answer: crwdns13234:0crwdne13234:0
         q11:
           question: crwdns15002:0crwdne15002:0
-          answer: crwdns15004:0crwdne15004:0
+          answer: crwdns15130:0crwdne15130:0
     about_us:
       heading: crwdns12128:0crwdne12128:0
       questions:
@@ -311,8 +313,8 @@ eo:
       calculate_footprint_html: crwdns12236:0crwdne12236:0
       calculate_footprint_button: crwdns12238:0crwdne12238:0
       customers_we_work_with: crwdns12240:0crwdne12240:0
-      offset_employees: crwdns12242:0crwdne12242:0
-      offset_employees_html: crwdns12244:0crwdne12244:0
+      offset_employees: crwdns15132:0crwdne15132:0
+      offset_employees_html: crwdns15134:0crwdne15134:0
       equivalent_co2_offset: crwdns12246:0crwdne12246:0
       im_interested: crwdns12248:0crwdne12248:0
       we_will_contact_you_shortly_html: crwdns12250:0%{email}crwdne12250:0
