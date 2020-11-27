@@ -4,7 +4,6 @@ sv:
       title: Beräkna ditt klimatavtryck
       questions:
         region: Vilken region bor du i?
-        home: Hur bor du?
         heating: Hur värmer du ditt hem?
         green_electricity: Har du valt grön el?
         food: Hur äter du vanligtvis?
@@ -20,11 +19,6 @@ sv:
           one_or_two_bedrooms: 1-2 sovrum
           three_or_four_bedrooms: 3-4 sovrum
           five_or_more_bedrooms: 5+ sovrum
-          fifteen_sqm: 15 m² per person
-          twentyfive_sqm: 25 m² per person
-          fortytwo_sqm: 42 m² per person
-          sixty_sqm: 60 m² per person
-          eighty_sqm: 80 m² per person
         heating:
           electricity: Eluppvärmning
           natural_gas: Naturgas
