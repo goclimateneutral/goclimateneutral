@@ -108,7 +108,7 @@
       position: absolute;
       text-align: center;
       width: 680px;
-      top: 880px;
+      top: 910px;
     }
     .whiteBox {
       margin: 0 auto;
@@ -122,6 +122,9 @@
     </style>
   </head>
   <body class="text-primary">
+     <div class="background box" style="width: 700px; height: 1025px; background-color: white;">
+     <%= image_tag wicked_pdf_file_base64('app/assets/images/certificate-bottom.png'), size: "700x900"%>
+   </div>
     <div class="content" style="width: 700px; height: 1025px">
       <div class="logo">
         <%= image_tag wicked_pdf_file_base64('app/assets/images/logo.svg'), width: "230" %>
@@ -160,7 +163,7 @@
     <div class="text footer">
       <strong><%=t 'views.pdfs.invoice_certificate.date' %>: <%= @issued_at.in_time_zone('Europe/Stockholm').to_date %></strong>
       </br>
-      <%= image_tag wicked_pdf_file_base64('app/assets/images/cissi_signature.png'), size: "356x132" %>
+      <%= image_tag wicked_pdf_file_base64('app/assets/images/cissi_signature.png'), size: "267x99" %>
     </div>
   </body>
 </html>
