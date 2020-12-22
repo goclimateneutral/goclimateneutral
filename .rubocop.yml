@@ -78,6 +78,9 @@ Metrics/AbcSize:
 Metrics/CyclomaticComplexity:
   Max: 8
 
+Naming/MethodParameterName:
+  Enabled: false
+
 RSpec/NestedGroups:
   Max: 5
 
