@@ -294,19 +294,7 @@ de:
     tonnes_prefix: Gemeinsam haben wir
     tonnes_suffix: Tonnen CO2 in der Atmosphäre reduziert
     business:
-      for_companies: Klimakompensation für Ihr Unternehmen
-      for_companies_text_html: Möchten Sie die Emissionen eines Fluges oder für alle Ihre Mitarbeiter kompensieren? Wir helfen Ihnen gerne weiter!
-      calculate_footprint: Der Fußabdruck Ihres Unternehmens
-      calculate_footprint_html: Berechnen Sie die Klimabilanz Ihres Unternehmens, reduzieren Sie so viele Emissionen wie möglich und kompensieren Sie den Rest. Unser Rechner ist für kleinere Dienstleistungsunternehmen ohne eigene physische Produktion konzipiert. Fragen? Kontaktieren Sie uns unter <a href="mailto:hello@goclimate.com">hello@goclimate.com</a>!
-      calculate_footprint_button: Fußabdruck meines Unternehmens berechnen
-      customers_we_work_with: Einige unserer wundervollen Kunden und Partner
-      equivalent_co2_offset: entspricht 22 Tonnen CO2-Emissionen pro Mitarbeiter und Jahr.
-      im_interested: Kontaktieren Sie mich
       we_will_contact_you_shortly_html: Wir werden Sie unter <b>%{email}</b> in Kürze mit weiteren Informationen zum nächsten Schritt kontaktieren!
-      other_offsetting: Weitere Leistungen
-      other_offsetting_html: Wir können Ihnen bei Klimabilanzberechnungen, einmaligen Kompensationen und technischen Integrationen helfen. Kontaktieren Sie uns unter <a href='mailto:hello@goclimate.com'>hello@goclimate.com</a>, um mehr zu erfahren.
-      number_of_employees: "Anzahl Mitarbeiter:"
-      your_email: "Ihre E-Mail:"
   number:
     format:
       delimiter: ' '

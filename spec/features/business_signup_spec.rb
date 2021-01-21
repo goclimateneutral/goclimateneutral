@@ -6,7 +6,7 @@ RSpec.feature 'Business signup', type: :feature, js: true do
   scenario 'Sign up via climate report' do
     visit '/business'
 
-    click_link 'Calculate my business footprint'
+    find('#calculate-business-footprint-cta').click
 
     # Wait for climate report form to render
     find('#climate-report-form', wait: 20)

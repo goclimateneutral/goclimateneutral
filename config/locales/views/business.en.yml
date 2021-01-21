@@ -1,0 +1,35 @@
+en:
+  views:
+    business:
+      hero:
+        heading: Take responsibility for your company's climate impact
+        text: And for our future. Carbon offsetting your organization's emissions does not only contribute to a more sustainable planet - it gives you an overview of how you can improve your future climate work. On top of that, it makes you a more attractive employer, by taking responsibility for your climate impact.
+      our_offer:
+        heading: We offer
+        bullet_1: Carbon offsetting for your company and your employees
+        bullet_2: A tailored climate report
+        bullet_3: The possibility to carbon offset for your organization's past emissions
+      carbon_offsetting:
+        heading: Carbon offsetting
+        text: Calculate your company's carbon footprint, lower the emissions where possible and offset the rest. We've developed a calculator that's easy to use, giving you an overview of your company's carbon footprint.
+        cta: Calculate my business footprint
+      climate_report:
+        heading: The climate report
+        text: When offsetting with GoClimate you'll get a tailored climate report that gives you a clear overview of your emissions. The report offers a substantial ground for your internal as well as external sustainability communication. 
+        cta: Calculate my business footprint
+      offset_employees:
+        heading: Offset your team members' carbon footprint
+        text: We give you the opportunity to balance out the carbon footprint of your employees by offsetting each individual's emissions and take full responsibility for your team's total carbon footprint. Not only does this benefit the climate, it also makes you an attractive employer.
+        cta: Contact me
+        equivalent_co2_offset: equivalent to 18 tonnes of CO2-emissions per employee and year
+        number_of_employees: "Number of employees:"
+        email: "Your e-mail:"
+      customers:
+        heading: A few of our amazing customers and partners
+      past_emissions:
+        heading: Carbon offsetting for past emissions
+        text: A lot of companies choose to offset previous emissions. It's a great way to show that you take responsibility for your full history. Contact us and we'll support you with the next step.
+        cta: Calculate my business footprint
+      other_services:
+        heading: Other services
+        text_html: We can help out with carbon footprint calculations, one time offsets, inspirational lectures, workshops and technical integrations. Contact us at <a href='mailto:hello@goclimate.com'>hello@goclimate.com</a> to learn more.

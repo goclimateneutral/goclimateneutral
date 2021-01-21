@@ -313,21 +313,7 @@ en:
     tonnes_prefix: Together we've reduced
     tonnes_suffix: tonnes CO2 from the atmosphere
     business:
-      for_companies: Carbon Offsetting For Your Business
-      for_companies_text_html: Do you want to offset the emissions from a flight or for all your employees? We would love to help!
-      calculate_footprint: Your business footprint
-      calculate_footprint_html: Calculate the climate footprint of your business, reduce what emissions you can and offset the rest. Our calculator is made for smaller service businesses without own physical production. Questions? Contact us at <a href="mailto:hello@goclimate.com">hello@goclimate.com</a>!
-      calculate_footprint_button: Calculate my business footprint
-      customers_we_work_with: A few of our amazing customers and partners
-      offset_employees: Offset your team members’ footprint
-      offset_employees_html: Balance the carbon footprint of your employees by offsetting everyone’s individual emissions and take responsibility for your team’s total carbon footprint. This is one way to do a lot of good for the climate and at the same time be an attractive and responsible employer.
-      equivalent_co2_offset: equivalent to 22 tonnes of CO2-emissions per employee and year
-      im_interested: Contact me
       we_will_contact_you_shortly_html: We will contact you on <b>%{email}</b> shortly with more information about the next step!
-      other_offsetting: Other Services
-      other_offsetting_html:  We can help out with climate footprint calculations, one time offsets and technical integrations. Contact us at <a href='mailto:hello@goclimate.com'>hello@goclimate.com</a> to learn more.
-      number_of_employees: "Number of employees:"
-      your_email: "Your e-mail:"
   number:
     format:
       delimiter: ','

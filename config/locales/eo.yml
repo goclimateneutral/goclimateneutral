@@ -305,21 +305,7 @@ eo:
     tonnes_prefix: crwdns12212:0crwdne12212:0
     tonnes_suffix: crwdns12214:0crwdne12214:0
     business:
-      for_companies: crwdns12230:0crwdne12230:0
-      for_companies_text_html: crwdns12232:0crwdne12232:0
-      calculate_footprint: crwdns12234:0crwdne12234:0
-      calculate_footprint_html: crwdns12236:0crwdne12236:0
-      calculate_footprint_button: crwdns12238:0crwdne12238:0
-      customers_we_work_with: crwdns12240:0crwdne12240:0
-      offset_employees: crwdns12242:0crwdne12242:0
-      offset_employees_html: crwdns12244:0crwdne12244:0
-      equivalent_co2_offset: crwdns12246:0crwdne12246:0
-      im_interested: crwdns12248:0crwdne12248:0
       we_will_contact_you_shortly_html: crwdns12250:0%{email}crwdne12250:0
-      other_offsetting: crwdns12252:0crwdne12252:0
-      other_offsetting_html: crwdns12254:0crwdne12254:0
-      number_of_employees: "crwdns12256:0crwdne12256:0"
-      your_email: "crwdns12258:0crwdne12258:0"
   number:
     format:
       delimiter: 'crwdns12260:0crwdne12260:0'

@@ -307,21 +307,7 @@ sv:
     tonnes_prefix: Tillsammans har vi minskat
     tonnes_suffix: ton koldioxid i atmosfären
     business:
-      for_companies: Klimatkompensera ditt företag
-      for_companies_text_html: Vill du klimatkompensera ditt företags klimatavtryck eller klimatkompensera för alla era anställda? Vi hjälper dig gärna!
-      calculate_footprint: Ditt företags klimatavtryck
-      calculate_footprint_html: Beräkna ditt företags klimatavtryck, minska det du kan och klimatkompensera resten. Vi har tagit fram ett enkelt verktyg för tjänsteföretag utan egen fysisk produktion.
-      calculate_footprint_button: Beräkna mitt företags klimatavtryck
-      customers_we_work_with: Några av våra fantastiska kunder och samarbetspartners
-      offset_employees: Kompensera för hela ditt teams klimatavtryck
-      offset_employees_html: Balansera klimatavtrycket för dina anställda genom att kompensera för varje persons individuella utsläpp och ta ansvar för ditt teams hela avtryck. På så sätt gör du nytta för klimatet och blir samtidigt en attraktiv och ansvarstagande arbetsplats.
-      equivalent_co2_offset: motsvarar 22 ton CO2-utsläpp per anställd och år
-      im_interested: Kontakta mig!
       we_will_contact_you_shortly_html: Vi kontaktar dig inom kort på <b>%{email}</b> med information om nästa steg! Vi hörs!
-      other_offsetting: Övriga tjänster
-      other_offsetting_html: Vi kan hjälpa till med utsläppsberäkningar, enskilda klimatkompensationer och tekniska integrationer. Hör av dig till <a href='mailto:hello@goclimate.com'>hello@goclimate.com</a> så berättar vi mer.
-      number_of_employees: "Antal anställda:"
-      your_email: "Din e-post:"
   number:
     format:
       delimiter: ' '

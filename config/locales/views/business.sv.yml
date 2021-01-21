@@ -1,0 +1,35 @@
+sv:
+  views:
+    business:
+      hero:
+        heading: Ta ansvar för ditt företags klimatpåverkan
+        text: Och för vår framtid. Att klimatkompensera för er verksamhets utsläpp bidrar inte bara till en mer hållbar värld - det ger er också en överskådlig bild av hur ni kan förbättra ert framtida klimatarbete. Dessutom blir ni en mer attraktiv arbetsgivare som tar ansvar för er påverkan på klimatet.
+      our_offer:
+        heading: Vi erbjuder
+        bullet_1: Klimatkompensation för ert företag och/eller för era medarbetare
+        bullet_2: En skräddarsydd klimatrapport
+        bullet_3: Möjlighet att klimatkompensera företagets historiska utsläpp
+      carbon_offsetting:
+        heading: Klimatkompensera för ditt företag
+        text: Beräkna ditt företags klimatavtryck, minska de utsläpp du kan och klimatkompensera för resten. Vi har tagit fram en enkel kalkylator för företag, som ger dig en översikt över din verksamhets klimatavtryck.
+        cta: Beräkna mitt företags klimatavtryck
+      climate_report:
+        heading: Klimatrapporten
+        text: När du väljer att klimatkompensera genom GoClimate får du också en skräddarsydd klimatrapport som tydligt visar era utsläpp. Rapporten ger en bra grund för både intern och extern kommunikation kring ert hållbarhetsarbete.
+        cta: Beräkna mitt företags klimatavtryck
+      offset_employees:
+        heading: Kompensera för hela ditt teams klimatavtryck
+        text: Vi ger dig möjlighet att balansera klimatavtrycket för era anställda genom att kompensera för varje persons individuella utsläpp och ta ansvar för ditt teams hela avtryck. På så sätt gör du nytta för klimatet och blir samtidigt en attraktiv och ansvarstagande arbetsplats.
+        cta: Kontakta mig
+        equivalent_co2_offset: motsvarar 18 ton CO2-utsläpp per anställd och år
+        number_of_employees: "Antal anställda:"
+        email: "Din e-post:"
+      customers:
+        heading: Några av våra fantastiska kunder och samarbetspartners
+      past_emissions:
+        heading: Kompensera för era historiska utsläpp
+        text: Många verksamheter väljer att kompensera även för tidigare års utsläpp. Det är ett smart sätt att visa att ni tar ansvar från det att företaget startades - in i framtiden. Kontakta oss så hjälper vi dig att räkna ut ert avtryck.
+        cta: Beräkna mitt företags klimatavtryck
+      other_services:
+        heading: Övriga tjänster
+        text_html: Vi kan hjälpa till med utsläppsberäkningar, enskilda klimatkompensationer, inspirationsföreläsningar, workshops och tekniska integrationer. Hör av dig till <a href='mailto:hello@goclimate.com'>hello@goclimate.com</a> så berättar vi mer.
