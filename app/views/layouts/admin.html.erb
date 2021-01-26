@@ -45,6 +45,9 @@
             <li<% if controller_name == 'lifestyle_calculators' %> class="active"<% end %>>
               <%= link_to 'Lifestyle Calculators', admin_lifestyle_calculators_path %></a>
             </li>
+            <li<% if controller_name == 'flight_batch' %> class="active"<% end %>>
+              <%= link_to 'Flight Batch', new_admin_flight_batch_path %></a>
+            </li>
           </ul>
         </div>
       </div>

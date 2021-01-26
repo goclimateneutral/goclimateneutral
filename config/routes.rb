@@ -201,6 +201,7 @@ Rails.application.routes.draw do
     resource :invoice_certificates, only: [] do
       post 'send_email', on: :collection
     end
+    resource :flight_batch, controller: 'flight_batch', only: [:new, :create]
   end
 
   # Errors

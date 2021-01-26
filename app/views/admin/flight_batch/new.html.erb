@@ -1,0 +1,12 @@
+<h1>Upload csv-file for batch flight calculations</h1>
+
+<p>- please use file saved as 'CSV UTF-8' in excel or similar (encoding must be UTF-8)</p>
+<p>- first column in file should be origin</p>
+<p>- second column in file should be destination</p>
+<p>- origin/destination can be anything that can be entered in <%= link_to 'our public flight search', new_flight_footprint_path %>. Airportcode will give perfect match, city will work most of the times. This tool will show you all the airports found after the calculation, so that you can check that correct matches was found.</p>
+
+<%= form_with url: "/admin/flight_batch", method: :post do |form| %>
+  <%= form.label :query, "CSV file  :" %>
+  <%= form.file_field :csv %>
+  <%= form.submit "Calculate" %>
+<% end %>

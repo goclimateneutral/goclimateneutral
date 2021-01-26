@@ -1,0 +1,27 @@
+<% unless @errors.empty? %>
+  <h1>The following errors were found:</h1>
+  <ul>
+    <% @errors.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% else %>
+
+<h1>Result</h1>
+  <h2>Total emissions: <%= @emissions %> kg co2e</h2>
+  <p>Please check that airports found below are correct. If not, change input to iata_codes.</p>
+
+  <table>
+    <tr>
+      <th style="padding:8px">input</th>
+      <th style="padding:8px">airport found</th>
+    </tr>
+
+    <% @unique_lookups.each do |key, value| %>
+      <tr>
+        <td style="padding:8px"><%= key %></td>
+        <td style="padding:8px"><%= value %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
