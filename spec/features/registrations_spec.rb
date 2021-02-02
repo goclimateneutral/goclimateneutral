@@ -127,7 +127,7 @@ RSpec.feature 'Registrations', type: :feature, js: true do
   end
 
   scenario 'Register without subscription' do
-    visit '/?disable_experiments=remove_signup_without_subscription'
+    visit '/'
 
     select('Sweden', from: 'country')
     click_button 'Get started'
@@ -237,7 +237,7 @@ RSpec.feature 'Registrations', type: :feature, js: true do
 
   scenario 'Register through campaign page without subscription' do
     # Campaign page
-    visit '/know-your-carbon-footprint?disable_experiments=remove_signup_without_subscription'
+    visit '/know-your-carbon-footprint'
 
     within '#first-registration-form' do
       select('Sweden', from: 'country')

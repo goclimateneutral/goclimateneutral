@@ -11,16 +11,14 @@
         <div class="h-px w-full bg-gray-tint-2 hidden"></div>
         <%= form_with method: :get, class: 'space-y-3', html: { 'data-target': 'registrations--price.peopleForm', 'data-url': new_user_registration_path } do |f| %>
           <%= f.hidden_field(:lifestyle_footprint, :value => @footprint.key) %>
-          <% unless experiment_active?(:remove_signup_without_subscription) %>
-            <label class="flex flex-row items-center p-3 bg-gray-pastel rounded cursor-pointer"
-              data-active-class="flex flex-row items-center p-3 bg-green-tint-1 rounded cursor-pointer"
-              data-inactive-class="flex flex-row items-center p-3 bg-gray-pastel rounded cursor-pointer"
-              for="free"
-              >
-              <input class="flex-shrink-0 mr-2" type="radio" name="membership" id="free" value="free" data-target="registrations--membership-choice.choice" data-action="click->registrations--membership-choice#handleChange">
-              <span><%= t('views.registrations.membership.free').gsub('<span', '<span class="font-bold"').html_safe %></span>
-            </label>
-          <% end %>
+          <label class="flex flex-row items-center p-3 bg-gray-pastel rounded cursor-pointer"
+            data-active-class="flex flex-row items-center p-3 bg-green-tint-1 rounded cursor-pointer"
+            data-inactive-class="flex flex-row items-center p-3 bg-gray-pastel rounded cursor-pointer"
+            for="free"
+            >
+            <input class="flex-shrink-0 mr-2" type="radio" name="membership" id="free" value="free" data-target="registrations--membership-choice.choice" data-action="click->registrations--membership-choice#handleChange">
+            <span><%= t('views.registrations.membership.free').gsub('<span', '<span class="font-bold"').html_safe %></span>
+          </label>
           <label class="flex flex-row items-center p-3 bg-green-tint-1 rounded cursor-pointer"
             data-active-class="flex flex-row items-center p-3 bg-green-tint-1 rounded cursor-pointer"
             data-inactive-class="flex flex-row items-center p-3 bg-gray-pastel rounded cursor-pointer"

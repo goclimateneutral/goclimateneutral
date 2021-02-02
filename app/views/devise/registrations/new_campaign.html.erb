@@ -82,10 +82,10 @@
     <p class="max-w-2xl mx-auto"><%= t 'views.registrations.know_your_footprint.sign_up.text' %></p>
     <div class="flex flex-col t:flex-row t:justify-center items-center space-y-6 t:space-y-0 t:space-x-6" data-controller="registrations--membership-choice-campaign">
 
-      <div class="callout max-w-md space-y-6 <% if experiment_active?(:remove_signup_without_subscription) %> hidden<% end %>"
+      <div class="callout max-w-md space-y-6"
         data-target="registrations--membership-choice-campaign.free"
         data-inactive-class="callout max-w-md space-y-6 hidden"
-        data-active-class="callout max-w-md space-y-6 <% if experiment_active?(:remove_signup_without_subscription) %> hidden<% end %>">
+        data-active-class="callout max-w-md space-y-6">
         <div class="space-y-3">
           <h3 class="heading text-center"><%= t 'views.registrations.know_your_footprint.sign_up.free_account.heading' %></h3>
           <p><%= t 'views.registrations.know_your_footprint.sign_up.free_account.text' %></p>
