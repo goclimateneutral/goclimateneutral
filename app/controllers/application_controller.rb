@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'react_component_helper'
+
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
@@ -7,6 +9,7 @@ class ApplicationController < ActionController::Base
   around_action :with_locale
   before_action :set_active_experiments
   helper_method :current_region, :canonical_url, :experiment_active?, :visitor_country
+  helper ReactComponentHelper
 
   def experiment_active?(experiment)
     @active_experiments.include?(experiment)
