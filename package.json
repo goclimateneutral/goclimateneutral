@@ -46,6 +46,8 @@
     "postcss-loader": "^4.1.0",
     "postcss-nesting": "^7.0.1",
     "proj4": "^2.6.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "stimulus": "^1.1.1",
     "tailwindcss": "^2.0.1",
     "terser-webpack-plugin": "^1.4.5",

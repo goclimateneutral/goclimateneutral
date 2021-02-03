@@ -9,6 +9,9 @@
   <%= render "shared/header" %>
 </nav>
 
+<div data-controller="react-component" data-react-component="Test" data-react-props="<%= JSON.generate({blabla: 'hej'}) %>">Loading</div>
+<%#= react_component 'Test', { blabla: 'hej' } %>
+
 <section class="z-0 bg-blue-tint-1">
   <div class="relative z-20 max-w-3xl mx-auto px-4 t:px-16 d:px-0 pt-16 t:pt-24 d:pt-32 text-center">
     <h1 class="heading-xl mb-6 t:mb-12">
