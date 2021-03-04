@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Business calculator</h1>
+
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @calculator.name %></dd>
+  
+  <dt>Updated:</dt>
+  <dd><%= time_tag(@calculator.updated_at) %></dd>
+</dl>
+
+<hr>
+
+<%= link_to 'Edit', edit_admin_business_calculator_path(@calculator), class: 'btn btn-default' %>
+<%= link_to 'Back', admin_business_calculators_path, class: 'btn btn-link' %>

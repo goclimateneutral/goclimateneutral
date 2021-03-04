@@ -1,0 +1,20 @@
+<%= form_with(model: [:admin, calculator], local: true) do |form| %>
+  <% if calculator.errors.any? %>
+    <div>
+      <h2><%= pluralize(calculator.errors.count, "error") %> prohibited this calculator from being saved:</h2>
+
+      <ul>
+        <% calculator.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: 'form-control' %>
+  </div>
+
+  <%= form.submit class: 'btn btn-primary' %>
+<% end %>

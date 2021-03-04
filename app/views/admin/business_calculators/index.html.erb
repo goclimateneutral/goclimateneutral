@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Business calculators</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Updated</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @calculators.each do |calculator| %>
+      <tr>
+        <td><%= calculator.name %></td>
+        <td><%= time_tag(calculator.updated_at, format: '%F %R') %></td>
+        <td class="admin-actions">
+          <%= link_to 'Show', [:admin, calculator] %> &nbsp;
+          <%= link_to 'Edit', edit_admin_business_calculator_path(calculator) %> &nbsp;
+          <%= link_to 'Destroy', [:admin, calculator], method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<hr>
+
+<%= link_to 'New Business Calculator', new_admin_business_calculator_path, class: 'btn btn-default' %>
