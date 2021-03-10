@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Climate Report</h1>
+
+<dl class="dl-horizontal">
+  <dt>Title:</dt>
+  <dd><%= @report.title %></dd>
+  
+  <dt>Updated:</dt>
+  <dd><%= time_tag(@report.updated_at) %></dd>
+</dl>
+
+<hr>
+
+<%= link_to 'Edit', edit_admin_climate_report_path(@report), class: 'btn btn-default' %>
+<%= link_to 'Back', admin_climate_reports_path, class: 'btn btn-link' %>

@@ -1,0 +1,40 @@
+<%= form_with(model: [:admin, climate_report], local: true) do |form| %>
+  <% if climate_report.errors.any? %>
+    <div>
+      <h2><%= pluralize(climate_report.errors.count, "error") %> prohibited this report from being saved:</h2>
+
+      <ul>
+        <% climate_report.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :organization %>
+    <%= form.select :organization, options_for_select(@organizations, @report.organization&.id), {}, class: 'form-control' %>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="form-group">
+        <%= form.label :start_date %>
+        <%= form.date_field :start_date, class: 'form-control', value: @report.reporting_period&.first %>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-group">
+        <%= form.label :end_date %>
+        <%= form.date_field :end_date, class: 'form-control', value: @report.reporting_period&.last %>
+      </div>
+    </div>
+  </div>
+
+  <%= form.submit class: 'btn btn-primary' %>
+<% end %>

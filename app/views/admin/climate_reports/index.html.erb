@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Climate reports</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Organization</th>
+      <th>Reporting Period</th>
+      <th>Updated</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reports.each do |report| %>
+      <tr>
+        <td><%= report.title %></td>
+        <td><%= report.organization.name %></td>
+        <td><%= report.reporting_period %></td>
+        <td><%= time_tag(report.updated_at, format: '%F %R') %></td>
+        <td class="admin-actions">
+          <%= link_to 'Show', [:admin, report] %> &nbsp;
+          <%= link_to 'Edit', edit_admin_climate_report_path(report) %> &nbsp;
+          <%= link_to 'Destroy', [:admin, report], method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<hr>
+
+<%= link_to 'New report', new_admin_climate_report_path, class: 'btn btn-default' %>

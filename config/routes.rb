@@ -187,6 +187,8 @@ Rails.application.routes.draw do
     resources :api_keys
     resources :referral_codes
     resources :business_calculators
+    resources :organizations
+    resources :climate_reports
     resources :invoices
     resources :lifestyle_calculators, only: [:index, :show, :new, :create] do
       member do

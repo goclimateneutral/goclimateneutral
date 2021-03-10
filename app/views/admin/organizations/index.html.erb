@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Organizations</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Updated</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @organizations.each do |organization| %>
+      <tr>
+        <td><%= organization.name %></td>
+        <td><%= time_tag(organization.updated_at, format: '%F %R') %></td>
+        <td class="admin-actions">
+          <%= link_to 'Show', [:admin, organization] %> &nbsp;
+          <%= link_to 'Edit', edit_admin_organization_path(organization) %> &nbsp;
+          <%= link_to 'Destroy', [:admin, organization], method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<hr>
+
+<%= link_to 'New Organization', new_admin_organization_path, class: 'btn btn-default' %>

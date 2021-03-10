@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Organization</h1>
+
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @organization.name %></dd>
+  
+  <dt>Updated:</dt>
+  <dd><%= time_tag(@organization.updated_at) %></dd>
+</dl>
+
+<hr>
+
+<%= link_to 'Edit', edit_admin_organization_path(@organization), class: 'btn btn-default' %>
+<%= link_to 'Back', admin_organizations_path, class: 'btn btn-link' %>

@@ -51,6 +51,12 @@
             <li<% if controller_name == 'business_calculators' %> class="active"<% end %>>
               <%= link_to 'Business Calculators', admin_business_calculators_path %></a>
             </li>
+            <li<% if controller_name == 'organizations' %> class="active"<% end %>>
+              <%= link_to 'Organizations', admin_organizations_path %></a>
+            </li>
+            <li<% if controller_name == 'climate_reports' %> class="active"<% end %>>
+              <%= link_to 'Climate Reports', admin_climate_reports_path %></a>
+            </li>
           </ul>
         </div>
       </div>
