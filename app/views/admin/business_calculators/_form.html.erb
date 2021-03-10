@@ -16,5 +16,42 @@
     <%= form.text_field :name, class: 'form-control' %>
   </div>
 
-  <%= form.submit class: 'btn btn-primary' %>
+  <h2>Form design</h2>
+  <div data-controller="add-business-calculator-field">
+
+    <%= form.fields_for :categories do |category_form| %>
+      <%= category_form.hidden_field :id %>
+
+      <%= category_form.text_field :name, class: 'form-control input-lg', style: 'margin: 1em 0 0.5em; font-weight: 600;' %>
+
+      <%= category_form.fields_for :fields do |field_form| %>
+        <%= field_form.hidden_field :id %>
+        <p>
+          <%= field_form.text_field :label, class: 'form-control' %>
+        </p>
+      <% end %>
+      <%= render "add_field", category_form: category_form %>
+    <% end %>
+
+    <%= form.fields_for :categories, BusinessCalculators::CalculatorCategory.new, html: { 'data-target': 'add-business-calculator-field.template' } do |category_form| %>
+      <div class="hidden" data-target="add-business-calculator-field.template">
+        <%= category_form.text_field :name, class: 'form-control input-lg', style: 'margin: 1em 0; font-weight: 600;', placeholder: 'Category name ...'  %>
+
+        <!-- It's currently not possible to create a category and its fields at the same time -->
+        <!-- <%= render "add_field", category_form: category_form %> -->
+      </div>
+    <% end %>
+
+    <div data-target="add-business-calculator-field.destination" style="margin-top: 2em"></div>
+
+    <div style="margin: 1.5em 0">
+      <button type="button" class="btn btn-default" data-action="add-business-calculator-field#cloneToDestinationWithFirstNumberIncremented">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add category
+      </button>
+    </div>
+  </div>
+
+  <p>
+    <%= form.submit class: 'btn btn-primary' %>
+  </p>
 <% end %>

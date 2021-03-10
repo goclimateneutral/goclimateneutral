@@ -1,0 +1,13 @@
+<div data-controller="add-business-calculator-field">
+  <%= local_assigns[:category_form].fields_for :fields, BusinessCalculators::CalculatorField.new, html: { 'data-target': 'add-business-calculator-field.template' } do |field_form| %>
+    <p class="hidden" data-target="add-business-calculator-field.template">
+      <%= field_form.text_field :label, class: 'form-control', placeholder: 'Field name'  %>
+    </p>
+  <% end %>
+
+  <div data-target="add-business-calculator-field.destination"></div>
+
+  <button type="button" class="btn btn-default" data-action="add-business-calculator-field#cloneToDestinationWithSecondNumberIncremented">
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add field
+  </button>
+</div>  

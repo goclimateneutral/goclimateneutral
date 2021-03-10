@@ -49,7 +49,9 @@ module Admin
     end
 
     def calculator_params
-      params.require(:business_calculator).permit(:name)
+      params.require(:business_calculator).permit(
+        :name, { categories_attributes: [:id, :name, { fields_attributes: [:id, :label] }] }
+      )
     end
   end
 end
