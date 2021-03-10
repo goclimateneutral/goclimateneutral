@@ -5,6 +5,8 @@ class CreateClimateReportsReports < ActiveRecord::Migration[6.0]
 
       t.text :title
       t.daterange :reporting_period
+
+      t.references :organization, null: false, foreign_key: true
     end
   end
 end

@@ -145,6 +145,8 @@ ActiveRecord::Schema.define(version: 2021_03_03_092729) do
     t.datetime "updated_at", precision: 6, null: false
     t.text "title"
     t.daterange "reporting_period"
+    t.bigint "organization_id", null: false
+    t.index ["organization_id"], name: "index_climate_reports_reports_on_organization_id"
   end
 
   create_table "flight_offsets", force: :cascade do |t|
@@ -252,6 +254,12 @@ ActiveRecord::Schema.define(version: 2021_03_03_092729) do
     t.bigint "logged_in_user_id"
   end
 
+  create_table "organizations", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.text "name"
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string "name"
     t.string "cdm_url"
@@ -343,6 +351,7 @@ ActiveRecord::Schema.define(version: 2021_03_03_092729) do
   add_foreign_key "business_calculators_calculator_fields", "business_calculators_calculator_categories", column: "category_id"
   add_foreign_key "climate_reports_report_areas", "business_calculators_calculators", column: "calculator_id"
   add_foreign_key "climate_reports_report_areas", "climate_reports_reports", column: "report_id"
+  add_foreign_key "climate_reports_reports", "organizations"
   add_foreign_key "invoices", "projects"
   add_foreign_key "newsletter_subscribers", "users", column: "logged_in_user_id"
 end
