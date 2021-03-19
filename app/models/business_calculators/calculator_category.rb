@@ -7,10 +7,21 @@ module BusinessCalculators
 
     validates_presence_of :name
 
-    accepts_nested_attributes_for :fields, reject_if: proc { |attributes| attributes['label'].blank? }
+    accepts_nested_attributes_for :fields, allow_destroy: true, reject_if:
+      proc { |attributes|
+        attributes['label'].blank?
+      }
+
+    before_destroy :destroy_fields
 
     def self.model_name
       @model_name ||= ActiveModel::Name.new(self, nil, 'calculator_category')
+    end
+
+    private
+
+    def destroy_fields
+      fields.each(&:destroy)
     end
   end
 end

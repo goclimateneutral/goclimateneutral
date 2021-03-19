@@ -22,22 +22,38 @@
     <%= form.fields_for :categories do |category_fields| %>
       <%= category_fields.hidden_field :id %>
 
-      <%= category_fields.text_field :name, class: 'form-control input-lg', style: 'margin: 1em 0 0.5em; font-weight: 600;' %>
-
-      <%= category_fields.fields_for :fields do |field_fields| %>
-        <%= field_fields.hidden_field :id %>
-        <div class="row" style="padding-top: 0.5em">
-          <div class="col-sm-8">
-            <%= field_fields.label :field_label %>
-            <%= field_fields.text_field :label, class: 'form-control' %>
+      <div style="padding: 1em; margin-bottom: 2em; border: 1px solid gray; border-radius: 4px;">
+        <div class="row" style="margin-bottom: 0.5em;">
+          <div class="col-sm-11">
+            <%= category_fields.label :category_name %>
+            <%= category_fields.text_field :name, class: 'form-control input-lg', style: 'font-weight: 600;' %>
           </div>
-          <div class="col-sm-4">
-            <%= field_fields.label :allowed_units %>
-            <%= field_fields.select :units, options_from_collection_for_select(@units, :key, :name,field_fields.object.units&.keys), {}, class: 'form-control', multiple: true %>
-          </div>
+          <div class="col-sm-1">
+              <%= category_fields.label :delete %>
+              <%= category_fields.check_box :_destroy %>
+            </div>
         </div>
-      <% end %>
-      <%= render "add_field", category_fields: category_fields %>
+
+        <%= category_fields.fields_for :fields do |field_fields| %>
+          <%= field_fields.hidden_field :id %>
+          <div class="row" style="padding-top: 0.5em">
+            <div class="col-sm-8">
+              <%= field_fields.label :question %>
+              <%= field_fields.text_field :label, class: 'form-control' %>
+            </div>
+            <div class="col-sm-3">
+              <%= field_fields.label :allowed_units %>
+              <%= field_fields.select :units, options_from_collection_for_select(@units, :key, :name,field_fields.object.units&.keys), {}, class: 'form-control', multiple: true %>
+            </div>
+            <div class="col-sm-1">
+              <%= field_fields.label :delete %>
+              <%= field_fields.check_box :_destroy %>
+            </div>
+
+          </div>
+        <% end %>
+        <%= render "add_field", category_fields: category_fields %>
+      </div>
     <% end %>
 
     <%= form.fields_for :categories, BusinessCalculators::CalculatorCategory.new do |category_fields| %>
