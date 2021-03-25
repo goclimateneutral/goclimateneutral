@@ -1,0 +1,32 @@
+<h1>Preview of data collection for <%= Organization.find(@report.organization_id).name %></h1>
+
+<% @report.areas.each do |area| %>
+  <h3><%= area.title %></h3>
+  <% BusinessCalculators::Calculator.find(area.calculator_id).categories.each do |category| %>
+    <h4><%= category.name %></h4>
+    <% category.fields.each do |field| %>
+      <div class="row" data-controller="input-type">
+        <div class="col-sm-3">
+          <%= label_tag field.label %>
+          <input type="text" data-target="input-type.input" class="form-control">
+        </div>
+        <div class="col-sm-3">
+          <%= label_tag 'Unit' %>
+          <select class="form-control" size="<%= field.units&.length + 1 %>" data-target="input-type.type" data-action="input-type#update">
+            <% field.units&.each_key do |key| %>
+              <% unit = BusinessCalculators::Unit.find_by(key: key) %>
+              <!-- maybe value should be unit.id instead? -->
+              <option value="<%= key %>" data-input-type="<%= unit.input_type %>"><%= unit.name %></option>
+            <% end %>
+            <option value="freeform" data-input-type="text">Free form</option>
+          </select>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+<div style="margin-top: 3em">
+  <%= link_to 'Edit', edit_admin_climate_report_path(@report), class: 'btn btn-default' %>
+  <%= link_to 'Back', admin_climate_reports_path, class: 'btn btn-link' %>
+</div>

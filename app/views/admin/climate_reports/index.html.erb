@@ -22,6 +22,7 @@
         <td><%= time_tag(report.updated_at, format: '%F %R') %></td>
         <td class="admin-actions">
           <%= link_to 'Show', [:admin, report] %> &nbsp;
+          <%= link_to 'Preview form', preview_admin_climate_report_path(report) %> &nbsp;
           <%= link_to 'Edit', edit_admin_climate_report_path(report) %> &nbsp;
           <%= link_to 'Destroy', [:admin, report], method: :delete, data: { confirm: 'Are you sure?' } %>
         </td>

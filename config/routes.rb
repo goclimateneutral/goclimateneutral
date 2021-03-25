@@ -65,7 +65,7 @@ Rails.application.routes.draw do
         resources :lifestyle_footprints, path: 'results', only: [:index, :show, :destroy]
       end
     end
-    
+
     resources :referral_codes, path: 'referral-codes', only: [] do
       collection do
         post :lookup
@@ -189,7 +189,11 @@ Rails.application.routes.draw do
     resources :business_calculators
     resources :organizations
     resources :units
-    resources :climate_reports
+    resources :climate_reports do
+      member do
+        get :preview
+      end
+    end
     resources :invoices
     resources :lifestyle_calculators, only: [:index, :show, :new, :create] do
       member do

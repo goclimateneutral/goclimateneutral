@@ -2,7 +2,7 @@
 
 module Admin
   class ClimateReportsController < AdminController
-    before_action :set_report, only: [:show, :edit, :update, :destroy]
+    before_action :set_report, only: [:show, :edit, :update, :destroy, :preview]
     before_action :set_organizations, only: [:new, :create, :update, :edit]
     before_action :set_calculators, only: [:new, :create, :update, :edit]
 
@@ -42,6 +42,9 @@ module Admin
       @report.destroy
 
       redirect_to admin_climate_reports_url, notice: 'Report was successfully destroyed.'
+    end
+
+    def preview
     end
 
     private
