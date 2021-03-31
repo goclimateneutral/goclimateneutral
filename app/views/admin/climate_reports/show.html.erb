@@ -17,11 +17,27 @@
 
   <dt>Report areas:</dt>
   <% @report.areas.each do |area| %>
-    <dd><%= area.title %> (connected to calculator <%= BusinessCalculators::Calculator.find(area.calculator_id).name %>)</dd>
+    <dd style="padding-bottom: 1em">
+      <strong><%= area.title %></strong> &mdash; Calculator <%= BusinessCalculators::Calculator.find(area.calculator_id).name %>
+      <div style="padding-left: 1em">
+        <% data_requests = DataRequest.where(report_area_id: area.id) %>
+        <% if data_requests.count > 0 %>
+          Data requests
+          <ul style="margin-bottom: 0">
+            <% data_requests.each do |request| %>
+              <% reporter = DataReporter.find(request.recipient_id) %>
+              <li><%= link_to reporter.email, [:admin, reporter] %></li>
+            <% end %>
+          </ul>
+        <% end %>
+        <%= link_to '+ New data request', new_admin_data_request_path(area: area), class: 'btn btn-default', style: 'margin-top: 0.5em' %>
+      </div>
+    </dd>
   <% end %>
 </dl>
 
 <hr>
 
 <%= link_to 'Edit', edit_admin_climate_report_path(@report), class: 'btn btn-default' %>
-<%= link_to 'Back', admin_climate_reports_path, class: 'btn btn-link' %>
+<%= link_to 'Preview form', preview_admin_climate_report_path(@report), class: 'btn btn-default' %>
+<%= link_to 'All reports', admin_climate_reports_path, class: 'btn btn-link' %>

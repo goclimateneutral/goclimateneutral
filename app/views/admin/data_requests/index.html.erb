@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Data Requests</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Recipient</th>
+      <th>Report</th>
+      <th>Created at</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @data_requests.each do |data_request| %>
+      <% report = ClimateReports::ReportArea.find(data_request.report_area_id).report %>
+      <tr>
+        <td><%= data_request.id %></td>
+        <td>
+          <% reporter = DataReporter.find(data_request.recipient_id) %>
+          <%= link_to reporter.email, [:admin, reporter] %>
+        </td>
+        <td><%= link_to report.title, [:admin, report] %></td>
+        <td><%= time_tag(data_request.created_at, format: '%F %R') %></td>
+        <td class="admin-actions">
+          <%= link_to 'Show', [:admin, data_request] %> &nbsp;
+          <%= link_to 'Edit', edit_admin_data_request_path(data_request) %> &nbsp;
+          <%= link_to 'Destroy', [:admin, data_request], method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

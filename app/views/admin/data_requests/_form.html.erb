@@ -1,0 +1,23 @@
+<%= form_with(model: [:admin, data_request], local: true) do |form| %>
+  <% if data_request.errors.any? %>
+    <div>
+      <h2><%= pluralize(data_request.errors.count, "error") %> prohibited this Data request from being saved:</h2>
+
+      <ul>
+        <% data_request.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form.hidden_field :area, value: params[:area] %>
+  
+  <div class="form-group">
+    <%= form.label :recipient_email %>
+    <%= form.text_field :email, value: @data_reporter&.email, class: 'form-control' %>
+    <span class="help-block"><%= local_assigns[:help_text] %></span>
+  </div>
+
+  <%= form.submit class: 'btn btn-primary' %>
+<% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_12_135224) do
+ActiveRecord::Schema.define(version: 2021_03_25_133538) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -155,6 +155,26 @@ ActiveRecord::Schema.define(version: 2021_03_12_135224) do
     t.daterange "reporting_period"
     t.bigint "organization_id", null: false
     t.index ["organization_id"], name: "index_climate_reports_reports_on_organization_id"
+  end
+
+  create_table "data_reporters", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.text "key"
+    t.text "email"
+    t.bigint "user_id"
+    t.bigint "report_id", null: false
+    t.index ["report_id"], name: "index_data_reporters_on_report_id"
+    t.index ["user_id"], name: "index_data_reporters_on_user_id"
+  end
+
+  create_table "data_requests", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "report_area_id", null: false
+    t.bigint "recipient_id", null: false
+    t.index ["recipient_id"], name: "index_data_requests_on_recipient_id"
+    t.index ["report_area_id"], name: "index_data_requests_on_report_area_id"
   end
 
   create_table "flight_offsets", force: :cascade do |t|
@@ -360,6 +380,10 @@ ActiveRecord::Schema.define(version: 2021_03_12_135224) do
   add_foreign_key "climate_reports_report_areas", "business_calculators_calculators", column: "calculator_id"
   add_foreign_key "climate_reports_report_areas", "climate_reports_reports", column: "report_id"
   add_foreign_key "climate_reports_reports", "organizations"
+  add_foreign_key "data_reporters", "climate_reports_reports", column: "report_id"
+  add_foreign_key "data_reporters", "users"
+  add_foreign_key "data_requests", "climate_reports_report_areas", column: "report_area_id"
+  add_foreign_key "data_requests", "data_reporters", column: "recipient_id"
   add_foreign_key "invoices", "projects"
   add_foreign_key "newsletter_subscribers", "users", column: "logged_in_user_id"
 end

@@ -1,0 +1,8 @@
+<h1>New Data Reporter for <%= @report_area&.title %></h1>
+<h3>Report <%= @report.title %></h3>
+
+<%= render 'form', reporter: @reporter %>
+
+<hr>
+
+<%= link_to 'Back', admin_reporters_path %>

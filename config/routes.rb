@@ -194,6 +194,8 @@ Rails.application.routes.draw do
         get :preview
       end
     end
+    resources :data_requests
+    resources :data_reporters
     resources :invoices
     resources :lifestyle_calculators, only: [:index, :show, :new, :create] do
       member do

@@ -1,0 +1,9 @@
+<h1>New Data request for <%= @report_area&.title %></h1>
+<h3>Report: <%= @report.title %></h3>
+
+<%= render 'form', data_request: @data_request, help_text: 'You may input multiple email addresses, separated with a comma sign (,).' %>
+
+<hr>
+
+<%= link_to 'All requests', admin_data_requests_path %>
+<%= link_to 'Back to report', [:admin, @report], class: 'btn btn-default' %>

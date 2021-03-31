@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Data Reporters</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Report</th>
+      <th>Created at</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @data_reporters.each do |data_reporter| %>
+      <% report = ClimateReports::Report.find(data_reporter.report_id) %>
+      <tr>
+        <td><%= data_reporter.email %></td>
+        <td><%= link_to report.title, [:admin, report]%></td>
+        <td><%= time_tag(data_reporter.created_at, format: '%F %R') %></td>
+        <td class="admin-actions">
+          <%= link_to 'Show', [:admin, data_reporter] %> &nbsp;
+          <%= link_to 'Edit', edit_admin_data_reporter_path(data_reporter) %> &nbsp;
+          <%= link_to 'Destroy', [:admin, data_reporter], method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
