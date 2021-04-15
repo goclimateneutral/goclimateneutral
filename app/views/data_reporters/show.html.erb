@@ -1,0 +1,26 @@
+<%= render 'shared/header' %>
+
+<section class="section-padding space-y-6">
+
+  <h3 class="heading-lg">Your data requests</h3>
+
+  <div class="space-y-6 max-w-2xl">
+      <div class="flex flex-row font-bold">
+        <div class="w-1/2">Report area</div>
+        <div class="w-1/2 text-right"><%= t 'views.lifestyle_footprints.index.list.date' %></div>
+      </div>
+      <% @requests&.each do |request| %>
+        <div class="w-full flex flex-row">
+          <div class="w-1/2">
+            <%= link_to ClimateReports::ReportArea.find(request.report_area_id).title, new_reported_data_path(key: request.key), class: 'link' %>
+          </div>
+          <div class="w-1/2 text-right">
+            <%= request.created_at.to_date %>
+          </div>
+        </div>
+      <% end %>
+  </div>
+</section>
+
+<%= render 'shared/bottom_landscape' %>
+<%= render 'shared/footer', skip_prefooter: true %>

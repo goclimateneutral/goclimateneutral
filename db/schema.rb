@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_25_133538) do
+ActiveRecord::Schema.define(version: 2021_04_07_082535) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -173,6 +173,8 @@ ActiveRecord::Schema.define(version: 2021_03_25_133538) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "report_area_id", null: false
     t.bigint "recipient_id", null: false
+    t.text "key"
+    t.boolean "survey", default: false
     t.index ["recipient_id"], name: "index_data_requests_on_recipient_id"
     t.index ["report_area_id"], name: "index_data_requests_on_report_area_id"
   end
@@ -320,6 +322,17 @@ ActiveRecord::Schema.define(version: 2021_03_25_133538) do
     t.index "lower(code)", name: "index_referral_codes_on_lower_code"
   end
 
+  create_table "reported_data", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.text "value"
+    t.text "unit"
+    t.bigint "data_request_id", null: false
+    t.bigint "calculator_field_id", null: false
+    t.index ["calculator_field_id"], name: "index_reported_data_on_calculator_field_id"
+    t.index ["data_request_id"], name: "index_reported_data_on_data_request_id"
+  end
+
   create_table "stripe_payouts", force: :cascade do |t|
     t.string "stripe_payout_id"
     t.integer "amount"
@@ -386,4 +399,6 @@ ActiveRecord::Schema.define(version: 2021_03_25_133538) do
   add_foreign_key "data_requests", "data_reporters", column: "recipient_id"
   add_foreign_key "invoices", "projects"
   add_foreign_key "newsletter_subscribers", "users", column: "logged_in_user_id"
+  add_foreign_key "reported_data", "business_calculators_calculator_fields", column: "calculator_field_id"
+  add_foreign_key "reported_data", "data_requests"
 end

@@ -72,6 +72,13 @@ Rails.application.routes.draw do
       end
     end
 
+    resources :data_reporters, path: 'data-reporters', only: [:show]
+    resources :reported_datas, path: 'report-data', only: [:new, :create], path_names: { new: '' } do
+      member do
+        get 'thank-you'
+      end
+    end
+
     resources :projects, path: 'climate-projects', only: [:index]
 
     resource :know_your_footprint, controller: 'know_your_footprint', path: 'know-your-carbon-footprint', only: [:show]
@@ -196,6 +203,7 @@ Rails.application.routes.draw do
     end
     resources :data_requests
     resources :data_reporters
+    resources :reported_datas, only: [:index, :show, :destroy]
     resources :invoices
     resources :lifestyle_calculators, only: [:index, :show, :new, :create] do
       member do

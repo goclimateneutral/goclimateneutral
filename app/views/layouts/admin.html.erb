@@ -63,10 +63,13 @@
                   <%= link_to 'Climate Reports', admin_climate_reports_path %></a>
                 </li>
                 <li<% if controller_name == 'data_requests' %> class="active"<% end %>>
-                  <%= link_to 'Data requests', admin_data_requests_path %></a>
+                  <%= link_to 'Data Requests', admin_data_requests_path %></a>
                 </li>
                 <li<% if controller_name == 'data_reporters' %> class="active"<% end %>>
-                  <%= link_to 'Data reporters', admin_data_reporters_path %></a>
+                  <%= link_to 'Data Reporters', admin_data_reporters_path %></a>
+                </li>
+                <li<% if controller_name == 'reported_datas' %> class="active"<% end %>>
+                  <%= link_to 'Reported Data', admin_reported_datas_path %></a>
                 </li>
               </ul>
             </div>

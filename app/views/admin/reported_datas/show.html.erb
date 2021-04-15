@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Reported data</h1>
+
+<dl class="dl-horizontal">
+  <dt>Id:</dt>
+  <dd><%= @reported_data.id %></dd>
+  <dt>Answer:</dt>
+  <dd><%= @reported_data.value %></dd>
+  <dt>Unit:</dt>
+  <dd><%= @reported_data.unit %></dd>
+  <dt>Question:</dt>
+  <dd><%= @calculator_field.label %></dd>
+  <dt>Report:</dt>
+  <dd><%= link_to @report.title, [:admin, @report] %></dd>
+  <dt>Data reporter:</dt>
+  <dd><%= link_to @data_reporter.email, [:admin, @data_reporter] %></dd>
+  
+  <dt>Created:</dt>
+  <dd><%= time_tag(@reported_data.created_at) %></dd>
+</dl>
+
+<hr>
+
+<%= link_to 'Back', admin_reported_datas_path, class: 'btn btn-link' %>

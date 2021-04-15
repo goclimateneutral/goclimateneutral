@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Reported data</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Answer</th>
+      <th>Unit</th>
+      <th>Question</th>
+      <th>Report</th>
+      <th>Created at</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reported_datas&.each do |data| %>
+      <tr>
+        <td><%= data[:reported_data].id %></td>
+        <td><%= data[:reported_data].value %></td>
+        <td><%= data[:reported_data].unit %></td>
+        <td><%= data[:reported_data].calculator_field.label %></td>
+        <td><%= link_to data[:report].title, [:admin, data[:report]] %></td>
+        <td><%= time_tag(data[:reported_data].created_at, format: '%F %R') %></td>
+        <td class="admin-actions">
+          <%= link_to 'Show', admin_reported_data_path(data[:reported_data]) %> &nbsp;
+          <%= link_to 'Destroy', admin_reported_data_path(data[:reported_data]), method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

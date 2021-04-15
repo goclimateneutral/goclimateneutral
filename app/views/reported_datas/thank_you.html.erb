@@ -1,0 +1,10 @@
+<%= render 'shared/header' %>
+
+<section class="section-padding space-y-6">
+  <h1 class="heading-lg">Thank you!</h1>
+  <p>A big thank you for completing the collection of data for <%= @report_area.title %>!</p>
+  <p><%= link_to 'Go back to your data requests', data_reporter_path(@data_reporter.key), class: 'link' %></p>
+</section>
+
+<%= render 'shared/bottom_landscape' %>
+<%= render 'shared/footer', skip_prefooter: true %>
