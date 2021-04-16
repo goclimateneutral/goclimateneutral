@@ -2,11 +2,14 @@
 
 module Admin
   class BusinessCalculatorsController < AdminController
-    before_action :set_calculator, only: [:show, :edit, :update, :destroy]
+    before_action :set_calculator, only: [:show, :edit, :update, :destroy, :publish, :archive]
     before_action :set_units, only: [:new, :edit, :update]
+    before_action :verify_editable, only: [:edit, :update]
 
     def index
-      @calculators = BusinessCalculators::Calculator.all.order(name: :asc)
+      not_archived = BusinessCalculators::Calculator.where("status != 'archived'").order(name: :asc)
+      archived = BusinessCalculators::Calculator.where(status: 'archived').order(name: :asc)
+      @calculators = not_archived + archived
     end
 
     def show
@@ -37,10 +40,16 @@ module Admin
       end
     end
 
-    def destroy
-      @calculator.destroy
+    def publish
+      @calculator.publish
 
-      redirect_to admin_business_calculators_url, notice: 'Calculator was successfully destroyed.'
+      redirect_to admin_business_calculators_url, notice: 'Calculator was successfully published.'
+    end
+
+    def archive
+      @calculator.archive
+
+      redirect_to admin_business_calculators_url, notice: 'Calculator was successfully archived.'
     end
 
     private
@@ -51,6 +60,10 @@ module Admin
 
     def set_units
       @units = BusinessCalculators::Unit.all.order(name: :asc)
+    end
+
+    def verify_editable
+      redirect_to admin_business_calculators_url, notice: 'Publihsed/archived calculator can\'t be edited.' unless @calculator.draft? # rubocop:disable Metrics/LineLength
     end
 
     def calculator_params

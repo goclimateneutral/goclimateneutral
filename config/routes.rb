@@ -193,7 +193,12 @@ Rails.application.routes.draw do
     root to: 'dashboard#index'
     resources :api_keys
     resources :referral_codes
-    resources :business_calculators
+    resources :business_calculators, only: [:index, :show, :new, :edit, :create, :update] do
+      member do
+        post :publish
+        post :archive
+      end
+    end
     resources :organizations
     resources :units
     resources :climate_reports do

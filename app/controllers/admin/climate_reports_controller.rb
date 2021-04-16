@@ -60,7 +60,7 @@ module Admin
     end
 
     def set_calculators
-      @calculators = BusinessCalculators::Calculator.all.order(name: :asc)
+      @calculators = BusinessCalculators::Calculator.where(status: 'published').order(name: :asc)
     end
 
     def report_params
