@@ -1,0 +1,5 @@
+sv:
+  mailers:
+    data_requests:
+      subject: Du har blivit ombedd att dela med dig av data
+      heading: Hej!

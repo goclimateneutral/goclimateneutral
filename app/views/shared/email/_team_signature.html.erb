@@ -5,12 +5,16 @@
   <tbody>
     <tr>
       <td style="text-align:inherit; line-height:24px; padding:0px 8px 0px 24px;" height="100%" width="55" valign="top" bgcolor="" role="module-content">
-        <img class="max-width" width="55" src="http://cdn.mcauto-images-production.sendgrid.net/c3d684cd10aa7c50/dab9f249-d1ca-491c-be80-ec9146a8e60f/110x110.png" alt="" border="0" style="display:block;width:55px;">
+        <% image_urls = {
+            Tove: "http://cdn.mcauto-images-production.sendgrid.net/c3d684cd10aa7c50/dab9f249-d1ca-491c-be80-ec9146a8e60f/110x110.png",
+            Alexandra: "http://cdn.mcauto-images-production.sendgrid.net/c3d684cd10aa7c50/12905146-4118-4424-b4c3-457afd1b2242/110x110.png"
+          }
+        %>
+        <img class="max-width" width="55" src="<%= image_urls[(local_assigns[:name] || "Tove").to_sym] %>" alt="" border="0" style="display:block;width:55px;">
       </td>
       <td style="text-align:inherit; line-height:24px; padding:0px 24px 0px 0px;" height="100%" valign="middle" bgcolor="" role="module-content">
-        <p style=""><%=t 'mailers.welcome.the_gcn_team' %></p>
+        <p style=""><%=t 'mailers.welcome.the_gcn_team', name: local_assigns[:name] || "Tove" %></p>
       </td>
     </tr>
   </tbody>
 </table>
-

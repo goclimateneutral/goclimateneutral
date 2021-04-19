@@ -52,6 +52,8 @@ module Admin
           ], notice: "There was and error and the data request for email '#{email}' was not saved!"
           break
         end
+
+        send_email(data_reporter, data_request)
       end
 
       redirect_to [
@@ -85,6 +87,13 @@ module Admin
 
     def data_request_params
       params.require(:data_request).permit(:email, :area)
+    end
+
+    def send_email(data_reporter, data_request)
+      DataRequestMailer.with(
+        data_reporter: data_reporter,
+        data_request: data_request
+      ).data_request_email.deliver_now
     end
   end
 end

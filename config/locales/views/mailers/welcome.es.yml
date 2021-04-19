@@ -1,7 +1,7 @@
 es:
   mailers:
     welcome:
-      from: Tove de GoClimate
+      from: "%{name} de GoClimate"
       subject: Bienvenido a GoClimate
       welcome_to_gcn: '¡Hola!'
       big_thanks: '¡Un gran agradecimiento por unirte a nosotros y contribuir a un mundo más sostenible!'
@@ -9,4 +9,4 @@ es:
       if_you_have_any_questions: Si tienes alguna pregunta o solo quieres decir hola, no dudes en enviarme una línea a tove@goclimate.com!
       thank_you: '¡Gracias por contribuir a un futuro más sostenible!'
       best_regards: Un cordial saludo,
-      the_gcn_team: Tove de GoClimate
+      the_gcn_team: "%{name} de GoClimate"

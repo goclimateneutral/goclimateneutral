@@ -5,8 +5,8 @@ class WelcomeMailer < ApplicationMailer
 
   def welcome_email
     mail(
-      from: "#{I18n.t('mailers.welcome.from')} <tove@goclimate.com>",
-      reply_to: "#{I18n.t('mailers.welcome.from')} <tove@goclimate.com>",
+      from: "#{I18n.t('mailers.welcome.from', name: 'Tove')} <tove@goclimate.com>",
+      reply_to: "#{I18n.t('mailers.welcome.from', name: 'Tove')} <tove@goclimate.com>",
       to: params[:email],
       subject: I18n.t('mailers.welcome.subject')
     )

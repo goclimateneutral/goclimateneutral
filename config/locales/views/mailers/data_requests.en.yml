@@ -1,0 +1,5 @@
+en:
+  mailers:
+    data_requests:
+      subject: You have a new data request
+      heading: Hello!
