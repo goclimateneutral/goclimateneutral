@@ -11,8 +11,9 @@ en:
       lower: lower
       your_climate_footprint: Your carbon footprint of %{footprint} is %{relative} than the average in %{country}. To be in line with the 1.5 degree target set by the Paris agreement, we need to reach an average of 2.5 tonnes per person globally by the year 2030.
       your_climate_footprint_compared_world: Your carbon footprint of %{footprint} is %{relative} than the world average. To be in line with the 1.5 degree target set by the Paris agreement, we need to reach an average of 2.5 tonnes per person globally by the year 2030.
-
-      sign_up_heading: Let's stop climate change together!
+      impact_test: With the support of our community we already reached more than 500,000 tonnes of avoided CO2e! That's the equivalent of taking 217,000 fossil fuel cars off the streets for an entire year and about 2 million people not flying between Berlin and Paris!
+      sign_up_heading_test_1: Sign up now! If we all contribute we can reach the goal together!
+      sign_up_heading_test_2: Sign up now!
       sign_up_description: Sign up to save your result, get support in reducing your footprint, and opt in to carbon offsetting.
       step: Step
       price_free: Free

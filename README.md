@@ -124,7 +124,7 @@ code `eo` in this project). This is done by running: `bin/rails i18n:normalize_c
 We have a custom set up for A/B testing. Setting up an A/B test is done in `experiments.yml`. When you have added the feature key name and frequency in `experiments.yml`, you are ready to use it in templates.
 
 ```
-  <% if @experiment_active?(:my_feature) %>
+  <% if experiment_active?(:my_feature) %>
     <!-- some value -->
   <% else %>
     <!-- some other value -->

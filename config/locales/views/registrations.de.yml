@@ -10,7 +10,6 @@ de:
       lower: niedriger
       your_climate_footprint: Ihre CO2-Bilanz von %{footprint} ist %{relative} als der Durchschnitt in %{country}. Um dem 1,5-Grad-Ziel des Pariser Abkommens zu entsprechen, müssen wir bis zum Jahr 2030 weltweit einen Durchschnitt von 2,5 Tonnen pro Person erreichen.
       your_climate_footprint_compared_world: Ihre CO2-Bilanz von %{footprint} ist %{relative} als der weltweite Durchschnitt. Um dem 1,5-Grad-Ziel des Pariser Abkommens zu entsprechen, müssen wir bis zum Jahr 2030 weltweit einen Durchschnitt von 2,5 Tonnen pro Person erreichen.
-      sign_up_heading: Lass uns den Klimawandel gemeinsam stoppen!
       sign_up_description: Melden Sie sich an, um Ihr Ergebnis zu speichern, erhalten Sie Unterstützung bei der Reduzierung Ihres ökologischen Fußabdrucks und entscheiden Sie sich für einen CO2-Ausgleich.
       step: Schritt
       create_account: Konto erstellen

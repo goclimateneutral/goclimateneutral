@@ -40,3 +40,9 @@
     <%= t("views.registrations.your_climate_footprint", **footprint_text_options) %>
   <% end %>
 </p>
+<% if experiment_active?(:impact) %>
+  <p class="font-bold">
+    <%= t("views.registrations.impact_test") %>
+  </p>
+<% end %>
+

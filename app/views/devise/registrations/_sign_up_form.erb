@@ -1,7 +1,13 @@
 <div class="callout max-w-md mx-auto" data-controller="registrations--form registrations--membership-choice">
   <a id="sign-up" class="absolute -mt-32"></a>
   <div class="space-y-3" data-controller="registrations--price registrations--referral-code" data-target="registrations--membership-choice.priceControllerElement">
-    <h2 class="text-lg d:text-xl font-semibold text-center"><%= t 'views.registrations.sign_up_heading' %></h2>
+    <h2 class="text-lg d:text-xl font-semibold text-center">
+      <% if experiment_active?(:collective_efficacy) %>
+        <%= t 'views.registrations.sign_up_heading_test_1' %>
+      <% else %>
+        <%= t 'views.registrations.sign_up_heading_test_2' %>
+      <% end %>
+    </h2>
     <p class="text-sm text-center mb-6 hidden"><%= t 'views.registrations.step' %> 1/2</p>
     <p class="text-center"><%= t 'views.registrations.sign_up_description' %></p>
     <input type="checkbox" id="step-one-done" class="toggler">
