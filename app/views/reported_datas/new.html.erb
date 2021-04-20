@@ -10,19 +10,19 @@
             <%= fields_for 'reported_datas[]', reported_data do |reported_data_fields| %>
               <%= reported_data_fields.hidden_field :calculator_field_id %>
               <%= reported_data_fields.hidden_field :data_request_id %>
-              <div class="flex flex-row" data-controller="input-type">
+              <div class="flex flex-row">
                 <div class="flex flex-col max-w-md w-1/2 mr-2">
                   <%= label_tag reported_data.calculator_field.label, nil, class: 'font-semibold' %>
-                  <%= reported_data_fields.text_field :value, class: 'input input-1', 'data-target': 'input-type.input' %>
+                  <%= reported_data_fields.text_field :value, class: 'input' %>
                 </div>
                 <div class="flex flex-col">
                   <%= label_tag 'Unit', nil, class: 'font-semibold' %>
-                  <select name="reported_datas[][unit]" class="input" size="<%= reported_data.calculator_field.units&.length + 1 %>" data-target="input-type.type" data-action="input-type#update">
+                  <select name="reported_datas[][unit]" class="input" size="<%= reported_data.calculator_field.units&.length + 1 %>">
                     <% reported_data.calculator_field.units&.each_with_index do |(key, _value), index| %>
                       <% unit = BusinessCalculators::Unit.find_by(key: key) %>
-                      <option value="<%= key %>" data-input-type="<%= unit.input_type %>" <%= index == 0 ? 'selected' : '' %>><%= unit.name %></option>
+                      <option value="<%= key %>" <%= index == 0 ? 'selected' : '' %>><%= unit.name %></option>
                     <% end %>
-                    <option value="freeform" data-input-type="text">Free form</option>
+                    <option value="freeform">Free form</option>
                   </select>
                 </div>
               </div>

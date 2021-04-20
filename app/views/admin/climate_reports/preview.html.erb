@@ -5,20 +5,20 @@
   <% BusinessCalculators::Calculator.find(area.calculator_id).categories.each do |category| %>
     <h4><%= category.name %></h4>
     <% category.fields.each do |field| %>
-      <div class="row" data-controller="input-type">
+      <div class="row">
         <div class="col-sm-3">
           <%= label_tag field.label %>
-          <input type="text" data-target="input-type.input" class="form-control">
+          <input type="text" class="form-control">
         </div>
         <div class="col-sm-3">
           <%= label_tag 'Unit' %>
-          <select class="form-control" size="<%= field.units&.length + 1 %>" data-target="input-type.type" data-action="input-type#update">
+          <select class="form-control" size="<%= field.units&.length + 1 %>">
             <% field.units&.each_key do |key| %>
               <% unit = BusinessCalculators::Unit.find_by(key: key) %>
               <!-- maybe value should be unit.id instead? -->
-              <option value="<%= key %>" data-input-type="<%= unit.input_type %>"><%= unit.name %></option>
+              <option value="<%= key %>"><%= unit.name %></option>
             <% end %>
-            <option value="freeform" data-input-type="text">Free form</option>
+            <option value="freeform">Free form</option>
           </select>
         </div>
       </div>
