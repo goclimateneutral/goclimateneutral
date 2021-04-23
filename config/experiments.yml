@@ -6,3 +6,5 @@ impact:
   frequency: 0.5
 collective_efficacy:
   frequency: 0.5
+partners:
+  frequency: 0.5
