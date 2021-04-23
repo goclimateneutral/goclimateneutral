@@ -1,6 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Data Requests</h1>
+<% if @report %>
+  <h3>For report: <%= link_to @report.title, [:admin, @report] %></h3>
+<% end %>
+<% if @report_area %>
+  <h3>For report area: <%= link_to @report_area.title, [:admin, @report_area.report] %></h3>
+<% end %>
 
 <table class="table">
   <thead>

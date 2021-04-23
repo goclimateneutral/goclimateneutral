@@ -3,6 +3,13 @@
 <h1>Climate Report</h1>
 
 <dl class="dl-horizontal">
+  <dt>See results:</dt>
+  <dd>
+    <%= link_to 'Reported data', admin_reported_datas_path(report_id: @report.id) %>
+    (<%= ReportedData.all_latest_from_report(@report).length %> questions answered out of
+    <%= @report.number_of_questions %>)
+  </dd>
+
   <dt>Title:</dt>
   <dd><%= @report.title %></dd>
   
@@ -20,17 +27,19 @@
     <dd style="padding-bottom: 1em">
       <strong><%= area.title %></strong> &mdash; Calculator <%= BusinessCalculators::Calculator.find(area.calculator_id).name %>
       <div style="padding-left: 1em">
+        <p>
+          <% number_of_questions = area.number_of_questions
+            number_of_answered_questions = area.number_of_answered_questions
+            %>
+          <%= "✅" if number_of_answered_questions == number_of_questions %>
+          <%= number_of_answered_questions %>/<%= number_of_questions %>
+          questions answered
+          &nbsp; <%= link_to 'See answers', admin_reported_datas_path(report_area_id: area.id) %>
+        </p>
         <% data_requests = DataRequest.where(report_area_id: area.id) %>
-        <% if data_requests.count > 0 %>
-          Data requests
-          <ul style="margin-bottom: 0">
-            <% data_requests.each do |request| %>
-              <% reporter = DataReporter.find(request.recipient_id) %>
-              <li><%= link_to reporter.email, [:admin, reporter] %></li>
-            <% end %>
-          </ul>
-        <% end %>
-        <%= link_to '+ New data request', new_admin_data_request_path(area: area), class: 'btn btn-default', style: 'margin-top: 0.5em' %>
+        Data requests (<%= data_requests.count %>) &nbsp;
+        <%= link_to 'See all requests', admin_data_requests_path(report_area_id: area.id) %> &nbsp;
+        <%= link_to '+ New data request', new_admin_data_request_path(area: area), class: 'btn btn-default' %>
       </div>
     </dd>
   <% end %>

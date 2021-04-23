@@ -15,5 +15,16 @@ module ClimateReports
     def self.model_name
       @model_name ||= ActiveModel::Name.new(self, nil, 'climate_report')
     end
+
+    def number_of_questions
+      total = 0
+      areas&.each do |area|
+        area.calculator&.categories&.each do |category|
+          total += category.fields&.length
+        end
+      end
+
+      total
+    end
   end
 end

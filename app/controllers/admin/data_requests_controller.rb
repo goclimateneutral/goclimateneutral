@@ -5,7 +5,14 @@ module Admin
     before_action :set_data_request, only: [:show, :edit, :update, :destroy]
 
     def index
-      @data_requests = DataRequest.all
+      @report = ClimateReports::Report.find(params[:report_id]) if params[:report_id]
+      @report_area = ClimateReports::ReportArea.find(params[:report_area_id]) if params[:report_area_id]
+
+      @data_requests = if @report_area
+                         DataRequest.where(report_area_id: @report_area.id)
+                       else
+                         DataRequest.all
+                       end
     end
 
     def show
