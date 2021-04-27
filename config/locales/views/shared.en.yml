@@ -38,3 +38,6 @@ en:
           title: 100% Transparency
           description: We want you to feel safe with how your money makes an impact. See our outgoings, making sure that you know where every cent is used.
           cta: See our numbers
+      cookie_banner:
+        text: Cookies help us deliver our services. By using our services, you agree to our use of cookies.
+        cta: I consent

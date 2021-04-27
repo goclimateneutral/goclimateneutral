@@ -92,6 +92,28 @@
       <%= yield %>
     </div>
 
+    <% unless cookies[:cookie_consent].present? %>
+      <div id="cookie-consent-banner" class="fixed bottom-0 left-0 right-0 flex justify-between items-center p-4 t:px-8 bg-black text-white">
+        <div class="t:flex items-center space-y-4 t:space-y-0 t:space-x-4">
+          <p><%=t 'views.shared.cookie_banner.text' %></p>
+          <button id="cookie-consent-banner-consent" class="button button-sm button-inverted">
+            <%=t 'views.shared.cookie_banner.cta' %>
+          </button>
+        </div>
+      </div>
+      <script>
+        (function() {
+          var regionRecommendationElement = document.querySelector('#cookie-consent-banner');
+          var dismissElement = document.querySelector('#cookie-consent-banner-consent');
+
+          dismissElement.addEventListener('click', function(event) {
+            document.cookie = 'cookie_consent=true';
+            regionRecommendationElement.parentNode.removeChild(regionRecommendationElement);
+          });
+        })();
+      </script>
+    <% end %>
+
     <script>
       function reportLoadError(event) {
         if (typeof console !== 'undefined' && typeof console.warning !== 'undefined') {

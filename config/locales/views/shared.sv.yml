@@ -38,3 +38,6 @@ sv:
           title: 100 % transparens
           description: Vi vill att du ska känna dig helt trygg med hur dina pengar gör klimatnytta. Vi redovisar löpande alla våra utgifter här på siten, för att du ska veta exakt hur pengarna används.
           cta: Se alla våra siffror
+      cookie_banner:
+        text: Kakor hjälper oss att leverera våra tjänster. Genom att använda våra tjänster godkänner du vår användning av kakor.
+        cta: Jag godkänner
