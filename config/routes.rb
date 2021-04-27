@@ -55,6 +55,7 @@ Rails.application.routes.draw do
     # Content pages
     resource :about, controller: 'about', only: [:show]
     resource :contact, controller: 'about/contact', only: [:show]
+    resource :cookies, controller: 'about/cookies', only: [:show]
     resource :faq, controller: 'about/faq', only: [:show]
     resource :transparency, controller: 'about/transparency', only: [:show]
     resource :privacy_policy, controller: 'about/privacy_policy', path: 'privacy-policy', only: [:show]

@@ -95,7 +95,7 @@
     <% unless cookies[:cookie_consent].present? %>
       <div id="cookie-consent-banner" class="fixed bottom-0 left-0 right-0 flex justify-between items-center p-4 t:px-8 bg-black text-white">
         <div class="t:flex items-center space-y-4 t:space-y-0 t:space-x-4">
-          <p><%=t 'views.shared.cookie_banner.text' %></p>
+          <p><%=t 'views.shared.cookie_banner.text' %> <%= link_to t('views.shared.cookie_banner.link_text'),  cookies_path, class: 'link-ui' %>.</p>
           <button id="cookie-consent-banner-consent" class="button button-sm button-inverted">
             <%=t 'views.shared.cookie_banner.cta' %>
           </button>
