@@ -2,7 +2,7 @@
 
 <section class="section-padding space-y-6">
     <h3 class="heading-lg">Data collection for <%= @report_area.title %></h3>
-    <%= form_with url: reported_datas_path do |form| %>
+    <%= form_with url: @data_request.survey ? multi_update_reported_datas_path : reported_datas_path do |form| %>
       <% @reported_datas.each do |(category, reported_datas)| %>
         <div class="space-y-3">
           <h4 class="heading"><%= category.name %></h4>
@@ -10,6 +10,7 @@
             <%= fields_for 'reported_datas[]', reported_data do |reported_data_fields| %>
               <%= reported_data_fields.hidden_field :calculator_field_id %>
               <%= reported_data_fields.hidden_field :data_request_id %>
+              <%= (reported_data_fields.hidden_field :id) if @data_request.survey %>
               <div class="flex flex-row">
                 <div class="flex flex-col max-w-md w-1/2 mr-2">
                   <%= label_tag reported_data.calculator_field.label, nil, class: 'font-semibold' %>
@@ -17,7 +18,7 @@
                 </div>
                 <div class="flex flex-col">
                   <%= label_tag 'Unit', nil, class: 'font-semibold' %>
-                  <select name="reported_datas[][unit]" class="input" size="<%= reported_data.calculator_field.units&.length + 1 %>">
+                  <select name="reported_datas[<%= reported_data.id || ''%>][unit]" class="input" size="<%= reported_data.calculator_field.units&.length + 1 %>">
                     <% reported_data.calculator_field.units&.each_with_index do |(key, _value), index| %>
                       <% unit = BusinessCalculators::Unit.find_by(key: key) %>
                       <option
