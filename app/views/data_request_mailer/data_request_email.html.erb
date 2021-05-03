@@ -1,19 +1,17 @@
-
 <%= render 'shared/email/heading',
   text: t('mailers.data_requests.heading') %>
-
 <%= render 'shared/email/spacer', narrow: true %>
-
 <%= render 'shared/email/spacer', narrow: true %>
-
-<%= render 'shared/email/paragraph',
-  text: params[:message].present? ? sanitize(params[:message]) : "You have received a request to help your team collect data for GoClimate." %>
-
+<% if params[:message].present? %>
+  <%= render 'shared/email/paragraph', text: sanitize(params[:message]) %>
+<% else %>
+  <% %w[p1 p2 p3].each do |key| %>
+    <%= render 'shared/email/paragraph', text: t("mailers.data_requests.paragraphs.#{key}") %>
+    <%= render 'shared/email/spacer', narrow: true %>
+  <% end %>
+<% end %>
 <%= render 'shared/email/spacer', narrow: true %>
-
 <%= render 'shared/email/heading',
-  text: "#{link_to 'Your link', data_reporter_url(id: params[:data_reporter].key), style: 'text-decoration: underline'}" %>
-
+  text: "#{link_to t('mailers.data_requests.your_link'), data_reporter_url(id: params[:data_reporter].key), style: 'text-decoration: underline'}" %>
 <%= render 'shared/email/spacer', narrow: true %>
-
 <%= render 'shared/email/team_signature', name: params[:sender] || 'Alexandra' %>

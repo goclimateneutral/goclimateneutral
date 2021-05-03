@@ -1,8 +1,11 @@
-<%=t 'mailers.data_requests.heading' %>
-
-<%= params[:message].present? ? sanitize(params[:message]) : "You have received a request to help your team collect data for GoClimate." %>
-
-Your link: <%= data_reporter_url(id: params[:data_reporter].key) %>
-
-<%=t 'best_regards' %>,
-<%=t 'mailers.welcome.the_gcn_team', name: params[:sender] || 'Alexandra' %>
+<%= t 'mailers.data_requests.heading' %>
+<% if params[:message].present? %>
+<%= sanitize(params[:message]) %>
+<% else %>
+<% %w[p1 p2 p3].each do |key| %>
+<%= t("mailers.data_requests.paragraphs.#{key}") %>
+<% end %>
+<% end %>
+<%= t 'mailers.data_requests.your_link' %>: <%= data_reporter_url(id: params[:data_reporter].key) %>
+<%= t 'best_regards' %>,
+<%= t 'mailers.welcome.the_gcn_team', name: params[:sender] || 'Alexandra' %>

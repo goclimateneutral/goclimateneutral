@@ -3,3 +3,8 @@ en:
     data_requests:
       subject: You have a new data request
       heading: Hello!
+      paragraphs:
+        p1: Your organisation is currently making efforts to calculate the carbon footprint of your operations, to take responsibility for your climate impact. Great work!
+        p2: We are hoping for your contribution in providing some information, which will help us understand your emissions. Please revise the data request and fill in the answers you already know, or can help us find out. You can contact us at any point if you want guidance, and you can save and edit your answers later if you need to double-check something.
+        p3: Your collaboration is greatly appreciated!
+      your_link: Your data request
