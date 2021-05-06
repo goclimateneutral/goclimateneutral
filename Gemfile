@@ -81,6 +81,7 @@ group :development do
   gem 'listen'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'guard'
+  gem 'guard-brakeman', require: false
   gem 'guard-rspec', require: false
   gem 'guard-rubocop', require: false
   gem 'i18n-tasks', require: false
