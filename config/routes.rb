@@ -212,7 +212,11 @@ Rails.application.routes.draw do
     end
     resources :data_requests
     resources :data_reporters
-    resources :reported_datas, only: [:index, :show, :destroy]
+    resources :reported_datas, only: [:index, :show, :destroy] do
+      collection do
+        get :export_to_csv
+      end
+    end
     resources :invoices
     resources :lifestyle_calculators, only: [:index, :show, :new, :create] do
       member do

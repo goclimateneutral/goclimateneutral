@@ -45,3 +45,5 @@
     <% end %>
   </tbody>
 </table>
+
+<%= link_to 'Export data to .csv', export_to_csv_admin_reported_datas_path(params.permit(:report_id, :report_area_id)), class: 'btn btn-default' %>
