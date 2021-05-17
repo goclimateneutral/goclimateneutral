@@ -199,6 +199,7 @@ Rails.application.routes.draw do
       member do
         post :publish
         post :archive
+        post :duplicate
       end
     end
     resources :organizations

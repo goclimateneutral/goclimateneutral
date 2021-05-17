@@ -20,10 +20,13 @@
         <td><%= time_tag(calculator.updated_at, format: '%F %R') %></td>
         <td class="admin-actions">
           <%= link_to 'Show', [:admin, calculator] %> &nbsp;
-          <%= link_to 'Preview form', preview_reported_data_path(calculator.id), target: :_blank %> &nbsp;
           <% if calculator.draft? %>
-            <%= link_to 'Edit', edit_admin_business_calculator_path(calculator) %> &nbsp;
-          <% end %>
+            <%= link_to 'Edit', edit_admin_business_calculator_path(calculator) %>
+          <% else %>
+            <span style="color: gray; cursor: not-allowed;">Edit</span>
+          <% end %> &nbsp;
+          <%= link_to 'Preview form', preview_reported_data_path(calculator.id), target: :_blank %> &nbsp;
+          <%= link_to 'Duplicate', duplicate_admin_business_calculator_path(calculator), method: :post %> &nbsp;
           <% unless calculator.archived? %>
             <%= link_to 'Archive', archive_admin_business_calculator_path(calculator), method: :post, data: { confirm: 'Are you sure? You can no longer edit or use this calculator.' } %> &nbsp;
           <% end %>

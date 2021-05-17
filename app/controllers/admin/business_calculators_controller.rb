@@ -2,7 +2,7 @@
 
 module Admin
   class BusinessCalculatorsController < AdminController
-    before_action :set_calculator, only: [:show, :edit, :update, :destroy, :publish, :archive]
+    before_action :set_calculator, only: [:show, :edit, :update, :destroy, :publish, :archive, :duplicate]
     before_action :set_units, only: [:new, :edit, :update]
     before_action :verify_editable, only: [:edit, :update]
 
@@ -50,6 +50,29 @@ module Admin
       @calculator.archive
 
       redirect_to admin_business_calculators_url, notice: 'Calculator was successfully archived.'
+    end
+
+    def duplicate # rubocop:disable Metrics/MethodLength
+      new_calculator = @calculator.dup
+      new_calculator.name = "#{new_calculator.name} (copy)"
+      new_calculator.status = 'draft'
+
+      if new_calculator.save
+        @calculator.categories.each do |category|
+          new_category = category.dup
+          new_category.calculator_id = new_calculator.id
+          new_category.save
+
+          category.fields.each do |field|
+            new_field = field.dup
+            new_field.category_id = new_category.id
+            new_field.save
+          end
+        end
+        redirect_to admin_business_calculators_url, notice: 'Calculator was successfully duplicated.'
+      else
+        redirect_to admin_business_calculators_url, notice: 'Something went wrong - calculator was not duplicated 😬'
+      end
     end
 
     private
