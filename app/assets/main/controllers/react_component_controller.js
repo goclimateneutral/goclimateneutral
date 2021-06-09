@@ -14,8 +14,8 @@ export default class ReactComponentController extends Controller {
   initialize() {
     ReactDOM.render(
       React.createElement(
-        components[this.element.dataset['react-component']],
-        JSON.parse(this.element.dataset['react-props'])
+        components[this.element.dataset.reactComponent],
+        JSON.parse(this.element.dataset.reactProps)
       ),
       this.element
     );
