@@ -1,0 +1,22 @@
+<div class="w-full m-lg:w-3/4 t:w-1/3">
+  <div class="h-full overflow-hidden bg-green-tint-1 rounded-lg shadow-lg">
+    <div class="pb-1/2 relative">
+      <%= image_tag webpack_asset_path(local_assigns[:image_url]),
+        srcset: {
+            webpack_asset_path(local_assigns[:image_url_2x] || local_assigns[:image_url]) => "2x"
+        },
+        class: 'absolute top-0 w-full h-full object-cover', alt: '' %>
+    </div>
+    <div class="p-4 relative">
+      <%= image_tag webpack_asset_path("images/illustrations/wave_top-green-tint-1.png"), class: 'w-full absolute bottom-100 left-0 -mb-1', alt: '' %>
+      <div class="flex flex-col h-full justify-center">
+        <p class="font-semibold pb-4 text-center">
+          <%= local_assigns[:heading] %>
+        </p>
+        <div class="text-center">
+          <a href="<%= local_assigns[:url] %>" class="button mx-auto"><%= t 'views.shared.read_more' %></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -2,57 +2,64 @@
 
 <section class="section-padding">
   <div class="section-gutter">
-    <div>
+    <div class="space-y-6">
       <h1 class="heading-xl">
         <%= title(t('views.welcome.travel_calculator.travel_emissions_calculator')) %>
       </h1>
-      <p class="mt-6 t:w-2/3 d:w-1/2">
+      <p class="t:w-2/3 d:w-1/2">
         <%= description(t('views.welcome.travel_calculator.travel_emissions_calculator_description')) %>
       </p>
     </div>
 
-    <form class="space-y-1" id="distance-form">
-      <label for="distance" class="font-bold block"><%= t('views.welcome.travel_calculator.distance_in_kilometers') %></label>
-      <div class="flex flex-col m-lg:flex-row space-y-1 m-lg:space-x-1 m-lg:space-y-0">
-        <input type="text" class="input" id="distance" placeholder="100" value="100" size="5">
-        <button type="submit" class="button"><%= t('views.welcome.travel_calculator.calculate') %></button>
+    <div class="space-y-6">
+      <div class="space-y-3">
+        <p class="font-bold">
+          <%= t('views.welcome.travel_calculator.emissions_if_traveling_by') %>
+        </p>
+
+        <div class="w-100 space-y-2">
+          <% ['flight',
+              'car_petrol',
+              'car_diesel',
+              'car_etanol',
+              'car_gas',
+              'car_electric',
+              'bus',
+              'train',
+              'subway',
+              'boat'].each do |type| %>
+                <div class="flex flex-row items-center">
+                  <div class="w-32">
+                    <%= t("views.welcome.travel_calculator.#{type}") %>
+                  </div>
+                  <div class="text-left ml-2 relative">
+                    <div id="<%= type %>-background" class="bg-green-dark rounded-r py-1 w-2 h-8"></div>
+                    <span class="pl-1 whitespace-nowrap absolute left-100 top-1/2 transform -translate-y-1/2">
+                      <span id="<%= type %>" class="font-bold" data-target-number="0">0</span> kg CO2e
+                    <span>
+                  </div>
+                </div>
+          <% end %>
+        </div>
       </div>
-    </form>
 
-    <div>
-      <p class="mb-3 font-bold">
-        <%= t('views.welcome.travel_calculator.emissions_if_traveling_by') %>
-      </p>
-
-      <div class="w-100 space-y-2">
-        <% ['flight',
-            'car_petrol',
-            'car_diesel',
-            'car_etanol',
-            'car_gas',
-            'car_electric',
-            'bus',
-            'train',
-            'subway',
-            'boat'].each do |type| %>
-              <div class="flex flex-row items-center">
-                <div class="w-32">
-                  <%= t("views.welcome.travel_calculator.#{type}") %>
-                </div>
-                <div class="text-left ml-2 relative">
-                  <div id="<%= type %>-background" class="bg-green-dark rounded-r py-1 w-2 h-8"></div>
-                  <span class="pl-1 whitespace-nowrap absolute left-100 top-1/2 transform -translate-y-1/2">
-                    <span id="<%= type %>" class="font-bold" data-target-number="0">0</span> kg CO2e
-                  <span>
-                </div>
-              </div>
-            <% end %>
+      <div class="space-y-6">
+        <form class="space-y-1" id="distance-form">
+          <label for="distance" class="font-bold block"><%= t('views.welcome.travel_calculator.distance_in_kilometers') %></label>
+          <div class="flex flex-col m-lg:flex-row space-y-1 m-lg:space-x-1 m-lg:space-y-0">
+            <input type="text" class="input" id="distance" placeholder="100" value="100" size="5">
+            <button type="submit" class="button"><%= t('views.welcome.travel_calculator.calculate') %></button>
+          </div>
+        </form>
+        
+        <div class="space-y-1">
+          <a href="/" class="button button-cta"><%=t 'views.welcome.travel_calculator.offset_the_emissions_here' %></a>
+          <p class="text-sm t:w-2/3 d:w-1/2"><%=t 'views.travel_calculator.swedish_data_notice' %></p>
+        </div>
       </div>
     </div>
 
-    <div>
-      <a href="/" class="button button-cta"><%=t 'views.welcome.travel_calculator.offset_the_emissions_here' %></a>
-    </div>
+    
   </div>
 </section>
 
@@ -92,6 +99,7 @@
     }
 
     document.getElementById('distance-form').addEventListener("submit", processForm);
+    window.addEventListener('load', processForm)
   </script>
 <% end %>
 

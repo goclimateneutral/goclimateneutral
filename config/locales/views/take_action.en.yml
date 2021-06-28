@@ -1,0 +1,36 @@
+en:
+  views:
+    take_action:
+      heading: Take action
+      text: There are various ways you can take action for positive climate impact, some of which we have listed below.
+      categories:
+        subscription:
+          heading: Monthly subscription
+          text: Start your monthly subscription personalized to your own footprint by taking our easy test that takes just a minute to complete. Together we finance projects that reduce the amount of CO2 in the atmosphere!
+        gift_cards:
+          heading: Gift cards
+          text: Looking for a gift for someone who already has everything? Want to help spread the word of something we can all do to fight climate change? Try out our climate gift cards and give the gift of a better tomorrow!
+          cta: Purchase gift cards
+        flights:
+          heading: Offset flights
+          text: The best thing for the climate is to keep flights to a minimum and to choose less carbon exhaustive options to get around. However, when staying on the ground is not an option, carbon offsetting is a way to take responsibility for the emissions caused. We offer the possibility to offset your flight in certified climate projects, stopping the amount of CO2 caused from being released elsewhere.
+          cta: Offset your flight
+        travel_calculator:
+          heading: Travel calculator
+          text: Do you want to calculate the emissions from travelling, or compare different modes of transport to find out the most climate friendly option for an upcoming trip?
+          cta: Try our travel calculator
+        share:
+          heading: Spread the word
+          result:
+            heading: Share my result
+            text: Tell your friends about the great work you are doing by taking responsibility for your emissions and inspire them to do the same!
+            cta: Sign up to share your results
+          assets:
+            heading: Share assets
+            text: One of the most powerful ways to create change is to inspire others to take action - and we would love for you to share our visuals in your own channels. Don’t forget to tag us so we can give some love back!
+            cta: Browse our content database
+        petitions:
+          heading: Sign petitions
+          text: Supporting different causes by signing petitions can be a very powerful and easy way of creating change. We have collected petitions in different areas, see what  is relevant to you, and get ready to make a difference!
+
+ 

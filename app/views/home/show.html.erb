@@ -286,78 +286,26 @@
   </div>
 </section>
 
-
-
-
-
-<section class="section-padding">
-  <h2 class="heading-lg text-center mb-12">
-    <%= t 'views.welcome.index.climate_tips.heading' %>
+<section class="section-padding space-y-6">
+  <h2 class="heading-lg">
+    <%= t 'views.welcome.index.social_media.heading' %>
   </h2>
-  <div class="section-gutter flex flex-col items-center t:flex-row t:items-stretch">
-      <% (I18n.locale == :sv ? [
-        {
-          key: 'climate_friendly_housing_cooperative',
-          image_url: 'images/blog/brf-1x.jpg',
-          image_url_2x: 'images/blog/brf-2x.jpg',
-          url: 'https://www.goclimate.com/blog/klimatsmart-bostadsrattsforening-sa-kan-du-paverka-din-forening/',
-        },
-        {
-          key: 'climate_friendly_pension_saving',
-          image_url: 'images/blog/pension-1x.jpg',
-          image_url_2x: 'images/blog/pension-2x.jpg',
-          url: 'https://www.goclimate.com/blog/klimatsmart-pensionssparande/',
-        },
-        {
-          key: 'civil_disobedience',
-          image_url: 'images/blog/protest-1x.jpg',
-          image_url_2x: 'images/blog/protest-2x.jpg',
-          url: 'https://www.goclimate.com/blog/civil-olydnad-for-klimatet/',
-        }
-        ] : [
-        {
-          key: 'clothes_last_longer',
-          image_url: 'images/blog/clothes-1x.jpg',
-          image_url_2x: 'images/blog/clothes-2x.jpg',
-          url: 'https://www.goclimate.com/blog/how-to-make-your-clothes-last-longer/',
-        },
-        {
-          key: 'reduce_carbon_footprint_food',
-          image_url: 'images/blog/food-1x.jpg',
-          image_url_2x: 'images/blog/food-2x.jpg',
-          url: 'https://www.goclimate.com/blog/how-to-reduce-your-carbon-footprint-food/',
-        },
-        {
-          key: 'civil_disobedience',
-          image_url: 'images/blog/protest-1x.jpg',
-          image_url_2x: 'images/blog/protest-2x.jpg',
-          url: 'https://www.goclimate.com/blog/civil-disobedience-for-the-climate/',
-        }
-        ]).each do |item| %>
-        <div class="w-full m-lg:w-3/4 t:w-1/3">
-          <div class="h-full overflow-hidden bg-green-tint-1 rounded-lg shadow-lg">
-            <div class="pb-1/2 relative">
-              <%= image_tag webpack_asset_path(item[:image_url]),
-                srcset: {
-                    webpack_asset_path(item[:image_url_2x]) => "2x"
-                },
-                class: 'absolute top-0 w-full h-full object-cover', alt: '' %>
-            </div>
-            <div class="p-4 relative">
-              <%= image_tag webpack_asset_path("images/illustrations/wave_top-green-tint-1.png"), class: 'w-full absolute bottom-100 left-0 -mb-1', alt: '' %>
-              <div class="flex flex-col h-full justify-center">
-                <p class="font-semibold pb-4 text-center">
-                  <%= t("views.welcome.index.climate_tips.#{item[:key]}") %>
-                </p>
-                <div class="text-center">
-                  <a href="<%= item[:url] %>" class="button mx-auto"><%= t 'views.welcome.index.climate_tips.read_more' %></a>
-                </div>
-              </div>
-            </div>
-          </div>
+  <p><%= t 'views.welcome.index.social_media.body_text' %></p>
+  <div class="flex flex-row flex-wrap t:flex-no-wrap ">
+    <% @instagram_images&.each_with_index do |image, index| %>
+      <div class="w-1/2 t:w-1/5 p-1 t:block <%= 'hidden' if index == @instagram_images.length - 1 %>">
+        <div class="relative w-full overflow-hidden rounded" data-target="instagram-feed.template">
+          <div class="w-full pb-full bg-none"></div>
+          <a href="<%= image['permalink'] %>" target="_blank" rel="noopener noreferrer">
+            <img src="<%= image['media_url'] %>" class="instagram-feed-image absolute left-0 top-1/2 transform -translate-y-1/2">
+          </a>
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="text-center">
+    <%= link_to t('views.welcome.index.social_media.cta'), 'https://www.instagram.com/goclimate/', target: "_blank", rel: "noopener noreferrer", class: "button" %>
+  </div>
 </section>
 
 <%= render "shared/footer" %>

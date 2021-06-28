@@ -1,3 +1,5 @@
+<%= render 'admin/shared/notice_banner' %>
+
 <h1>Admin</h1>
 
 <h3>Status CO2eq bought / sold</h3>
@@ -140,4 +142,12 @@
       <% end %>
     </tbody>
   </table>
+</div>
+
+<h3>Dashboard actions</h3>
+<div>
+  <h4>Refresh Instagram API access token</h4>
+  <%= form_with url: admin_refresh_instagram_token_path do |form| %>
+    <%= form.submit 'Refresh token', class: 'btn btn-default' %>
+  <% end %>
 </div>

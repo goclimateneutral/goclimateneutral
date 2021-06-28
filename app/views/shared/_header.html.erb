@@ -18,7 +18,8 @@
               <ul class="space-y-4 d:flex d:space-x-6 d:space-y-0">
                 <li><%= link_to t('our_projects'), projects_path, class: "link-ui #{'selected' if controller_name == 'projects'}" %></li>
                 <li><%= link_to t('about_us'), about_path, class: "link-ui #{'selected' if controller_name == 'about'}" %></li>
-                <li><%= link_to t('navigation.gift_cards'), gift_cards_path, class: "link-ui #{'selected' if controller_name == 'gift_cards'}" %></li>
+                <li><%= link_to t('views.climate_tips.heading'), climate_tips_path, class: "link-ui #{'selected' if controller_name == 'climate_tips'}" %></li>
+                <li><%= link_to t('views.take_action.heading'), take_action_path, class: "link-ui #{'selected' if controller_name == 'take_actions'}" %></li>
                 <li><%= link_to t('for_business'), business_root_path, class: "link-ui #{'selected' if controller_path.start_with?('business')}" %>
               </ul>
 

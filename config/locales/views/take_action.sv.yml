@@ -1,0 +1,36 @@
+sv:
+  views:
+    take_action:
+      heading: Vad kan jag göra?
+      text: Det finns olika sätt du kan vidta åtgärder för positiv klimatpåverkan, vi har listat några av dem nedan.
+      categories:
+        subscription:
+          heading: Prenumerera 
+          text: Starta din månatliga prenumeration baserad på ditt specifika klimatavtryck genom att göra vårt enkla test. Tillsammans finansierar vi projekt som minskar mängden koldioxid i atmosfären!
+        gift_cards:
+          heading: Gåvokort
+          text: Letar du efter en present till någon som redan har allt? Vill du hjälpa till att sprida ordet om något vi alla kan göra för att bekämpa klimatförändringarna? Köp ett av våra gåvokort och ge en gåva i form av en bättre morgondag!
+          cta: Köp gåvokort
+        flights:
+          heading: Klimatkompensera flyg
+          text: Det mest klimatsmarta sättet att resa är att välja bort flyget och prioritera alternativ med lägre utsläpp. Men när att stanna på marken inte är ett alternativ, är klimatkompensation ett sätt att ta ansvar för de orsakade utsläppen. Vi erbjuder möjligheten att kompensera för din flygresa via certifierade klimatprojekt, som förhindrar att mängden koldioxid just din resa resulterar i släpps ut någon annanstans.
+          cta: Kompensera för din flygresa
+        travel_calculator:
+          heading: Resekalkylator
+          text: Vill du beräkna utsläppen från en resa du redan gjort, eller jämföra olika transportsätt för att ta reda på det mest klimatvänliga alternativet för en kommande resa?
+          cta: Prova vår resekalkylator
+        share:
+          heading: Sprid ordet
+          result:
+            heading: Dela ditt avtryck
+            text: Berätta för dina vänner om det fantastiska arbete du gör genom att ta ansvar för dina utsläpp, och inspirera dem att göra detsamma!
+            cta: Börja prenumerera för att dela ditt avtryck
+          assets:
+            heading: Sprid kunskap
+            text: Ett av de mest effektiva sätten att skapa förändring är att inspirera andra att agera! Vi vill gärna att du delar våra bilder i dina egna kanaler - glöm inte att tagga oss!
+            cta: Utforska vår databas med bilder
+        petitions:
+          heading: Skriv under namninsamlingar
+          text: Att stötta olika initiativ genom att underteckna namninsamlingar kan vara ett mycket effektivt och enkelt sätt att skapa förändring. Vi har samlat aktuella namninsamlingar inom olika klimatfrågor, ta gärna en titt för att avgöra vad som är relevant för dig och sätt igång att göra skillnad!
+
+ 

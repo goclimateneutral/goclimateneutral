@@ -1,0 +1,69 @@
+sv:
+  views:
+    climate_tips:
+      heading: Klimattips
+      text: Som individ är de viktigaste områdena där du direkt kan påverka ditt eget klimatavtryck kopplade till din kost, hem, resor och konsumtionsvanor. Utöver detta är det absolut nödvändigt att vi tillsammans jobbar för en systemförändring, varför vi även inkluderat tips på hur du kan agera för att stötta omställningen på ett strukturellt plan.
+      categories:
+        diet:
+          heading: Matvanor
+          item_1:
+            heading: Klimatavtrycket av mat
+            link: https://www.goclimate.com/blog/the-carbon-footprint-of-a-diet/
+          item_2:
+            heading: Köttätarens guide för att äta mer vegeteriskt
+            link: https://www.goclimate.com/blog/meat-eaters-non-dogmatic-guide-to-becoming-more-vegetarian/
+          item_3:
+            heading: Minska klimatavtryck av det du äter
+            link: https://www.goclimate.com/blog/how-to-reduce-your-carbon-footprint-food/
+        home:
+          heading: Hem
+          item_1:
+            heading: Att byta till grön elektricitet
+            link: https://www.goclimate.com/blog/making-the-change-to-green-electricity/
+          item_2:
+            heading: Klimatavtrycket av ett hem
+            link: https://www.goclimate.com/blog/the-carbon-footprint-of-a-home/
+          item_3:
+            heading: De fem bästa tipsen för klimatvänlig renovering
+            link: https://www.goclimate.com/blog/5-best-tips-for-a-climate-friendly-renovation/
+        traveling:
+          heading: Resor
+          item_1:
+            heading: Klimatavtrycket av långdistansresor
+            link: https://www.goclimate.com/blog/the-carbon-footprint-of-long-distance-traveling/
+          item_2:
+            heading: Klimatavtrycket av våra resor
+            link: https://www.goclimate.com/blog/the-carbon-footprint-of-our-traveling/
+          item_3:
+            heading: Utsläpp från olika sätt att resa
+            link: https://www.goclimate.com/blog/emissions-from-different-ways-to-travel/
+        consumption:
+          heading: Konsumption och shopping
+          item_1:
+            heading: Klimatavtrycket av shopping
+            link: https://www.goclimate.com/blog/the-carbon-footprint-of-shopping/
+          item_2:
+            heading: Det här kan du göra istället för att köpa nya kläder
+            link: https://www.goclimate.com/blog/not-buying-new-clothes-heres-what-you-can-do-instead/
+          item_3:
+            heading: Hur du shoppar på ett hållbart sätt när du har lite tid
+            link: https://www.goclimate.com/blog/how-to-shop-sustainably-when-you-are-living-a-very-busy-life/
+        system_change:
+          heading: Systemförändring
+          item_1:
+            heading: Rösta för klimatet!
+            link: https://www.goclimate.com/blog/vote-for-the-climate/
+          item_2:
+            heading: Civil olydnad för klimatet?
+            link: https://www.goclimate.com/blog/civil-disobedience-for-the-climate/
+        carbon_footprint:
+          heading: Mer om ditt klimatavtryck
+          item_1:
+            heading: Jag och mitt klimatavtryck
+            link: https://www.goclimate.com/blog/me-and-my-carbon-footprint/
+          item_2:
+            heading: Vad är ett klimatavtryck
+            link: https://www.goclimate.com/blog/what-is-a-carbon-footprint/
+          item_3:
+            heading: Klimatavtrycket av samhällets konsumption
+            link: https://www.goclimate.com/blog/the-carbon-footprint-of-public-consumption/

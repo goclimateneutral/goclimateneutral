@@ -1,0 +1,69 @@
+en:
+  views:
+    climate_tips:
+      heading: Climate tips
+      text: As an individual, the main areas where you can instantly impact your own carbon footprint in a substantial way are linked to your diet, home, travelling and shopping/consumption habits. It is also crucial that we support a system change, why we have also included this in our round up.
+      categories:
+        diet:
+          heading: Diet
+          item_1:
+            heading: The carbon footprint of a diet
+            link: https://www.goclimate.com/blog/the-carbon-footprint-of-a-diet/
+          item_2:
+            heading: Meat eater's non dogmatic guide to becoming more vegetarian
+            link: https://www.goclimate.com/blog/meat-eaters-non-dogmatic-guide-to-becoming-more-vegetarian/
+          item_3:
+            heading: How to reduce your carbon footprint from food
+            link: https://www.goclimate.com/blog/how-to-reduce-your-carbon-footprint-food/
+        home:
+          heading: Home
+          item_1:
+            heading: Making the change to green electricity
+            link: https://www.goclimate.com/blog/making-the-change-to-green-electricity/
+          item_2:
+            heading: The carbon footprint of a home
+            link: https://www.goclimate.com/blog/the-carbon-footprint-of-a-home/
+          item_3:
+            heading: The five best tips for a climate friendly renovation
+            link: https://www.goclimate.com/blog/5-best-tips-for-a-climate-friendly-renovation/
+        traveling:
+          heading: Traveling
+          item_1:
+            heading: The carbon footprint of long distance traveling
+            link: https://www.goclimate.com/blog/the-carbon-footprint-of-long-distance-traveling/
+          item_2:
+            heading: The carbon footprint of our traveling
+            link: https://www.goclimate.com/blog/the-carbon-footprint-of-our-traveling/
+          item_3:
+            heading: Emissions from different ways to travel
+            link: https://www.goclimate.com/blog/emissions-from-different-ways-to-travel/
+        consumption:
+          heading: Consumption / shopping
+          item_1:
+            heading: The carbon footprint of shopping
+            link: https://www.goclimate.com/blog/the-carbon-footprint-of-shopping/
+          item_2:
+            heading: Not buying new clothes? Here's what you can do instead
+            link: https://www.goclimate.com/blog/not-buying-new-clothes-heres-what-you-can-do-instead/
+          item_3:
+            heading: How to shop sustainably when you are living a very busy life
+            link: https://www.goclimate.com/blog/how-to-shop-sustainably-when-you-are-living-a-very-busy-life/
+        system_change:
+          heading: System change
+          item_1:
+            heading: Vote for the climate!
+            link: https://www.goclimate.com/blog/vote-for-the-climate/
+          item_2:
+            heading: Civil disobedience for the climate?
+            link: https://www.goclimate.com/blog/civil-disobedience-for-the-climate/
+        carbon_footprint:
+          heading: Learn more about your carbon footprint
+          item_1:
+            heading: Me and my carbon footprint
+            link: https://www.goclimate.com/blog/me-and-my-carbon-footprint/
+          item_2:
+            heading: What is a carbon footprint
+            link: https://www.goclimate.com/blog/what-is-a-carbon-footprint/
+          item_3:
+            heading: The carbon footprint of public consumption
+            link: https://www.goclimate.com/blog/the-carbon-footprint-of-public-consumption/

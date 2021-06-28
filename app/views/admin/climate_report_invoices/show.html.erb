@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<%= render 'admin/shared/notice_banner' %>
 
 <% if @previous.present? %>
   <%= link_to '← Previous', admin_climate_report_invoice_path(@previous), class: 'btn btn-default' %>

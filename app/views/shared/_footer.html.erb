@@ -65,6 +65,7 @@
         <h3 class="font-bold"><%= t('views.shared.footer.headers.make_a_difference') %></h3>
         <ul class="list-none">
           <li><%= link_to t('views.shared.header.sign_up'), root_url, class: 'link-ui'%></li>
+          <li><%= link_to t('views.take_action.heading'), take_action_path, class: "link-ui" %></li>
           <li><%= link_to t('navigation.gift_cards'), gift_cards_path, class: 'link-ui' %></li>
           <li><%= link_to t('for_business'), business_root_path, class: 'link-ui' %></li>
           <li><%= link_to t('views.shared.header.navigation.flights'), new_flight_footprint_path, class: 'link-ui' %></li>
@@ -73,9 +74,10 @@
       <div class="w-full t:w-1/3 d:w-1/5 d:max-w-xs p-4">
         <h3 class="font-bold"><%= t('views.shared.footer.headers.explore') %></h3>
         <ul class="list-none">
-        <li><%= link_to t('our_projects'), projects_path, class: 'link-ui' %></li>
-        <% blog_subfolder = current_region.slug == 'se' ? 'se/' : '' %>
-        <li><%= link_to t('blog'), "https://www.goclimate.com/#{blog_subfolder}blog/", class: 'link-ui' %></li>
+          <li><%= link_to t('views.climate_tips.heading'), climate_tips_path, class: "link-ui" %></li>
+          <li><%= link_to t('our_projects'), projects_path, class: 'link-ui' %></li>
+          <% blog_subfolder = current_region.slug == 'se' ? 'se/' : '' %>
+          <li><%= link_to t('blog'), "https://www.goclimate.com/#{blog_subfolder}blog/", class: 'link-ui' %></li>
           <li><%= link_to t('faq'), faq_path, class: 'link-ui' %></li>
         </ul>
       </div>

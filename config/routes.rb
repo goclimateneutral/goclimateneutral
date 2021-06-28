@@ -67,6 +67,8 @@ Rails.application.routes.draw do
         get 'thank-you'
       end
     end
+    resource :climate_tips, path: 'climate-tips', only: [:show]
+    resource :take_action, controller: 'take_action', path: 'take-action', only: [:show]
 
     resources :lifestyle_footprints, path: 'calculator', only: [:new, :create], path_names: { new: '' } do
       collection do
@@ -243,6 +245,7 @@ Rails.application.routes.draw do
       post 'send_email', on: :collection
     end
     resource :flight_batch, controller: 'flight_batch', only: [:new, :create]
+    post '/refresh_instagram_token', to: 'dashboard#refresh_instagram_token'
   end
 
   # Errors

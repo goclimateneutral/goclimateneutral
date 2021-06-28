@@ -1,0 +1,5 @@
+en:
+  views:
+    travel_calculator:
+      swedish_data_notice: Please note that our calculator is based on Swedish data, so the result may vary depending on where you are based. To make sure your emissions are covered when offsetting, we suggest considering doubling the amount of emissions.
+      

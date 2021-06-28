@@ -1,0 +1,178 @@
+<%= render "shared/header" %>
+
+<div class="bg-blue-pastel">
+  <section class="section-padding t:py-32">
+    <div class="section-gutter t:flex flex-row items-center">
+      <div class="t:w-1/2 d:w-3/5 space-y-6">
+        <h1 class="heading-xl"><%= t 'views.take_action.heading' %></h1>
+        <p><%= t 'views.take_action.text' %></p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="bg-blue-pastel t:-mt-16">
+  <%= image_tag webpack_asset_path('images/illustrations/forest_and_city.png'), class: 'w-11/12 t:w-3/4 mx-auto', style: 'max-width: 812px'%>
+</div>
+
+<section class="section-padding">
+  <div class="section-gutter t:flex items-center">
+    <div class="t:w-1/2 d:w-2/3 space-y-6">
+      <h2 class="heading-lg"><%= t('views.take_action.categories.subscription.heading') %></h2>
+      <p><%= t('views.take_action.categories.subscription.text') %></p>
+      <div>
+        <%= render 'shared/calculator_get_started', class: 'm-lg:flex' %>
+      </div>
+    </div>
+    <div class="t:w-2/5 d-lg:w-1/3">
+      <div class="relative mx-auto w-3/4 m-lg:w-1/2 t:w-full max-w-lg">
+        <%= image_tag webpack_asset_path('images/shapes/blob_3.svg'), class: 'w-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2', alt: '' %>
+        <%= image_tag webpack_asset_path('images/illustrations/planet.png'), class: 'w-full relative', alt: '' %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding">
+  <div class="section-gutter t:flex items-center t:flex-row-reverse">
+    <div class="t:w-1/2 d:w-2/3 space-y-6">
+      <h2 class="heading-lg"><%= t('views.take_action.categories.gift_cards.heading') %></h2>
+      <p><%= t('views.take_action.categories.gift_cards.text') %></p>
+      <%= link_to(t('views.take_action.categories.gift_cards.cta'), gift_cards_path, class: 'button button-cta') %>
+    </div>
+    <div class="t:w-2/5 d-lg:w-1/3">
+      <div class="relative mx-auto t:mx-2 w-3/4 m-lg:w-1/2 t:w-full max-w-lg">
+        <div class="bg-blue-tint-1 rounded-full w-full pb-full"></div>
+        <%= image_tag webpack_asset_path('images/shapes/gift_card_line.svg'), class: 'w-full max-w-none absolute top-0 left-0', alt: '', style: 'width: 114%; left: -8%;' %>
+        <div class="absolute top-0 left-0 w-full h-full flex flex-row items-center">
+          <div class="w-1/6"></div>
+          <div class="w-2/3 uppercase text-center font-bold t:text-base d:text-lg">
+            <span>
+              <%= t 'views.gift_cards.download.heading' %>
+            </span>
+            <span class="block text-blue-accent text-lg t:text-xl d:text-2xl">
+              <%= t 'views.gift_cards.download.months', count: 12 %>
+            </span>
+          </div>
+          <div class="w-1/6"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding">
+  <div class="section-gutter t:flex items-center">
+    <div class="t:w-1/2 d:w-2/3 space-y-6">
+      <h2 class="heading-lg"><%= t('views.take_action.categories.flights.heading') %></h2>
+      <p><%= t('views.take_action.categories.flights.text') %></p>
+      <%= link_to(t('views.take_action.categories.flights.cta'), new_flight_footprint_path, class: 'button button-cta') %>
+    </div>
+    <div class="t:w-2/5 d-lg:w-1/3">
+      <div class="relative mx-auto w-3/4 m-lg:w-1/2 t:w-full max-w-lg">
+        <%= image_tag webpack_asset_path('images/shapes/blob_3.svg'), class: 'w-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2', alt: '' %>
+        <%= image_tag webpack_asset_path('images/illustrations/plane.png'), class: 'w-full relative', alt: '' %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding">
+  <div class="section-gutter t:flex items-center t:flex-row-reverse">
+    <div class="t:w-1/2 d:w-2/3 space-y-6">
+      <h2 class="heading-lg"><%= t('views.take_action.categories.travel_calculator.heading') %></h2>
+      <p><%= t('views.take_action.categories.travel_calculator.text') %></p>
+      <%= link_to(t('views.take_action.categories.travel_calculator.cta'), travel_calculator_path, class: 'button button-cta') %>
+    </div>
+    <div class="d:w-1/3 space-y-6 relative mx-auto w-3/4 m-lg:w-1/2 t:w-full max-w-lg">
+      <%= image_tag webpack_asset_path('images/shapes/blob_2.svg'), class: 'w-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0', alt: '' %>
+      <div class="relative w-80 left-1/2 transform -translate-x-1/2">
+        <p class="mb-3 font-bold">
+          <%= t('views.welcome.travel_calculator.emissions_if_traveling_by') %>
+        </p>
+
+        <div class="w-full space-y-2 text-sm">
+          <% [
+              {
+                key: 'flight',
+                width: 1,
+                co2: 25
+              },
+              {
+                key: 'car_petrol',
+                width: 0.76,
+                co2: 19
+              },
+              {
+                key: 'car_electric',
+                width: 0.4,
+                co2: 1
+              },
+              {
+                key: 'bus',
+                width: 0.236,
+                co2: 6
+              },
+              {
+                key: 'train',
+                width: 0,
+                co2: 0
+              }].each do |type| %>
+                <div class="flex flex-row items-center">
+                  <div class="w-32">
+                    <%= t("views.welcome.travel_calculator.#{type[:key]}") %>
+                  </div>
+                  <div class="text-left ml-2 relative">
+                    <div id="<%= type[:key] %>-background" class="bg-green-dark rounded-r py-1 w-2 h-8" style="width: <%= type[:width] * 100 %>px;"></div>
+                    <span class="pl-1 whitespace-nowrap absolute left-100 top-1/2 transform -translate-y-1/2">
+                      <span id="<%= type[:key] %>" class="font-bold"><%= type[:co2] %></span> kg CO2e
+                    <span>
+                  </div>
+                </div>
+              <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding space-y-6">
+  <h2 class="heading-lg"><%= t('views.take_action.categories.share.heading') %></h2>
+  <p class=""><%= t 'views.dashboard.share.text' %></p>
+  <div class="flex flex-col space-y-6 t:space-y-0 t:flex-row t:space-x-6">
+    <div class="t:w-1/2">
+      <div class="callout space-y-3">
+        <h4 class="heading text-center"><%= t('views.take_action.categories.share.result.heading') %></h4>
+        <p><%= t('views.take_action.categories.share.result.text') %></p>
+        <div class="text-center">
+          <a class="button button-cta block m-lg:inline-block t:block d:inline-block" href="<%= root_path %>" target="_blank" rel="noopener"><%= t('views.take_action.categories.share.result.cta') %></a>
+        </div>
+      </div>
+    </div>
+    <div class="t:w-1/2">
+      <div class="callout space-y-3">
+        <h4 class="heading text-center"><%= t('views.take_action.categories.share.assets.heading') %></h4>
+        <p><%= t('views.take_action.categories.share.assets.text') %></p>
+        <div class="text-center">
+          <a class="button button-cta block m-lg:inline-block t:block d:inline-block" href="<%= assets_path %>" target="_blank" rel="noopener"><%= t('views.take_action.categories.share.assets.cta') %></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding">
+  <div class="section-gutter t:flex items-center">
+    <div class="t:w-1/2 d:w-2/3 space-y-6">
+      <h2 class="heading-lg"><%= t('views.take_action.categories.petitions.heading') %></h2>
+      <p><%= t('views.take_action.categories.petitions.text') %></p>
+    </div>
+    <div class="t:w-2/5 d-lg:w-1/3">
+      <div class="relative mx-auto w-3/4 m-lg:w-1/2 t:w-full max-w-lg">
+        <%= image_tag webpack_asset_path('images/shapes/blob_3.svg'), class: 'w-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2', alt: '' %>
+        <%= image_tag webpack_asset_path('images/illustrations/sign_up.png'), class: 'w-full relative', alt: '' %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render "shared/footer" %>

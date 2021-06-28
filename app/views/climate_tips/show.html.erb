@@ -1,0 +1,162 @@
+<%= render "shared/header" %>
+
+<%
+  categories = [
+    {
+      heading: t('views.climate_tips.categories.diet.heading'),
+      tips: [
+        {
+          heading: t('views.climate_tips.categories.diet.item_1.heading'),
+          url: t('views.climate_tips.categories.diet.item_1.link'),
+          image_url: 'images/climate_tips/diet_footprint-1x.jpg',
+          image_url_2x: 'images/climate_tips/diet_footprint-2x.jpg'
+        },
+        {
+          heading: t('views.climate_tips.categories.diet.item_2.heading'),
+          url: t('views.climate_tips.categories.diet.item_2.link'),
+          image_url: 'images/climate_tips/diet_meat-1x.jpg',
+          image_url_2x: 'images/climate_tips/diet_meat-2x.jpg'
+        },
+        {
+          heading: t('views.climate_tips.categories.diet.item_3.heading'),
+          url: t('views.climate_tips.categories.diet.item_3.link'),
+          image_url: 'images/climate_tips/diet_reduce-1x.jpg',
+          image_url_2x: 'images/climate_tips/diet_reduce-2x.jpg'
+        },
+      ]
+    },
+    {
+      heading: t('views.climate_tips.categories.home.heading'),
+      tips: [
+        {
+          heading: t('views.climate_tips.categories.home.item_1.heading'),
+          url: t('views.climate_tips.categories.home.item_1.link'),
+          image_url: 'images/climate_tips/home_green-1x.jpg',
+          image_url_2x: 'images/climate_tips/home_green-2x.jpg'
+        },
+        {
+          heading: t('views.climate_tips.categories.home.item_2.heading'),
+          url: t('views.climate_tips.categories.home.item_2.link'),
+          image_url: 'images/climate_tips/home_footprint-1x.jpg',
+          image_url_2x: 'images/climate_tips/home_footprint-2x.jpg'
+        },
+        {
+          heading: t('views.climate_tips.categories.home.item_3.heading'),
+          url: t('views.climate_tips.categories.home.item_3.link'),
+          image_url: 'images/climate_tips/home_renovation-1x.jpg',
+          image_url_2x: 'images/climate_tips/home_renovation-2x.jpg'
+        },
+      ]
+    },
+    {
+      heading: t('views.climate_tips.categories.traveling.heading'),
+      tips: [
+        {
+          heading: t('views.climate_tips.categories.traveling.item_1.heading'),
+          url: t('views.climate_tips.categories.traveling.item_1.link'),
+          image_url: 'images/climate_tips/travel_distance-1x.jpg',
+          image_url_2x: 'images/climate_tips/travel_distance-2x.jpg'
+        },
+        {
+          heading: t('views.climate_tips.categories.traveling.item_2.heading'),
+          url: t('views.climate_tips.categories.traveling.item_2.link'),
+          image_url: 'images/climate_tips/travel_footprint-1x.jpg',
+          image_url_2x: 'images/climate_tips/travel_footprint-2x.jpg'
+        },
+        {
+          heading: t('views.climate_tips.categories.traveling.item_3.heading'),
+          url: t('views.climate_tips.categories.traveling.item_3.link'),
+          image_url: 'images/climate_tips/travel_emissions-1x.jpg',
+          image_url_2x: 'images/climate_tips/travel_emissions-2x.jpg'
+        },
+      ]
+    },
+    {
+      heading: t('views.climate_tips.categories.consumption.heading'),
+      tips: [
+        {
+          heading: t('views.climate_tips.categories.consumption.item_1.heading'),
+          url: t('views.climate_tips.categories.consumption.item_1.link'),
+          image_url: 'images/climate_tips/shopping_footprint-1x.jpg',
+          image_url_2x: 'images/climate_tips/shopping_footprint-2x.jpg'
+        },
+        {
+          heading: t('views.climate_tips.categories.consumption.item_2.heading'),
+          url: t('views.climate_tips.categories.consumption.item_2.link'),
+          image_url: 'images/climate_tips/shopping_secondhand-1x.jpg',
+          image_url_2x: 'images/climate_tips/shopping_secondhand-2x.jpg'
+        },
+        {
+          heading: t('views.climate_tips.categories.consumption.item_3.heading'),
+          url: t('views.climate_tips.categories.consumption.item_3.link'),
+          image_url: 'images/climate_tips/shopping_fashion-1x.jpg',
+          image_url_2x: 'images/climate_tips/shopping_fashion-2x.jpg'
+        },
+      ]
+    },
+    {
+      heading: t('views.climate_tips.categories.system_change.heading'),
+      tips: [
+        {
+          heading: t('views.climate_tips.categories.system_change.item_1.heading'),
+          url: t('views.climate_tips.categories.system_change.item_1.link'),
+          image_url: 'images/climate_tips/system_vote-1x.jpg',
+          image_url_2x: 'images/climate_tips/system_vote-2x.jpg'
+        },
+        {
+          heading: t('views.climate_tips.categories.system_change.item_2.heading'),
+          url: t('views.climate_tips.categories.system_change.item_2.link'),
+          image_url: 'images/climate_tips/system_civil-1x.jpg',
+          image_url_2x: 'images/climate_tips/system_civil-2x.jpg'
+        },
+      ]
+    },
+    {
+      heading: t('views.climate_tips.categories.carbon_footprint.heading'),
+      tips: [
+        {
+          heading: t('views.climate_tips.categories.carbon_footprint.item_1.heading'),
+          url: t('views.climate_tips.categories.carbon_footprint.item_1.link'),
+          image_url: 'images/climate_tips/carbon_my_footprint-1x.jpg',
+          image_url_2x: 'images/climate_tips/carbon_my_footprint-2x.jpg'
+        },
+        {
+          heading: t('views.climate_tips.categories.carbon_footprint.item_2.heading'),
+          url: t('views.climate_tips.categories.carbon_footprint.item_2.link'),
+          image_url: 'images/climate_tips/carbon_footprint-1x.jpg',
+          image_url_2x: 'images/climate_tips/carbon_footprint-2x.jpg'
+        },
+        {
+          heading: t('views.climate_tips.categories.carbon_footprint.item_3.heading'),
+          url: t('views.climate_tips.categories.carbon_footprint.item_3.link'),
+          image_url: 'images/climate_tips/carbon_consumption-1x.jpg',
+          image_url_2x: 'images/climate_tips/carbon_consumption-2x.jpg'
+        },
+      ]
+    },
+  ]
+%>
+
+<section class="section-padding">
+  <div class="space-y-3 t:w-1/2 d:w-2/3">
+    <h1 class="heading-xl"><%= t 'views.climate_tips.heading' %></h1>
+    <p><%= t 'views.climate_tips.text' %></p>
+  </div>
+</section>
+
+<% categories.each do |category| %>
+<section class="section-padding">
+  <div class="section-gutter space-y-6">
+      <div>
+        <h2 class="heading-lg"><%= category[:heading] %></h2>
+        <div class="section-gutter my-0 flex flex-col items-center t:flex-row t:items-stretch">
+          <% category[:tips].each do |tip| %>
+            <%= render 'shared/image_with_link', heading: tip[:heading], url: tip[:url], image_url: tip[:image_url], image_url_2x: tip[:image_url_2x] %>
+          <% end %>
+        </div>
+      </div>
+  </div>
+</section>
+<% end %>
+
+<%= render "shared/footer" %>

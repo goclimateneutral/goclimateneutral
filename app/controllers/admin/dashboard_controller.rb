@@ -13,6 +13,25 @@ module Admin
       @missing_fortnox_ids = missing_fortnox_ids.join(', ')
     end
 
+    def refresh_instagram_token
+      return unless ENV['INSTAGRAM_ACCESS_TOKEN']
+
+      instagram_response = Faraday.get(
+        "https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=#{
+          ENV['INSTAGRAM_ACCESS_TOKEN']
+        }"
+      )
+      message = if instagram_response.status == 200
+                  'Instagram token was successfully refreshed'
+                else
+                  'Oups, something went wrong! The Instagram token was not refreshed'
+                end
+      redirect_to(
+        admin_root_path,
+        notice: message
+      )
+    end
+
     private
 
     def missing_fortnox_ids

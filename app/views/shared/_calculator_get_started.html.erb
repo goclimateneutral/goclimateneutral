@@ -1,0 +1,18 @@
+<%= form_with url: new_lifestyle_footprint_path, method: :get, class: local_assigns[:class], id: local_assigns[:id] do |f| %>
+  <%= f.hidden_field 'campaign', value: 'know-your-carbon-footprint' %>
+  <div class="select-wrapper w-full m-lg:w-auto">
+    <label for="country" class="sr-only">Select your country</label>
+    <%= f.country_select :country,
+          {
+            include_blank: t('views.welcome.index.i_live_in'),
+            priority_countries: [
+              ISO3166::Country.new(request.headers['CF-IPCountry'])&.alpha2 || current_region.country_codes
+            ].flatten.compact
+          },
+          {
+            class: 'select',
+            required: ''
+          } %>
+  </div>
+  <%= f.submit t('views.welcome.index.get_started'), name: nil, class: 'button button-cta mt-2 m-lg:mt-0 m-lg:ml-2 w-full m-lg:w-auto' %>
+<% end %>

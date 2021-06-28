@@ -27,14 +27,6 @@ de:
           heading: 100% Transparenz
           body_text: Wir möchten, dass Sie sich sicher fühlen können, dass Ihr Geld eine positive Wirkung entfaltet. Sie können jederzeit unsere aktuellen Ausgaben auf unserer Webseite einsehen und somit nachvollziehen, wo jeder einzelne Cent landet.
           read_more: Lesen Sie mehr über unsere Transparenz
-        climate_tips:
-          heading: Klima-Tipps
-          clothes_last_longer: So hält Ihre Kleidung länger
-          reduce_carbon_footprint_food: Wie Sie Ihren CO2-Fußabdruck mit den richtigen Lebensmitteln reduzieren können
-          civil_disobedience: Ziviler Ungehorsam für das Klima?
-          climate_friendly_housing_cooperative: Klimafreundliche Wohnungsgenossenschaft - so können Sie helfen
-          climate_friendly_pension_saving: Fossilfreie Altersvorsorge
-          read_more: Mehr lesen
         community:
           heading: Lernen Sie unsere Community kennen
           people:
@@ -68,4 +60,4 @@ de:
         train: Zug
         subway: U-Bahn
         boat: Boot
-        offset_the_emissions_here: 'Kompensiere die Emissionen hier'
+        offset_the_emissions_here: 'Kompensiere die Emissionen'
