@@ -158,7 +158,19 @@ To use the React components, use our React helper for a smooth API.
 <%= react_component 'ComponentName', prop: 'propValue', secondProp: 'secondPropValue' %>
 ```
 
-It will only work with components that are placed in the correct folder. See previous section. 
+It will only work with components that are placed in the correct folder. See previous section.
+
+Please note that if you have a component named `MyComponent`, placed in a subfolder, such as `react_components/my_feature` - you still only specify the component name in the React helper, not the file structure.
+
+##### Using React components within a React component
+
+If you want to use a React component within another React component, you need to import it, and then it can be used freely within your component as usual. We have a Webpack alias for the `react_components` folder called `ReactComponents`, meaning the path is absolute, not relative. So to import `react_components/Button.jsx` from any React component:
+
+```
+import Button from 'ReactComponents/Button.jsx';
+```
+
+Don't forget the file extension!
 
 ## Getting started
 

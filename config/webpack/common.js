@@ -84,5 +84,10 @@ module.exports = {
     },
     moduleIds: 'hashed'
   },
-  devtool: 'source-map'
+  devtool: 'source-map',
+  resolve: {
+    alias: {
+      ReactComponents: path.resolve(__dirname, '/app/assets/main/react_components')
+    }
+  }
 };
