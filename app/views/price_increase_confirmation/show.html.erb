@@ -1,0 +1,20 @@
+<%= render "shared/header" %>
+
+<section class="section-padding space-y-12">
+  <% if @should_update_card %>
+    <div class="callout space-y-3 max-w-lg">
+      <h2 class="heading text-center">Whoops!</h2>
+      <p>We have noticed that we haven't offsetted your emisssons for a while. Please update your card to get started again.</p>
+      <a href="<%= user_subscription_path %>" class="button">Update your card</a> 
+    </div>
+  <% end %>
+  <div class="space-y-3 max-w-3xl">
+    <h1 class="heading-lg">Price increase</h1>
+    <p>We need to transition away from fossil fuels as fast as possible. This is the reason we at GoClimate spend so much time and energy trying to find the most efficient and high quality climate projects out there.</p>
+    <p>To keep the same high standard and keep working with Gold standard certified projects, <span class="font-bold">we implemented a price increase as of July 1st</span>, 2021. If you wish to review your subscription details, please visit <%= link_to 'your subscription settings', user_subscription_path, class: 'link' %></p>
+    <p>A big thank you for building a sustainable future with us at GoClimate!</p>
+  </div>
+</section>
+
+<%= render "shared/bottom_landscape" %>
+<%= render "shared/footer", skip_prefooter: true %>
