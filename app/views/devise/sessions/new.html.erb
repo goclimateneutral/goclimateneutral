@@ -7,7 +7,6 @@
     <p><%= description(t('log_in_to_see_how_we_are_doing')) %></p>
 
     <%= form_for resource, as: resource_name, url: session_path(resource_name), html: { class: 'space-y-4' } do |f| %>
-
       <label class="block">
         <strong class="block"><%=t 'email' %></strong>
         <%= f.email_field :email, autofocus: true, required: true, class: "input w-full" %>

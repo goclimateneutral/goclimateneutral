@@ -9,8 +9,6 @@
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put, class: 'space-y-4' }) do |f| %>
       <%= f.hidden_field :reset_password_token %>
 
-      <%= render "devise/shared/error_messages", resource: resource %>
-
       <label class="block">
         <strong class="block"><%=t 'password' %></strong>
         <%= f.password_field :password, autocomplete: "off", autofocus: true, required: true, class: "input w-full" %>
@@ -20,6 +18,8 @@
         <strong class="block"><%=t 'confirm_password' %></strong>
         <%= f.password_field :password_confirmation, autocomplete: "off", required: true, class: "input w-full" %>
       </label>
+
+      <%= render "devise/shared/error_messages", resource: resource %>
 
       <button type="submit" class="button button-cta w-full">
         <%=t 'change_password' %>

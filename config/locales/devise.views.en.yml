@@ -41,7 +41,7 @@ en:
       reset_password_instructions:
         action: Change my password
         greeting: Hello %{recipient}!
-        instruction: Someone has requested a link to change your password, and you can do this through the link below.
+        instruction: We have received a request to change your GoClimate password, and you can do this through the link below.
         instruction_2: If you didn't request this, please ignore this email.
         instruction_3: Your password won't change until you access the link above and create a new one.
         subject: Reset password instructions
@@ -111,6 +111,8 @@ en:
       unlocked: Your account has been unlocked successfully. Please sign in to continue.
   errors:
     messages:
+      something_wrong: Oups, something went wrong!
+      reset_password_token_expired_html: Your reset password link has expired. <a href=''>Please request a new one</a>.
       already_confirmed: was already confirmed, please try signing in
       confirmation_period_expired: needs to be confirmed within %{period}, please request a new one
       expired: has expired, please request a new one
