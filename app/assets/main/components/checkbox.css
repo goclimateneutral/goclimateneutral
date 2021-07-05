@@ -1,0 +1,50 @@
+.checkbox {
+  @apply flex flex-row items-center cursor-pointer;
+}
+
+.checkbox input {
+  @apply opacity-0 w-0 h-0;
+}
+
+.checkbox-input {
+  @apply
+    relative
+    inline-block
+    w-4 h-4
+    mr-1
+    bg-white
+    border border-primary rounded;
+}
+
+.checkbox-input::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 600;
+  content: '\f00c';
+  font-size: 0.8rem;
+
+  @apply 
+    absolute
+    left-0
+    top-0
+    right-0
+    bottom-0
+    leading-none
+    text-center
+    text-white
+    bg-green-accent
+    opacity-0
+}
+
+.checkbox input:checked + .checkbox-input {
+  @apply
+    border-green-accent
+    bg-green-accent;
+}
+
+.checkbox input:checked + .checkbox-input::before {
+  @apply opacity-100;
+}
+
+.checkbox input:focus + .checkbox-input {
+  @apply ring ring-primary ring-opacity-100;
+}
