@@ -8,37 +8,10 @@
     </button>
   <% end %>
   <div class="flex flex-col t:flex-row t:space-x-2">
-    <div class="flex flex-col t:w-2/3">
-      <% if local_assigns[:field].open_ended_type? %>
-        <input type="text" name="<%= "reported_datas[#{local_assigns[:field_index]}][value][#{local_assigns[:reported_data_index]}]" %>" class="input add-nested-fields-input-field" value="<%= local_assigns[:reported_data]&.value %>">
-      <% else %>
-        <% local_assigns[:field].alternatives&.reject(&:blank?)&.each do |alternative| %>
-          <label class="radio">
-            <input type="radio" name="<%= "reported_datas[#{local_assigns[:field_index]}][value][#{local_assigns[:reported_data_index]}]" %>" class="add-nested-fields-input-field" value="<%= alternative %>" <%= alternative == local_assigns[:reported_data]&.value ? 'checked' : '' %>>
-            <span class="radio-input"></span>
-            <%= alternative %>
-          </label>
-        <% end %>
-      <% end %>
-    </div>
-    <div class="flex flex-col t:w-1/3">
-      <% if local_assigns[:field].open_ended_type? %>
-        <div class="t:hidden">
-          <%= label_tag t('reported_datas.units'), nil, class: 'font-semibold' %>
-        </div>
-        <% BusinessCalculators::Unit.where(key: local_assigns[:field].units&.keys).order(updated_at: :asc).each_with_index do |unit, index| %>
-          <label class="radio">
-            <input type="radio" name="<%= "reported_datas[#{local_assigns[:field_index]}][unit][#{local_assigns[:reported_data_index]}]" %>" class="add-nested-fields-input-field" value="<%= unit.key %>" <%= unit.key == local_assigns[:reported_data]&.unit || local_assigns[:reported_data]&.unit.nil? && index == 0 && local_assigns[:field].open_ended_type? ? 'checked' : '' %>>
-            <span class="radio-input"></span>
-            <%= unit.name %>
-          </label>
-        <% end %>
-        <label class="radio">
-          <input type="radio" name="<%= "reported_datas[#{local_assigns[:field_index]}][unit][#{local_assigns[:reported_data_index]}]" %>" class="add-nested-fields-input-field" value="freeform" <%= local_assigns[:reported_data]&.unit == "freeform" || local_assigns[:field].units.blank? && local_assigns[:field].open_ended_type? ? 'checked' : '' %>>
-          <span class="radio-input"></span>
-          Other
-        </label>
-      <% end %>
-    </div>
+    <% if local_assigns[:field].open_ended_type? %>
+      <%= render "reported_datas/fields/open_ended", local_assigns: local_assigns %>
+    <% else %>
+      <%= render "reported_datas/fields/radio", local_assigns: local_assigns %>
+    <% end %>
   </div>
 </div>
