@@ -8,10 +8,13 @@
     </button>
   <% end %>
   <div class="flex flex-col t:flex-row t:space-x-2">
-    <% if local_assigns[:field].open_ended_type? %>
+    <% case local_assigns[:field].field_type %>
+    <% when 'open_ended' %>
       <%= render "reported_datas/fields/open_ended", local_assigns: local_assigns %>
-    <% else %>
+    <% when 'radio' %>
       <%= render "reported_datas/fields/radio", local_assigns: local_assigns %>
+    <% when 'checkbox' %>
+      <%= render "reported_datas/fields/checkbox", local_assigns: local_assigns %>
     <% end %>
   </div>
 </div>

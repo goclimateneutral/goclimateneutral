@@ -1,0 +1,9 @@
+<div class="flex flex-col items-start t:w-2/3">
+  <% local_assigns[:field].alternatives&.reject(&:blank?)&.each do |alternative| %>
+    <label class="checkbox">
+      <input type="checkbox" name="<%= "reported_datas[#{local_assigns[:field_index]}][value][#{local_assigns[:reported_data_index]}]" %>" class="add-nested-fields-input-field" value="<%= alternative %>" <%= alternative == local_assigns[:reported_data]&.value ? 'checked' : '' %>>
+      <span class="checkbox-input"></span>
+      <%= alternative %>
+    </label>
+  <% end %>
+</div>
