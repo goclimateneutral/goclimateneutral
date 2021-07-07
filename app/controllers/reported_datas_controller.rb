@@ -49,26 +49,49 @@ class ReportedDatasController < ApplicationController
     end
   end
 
+  
+
   def sort_and_clean_hash(hash)
-    hash.sort_by { |key, _value| key }.reject { |_key, value| value.blank? }.to_h
+    hash.reject { |_key, value| value.blank? }.sort_by { |key, _value| key }.to_h
   end
 
   def clean_param(param)
     new_param = {}
     param.each_key do |key|
-      new_param[key] = sort_and_clean_hash(param[key]).values
+      cleaned_hash = sort_and_clean_hash(param[key])
+      new_param[key] = cleaned_hash.values
     end
     new_param
   end
 
+  def clean_reported_data_params(params)
+    no_blank_values = params.reject { |param| param[:value].blank? || param[:value]&.values&.blank? }
+    new_params = []
+    no_blank_values.each do |param|
+      values_with_array = param[:value].select { |_key, value| value.is_a?(Array) }
+      values_with_array.values&.each do |value_array|
+        value_array.each do |value|
+          new_param = param.dup
+          new_param[:value] = { '0' => value }
+          new_params.push(clean_param(new_param))
+        end
+      end
+      pp = param[:value].reject { |_key, value| value.is_a?(Array) }
+      skip if pp.blank?
+      new_param = param.dup
+      new_param[:value] = pp
+      new_params.push(clean_param(param))
+    end
+    new_params
+  end
+
   def create_reported_datas_from_params
     reported_datas = []
-    reported_data_params.reject { |param| param[:value].blank? }.each do |param|
-      cleaned_param = clean_param(param)
-      cleaned_param['value'].each_with_index do |_value, index|
-        reported_data = ReportedData.where(id: cleaned_param['id'][index]).first_or_create
-        cleaned_param.each_key do |key|
-          reported_data[key] = cleaned_param[key][index]
+    clean_reported_data_params(reported_data_params).each do |param|
+      param['value'].each_with_index do |_value, index|
+        reported_data = ReportedData.where(id: param['id'][index]).first_or_create
+        param.each_key do |key|
+          reported_data[key] = param[key][index]
         end
         reported_datas.push(reported_data)
       end

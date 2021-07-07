@@ -52,7 +52,7 @@ module BusinessCalculators
     end
 
     def correct_field_type
-      allowed_types = %w[open_ended radio]
+      allowed_types = %w[open_ended radio checkbox]
       self.field_type = 'open_ended' unless field_type.present?
       errors.add(:field_type, "must be one of #{allowed_types.join(', ')}") unless allowed_types.include?(field_type)
     end
