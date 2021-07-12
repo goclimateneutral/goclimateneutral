@@ -41,7 +41,8 @@ LifestyleCalculator.create!(
 User.create!(
   id: 2,
   email: 'admin@example.com',
-  password: 'adminadmin'
+  password: 'adminadmin',
+  admin: true
 )
 
 ActiveRecord::Base.connection.set_pk_sequence!(:users, 2)

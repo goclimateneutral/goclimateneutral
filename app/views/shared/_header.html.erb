@@ -34,6 +34,13 @@
                     <li><%= link_to 'Dashboard', dashboard_path, class: 'link-ui' %></li>
                     <li><%= link_to t('views.shared.header.navigation.offset_flight'), new_flight_footprint_path , class: 'link-ui'%></li>
                     <li><%= link_to t('settings'), edit_user_registration_path , class: 'link-ui'%></li>
+                    <% if current_user.admin %>
+                      <hr class="hidden d:block d:dropdown-separator">
+                      <li><%= link_to admin_root_path, class: 'link-ui space-x-1' do %>
+                          <i class="fa fa-user-lock"></i><span>Admin</span>
+                        <% end %>
+                      </li>
+                    <% end %>
                     <hr class="hidden d:block d:dropdown-separator">
                     <li class="pt-4 d:pt-0"><%= link_to I18n.t('log_out'), destroy_user_session_path, method: :delete, class: 'button text-left' %></li> 
                   </ul> 
