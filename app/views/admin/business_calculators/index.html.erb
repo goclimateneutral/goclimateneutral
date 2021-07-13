@@ -14,7 +14,7 @@
 
   <tbody>
     <% @calculators.each do |calculator| %>
-      <tr>
+      <tr style="<%= calculator.archived? ? 'background: #f5f5f5;' : '' %>">
         <td><%= calculator.name %></td>
         <td><%= calculator.status %></td>
         <td><%= time_tag(calculator.updated_at, format: '%F %R') %></td>
