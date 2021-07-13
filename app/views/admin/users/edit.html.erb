@@ -1,0 +1,8 @@
+<h1>Editing user</h1>
+
+<%= render 'form', user: @user %>
+
+<hr>
+
+<%= link_to 'Show', [:admin, @user], class: 'btn btn-default' %>
+<%= link_to 'Back', admin_user_path, class: 'btn btn-link' %>

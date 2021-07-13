@@ -1,0 +1,44 @@
+<%= render 'admin/shared/notice_banner' %>
+
+<h1>User</h1>
+
+<dl class="dl-horizontal">
+  <dt>Id:</dt>
+  <dd><%= @user.id %></dd>
+  <dt>Email:</dt>
+  <dd><%= @user.email %></dd>
+  <dt>Admin:</dt>
+  <dd><%= @user.admin %></dd>
+  <dt>Created:</dt>
+  <dd><%= time_tag(@user.created_at) %></dd>
+  <dt>Last login:</dt>
+  <dd><%= time_tag(@user.last_sign_in_at) %></dd>
+  <hr>
+  <dt>Active subscription:</dt>
+  <dd><%= @user.active_subscription? %></dd>
+  <dt>1st subscription date:</dt>
+  <dd><%= time_tag(@user.first_subscription_created_at) %></dd>
+  <dt>Subscription price:</dt>
+  <dd><%= @user.subscription_price || '-' %></dd>
+  <dt>Subscription currency:</dt>
+  <dd><%= @user.subscription_currency || '-' %></dd>
+  <dt>Current footprint:</dt>
+  <dd><%= @user.current_lifestyle_footprint.total.tonnes.round(1) %> tonnes</dd>
+  <dt>Footprint coverage:</dt>
+  <dd><%= @user.footprint_coverage || 0 %>%</dd>
+  <hr>
+  <dt>User name:</dt>
+  <dd><%= @user.user_name || '-' %></dd>
+  <dt>Country:</dt>
+  <dd><%= @user.country || '-' %></dd>
+  <dt>Region:</dt>
+  <dd><%= @user.region&.name || '-' %></dd>
+  <hr>
+  <dt>Referred from:</dt>
+  <dd><%= @user.referred_from_id || '-' %></dd>
+</dl>
+
+<hr>
+
+<%= link_to 'Edit', edit_admin_user_path(@user), class: 'btn btn-default' %>
+<%= link_to 'Back', admin_users_path, class: 'btn btn-link' %>

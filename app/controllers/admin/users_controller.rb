@@ -18,7 +18,7 @@ module Admin
       if @user.update(user_params)
         redirect_to [:admin, @user], notice: 'User was successfully updated!'
       else
-        render :edit
+        render :edit, notice: 'Something went wrong!'
       end
     end
 
@@ -29,7 +29,7 @@ module Admin
     end
 
     def user_params
-      params.require(:user).permit(:admin)  
+      params.require(:user).permit(:admin)
     end
   end
 end

@@ -1,0 +1,31 @@
+<%= render 'admin/shared/notice_banner' %>
+
+<h1>Users</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Email</th>
+      <th>Admin</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.email %></td>
+        <td><%= user.admin %></td>
+        <td class="admin-actions">
+          <%= link_to 'Show', [:admin, user] %> &nbsp;
+          <%= link_to 'Edit', edit_admin_user_path(user) %> &nbsp;
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<hr>
+

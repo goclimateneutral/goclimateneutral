@@ -243,6 +243,7 @@ Rails.application.routes.draw do
     end
     resource :flight_batch, controller: 'flight_batch', only: [:new, :create]
     post '/refresh_instagram_token', to: 'dashboard#refresh_instagram_token'
+    resources :users, only: [:index, :show, :edit, :update]
   end
 
   # Errors
