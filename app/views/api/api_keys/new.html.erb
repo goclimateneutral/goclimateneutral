@@ -1,0 +1,77 @@
+<h1>Request API Key</h1>
+
+<p>If you'd like to use our flight footprint &amp; offsetting API, you need to request an API key.</p>
+
+<p>We're happy to provide API keys provided that you:</p>
+
+<ul>
+  <li>clearly display a link to GoClimate (https://www.goclimate.com/), in addition to any direct offsetting links retrieved through the API.</li>
+  <li>get in touch with us to reach a business agreement before using the API for any commercial purposes. Non-commercial use is OK without an additional agreement.</li>
+  <li>tell us when your project is live so we get to see what cool things you do with our API!</li>
+  <li>keep your API key private</li>
+</ul>
+
+<p>We also kindly ask you to <a href="https://www.goclimate.com/">become a GoClimate subscriber</a>.</p>
+
+<h2>API Key Request</h2>
+
+<%= form_with(model: [:api, @api_key], local: true) do |form| %>
+  <% if @api_key.errors.any? %>
+    <div>
+      <h2><%= pluralize(@api_key.errors.count, "error") %> prohibited this API key from being requested:</h2>
+
+      <ul>
+        <% @api_key.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: 'form-control', required: '' %>
+    <span class="help-block">Name of your organization or project.</span>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :usage_description, 'Project description' %>
+    <%= form.text_area :usage_description, class: 'form-control', required: '' %>
+    <span class="help-block">Please tell us what you're planning to build.</span>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :contact_name %>
+    <%= form.text_field :contact_name, class: 'form-control', required: '' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :contact_email %>
+    <%= form.email_field :contact_email, class: 'form-control', required: '' %>
+    <span class="help-block">We'll use this email to send your API key as well as any future updates regarding the API.</span>
+  </div>
+
+  <div class="form-group">
+    <p>Please agree to our terms:</p>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" required="">
+        I will only use my API keys for non-commercial use, unless an additional agreement with GoClimate is first made.
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" required="">
+        I will provide clear attribution and link to GoClimate in my project.
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" required="">
+        I will not share my API keys publicly or to any other organization.
+      </label>
+    </div>
+  </div>
+
+  <%= form.submit 'Request API key', class: 'btn btn-primary' %>
+<% end %>
