@@ -11,70 +11,90 @@
   </head>
 
   <body class="admin <%= controller_name + " " + controller_name + "-" + action_name %><% unless ENV['HEROKU_ENV'] == 'production' %> admin-non-production-stripes<% end %>">
-    <div class="row" style="width: 100%; height: 100vh;">
-      <div class="col-sm-2" style="height: 100%">
-        <nav class="navbar-inverse" style="height: 100%; overflow-y: auto">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <%= link_to 'GoClimate Admin', admin_root_path, class: 'navbar-brand' %>
-            </div>
-            <div id="navbar" class="collapse navbar-collapse">
-              <ul class="nav navbar-nav">
-                <li<% if controller_name == 'climate_report_invoices' %> class="active"<% end %>>
-                  <%= link_to 'Climate Report Invoices', admin_climate_report_invoices_path %></a>
-                </li>
-                <li<% if controller_name == 'invoices' %> class="active"<% end %>>
-                  <%= link_to 'Invoices', admin_invoices_path %></a>
-                </li>
-                <li<% if controller_name == 'projects' %> class="active"<% end %>>
-                  <%= link_to 'Projects', admin_projects_path %></a>
-                </li>
-                <li<% if controller_name == 'referral_codes' %> class="active"<% end %>>
-                  <%= link_to 'Referral codes', admin_referral_codes_path %></a>
-                </li>
-                <li<% if controller_name == 'flight_offsets' %> class="active"<% end %>>
-                  <%= link_to 'Flight offsets', admin_flight_offsets_path %></a>
-                </li>
-                <li<% if controller_name == 'api_keys' %> class="active"<% end %>>
-                  <%= link_to 'API Keys', admin_api_keys_path %></a>
-                </li>
-                <li<% if controller_name == 'flight_batch' %> class="active"<% end %>>
-                  <%= link_to 'Flight Batch', new_admin_flight_batch_path %></a>
-                </li>
-                <li<% if controller_name == 'lifestyle_calculators' %> class="active"<% end %>>
-                  <%= link_to 'Lifestyle Calculators', admin_lifestyle_calculators_path %></a>
-                </li>
-                <li<% if controller_name == 'business_calculators' %> class="active"<% end %>>
-                  <%= link_to 'Business Calculators', admin_business_calculators_path %></a>
-                </li>
-                <li<% if controller_name == 'units' %> class="active"<% end %>>
-                  <%= link_to 'Units', admin_units_path %></a>
-                </li>
-                <li<% if controller_name == 'organizations' %> class="active"<% end %>>
-                  <%= link_to 'Organizations', admin_organizations_path %></a>
-                </li>
-                <li<% if controller_name == 'climate_reports' %> class="active"<% end %>>
-                  <%= link_to 'Climate Reports', admin_climate_reports_path %></a>
-                </li>
-                <li class="<%= 'active' if controller_name == 'users'%>">
-                  <%= link_to 'Users', admin_users_path %></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-      <div class="col-sm-10">
-        <div class="container-fluid admin-main" style="height: 100vh; overflow-y: auto;">
-          <%= yield %>
-        </div>
-      </div>
+    <div class="w-full h-screen flex flex-row">
+      <nav class="w-60 bg-green-dark text-white overflow-y-auto">
+        <div class="py-3 px-6"><%= link_to 'GoClimate Admin', admin_root_path, class: 'text-xl font-semibold' %></div>
+        <ul class="flex flex-col">
+          <%
+            menu_items = [
+              {
+                controller_name: 'climate_report_invoices',
+                path: admin_climate_report_invoices_path,
+                title: 'Climate Report Invoices'
+              },
+              {
+                controller_name: 'invoices',
+                path: admin_invoices_path,
+                title: 'Invoices'
+              },
+              {
+                controller_name: 'projects',
+                path: admin_projects_path,
+                title: 'Projects'
+              },
+              {
+                controller_name: 'referral_codes',
+                path: admin_referral_codes_path,
+                title: 'Referral codes'
+              },
+              {
+                controller_name: 'flight_offsets',
+                path: admin_flight_offsets_path,
+                title: 'Flight offsets'
+              },
+              {
+                controller_name: 'api_keys',
+                path: admin_api_keys_path,
+                title: 'API Keys'
+              },
+              {
+                controller_name: 'flight_batch',
+                path: new_admin_flight_batch_path,
+                title: 'Flight Batch'
+              },
+              {
+                controller_name: 'lifestyle_calculators',
+                path: admin_lifestyle_calculators_path,
+                title: 'Lifestyle Calculators'
+              },
+              {
+                controller_name: 'business_calculators',
+                path: admin_business_calculators_path,
+                title: 'Business Calculators'
+              },
+              {
+                controller_name: 'units',
+                path: admin_units_path,
+                title: 'Units'
+              },
+              {
+                controller_name: 'organizations',
+                path: admin_organizations_path,
+                title: 'Organizations'
+              },
+              {
+                controller_name: 'climate_reports',
+                path: admin_climate_reports_path,
+                title: 'Climate Reports'
+              },
+              {
+                controller_name: 'users',
+                path: admin_users_path,
+                title: 'Users'
+              }
+            ]
+          %>
+          <% menu_items.each do |menu_item| %>
+            <li>
+              <%= link_to menu_item[:title], menu_item[:path], class: "w-full h-full block py-3 px-6 hover:bg-green-shade-1 #{'bg-green-shade-1 font-bold' if controller_name == menu_item[:controller_name]}" %></a>
+            </li>
+          <% end %>
+        </ul>
+      </nav>
+
+      <section class="relative flex-1 overflow-y-auto p-6">
+        <%= yield %>
+      </section>
     </div>
   </body>
 

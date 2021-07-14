@@ -13,10 +13,10 @@
 
   <%= form.hidden_field :area, value: params[:area] %>
   
-  <div class="form-group">
+  <div class="flex flex-col">
     <%= form.label :recipient_email %>
-    <%= form.text_field :email, value: @data_reporter&.email, class: 'form-control' %>
+    <%= form.text_field :email, value: @data_reporter&.email, class: 'input' %>
   </div>
 
-  <%= form.submit class: 'btn btn-primary' %>
+  <%= form.submit class: 'button button-cta' %>
 <% end %>

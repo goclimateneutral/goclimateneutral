@@ -1,6 +1,6 @@
 <%= render 'admin/shared/notice_banner' %>
 
-<h1>Projects</h1>
+<h1 class="heading-lg">Projects</h1>
 
 <dl>
   <dt>Total CO2</dt><dd><%= @total_co2 %> tonnes</dd>
@@ -35,10 +35,10 @@
         <td><%= project.country %></td>
         <td><%= project.offset_type %></td>
         <td><%= project.gold_standard_id %></td>
-        <td class="admin-actions">
-          <%= link_to 'Show', [:admin, project] %> &nbsp;
-          <%= link_to 'Edit', edit_admin_project_path(project) %> &nbsp;
-          <%= link_to 'Destroy', [:admin, project], method: :delete, data: { confirm: 'Are you sure?' } %>
+        <td class="whitespace-nowrap">
+          <%= link_to 'Show', [:admin, project], class: 'link-ui text-green-shade-2' %> &nbsp;
+          <%= link_to 'Edit', edit_admin_project_path(project), class: 'link-ui text-green-shade-2' %> &nbsp;
+          <%= link_to 'Destroy', [:admin, project], method: :delete, data: { confirm: 'Are you sure?' }, class: 'link-ui text-green-shade-2' %>
         </td>
       </tr>
     <% end %>
@@ -47,4 +47,4 @@
 
 <hr>
 
-<%= link_to 'New Project', new_admin_project_path, class: 'btn btn-default' %>
+<%= link_to 'New Project', new_admin_project_path, class: 'button' %>

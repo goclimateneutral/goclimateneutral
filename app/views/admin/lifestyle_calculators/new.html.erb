@@ -1,6 +1,6 @@
-<h1><%= @calculator.new_record? ? 'New' : 'Editing' %> lifestyle calculator draft</h1>
+<h1 class="heading-lg"><%= @calculator.new_record? ? 'New' : 'Editing' %> lifestyle calculator draft</h1>
 
-<%= form_with model: [:admin, @calculator], method: :post, url: admin_lifestyle_calculators_path do |f| %>
+<%= form_with model: [:admin, @calculator], method: :post, url: admin_lifestyle_calculators_path, class: 'space-y-6' do |f| %>
   <% @calculator.countries&.each do |country| %>
     <%= f.hidden_field :countries, value: country.alpha2.downcase, multiple: true %>
   <% end %>
@@ -20,9 +20,9 @@
     </div>
   <% end %>
 
-  <div class="form-group">
-    <%= f.label :countries, 'Countries' %>
-    <p class="form-control-static">
+  <div class="flex flex-col">
+    <%= f.label :countries, 'Countries', class: 'font-bold' %>
+    <p class="input-static">
       <% if @calculator.countries.present? %>
         <%= @calculator.countries.join(', ') %>
       <% else %>
@@ -31,18 +31,17 @@
     </p>
   </div>
 
-  <div class="form-group">
-    <%= f.label :car_distance_unit, 'Unit for distance traveled by car' %>
-    <%= f.select :car_distance_unit, ['km', 'miles'], {}, { class: 'form-control' } %>
+  <div class="flex flex-col">
+    <%= f.label :car_distance_unit, 'Unit for distance traveled by car', class: 'font-bold' %>
+    <div class="select-wrapper">
+      <%= f.select :car_distance_unit, ['km', 'miles'], {}, { class: 'select' } %>
+    </div>
   </div>
 
-  <div class="panel panel-info">
-    <div class="panel-heading">
-      <h3 class="panel-title">Values available in formulas</h3>
-    </div>
-    <div class="panel-body">
+  <div class="callout space-y-3">
+    <h3 class="heading">Values available in formulas</h3>
       <p>Values for all options are formulas, as well as category formulas below. In all of these fields, the following values are available to use.</p>
-      <ul>
+      <ul class="list-bullet">
         <li><code>region</code> = value associated with option that the user selected</li>
         <li><code>home</code> = value associated with option that the user selected</li>
         <li><code>home_area</code> = value associated with option that the user selected</li>
@@ -62,7 +61,6 @@
         <li><code>car_distance</code> = value entered by user
         <li><code>flight_hours</code> = value entered by user
       </ul>
-    </div>
   </div>
 
   <%= render 'options_field', field: 'region' %>
@@ -81,57 +79,57 @@
 
   <%= render 'options_field', field: 'car_type' %>
 
-  <div class="form-group">
-    <%= f.label :housing_formula %>
+  <div class="flex flex-col">
+    <%= f.label :housing_formula, class: 'font-bold' %>
     <div class="input-group">
       <div class="input-group-addon">=</div>
-      <%= f.text_field :housing_formula, class: 'form-control' %>
+      <%= f.text_field :housing_formula, class: 'input' %>
     </div>
   </div>
 
-  <div class="form-group">
-    <%= f.label :food_formula %>
+  <div class="flex flex-col">
+    <%= f.label :food_formula, class: 'font-bold' %>
     <div class="input-group">
       <div class="input-group-addon">=</div>
-      <%= f.text_field :food_formula, class: 'form-control' %>
+      <%= f.text_field :food_formula, class: 'input' %>
     </div>
   </div>
 
-  <div class="form-group">
-    <%= f.label :car_formula %>
+  <div class="flex flex-col">
+    <%= f.label :car_formula, class: 'font-bold' %>
     <div class="input-group">
       <div class="input-group-addon">=</div>
-      <%= f.text_field :car_formula, class: 'form-control' %>
+      <%= f.text_field :car_formula, class: 'input' %>
     </div>
   </div>
 
-  <div class="form-group">
-    <%= f.label :flights_formula %>
+  <div class="flex flex-col">
+    <%= f.label :flights_formula, class: 'font-bold' %>
     <div class="input-group">
       <div class="input-group-addon">=</div>
-      <%= f.text_field :flights_formula, class: 'form-control' %>
+      <%= f.text_field :flights_formula, class: 'input' %>
     </div>
   </div>
 
-  <div class="form-group">
-    <%= f.label :consumption_formula %>
+  <div class="flex flex-col">
+    <%= f.label :consumption_formula, class: 'font-bold' %>
     <div class="input-group">
       <div class="input-group-addon">=</div>
-      <%= f.text_field :consumption_formula, class: 'form-control' %>
+      <%= f.text_field :consumption_formula, class: 'input' %>
     </div>
   </div>
 
-  <div class="form-group">
-    <%= f.label :public_formula %>
+  <div class="flex flex-col">
+    <%= f.label :public_formula, class: 'font-bold' %>
     <div class="input-group">
       <div class="input-group-addon">=</div>
-      <%= f.text_field :public_formula, class: 'form-control' %>
+      <%= f.text_field :public_formula, class: 'input' %>
     </div>
   </div>
 
-  <%= f.submit 'Update draft', class: 'btn btn-primary' %>
+  <%= f.submit 'Update draft', class: 'button button-cta' %>
 <% end %>
 
-<hr>
-
-<%= link_to 'Back', admin_lifestyle_calculators_path, class: 'btn btn-link' %>
+<div class="mt-3">
+  <%= link_to 'Back', admin_lifestyle_calculators_path, class: 'link' %>
+</div>

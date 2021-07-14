@@ -13,12 +13,12 @@
 
   <%= form.hidden_field :category_order, 'data-target': 'item-order.order' %>
 
-  <div class="form-group">
+  <div class="flex flex-col">
     <%= form.label :name %>
-    <%= form.text_field :name, class: 'form-control' %>
+    <%= form.text_field :name, class: 'input' %>
   </div>
 
-  <div class="form-group">
+  <div class="flex flex-col">
     <%= form.check_box :survey %>
     <%= form.label :survey %>
   </div>
@@ -33,7 +33,7 @@
           <div class="row" style="margin-bottom: 0.5em;">
             <div class="col-sm-1">
               <%= category_fields.label :position %>
-              <select class="form-control input-lg" data-target="item-order.select" data-action="item-order#move" data-position="<%= category_index %>">
+              <select class="input input-lg" data-target="item-order.select" data-action="item-order#move" data-position="<%= category_index %>">
                 <% (1..@calculator.categories.length).to_a.each do |number| %>
                   <option value="<%= number %>" <%= number - 1 == category_index ? 'selected' : '' %>><%= number %></option>
                 <% end %>
@@ -41,7 +41,7 @@
             </div>
             <div class="col-sm-10">
               <%= category_fields.label :category_name %>
-              <%= category_fields.text_field :name, class: 'form-control input-lg', style: 'font-weight: 600;' %>
+              <%= category_fields.text_field :name, class: 'input input-lg', style: 'font-weight: 600;' %>
             </div>
             <div class="col-sm-1">
               <%= category_fields.label :delete %>
@@ -52,7 +52,7 @@
           <div class="row" style="padding-bottom: 1em; margin-bottom: 0.5em; border-bottom: 1px dotted lightgray">
             <div class="col-sm-11">
               <%= category_fields.label :description %>
-              <%= category_fields.text_field :description, class: 'form-control' %>
+              <%= category_fields.text_field :description, class: 'input' %>
             </div>
             <div class="col-sm-1">
               </div>
@@ -66,7 +66,7 @@
                   <%= field_fields.hidden_field :id %>
                   <div class="col-sm-1">
                     <%= field_fields.label :position %>
-                    <select class="form-control" data-target="item-order.select" data-action="item-order#move" data-position="<%= field_index %>">
+                    <select class="input" data-target="item-order.select" data-action="item-order#move" data-position="<%= field_index %>">
                       <% (1..category.fields.length).to_a.each do |number| %>
                         <option value="<%= number %>" <%= number - 1 == field_index ? 'selected' : '' %>><%= number %></option>
                       <% end %>
@@ -85,20 +85,20 @@
 
     <%= fields_for "business_calculator[categories_attributes][#{@calculator.categories.length}]", BusinessCalculators::CalculatorCategory.new do |category_fields| %>
       <div class="hidden" data-target="add-nested-fields.template">
-        <%= category_fields.text_field :name, class: 'form-control input-lg add-nested-fields-input-field', 'data-target': 'add-nested-fields.templateInput', style: 'margin: 1em 0; font-weight: 600;', placeholder: 'Category name ...'  %>
+        <%= category_fields.text_field :name, class: 'input input-lg add-nested-fields-input-field', 'data-target': 'add-nested-fields.templateInput', style: 'margin: 1em 0; font-weight: 600;', placeholder: 'Category name ...'  %>
       </div>
     <% end %>
 
     <div data-target="add-nested-fields.destination" style="margin-top: 2em"></div>
 
     <div style="margin: 1.5em 0">
-      <button type="button" class="btn btn-default" data-action="add-nested-fields#cloneToDestinationWithFirstNumberIncremented">
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add category
+      <button type="button" class="button" data-action="add-nested-fields#cloneToDestinationWithFirstNumberIncremented">
+        <i class="fas fa-plus" aria-hidden="true"></i> Add category
       </button>
     </div>
   </div>
 
   <p>
-    <%= form.submit class: 'btn btn-primary' %>
+    <%= form.submit class: 'button button-cta' %>
   </p>
 <% end %>

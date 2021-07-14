@@ -1,29 +1,29 @@
-  <div class="form-group">
-    <%= label_tag "#{field}_options".to_sym %>
+  <div class="flex flex-col space-y-1">
+    <%= label_tag "#{field}_options".to_sym, nil, class: 'font-bold' %>
     <% @calculator.send("#{field}_options")&.each do |option| %>
       <div>
-        <%= text_field_tag "#{field}_options_keys[]", option['key'], class: 'form-control', style: 'max-width: 300px; display: inline-block; vertical-align: top;' %>
-        <div style="display: inline-block; width: 300px;">
+        <%= text_field_tag "#{field}_options_keys[]", option['key'], class: 'input inline-block align-top', style: 'max-width: 300px;' %>
+        <div class="inline-block" style="width: 300px;">
           <div class="input-group">
             <div class="input-group-addon">=</div>
-            <%= text_field_tag "#{field}_options_values[]", option['formula'], class: 'form-control' %>
+            <%= text_field_tag "#{field}_options_values[]", option['formula'], class: 'input' %>
           </div>
         </div>
       </div>
     <% end %>
-    <div data-controller="template-element">
+    <div data-controller="template-element" class="space-y-1">
       <div class="hidden" data-target="template-element.template">
-        <%= text_field_tag "#{field}_options_keys[]", '', class: 'form-control', style: 'max-width: 300px; display: inline-block; vertical-align: top;' %>
-        <div style="display: inline-block; width: 300px;">
+        <%= text_field_tag "#{field}_options_keys[]", '', class: 'input inline-block align-top', style: 'max-width: 300px;' %>
+        <div class="inline-block" style="width: 300px;">
           <div class="input-group">
             <div class="input-group-addon">=</div>
-            <%= text_field_tag "#{field}_options_values[]", '', class: 'form-control' %>
+            <%= text_field_tag "#{field}_options_values[]", '', class: 'input' %>
           </div>
         </div>
       </div>
-      <div data-target="template-element.destination"></div>
-      <button type="button" class="btn btn-default" data-action="template-element#cloneToDestination">
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add option
+      <div data-target="template-element.destination" class="space-y-1"></div>
+      <button type="button" class="button" data-action="template-element#cloneToDestination">
+        <i class="fas fa-plus" aria-hidden="true"></i> Add option
       </button>
     </div>
   </div>

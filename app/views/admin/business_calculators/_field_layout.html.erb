@@ -1,12 +1,12 @@
 <div data-controller="units-and-question-types">
   <div class="<%= local_assigns[:hide_delete] ? 'col-sm-6' : 'col-sm-5' %>">
     <%= local_assigns[:fields].label :question, class: local_assigns[:label_class] %>
-    <%= local_assigns[:fields].text_field :label, class: "form-control #{local_assigns[:input_class]}" %>
+    <%= local_assigns[:fields].text_field :label, class: "input #{local_assigns[:input_class]}" %>
   </div>
   <div class="col-sm-3" data-controller="add-alternatives">
     <div data-target="units-and-question-types.units">
       <%= local_assigns[:fields].label :allowed_units, class: local_assigns[:label_class] %>
-      <%= local_assigns[:fields].select :units, options_from_collection_for_select(@units, :key, :name, local_assigns[:fields].object&.units&.keys), {}, class: "form-control #{local_assigns[:input_class]}", multiple: true %>
+      <%= local_assigns[:fields].select :units, options_from_collection_for_select(@units, :key, :name, local_assigns[:fields].object&.units&.keys), {}, class: "input #{local_assigns[:input_class]}", multiple: true %>
     </div>
     <div class="hidden" data-target="units-and-question-types.alternatives">
       <%= local_assigns[:fields].label :alternatives, class: local_assigns[:label_class] %>
@@ -18,15 +18,15 @@
         <% end %>
       </div>
       <div>
-        <input type="text" class="form-control <%= local_assigns[:input_class] %>" style="display: inline-block; width: 80%" data-target="add-alternatives.input" data-action="submit->add-alternatives#add">
-        <%= local_assigns[:fields].button 'Add', type: 'button', class: 'form-control', style: 'display: inline-block; width: 18%', 'data-action': 'add-alternatives#add' %>
+        <input type="text" class="input <%= local_assigns[:input_class] %>" style="display: inline-block; width: 80%" data-target="add-alternatives.input" data-action="submit->add-alternatives#add">
+        <%= local_assigns[:fields].button 'Add', type: 'button', class: 'input', style: 'display: inline-block; width: 18%', 'data-action': 'add-alternatives#add' %>
       </div>
     </div>
   </div>
   <div class="col-sm-2">
     <div>
       <%= local_assigns[:fields].label :question_type, class: local_assigns[:label_class] %>
-      <%= local_assigns[:fields].select :field_type, options_for_select([['Open ended', 'open_ended'], ['Choose one alternative', 'radio']], local_assigns[:fields].object&.field_type), {}, class: "form-control #{local_assigns[:input_class]}", 'data-target': 'units-and-question-types.fieldType', 'data-action': 'units-and-question-types#toggle' %>
+      <%= local_assigns[:fields].select :field_type, options_for_select([['Open ended', 'open_ended'], ['Choose one alternative', 'radio']], local_assigns[:fields].object&.field_type), {}, class: "input #{local_assigns[:input_class]}", 'data-target': 'units-and-question-types.fieldType', 'data-action': 'units-and-question-types#toggle' %>
     </div>
     <div style="margin-top: 1em;">
       <label>

@@ -1,6 +1,6 @@
 <%= render 'admin/shared/notice_banner' %>
 
-<h1>Reported data</h1>
+<h1 class="heading-lg">Reported data</h1>
 <% if @report %>
   <h3>For report: <%= link_to @report.title, [:admin, @report] %></h3>
 <% end %>
@@ -57,7 +57,7 @@
         <td><%= data[:reported_data].unit %></td>
         <td><%= BusinessCalculators::CalculatorField.find(data[:reported_data].calculator_field_id).multiple_answers %></td>
         <td><%= time_tag(data[:reported_data].created_at, format: '%F %R') %></td>
-        <td class="admin-actions">
+        <td class="whitespace-nowrap">
           <%= link_to 'Show', admin_reported_data_path(data[:reported_data]) %> &nbsp;
           <%= link_to 'Destroy', admin_reported_data_path(data[:reported_data]), method: :delete, data: { confirm: 'Are you sure?' } %>
         </td>
@@ -66,4 +66,4 @@
   </tbody>
 </table>
 
-<%= link_to 'Export data to .csv', export_to_csv_admin_reported_datas_path(params.permit(:report_id, :report_area_id)), class: 'btn btn-default' %>
+<%= link_to 'Export data to .csv', export_to_csv_admin_reported_datas_path(params.permit(:report_id, :report_area_id)), class: 'button' %>

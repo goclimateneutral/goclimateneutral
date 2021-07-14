@@ -1,7 +1,9 @@
-<h1>New Invoice</h1>
+<div class="space-y-6">
+  <h1 class="heading-lg">New Invoice</h1>
 
-<%= render 'form', invoice: @invoice %>
+  <%= render 'form', invoice: @invoice %>
 
-<hr>
-
-<%= link_to 'Back', admin_invoices_path, class: 'btn btn-link' %>
+  <div>
+    <%= link_to 'Back', admin_invoices_path, class: 'link' %>
+  </div>
+</div>

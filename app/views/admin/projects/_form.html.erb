@@ -1,111 +1,115 @@
 <%= form_for([:admin, project]) do |f| %>
-  <% if project.errors.any? %>
-    <div>
-      <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+  <div class="space-y-3">
+    <% if project.errors.any? %>
+      <div>
+        <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
 
-      <ul>
-      <% project.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% project.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="flex flex-col">
+      <%= f.label :name, class: 'font-bold' %>
+      <%= f.text_field :name, class: 'input' %>
     </div>
-  <% end %>
 
-  <div class="form-group">
-    <%= f.label :name %>
-    <%= f.text_field :name, class: 'form-control' %>
+    <div class="flex flex-col">
+      <%= f.label :short_description, class: 'font-bold' %>
+      <%= f.text_area :short_description, class: 'input' %>
+      <span class="block text-sm text-gray-shade-2">Shown along with a read more link that leads to the blog URL</span>
+    </div>
+
+    <div class="flex flex-col">
+      <%= f.label :cdm_url, class: 'font-bold' %>
+      <%= f.text_field :cdm_url, class: 'input' %>
+    </div>
+
+    <div class="flex flex-col">
+      <%= f.label :gold_standard_url, class: 'font-bold' %>
+      <%= f.text_field :gold_standard_url, class: 'input' %>
+    </div>
+
+    <div class="flex flex-col">
+      <%= f.label :image_url, class: 'font-bold' %>
+      <%= f.text_field :image_url, class: 'input' %>
+    </div>
+
+    <div class="flex flex-col">
+      <%= f.label :blog_url, class: 'font-bold' %>
+      <%= f.text_field :blog_url, class: 'input' %>
+    </div>
+
+    <div class="flex flex-col">
+      <%= f.label :longitude, class: 'font-bold' %>
+      <%= f.text_field :longitude, class: 'input' %>
+    </div>
+
+    <div class="flex flex-col">
+      <%= f.label :latitude, class: 'font-bold' %>
+      <%= f.text_field :latitude, class: 'input' %>
+    </div>
+
+    <div class="flex flex-col">
+      <p><%= f.label :co2e, class: 'font-bold' %> (in kg CO2e)</p>
+      <%= f.number_field :co2e, value: f.object.co2e&.co2e, class: 'input' %>
+    </div>
+
+    <div class="flex flex-col">
+      <%= f.label :cost_in_sek, 'Cost in SEK (including VAT)', class: 'font-bold' %>
+      <%= f.number_field :cost_in_sek, class: 'input' %>
+    </div>
+
+    <div class="flex flex-col">
+      <%= f.label :date_bought, class: 'font-bold' %>
+      <%= f.date_field :date_bought, class: 'input' %>
+    </div>
+
+    <div class="flex flex-col">
+      <%= f.label :country, class: 'font-bold' %>
+      <%= f.text_field :country, class: 'input' %>
+    </div>
+
+    <div class="flex flex-col">
+      <%= f.label :offset_type, class: 'font-bold' %>
+      <div class="select-wrapper">
+        <%= f.select :offset_type, ['GS', 'CDM+GS', 'CDM'], { include_blank: true }, class: 'select' %>
+      </div>
+    </div>
+
+    <div class="flex flex-col">
+      <%= f.label :certificate_url, class: 'font-bold' %>
+      <%= f.text_field :certificate_url, class: 'input' %>
+    </div>
+
+    <div class="flex flex-col">
+      <%= f.label :invoice_url, class: 'font-bold' %>
+      <%= f.text_field :invoice_url, class: 'input' %>
+    </div>
+
+    <div class="flex flex-col">
+      <%= f.label :gold_standard_id, 'Gold Standard Id', class: 'font-bold' %>
+      <%= f.text_field :gold_standard_id, class: 'input' %>
+    </div>
+
+    <div class="flex flex-col">
+      <%= f.label :cdm_id, 'CDM Id', class: 'font-bold' %>
+      <%= f.text_field :cdm_id, class: 'input' %>
+    </div>
+
+    <div class="flex flex-col">
+      <%= f.label :start_block, class: 'font-bold' %>
+      <%= f.text_field :start_block, class: 'input' %>
+    </div>
+
+    <div class="flex flex-col">
+      <%= f.label :end_block, class: 'font-bold' %>
+      <%= f.text_field :end_block, class: 'input' %>
+    </div>
+
+    <%= f.submit class: 'button button-cta' %>
   </div>
-
-  <div class="form-group">
-    <%= f.label :short_description %>
-    <%= f.text_area :short_description, class: 'form-control' %>
-    <span class="help-block">Shown along with a read more link that leads to the blog URL</span>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :cdm_url %>
-    <%= f.text_field :cdm_url, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :gold_standard_url %>
-    <%= f.text_field :gold_standard_url, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :image_url %>
-    <%= f.text_field :image_url, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :blog_url %>
-    <%= f.text_field :blog_url, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :longitude %>
-    <%= f.text_field :longitude, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :latitude %>
-    <%= f.text_field :latitude, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :co2e %> (in kg CO2e)
-    <%= f.number_field :co2e, value: f.object.co2e&.co2e, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :cost_in_sek, 'Cost in SEK (including VAT)' %>
-    <%= f.number_field :cost_in_sek, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :date_bought %>
-    <%= f.date_field :date_bought, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :country %>
-    <%= f.text_field :country, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :offset_type %>
-    <%= f.select :offset_type, ['GS', 'CDM+GS', 'CDM'], { include_blank: true }, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :certificate_url %>
-    <%= f.text_field :certificate_url, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :invoice_url %>
-    <%= f.text_field :invoice_url, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :gold_standard_id, 'Gold Standard Id' %>
-    <%= f.text_field :gold_standard_id, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :cdm_id, 'CDM Id' %>
-    <%= f.text_field :cdm_id, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :start_block %>
-    <%= f.text_field :start_block, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :end_block %>
-    <%= f.text_field :end_block, class: 'form-control' %>
-  </div>
-
-  <%= f.submit class: 'btn btn-primary' %>
 <% end %>

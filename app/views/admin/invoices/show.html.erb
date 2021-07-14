@@ -1,13 +1,13 @@
 <%= render 'admin/shared/notice_banner' %>
 
 <% if @previous.present? %>
-  <%= link_to '← Previous', admin_invoice_path(@previous), class: 'btn btn-default' %>
+  <%= link_to '← Previous', admin_invoice_path(@previous), class: 'button' %>
 <% end %>
 <% if @next.present? %>
-  <%= link_to 'Next →', admin_invoice_path(@next), class: 'btn btn-default' %>
+  <%= link_to 'Next →', admin_invoice_path(@next), class: 'button' %>
 <% end %>
 
-<h1>Invoice</h1>
+<h1 class="heading-lg">Invoice</h1>
 
 <dl class="dl-horizontal">
   <dt>ID:</dt>
@@ -42,10 +42,10 @@
 </dl>
 
 <hr>
-<%= link_to 'Edit', edit_admin_invoice_path(@invoice), class: 'btn btn-default' %>
+<%= link_to 'Edit', edit_admin_invoice_path(@invoice), class: 'button' %>
 <% if @invoice.project.present? %>
-  <%= link_to 'Download certificate (sv)', admin_invoice_certificates_path(type: 'invoice', id: @invoice.id, format: :pdf, locale: :sv), class: 'btn btn-default' %>
-  <%= link_to 'Download certificate (en)', admin_invoice_certificates_path(type: 'invoice', id: @invoice.id, format: :pdf, locale: :en), class: 'btn btn-default' %>
-  <%= link_to 'Send certificate with e-mail (sv)', send_email_admin_invoice_certificates_path(type: 'invoice', id: @invoice.id), class: 'btn btn-default', method: :post %>
+  <%= link_to 'Download certificate (sv)', admin_invoice_certificates_path(type: 'invoice', id: @invoice.id, format: :pdf, locale: :sv), class: 'button' %>
+  <%= link_to 'Download certificate (en)', admin_invoice_certificates_path(type: 'invoice', id: @invoice.id, format: :pdf, locale: :en), class: 'button' %>
+  <%= link_to 'Send certificate with e-mail (sv)', send_email_admin_invoice_certificates_path(type: 'invoice', id: @invoice.id), class: 'button', method: :post %>
 <% end %>
-<%= link_to 'Back', admin_invoices_path, class: 'btn btn-link' %>
+<%= link_to 'Back', admin_invoices_path, class: 'link' %>

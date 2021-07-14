@@ -7,6 +7,7 @@
 @import 'components/collapse.css';
 @import 'components/credit-card.css';
 @import 'components/divider.css';
+@import 'components/dl.css';
 @import 'components/dropdown.css';
 @import 'components/headings.css';
 @import 'components/input.css';
@@ -17,6 +18,7 @@
 @import 'components/section_gutter.css';
 @import 'components/section_padding.css';
 @import 'components/select.css';
+@import 'components/table.css';
 @import 'components/tabs.css';
 @import 'components/toggler.css';
 @import 'components/tooltip.css';

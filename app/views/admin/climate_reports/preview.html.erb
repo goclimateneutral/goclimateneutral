@@ -1,4 +1,4 @@
-<h1>Preview of data collection for <%= Organization.find(@report.organization_id).name %></h1>
+<h1 class="heading-lg">Preview of data collection for <%= Organization.find(@report.organization_id).name %></h1>
 
 <% @report.areas.each do |area| %>
   <h3><%= area.title %></h3>
@@ -8,11 +8,11 @@
       <div class="row">
         <div class="col-sm-3">
           <%= label_tag field.label %>
-          <input type="text" class="form-control">
+          <input type="text" class="input">
         </div>
         <div class="col-sm-3">
           <%= label_tag 'Unit' %>
-          <select class="form-control" size="<%= field.units&.length + 1 %>">
+          <select class="input" size="<%= field.units&.length + 1 %>">
             <% field.units&.each_key do |key| %>
               <% unit = BusinessCalculators::Unit.find_by(key: key) %>
               <!-- maybe value should be unit.id instead? -->
@@ -27,6 +27,6 @@
 <% end %>
 
 <div style="margin-top: 3em">
-  <%= link_to 'Edit', edit_admin_climate_report_path(@report), class: 'btn btn-default' %>
-  <%= link_to 'Back', admin_climate_reports_path, class: 'btn btn-link' %>
+  <%= link_to 'Edit', edit_admin_climate_report_path(@report), class: 'button' %>
+  <%= link_to 'Back', admin_climate_reports_path, class: 'link' %>
 </div>

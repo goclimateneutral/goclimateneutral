@@ -12,39 +12,39 @@
   <% end %>
 
   <%= form.hidden_field :area, value: params[:area] %>
-  <div class="form-group">
+  <div class="flex flex-col">
     <%= form.label :recipient_email %>
-    <%= form.text_field :email, value: @data_reporter&.email, required: true, class: 'form-control' %>
-    <span class="help-block"><%= local_assigns[:help_text] %></span>
+    <%= form.text_field :email, value: @data_reporter&.email, required: true, class: 'input' %>
+    <span class="block text-sm text-gray-shade-2"><%= local_assigns[:help_text] %></span>
   </div>
 
-  <div class="form-group">
+  <div class="flex flex-col">
     <%= form.label :subject %> (optional)
-    <%= form.text_field :subject, class: 'form-control' %>
-    <span class="help-block">If left blank, a default subject will be used</span>
+    <%= form.text_field :subject, class: 'input' %>
+    <span class="block text-sm text-gray-shade-2">If left blank, a default subject will be used</span>
   </div>
 
-  <div class="form-group">
+  <div class="flex flex-col">
     <%= form.label :message %> (optional)
-    <%= form.text_area :message, class: 'form-control' %>
-    <span class="help-block">If left blank, default email text will be used</span>
+    <%= form.text_area :message, class: 'input' %>
+    <span class="block text-sm text-gray-shade-2">If left blank, default email text will be used</span>
   </div>
 
-  <div class="form-group">
+  <div class="flex flex-col">
     <%= form.label :sender %>
-    <%= form.select :sender, %w[Alexandra Tove], {}, class: 'form-control' %>
+    <%= form.select :sender, %w[Alexandra Tove], {}, class: 'input' %>
   </div>
 
-  <div class="form-group">
+  <div class="flex flex-col">
     <%= form.label :language %>
-    <%= form.select :locale, [%w[English en], %w[Swedish sv]], {}, class: 'form-control' %>
+    <%= form.select :locale, [%w[English en], %w[Swedish sv]], {}, class: 'input' %>
   </div>
 
-  <div class="form-group">
+  <div class="flex flex-col">
     <%= form.label :send_email %>
     <%= form.check_box :send_email, { checked: true } %>
-    <span class="help-block">If unchecked, no email for the created request(s) will be sent. Useful if you create multiple data requests to one person and don't want to overwhelm them with multiple emails.</span>
+    <span class="block text-sm text-gray-shade-2">If unchecked, no email for the created request(s) will be sent. Useful if you create multiple data requests to one person and don't want to overwhelm them with multiple emails.</span>
   </div>
 
-  <%= form.submit class: 'btn btn-primary' %>
+  <%= form.submit class: 'button button-cta' %>
 <% end %>

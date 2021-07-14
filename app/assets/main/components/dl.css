@@ -1,0 +1,16 @@
+dl dt {
+  @apply font-bold
+}
+
+dl.dl-horizontal dt {
+  @apply
+    w-60
+    float-left clear-left
+    text-right
+    overflow-hidden overflow-ellipsis
+    whitespace-nowrap;
+}
+dl.dl-horizontal dd {
+  @apply
+    ml-64 leading-6;
+}

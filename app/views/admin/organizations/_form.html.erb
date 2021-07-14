@@ -11,10 +11,10 @@
     </div>
   <% end %>
 
-  <div class="form-group">
+  <div class="flex flex-col">
     <%= form.label :name %>
-    <%= form.text_field :name, class: 'form-control' %>
+    <%= form.text_field :name, class: 'input' %>
   </div>
 
-  <%= form.submit class: 'btn btn-primary' %>
+  <%= form.submit class: 'button button-cta' %>
 <% end %>

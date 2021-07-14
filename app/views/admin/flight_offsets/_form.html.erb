@@ -1,30 +1,32 @@
 <%= form_for([:admin, flight_offset]) do |f| %>
-  <% if flight_offset.errors.any? %>
-    <div>
-      <h2><%= pluralize(flight_offset.errors.count, "error") %> prohibited this flight offset from being saved:</h2>
+  <div class="space-y-3">
+    <% if flight_offset.errors.any? %>
+      <div>
+        <h2><%= pluralize(flight_offset.errors.count, "error") %> prohibited this flight offset from being saved:</h2>
 
-      <ul>
-      <% flight_offset.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% flight_offset.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <p>
+      Use <%= link_to 'our flights calculator', new_flight_footprint_path, class: 'link' %> to get the co2e value
+    </p>
+
+    <div class="flex flex-col">
+      <p><%= f.label :co2e, 'CO2e', class: 'font-bold' %> (in kg CO2e)</p>
+      <%= f.number_field :co2e, value: f.object.co2e&.co2e, required: '', class: 'input' %>
     </div>
-  <% end %>
 
-  <p>
-    Use <%= link_to 'our flights calculator', new_flight_footprint_path %> to get the co2e value
-  </p>
+    <div class="flex flex-col">
+      <p><%= f.label :email, class: 'font-bold' %> (recipient of certificate)</p>
+      <%= f.text_field :email, required: '', class: 'input' %>
+      <span class="block text-sm text-gray-shade-2">Will not send an email, though ¯\_(ツ)_/¯.</span>
+    </div>
 
-  <div class="form-group">
-    <%= f.label :co2e, 'CO2e' %> (in kg CO2e)
-    <%= f.number_field :co2e, value: f.object.co2e&.co2e, required: '', class: 'form-control' %>
+    <%= f.submit class: 'button button-cta' %>
   </div>
-
-  <div class="form-group">
-    <%= f.label :email %> (recipient of certificate)
-    <%= f.text_field :email, required: '', class: 'form-control' %>
-    <span class="help-block">Will not send an email, though ¯\_(ツ)_/¯.</span>
-  </div>
-
-  <%= f.submit class: 'btn btn-primary' %>
 <% end %>

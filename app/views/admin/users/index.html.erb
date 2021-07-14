@@ -1,40 +1,46 @@
 <%= render 'admin/shared/notice_banner' %>
 
-<h2>Search</h2>
-<%= form_with(url: search_admin_users_path, class: 'form-inline') do |form| %>
-  <%= form.text_field :search_query, placeholder: 'Email', class: 'form-control' %>
-  <%= form.submit 'Search', class: 'btn btn-default' %>
-<% end %>
-<% if @users.count == @max_entries %>
-  <p>Showing maximum <%= @max_entries %> entries for performance reasons. Try to specify your search.</p>
-<% end %>
-
-<h1>Users</h1>
-
-<table class="table">
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Email</th>
-      <th>Subscription</th>
-      <th>Footprint</th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.id %></td>
-        <td><%= user.email %></td>
-        <td><%= user.subscription_price || 'None' %></td>
-        <td><%= user.current_lifestyle_footprint.total.tonnes.round(1) %> tonnes</td>
-        <td class="admin-actions">
-          <%= link_to 'Show', [:admin, user] %> &nbsp;
-        </td>
-      </tr>
+<div class="space-y-12">
+  <section class="space-y-6">
+    <h2 class="heading-lg">Search</h2>
+    <%= form_with(url: search_admin_users_path, class: 'flex flex-row space-x-1') do |form| %>
+      <%= form.text_field :search_query, placeholder: 'Email', class: 'input' %>
+      <%= form.submit 'Search', class: 'button' %>
     <% end %>
-  </tbody>
-</table>
+    <% if @users.count == @max_entries %>
+      <p>Showing maximum <%= @max_entries %> entries for performance reasons. Try to specify your search.</p>
+    <% end %>
+  </section>
 
-<hr>
+  <section class="space-y-6">
+    <h1 class="heading-lg">Users</h1>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Email</th>
+          <th>Subscription</th>
+          <th>Footprint</th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @users.each do |user| %>
+          <tr>
+            <td><%= user.id %></td>
+            <td><%= user.email %></td>
+            <td><%= user.subscription_price || 'None' %></td>
+            <td><%= user.current_lifestyle_footprint.total.tonnes.round(1) %> tonnes</td>
+            <td class="whitespace-nowrap">
+              <%= link_to 'Show', [:admin, user], class: 'link-ui text-green-shade-2' %> &nbsp;
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <hr>
+  </section>
+</div>
