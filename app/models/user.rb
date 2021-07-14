@@ -37,7 +37,13 @@ class User < ApplicationRecord # rubocop:disable Metrics/ClassLength
     end
   end
 
+  def stripe_customer_deleted?
+    handle_no_method_error_stripe_customer { stripe_customer.deleted }
+  end
+
   def subscription_amount
+    return 0 unless active_subscription?
+
     stripe_customer.subscriptions.first.plan.amount.to_f / 100
   end
 
@@ -98,10 +104,13 @@ class User < ApplicationRecord # rubocop:disable Metrics/ClassLength
   end
 
   def active_subscription?
+    return false if stripe_customer_deleted?
+
     stripe_customer.subscriptions&.any?
   end
 
   def current_plan
+    return nil unless active_subscription?
     return nil unless (plan = stripe_customer.subscriptions.first&.plan)
 
     @current_plan ||= Subscriptions::Plan.from_stripe_plan(plan)
@@ -133,6 +142,12 @@ class User < ApplicationRecord # rubocop:disable Metrics/ClassLength
   end
 
   private
+
+  def handle_no_method_error_stripe_customer
+    yield
+  rescue NoMethodError
+    false
+  end
 
   def subscription_end_at_from_stripe(stripe_subscription)
     Time.at(stripe_subscription.ended_at) if stripe_subscription.ended_at.present?
