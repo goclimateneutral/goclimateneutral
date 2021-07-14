@@ -1,165 +1,171 @@
-<h1>Lifestyle Calculator</h1>
+<div class="space-y-6">
+  <section class="space-y-3">
+    <h1 class="heading-lg">Lifestyle Calculator</h1>
 
-<dl class="dl-horizontal">
-  <dt>Created:</dt>
-  <dd><%= @calculator.created_at %></dd>
+    <dl class="dl-horizontal">
+      <dt>Created:</dt>
+      <dd><%= @calculator.created_at %></dd>
 
-  <dt>Updated:</dt>
-  <dd><%= @calculator.updated_at %></dd>
+      <dt>Updated:</dt>
+      <dd><%= @calculator.updated_at %></dd>
 
-  <dt>Countries:</dt>
-  <dd>
-    <% if @calculator.countries.present? %>
-      <%= @calculator.countries.join(', ') %>
-    <% else %>
-      <i>All countries not matched by other calculators</i>
-    <% end %>
-  </dd>
-
-  <dt>Version:</dt>
-  <dd><%= @calculator.version || '<i>Draft</i>'.html_safe %></dd>
-
-  <dt>Unit for distance traveled by car:</dt>
-  <dd><%= @calculator.car_distance_unit %></dd>
-</dl>
-
-<h3>Options</h3>
-
-<dl class="dl-horizontal">
-  <% [:region, :home, :home_area, :heating, :green_electricity, :food, :shopping, :car_type].each do |question| %>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title"><code><%= question %></code></h4>
-      </div>
-      <div class="panel-body">
-        <% if (options = @calculator.send("#{question}_options"))&.any? %>
-          <dl class="dl-horizontal">
-            <% options.each do |option| %>
-              <dt><%= option['key'] %></dt>
-              <dd><code>=<%= option['formula'] %></code></dd>
-            <% end %>
-          </dl>
+      <dt>Countries:</dt>
+      <dd>
+        <% if @calculator.countries.present? %>
+          <%= @calculator.countries.join(', ') %>
         <% else %>
-          <i>Question skipped</i>
+          <i>All countries not matched by other calculators</i>
         <% end %>
-      </div>
+      </dd>
+
+      <dt>Version:</dt>
+      <dd><%= @calculator.version || '<i>Draft</i>'.html_safe %></dd>
+
+      <dt>Unit for distance traveled by car:</dt>
+      <dd><%= @calculator.car_distance_unit %></dd>
+    </dl>
+  </section>
+
+  <section class="space-y-3">
+    <h2 class="heading-lg">Options</h2>
+
+    <div class="space-y-3">
+      <% [:region, :home, :home_area, :heating, :green_electricity, :food, :shopping, :car_type].each do |question| %>
+        <div class="callout">
+          <div class="panel-heading">
+            <h4 class="heading"><code><%= question %></code></h4>
+          </div>
+          <div class="panel-body">
+            <% if (options = @calculator.send("#{question}_options"))&.any? %>
+              <dl class="dl-horizontal">
+                <% options.each do |option| %>
+                  <dt><%= option['key'] %></dt>
+                  <dd><code>=<%= option['formula'] %></code></dd>
+                <% end %>
+              </dl>
+            <% else %>
+              <i>Question skipped</i>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
     </div>
+  </section>
+
+  <section class="space-y-3">
+    <h2 class="heading-lg">Formulas</h2>
+
+    <dl class="dl-horizontal">
+      <% [:housing, :food, :car, :flights, :consumption, :public].each do |category| %>
+        <dt><%= category %></dt>
+        <dd><code>=<%= @calculator.send("#{category}_formula") %></code></dd>
+      <% end %>
+    </dl>
+  </section>
+
+  <section class="space-y-3">
+    <h2 class="heading-lg">Preview</h2>
+
+    <%= form_with url: admin_lifestyle_calculator_preview_path(format: :json), html: { 'data-controller': 'lifestyle-calculator-preview' } do |f| %>
+      <%= fields_for :answers do |fa| %>
+        <% if @calculator.region_options&.any? %>
+          <div class="flex flex-col">
+            <%= fa.label :region, class: 'font-bold' %>
+            <%= fa.select :region, @calculator.region_options.map { |o| o['key'] }, {}, class: 'input' %>
+          </div>
+        <% end %>
+
+        <% if @calculator.home_options&.any? %>
+          <div class="flex flex-col">
+            <%= fa.label :home, class: 'font-bold' %>
+            <%= fa.select :home, @calculator.home_options.map { |o| o['key'] }, {}, class: 'input' %>
+          </div>
+        <% end %>
+
+        <% if @calculator.home_area_options&.any? %>
+          <div class="flex flex-col">
+            <%= fa.label :home_area, class: 'font-bold' %>
+            <%= fa.select :home_area, @calculator.home_area_options.map { |o| o['key'] }, {}, class: 'input' %>
+          </div>
+        <% end %>
+
+        <% if @calculator.heating_options&.any? %>
+          <div class="flex flex-col">
+            <%= fa.label :heating, class: 'font-bold' %>
+            <%= fa.select :heating, @calculator.heating_options.map { |o| o['key'] }, {}, class: 'input' %>
+          </div>
+        <% end %>
+
+        <% if @calculator.green_electricity_options&.any? %>
+          <div class="flex flex-col">
+            <%= fa.label :green_electricity, class: 'font-bold' %>
+            <%= fa.select :green_electricity, @calculator.green_electricity_options.map { |o| o['key'] }, {}, class: 'input' %>
+          </div>
+        <% end %>
+
+        <% if @calculator.food_options&.any? %>
+          <div class="flex flex-col">
+            <%= fa.label :food, class: 'font-bold' %>
+            <%= fa.select :food, @calculator.food_options.map { |o| o['key'] }, {}, class: 'input' %>
+          </div>
+        <% end %>
+
+        <% if @calculator.shopping_options&.any? %>
+          <div class="flex flex-col">
+            <%= fa.label :shopping, class: 'font-bold' %>
+            <%= fa.select :shopping, @calculator.shopping_options.map { |o| o['key'] }, {}, class: 'input' %>
+          </div>
+        <% end %>
+
+        <% if @calculator.car_type_options&.any? %>
+          <div class="flex flex-col">
+            <%= fa.label :car_type, class: 'font-bold' %>
+            <%= fa.select :car_type, @calculator.car_type_options.map { |o| o['key'] }, {}, class: 'input' %>
+          </div>
+        <% end %>
+
+        <div class="flex flex-col">
+          <%= fa.label :car_distance, class: 'font-bold' %>
+          <%= fa.text_field :car_distance, class: 'input' %>
+        </div>
+
+        <div class="flex flex-col">
+          <%= fa.label :flight_hours, class: 'font-bold' %>
+          <%= fa.text_field :flight_hours, class: 'input' %>
+        </div>
+      <% end %>
+
+      <%= f.submit 'Preview result', class: 'button button-cta', 'data-action': 'lifestyle-calculator-preview#calculate' %>
+
+      <div class="callout">
+        <p data-target="lifestyle-calculator-preview.error" class="hidden-when-empty"></p>
+        <dl>
+          <dt>Housing</dt>
+          <dd data-target="lifestyle-calculator-preview.housingResult"></dd>
+          <dt>Food</dt>
+          <dd data-target="lifestyle-calculator-preview.foodResult"></dd>
+          <dt>Car</dt>
+          <dd data-target="lifestyle-calculator-preview.carResult"></dd>
+          <dt>Flights</dt>
+          <dd data-target="lifestyle-calculator-preview.flightsResult"></dd>
+          <dt>Consumption</dt>
+          <dd data-target="lifestyle-calculator-preview.consumptionResult"></dd>
+          <dt>Public</dt>
+          <dd data-target="lifestyle-calculator-preview.publicResult"></dd>
+          <dt>Total</dt>
+          <dd data-target="lifestyle-calculator-preview.total"></dd>
+          <dt>Price (monthly)</dt>
+          <dd data-target="lifestyle-calculator-preview.price"></dd>
+        </dl>
+      </div>
+    <% end %>
+  </section>
+
+  <% if @calculator.version.present? %>
+    <%= link_to 'Create new version', new_admin_lifestyle_calculator_path(countries: @calculator.countries&.map(&:alpha2) || [''], based_on: @calculator.id), class: 'button' %>
+  <% else %>
+    <%= link_to 'Edit draft', new_admin_lifestyle_calculator_path(countries: @calculator.countries&.map(&:alpha2) || ['']), class: 'button' %> &nbsp;
+    <%= link_to 'Review & publish', review_admin_lifestyle_calculator_path(@calculator), class: 'button' %> &nbsp;
   <% end %>
-</dl>
-
-<h3>Formulas</h3>
-
-<dl class="dl-horizontal">
-  <% [:housing, :food, :car, :flights, :consumption, :public].each do |category| %>
-    <dt><%= category %></dt>
-    <dd><code>=<%= @calculator.send("#{category}_formula") %></code></dd>
-  <% end %>
-</dl>
-
-<h2>Preview</h2>
-
-<%= form_with url: admin_lifestyle_calculator_preview_path(format: :json), html: { 'data-controller': 'lifestyle-calculator-preview' } do |f| %>
-  <%= fields_for :answers do |fa| %>
-    <% if @calculator.region_options&.any? %>
-      <div class="form-group">
-        <%= fa.label :region %>
-        <%= fa.select :region, @calculator.region_options.map { |o| o['key'] }, {}, class: 'form-control' %>
-      </div>
-    <% end %>
-
-    <% if @calculator.home_options&.any? %>
-      <div class="form-group">
-        <%= fa.label :home %>
-        <%= fa.select :home, @calculator.home_options.map { |o| o['key'] }, {}, class: 'form-control' %>
-      </div>
-    <% end %>
-
-    <% if @calculator.home_area_options&.any? %>
-      <div class="form-group">
-        <%= fa.label :home_area %>
-        <%= fa.select :home_area, @calculator.home_area_options.map { |o| o['key'] }, {}, class: 'form-control' %>
-      </div>
-    <% end %>
-
-    <% if @calculator.heating_options&.any? %>
-      <div class="form-group">
-        <%= fa.label :heating %>
-        <%= fa.select :heating, @calculator.heating_options.map { |o| o['key'] }, {}, class: 'form-control' %>
-      </div>
-    <% end %>
-
-    <% if @calculator.green_electricity_options&.any? %>
-      <div class="form-group">
-        <%= fa.label :green_electricity %>
-        <%= fa.select :green_electricity, @calculator.green_electricity_options.map { |o| o['key'] }, {}, class: 'form-control' %>
-      </div>
-    <% end %>
-
-    <% if @calculator.food_options&.any? %>
-      <div class="form-group">
-        <%= fa.label :food %>
-        <%= fa.select :food, @calculator.food_options.map { |o| o['key'] }, {}, class: 'form-control' %>
-      </div>
-    <% end %>
-
-    <% if @calculator.shopping_options&.any? %>
-      <div class="form-group">
-        <%= fa.label :shopping %>
-        <%= fa.select :shopping, @calculator.shopping_options.map { |o| o['key'] }, {}, class: 'form-control' %>
-      </div>
-    <% end %>
-
-    <% if @calculator.car_type_options&.any? %>
-      <div class="form-group">
-        <%= fa.label :car_type %>
-        <%= fa.select :car_type, @calculator.car_type_options.map { |o| o['key'] }, {}, class: 'form-control' %>
-      </div>
-    <% end %>
-
-    <div class="form-group">
-      <%= fa.label :car_distance %>
-      <%= fa.text_field :car_distance, class: 'form-control' %>
-    </div>
-
-    <div class="form-group">
-      <%= fa.label :flight_hours %>
-      <%= fa.text_field :flight_hours, class: 'form-control' %>
-    </div>
-  <% end %>
-
-  <%= f.submit 'Preview result', class: 'btn btn-primary', 'data-action': 'lifestyle-calculator-preview#calculate' %>
-
-  <div class="panel panel-default">
-    <div class="panel-body">
-      <p data-target="lifestyle-calculator-preview.error" class="hidden-when-empty"></p>
-      <dl>
-        <dt>Housing</dt>
-        <dd data-target="lifestyle-calculator-preview.housingResult"></dd>
-        <dt>Food</dt>
-        <dd data-target="lifestyle-calculator-preview.foodResult"></dd>
-        <dt>Car</dt>
-        <dd data-target="lifestyle-calculator-preview.carResult"></dd>
-        <dt>Flights</dt>
-        <dd data-target="lifestyle-calculator-preview.flightsResult"></dd>
-        <dt>Consumption</dt>
-        <dd data-target="lifestyle-calculator-preview.consumptionResult"></dd>
-        <dt>Public</dt>
-        <dd data-target="lifestyle-calculator-preview.publicResult"></dd>
-        <dt>Total</dt>
-        <dd data-target="lifestyle-calculator-preview.total"></dd>
-        <dt>Price (monthly)</dt>
-        <dd data-target="lifestyle-calculator-preview.price"></dd>
-      </dl>
-    </div>
-  </div>
-<% end %>
-
-<hr>
-
-<% if @calculator.version.present? %>
-  <%= link_to 'Create new version', new_admin_lifestyle_calculator_path(countries: @calculator.countries&.map(&:alpha2) || [''], based_on: @calculator.id), class: 'btn btn-default' %>
-<% else %>
-  <%= link_to 'Edit draft', new_admin_lifestyle_calculator_path(countries: @calculator.countries&.map(&:alpha2) || ['']), class: 'btn btn-default' %> &nbsp;
-  <%= link_to 'Review & publish', review_admin_lifestyle_calculator_path(@calculator), class: 'btn btn-default' %> &nbsp;
-<% end %>
-<%= link_to 'Back', admin_lifestyle_calculators_path, class: 'btn btn-link' %>
+  <%= link_to 'Back', admin_lifestyle_calculators_path, class: 'link' %>
+</div>

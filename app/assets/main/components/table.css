@@ -1,0 +1,42 @@
+.table {
+  @apply 
+    w-full
+    text-left
+    border-separate;
+  border-spacing: 0;
+}
+
+.table tr th,
+.table tr td {
+  background: inherit;
+  @apply
+    p-2;
+}
+
+.table tr th {
+  @apply
+    font-bold;
+}
+
+.table thead > tr th {
+  @apply border-b border-gray-accent;
+}
+
+.table tbody > tr td,
+.table tbody > tr th {
+  @apply
+    border-t border-gray-accent
+    align-top;
+}
+
+.table.table-striped tbody tr:nth-child(odd) {
+  @apply bg-gray-tint-1;
+}
+.table.table-striped thead tr > :first-child,
+.table.table-striped tbody tr:nth-child(even) {
+  @apply bg-white;
+}
+
+.table-sticky-first-column tr > :first-child { 
+  @apply sticky left-0
+}

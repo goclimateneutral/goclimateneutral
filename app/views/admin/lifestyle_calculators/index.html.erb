@@ -1,64 +1,64 @@
-<%= render 'admin/shared/notice_banner' %>
+<div class="space-y-6">
+  <%= render 'admin/shared/notice_banner' %>
 
-<h1>Lifestyle Calculators</h1>
+  <h1 class="heading-lg">Lifestyle Calculators</h1>
 
-<div class="panel panel-default">
-  <div class="panel-body">
-    <h3>Add calculator</h3>
+  <div class="callout space-y-3">
+    <h3 class="heading">Add calculator</h3>
     <p>Add new country or new version for existing country.</p>
     <%= form_with url: new_admin_lifestyle_calculator_path, method: :get do |f| %>
-      <div class="form-group">
+      <div class="flex flex-col">
         <label>
           Countries
           <span data-controller="template-element">
             <span class="hidden" data-target="template-element.template">
-              <%= f.country_select 'countries[]', { include_blank: true }, class: 'form-control' %>
+              <%= f.country_select 'countries[]', { include_blank: true }, class: 'input' %>
             </span>
             <span data-target="template-element.destination"></span>
-            <button type="button" class="btn btn-default" data-action="template-element#cloneToDestination">
-              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add country
+            <button type="button" class="button" data-action="template-element#cloneToDestination">
+              <i class="fas fa-plus" aria-hidden="true"></i> Add country
             </button>
         </label>
       </div>
-      <%= f.submit 'New', name: nil, class: 'btn btn-primary' %>
+      <%= f.submit 'New', name: nil, class: 'button button-cta' %>
     <% end %>
   </div>
-</div>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Countries</th>
-      <th>Published version</th>
-      <th>Last updated</th>
-      <th>Draft updated</th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @calculators.each do |countries, calculators| %>
+  <table class="table">
+    <thead>
       <tr>
-        <td>
-          <% if countries.present? %>
-            <%= countries.map(&:to_s).join(', ') %>
-          <% else %>
-            <i>All others</i>
-          <% end %>
-        </td>
-        <td><%= calculators[:published]&.version || '-' %></td>
-        <td><%= (time_tag(calculators[:published].updated_at, format: '%F %R') if calculators[:published].present?) || '-' %></td>
-        <td><%= (time_tag(calculators[:draft].updated_at, format: '%F %R') if calculators[:draft].present?) || '-' %></td>
-        <td class="admin-actions">
-          <% if calculators[:published].present? %>
-            <%= link_to 'Show published', admin_lifestyle_calculator_path(calculators[:published]) %> &nbsp;
-          <% end %>
-          <% if calculators[:draft].present? %>
-            <%= link_to 'Show draft', admin_lifestyle_calculator_path(calculators[:draft]) %>
-            &nbsp; <%= link_to 'Edit draft', new_admin_lifestyle_calculator_path(countries: calculators[:draft].countries&.map(&:alpha2) || ['']) %>
-          <% end %>
-        </td>
+        <th>Countries</th>
+        <th>Published version</th>
+        <th>Last updated</th>
+        <th>Draft updated</th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% @calculators.each do |countries, calculators| %>
+        <tr>
+          <td>
+            <% if countries.present? %>
+              <%= countries.map(&:to_s).join(', ') %>
+            <% else %>
+              <i>All others</i>
+            <% end %>
+          </td>
+          <td><%= calculators[:published]&.version || '-' %></td>
+          <td><%= (time_tag(calculators[:published].updated_at, format: '%F %R') if calculators[:published].present?) || '-' %></td>
+          <td><%= (time_tag(calculators[:draft].updated_at, format: '%F %R') if calculators[:draft].present?) || '-' %></td>
+          <td class="whitespace-nowrap">
+            <% if calculators[:published].present? %>
+              <%= link_to 'Show published', admin_lifestyle_calculator_path(calculators[:published]), class: 'link-ui text-green-shade-2' %> &nbsp;
+            <% end %>
+            <% if calculators[:draft].present? %>
+              <%= link_to 'Show draft', admin_lifestyle_calculator_path(calculators[:draft]), class: 'link-ui text-green-shade-2' %>
+              &nbsp; <%= link_to 'Edit draft', new_admin_lifestyle_calculator_path(countries: calculators[:draft].countries&.map(&:alpha2) || ['']), class: 'link-ui text-green-shade-2' %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

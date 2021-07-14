@@ -1,4 +1,4 @@
-<h1>Publish Lifestyle Calculator</h1>
+<h1 class="heading-lg">Publish Lifestyle Calculator</h1>
 
 <dl class="dl-horizontal">
   <dt>Countries:</dt>
@@ -29,7 +29,7 @@
         <h3 style="margin-top: 10px;"><%=t 'views.lifestyle_footprints.questions.region' %></h3>
         <% @calculator.region_options.each do |option| %>
           <p>
-            <span class="btn btn-default">
+            <span class="button">
               <%=t "views.lifestyle_footprints.options.region.#{option['key']}" %>
             </span>
           </p>
@@ -44,7 +44,7 @@
         <h3 style="margin-top: 10px;"><%=t 'views.lifestyle_footprints.questions.home' %></h3>
         <% @calculator.home_options.each do |option| %>
           <p>
-            <span class="btn btn-default">
+            <span class="button">
               <%=t "views.lifestyle_footprints.options.home.#{option['key']}" %>
             </span>
           </p>
@@ -59,7 +59,7 @@
         <h3 style="margin-top: 10px;"><%=t 'views.lifestyle_footprints.questions.home_area' %></h3>
         <% @calculator.home_area_options.each do |option| %>
           <p>
-            <span class="btn btn-default">
+            <span class="button">
               <%=t "views.lifestyle_footprints.options.home_area.#{option['key']}" %>
             </span>
           </p>
@@ -74,7 +74,7 @@
         <h3 style="margin-top: 10px;"><%=t 'views.lifestyle_footprints.questions.heating' %></h3>
         <% @calculator.heating_options.each do |option| %>
           <p>
-            <span class="btn btn-default">
+            <span class="button">
               <%=t "views.lifestyle_footprints.options.heating.#{option['key']}" %>
             </span>
           </p>
@@ -89,7 +89,7 @@
         <h3 style="margin-top: 10px;"><%=t 'views.lifestyle_footprints.questions.green_electricity' %></h3>
         <% @calculator.green_electricity_options.each do |option| %>
           <p>
-            <span class="btn btn-default">
+            <span class="button">
               <%=t "views.lifestyle_footprints.options.green_electricity.#{option['key']}" %>
             </span>
           </p>
@@ -104,7 +104,7 @@
         <h3 style="margin-top: 10px;"><%=t 'views.lifestyle_footprints.questions.food' %></h3>
         <% @calculator.food_options.each do |option| %>
           <p>
-            <span class="btn btn-default">
+            <span class="button">
               <%=t "views.lifestyle_footprints.options.food.#{option['key']}" %>
             </span>
           </p>
@@ -119,7 +119,7 @@
         <h3 style="margin-top: 10px;"><%=t 'views.lifestyle_footprints.questions.shopping' %></h3>
         <% @calculator.shopping_options.each do |option| %>
           <p>
-            <span class="btn btn-default">
+            <span class="button">
               <%=t "views.lifestyle_footprints.options.shopping.#{option['key']}" %>
             </span>
           </p>
@@ -134,7 +134,7 @@
         <h3 style="margin-top: 10px;"><%=t 'views.lifestyle_footprints.questions.car_type' %></h3>
         <% @calculator.car_type_options.each do |option| %>
           <p>
-            <span class="btn btn-default">
+            <span class="button">
               <%=t "views.lifestyle_footprints.options.car_type.#{option['key']}" %>
             </span>
           </p>
@@ -148,7 +148,7 @@
       <h3 style="margin-top: 10px;"><%=t 'views.lifestyle_footprints.questions.car_distance' %></h3>
       <p>
         <div class="input-group" style="width: 200px;">
-          <input type="text" class="form-control">
+          <input type="text" class="input">
           <div class="input-group-addon"><%= @calculator.car_distance_unit %></div>
         </div>
       </p>
@@ -159,7 +159,7 @@
     <div class="panel-body">
       <h3 style="margin-top: 10px;"><%=t 'views.lifestyle_footprints.questions.flight_hours' %></h3>
       <p>
-        <input type="text" class="form-control" style="width: 200px;">
+        <input type="text" class="input" style="width: 200px;">
       </p>
     </div>
   </div>
@@ -168,10 +168,10 @@
 <%= form_with url: publish_admin_lifestyle_calculator_path do |f| %>
   <%= f.hidden_field :id, value: @calculator.id %>
 
-  <div class="form-group">
+  <div class="flex flex-col">
     <%= f.label :version %>
-    <%= f.number_field :version, required: '', class: 'form-control' %>
-    <span class="help-block">
+    <%= f.number_field :version, required: '', class: 'input' %>
+    <span class="block text-sm text-gray-shade-2">
       Be careful to enter a version number that is higher than all
       calculators you want to replace. Example: If there exists a calculator
       for Sweden, Norway and Denmark with version number 3 and this
@@ -180,11 +180,11 @@
       previous one will still be used for Denmark and Norway). The other way around works the same, i.e. a new calculator for Sweden, Norway and Denmark will apply to all those countries even if there exists calculators for those countries individually, if the new calculator has a version number.
     </span>
 
-    <%= f.submit 'Publish', class: 'btn btn-primary' %>
+    <%= f.submit 'Publish', class: 'button button-cta' %>
   </div>
 <% end %>
 
 <hr>
 
-<%= link_to 'Edit draft', new_admin_lifestyle_calculator_path(countries: @calculator.countries&.map(&:alpha2) || ['']), class: 'btn btn-default' %> &nbsp;
-<%= link_to 'Back', [:admin, @calculator], class: 'btn btn-link' %>
+<%= link_to 'Edit draft', new_admin_lifestyle_calculator_path(countries: @calculator.countries&.map(&:alpha2) || ['']), class: 'button' %> &nbsp;
+<%= link_to 'Back', [:admin, @calculator], class: 'link' %>

@@ -1,6 +1,6 @@
 <%= render 'admin/shared/notice_banner' %>
 
-<h1>Data Requests</h1>
+<h1 class="heading-lg">Data Requests</h1>
 <% if @report %>
   <h3>For report: <%= link_to @report.title, [:admin, @report] %></h3>
 <% end %>
@@ -28,7 +28,7 @@
         </td>
         <td><%= link_to report.title, [:admin, report] %></td>
         <td><%= time_tag(data_request.created_at, format: '%F %R') %></td>
-        <td class="admin-actions">
+        <td class="whitespace-nowrap">
           <%= link_to 'Show', [:admin, data_request] %> &nbsp;
           <%= link_to 'Edit', edit_admin_data_request_path(data_request) %> &nbsp;
           <%= link_to 'Destroy', [:admin, data_request], method: :delete, data: { confirm: 'Are you sure?' } %>

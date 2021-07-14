@@ -11,27 +11,27 @@
     </div>
   <% end %>
 
-  <div class="form-group">
+  <div class="flex flex-col">
     <%= form.label :title %>
-    <%= form.text_field :title, class: 'form-control' %>
+    <%= form.text_field :title, class: 'input' %>
   </div>
 
-  <div class="form-group">
+  <div class="flex flex-col">
     <%= form.label :organization %>
-    <%= form.select :organization_id, options_for_select(@organizations, @report.organization&.id), {}, class: 'form-control' %>
+    <%= form.select :organization_id, options_for_select(@organizations, @report.organization&.id), {}, class: 'input' %>
   </div>
 
   <div class="row">
     <div class="col-sm-3">
-      <div class="form-group">
+      <div class="flex flex-col">
         <%= form.label :start_date %>
-        <%= form.date_field :start_date, class: 'form-control', value: @report.reporting_period&.first %>
+        <%= form.date_field :start_date, class: 'input', value: @report.reporting_period&.first %>
       </div>
     </div>
     <div class="col-sm-3">
-      <div class="form-group">
+      <div class="flex flex-col">
         <%= form.label :end_date %>
-        <%= form.date_field :end_date, class: 'form-control', value: @report.reporting_period&.last %>
+        <%= form.date_field :end_date, class: 'input', value: @report.reporting_period&.last %>
       </div>
     </div>
   </div>
@@ -43,11 +43,11 @@
       <div class="row" style="margin-bottom: 1em">
         <div class="col-sm-6">
           <%= area_fields.label :area_name %>
-          <%= area_fields.text_field :title, class: 'form-control' %>
+          <%= area_fields.text_field :title, class: 'input' %>
         </div>
         <div class="col-sm-5">
           <%= area_fields.label :calculator, class: 'add-nested-fields-label-field'%>
-          <%= area_fields.select :calculator_id, options_from_collection_for_select(@calculators, :id, :name, area_fields.object.calculator.id.to_i), {}, class: 'form-control add-nested-fields-input-field' %>
+          <%= area_fields.select :calculator_id, options_from_collection_for_select(@calculators, :id, :name, area_fields.object.calculator.id.to_i), {}, class: 'input add-nested-fields-input-field' %>
         </div>
         <div class="col-sm-1">
           <%= area_fields.label :delete %>
@@ -58,14 +58,14 @@
 
     <%= form.fields_for :areas, ClimateReports::ReportArea.new do |area_fields| %>
       <div class="hidden row" data-target="add-nested-fields.template">
-        <div class="form-group col-sm-6">
+        <div class="flex flex-col col-sm-6">
           <%= area_fields.label :area_name %>
-          <%= area_fields.text_field :title, class: 'form-control add-nested-fields-input-field', style: '', placeholder: 'Area name ...'  %>
+          <%= area_fields.text_field :title, class: 'input add-nested-fields-input-field', style: '', placeholder: 'Area name ...'  %>
         </div>
 
         <div class="col-sm-5">
           <%= area_fields.label :calculator, class: 'add-nested-fields-label-field'%>
-          <%= area_fields.select :calculator_id, options_from_collection_for_select(@calculators, :id, :name), {}, class: 'form-control add-nested-fields-input-field' %>
+          <%= area_fields.select :calculator_id, options_from_collection_for_select(@calculators, :id, :name), {}, class: 'input add-nested-fields-input-field' %>
         </div>
         <div class="col-sm-1">
           <%= area_fields.label :delete %>
@@ -77,11 +77,11 @@
     <div data-target="add-nested-fields.destination" style=""></div>
 
     <div style="margin: 1.5em 0">
-      <button type="button" class="btn btn-default" data-action="add-nested-fields#cloneToDestinationWithFirstNumberIncremented">
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add area
+      <button type="button" class="button" data-action="add-nested-fields#cloneToDestinationWithFirstNumberIncremented">
+        <i class="fas fa-plus" aria-hidden="true"></i> Add area
       </button>
     </div>
   </div>
 
-  <%= form.submit class: 'btn btn-primary' %>
+  <%= form.submit class: 'button button-cta' %>
 <% end %>

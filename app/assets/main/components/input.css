@@ -44,3 +44,13 @@
     @apply ring-danger;
   }
 }
+
+.input-group {
+  @apply flex flex-row items-stretch;
+}
+.input-group-addon {
+  @apply bg-gray-tint-2 border-t border-b border-l border-primary rounded-l px-2 flex flex-row items-center;
+}
+.input-group .input {
+  @apply rounded-l-none flex-1;
+}

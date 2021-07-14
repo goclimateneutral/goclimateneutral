@@ -1,4 +1,4 @@
-<h1>Editing Climate Report Invoice</h1>
+<h1 class="heading-lg">Editing Climate Report Invoice</h1>
 
 <dl class="dl-horizontal">
   <dt>ID:</dt>
@@ -30,31 +30,31 @@
     </div>
   <% end %>
 
-  <div class="form-group">
+  <div class="flex flex-col">
     <%= f.label :fortnox_id, 'Fortnox invoice' %>
-    <%= f.text_field :fortnox_id, class: 'form-control' %>
+    <%= f.text_field :fortnox_id, class: 'input' %>
   </div>
 
-  <div class="form-group">
+  <div class="flex flex-col">
     <%= f.label :project_id %>
-    <%= f.number_field :project_id, class: 'form-control' %>
+    <%= f.number_field :project_id, class: 'input' %>
   </div>
 
-  <div class="form-group">
+  <div class="flex flex-col">
     <%= f.label :certificate_sent_at %>
-    <%= f.text_field :certificate_sent_at, class: 'form-control' %>
+    <%= f.text_field :certificate_sent_at, class: 'input' %>
     <label><input type="checkbox" value="now" name="climate_report_invoice[certificate_sent_at]"> Now</label>
   </div>
 
-  <div class="form-group">
+  <div class="flex flex-col">
     <%= f.label :certificate_reciever_email %> (leave empty if you don't want system to send certificate)
-    <%= f.text_field :certificate_reciever_email, class: 'form-control' %>
+    <%= f.text_field :certificate_reciever_email, class: 'input' %>
   </div>
 
-  <%= f.submit class: 'btn btn-primary' %>
+  <%= f.submit class: 'button button-cta' %>
 <% end %>
 
 <hr>
 
-<%= link_to 'Show', [:admin, @invoice], class: 'btn btn-default' %>
-<%= link_to 'Back', admin_climate_report_invoices_path, class: 'btn btn-link' %>
+<%= link_to 'Show', [:admin, @invoice], class: 'button' %>
+<%= link_to 'Back', admin_climate_report_invoices_path, class: 'link' %>

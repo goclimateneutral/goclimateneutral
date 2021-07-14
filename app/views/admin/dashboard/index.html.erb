@@ -1,153 +1,167 @@
-<%= render 'admin/shared/notice_banner' %>
+<div class="space-y-6">
+  <%= render 'admin/shared/notice_banner' %>
 
-<h1>Admin</h1>
+  <h1 class="heading-lg">Admin</h1>
 
-<h3>Status CO2eq bought / sold</h3>
-<ul>
-  <li>Total CO2eq bought: <%= @total_co2_bought %></li>
-  <li>Total CO2eq consumed: <%= @total_co2_consumed %></li>
-  <li>Result right now: <%= (@total_co2_bought - @total_co2_consumed) %></li>
-</ul>
+  <section class="space-y-3">
+  <h3 class="heading">Status CO2eq bought / sold</h3>
+  <ul class="list-bullet">
+    <li>Total CO2eq bought: <%= @total_co2_bought %></li>
+    <li>Total CO2eq consumed: <%= @total_co2_consumed %></li>
+    <li>Result right now: <%= (@total_co2_bought - @total_co2_consumed) %></li>
+  </ul>
+  </section>
 
-<h3>Status economy</h3>
-<ul>
-  <li>Not registered invoices: <b><%= @missing_fortnox_ids %></b></li>
-  <li>Total recieved: <%= number_with_delimiter(@payouts_in_sek) %> SEK</li>
-  <li>Total spent on offsets: <%= number_with_delimiter(@total_sek_spent) %> SEK</li>
-</ul>
+  <section class="space-y-3">
+  <h3 class="heading">Status economy</h3>
+  <ul class="list-bullet">
+    <li>Not registered invoices: <b><%= @missing_fortnox_ids %></b></li>
+    <li>Total recieved: <%= number_with_delimiter(@payouts_in_sek) %> SEK</li>
+    <li>Total spent on offsets: <%= number_with_delimiter(@total_sek_spent) %> SEK</li>
+  </ul>
+  </section>
 
-<h3>Growth</h3>
-<div class="table-responsive">
-  <table class="table table-striped table-condensed table-sticky-first-column">
-    <thead>
-      <tr>
-        <th style="min-width: 120px;"></th>
-        <% (0..30).each do |i| %>
-          <% if (Date.today - i).wday == 0 %>
-            <th style="background-color: red;">
-          <% elsif (Date.today - i).wday == 6 %>
-            <th style="background-color: orange;">
-          <% else %>
-            <th>
-          <% end %>
-            <%= (Date.today - i).day.to_s + "/" + (Date.today - i).month.to_s %>
-          </th>
-        <% end %>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>total new&nbsp;users</th>
-        <% (0..30).each do |i| %>
-          <td><%= @users_stats.new_users[(Date.today - i).to_s].nil? ? 0 : @users_stats.new_users[(Date.today - i).to_s] %></td>
-        <% end %>
-      </tr>
-      <tr>
-        <th>mean&nbsp;14&nbsp;days</th>
-        <% (0..30).each do |i| %>
-          <td><%= @users_stats.new_users_mean[(Date.today - i).to_s] %></td>
-        <% end %>
-      </tr>
-      <tr>
-        <th>new users with subscription</th>
-        <% (0..30).each do |i| %>
-          <td><%= @users_stats.new_users_with_subscription[(Date.today - i).to_s].nil? ? 0 : @users_stats.new_users_with_subscription[(Date.today - i).to_s] %></td>
-        <% end %>
-      </tr>
-      <tr>
-        <th>new users without subscription</th>
-        <% (0..30).each do |i| %>
-          <td><%= @users_stats.new_users_without_subscription[(Date.today - i).to_s].nil? ? 0 : @users_stats.new_users_without_subscription[(Date.today - i).to_s] %></td>
-        <% end %>
-      </tr>
-      <tr>
-        <th>new users from referral codes</th>
-        <% (0..30).each do |i| %>
-          <td><%= @users_stats.new_users_with_referral_code[(Date.today - i).to_s].nil? ? 0 : @users_stats.new_users_with_referral_code[(Date.today - i).to_s] %></td>
-        <% end %>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<h3>Churn</h3>
-<div class="table-responsive">
-  <table class="table table-striped table-condensed table-sticky-first-column">
-    <thead>
-      <tr>
-        <th style="min-width: 120px;"></th>
-        <% (0..30).each do |i| %>
-          <% if (Date.today - i).wday == 0 %>
-            <th style="background-color: red;">
-          <% elsif (Date.today - i).wday == 6 %>
-            <th style="background-color: orange;">
-          <% else %>
-            <th>
-          <% end %>
-            <%= (Date.today - i).day.to_s + "/" + (Date.today - i).month.to_s %>
-          </th>
-        <% end %>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>churned&nbsp;users</th>
-        <% (0..30).each do |i| %>
-          <td><%= @users_stats.churned_users[(Date.today - i).to_s].nil? ? 0 : @users_stats.churned_users[(Date.today - i).to_s] %></td>
-        <% end %>
-      </tr>
-      <tr>
-        <th>mean&nbsp;14&nbsp;days</th>
-        <% (0..30).each do |i| %>
-          <td><%= @users_stats.churned_users_mean[(Date.today - i).to_s] %></td>
-        <% end %>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<h3>CO2-credits sold</h3>
-<div class="table-responsive">
-  <table class="table table-striped table-condensed table-sticky-first-column">
-    <thead>
-      <tr>
-        <th style="min-width: 120px;"></th>
-        <% @sold_offsetting_per_month.keys.each do |month| %>
-          <th style="white-space: nowrap;">
-            <%= month %>
-          </th>
-        <% end %>
-      </tr>
-    </thead>
-    <tbody>
-      <% [
-        :subscription_months_co2e, :subscription_months_count, :gift_cards_co2e,
-        :gift_cards_count, :flight_offsets_co2e, :flight_offsets_count,
-        :invoices_co2e, :invoices_count, :climate_report_invoices_co2e,
-        :climate_report_invoices_count, :total_co2e
-      ].each do |row_field| %>
+  <section class="space-y-3">
+  <h3 class="heading">Growth</h3>
+  <div class="overflow-x-auto">
+    <table class="table table-striped table-condensed table-sticky-first-column">
+      <thead>
         <tr>
-          <th><%= row_field.to_s.gsub('_', ' ') %></th>
-          <% @sold_offsetting_per_month.each do |_, fields| %>
-            <% value = fields[row_field] %>
-            <td>
-              <% if value.is_a?(GreenhouseGases) %>
-                <%= number_with_delimiter(value.tonnes.round) %> t
-              <% else %>
-                <%= number_with_delimiter(value) %>
-              <% end %>
-            </td>
+          <th style="min-width: 120px;"></th>
+          <% (0..30).each do |i| %>
+            <% if (Date.today - i).wday == 0 %>
+              <th class="bg-pink-accent">
+            <% elsif (Date.today - i).wday == 6 %>
+              <th class="bg-orange-accent">
+            <% else %>
+              <th>
+            <% end %>
+              <%= (Date.today - i).day.to_s + "/" + (Date.today - i).month.to_s %>
+            </th>
           <% end %>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>
+      </thead>
+      <tbody>
+        <tr>
+          <th>total new&nbsp;users</th>
+          <% (0..30).each do |i| %>
+            <td><%= @users_stats.new_users[(Date.today - i).to_s].nil? ? 0 : @users_stats.new_users[(Date.today - i).to_s] %></td>
+          <% end %>
+        </tr>
+        <tr>
+          <th>mean&nbsp;14&nbsp;days</th>
+          <% (0..30).each do |i| %>
+            <td><%= @users_stats.new_users_mean[(Date.today - i).to_s] %></td>
+          <% end %>
+        </tr>
+        <tr>
+          <th>new users with subscription</th>
+          <% (0..30).each do |i| %>
+            <td><%= @users_stats.new_users_with_subscription[(Date.today - i).to_s].nil? ? 0 : @users_stats.new_users_with_subscription[(Date.today - i).to_s] %></td>
+          <% end %>
+        </tr>
+        <tr>
+          <th>new users without subscription</th>
+          <% (0..30).each do |i| %>
+            <td><%= @users_stats.new_users_without_subscription[(Date.today - i).to_s].nil? ? 0 : @users_stats.new_users_without_subscription[(Date.today - i).to_s] %></td>
+          <% end %>
+        </tr>
+        <tr>
+          <th>new users from referral codes</th>
+          <% (0..30).each do |i| %>
+            <td><%= @users_stats.new_users_with_referral_code[(Date.today - i).to_s].nil? ? 0 : @users_stats.new_users_with_referral_code[(Date.today - i).to_s] %></td>
+          <% end %>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </section>
 
-<h3>Dashboard actions</h3>
-<div>
-  <h4>Refresh Instagram API access token</h4>
-  <%= form_with url: admin_refresh_instagram_token_path do |form| %>
-    <%= form.submit 'Refresh token', class: 'btn btn-default' %>
-  <% end %>
+  <section class="space-y-3">
+  <h3 class="heading">Churn</h3>
+  <div class="overflow-x-auto">
+    <table class="table table-striped table-condensed table-sticky-first-column">
+      <thead>
+        <tr>
+          <th style="min-width: 120px;"></th>
+          <% (0..30).each do |i| %>
+            <% if (Date.today - i).wday == 0 %>
+              <th style="background-color: red;">
+            <% elsif (Date.today - i).wday == 6 %>
+              <th style="background-color: orange;">
+            <% else %>
+              <th>
+            <% end %>
+              <%= (Date.today - i).day.to_s + "/" + (Date.today - i).month.to_s %>
+            </th>
+          <% end %>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>churned&nbsp;users</th>
+          <% (0..30).each do |i| %>
+            <td><%= @users_stats.churned_users[(Date.today - i).to_s].nil? ? 0 : @users_stats.churned_users[(Date.today - i).to_s] %></td>
+          <% end %>
+        </tr>
+        <tr>
+          <th>mean&nbsp;14&nbsp;days</th>
+          <% (0..30).each do |i| %>
+            <td><%= @users_stats.churned_users_mean[(Date.today - i).to_s] %></td>
+          <% end %>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </section>
+
+  <section class="space-y-3">
+  <h3 class="heading">CO2-credits sold</h3>
+  <div class="overflow-x-auto">
+    <table class="table table-striped table-condensed table-sticky-first-column">
+      <thead>
+        <tr>
+          <th style="min-width: 120px;"></th>
+          <% @sold_offsetting_per_month.keys.each do |month| %>
+            <th style="white-space: nowrap;">
+              <%= month %>
+            </th>
+          <% end %>
+        </tr>
+      </thead>
+      <tbody>
+        <% [
+          :subscription_months_co2e, :subscription_months_count, :gift_cards_co2e,
+          :gift_cards_count, :flight_offsets_co2e, :flight_offsets_count,
+          :invoices_co2e, :invoices_count, :climate_report_invoices_co2e,
+          :climate_report_invoices_count, :total_co2e
+        ].each do |row_field| %>
+          <tr>
+            <th><%= row_field.to_s.gsub('_', ' ') %></th>
+            <% @sold_offsetting_per_month.each do |_, fields| %>
+              <% value = fields[row_field] %>
+              <td>
+                <% if value.is_a?(GreenhouseGases) %>
+                  <%= number_with_delimiter(value.tonnes.round) %> t
+                <% else %>
+                  <%= number_with_delimiter(value) %>
+                <% end %>
+              </td>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  </section>
+
+  <section class="space-y-3">
+    <h3 class="heading">Dashboard actions</h3>
+    <div>
+      <h4>Refresh Instagram API access token</h4>
+      <%= form_with url: admin_refresh_instagram_token_path do |form| %>
+        <%= form.submit 'Refresh token', class: 'button' %>
+      <% end %>
+    </div>
+  </section>
 </div>

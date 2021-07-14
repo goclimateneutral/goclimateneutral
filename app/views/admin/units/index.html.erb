@@ -1,6 +1,6 @@
 <%= render 'admin/shared/notice_banner' %>
 
-<h1>Units</h1>
+<h1 class="heading-lg">Units</h1>
 
 <table class="table">
   <thead>
@@ -20,10 +20,10 @@
         <td><%= unit.key %></td>
         <td><%= unit.input_type %></td>
         <td><%= time_tag(unit.updated_at, format: '%F %R') %></td>
-        <td class="admin-actions">
-          <%= link_to 'Show', [:admin, unit] %> &nbsp;
-          <%= link_to 'Edit', edit_admin_unit_path(unit) %> &nbsp;
-          <%= link_to 'Destroy', [:admin, unit], method: :delete, data: { confirm: 'Are you sure?' } %>
+        <td class="whitespace-nowrap">
+          <%= link_to 'Show', [:admin, unit], class: 'link-ui text-green-shade-2' %> &nbsp;
+          <%= link_to 'Edit', edit_admin_unit_path(unit), class: 'link-ui text-green-shade-2' %> &nbsp;
+          <%= link_to 'Destroy', [:admin, unit], method: :delete, data: { confirm: 'Are you sure?' }, class: 'link-ui text-green-shade-2' %>
         </td>
       </tr>
     <% end %>
@@ -32,4 +32,4 @@
 
 <hr>
 
-<%= link_to 'New unit', new_admin_unit_path, class: 'btn btn-default' %>
+<%= link_to 'New unit', new_admin_unit_path, class: 'button' %>

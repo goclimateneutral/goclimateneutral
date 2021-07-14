@@ -1,6 +1,6 @@
 <%= render 'admin/shared/notice_banner' %>
 
-<h1>Climate Report Invoices</h1>
+<h1 class="heading-lg">Climate Report Invoices</h1>
 
 <table class="table">
   <thead>
@@ -30,13 +30,13 @@
         <td><%= number_with_delimiter(invoice.co2e, delimiter: ' ') %> kg co2e</td>
         <td><%= price_string(invoice.amount, invoice.currency, lowest_denominator: true) %></td>
         <td><%= invoice.project&.name %></td>
-        <td class="admin-actions">
-          <%= link_to 'Show', [:admin, invoice] %>
+        <td class="whitespace-nowrap">
+          <%= link_to 'Show', [:admin, invoice], class: 'link-ui text-green-shade-2' %>
           <% if invoice.project.present? %>
-            &nbsp; <%= link_to 'Certificate', admin_invoice_certificates_path(type: 'climate_report_invoice', id: invoice.id, format: :pdf) %>
+            &nbsp; <%= link_to 'Certificate', admin_invoice_certificates_path(type: 'climate_report_invoice', id: invoice.id, format: :pdf), class: 'link-ui text-green-shade-2' %>
           <% end %>
           <% if invoice.project.present? %>
-            &nbsp; <%= link_to 'Report', business_climate_report_path(key: invoice.climate_report.key, format: :pdf, locale: 'sv') %>
+            &nbsp; <%= link_to 'Report', business_climate_report_path(key: invoice.climate_report.key, format: :pdf, locale: 'sv'), class: 'link-ui text-green-shade-2' %>
           <% end %>
         </td>
       </tr>

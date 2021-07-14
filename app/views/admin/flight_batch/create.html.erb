@@ -1,5 +1,5 @@
 <% unless @errors.empty? %>
-  <h1>The following errors were found:</h1>
+  <h1 class="heading-lg">The following errors were found:</h1>
   <ul>
     <% @errors.each do |error| %>
       <li><%= error %></li>
@@ -7,7 +7,7 @@
   </ul>
 <% else %>
 
-<h1>Result</h1>
+<h1 class="heading-lg">Result</h1>
   <h2>Total emissions: <%= @emissions %> kg co2e</h2>
   <p>Please check that airports found below are correct. If not, change input to iata_codes.</p>
 

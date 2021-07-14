@@ -1,6 +1,6 @@
 <%= render 'admin/shared/notice_banner' %>
 
-<h1>Business calculator</h1>
+<h1 class="heading-lg">Business calculator</h1>
 
 <dl class="dl-horizontal">
   <dt>Name:</dt>
@@ -44,6 +44,6 @@
 
 <hr>
 
-<%= link_to 'Edit', edit_admin_business_calculator_path(@calculator), class: 'btn btn-default' %>
-<%= link_to 'Preview form', preview_reported_data_path(@calculator.id), class: 'btn btn-default', target: :_blank %>
-<%= link_to 'Back to all calculators', admin_business_calculators_path, class: 'btn btn-link' %>
+<%= link_to 'Edit', edit_admin_business_calculator_path(@calculator), class: 'button' %>
+<%= link_to 'Preview form', preview_reported_data_path(@calculator.id), class: 'button', target: :_blank %>
+<%= link_to 'Back to all calculators', admin_business_calculators_path, class: 'link' %>

@@ -1,6 +1,6 @@
 <%= render 'admin/shared/notice_banner' %>
 
-<h1>Climate Report</h1>
+<h1 class="heading-lg">Climate Report</h1>
 
 <dl class="dl-horizontal">
   <dt>See results:</dt>
@@ -41,7 +41,7 @@
         <% data_reporters = DataReporter.joins(:data_requests).where("data_requests.report_area_id = #{area.id}").distinct %>
         Data reporters (<%= data_reporters.count %>) &nbsp;
         <%= link_to 'See all requests', admin_data_requests_path(report_area_id: area.id) %> &nbsp;
-        <%= link_to '+ New data request', new_admin_data_request_path(area: area), class: 'btn btn-default' %>
+        <%= link_to '+ New data request', new_admin_data_request_path(area: area), class: 'button' %>
       </div>
     </dd>
   <% end %>
@@ -49,6 +49,6 @@
 
 <hr>
 
-<%= link_to 'Edit', edit_admin_climate_report_path(@report), class: 'btn btn-default' %>
-<%= link_to 'Preview form', preview_admin_climate_report_path(@report), class: 'btn btn-default' %>
-<%= link_to 'All reports', admin_climate_reports_path, class: 'btn btn-link' %>
+<%= link_to 'Edit', edit_admin_climate_report_path(@report), class: 'button' %>
+<%= link_to 'Preview form', preview_admin_climate_report_path(@report), class: 'button' %>
+<%= link_to 'All reports', admin_climate_reports_path, class: 'link' %>

@@ -18,7 +18,16 @@ application.load(definitionsFromContext(
 ));
 
 /* Bootstrap */
-import 'bootstrap/dist/css/bootstrap.css';
+// import 'bootstrap/dist/css/bootstrap.css';
 
 /* Styling */
-import '../admin/index.css';
+// import '../admin/index.css';
+
+/* Font Awesome */
+import '@fortawesome/fontawesome-free/css/fontawesome.css';
+import '@fortawesome/fontawesome-free/css/solid.css';
+import '@fortawesome/fontawesome-free/css/regular.css';
+import '@fortawesome/fontawesome-free/css/brands.css';
+
+/* Styling */
+import '../main/index.css';

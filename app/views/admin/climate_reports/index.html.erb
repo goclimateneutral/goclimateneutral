@@ -1,6 +1,6 @@
 <%= render 'admin/shared/notice_banner' %>
 
-<h1>Climate reports</h1>
+<h1 class="heading-lg">Climate reports</h1>
 
 <table class="table">
   <thead>
@@ -20,14 +20,14 @@
         <td><%= report.organization.name %></td>
         <td><%= report.reporting_period %></td>
         <td><%= time_tag(report.updated_at, format: '%F %R') %></td>
-        <td class="admin-actions">
-          <%= link_to 'Show', [:admin, report] %> &nbsp;
+        <td class="whitespace-nowrap">
+          <%= link_to 'Show', [:admin, report], class: 'link-ui text-green-shade-2' %> &nbsp;
+          <%= link_to 'Edit', edit_admin_climate_report_path(report), class: 'link-ui text-green-shade-2' %> &nbsp;
+          <%= link_to 'Destroy', [:admin, report], method: :delete, data: { confirm: 'Are you sure?' }, class: 'link-ui text-green-shade-2' %> &nbsp;
           <%= link_to(
             "Show reported data (#{report.number_of_answered_questions}/#{report.number_of_questions})",
-            admin_reported_datas_path(report_id: report.id)
-          )%> &nbsp;
-          <%= link_to 'Edit', edit_admin_climate_report_path(report) %> &nbsp;
-          <%= link_to 'Destroy', [:admin, report], method: :delete, data: { confirm: 'Are you sure?' } %>
+            admin_reported_datas_path(report_id: report.id), class: 'link-ui text-green-shade-2'
+          )%>
         </td>
       </tr>
     <% end %>
@@ -36,4 +36,4 @@
 
 <hr>
 
-<%= link_to 'New report', new_admin_climate_report_path, class: 'btn btn-default' %>
+<%= link_to 'New report', new_admin_climate_report_path, class: 'button' %>

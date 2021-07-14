@@ -1,8 +1,8 @@
 <%= render 'admin/shared/notice_banner' %>
 
-<h1>Flight offsets</h1>
+<h1 class="heading-lg">Flight offsets</h1>
 
-<%= link_to 'New Flight offset', new_admin_flight_offset_path, class: 'btn btn-default' %>
+<%= link_to 'New Flight offset', new_admin_flight_offset_path, class: 'button' %>
 
 <table class="table">
   <thead>
@@ -24,8 +24,8 @@
         <td><%= flight_offset.price %></td>
         <td><%= flight_offset.co2e %></td>
         <td><%= flight_offset.email %></td>
-        <td class="admin-actions">
-          <%= link_to 'Show', admin_flight_offset_path(flight_offset.id) %>
+        <td class="whitespace-nowrap">
+          <%= link_to 'Show', admin_flight_offset_path(flight_offset.id), class: 'link-ui text-green-shade-2' %>
         </td>
       </tr>
     <% end %>

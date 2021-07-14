@@ -1,56 +1,60 @@
 <%= form_for([:admin, invoice]) do |f| %>
-  <% if invoice.errors.any? %>
-    <div>
-      <h2><%= pluralize(invoice.errors.count, "error") %> prohibited this invoice from being saved:</h2>
+  <div class="space-y-3">
+    <% if invoice.errors.any? %>
+      <div>
+        <h2><%= pluralize(invoice.errors.count, "error") %> prohibited this invoice from being saved:</h2>
 
-      <ul>
-      <% invoice.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% invoice.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="flex flex-col">
+      <%= f.label :fortnox_id, class: 'font-bold' %>
+      <%= f.text_field :fortnox_id, class: 'input' %>
     </div>
-  <% end %>
 
-  <div class="form-group">
-    <%= f.label :fortnox_id %>
-    <%= f.text_field :fortnox_id, class: 'form-control' %>
+    <div class="flex flex-col">
+      <%= f.label :project_id, 'Project', class: 'font-bold' %>
+      <div class="select-wrapper">
+        <%= f.select :project_id, project_id_options_for_select(@available_projects, 1, invoice.project_id), {include_blank: true}, class: 'select', required: false %>
+      </div>
+    </div>
+
+    <div class="flex flex-col">
+      <p><%= f.label :amount_in_sek, class: 'font-bold' %> (including VAT)</p>
+      <%= f.number_field :amount_in_sek, class: 'input' %>
+    </div>
+
+    <div class="flex flex-col">
+      <p><%= f.label :co2e, class: 'font-bold' %> (in kg)</p>
+      <%= f.number_field :co2e, class: 'input' %>
+    </div>
+
+    <div class="flex flex-col">
+      <%= f.label :receiver, class: 'font-bold' %>
+      <%= f.text_field :receiver, class: 'input' %>
+    </div>
+
+    <div class="flex flex-col">
+      <%= f.label :comment, class: 'font-bold' %>
+      <%= f.text_field :comment, class: 'input' %>
+    </div>
+
+    <div class="flex flex-col">
+      <%= f.label :certificate_sent_at, class: 'font-bold' %>
+      <%= f.text_field :certificate_sent_at, class: 'input' %>
+      <label><input type="checkbox" value="now" name="invoice[certificate_sent_at]"> Now</label>
+    </div>
+
+    <div class="flex flex-col">
+      <p><%= f.label :certificate_reciever_email, class: 'font-bold' %> (leave empty if you don't want system to send certificate)</p>
+      <%= f.text_field :certificate_reciever_email, class: 'input' %>
+    </div>
+
+    <%= f.submit class: 'button button-cta' %>
   </div>
-
-  <div class="form-group">
-    <%= f.label :project_id, 'Project' %>
-    <%= f.select :project_id, project_id_options_for_select(@available_projects, 1, invoice.project_id), {include_blank: true}, class: 'form-control', required: false %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :amount_in_sek %> (including VAT)
-    <%= f.number_field :amount_in_sek, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :co2e %> (in kg)
-    <%= f.number_field :co2e, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :receiver %>
-    <%= f.text_field :receiver, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :comment %>
-    <%= f.text_field :comment, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :certificate_sent_at %>
-    <%= f.text_field :certificate_sent_at, class: 'form-control' %>
-    <label><input type="checkbox" value="now" name="invoice[certificate_sent_at]"> Now</label>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :certificate_reciever_email %> (leave empty if you don't want system to send certificate)
-    <%= f.text_field :certificate_reciever_email, class: 'form-control' %>
-  </div>
-
-  <%= f.submit class: 'btn btn-primary' %>
 <% end %>
