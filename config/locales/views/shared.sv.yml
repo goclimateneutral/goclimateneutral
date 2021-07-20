@@ -9,12 +9,7 @@ sv:
           select_country: Välj ditt land eller område så att vi kan visa information som passar bäst för dig.
           continue_button: "Fortsätt till %{region}"
           dismiss: Avfärda byte av område
-        sign_up: Registrera dig
-        book_meeting: Boka möte
-        business_subnavigation:
-          climate_advisory: Klimatrådgivning
-          self_serve: Gör-det-själv klimatrapport
-          offsetting: Klimatkompensering
+        sign_up: Registrera
       prefooter:
         heading: Rädda klimatet tillsammans med oss!
         body_text: Prenumerera och balansera ditt klimatavtryck.
@@ -30,7 +25,6 @@ sv:
         newsletter:
           heading: Prenumerera på vårt nyhetsbrev
           cta: Prenumerera
-        our_services: Våra tjänster
       more_info:
         about:
           title: Om oss
@@ -44,11 +38,3 @@ sv:
           title: 100 % transparens
           description: Vi vill att du ska känna dig helt trygg med hur dina pengar gör klimatnytta. Vi redovisar löpande alla våra utgifter här på siten, för att du ska veta exakt hur pengarna används.
           cta: Se alla våra siffror
-      cookie_banner:
-        text: Kakor hjälper oss att leverera våra tjänster. Genom att använda våra tjänster godkänner du
-        link_text: vår användning av kakor
-        cta: Jag godkänner
-      read_more: Läs mer
-      update_success: Uppdateringen lyckades!
-      update_error: Hoppsan, något blev fel!
-      year: år
