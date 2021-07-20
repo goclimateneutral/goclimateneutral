@@ -1,6 +1,11 @@
 eo:
   views:
     dashboard:
+      footprint:
+        subscription_coverage: crwdns15224:0%{subscription_price}crwdnd15224:0%{footprint_coverage}crwdne15224:0
+        previous_footprints: crwdns15226:0crwdne15226:0
+        update_subscription: crwdns15228:0crwdne15228:0
+        subscribe: crwdns15230:0crwdne15230:0
       share:
         text: crwdns15112:0crwdne15112:0
         heading_progress: crwdns15114:0crwdne15114:0
