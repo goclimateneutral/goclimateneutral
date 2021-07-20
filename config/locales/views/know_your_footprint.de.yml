@@ -1,1 +1,20 @@
 de:
+  views:
+    know_your_footprint:
+      show:
+        heading: Ihre jährliche CO2-Bilanz
+        description: GoClimate kämpft gegen die Klimakatastrophe, indem es den Ausstoß von Treibhausgasen reduziert. Dabei haben wir stets die Klimagerechtigkeit im Blick und arbeitet zu 100 % transparent. Als Gemeinschaft finanzieren wir wirksame Klimaprojekte, die eine Grundlage für eine nachhaltige Zukunft bilden, und unterstützen Sie dabei, Ihren ökologischen Fußabdruck zu reduzieren.
+        cta: Machen Sie den Test, um mehr zu erfahren!
+        what_is_a_carbon_footprint:
+          heading: Was ist ein CO2-Fußabdruck?
+          text: Wir alle haben einen individuellen CO2-Fußabdruck, denn so ziemlich alles, was wir tun, emittiert CO2 (Kohlendioxid). Auch wenn große Unternehmen und Regierungen eine große Verantwortung tragen, müssen wir alle zusammenkommen, um eine Veränderung herbeizuführen und eine Lebensweise zu schaffen, die dem Planeten nicht schadet. Der Durchschnitt von jemandem, der im globalen Norden lebt, beträgt 10 Tonnen pro Jahr. Wir müssen diese Zahl in jedem Jahrzehnt halbieren, um vor weiteren Klimakatastrophen einigermaßen sicher zu sein.
+        system_change:
+          heading: Systemänderung und Verhaltensänderung
+          text: Großkonzerne und Regierungen sind für nationale Politik und kollektive Emissionen verantwortlich. Aber als Individuen sind wir auch für einen Anteil an all dem verantwortlich. Wenn wir alle zusammenarbeiten, können wir die Emissionen sowohl auf individueller als auch auf kollektiver Ebene reduzieren sowie Druck auf die Regierungen ausüben, um die Gesetzgebung zu verbessern. Dies ist keine entweder/oder Situation, wir müssen alles tun - das System UND unser eigenes Verhalten verändern!
+        global_north_south:
+          heading: Globaler Norden vs. globaler Süden
+          text: Der globale Norden und der globale Süden sind Begriffe, mit denen die Länder der Erde in zwei Gruppen eingeteilt werden, definiert durch Unterschiede auf sozioökonomischer Ebene und durch politische Ansichten. Im Allgemeinen sind die Länder im globalen Norden tendenziell Industrieländer, wohlhabender, mit weniger Ungleichheit und demokratischer. Länder im globalen Süden sind eher Entwicklungsländer, die im Allgemeinen ärmer sind und eine kürzere Geschichte der Demokratie haben.
+          text_2: Ein großer Teil der Produktion von Gegenständen, die vom globalen Norden verbraucht werden, findet im globalen Süden statt. Das schafft ein Ungleichgewicht im Hinblick auf Emissionen, was unserer Meinung nach angegangen werden muss. Eine Möglichkeit, Verantwortung zu übernehmen, besteht darin, Ihren CO2-Fußabdruck durch die Unterstützung von Klimaschutzprojekten mit Hilfe unseres Abonnement-Services auszugleichen.
+        sign_up:
+          heading: Mach mit!
+          text: Als Gemeinschaft finanzieren wir effektive Klimaprojekte, die die Grundlage für eine nachhaltige Zukunft bilden. Wir unterstützen nur zertifizierte Klimaschutzprojekte, um sicherzustellen, dass Ihr Geld einen möglichst großen Effekt hat. GoClimate unterstützt Sie auch bei der Reduzierung Ihrer CO2-Emissionen.
