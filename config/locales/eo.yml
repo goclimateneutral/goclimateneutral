@@ -13,11 +13,11 @@ eo:
   100_percent_transparency: crwdns11732:0crwdne11732:0
   what_we_do_with_your_money: crwdns11736:0crwdne11736:0
   system_change: crwdns11738:0crwdne11738:0
-  system_change_description: crwdns11740:0crwdne11740:0
+  system_change_description: crwdns15334:0crwdne15334:0
   climate_projects: crwdns11742:0crwdne11742:0
   climate_projects_description: crwdns11744:0crwdne11744:0
   behavioral_change: crwdns11746:0crwdne11746:0
-  behavioral_change_description: crwdns11748:0crwdne11748:0
+  behavioral_change_description: crwdns15126:0crwdne15126:0
   basic_facts: crwdns11750:0crwdne11750:0
   employees: crwdns11752:0crwdne11752:0
   full_time: crwdns11754:0crwdne11754:0
@@ -29,6 +29,7 @@ eo:
   number_of_companies_we_have_helped: crwdns11766:0crwdne11766:0
   tonnes_avoided_CO2e-emissions: crwdns11768:0crwdne11768:0
   latest_fiscal_year_turnover: crwdns11770:0crwdne11770:0
+  annual_reports: crwdns15326:0crwdne15326:0
   total_accumulated_dividend_to_shareholders: crwdns11772:0crwdne11772:0
   everything_is_invested_for_maximum_climate_impact: crwdns11774:0crwdne11774:0
   amount_of_avoided_emissions: crwdns11776:0crwdne11776:0
@@ -36,7 +37,7 @@ eo:
   project_distribution_by_technology: crwdns11780:0crwdne11780:0
   CO2e_avoided_per_coworker: crwdns11782:0crwdne11782:0
   100_percent_transparency_financial_info: crwdns11788:0crwdne11788:0
-  100_percent_transparency_financial_info_intro: crwdns11790:0crwdne11790:0
+  100_percent_transparency_financial_info_intro: crwdns15332:0crwdne15332:0
   fiscal_years: crwdns11792:0crwdne11792:0
   revenue: crwdns11800:0crwdne11800:0
   cost: crwdns11802:0crwdne11802:0
@@ -64,7 +65,7 @@ eo:
   about_us_why_do_we_exist_text: crwdns15082:0crwdne15082:0
   about_us_why_do_we_exist_text_2: crwdns15084:0crwdne15084:0
   about_us_how_do_we_stop_climate_change: crwdns11848:0crwdne11848:0
-  about_us_how_do_we_stop_climate_change_text: crwdns11850:0crwdne11850:0
+  about_us_how_do_we_stop_climate_change_text: crwdns15128:0crwdne15128:0
   about_us_who_are_we: crwdns11854:0crwdne11854:0
   about_us_team:
     heading: crwdns13360:0crwdne13360:0
@@ -83,7 +84,7 @@ eo:
   credit_or_debit_card: crwdns11886:0crwdne11886:0
   add_new_card: crwdns11888:0crwdne11888:0
   edit_card: crwdns14866:0crwdne14866:0
-  your_payment_details_have_been_updated: crwdns11892:0crwdne11892:0
+  your_payment_details_have_been_updated: crwdns15337:0crwdne15337:0
   climate_plan: crwdns11896:0crwdne11896:0
   log_in_to_see_how_we_are_doing: crwdns11900:0crwdne11900:0
   you_have_lived_climate_neutral_for:
@@ -117,7 +118,8 @@ eo:
         food: crwdns14964:0crwdne14964:0
         car: crwdns14966:0crwdne14966:0
         flights: crwdns14968:0crwdne14968:0
-        public: crwdns14970:0crwdne14970:0
+        shopping: crwdns15160:0crwdne15160:0
+        public: crwdns15162:0crwdne15162:0
   good_job: crwdns11920:0crwdne11920:0
   our_projects: crwdns11926:0crwdne11926:0
   project_name: crwdns11932:0crwdne11932:0
@@ -235,7 +237,7 @@ eo:
           answer: crwdns13234:0crwdne13234:0
         q11:
           question: crwdns15002:0crwdne15002:0
-          answer: crwdns15004:0crwdne15004:0
+          answer: crwdns15130:0crwdne15130:0
     about_us:
       heading: crwdns12128:0crwdne12128:0
       questions:
@@ -299,7 +301,7 @@ eo:
   welcome:
     users_prefix: crwdns12208:0crwdne12208:0
     users_suffix: crwdns12210:0crwdne12210:0
-    tonnes_prefix: crwdns12212:0crwdne12212:0
+    tonnes_prefix: crwdns15339:0crwdne15339:0
     tonnes_suffix: crwdns12214:0crwdne12214:0
     business:
       we_will_contact_you_shortly_html: crwdns12250:0%{email}crwdne12250:0
