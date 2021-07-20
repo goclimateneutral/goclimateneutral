@@ -1,0 +1,10 @@
+eo:
+  reported_datas:
+    heading: crwdns15657:0%{report_area}crwdne15657:0
+    time_period_html: crwdns15659:0%{time_period}crwdne15659:0
+    submit: crwdns15661:0crwdne15661:0
+    units: crwdns15663:0crwdne15663:0
+    thank_you:
+      heading: crwdns15665:0crwdne15665:0
+      text: crwdns15667:0%{report_area}crwdne15667:0
+      cta: crwdns15669:0crwdne15669:0
