@@ -2,6 +2,8 @@ de:
   views:
     projects:
       heading: Unsere Klimaprojekte
+      current_projects: Aktuelle Projekte
+      see_all: Erfahren Sie mehr über unsere bisherigen Projekte
       how:
         heading: Wie unsere Projekte funktionieren
         1: Der Zweck all unserer Projekte ist es, die Treibhausgasemissionen zu reduzieren, zum Beispiel durch die Förderung erneuerbarer Energien.
