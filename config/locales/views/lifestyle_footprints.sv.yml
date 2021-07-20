@@ -22,7 +22,7 @@ sv:
           one_or_two_bedrooms: 1-2 sovrum
           three_or_four_bedrooms: 3-4 sovrum
           five_or_more_bedrooms: 5+ sovrum
-          # TODO: Remove after LifestyleFootprints have been migrated to use home_area for these
+          #TODO: Remove after LifestyleFootprints have been migrated to use home_area for these
           fifteen_sqm: 15 m² per person
           twentyfive_sqm: 25 m² per person
           fortytwo_sqm: 42 m² per person
@@ -91,7 +91,3 @@ sv:
         share:
           text: Ett av de mest kraftfulla sätten att skapa förändring är att inspirera andra att agera - och vi blir jättestolta om du delar ditt klimatavtryck i dina egna kanaler.
           social_quote: Mitt klimatavtryck är %{tonnes} ton koldioxid! Se mitt avtryck och beräkna ditt egna på %{url}
-        update:
-          placeholder: Lägg till titel
-          cta_create: Skapa titel
-          cta_update: Uppdatera titel
