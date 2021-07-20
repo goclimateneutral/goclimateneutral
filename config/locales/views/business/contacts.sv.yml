@@ -1,17 +1,1 @@
 sv:
-  views:
-    business:
-      contacts:
-        form:
-          heading: Boka möte med våra erfarna klimatrådgivare
-          name: Ditt namn
-          company: Företag
-          phone: Telefonnummer
-          email: Epost
-          contact_via: Kontakta mig via
-          contact_via_email: Epost
-          contact_via_phone: Telefon
-          message: Meddelande
-          submit: Hörs snart!
-          option_text_html: Eller mejla oss på <a href="mailto:hello@goclimate.com">hello@goclimate.com</a>.
-          error: Var vänlig kontrollera din information.
