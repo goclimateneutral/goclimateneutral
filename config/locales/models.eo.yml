@@ -2,18 +2,30 @@ eo:
   models:
     money:
       currency_formats:
-        usd: 'crwdns12668:0%{number}crwdne12668:0'
+        aud: 'crwdns15194:0%{number}crwdne15194:0'
+        cad: 'crwdns15196:0%{number}crwdne15196:0'
+        dkk: 'crwdns15198:0crwdne15198:0'
         eur: 'crwdns12670:0%{number}crwdne12670:0'
+        gbp: 'crwdns15200:0%{number}crwdne15200:0'
         sek: 'crwdns12672:0crwdne12672:0'
+        usd: 'crwdns12668:0%{number}crwdne12668:0'
     currency:
       prefix:
-        usd: 'crwdns12674:0crwdne12674:0'
+        aud: 'crwdns15202:0crwdne15202:0'
+        cad: 'crwdns15204:0crwdne15204:0'
+        dkk: 'crwdns15206:0crwdne15206:0'
         eur: 'crwdns12676:0crwdne12676:0'
-        sek: 'crwdns12678:0crwdne12678:0'
+        gbp: 'crwdns15208:0crwdne15208:0'
+        sek: 'crwdns15210:0crwdne15210:0'
+        usd: 'crwdns12674:0crwdne12674:0'
       suffix:
-        usd: 'crwdns12680:0crwdne12680:0'
+        aud: 'crwdns15212:0crwdne15212:0'
+        cad: 'crwdns15214:0crwdne15214:0'
+        dkk: 'crwdns15216:0crwdne15216:0'
         eur: 'crwdns12682:0crwdne12682:0'
+        gbp: 'crwdns15218:0crwdne15218:0'
         sek: 'crwdns12684:0crwdne12684:0'
+        usd: 'crwdns12680:0crwdne12680:0'
     greenhouse_gases:
       tonnes:
         one: 'crwdns12686:1%{count}crwdne12686:1'
