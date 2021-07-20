@@ -13,7 +13,6 @@ sv:
   100_percent_transparency: 100% transparens
   what_we_do_with_your_money: Vad bidrar dina pengar till?
   system_change: Systemförändring
-  system_change_description: Vi behöver mobilisera människor för att visa politiker och företag att vi är många som vill snabba på omställningen till ett hållbart samhälle.
   climate_projects: Klimatprojekt
   climate_projects_description: Vi stöttar Gold Standard-certifierade klimatprojekt för att snabba på omställningen till ett hållbart energisystem och samhälle.
   behavioral_change: Beteendeförändring
@@ -37,7 +36,6 @@ sv:
   project_distribution_by_technology: Den här typen av projekt bidrar vi till
   CO2e_avoided_per_coworker: Ton CO2e undvikna per medarbetare
   100_percent_transparency_financial_info: Finansiell information
-  100_percent_transparency_financial_info_intro: GoClimate Sweden AB (organisationsnummer 559130-6583) startades 2017 och är ett socialt företag som bidrar med samhällsnytta genom att skapa lösningar för att maximera våra chanser att lämna över en levande och välmående planet till nästkommande generationer. Vi på GoClimate vill göra allt vi kan för att bidra till att vi håller oss under 1,5 graders uppvärmning och bromsar klimatförändringarna så snabbt som möjligt.
   fiscal_years: Räkenskapsåren
   revenue: Intäkter
   cost: Kostnader
@@ -84,7 +82,6 @@ sv:
   credit_or_debit_card: Kortuppgifter
   add_new_card: Nytt kort
   edit_card: Ändra kort
-  your_payment_details_have_been_updated: Dina inställningar har uppdaterats
   climate_plan: Kompensation
   log_in_to_see_how_we_are_doing: Logga in för att se hur det går i vår kamp med att försöka ställa klimatet till rätta igen.
   you_have_lived_climate_neutral_for:
@@ -301,7 +298,6 @@ sv:
   welcome:
     users_prefix: Just nu är vi
     users_suffix: medlemmar
-    tonnes_prefix: Våra medlemmar och företagskunder har minskat
     tonnes_suffix: ton koldioxid i atmosfären
     business:
       we_will_contact_you_shortly_html: Vi kontaktar dig inom kort på <b>%{email}</b> med information om nästa steg! Vi hörs!
