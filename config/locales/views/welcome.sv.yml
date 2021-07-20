@@ -27,11 +27,6 @@ sv:
           heading: 100% transparens
           body_text: Vi vill att du ska känna dig helt trygg med hur dina pengar gör klimatnytta. Vi redovisar löpande alla våra utgifter här på siten, för att du ska veta exakt hur pengarna används.
           read_more: Läs mer om vår transparens
-        social_media:
-          heading: GoClimate i sociala medier
-          body_text: Lär dig mer om beteende- och systemförändringar, klimaträttvisa och vad du kan göra för en bättre morgondag.
-          cta: Se vårt Instagram-flöde
-        partners: Vi är stolta partners till
         community:
           heading: Lär känna våra medlemmar
           people:
@@ -65,4 +60,3 @@ sv:
         train: Tåg
         subway: Tunnelbana
         boat: Båt
-        offset_the_emissions_here: 'Kompensera för utsläppen'
