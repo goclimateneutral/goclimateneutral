@@ -1,1 +1,16 @@
 de:
+  views:
+    dashboard:
+      footprint:
+        subscription_coverage: Ihr aktueller monatlicher Ausgleich beläuft sich auf %{subscription_price}, was %{footprint_coverage}% Ihres jährlichen CO2-Fußabdrucks entspricht.
+        previous_footprints: Vorherige Bilanzen
+        update_subscription: Abonnement aktualisieren
+        subscribe: Gleichen Sie Ihre Emissionen aus
+      share:
+        text: Einer der wirksamsten Wege, Veränderungen herbeizuführen, besteht darin, auch andere zum Handeln zu inspirieren, und wir würden uns sehr freuen, wenn Sie unsere Social-Media-Kanäle nutzen und sie in Ihren eigenen Kanälen teilen würden.
+        heading_progress: Teilen Sie Ihren Fortschritt
+        heading_social_media: Auf sozialen Medien teilen
+        text_social_media: Bitte erzählen Sie Anderen von GoClimate, damit unsere Community wachsen und noch mehr bewirken kann!
+        heading_assets: Assets herunterladen
+        text_assets: Sie können gerne alles herunterladen und teilen, was Sie für hilfreich erachten - vergessen Sie nicht, uns unter @goclimate auf Instagram zu folgen und zu teilen.
+        cta_assets: Gehe zu Assets
