@@ -1,0 +1,35 @@
+eo:
+  views:
+    business:
+      home:
+        hero:
+          heading: crwdns15437:0crwdne15437:0
+          text: crwdns15439:0crwdne15439:0
+        customers: crwdns15441:0crwdne15441:0
+        our_offer:
+          heading: crwdns15443:0crwdne15443:0
+          bullet_1: crwdns15445:0crwdne15445:0
+          bullet_2: crwdns15447:0crwdne15447:0
+          bullet_3: crwdns15449:0crwdne15449:0
+          bullet_4: crwdns15451:0crwdne15451:0
+        advisory:
+          heading: crwdns15453:0crwdne15453:0
+          text: crwdns15455:0crwdne15455:0
+          read_more: crwdns15457:0crwdne15457:0
+          book_meeting: crwdns15459:0crwdne15459:0
+        self_serve:
+          heading: crwdns15461:0crwdne15461:0
+          text: crwdns15463:0crwdne15463:0
+          read_more: crwdns15465:0crwdne15465:0
+          calculate: crwdns15467:0crwdne15467:0
+        offsetting:
+          heading: crwdns15469:0crwdne15469:0
+          text: crwdns15471:0crwdne15471:0
+          learn_more: crwdns15473:0crwdne15473:0
+        other_services:
+          heading: crwdns15475:0crwdne15475:0
+          text_html: crwdns15477:0crwdne15477:0
+        questions:
+          heading: crwdns15479:0crwdne15479:0
+          text_html: crwdns15481:0crwdne15481:0
+          cta: crwdns15483:0crwdne15483:0
