@@ -1,7 +1,6 @@
 sv:
   mailers:
     welcome:
-      from: "%{name} på GoClimate"
       subject: Välkommen till GoClimate!
       welcome_to_gcn: Hej!
       big_thanks: Stort tack för att du är med och bidrar till en hållbar värld!
@@ -11,4 +10,3 @@ sv:
       if_you_have_any_questions: Om du undrar över något, vill ge återkoppling eller bara säga hej, hör gärna av dig till mig på tove@goclimate.com!
       thank_you: Tack för att du är med och gör skillnad!
       best_regards: Vänliga hälsningar,
-      the_gcn_team: "%{name} på GoClimate"
