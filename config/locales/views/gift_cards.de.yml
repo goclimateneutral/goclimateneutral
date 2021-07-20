@@ -15,6 +15,7 @@ de:
           3: 3 Monate wählen
           6: 6 Monate wählen
           12: 12 Monate wählen
+        details: Die Geschenkgutscheine basieren auf dem durchschnittlichen CO2-Fußabdruck in %{country} von %{footprint} Tonnen CO2/Jahr. Um sicherzustellen, dass wir nichts unterschätzen, enthalten die oben genannten Preise auch eine Verdoppelung dieser Zahl.
       new:
         intro: Kaufen und personalisieren Sie Ihren Gutschein
         your_gift_card_order: Ihre Gutscheinbestellung
@@ -25,6 +26,12 @@ de:
         pay: Gutschein kaufen
       download:
         gift_card: "Gutschein"
+        heading: Unterstützung für einen nachhaltigen Planeten für
+        months:
+          one: 1 Monat
+          other: "%{count} Monate"
+        about_offsetting: Die Kalkulation beruht auf den durchschnittlichen Emissionen in %{country} von %{yearly_footprint} Tonnen CO2 pro Person und Jahr.
+        about_goclimate: GoClimate unterstützt Klimaprojekte und gibt Inspiration und Ratschläge, wie Sie Ihren Klima-Fußabdruck reduzieren können. Alle unterstützten Projekte sind nach dem Gold Standard zertifiziert, der vom WWF und rund 80 weiteren internationalen NGOs festgelegt wurde. Gemeinsam tragen wir dazu bei, den Klimawandel zu stoppen und die Welt zu retten! Wenn Sie nach Ablauf dieser Gutscheins weiterhin klimaneutral leben möchten, besuchen Sie www.goclimate.com und registrieren Sie sich!
       example:
         message_html: "Hallo Mama,\nfühlt es sich nicht gut an, dem Klima zu helfen?\nGenieße dieses Geschenk! / Lisa"
         example: "Beispiel"
