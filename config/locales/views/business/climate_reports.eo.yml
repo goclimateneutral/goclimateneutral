@@ -1,0 +1,19 @@
+eo:
+  views:
+    business:
+      climate_reports:
+        hero:
+          heading: crwdns15393:0crwdne15393:0
+          text: crwdns15395:0crwdne15395:0
+        business_footprint:
+          heading: crwdns15397:0crwdne15397:0
+          text: crwdns15399:0crwdne15399:0
+        carbon_offsetting:
+          heading: crwdns15401:0crwdne15401:0
+          text: crwdns15403:0crwdne15403:0
+        climate_report:
+          heading: crwdns15405:0crwdne15405:0
+          text: crwdns15407:0crwdne15407:0
+        get_started:
+          heading: crwdns15409:0crwdne15409:0
+          button: crwdns15411:0crwdne15411:0

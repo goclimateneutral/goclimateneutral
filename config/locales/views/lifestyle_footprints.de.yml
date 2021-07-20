@@ -5,9 +5,11 @@ de:
       questions:
         region: In welcher Region wohnen Sie?
         home: Wie wohnen Sie?
+        home_area: Wie groß ist Ihr Zuhause?
         heating: Wie heizen Sie?
         green_electricity: Nutzen Sie Ökostrom?
         food: Wie sieht Ihre Ernährung hauptsächlich aus?
+        shopping: Im Hinblick auf Kleidung, Schuhe, Elektronik, Möbel und andere Gegenstände, wie viel davon kaufen sie brandneu?
         car_type: Was für eine Art Auto nutzen Sie?
         car_distance: Wie häufig nutzen Sie das Auto pro Woche?
         flight_hours: Wie viele Stunden sind Sie im vergangenen Jahr im Flugzeug gereist?
@@ -24,11 +26,18 @@ de:
           one_or_two_bedrooms: 1-2 Schlafzimmer
           three_or_four_bedrooms: 3-4 Schlafzimmer
           five_or_more_bedrooms: 5+ Schlafzimmer
+          #TODO: Remove after LifestyleFootprints have been migrated to use home_area for these
           fifteen_sqm: 15 m² pro Person
           twentyfive_sqm: 25 m² pro Person
           fortytwo_sqm: 42 m² pro Person
           sixty_sqm: 60 m² pro Person
           eighty_sqm: 80 m² pro Person
+        home_area:
+          fifteen_sqm: 15 Quadratmeter pro Person
+          twentyfive_sqm: 25 Quadratmeter pro Person
+          fortytwo_sqm: 42 Quadratmeter pro Person
+          sixty_sqm: 60 Quadratmeter pro Person
+          eighty_sqm: 80 Quadratmeter pro Person
         heating:
           electricity: Strom
           natural_gas: Gas
@@ -40,6 +49,7 @@ de:
           geothermal: Geothermiepumpe
           heating_oil: Heizöl
           propane: Propan
+          no_heating: Ich beheize mein Haus nicht
           dont_know: Ich weiß nicht / Andere
         green_electricity:
           'yes': 'Ja'
@@ -55,6 +65,10 @@ de:
           meat_low: Etwas Fleisch (weniger als 50 g pro Tag)
           meat_medium: Fleischesser
           meat_high: Viel Fleisch (mehr als 100 g pro Tag)
+        shopping:
+          low: Nichts oder nur wenig im letzten Jahr
+          average: Ab und zu etwas
+          high: Mehreres pro Monat oder mehrere größere Produkte im letzten Jahr
         car_type:
           gas: Benzin
           petrol: Benzin
@@ -67,3 +81,21 @@ de:
           no_car: Ich habe kein Auto
       next: Weiter
       back: Zurück
+      methodology: Wie funktioniert die Berechnung?
+      index:
+        heading: Ihre CO2-Bilanzen
+        text: Dies ist eine Übersicht über Ihre CO2-Bilanzen, die Sie berechnet haben.
+      show:
+        heading_public: Meine jährliche CO2-Bilanz
+        my_climate_footprint: Meine CO2-Bilanz von %{footprint} ist %{relative} als der Durchschnitt in %{country}. Um dem 1,5-Grad-Ziel des Pariser Abkommens zu entsprechen, müssen wir bis zum Jahr 2030 weltweit einen Durchschnitt von 2,5 Tonnen pro Person erreichen.
+        my_climate_footprint_compared_world: Meine CO2-Bilanz von %{footprint} ist %{relative} als der weltweite Durchschnitt. Um dem 1,5-Grad-Ziel des Pariser Abkommens zu entsprechen, müssen wir bis zum Jahr 2030 weltweit einen Durchschnitt von 2,5 Tonnen pro Person erreichen.
+        new_calculation: Neue Berechnung
+        delete: Löschen
+        delete_confirmation:
+          heading: Sicher?
+          text: Sie sind dabei, Ihre CO2-Berechnung zu löschen, die am %{date} erstellt wurde.
+          cta: Berechnung löschen
+          abort: Berechnung behalten
+        share:
+          text: Einer der wirksamsten Wege, Veränderungen herbeizuführen, besteht darin, auch andere zum Handeln zu inspirieren, und wir würden uns sehr freuen, wenn Sie unsere Social-Media-Kanäle nutzen und sie in Ihren eigenen Kanälen teilen würden.
+          social_quote: Mein CO2-Fußabdruck beträgt %{tonnes} Tonnen! Berechnen Sie Ihren eigenen CO2-Fußabdruck unter %{url}

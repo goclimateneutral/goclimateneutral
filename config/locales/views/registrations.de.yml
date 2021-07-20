@@ -10,10 +10,16 @@ de:
       lower: niedriger
       your_climate_footprint: Ihre CO2-Bilanz von %{footprint} ist %{relative} als der Durchschnitt in %{country}. Um dem 1,5-Grad-Ziel des Pariser Abkommens zu entsprechen, müssen wir bis zum Jahr 2030 weltweit einen Durchschnitt von 2,5 Tonnen pro Person erreichen.
       your_climate_footprint_compared_world: Ihre CO2-Bilanz von %{footprint} ist %{relative} als der weltweite Durchschnitt. Um dem 1,5-Grad-Ziel des Pariser Abkommens zu entsprechen, müssen wir bis zum Jahr 2030 weltweit einen Durchschnitt von 2,5 Tonnen pro Person erreichen.
-      sign_up_description: Melden Sie sich an, um Ihr Ergebnis zu speichern, erhalten Sie Unterstützung bei der Reduzierung Ihres ökologischen Fußabdrucks und entscheiden Sie sich für einen CO2-Ausgleich.
       step: Schritt
+      price_free: Kostenlos
       create_account: Konto erstellen
       your_subscription: Ihr Abonnement
+      number_of_people: Multiplizieren Sie Ihre Kompensation um
+      referral_code: Empfehlungscode
+      referral_code_change: Ändern
+      referral_code_link: Haben Sie einen Empfehlungscode?
+      first_month_free: Erster Monat kostenlos
+      then: Dann
       membership:
         free: <span>Kostenloses Konto</span>. Verfolgen Sie Ihre CO2-Bilanz im Laufe der Zeit.
         single: <span>Kompensiere</span> deinen ökologischen Fußabdruck durch Klimaschutzprojekte.
@@ -30,3 +36,32 @@ de:
         point_4: Wir sind 100% transparent mit allen unseren Ausgaben. Die aktuellsten Informationen dazu finden Sie immer hier auf unserer Website.
       latest_projects: Unsere neuesten Projekte
       faq: Häufig gestellte Fragen (FAQ)
+      know_your_footprint:
+        consist_of:
+          heading: Woraus besteht mein CO2-Fußabdruck?
+          text: Die wichtigsten Bereiche, die Sie in Bezug auf Ihre Emissionen betrachten müssen, sind Wohnraum, Lebensmittel, Reisen mit Auto und Flugzeug, sowie Einkäufe und öffentliche Emissionen. Wohnsituation und Autoemissionen können sehr unterschiedlich sein, je nachdem, in welchem Land Sie leben. Das gilt auch für die öffentlichen Emissionen - wozu Infrastruktur, Krankenhäuser, Bildung usw. gehören. Bereiche, in denen die meisten von uns in relativ kurzer Zeit große Veränderungen hervorrufen können, sind in der Regel das Ess- und Einkaufsverhalten sowie Reisen. Die Emissionen durch öffentlichen Schadstoffausstoß und Einkäufe können um etwa 1-5 Tonnen reduziert werden, allein durch bewusste Entscheidungen und die Veränderung Ihrer Konsumgewohnheiten.
+          text_2: Erfahren Sie mehr, indem Sie sich anmelden, und holen Sie sich unsere Unterstützung beim Reduzieren Ihres individuellen CO2-Fußabdrucks!
+        tips:
+          heading: Was kann ich tun?
+          text: Wir alle müssen unsere Emissionen reduzieren - hier sind einige wichtige Punkte, die es zu beachten gilt. Mehr Tipps gibt's in unserer Community.
+          flights:
+            heading: Bewusster reisen
+            text: Das Beste, was Sie tun können, ist, das Fliegen komplett zu vermeiden, denn selbst ein kurzer Flug ist sehr schädlich für das Klima. Die klimafreundlichsten Reisemöglichkeiten sind im Allgemeinen Zug- oder Elektroautos.
+          food:
+            heading: Mehr pflanzenbasiert essen
+            text: Die klimafreundlichste Ernährung ist ohne Zweifel eine pflanzenbasierte Ernährung. Der größte Übeltäter im Bereich Lebensmittel ist rotes Fleisch und schon die Halbierung Ihres Fleisch- und Milchverbrauchs hat große Auswirkungen auf die Reduzierung Ihrer Emissionen.
+          offsetting:
+            heading: Emissionen ausgleichen
+            text: Das Wichtigste, was jeder Einzelne zur Bekämpfung des Klimawandels tun kann, ist die Reduzierung der eigenen Emissionen. Eine großartige Ergänzung zu einem klimafreundlicheren Lebensstil ist es, seine CO2-Bilanz durch die Unterstützung von Klimaschutzprojekten auszugleichen, um die volle Verantwortung für die eigenen Emissionen zu tragen.
+        sign_up:
+          heading: Lassen Sie uns den Klimawandel gemeinsam aufhalten!
+          text: Ihre Emissionen zu verstehen und zu reduzieren, ist von entscheidender Bedeutung - es muss jedoch noch mehr getan werden. Melden Sie sich an, um Ihre Emissionen im Laufe der Zeit zu verfolgen und gleichzeitig Unterstützung bei der Reduktion Ihres Fußabdrucks zu bekommen - und kompensieren Sie Ihren Lebensstil durch Klimaprojekte, um Ihre Reise zu einem klimafreundlichen Leben jetzt starten zu können.
+          free_account:
+            heading: Kostenloser Account
+            text: Verfolgen Sie Ihre CO2-Bilanz im Laufe der Zeit und erhalten Sie Unterstützung bei der Reduzierung Ihrer Emissionen.
+            your_footprint: Ihre jährliche CO2-Bilanz
+          offset_account:
+            heading: Emissionen ausgleichen
+            text: Gleichen Sie Ihren CO2-Ausstoß durch Klimaprojekte aus und holen Sie sich Unterstützung beim Reduzieren Ihrer Emissionen.
+      settings:
+        user_name_description: Ihr Name wird in Top Listen und geteilten Links genannt. Lassen Sie das Feld frei, um anonym zu bleiben.

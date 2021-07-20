@@ -1,7 +1,1 @@
 sv:
-  data_reporters:
-    heading: Dina dataförfrågningar
-    list_headings:
-      report_area: Rapporteringsområde
-      date: Datum
-      progress: Status

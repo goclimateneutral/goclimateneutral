@@ -27,6 +27,11 @@ eo:
           heading: crwdns13142:0crwdne13142:0
           body_text: crwdns13270:0crwdne13270:0
           read_more: crwdns13146:0crwdne13146:0
+        social_media:
+          heading: crwdns15743:0crwdne15743:0
+          body_text: crwdns15745:0crwdne15745:0
+          cta: crwdns15747:0crwdne15747:0
+        partners: crwdns15749:0crwdne15749:0
         community:
           heading: crwdns13330:0crwdne13330:0
           people:
@@ -60,4 +65,4 @@ eo:
         train: crwdns13212:0crwdne13212:0
         subway: crwdns13214:0crwdne13214:0
         boat: crwdns13216:0crwdne13216:0
-        offset_the_emissions_here: 'crwdns14922:0crwdne14922:0'
+        offset_the_emissions_here: 'crwdns15751:0crwdne15751:0'

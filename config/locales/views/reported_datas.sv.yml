@@ -1,10 +1,1 @@
 sv:
-  reported_datas:
-    heading: Datainsamling för %{report_area}
-    time_period_html: Kom ihåg att datainsamlingen gäller för perioden <span>%{time_period}</span>.
-    submit: Skicka in svar
-    units: Enhet
-    thank_you:
-      heading: Stort tack!
-      text: Ett stort tack för att du tagit dig tid att slutföra datainsamlingen för %{report_area}!
-      cta: Tillbaka till dina dataförfrågningar

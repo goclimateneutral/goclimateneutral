@@ -1,0 +1,17 @@
+eo:
+  views:
+    business:
+      contacts:
+        form:
+          heading: crwdns15413:0crwdne15413:0
+          name: crwdns15415:0crwdne15415:0
+          company: crwdns15417:0crwdne15417:0
+          phone: crwdns15419:0crwdne15419:0
+          email: crwdns15421:0crwdne15421:0
+          contact_via: crwdns15423:0crwdne15423:0
+          contact_via_email: crwdns15425:0crwdne15425:0
+          contact_via_phone: crwdns15427:0crwdne15427:0
+          message: crwdns15429:0crwdne15429:0
+          submit: crwdns15431:0crwdne15431:0
+          option_text_html: crwdns15433:0crwdne15433:0
+          error: crwdns15435:0crwdne15435:0

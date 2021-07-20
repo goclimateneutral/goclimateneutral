@@ -4,6 +4,9 @@ de:
       update:
         heading: Abonnement aktualisieren
         no_subscription: Kein Abonnement
+        current_footprint:
+          one: Ihr derzeitiger CO2-Fußabdruck beläuft sich auf %{count} Tonne CO2.
+          other: Ihr derzeitiger CO2-Fußabdruck beläuft sich auf %{count} Tonnen CO2.
       receipts:
         heading: Belege
         action: Belege ansehen

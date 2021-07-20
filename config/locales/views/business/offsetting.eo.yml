@@ -1,0 +1,32 @@
+eo:
+  views:
+    business:
+      offsetting:
+        hero:
+          heading: crwdns15485:0crwdne15485:0
+        services:
+          heading: crwdns15487:0crwdne15487:0
+          advisory:
+            heading: crwdns15489:0crwdne15489:0
+            text: crwdns15491:0crwdne15491:0
+            read_more: crwdns15493:0crwdne15493:0
+            book_meeting: crwdns15495:0crwdne15495:0
+          self_serve:
+            heading: crwdns15497:0crwdne15497:0
+            text: crwdns15499:0crwdne15499:0
+            read_more: crwdns15501:0crwdne15501:0
+            calculate: crwdns15503:0crwdne15503:0
+          just_offsetting:
+            heading: crwdns15505:0crwdne15505:0
+            text: crwdns15507:0crwdne15507:0
+            book_meeting: crwdns15509:0crwdne15509:0
+        offset_employees:
+          heading: crwdns15511:0crwdne15511:0
+          text: crwdns15513:0crwdne15513:0
+          cta: crwdns15515:0crwdne15515:0
+          equivalent_co2_offset: crwdns15517:0crwdne15517:0
+          number_of_employees: "crwdns15519:0crwdne15519:0"
+          email: "crwdns15521:0crwdne15521:0"
+        other_ways:
+          heading: crwdns15523:0crwdne15523:0
+          text_html: crwdns15525:0crwdne15525:0

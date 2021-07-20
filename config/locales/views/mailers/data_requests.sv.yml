@@ -1,10 +1,1 @@
 sv:
-  mailers:
-    data_requests:
-      subject: Vi behöver din hjälp med datainsamling
-      heading: Hej!
-      paragraphs:
-        p1: Din organisation håller just nu på att beräkna verksamhetens koldioxidavtryck, för att kunna ta ansvar för er klimatpåverkan. Bra jobbat!
-        p2: Vi hoppas att du kan bidra till detta genom att ge oss lite information som hjälper oss att förstå era utsläpp. Det gör du genom att se över dataförfrågan och fylla i de svar du redan vet, eller kan ta reda på åt oss. Du kan kontakta oss när som helst om du vill ha vägledning, och du kan spara och redigera dina svar senare om du behöver kontrollera något.
-        p3: Vi uppskattar din medverkan!
-      your_link: Din dataförfrågan

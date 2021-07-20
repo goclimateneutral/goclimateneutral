@@ -12,16 +12,23 @@ de:
         sign_up: Registrieren
       prefooter:
         heading: Lassen Sie uns den Klimawandel gemeinsam aufhalten!
+        body_text: Melden Sie sich an, um Ihre Emissionen auszugleichen.
         button: Los geht's
       footer:
+        short_intro: GoClimate ist ein soziales Unternehmen, das den Klimawandel durch die Reduzierung von Treibhausgasen bekämpft. Wir haben immer einen Blick auf Klimagerechtigkeit und arbeiten zu 100% transparent.
         jobs: 'Jobs'
+        privacy_policy: Datenschutzerklärung
         headers:
           make_a_difference: Jetzt mitmachen
           explore: Mehr herausfinden
           about: Über uns
+        newsletter:
+          heading: Melden Sie sich für unseren Newsletter an
+          cta: Anmelden
       more_info:
         about:
           title: Über uns
+          description: GoClimate ist ein soziales Unternehmen, das den Klimawandel durch die Reduzierung von Treibhausgasen bekämpft. Wir haben immer einen Blick auf Klimagerechtigkeit und arbeiten zu 100% transparent.
           cta: Hier erfahren Sie mehr über uns
         projects:
           title: Unsere Klimaprojekte

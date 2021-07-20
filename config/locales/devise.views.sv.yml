@@ -41,7 +41,6 @@ sv:
       reset_password_instructions:
         action: Byt lösenord
         greeting: Hej %{recipient}!
-        instruction: Någon har begärt att ändra ditt lösenordet. Du kan göra det genom länken nedan.
         instruction_2: Om ändringen inte begärdes utav dig, var snäll att ignorera detta email.
         instruction_3: Ditt lösenord ändras ej förrän du följer länken ovan och skapar ett nytt lösenord.
         subject: Instruktioner för återställning av lösenord
@@ -111,8 +110,6 @@ sv:
       unlocked: Ditt konto har låsts upp. Du är nu inloggad.
   errors:
     messages:
-      something_wrong: Hoppsan, något blev fel!
-      reset_password_token_expired_html: Din länk för lösenordsåterställning är inte längre giltig. <a href=''>Be om en ny</a>.
       already_confirmed: är redan bekräftad, vänligen logga in igen
       confirmation_period_expired: behöver bekräftas inom %{period}. Vänligen begär en ny
       expired: är inte längre giltig. Vänligen begär en ny

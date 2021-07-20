@@ -4,10 +4,12 @@ eo:
       title: crwdns12826:0crwdne12826:0
       questions:
         region: crwdns12828:0crwdne12828:0
-        home: crwdns12830:0crwdne12830:0
+        home: crwdns15164:0crwdne15164:0
+        home_area: crwdns15166:0crwdne15166:0
         heating: crwdns12832:0crwdne12832:0
         green_electricity: crwdns12834:0crwdne12834:0
         food: crwdns12836:0crwdne12836:0
+        shopping: crwdns15316:0crwdne15316:0
         car_type: crwdns12838:0crwdne12838:0
         car_distance: crwdns12840:0crwdne12840:0
         flight_hours: crwdns12842:0crwdne12842:0
@@ -24,11 +26,18 @@ eo:
           one_or_two_bedrooms: crwdns12858:0crwdne12858:0
           three_or_four_bedrooms: crwdns12860:0crwdne12860:0
           five_or_more_bedrooms: crwdns12862:0crwdne12862:0
-          fifteen_sqm: crwdns12864:0crwdne12864:0
-          twentyfive_sqm: crwdns12866:0crwdne12866:0
-          fortytwo_sqm: crwdns12868:0crwdne12868:0
-          sixty_sqm: crwdns12870:0crwdne12870:0
-          eighty_sqm: crwdns12872:0crwdne12872:0
+          #TODO: Remove after LifestyleFootprints have been migrated to use home_area for these
+          fifteen_sqm: crwdns15168:0crwdne15168:0
+          twentyfive_sqm: crwdns15170:0crwdne15170:0
+          fortytwo_sqm: crwdns15172:0crwdne15172:0
+          sixty_sqm: crwdns15174:0crwdne15174:0
+          eighty_sqm: crwdns15176:0crwdne15176:0
+        home_area:
+          fifteen_sqm: crwdns15178:0crwdne15178:0
+          twentyfive_sqm: crwdns15180:0crwdne15180:0
+          fortytwo_sqm: crwdns15182:0crwdne15182:0
+          sixty_sqm: crwdns15184:0crwdne15184:0
+          eighty_sqm: crwdns15186:0crwdne15186:0
         heating:
           electricity: crwdns12874:0crwdne12874:0
           natural_gas: crwdns12876:0crwdne12876:0
@@ -40,6 +49,7 @@ eo:
           geothermal: crwdns12888:0crwdne12888:0
           heating_oil: crwdns12890:0crwdne12890:0
           propane: crwdns12892:0crwdne12892:0
+          no_heating: crwdns15222:0crwdne15222:0
           dont_know: crwdns12894:0crwdne12894:0
         green_electricity:
           'yes': 'crwdns12896:0crwdne12896:0'
@@ -55,6 +65,10 @@ eo:
           meat_low: crwdns12914:0crwdne12914:0
           meat_medium: crwdns12916:0crwdne12916:0
           meat_high: crwdns12918:0crwdne12918:0
+        shopping:
+          low: crwdns15328:0crwdne15328:0
+          average: crwdns15320:0crwdne15320:0
+          high: crwdns15330:0crwdne15330:0
         car_type:
           gas: crwdns12920:0crwdne12920:0
           petrol: crwdns12922:0crwdne12922:0
@@ -67,3 +81,26 @@ eo:
           no_car: crwdns12936:0crwdne12936:0
       next: crwdns12938:0crwdne12938:0
       back: crwdns12940:0crwdne12940:0
+      methodology: crwdns15324:0crwdne15324:0
+      index:
+        heading: crwdns15234:0crwdne15234:0
+        text: crwdns15236:0crwdne15236:0
+      show:
+        heading_public: crwdns15242:0crwdne15242:0
+        my_climate_footprint: crwdns15244:0%{footprint}crwdnd15244:0%{relative}crwdnd15244:0%{country}crwdne15244:0
+        my_climate_footprint_compared_world: crwdns15246:0%{footprint}crwdnd15246:0%{relative}crwdne15246:0
+        new_calculation: crwdns15248:0crwdne15248:0
+        delete: crwdns15250:0crwdne15250:0
+        delete_confirmation:
+          heading: crwdns15252:0crwdne15252:0
+          text: crwdns15254:0%{date}crwdne15254:0
+          cta: crwdns15256:0crwdne15256:0
+          abort: crwdns15258:0crwdne15258:0
+          success: crwdns15623:0crwdne15623:0
+        share:
+          text: crwdns15260:0crwdne15260:0
+          social_quote: crwdns15262:0%{tonnes}crwdnd15262:0%{url}crwdne15262:0
+        update:
+          placeholder: crwdns15625:0crwdne15625:0
+          cta_create: crwdns15627:0crwdne15627:0
+          cta_update: crwdns15629:0crwdne15629:0

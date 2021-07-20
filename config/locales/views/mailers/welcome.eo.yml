@@ -1,6 +1,7 @@
 eo:
   mailers:
     welcome:
+      from: "crwdns15643:0%{name}crwdne15643:0"
       subject: crwdns12962:0crwdne12962:0
       welcome_to_gcn: crwdns12964:0crwdne12964:0
       big_thanks: crwdns12966:0crwdne12966:0
@@ -10,3 +11,4 @@ eo:
       if_you_have_any_questions: crwdns12974:0crwdne12974:0
       thank_you: crwdns12976:0crwdne12976:0
       best_regards: crwdns12978:0crwdne12978:0
+      the_gcn_team: "crwdns15645:0%{name}crwdne15645:0"

@@ -1,19 +1,1 @@
 sv:
-  views:
-    business:
-      climate_reports:
-        hero:
-          heading: Skapa din egen klimatrapport
-          text: Använd vårt enkla verktyg för att beräkna och klimatkompensera för era utsläpp.
-        business_footprint:
-          heading: Er verksamhets klimatavtryck
-          text: Vår klimatkalkylator för företag låter dig skapa en rapport över era aktiviteters klimatavtryck. Du redovisar de mest relevanta faktorerna, så ordnar vi en beräkning av ert klimatavtryck. Den här lösningen är perfekt för tjänsteföretag och små och medelstora företag som snabbt vill få en översikt av sina utsläpp.
-        carbon_offsetting:
-          heading: Klimatkompensering
-          text: Beräkna ditt företags klimatavtryck, minska de utsläpp du kan och klimatkompensera för resten. Vi har tagit fram en enkel kalkylator för företag, som ger dig en översikt över din verksamhets klimatavtryck.
-        climate_report:
-          heading: Klimatrapporten
-          text: När du väljer att klimatkompensera genom GoClimate får du också en skräddarsydd klimatrapport som tydligt visar era utsläpp. Rapporten ger en bra grund för både intern och extern kommunikation kring ert hållbarhetsarbete.
-        get_started:
-          heading: Beräkna er verksamhets klimatavtryck
-          button: Klimatberäkna företag
