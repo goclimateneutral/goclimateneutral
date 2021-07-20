@@ -13,20 +13,23 @@ de:
   100_percent_transparency: 100% Transparenz
   what_we_do_with_your_money: Dazu trägt Ihr Geld bei
   system_change: Systemwechsel
-  system_change_description: Um dem Klimawandel Einhalt zu gebieten, müssen wir den Politikern und Unternehmen zeigen, dass wir jetzt einen Systemwechsel brauchen.
+  system_change_description: Um dem Klimawandel Einhalt zu gebieten, müssen wir die Menschen mobilisieren, damit sie Politikern und Unternehmen zeigen, dass wir jetzt einen Systemwechsel brauchen.
   climate_projects: Klimaprojekte
   climate_projects_description: Wir unterstützen hochwertige, Gold Standard-zertifizierte Klimaprojekte, um den Übergang zu einem nachhaltigen Planeten zu beschleunigen.
   behavioral_change: Verhaltensänderungen
+  behavioral_change_description: Wir können unsere Emissionen nicht einfach nur ausgleichen und weitermachen wie bisher. Wir informieren, inspirieren und helfen Einzelnen, ihren Kohlenstoffausstoß zu senken.
   basic_facts: GoClimate in Zahlen
   employees: Mitarbeiter
   full_time: Vollzeit
   Main_KPI: Die wichtigsten KPI
   climate_footprint_2019: Klimabilanz 2019
+  number_of_climate_neutral_users: Anzahl der Community-Mitglieder
   users_from: Nutzer von
   different_countries: verschiedene Länder
   number_of_companies_we_have_helped: Anzahl der Unternehmen, denen wir geholfen haben
   tonnes_avoided_CO2e-emissions: Anzahl Tonnen vermiedenener CO2-Emissionen
   latest_fiscal_year_turnover: Umsatz des letztes Geschäftsjahres
+  annual_reports: Jahresberichte
   total_accumulated_dividend_to_shareholders: Summe Dividende an Aktionäre
   everything_is_invested_for_maximum_climate_impact: alles wird in maximale Klimaauswirkung investiert
   amount_of_avoided_emissions: Vermiedene Emissionen pro Jahr (Tonnen CO2e)
@@ -34,7 +37,7 @@ de:
   project_distribution_by_technology: Diese Art von Projekten unterstützen wir
   CO2e_avoided_per_coworker: Vermiedene Tonnen CO2 pro Mitarbeiter
   100_percent_transparency_financial_info: 100% Transparenz - Finanzielle Informationen
-  100_percent_transparency_financial_info_intro: GoClimate Sweden AB (Registriernummer 559130-6583) wurde 2017 mit dem Fokus auf soziales Unternehmertum und das alleinige Ziel gegründet, den Klimawandel so schnell wie möglich zu verlangsamen. Wir haben ein verlängertes Geschäftsjahr und unser erster Jahresbericht wird den Zeitraum Mai 2017 bis Dezember 2018 umfassen. Der Jahresbericht wird hier veröffentlicht.
+  100_percent_transparency_financial_info_intro: GoClimate Sweden AB (Registrierungsnummer 559130-6583) wurde 2017 ins Leben gerufen mit einem Schwerpunkt auf sozialem Unternehmertum und dem alleinigen Ziel, den Klimawandel so schnell wie möglich zu bremsen.
   fiscal_years: Geschäftsjahr
   revenue: Einnahmen
   cost: Ausgaben
@@ -59,7 +62,10 @@ de:
   about_us_intro: GoClimate wurde 2017 mit dem Ziel gegründet, es einfacher zu machen, ein klimaneutrales Leben zu führen und somit den Klimawandel zu verlangsamen. Wir gleichen Ihren Lebensstil aus und geben Anregungen, um den eigenen ökologischen Fußabdruck zu reduzieren und so die Welt zu einem besseren Ort zu machen.
   about_us_intro_2: Wir bemühen uns, dies auf die effektivste, unterhaltsamste und nachhaltigste Art und Weise zu tun, und zwar bei 100%iger finanzieller Transparenz. So können Sie genau sehen, wie Ihr Geld ausgegeben wird. Wir unterstützen ausschließlich Gold Standard-zertifizierte Projekte, um sicherzustellen, dass Ihre Investition den größtmöglichen Nutzen bringt.
   about_us_why_do_we_exist: Warum gibt es GoClimate?
+  about_us_why_do_we_exist_text: Um den Anstieg der globalen Temperaturen in diesem Jahrhundert unter 1,5 Grad Celsius halten zu können, müssen wir bis 2030 die Kohlendioxid-Emissionen um 50% senken und weiter reduzieren. Viele Menschen, vor allem in Entwicklungsländern, bekommen die verheerenden Folgen des Klimawandels bereits zu spüren und wir haben keine Zeit zu verlieren, um die Handbremse zu ziehen.
+  about_us_why_do_we_exist_text_2: Dies setzt Regierungen, Unternehmen und Einzelpersonen gleichermaßen stark unter Druck. Die Veränderungen, die wir alle bewirken müssen, um das Ziel zu erreichen und eine weitere Klimakatastrophen zu vermeiden, können verwirrend sein. Wir wollen den Weg zu einem klimafreundlichen Lebensstil erleichtern und zeigen, dass ein Leben, in dem wir uns um unseren Planeten kümmern - und um einander - ein luxuriöses Leben sein kann. Ein Leben mit mehr Fokus auf das, was wirklich wichtig ist.
   about_us_how_do_we_stop_climate_change: Wie können wir den Klimawandel stoppen?
+  about_us_how_do_we_stop_climate_change_text: Um dem Klimawandel Einhalt zu gebieten, müssen wir jetzt alle ein klimafreundliches Leben führen. Der beste Weg, dies zu tun, besteht darin, unseren CO2-Fußabdruck so weit wie möglich zu reduzieren und unsere Emissionen durch die Finanzierung effektiver Klimaschutzprojekte auszugleichen. Wir glauben, dass wir den Klimawandel stoppen können – wenn wir es gemeinsam tun und wenn wir jetzt anfangen.
   about_us_who_are_we: Wer sind wir?
   about_us_team:
     heading: Wer sind wir?
@@ -78,7 +84,6 @@ de:
   credit_or_debit_card: Kredit- oder Debitkarte
   add_new_card: Neue Karte hinzufügen
   edit_card: Kartendetails bearbeiten
-  your_payment_details_have_been_updated: Ihre Einstellungen wurden aktualisiert
   climate_plan: Klimaplan
   log_in_to_see_how_we_are_doing: Der Klimawandel ist die größte Herausforderung unserer Zeit. Loggen Sie sich ein, um zu erfahren, wie weit wir im Kampf gegen den Klimawandel schon gekommen sind.
   you_have_lived_climate_neutral_for:
@@ -90,8 +95,11 @@ de:
   name_have_lived_climate_neutral_for_join_me:
     one: '%{name} lebt seit 1 Monat klimaneutral!'
     other: '%{name} lebt seit %{count} Monaten klimaneutral!'
+  share_heading: Sagen Sie es weiter
+  climate_change_is_best_faced_together: Sie sind großartig! Da man den Klimawandel am besten gemeinsam bekämpfen kann, würden wir uns freuen, wenn Sie Anderen von GoClimate erzählen, damit auch sie ein klimaneutrales Leben führen können!
   share_on_facebook: Auf Facebook teilen
   share_on_twitter: Auf Twitter teilen
+  share_quote_without_months: Lassen Sie uns den Klimawandel gemeinsam aufhalten!
   dashboard:
     heading: Hallo Klima-Freund!
     your_months: Sie sind klimaneutral seit
@@ -226,6 +234,9 @@ de:
         q10:
           question: Sind die Projekte nachhaltig?
           answer: Ja, die Projekte werden mit Vorsicht und Sorge für die lokale Umwelt und Bevölkerung entwickelt. In Fällen, in denen die Projekte negative Auswirkungen haben, werden sie kompensiert - zum Beispiel wenn Bäume abgeholzt werden, um eine Straße zu erweitern, werden neue Bäume gepflanzt. Darüber hinaus erfordert Gold Standard, dass die Projekte zu anderen globalen Nachhaltigkeitszielen beitragen als nur zu dem Klimaziel. Einige Projekte schaffen Arbeitsplätze, verbessern die Gesundheit, tragen zur nachhaltigen Industrie und/oder erneuerbaren Energien bei.<br><br>Wir wählen Projekte mit Vorsicht aus und prüfen das, was während der Implementierung des Projekts gemeldet wurde, so dass wir das Risiko minimieren, dass die von uns geförderten Projekte negative Folgen für die Umwelt und die lokale Bevölkerung haben. Bei der ersten Entwicklung der Klimakompensationen waren die Anforderungen nicht so streng und deshalb gab es historisch gesehen Projekte, die negative Nebenwirkungen hatten. Die heutigen Anforderungen sind viel höher und die Kontrollen sind strenger.
+        q11:
+          question: Wie stellen Sie sicher, dass die von Ihnen geförderten Klimaschutzprojekte die indigene Bevölkerung nicht schädigen?
+          answer: Es ist von entscheidender Bedeutung, dass die einheimische Bevölkerung nicht dadurch geschädigt wird, dass wir den Übergang zu einer nachhaltigen Welt unterstützen. Wir haben mehrere Schritte unternommen, um sicherzustellen, dass unsere Klimaprojekte keinen Schaden anrichten.<br><br>Zuallererst haben wir keine Waldprojekte, die Land betreffen, das von Menschen in der Gegend genutzt werden könnte, und wir haben die Unterstützung von Wasserkraftprojekten eingestellt, die ebenfalls viel Land erfordern.<br><br>Zweitens sind alle unsere Projekte von der gemeinnützigen Zertifizierungsorganisation Gold Standard zertifiziert, in dem alle sozialen Aspekte der von uns geförderten Projekte berücksichtigt werden, einschließlich deren Auswirkungen auf die indigene und lokale Bevölkerung. Das Prinzip des Goldstandards ist, dass (1) die Projekte keinen Schaden anrichten dürfen und sich an die UNDP Millennium Development Goals (MDG) Carbon Safeguard Prinzipien halten. Die Projekte sollen auch (2) die nachhaltige Entwicklung fördern und (3) alle relevanten Interessengruppen, einschließlich der indigenen Bevölkerung, einbeziehen. Alle Projekte haben einen Beschwerdemechanismus, der es den Interessengruppen ermöglicht, kontinuierliches Feedback über das Projekt zu geben und alle Rückmeldungen werden öffentlich im Projektregister veröffentlicht.<br><br>Drittens führen wir unsere eigene umfangreiche Recherche und sorgfältige Prüfung aller von uns unterstützten Projekte durch. Wenn wir feststellen, dass das Projekt irgendwelche Probleme verursacht hat, dann unterstützen wir es nicht.
     about_us:
       heading: Über GoClimate
       questions:
@@ -288,7 +299,7 @@ de:
     gift_cards: Gutscheine
   welcome:
     users_prefix: Aktuell sind wir
-    tonnes_prefix: Gemeinsam haben wir
+    users_suffix: community members
     tonnes_suffix: Tonnen CO2 in der Atmosphäre reduziert
     business:
       we_will_contact_you_shortly_html: Wir werden Sie unter <b>%{email}</b> in Kürze mit weiteren Informationen zum nächsten Schritt kontaktieren!
