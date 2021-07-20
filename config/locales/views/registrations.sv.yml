@@ -10,10 +10,6 @@ sv:
       lower: lägre
       your_climate_footprint: Ditt klimatavtryck på %{footprint} är %{relative} än genomsnittet i %{country}. För att ligga i linje med Parisavtalets 1,5 gradersmål måste vi globalt ha ett genomsnitt på 2,5 ton per person till år 2030.
       your_climate_footprint_compared_world: Ditt klimatavtryck på %{footprint} är %{relative} än genomsnittet i världen. För att ligga i linje med Parisavtalets 1,5 gradersmål måste vi globalt ha ett genomsnitt på 2,5 ton per person till år 2030.
-      impact_test: Med stöd från vårt community så har vi redan förhindrat mer än 500 000 ton CO2 att släppas ut i atmosfären! Det motsvarar att ta bort 217 000 bilar från gatorna i ett år och ungefär 2 miljoner färre flygresor mellan Berlin och Paris!
-      sign_up_heading_test_1: Gå med nu! Om vi alla är med och bidrar kan vi nå våra mål tillsammans!
-      sign_up_heading_test_2: Gå med nu!
-      sign_up_description: Bli medlem och spara ditt resultat, få hjälp att minska ditt avtryck och få möjlighet att klimatkompensera.
       step: Steg
       price_free: Gratis
       create_account: Skapa konto
@@ -31,7 +27,6 @@ sv:
       continue: Fortsätt
       continue_to_payment: Fortsätt till betalning
       start_subscription: Starta prenumeration
-      accept_policies: Genom att registrera dig accepterar du <a>användarvillkoren och riktlinjerna</a>
       back: Tillbaka
       where_does_the_money_go:
         heading: Var går pengarna?
