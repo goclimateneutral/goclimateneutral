@@ -41,7 +41,6 @@ de:
       reset_password_instructions:
         action: Mein Passwort ändern
         greeting: Hallo %{recipient}!
-        instruction: Es wurde ein Link angefordert, um Ihr Passwort zu ändern. Dies können Sie über den unten stehenden Link tun.
         instruction_2: Wenn Sie keine Änderung Ihres Passwortes angefordert haben, ignorieren Sie bitte diese E-Mail.
         instruction_3: Ihr Passwort ändert sich erst, wenn Sie auf den obigen Link klicken und ein neues erstellen.
         subject: Anleitung zum Zurücksetzen des Passworts
