@@ -10,17 +10,27 @@ eo:
           continue_button: "crwdns13086:0%{region}crwdne13086:0"
           dismiss: crwdns13328:0crwdne13328:0
         sign_up: crwdns13088:0crwdne13088:0
+        book_meeting: crwdns15671:0crwdne15671:0
+        business_subnavigation:
+          climate_advisory: crwdns15673:0crwdne15673:0
+          self_serve: crwdns15675:0crwdne15675:0
+          offsetting: crwdns15677:0crwdne15677:0
       prefooter:
         heading: crwdns13090:0crwdne13090:0
-        body_text: crwdns13092:0crwdne13092:0
+        body_text: crwdns15144:0crwdne15144:0
         button: crwdns13094:0crwdne13094:0
       footer:
         short_intro: crwdns15006:0crwdne15006:0
         jobs: 'crwdns13098:0crwdne13098:0'
+        privacy_policy: crwdns15220:0crwdne15220:0
         headers:
           make_a_difference: crwdns13100:0crwdne13100:0
           explore: crwdns13102:0crwdne13102:0
           about: crwdns13104:0crwdne13104:0
+        newsletter:
+          heading: crwdns15264:0crwdne15264:0
+          cta: crwdns15266:0crwdne15266:0
+        our_services: crwdns15679:0crwdne15679:0
       more_info:
         about:
           title: crwdns13294:0crwdne13294:0
@@ -34,3 +44,11 @@ eo:
           title: crwdns13306:0crwdne13306:0
           description: crwdns13308:0crwdne13308:0
           cta: crwdns13310:0crwdne13310:0
+      cookie_banner:
+        text: crwdns15681:0crwdne15681:0
+        link_text: crwdns15683:0crwdne15683:0
+        cta: crwdns15685:0crwdne15685:0
+      read_more: crwdns15687:0crwdne15687:0
+      update_success: crwdns15689:0crwdne15689:0
+      update_error: crwdns15691:0crwdne15691:0
+      year: crwdns15693:0crwdne15693:0
